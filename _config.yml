@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Open Bounds
+title: Leaps in Bounds
 # email: 
 description: >- # this means to ignore newlines until "baseurl:"
   Repository of progress on mathematical unknowns
@@ -50,3 +50,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - scripts/

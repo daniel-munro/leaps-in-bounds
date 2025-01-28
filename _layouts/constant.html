@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% assign constant = site.data.constants[page.id] %}
+
+<h1>{{ constant.name }}</h1>
+
+{{ constant.description }}
+
+{{ content }}
