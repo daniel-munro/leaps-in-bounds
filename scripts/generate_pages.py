@@ -3,7 +3,6 @@
 import os
 import yaml
 
-
 with open("_data/constants.yml", "r") as file:
     constants = yaml.safe_load(file)
 

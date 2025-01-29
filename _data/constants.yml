@@ -1,11 +1,732 @@
+ramsey-3-3:
+  name: Ramsey number $R(3,3)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_3$ in the second color.
+ramsey-3-4:
+  name: Ramsey number $R(3,4)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_4$ in the second color.
+ramsey-3-5:
+  name: Ramsey number $R(3,5)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_5$ in the second color.
+ramsey-3-6:
+  name: Ramsey number $R(3,6)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_6$ in the second color.
+ramsey-3-7:
+  name: Ramsey number $R(3,7)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_7$ in the second color.
+ramsey-3-8:
+  name: Ramsey number $R(3,8)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_8$ in the second color.
+ramsey-3-9:
+  name: Ramsey number $R(3,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-3-10:
+  name: Ramsey number $R(3,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-3-11:
+  name: Ramsey number $R(3,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-3-12:
+  name: Ramsey number $R(3,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-3-13:
+  name: Ramsey number $R(3,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-3-14:
+  name: Ramsey number $R(3,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-3-15:
+  name: Ramsey number $R(3,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_3$ in the first
+    color or a monochromatic $K_15$ in the second color.
 ramsey-4-4:
-  name: "R(4,4)"
-  description: "The Ramsey number $R(4,4)$ represents the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first color or a monochromatic $K_4$ in the second color."
-
+  name: Ramsey number $R(4,4)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_4$ in the second color.
 ramsey-4-5:
-  name: "R(4,5)"
-  description: "The Ramsey number $R(4,5)$ represents the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first color or a monochromatic $K_5$ in the second color."
-
+  name: Ramsey number $R(4,5)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_5$ in the second color.
 ramsey-4-6:
-  name: "R(4,6)"
-  description: "The Ramsey number $R(4,6)$ represents the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first color or a monochromatic $K_6$ in the second color."
+  name: Ramsey number $R(4,6)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_6$ in the second color.
+ramsey-4-7:
+  name: Ramsey number $R(4,7)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_7$ in the second color.
+ramsey-4-8:
+  name: Ramsey number $R(4,8)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_8$ in the second color.
+ramsey-4-9:
+  name: Ramsey number $R(4,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-4-10:
+  name: Ramsey number $R(4,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-4-11:
+  name: Ramsey number $R(4,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-4-12:
+  name: Ramsey number $R(4,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-4-13:
+  name: Ramsey number $R(4,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-4-14:
+  name: Ramsey number $R(4,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-4-15:
+  name: Ramsey number $R(4,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first
+    color or a monochromatic $K_15$ in the second color.
+ramsey-5-5:
+  name: Ramsey number $R(5,5)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_5$ in the second color.
+ramsey-5-6:
+  name: Ramsey number $R(5,6)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_6$ in the second color.
+ramsey-5-7:
+  name: Ramsey number $R(5,7)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_7$ in the second color.
+ramsey-5-8:
+  name: Ramsey number $R(5,8)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_8$ in the second color.
+ramsey-5-9:
+  name: Ramsey number $R(5,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-5-10:
+  name: Ramsey number $R(5,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-5-11:
+  name: Ramsey number $R(5,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-5-12:
+  name: Ramsey number $R(5,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-5-13:
+  name: Ramsey number $R(5,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-5-14:
+  name: Ramsey number $R(5,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-5-15:
+  name: Ramsey number $R(5,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_5$ in the first
+    color or a monochromatic $K_15$ in the second color.
+ramsey-6-6:
+  name: Ramsey number $R(6,6)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_6$ in the second color.
+ramsey-6-7:
+  name: Ramsey number $R(6,7)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_7$ in the second color.
+ramsey-6-8:
+  name: Ramsey number $R(6,8)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_8$ in the second color.
+ramsey-6-9:
+  name: Ramsey number $R(6,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-6-10:
+  name: Ramsey number $R(6,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-6-11:
+  name: Ramsey number $R(6,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-6-12:
+  name: Ramsey number $R(6,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-6-13:
+  name: Ramsey number $R(6,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-6-14:
+  name: Ramsey number $R(6,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-6-15:
+  name: Ramsey number $R(6,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_6$ in the first
+    color or a monochromatic $K_15$ in the second color.
+ramsey-7-7:
+  name: Ramsey number $R(7,7)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_7$ in the second color.
+ramsey-7-8:
+  name: Ramsey number $R(7,8)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_8$ in the second color.
+ramsey-7-9:
+  name: Ramsey number $R(7,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-7-10:
+  name: Ramsey number $R(7,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-7-11:
+  name: Ramsey number $R(7,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-7-12:
+  name: Ramsey number $R(7,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-7-13:
+  name: Ramsey number $R(7,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-7-14:
+  name: Ramsey number $R(7,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-7-15:
+  name: Ramsey number $R(7,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_7$ in the first
+    color or a monochromatic $K_15$ in the second color.
+ramsey-8-8:
+  name: Ramsey number $R(8,8)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_8$ in the second color.
+ramsey-8-9:
+  name: Ramsey number $R(8,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-8-10:
+  name: Ramsey number $R(8,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-8-11:
+  name: Ramsey number $R(8,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-8-12:
+  name: Ramsey number $R(8,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-8-13:
+  name: Ramsey number $R(8,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-8-14:
+  name: Ramsey number $R(8,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-8-15:
+  name: Ramsey number $R(8,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_8$ in the first
+    color or a monochromatic $K_15$ in the second color.
+ramsey-9-9:
+  name: Ramsey number $R(9,9)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_9$ in the second color.
+ramsey-9-10:
+  name: Ramsey number $R(9,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-9-11:
+  name: Ramsey number $R(9,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-9-12:
+  name: Ramsey number $R(9,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-9-13:
+  name: Ramsey number $R(9,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-9-14:
+  name: Ramsey number $R(9,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-9-15:
+  name: Ramsey number $R(9,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_9$ in the first
+    color or a monochromatic $K_15$ in the second color.
+ramsey-10-10:
+  name: Ramsey number $R(10,10)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_10$ in the first
+    color or a monochromatic $K_10$ in the second color.
+ramsey-10-11:
+  name: Ramsey number $R(10,11)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_10$ in the first
+    color or a monochromatic $K_11$ in the second color.
+ramsey-10-12:
+  name: Ramsey number $R(10,12)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_10$ in the first
+    color or a monochromatic $K_12$ in the second color.
+ramsey-10-13:
+  name: Ramsey number $R(10,13)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_10$ in the first
+    color or a monochromatic $K_13$ in the second color.
+ramsey-10-14:
+  name: Ramsey number $R(10,14)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_10$ in the first
+    color or a monochromatic $K_14$ in the second color.
+ramsey-10-15:
+  name: Ramsey number $R(10,15)$
+  description: The smallest number $n$ such that any two-coloring of the edges of
+    the complete graph $K_n$ must contain either a monochromatic $K_10$ in the first
+    color or a monochromatic $K_15$ in the second color.
+square-packing-2:
+  name: Square packing $s(2)$
+  description: The side of the smallest square into which $2$ unit squares can be
+    packed.
+square-packing-3:
+  name: Square packing $s(3)$
+  description: The side of the smallest square into which $3$ unit squares can be
+    packed.
+square-packing-4:
+  name: Square packing $s(4)$
+  description: The side of the smallest square into which $4$ unit squares can be
+    packed.
+square-packing-5:
+  name: Square packing $s(5)$
+  description: The side of the smallest square into which $5$ unit squares can be
+    packed.
+square-packing-6:
+  name: Square packing $s(6)$
+  description: The side of the smallest square into which $6$ unit squares can be
+    packed.
+square-packing-7:
+  name: Square packing $s(7)$
+  description: The side of the smallest square into which $7$ unit squares can be
+    packed.
+square-packing-8:
+  name: Square packing $s(8)$
+  description: The side of the smallest square into which $8$ unit squares can be
+    packed.
+square-packing-9:
+  name: Square packing $s(9)$
+  description: The side of the smallest square into which $9$ unit squares can be
+    packed.
+square-packing-10:
+  name: Square packing $s(10)$
+  description: The side of the smallest square into which $10$ unit squares can be
+    packed.
+square-packing-11:
+  name: Square packing $s(11)$
+  description: The side of the smallest square into which $11$ unit squares can be
+    packed.
+square-packing-12:
+  name: Square packing $s(12)$
+  description: The side of the smallest square into which $12$ unit squares can be
+    packed.
+square-packing-13:
+  name: Square packing $s(13)$
+  description: The side of the smallest square into which $13$ unit squares can be
+    packed.
+square-packing-14:
+  name: Square packing $s(14)$
+  description: The side of the smallest square into which $14$ unit squares can be
+    packed.
+square-packing-15:
+  name: Square packing $s(15)$
+  description: The side of the smallest square into which $15$ unit squares can be
+    packed.
+square-packing-16:
+  name: Square packing $s(16)$
+  description: The side of the smallest square into which $16$ unit squares can be
+    packed.
+square-packing-17:
+  name: Square packing $s(17)$
+  description: The side of the smallest square into which $17$ unit squares can be
+    packed.
+square-packing-18:
+  name: Square packing $s(18)$
+  description: The side of the smallest square into which $18$ unit squares can be
+    packed.
+square-packing-19:
+  name: Square packing $s(19)$
+  description: The side of the smallest square into which $19$ unit squares can be
+    packed.
+square-packing-20:
+  name: Square packing $s(20)$
+  description: The side of the smallest square into which $20$ unit squares can be
+    packed.
+square-packing-21:
+  name: Square packing $s(21)$
+  description: The side of the smallest square into which $21$ unit squares can be
+    packed.
+square-packing-22:
+  name: Square packing $s(22)$
+  description: The side of the smallest square into which $22$ unit squares can be
+    packed.
+square-packing-23:
+  name: Square packing $s(23)$
+  description: The side of the smallest square into which $23$ unit squares can be
+    packed.
+square-packing-24:
+  name: Square packing $s(24)$
+  description: The side of the smallest square into which $24$ unit squares can be
+    packed.
+square-packing-25:
+  name: Square packing $s(25)$
+  description: The side of the smallest square into which $25$ unit squares can be
+    packed.
+square-packing-26:
+  name: Square packing $s(26)$
+  description: The side of the smallest square into which $26$ unit squares can be
+    packed.
+square-packing-27:
+  name: Square packing $s(27)$
+  description: The side of the smallest square into which $27$ unit squares can be
+    packed.
+square-packing-28:
+  name: Square packing $s(28)$
+  description: The side of the smallest square into which $28$ unit squares can be
+    packed.
+square-packing-29:
+  name: Square packing $s(29)$
+  description: The side of the smallest square into which $29$ unit squares can be
+    packed.
+square-packing-30:
+  name: Square packing $s(30)$
+  description: The side of the smallest square into which $30$ unit squares can be
+    packed.
+square-packing-31:
+  name: Square packing $s(31)$
+  description: The side of the smallest square into which $31$ unit squares can be
+    packed.
+square-packing-32:
+  name: Square packing $s(32)$
+  description: The side of the smallest square into which $32$ unit squares can be
+    packed.
+square-packing-33:
+  name: Square packing $s(33)$
+  description: The side of the smallest square into which $33$ unit squares can be
+    packed.
+square-packing-34:
+  name: Square packing $s(34)$
+  description: The side of the smallest square into which $34$ unit squares can be
+    packed.
+square-packing-35:
+  name: Square packing $s(35)$
+  description: The side of the smallest square into which $35$ unit squares can be
+    packed.
+square-packing-36:
+  name: Square packing $s(36)$
+  description: The side of the smallest square into which $36$ unit squares can be
+    packed.
+square-packing-37:
+  name: Square packing $s(37)$
+  description: The side of the smallest square into which $37$ unit squares can be
+    packed.
+square-packing-38:
+  name: Square packing $s(38)$
+  description: The side of the smallest square into which $38$ unit squares can be
+    packed.
+square-packing-39:
+  name: Square packing $s(39)$
+  description: The side of the smallest square into which $39$ unit squares can be
+    packed.
+square-packing-40:
+  name: Square packing $s(40)$
+  description: The side of the smallest square into which $40$ unit squares can be
+    packed.
+square-packing-41:
+  name: Square packing $s(41)$
+  description: The side of the smallest square into which $41$ unit squares can be
+    packed.
+square-packing-42:
+  name: Square packing $s(42)$
+  description: The side of the smallest square into which $42$ unit squares can be
+    packed.
+square-packing-43:
+  name: Square packing $s(43)$
+  description: The side of the smallest square into which $43$ unit squares can be
+    packed.
+square-packing-44:
+  name: Square packing $s(44)$
+  description: The side of the smallest square into which $44$ unit squares can be
+    packed.
+square-packing-45:
+  name: Square packing $s(45)$
+  description: The side of the smallest square into which $45$ unit squares can be
+    packed.
+square-packing-46:
+  name: Square packing $s(46)$
+  description: The side of the smallest square into which $46$ unit squares can be
+    packed.
+square-packing-47:
+  name: Square packing $s(47)$
+  description: The side of the smallest square into which $47$ unit squares can be
+    packed.
+square-packing-48:
+  name: Square packing $s(48)$
+  description: The side of the smallest square into which $48$ unit squares can be
+    packed.
+square-packing-49:
+  name: Square packing $s(49)$
+  description: The side of the smallest square into which $49$ unit squares can be
+    packed.
+square-packing-50:
+  name: Square packing $s(50)$
+  description: The side of the smallest square into which $50$ unit squares can be
+    packed.
+square-packing-51:
+  name: Square packing $s(51)$
+  description: The side of the smallest square into which $51$ unit squares can be
+    packed.
+square-packing-52:
+  name: Square packing $s(52)$
+  description: The side of the smallest square into which $52$ unit squares can be
+    packed.
+square-packing-53:
+  name: Square packing $s(53)$
+  description: The side of the smallest square into which $53$ unit squares can be
+    packed.
+square-packing-54:
+  name: Square packing $s(54)$
+  description: The side of the smallest square into which $54$ unit squares can be
+    packed.
+square-packing-55:
+  name: Square packing $s(55)$
+  description: The side of the smallest square into which $55$ unit squares can be
+    packed.
+square-packing-56:
+  name: Square packing $s(56)$
+  description: The side of the smallest square into which $56$ unit squares can be
+    packed.
+square-packing-57:
+  name: Square packing $s(57)$
+  description: The side of the smallest square into which $57$ unit squares can be
+    packed.
+square-packing-58:
+  name: Square packing $s(58)$
+  description: The side of the smallest square into which $58$ unit squares can be
+    packed.
+square-packing-59:
+  name: Square packing $s(59)$
+  description: The side of the smallest square into which $59$ unit squares can be
+    packed.
+square-packing-60:
+  name: Square packing $s(60)$
+  description: The side of the smallest square into which $60$ unit squares can be
+    packed.
+square-packing-61:
+  name: Square packing $s(61)$
+  description: The side of the smallest square into which $61$ unit squares can be
+    packed.
+square-packing-62:
+  name: Square packing $s(62)$
+  description: The side of the smallest square into which $62$ unit squares can be
+    packed.
+square-packing-63:
+  name: Square packing $s(63)$
+  description: The side of the smallest square into which $63$ unit squares can be
+    packed.
+square-packing-64:
+  name: Square packing $s(64)$
+  description: The side of the smallest square into which $64$ unit squares can be
+    packed.
+square-packing-65:
+  name: Square packing $s(65)$
+  description: The side of the smallest square into which $65$ unit squares can be
+    packed.
+square-packing-66:
+  name: Square packing $s(66)$
+  description: The side of the smallest square into which $66$ unit squares can be
+    packed.
+square-packing-67:
+  name: Square packing $s(67)$
+  description: The side of the smallest square into which $67$ unit squares can be
+    packed.
+square-packing-68:
+  name: Square packing $s(68)$
+  description: The side of the smallest square into which $68$ unit squares can be
+    packed.
+square-packing-69:
+  name: Square packing $s(69)$
+  description: The side of the smallest square into which $69$ unit squares can be
+    packed.
+square-packing-70:
+  name: Square packing $s(70)$
+  description: The side of the smallest square into which $70$ unit squares can be
+    packed.
+square-packing-71:
+  name: Square packing $s(71)$
+  description: The side of the smallest square into which $71$ unit squares can be
+    packed.
+square-packing-72:
+  name: Square packing $s(72)$
+  description: The side of the smallest square into which $72$ unit squares can be
+    packed.
+square-packing-73:
+  name: Square packing $s(73)$
+  description: The side of the smallest square into which $73$ unit squares can be
+    packed.
+square-packing-74:
+  name: Square packing $s(74)$
+  description: The side of the smallest square into which $74$ unit squares can be
+    packed.
+square-packing-75:
+  name: Square packing $s(75)$
+  description: The side of the smallest square into which $75$ unit squares can be
+    packed.
+square-packing-76:
+  name: Square packing $s(76)$
+  description: The side of the smallest square into which $76$ unit squares can be
+    packed.
+square-packing-77:
+  name: Square packing $s(77)$
+  description: The side of the smallest square into which $77$ unit squares can be
+    packed.
+square-packing-78:
+  name: Square packing $s(78)$
+  description: The side of the smallest square into which $78$ unit squares can be
+    packed.
+square-packing-79:
+  name: Square packing $s(79)$
+  description: The side of the smallest square into which $79$ unit squares can be
+    packed.
+square-packing-80:
+  name: Square packing $s(80)$
+  description: The side of the smallest square into which $80$ unit squares can be
+    packed.
+square-packing-81:
+  name: Square packing $s(81)$
+  description: The side of the smallest square into which $81$ unit squares can be
+    packed.
+square-packing-82:
+  name: Square packing $s(82)$
+  description: The side of the smallest square into which $82$ unit squares can be
+    packed.
+square-packing-83:
+  name: Square packing $s(83)$
+  description: The side of the smallest square into which $83$ unit squares can be
+    packed.
+square-packing-84:
+  name: Square packing $s(84)$
+  description: The side of the smallest square into which $84$ unit squares can be
+    packed.
+square-packing-85:
+  name: Square packing $s(85)$
+  description: The side of the smallest square into which $85$ unit squares can be
+    packed.
+square-packing-86:
+  name: Square packing $s(86)$
+  description: The side of the smallest square into which $86$ unit squares can be
+    packed.
+square-packing-87:
+  name: Square packing $s(87)$
+  description: The side of the smallest square into which $87$ unit squares can be
+    packed.
+square-packing-88:
+  name: Square packing $s(88)$
+  description: The side of the smallest square into which $88$ unit squares can be
+    packed.
+square-packing-89:
+  name: Square packing $s(89)$
+  description: The side of the smallest square into which $89$ unit squares can be
+    packed.

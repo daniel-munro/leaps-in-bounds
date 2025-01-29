@@ -1,0 +1,22 @@
+ejc-ds1-small-ramsey-numbers:
+  name: "Small Ramsey Numbers"
+  author: "Stanisław Radziszowski"
+  date: "2024-09-06"
+  doi: "https://doi.org/10.37236/21"
+
+ejc-ds7-packing-unit-squares:
+  name: "Packing Unit Squares in Squares: A Survey and New Results"
+  author: "Erich Friedman"
+  date: "2009-08-14"
+  doi: "https://doi.org/10.37236/28"
+
+greenwood-gleason-1955:
+  string: "R.E. Greenwood and A.M. Gleason, Combinatorial Relations and Chromatic Graphs, Canadian Jour-
+nal of Mathematics, 7 (1955) 1-7."
+  date: "1955"
+  notes: "[GG] in https://doi.org/10.37236/21"
+
+kery-1964:
+  string: "G. Kéry, On a Theorem of Ramsey (in Hungarian), Matematikai Lapok, 15 (1964) 204-224."
+  date: "1964"
+  notes: "[Kéry] in https://doi.org/10.37236/28"

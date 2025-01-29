@@ -1,0 +1,21 @@
+- constant: ramsey-3-4
+  value: 9
+  type: exact
+  primary_source: greenwood-gleason-1955
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-5
+  value: 14
+  type: exact
+  primary_source: greenwood-gleason-1955
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-4-4
+  value: 18
+  type: exact
+  primary_source: greenwood-gleason-1955
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-6
+  value: 18
+  type: exact
+  primary_source: kery-1964
+  secondary_source: ejc-ds1-small-ramsey-numbers
+

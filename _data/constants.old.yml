@@ -1,0 +1,11 @@
+ramsey-4-4:
+  name: "R(4,4)"
+  description: "The Ramsey number $R(4,4)$ represents the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first color or a monochromatic $K_4$ in the second color."
+
+ramsey-4-5:
+  name: "R(4,5)"
+  description: "The Ramsey number $R(4,5)$ represents the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first color or a monochromatic $K_5$ in the second color."
+
+ramsey-4-6:
+  name: "R(4,6)"
+  description: "The Ramsey number $R(4,6)$ represents the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_4$ in the first color or a monochromatic $K_6$ in the second color."
