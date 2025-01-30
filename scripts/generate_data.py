@@ -10,39 +10,17 @@ from collections import defaultdict
 import itertools
 import yaml
 
-def get_latest_updates(updates):
-    """For each constant, find the most recent lower bound and upper bound or exact value
-    
-    Most recent should also be best, but values may be expressed as strings
-    (e.g. involving log or roots), so easier to use the most recent value.
+def get_constants(groups: dict) -> dict:
+    """Generate constants from constant groups.
+
+    Args:
+        groups: Dictionary of constant groups.
+
+    Returns:
+        Dictionary of constants.
     """
-    values = defaultdict(dict)
-    for update in updates:
-        constant = update["constant"]
-        update_type = update["type"]
-        update["date"] = sources[update["primary_source"]]["date"]
-        if update_type in values[constant]:
-            assert update_type != "exact" # Exact values should only be discovered once
-
-            # Compare dates for bounds
-            existing_date = values[constant][update_type]["date"]
-            new_date = update["date"]
-            
-            # Convert YYYY-MM-DD to YYYY for comparison if needed
-            existing_year = existing_date[:4]
-            new_year = new_date[:4]
-            
-            # Replace only if new date is more recent
-            if new_year > existing_year or new_date > existing_date:
-                values[constant][update_type] = update
-
-        else:
-            values[constant][update_type] = update
-    return values
-
-def get_constants(groups):
     constants = {}
-    for group in groups:
+    for group in groups.values():
         param_values = []
         for values in group["parameter_values"]:
             # Some items in values list are numbers, others are length-2 lists
@@ -67,15 +45,33 @@ def get_constants(groups):
             constants[id] = constant
     return constants
 
-def assign_current_values(constants, latest_updates):
-    for id, constant in constants.items():
-        latest = latest_updates[id]
-        for type in ["lower_bound", "upper_bound", "exact"]:
-            field = "value" if type == "exact" else type
-            if type in latest:
-                constant[field] = latest[type]["value"]
-            else:
-                constant[field] = None
+def assign_updates_and_values(constants: dict, updates: list[dict]):
+    """Assign updates and values to constants.
+
+    Args:
+        constants: Dictionary of constants.
+        updates: List of updates in chronological order to process.
+    """
+    for constant in constants.values():
+        constant["updates"] = []
+        constant["value"] = None
+        constant["lower_bound"] = None
+        constant["upper_bound"] = None
+    for update in updates:
+        constant = constants[update["constant"]]
+        del update["constant"]
+        constant["updates"].append(update)
+        if update["type"] == "exact":
+            assert constant["value"] is None # Exact values should only be discovered once
+            constant["value"] = update["value"]
+        else:
+            assert update["type"] in ["lower_bound", "upper_bound"]
+            constant[update["type"]] = update["value"]
+    # If exact value has been found, remove bounds
+    for constant in constants.values():
+        if constant["value"] is not None:
+            constant["lower_bound"] = None
+            constant["upper_bound"] = None
 
 with open("_data/constant_groups.yml", "r") as file:
     groups = yaml.safe_load(file)
@@ -83,20 +79,14 @@ with open("_data/constant_groups.yml", "r") as file:
 with open("_data/sources.yml", "r") as file:
     sources = yaml.safe_load(file)
 
-with open("_data/updates.yml", "r") as file:
+with open("source_data/updates.yml", "r") as file:
     updates = yaml.safe_load(file)
+for update in updates:
+    update["date"] = sources[update["primary_source"]]["date"]
+updates.sort(key=lambda x: x["date"])
 
 constants = get_constants(groups)
-latest_updates = get_latest_updates(updates)
-assign_current_values(constants, latest_updates)
+assign_updates_and_values(constants, updates)
 
 with open("_data/constants.yml", "w") as file:
     yaml.dump(constants, file, sort_keys=False)
-
-# for group in groups:
-#     del group["id_template"]
-#     del group["name_template"]
-#     del group["description_template"]
-
-# with open("_data/constant_groups.yml", "w") as file:
-#     yaml.dump(groups, file, sort_keys=False)

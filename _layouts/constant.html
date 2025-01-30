@@ -6,6 +6,35 @@ layout: default
 
 <h1>{{ constant.name }}</h1>
 
-{{ constant.description }}
+<p>{{ constant.description }}</p>
 
-{{ content }}
+<h2>Updates</h2>
+
+<ul>
+  {% for update in constant.updates %}
+  <li>
+      <strong>{{ update.date }}</strong>
+      {% case update.type %}
+        {% when "exact" %}
+          Exact value:
+        {% when "lower_bound" %}
+          Lower bound:
+        {% when "upper_bound" %}
+          Upper bound:
+        {% else %}
+          {{ update.type }}:
+      {% endcase %}
+      {{ update.value }}
+      {% assign primary = site.data.sources[update.primary_source] %}
+      <br>{{ primary.string }}
+      {% if update.secondary_source %}
+        {% assign secondary = site.data.sources[update.secondary_source] %}
+        <br>[via {{ secondary.name }}, {{ secondary.author }}, {{ secondary.date }}]
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% if constant.updates.size == 0 %}
+  <p><em>No updates recorded.</em></p>
+{% endif %}

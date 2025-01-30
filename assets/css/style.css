@@ -6,3 +6,50 @@ body {
 .navbar {
     background-color: white !important;
 }
+
+h1 {
+    text-align: center;
+}
+
+.constant-grid {
+    text-align: center;
+}
+
+.cell-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.cell-link:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+.constant-sequence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0.25rem 0;
+}
+
+.constant-box {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    text-decoration: none;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    color: inherit;
+}
+
+.constant-box:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+.box-exact {
+    background-color: #d4edda;
+}
