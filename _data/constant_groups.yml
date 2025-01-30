@@ -1,0 +1,30 @@
+- group_id: ramsey
+  group_name: "Ramsey numbers"
+  group_description: "Ramsey number $R(r,s)$ is the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_r$ in the first color or a monochromatic $K_s$ in the second color."
+  display_type: grid
+  display_rows: [3, 4, 5, 6, 7, 8, 9, 10]
+  display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  id_template: "ramsey-{r}-{s}"
+  name_template: "Ramsey number $R({r},{s})$"
+  description_template: "The smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_{r}$ in the first color or a monochromatic $K_{s}$ in the second color."
+  parameters: [r, s]
+  parameter_values:
+  - [3, [3, 15]]
+  - [4, [4, 15]]
+  - [5, [5, 15]]
+  - [6, [6, 15]]
+  - [7, [7, 15]]
+  - [8, [8, 15]]
+  - [9, [9, 15]]
+  - [10, [10, 15]]
+
+- group_id: square-packing
+  group_name: "Packing unit squares in squares"
+  group_description: "$s(n)$ is the side of the smallest square into which $n$ unit squares can be packed."
+  display_type: sequence
+  id_template: "square-packing-{n}"
+  name_template: "Unit square packing $s({n})$"
+  description_template: "The side of the smallest square into which ${n}$ unit squares can be packed."
+  parameters: [n]
+  parameter_values:
+  - [[2, 89]]

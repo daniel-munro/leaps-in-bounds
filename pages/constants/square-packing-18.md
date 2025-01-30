@@ -1,6 +1,6 @@
 ---
 layout: constant
-title: Square packing $s(18)$
+title: Unit square packing $s(18)$
 permalink: /constants/square-packing-18/
 id: square-packing-18
 ---
