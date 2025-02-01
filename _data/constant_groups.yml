@@ -26,5 +26,5 @@ square-packing:
   name_template: "Packing unit squares in a square $s({n})$"
   description_template: "The side of the smallest square into which ${n}$ unit squares can be packed."
   parameters: [n]
-  parameter_values: [[[1, 89]]]
+  parameter_values: [[[1, 100]]]
 

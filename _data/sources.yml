@@ -20,3 +20,8 @@ kery-1964:
   string: "G. Kéry, On a Theorem of Ramsey (in Hungarian), Matematikai Lapok, 15 (1964) 204-224."
   date: "1964"
   notes: "[Kéry] in https://doi.org/10.37236/28"
+
+gobel-1979:
+  string: "F. Göbel, Geometrical Packing and Covering Problems, in Packing and Covering in Combinatorics, A. Schrijver (ed.), Math Centrum Tracts 106 (1979) 179-199."
+  date: "1979"
+  notes: "[7] in https://doi.org/10.37236/28"

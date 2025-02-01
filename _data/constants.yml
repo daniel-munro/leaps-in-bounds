@@ -1433,8 +1433,9 @@ square-packing-in-square-5:
   updates:
   - type: exact
     value: 2 + \frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: '1979'
   value: 2 + \frac{1}{\sqrt{2}}
   lower_bound: null
   upper_bound: null
@@ -1493,8 +1494,9 @@ square-packing-in-square-10:
   updates:
   - type: exact
     value: 3 + \frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: '1979'
   value: 3 + \frac{1}{\sqrt{2}}
   lower_bound: null
   upper_bound: null
@@ -1609,6 +1611,7 @@ square-packing-in-square-18:
     date: '?'
   - type: lower_bound
     value: \frac{40\sqrt{2}+19}{17}
+    secondary_source: ejc-ds7-packing-unit-squares
     date: '?'
   value: null
   lower_bound: \frac{40\sqrt{2}+19}{17}
@@ -1617,567 +1620,1096 @@ square-packing-in-square-19:
   name: Packing unit squares in a square $s(19)$
   description: The side of the smallest square into which $19$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 3+\frac{4\sqrt{2}}{3}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 6\sqrt{2}-4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 6\sqrt{2}-4
+  upper_bound: 3+\frac{4\sqrt{2}}{3}
 square-packing-in-square-20:
   name: Packing unit squares in a square $s(20)$
   description: The side of the smallest square into which $20$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 6\sqrt{2}-4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 6\sqrt{2}-4
+  upper_bound: 5
 square-packing-in-square-21:
   name: Packing unit squares in a square $s(21)$
   description: The side of the smallest square into which $21$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 4.7438
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 4.7438
+  upper_bound: 5
 square-packing-in-square-22:
   name: Packing unit squares in a square $s(22)$
   description: The side of the smallest square into which $22$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+2
+  upper_bound: 5
 square-packing-in-square-23:
   name: Packing unit squares in a square $s(23)$
   description: The side of the smallest square into which $23$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 5
   lower_bound: null
   upper_bound: null
 square-packing-in-square-24:
   name: Packing unit squares in a square $s(24)$
   description: The side of the smallest square into which $24$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 5
   lower_bound: null
   upper_bound: null
 square-packing-in-square-25:
   name: Packing unit squares in a square $s(25)$
   description: The side of the smallest square into which $25$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 5
   lower_bound: null
   upper_bound: null
 square-packing-in-square-26:
   name: Packing unit squares in a square $s(26)$
   description: The side of the smallest square into which $26$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: \frac{7}{2}+\frac{3\sqrt{2}}{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
+  upper_bound: \frac{7}{2}+\frac{3\sqrt{2}}{2}
 square-packing-in-square-27:
   name: Packing unit squares in a square $s(27)$
   description: The side of the smallest square into which $27$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5+\frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '1979'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
+  upper_bound: 5+\frac{1}{\sqrt{2}}
 square-packing-in-square-28:
   name: Packing unit squares in a square $s(28)$
   description: The side of the smallest square into which $28$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 2+2\sqrt{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{6}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{6}{\sqrt{5}}
+  upper_bound: 2+2\sqrt{2}
 square-packing-in-square-29:
   name: Packing unit squares in a square $s(29)$
   description: The side of the smallest square into which $29$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}5.9344'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{6}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{6}{\sqrt{5}}
+  upper_bound: '{\approx}5.9344'
 square-packing-in-square-30:
   name: Packing unit squares in a square $s(30)$
   description: The side of the smallest square into which $30$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{6}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{6}{\sqrt{5}}
+  upper_bound: 6
 square-packing-in-square-31:
   name: Packing unit squares in a square $s(31)$
   description: The side of the smallest square into which $31$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 5.6415
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 5.6415
+  upper_bound: 6
 square-packing-in-square-32:
   name: Packing unit squares in a square $s(32)$
   description: The side of the smallest square into which $32$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 6
 square-packing-in-square-33:
   name: Packing unit squares in a square $s(33)$
   description: The side of the smallest square into which $33$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 6
 square-packing-in-square-34:
   name: Packing unit squares in a square $s(34)$
   description: The side of the smallest square into which $34$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 6
   lower_bound: null
   upper_bound: null
 square-packing-in-square-35:
   name: Packing unit squares in a square $s(35)$
   description: The side of the smallest square into which $35$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 6
   lower_bound: null
   upper_bound: null
 square-packing-in-square-36:
   name: Packing unit squares in a square $s(36)$
   description: The side of the smallest square into which $36$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 6
   lower_bound: null
   upper_bound: null
 square-packing-in-square-37:
   name: Packing unit squares in a square $s(37)$
   description: The side of the smallest square into which $37$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}6.5987'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+  upper_bound: '{\approx}6.5987'
 square-packing-in-square-38:
   name: Packing unit squares in a square $s(38)$
   description: The side of the smallest square into which $38$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 6+\frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '1979'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+  upper_bound: 6+\frac{1}{\sqrt{2}}
 square-packing-in-square-39:
   name: Packing unit squares in a square $s(39)$
   description: The side of the smallest square into which $39$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}6.8189'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+  upper_bound: '{\approx}6.8189'
 square-packing-in-square-40:
   name: Packing unit squares in a square $s(40)$
   description: The side of the smallest square into which $40$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 4+\frac{2}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{8}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{8}{\sqrt{5}}
+  upper_bound: 4+\frac{2}{\sqrt{2}}
 square-packing-in-square-41:
   name: Packing unit squares in a square $s(41)$
   description: The side of the smallest square into which $41$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}6.9473'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{8}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{8}{\sqrt{5}}
+  upper_bound: '{\approx}6.9473'
 square-packing-in-square-42:
   name: Packing unit squares in a square $s(42)$
   description: The side of the smallest square into which $42$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 7
 square-packing-in-square-43:
   name: Packing unit squares in a square $s(43)$
   description: The side of the smallest square into which $43$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 7
 square-packing-in-square-44:
   name: Packing unit squares in a square $s(44)$
   description: The side of the smallest square into which $44$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 7
 square-packing-in-square-45:
   name: Packing unit squares in a square $s(45)$
   description: The side of the smallest square into which $45$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 7
 square-packing-in-square-46:
   name: Packing unit squares in a square $s(46)$
   description: The side of the smallest square into which $46$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 7
 square-packing-in-square-47:
   name: Packing unit squares in a square $s(47)$
   description: The side of the smallest square into which $47$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 7
   lower_bound: null
   upper_bound: null
 square-packing-in-square-48:
   name: Packing unit squares in a square $s(48)$
   description: The side of the smallest square into which $48$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 7
   lower_bound: null
   upper_bound: null
 square-packing-in-square-49:
   name: Packing unit squares in a square $s(49)$
   description: The side of the smallest square into which $49$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 7
   lower_bound: null
   upper_bound: null
 square-packing-in-square-50:
   name: Packing unit squares in a square $s(50)$
   description: The side of the smallest square into which $50$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}7.5987'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+  upper_bound: '{\approx}7.5987'
 square-packing-in-square-51:
   name: Packing unit squares in a square $s(51)$
   description: The side of the smallest square into which $51$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}7.7044'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+  upper_bound: '{\approx}7.7044'
 square-packing-in-square-52:
   name: Packing unit squares in a square $s(52)$
   description: The side of the smallest square into which $52$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 7+\frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '1979'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+  upper_bound: 7+\frac{1}{\sqrt{2}}
 square-packing-in-square-53:
   name: Packing unit squares in a square $s(53)$
   description: The side of the smallest square into which $53$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}7.8231'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+  upper_bound: '{\approx}7.8231'
 square-packing-in-square-54:
   name: Packing unit squares in a square $s(54)$
   description: The side of the smallest square into which $54$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}7.8488'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}7.8488'
 square-packing-in-square-55:
   name: Packing unit squares in a square $s(55)$
   description: The side of the smallest square into which $55$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}7.9871'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}7.9871'
 square-packing-in-square-56:
   name: Packing unit squares in a square $s(56)$
   description: The side of the smallest square into which $56$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 8
 square-packing-in-square-57:
   name: Packing unit squares in a square $s(57)$
   description: The side of the smallest square into which $57$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 8
 square-packing-in-square-58:
   name: Packing unit squares in a square $s(58)$
   description: The side of the smallest square into which $58$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 8
 square-packing-in-square-59:
   name: Packing unit squares in a square $s(59)$
   description: The side of the smallest square into which $59$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 8
 square-packing-in-square-60:
   name: Packing unit squares in a square $s(60)$
   description: The side of the smallest square into which $60$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 8
 square-packing-in-square-61:
   name: Packing unit squares in a square $s(61)$
   description: The side of the smallest square into which $61$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 8
 square-packing-in-square-62:
   name: Packing unit squares in a square $s(62)$
   description: The side of the smallest square into which $62$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 8
   lower_bound: null
   upper_bound: null
 square-packing-in-square-63:
   name: Packing unit squares in a square $s(63)$
   description: The side of the smallest square into which $63$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 8
   lower_bound: null
   upper_bound: null
 square-packing-in-square-64:
   name: Packing unit squares in a square $s(64)$
   description: The side of the smallest square into which $64$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 8
   lower_bound: null
   upper_bound: null
 square-packing-in-square-65:
   name: Packing unit squares in a square $s(65)$
   description: The side of the smallest square into which $65$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5+\frac{5}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{71}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{71}{13}
+  upper_bound: 5+\frac{5}{\sqrt{2}}
 square-packing-in-square-66:
   name: Packing unit squares in a square $s(66)$
   description: The side of the smallest square into which $66$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 3+4\sqrt{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{71}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{71}{13}
+  upper_bound: 3+4\sqrt{2}
 square-packing-in-square-67:
   name: Packing unit squares in a square $s(67)$
   description: The side of the smallest square into which $67$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 8+\frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '1979'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{71}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{71}{13}
+  upper_bound: 8+\frac{1}{\sqrt{2}}
 square-packing-in-square-68:
   name: Packing unit squares in a square $s(68)$
   description: The side of the smallest square into which $68$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: \frac{15}{2}+\frac{\sqrt{7}}{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{71}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{71}{13}
+  upper_bound: \frac{15}{2}+\frac{\sqrt{7}}{2}
 square-packing-in-square-69:
   name: Packing unit squares in a square $s(69)$
   description: The side of the smallest square into which $69$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}8.8562'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}8.8562'
 square-packing-in-square-70:
   name: Packing unit squares in a square $s(70)$
   description: The side of the smallest square into which $70$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}8.9121'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}8.9121'
 square-packing-in-square-71:
   name: Packing unit squares in a square $s(71)$
   description: The side of the smallest square into which $71$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}8.9633'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}8.9633'
 square-packing-in-square-72:
   name: Packing unit squares in a square $s(72)$
   description: The side of the smallest square into which $72$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-73:
   name: Packing unit squares in a square $s(73)$
   description: The side of the smallest square into which $73$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-74:
   name: Packing unit squares in a square $s(74)$
   description: The side of the smallest square into which $74$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-75:
   name: Packing unit squares in a square $s(75)$
   description: The side of the smallest square into which $75$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-76:
   name: Packing unit squares in a square $s(76)$
   description: The side of the smallest square into which $76$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-77:
   name: Packing unit squares in a square $s(77)$
   description: The side of the smallest square into which $77$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-78:
   name: Packing unit squares in a square $s(78)$
   description: The side of the smallest square into which $78$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9
 square-packing-in-square-79:
   name: Packing unit squares in a square $s(79)$
   description: The side of the smallest square into which $79$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 9
   lower_bound: null
   upper_bound: null
 square-packing-in-square-80:
   name: Packing unit squares in a square $s(80)$
   description: The side of the smallest square into which $80$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 9
   lower_bound: null
   upper_bound: null
 square-packing-in-square-81:
   name: Packing unit squares in a square $s(81)$
   description: The side of the smallest square into which $81$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 9
   lower_bound: null
   upper_bound: null
 square-packing-in-square-82:
   name: Packing unit squares in a square $s(82)$
   description: The side of the smallest square into which $82$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 6+\frac{5}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+  upper_bound: 6+\frac{5}{\sqrt{2}}
 square-packing-in-square-83:
   name: Packing unit squares in a square $s(83)$
   description: The side of the smallest square into which $83$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 4+4\sqrt{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+  upper_bound: 4+4\sqrt{2}
 square-packing-in-square-84:
   name: Packing unit squares in a square $s(84)$
   description: The side of the smallest square into which $84$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 9+\frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '1979'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+  upper_bound: 9+\frac{1}{\sqrt{2}}
 square-packing-in-square-85:
   name: Packing unit squares in a square $s(85)$
   description: The side of the smallest square into which $85$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: \frac{11}{2}+3\sqrt{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+  upper_bound: \frac{11}{2}+3\sqrt{2}
 square-packing-in-square-86:
   name: Packing unit squares in a square $s(86)$
   description: The side of the smallest square into which $86$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: \frac{17+\sqrt{7}}{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: \frac{17+\sqrt{7}}{2}
 square-packing-in-square-87:
   name: Packing unit squares in a square $s(87)$
   description: The side of the smallest square into which $87$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}9.8520'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}9.8520'
 square-packing-in-square-88:
   name: Packing unit squares in a square $s(88)$
   description: The side of the smallest square into which $88$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}9.9018'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: '{\approx}9.9018'
 square-packing-in-square-89:
   name: Packing unit squares in a square $s(89)$
   description: The side of the smallest square into which $89$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5+\frac{7}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
+  lower_bound: null
+  upper_bound: 5+\frac{7}{\sqrt{2}}
+square-packing-in-square-90:
+  name: Packing unit squares in a square $s(90)$
+  description: The side of the smallest square into which $90$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-91:
+  name: Packing unit squares in a square $s(91)$
+  description: The side of the smallest square into which $91$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-92:
+  name: Packing unit squares in a square $s(92)$
+  description: The side of the smallest square into which $92$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-93:
+  name: Packing unit squares in a square $s(93)$
+  description: The side of the smallest square into which $93$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-94:
+  name: Packing unit squares in a square $s(94)$
+  description: The side of the smallest square into which $94$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-95:
+  name: Packing unit squares in a square $s(95)$
+  description: The side of the smallest square into which $95$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-96:
+  name: Packing unit squares in a square $s(96)$
+  description: The side of the smallest square into which $96$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-97:
+  name: Packing unit squares in a square $s(97)$
+  description: The side of the smallest square into which $97$ unit squares can be
+    packed.
+  updates:
+  - type: upper_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: null
+  lower_bound: null
+  upper_bound: 10
+square-packing-in-square-98:
+  name: Packing unit squares in a square $s(98)$
+  description: The side of the smallest square into which $98$ unit squares can be
+    packed.
+  updates:
+  - type: exact
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 10
+  lower_bound: null
+  upper_bound: null
+square-packing-in-square-99:
+  name: Packing unit squares in a square $s(99)$
+  description: The side of the smallest square into which $99$ unit squares can be
+    packed.
+  updates:
+  - type: exact
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 10
+  lower_bound: null
+  upper_bound: null
+square-packing-in-square-100:
+  name: Packing unit squares in a square $s(100)$
+  description: The side of the smallest square into which $100$ unit squares can be
+    packed.
+  updates:
+  - type: exact
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 10
   lower_bound: null
   upper_bound: null
