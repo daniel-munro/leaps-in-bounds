@@ -4,94 +4,125 @@ ramsey-3-3:
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{3}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
     value: 6
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
+  - type: upper_bound
+    value: 6
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: null
   value: 6
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 6
+  upper_bound: 6
 ramsey-3-4:
   name: Ramsey number $R(3,4)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{4}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
+    value: 9
+    primary_source: greenwood-gleason-1955
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '1955'
+  - type: upper_bound
     value: 9
     primary_source: greenwood-gleason-1955
     secondary_source: ejc-ds1-small-ramsey-numbers
     date: '1955'
   value: 9
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 9
+  upper_bound: 9
 ramsey-3-5:
   name: Ramsey number $R(3,5)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{5}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
+    value: 14
+    primary_source: greenwood-gleason-1955
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '1955'
+  - type: upper_bound
     value: 14
     primary_source: greenwood-gleason-1955
     secondary_source: ejc-ds1-small-ramsey-numbers
     date: '1955'
   value: 14
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 14
+  upper_bound: 14
 ramsey-3-6:
   name: Ramsey number $R(3,6)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{6}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
+    value: 18
+    primary_source: kery-1964
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '1964'
+  - type: upper_bound
     value: 18
     primary_source: kery-1964
     secondary_source: ejc-ds1-small-ramsey-numbers
     date: '1964'
   value: 18
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 18
+  upper_bound: 18
 ramsey-3-7:
   name: Ramsey number $R(3,7)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{7}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
     value: 23
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
+  - type: upper_bound
+    value: 23
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: null
   value: 23
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 23
+  upper_bound: 23
 ramsey-3-8:
   name: Ramsey number $R(3,8)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
     value: 28
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
+  - type: upper_bound
+    value: 28
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: null
   value: 28
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 28
+  upper_bound: 28
 ramsey-3-9:
   name: Ramsey number $R(3,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
     value: 36
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
+  - type: upper_bound
+    value: 36
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: null
   value: 36
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 36
+  upper_bound: 36
 ramsey-3-10:
   name: Ramsey number $R(3,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
@@ -101,11 +132,11 @@ ramsey-3-10:
   - type: lower_bound
     value: 40
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 41
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 40
   upper_bound: 41
@@ -118,11 +149,11 @@ ramsey-3-11:
   - type: lower_bound
     value: 47
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 50
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 47
   upper_bound: 50
@@ -135,11 +166,11 @@ ramsey-3-12:
   - type: lower_bound
     value: 53
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 59
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 53
   upper_bound: 59
@@ -152,11 +183,11 @@ ramsey-3-13:
   - type: lower_bound
     value: 60
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 68
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 60
   upper_bound: 68
@@ -169,11 +200,11 @@ ramsey-3-14:
   - type: lower_bound
     value: 67
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 77
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 67
   upper_bound: 77
@@ -186,11 +217,11 @@ ramsey-3-15:
   - type: lower_bound
     value: 74
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 87
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 74
   upper_bound: 87
@@ -200,27 +231,36 @@ ramsey-4-4:
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{4}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
+    value: 18
+    primary_source: greenwood-gleason-1955
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '1955'
+  - type: upper_bound
     value: 18
     primary_source: greenwood-gleason-1955
     secondary_source: ejc-ds1-small-ramsey-numbers
     date: '1955'
   value: 18
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 18
+  upper_bound: 18
 ramsey-4-5:
   name: Ramsey number $R(4,5)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{5}$ in the second color.
   updates:
-  - type: exact
+  - type: lower_bound
     value: 25
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
+  - type: upper_bound
+    value: 25
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: null
   value: 25
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 25
+  upper_bound: 25
 ramsey-4-6:
   name: Ramsey number $R(4,6)$
   description: The smallest number $n$ such that any two-coloring of the edges of
@@ -230,15 +270,15 @@ ramsey-4-6:
   - type: lower_bound
     value: 36
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 41
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 40
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 36
   upper_bound: 40
@@ -251,15 +291,15 @@ ramsey-4-7:
   - type: lower_bound
     value: 49
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 61
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 58
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 49
   upper_bound: 58
@@ -272,15 +312,15 @@ ramsey-4-8:
   - type: lower_bound
     value: 59
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 84
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 79
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 59
   upper_bound: 79
@@ -293,15 +333,15 @@ ramsey-4-9:
   - type: lower_bound
     value: 73
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 115
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 105
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 73
   upper_bound: 105
@@ -314,15 +354,15 @@ ramsey-4-10:
   - type: lower_bound
     value: 92
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 149
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 135
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 92
   upper_bound: 135
@@ -335,15 +375,15 @@ ramsey-4-11:
   - type: lower_bound
     value: 102
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 191
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 170
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 102
   upper_bound: 170
@@ -356,15 +396,15 @@ ramsey-4-12:
   - type: lower_bound
     value: 128
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 238
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 210
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 128
   upper_bound: 210
@@ -377,15 +417,15 @@ ramsey-4-13:
   - type: lower_bound
     value: 138
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 291
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 256
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 138
   upper_bound: 256
@@ -398,15 +438,15 @@ ramsey-4-14:
   - type: lower_bound
     value: 147
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 349
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 307
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 147
   upper_bound: 307
@@ -419,15 +459,15 @@ ramsey-4-15:
   - type: lower_bound
     value: 158
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 417
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 364
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 158
   upper_bound: 364
@@ -440,15 +480,15 @@ ramsey-5-5:
   - type: lower_bound
     value: 43
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 48
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 46
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 43
   upper_bound: 46
@@ -461,15 +501,15 @@ ramsey-5-6:
   - type: lower_bound
     value: 59
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 87
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 85
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 59
   upper_bound: 85
@@ -482,15 +522,15 @@ ramsey-5-7:
   - type: lower_bound
     value: 80
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 143
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 133
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 80
   upper_bound: 133
@@ -503,15 +543,15 @@ ramsey-5-8:
   - type: lower_bound
     value: 101
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 216
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 193
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 101
   upper_bound: 193
@@ -524,15 +564,15 @@ ramsey-5-9:
   - type: lower_bound
     value: 133
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 316
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 282
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 133
   upper_bound: 282
@@ -545,15 +585,15 @@ ramsey-5-10:
   - type: lower_bound
     value: 149
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 442
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 381
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 149
   upper_bound: 381
@@ -566,15 +606,15 @@ ramsey-5-11:
   - type: lower_bound
     value: 183
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 633
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 511
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 183
   upper_bound: 511
@@ -587,15 +627,15 @@ ramsey-5-12:
   - type: lower_bound
     value: 203
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 848
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 672
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 203
   upper_bound: 672
@@ -608,15 +648,15 @@ ramsey-5-13:
   - type: lower_bound
     value: 233
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1138
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 860
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 233
   upper_bound: 860
@@ -629,15 +669,15 @@ ramsey-5-14:
   - type: lower_bound
     value: 267
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1461
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1081
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 267
   upper_bound: 1081
@@ -650,15 +690,15 @@ ramsey-5-15:
   - type: lower_bound
     value: 275
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1878
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1341
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 275
   upper_bound: 1341
@@ -671,15 +711,15 @@ ramsey-6-6:
   - type: lower_bound
     value: 102
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 165
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 160
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 102
   upper_bound: 160
@@ -692,15 +732,15 @@ ramsey-6-7:
   - type: lower_bound
     value: 115
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 298
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 270
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 115
   upper_bound: 270
@@ -713,15 +753,15 @@ ramsey-6-8:
   - type: lower_bound
     value: 134
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 495
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 423
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 134
   upper_bound: 423
@@ -734,15 +774,15 @@ ramsey-6-9:
   - type: lower_bound
     value: 183
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 780
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 651
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 183
   upper_bound: 651
@@ -755,15 +795,15 @@ ramsey-6-10:
   - type: lower_bound
     value: 204
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1171
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 944
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 204
   upper_bound: 944
@@ -776,15 +816,15 @@ ramsey-6-11:
   - type: lower_bound
     value: 262
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1804
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1346
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 262
   upper_bound: 1346
@@ -797,15 +837,15 @@ ramsey-6-12:
   - type: lower_bound
     value: 294
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 2566
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1855
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 294
   upper_bound: 1855
@@ -818,15 +858,15 @@ ramsey-6-13:
   - type: lower_bound
     value: 347
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 3703
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 2499
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 347
   upper_bound: 2499
@@ -839,11 +879,11 @@ ramsey-6-14:
   - type: upper_bound
     value: 5033
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 3301
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 3301
@@ -856,15 +896,15 @@ ramsey-6-15:
   - type: lower_bound
     value: 401
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 6911
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 4305
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 401
   upper_bound: 4305
@@ -877,15 +917,15 @@ ramsey-7-7:
   - type: lower_bound
     value: 205
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 540
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 492
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 205
   upper_bound: 492
@@ -898,15 +938,15 @@ ramsey-7-8:
   - type: lower_bound
     value: 219
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1031
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 832
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 219
   upper_bound: 832
@@ -919,15 +959,15 @@ ramsey-7-9:
   - type: lower_bound
     value: 252
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1713
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1368
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 252
   upper_bound: 1368
@@ -940,15 +980,15 @@ ramsey-7-10:
   - type: lower_bound
     value: 292
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 2826
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 2119
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 292
   upper_bound: 2119
@@ -961,15 +1001,15 @@ ramsey-7-11:
   - type: lower_bound
     value: 405
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 4553
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 3197
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 405
   upper_bound: 3197
@@ -982,15 +1022,15 @@ ramsey-7-12:
   - type: lower_bound
     value: 417
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 6954
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 4665
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 417
   upper_bound: 4665
@@ -1003,15 +1043,15 @@ ramsey-7-13:
   - type: lower_bound
     value: 511
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 10578
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 6653
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 511
   upper_bound: 6653
@@ -1024,11 +1064,11 @@ ramsey-7-14:
   - type: upper_bound
     value: 15263
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 9260
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9260
@@ -1041,11 +1081,11 @@ ramsey-7-15:
   - type: upper_bound
     value: 22112
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 12635
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 12635
@@ -1058,15 +1098,15 @@ ramsey-8-8:
   - type: lower_bound
     value: 282
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1870
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 1518
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 282
   upper_bound: 1518
@@ -1079,15 +1119,15 @@ ramsey-8-9:
   - type: lower_bound
     value: 329
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 3583
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 2662
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 329
   upper_bound: 2662
@@ -1100,15 +1140,15 @@ ramsey-8-10:
   - type: lower_bound
     value: 343
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 6090
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 4402
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 343
   upper_bound: 4402
@@ -1121,15 +1161,15 @@ ramsey-8-11:
   - type: lower_bound
     value: 457
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 10630
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 7040
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 457
   upper_bound: 7040
@@ -1142,11 +1182,11 @@ ramsey-8-12:
   - type: upper_bound
     value: 16944
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 10836
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10836
@@ -1159,11 +1199,11 @@ ramsey-8-13:
   - type: lower_bound
     value: 817
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 27485
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 817
   upper_bound: 27485
@@ -1176,7 +1216,7 @@ ramsey-8-14:
   - type: upper_bound
     value: 41525
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 41525
@@ -1189,11 +1229,11 @@ ramsey-8-15:
   - type: lower_bound
     value: 873
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 63609
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 873
   upper_bound: 63609
@@ -1206,15 +1246,15 @@ ramsey-9-9:
   - type: lower_bound
     value: 565
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 6588
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 4956
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 565
   upper_bound: 4956
@@ -1227,15 +1267,15 @@ ramsey-9-10:
   - type: lower_bound
     value: 581
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 12677
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 8675
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 581
   upper_bound: 8675
@@ -1248,11 +1288,11 @@ ramsey-9-11:
   - type: upper_bound
     value: 22325
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 14631
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 14631
@@ -1265,7 +1305,7 @@ ramsey-9-12:
   - type: upper_bound
     value: 38832
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 38832
@@ -1278,7 +1318,7 @@ ramsey-9-13:
   - type: upper_bound
     value: 64864
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 64864
@@ -1309,15 +1349,15 @@ ramsey-10-10:
   - type: lower_bound
     value: 798
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 23556
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   - type: upper_bound
     value: 16064
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 798
   upper_bound: 16064
@@ -1330,7 +1370,7 @@ ramsey-10-11:
   - type: upper_bound
     value: 45881
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 45881
@@ -1343,7 +1383,7 @@ ramsey-10-12:
   - type: upper_bound
     value: 81123
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 81123
@@ -1374,7 +1414,7 @@ ramsey-10-15:
   - type: lower_bound
     value: 1313
     secondary_source: ejc-ds1-small-ramsey-numbers
-    date: '?'
+    date: null
   value: null
   lower_bound: 1313
   upper_bound: null
@@ -1383,123 +1423,164 @@ square-packing-in-square-1:
   description: The side of the smallest square into which $1$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 1
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 1
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 1
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 1
+  upper_bound: 1
 square-packing-in-square-2:
   name: Packing unit squares in a square $s(2)$
   description: The side of the smallest square into which $2$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 2
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 2
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2
+  upper_bound: 2
 square-packing-in-square-3:
   name: Packing unit squares in a square $s(3)$
   description: The side of the smallest square into which $3$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 2
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 2
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2
+  upper_bound: 2
 square-packing-in-square-4:
   name: Packing unit squares in a square $s(4)$
   description: The side of the smallest square into which $4$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 2
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 2
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2
+  upper_bound: 2
 square-packing-in-square-5:
   name: Packing unit squares in a square $s(5)$
   description: The side of the smallest square into which $5$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
+    value: 2 + \frac{1}{\sqrt{2}}
+    primary_source: gobel-1979
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '1979'
+  - type: lower_bound
     value: 2 + \frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
   value: 2 + \frac{1}{\sqrt{2}}
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 2 + \frac{1}{\sqrt{2}}
+  upper_bound: 2 + \frac{1}{\sqrt{2}}
 square-packing-in-square-6:
   name: Packing unit squares in a square $s(6)$
   description: The side of the smallest square into which $6$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 3
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 3
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 3
+  upper_bound: 3
 square-packing-in-square-7:
   name: Packing unit squares in a square $s(7)$
   description: The side of the smallest square into which $7$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 3
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 3
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 3
+  upper_bound: 3
 square-packing-in-square-8:
   name: Packing unit squares in a square $s(8)$
   description: The side of the smallest square into which $8$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 3
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 3
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 3
+  upper_bound: 3
 square-packing-in-square-9:
   name: Packing unit squares in a square $s(9)$
   description: The side of the smallest square into which $9$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 3
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 3
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 3
+  upper_bound: 3
 square-packing-in-square-10:
   name: Packing unit squares in a square $s(10)$
   description: The side of the smallest square into which $10$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: lower_bound
+    value: 3 + \frac{1}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
+  - type: upper_bound
     value: 3 + \frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
   value: 3 + \frac{1}{\sqrt{2}}
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 3 + \frac{1}{\sqrt{2}}
+  upper_bound: 3 + \frac{1}{\sqrt{2}}
 square-packing-in-square-11:
   name: Packing unit squares in a square $s(11)$
   description: The side of the smallest square into which $11$ unit squares can be
@@ -1508,11 +1589,11 @@ square-packing-in-square-11:
   - type: upper_bound
     value: '{\approx}3.8771'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2 + \frac{4}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2 + \frac{4}{\sqrt{5}}
   upper_bound: '{\approx}3.8771'
@@ -1524,11 +1605,11 @@ square-packing-in-square-12:
   - type: upper_bound
     value: 4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2 + \frac{4}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2 + \frac{4}{\sqrt{5}}
   upper_bound: 4
@@ -1540,11 +1621,11 @@ square-packing-in-square-13:
   - type: upper_bound
     value: 4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 3.8437
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 3.8437
   upper_bound: 4
@@ -1553,37 +1634,49 @@ square-packing-in-square-14:
   description: The side of the smallest square into which $14$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 4
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 4
+  upper_bound: 4
 square-packing-in-square-15:
   name: Packing unit squares in a square $s(15)$
   description: The side of the smallest square into which $15$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 4
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 4
+  upper_bound: 4
 square-packing-in-square-16:
   name: Packing unit squares in a square $s(16)$
   description: The side of the smallest square into which $16$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 4
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 4
+  upper_bound: 4
 square-packing-in-square-17:
   name: Packing unit squares in a square $s(17)$
   description: The side of the smallest square into which $17$ unit squares can be
@@ -1592,11 +1685,11 @@ square-packing-in-square-17:
   - type: upper_bound
     value: '{\approx}4.6756'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: \frac{40\sqrt{2}+19}{17}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: \frac{40\sqrt{2}+19}{17}
   upper_bound: '{\approx}4.6756'
@@ -1608,11 +1701,11 @@ square-packing-in-square-18:
   - type: upper_bound
     value: \frac{7+\sqrt{7}}{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: \frac{40\sqrt{2}+19}{17}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: \frac{40\sqrt{2}+19}{17}
   upper_bound: \frac{7+\sqrt{7}}{2}
@@ -1624,11 +1717,11 @@ square-packing-in-square-19:
   - type: upper_bound
     value: 3+\frac{4\sqrt{2}}{3}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 6\sqrt{2}-4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 6\sqrt{2}-4
   upper_bound: 3+\frac{4\sqrt{2}}{3}
@@ -1640,11 +1733,11 @@ square-packing-in-square-20:
   - type: upper_bound
     value: 5
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 6\sqrt{2}-4
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 6\sqrt{2}-4
   upper_bound: 5
@@ -1656,11 +1749,11 @@ square-packing-in-square-21:
   - type: upper_bound
     value: 5
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 4.7438
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 4.7438
   upper_bound: 5
@@ -1672,11 +1765,11 @@ square-packing-in-square-22:
   - type: upper_bound
     value: 5
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+2
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+2
   upper_bound: 5
@@ -1685,37 +1778,49 @@ square-packing-in-square-23:
   description: The side of the smallest square into which $23$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 5
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 5
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 5
+  upper_bound: 5
 square-packing-in-square-24:
   name: Packing unit squares in a square $s(24)$
   description: The side of the smallest square into which $24$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 5
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 5
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 5
+  upper_bound: 5
 square-packing-in-square-25:
   name: Packing unit squares in a square $s(25)$
   description: The side of the smallest square into which $25$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 5
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 5
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 5
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 5
+  upper_bound: 5
 square-packing-in-square-26:
   name: Packing unit squares in a square $s(26)$
   description: The side of the smallest square into which $26$ unit squares can be
@@ -1724,11 +1829,11 @@ square-packing-in-square-26:
   - type: upper_bound
     value: \frac{7}{2}+\frac{3\sqrt{2}}{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
   upper_bound: \frac{7}{2}+\frac{3\sqrt{2}}{2}
@@ -1737,15 +1842,15 @@ square-packing-in-square-27:
   description: The side of the smallest square into which $27$ unit squares can be
     packed.
   updates:
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   - type: upper_bound
     value: 5+\frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
-  - type: lower_bound
-    value: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
-    secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
   value: null
   lower_bound: 2\sqrt{2}+\frac{27+2\sqrt{10}}{13}
   upper_bound: 5+\frac{1}{\sqrt{2}}
@@ -1757,11 +1862,11 @@ square-packing-in-square-28:
   - type: upper_bound
     value: 2+2\sqrt{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{6}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{6}{\sqrt{5}}
   upper_bound: 2+2\sqrt{2}
@@ -1773,11 +1878,11 @@ square-packing-in-square-29:
   - type: upper_bound
     value: '{\approx}5.9344'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{6}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{6}{\sqrt{5}}
   upper_bound: '{\approx}5.9344'
@@ -1789,11 +1894,11 @@ square-packing-in-square-30:
   - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{6}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{6}{\sqrt{5}}
   upper_bound: 6
@@ -1805,11 +1910,11 @@ square-packing-in-square-31:
   - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 5.6415
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 5.6415
   upper_bound: 6
@@ -1821,7 +1926,7 @@ square-packing-in-square-32:
   - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 6
@@ -1833,7 +1938,7 @@ square-packing-in-square-33:
   - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 6
@@ -1842,37 +1947,49 @@ square-packing-in-square-34:
   description: The side of the smallest square into which $34$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 6
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 6
+  upper_bound: 6
 square-packing-in-square-35:
   name: Packing unit squares in a square $s(35)$
   description: The side of the smallest square into which $35$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 6
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 6
+  upper_bound: 6
 square-packing-in-square-36:
   name: Packing unit squares in a square $s(36)$
   description: The side of the smallest square into which $36$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 6
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 6
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 6
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 6
+  upper_bound: 6
 square-packing-in-square-37:
   name: Packing unit squares in a square $s(37)$
   description: The side of the smallest square into which $37$ unit squares can be
@@ -1881,11 +1998,11 @@ square-packing-in-square-37:
   - type: upper_bound
     value: '{\approx}6.5987'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
   upper_bound: '{\approx}6.5987'
@@ -1894,15 +2011,15 @@ square-packing-in-square-38:
   description: The side of the smallest square into which $38$ unit squares can be
     packed.
   updates:
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   - type: upper_bound
     value: 6+\frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
-  - type: lower_bound
-    value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
-    secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
   value: null
   lower_bound: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
   upper_bound: 6+\frac{1}{\sqrt{2}}
@@ -1914,11 +2031,11 @@ square-packing-in-square-39:
   - type: upper_bound
     value: '{\approx}6.8189'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{113+10\sqrt{3}}{37}
   upper_bound: '{\approx}6.8189'
@@ -1930,11 +2047,11 @@ square-packing-in-square-40:
   - type: upper_bound
     value: 4+\frac{2}{\sqrt{2}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{8}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{8}{\sqrt{5}}
   upper_bound: 4+\frac{2}{\sqrt{2}}
@@ -1946,11 +2063,11 @@ square-packing-in-square-41:
   - type: upper_bound
     value: '{\approx}6.9473'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{8}{\sqrt{5}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{8}{\sqrt{5}}
   upper_bound: '{\approx}6.9473'
@@ -1962,7 +2079,7 @@ square-packing-in-square-42:
   - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 7
@@ -1974,7 +2091,7 @@ square-packing-in-square-43:
   - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 7
@@ -1986,7 +2103,7 @@ square-packing-in-square-44:
   - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 7
@@ -1998,7 +2115,7 @@ square-packing-in-square-45:
   - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 7
@@ -2010,7 +2127,7 @@ square-packing-in-square-46:
   - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 7
@@ -2019,37 +2136,49 @@ square-packing-in-square-47:
   description: The side of the smallest square into which $47$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 7
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 7
+  upper_bound: 7
 square-packing-in-square-48:
   name: Packing unit squares in a square $s(48)$
   description: The side of the smallest square into which $48$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 7
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 7
+  upper_bound: 7
 square-packing-in-square-49:
   name: Packing unit squares in a square $s(49)$
   description: The side of the smallest square into which $49$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 7
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 7
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 7
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 7
+  upper_bound: 7
 square-packing-in-square-50:
   name: Packing unit squares in a square $s(50)$
   description: The side of the smallest square into which $50$ unit squares can be
@@ -2058,11 +2187,11 @@ square-packing-in-square-50:
   - type: upper_bound
     value: '{\approx}7.5987'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
   upper_bound: '{\approx}7.5987'
@@ -2074,11 +2203,11 @@ square-packing-in-square-51:
   - type: upper_bound
     value: '{\approx}7.7044'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
   upper_bound: '{\approx}7.7044'
@@ -2087,15 +2216,15 @@ square-packing-in-square-52:
   description: The side of the smallest square into which $52$ unit squares can be
     packed.
   updates:
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   - type: upper_bound
     value: 7+\frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
-  - type: lower_bound
-    value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
-    secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
   value: null
   lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
   upper_bound: 7+\frac{1}{\sqrt{2}}
@@ -2107,11 +2236,11 @@ square-packing-in-square-53:
   - type: upper_bound
     value: '{\approx}7.8231'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{101+3\sqrt{14}}{25}
   upper_bound: '{\approx}7.8231'
@@ -2123,7 +2252,7 @@ square-packing-in-square-54:
   - type: upper_bound
     value: '{\approx}7.8488'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}7.8488'
@@ -2135,7 +2264,7 @@ square-packing-in-square-55:
   - type: upper_bound
     value: '{\approx}7.9871'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}7.9871'
@@ -2147,7 +2276,7 @@ square-packing-in-square-56:
   - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 8
@@ -2159,7 +2288,7 @@ square-packing-in-square-57:
   - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 8
@@ -2171,7 +2300,7 @@ square-packing-in-square-58:
   - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 8
@@ -2183,7 +2312,7 @@ square-packing-in-square-59:
   - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 8
@@ -2195,7 +2324,7 @@ square-packing-in-square-60:
   - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 8
@@ -2207,7 +2336,7 @@ square-packing-in-square-61:
   - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 8
@@ -2216,37 +2345,49 @@ square-packing-in-square-62:
   description: The side of the smallest square into which $62$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 8
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 8
+  upper_bound: 8
 square-packing-in-square-63:
   name: Packing unit squares in a square $s(63)$
   description: The side of the smallest square into which $63$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 8
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 8
+  upper_bound: 8
 square-packing-in-square-64:
   name: Packing unit squares in a square $s(64)$
   description: The side of the smallest square into which $64$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 8
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 8
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 8
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 8
+  upper_bound: 8
 square-packing-in-square-65:
   name: Packing unit squares in a square $s(65)$
   description: The side of the smallest square into which $65$ unit squares can be
@@ -2255,11 +2396,11 @@ square-packing-in-square-65:
   - type: upper_bound
     value: 5+\frac{5}{\sqrt{2}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{71}{13}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{71}{13}
   upper_bound: 5+\frac{5}{\sqrt{2}}
@@ -2271,11 +2412,11 @@ square-packing-in-square-66:
   - type: upper_bound
     value: 3+4\sqrt{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{71}{13}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{71}{13}
   upper_bound: 3+4\sqrt{2}
@@ -2284,15 +2425,15 @@ square-packing-in-square-67:
   description: The side of the smallest square into which $67$ unit squares can be
     packed.
   updates:
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{71}{13}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   - type: upper_bound
     value: 8+\frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
-  - type: lower_bound
-    value: 2\sqrt{2}+\frac{71}{13}
-    secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
   value: null
   lower_bound: 2\sqrt{2}+\frac{71}{13}
   upper_bound: 8+\frac{1}{\sqrt{2}}
@@ -2304,11 +2445,11 @@ square-packing-in-square-68:
   - type: upper_bound
     value: \frac{15}{2}+\frac{\sqrt{7}}{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{71}{13}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{71}{13}
   upper_bound: \frac{15}{2}+\frac{\sqrt{7}}{2}
@@ -2320,7 +2461,7 @@ square-packing-in-square-69:
   - type: upper_bound
     value: '{\approx}8.8562'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}8.8562'
@@ -2332,7 +2473,7 @@ square-packing-in-square-70:
   - type: upper_bound
     value: '{\approx}8.9121'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}8.9121'
@@ -2344,7 +2485,7 @@ square-packing-in-square-71:
   - type: upper_bound
     value: '{\approx}8.9633'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}8.9633'
@@ -2356,7 +2497,7 @@ square-packing-in-square-72:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2368,7 +2509,7 @@ square-packing-in-square-73:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2380,7 +2521,7 @@ square-packing-in-square-74:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2392,7 +2533,7 @@ square-packing-in-square-75:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2404,7 +2545,7 @@ square-packing-in-square-76:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2416,7 +2557,7 @@ square-packing-in-square-77:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2428,7 +2569,7 @@ square-packing-in-square-78:
   - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 9
@@ -2437,37 +2578,49 @@ square-packing-in-square-79:
   description: The side of the smallest square into which $79$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 9
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 9
+  upper_bound: 9
 square-packing-in-square-80:
   name: Packing unit squares in a square $s(80)$
   description: The side of the smallest square into which $80$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 9
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 9
+  upper_bound: 9
 square-packing-in-square-81:
   name: Packing unit squares in a square $s(81)$
   description: The side of the smallest square into which $81$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 9
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 9
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 9
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 9
+  upper_bound: 9
 square-packing-in-square-82:
   name: Packing unit squares in a square $s(82)$
   description: The side of the smallest square into which $82$ unit squares can be
@@ -2476,11 +2629,11 @@ square-packing-in-square-82:
   - type: upper_bound
     value: 6+\frac{5}{\sqrt{2}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
   upper_bound: 6+\frac{5}{\sqrt{2}}
@@ -2492,11 +2645,11 @@ square-packing-in-square-83:
   - type: upper_bound
     value: 4+4\sqrt{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
   upper_bound: 4+4\sqrt{2}
@@ -2505,15 +2658,15 @@ square-packing-in-square-84:
   description: The side of the smallest square into which $84$ unit squares can be
     packed.
   updates:
+  - type: lower_bound
+    value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   - type: upper_bound
     value: 9+\frac{1}{\sqrt{2}}
     primary_source: gobel-1979
     secondary_source: ejc-ds7-packing-unit-squares
     date: '1979'
-  - type: lower_bound
-    value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
-    secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
   value: null
   lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
   upper_bound: 9+\frac{1}{\sqrt{2}}
@@ -2525,11 +2678,11 @@ square-packing-in-square-85:
   - type: upper_bound
     value: \frac{11}{2}+3\sqrt{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   - type: lower_bound
     value: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: 2\sqrt{2}+\frac{288+12\sqrt{3}}{41}
   upper_bound: \frac{11}{2}+3\sqrt{2}
@@ -2541,7 +2694,7 @@ square-packing-in-square-86:
   - type: upper_bound
     value: \frac{17+\sqrt{7}}{2}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: \frac{17+\sqrt{7}}{2}
@@ -2553,7 +2706,7 @@ square-packing-in-square-87:
   - type: upper_bound
     value: '{\approx}9.8520'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}9.8520'
@@ -2565,7 +2718,7 @@ square-packing-in-square-88:
   - type: upper_bound
     value: '{\approx}9.9018'
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: '{\approx}9.9018'
@@ -2577,7 +2730,7 @@ square-packing-in-square-89:
   - type: upper_bound
     value: 5+\frac{7}{\sqrt{2}}
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 5+\frac{7}{\sqrt{2}}
@@ -2589,7 +2742,7 @@ square-packing-in-square-90:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2601,7 +2754,7 @@ square-packing-in-square-91:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2613,7 +2766,7 @@ square-packing-in-square-92:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2625,7 +2778,7 @@ square-packing-in-square-93:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2637,7 +2790,7 @@ square-packing-in-square-94:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2649,7 +2802,7 @@ square-packing-in-square-95:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2661,7 +2814,7 @@ square-packing-in-square-96:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2673,7 +2826,7 @@ square-packing-in-square-97:
   - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
   value: null
   lower_bound: null
   upper_bound: 10
@@ -2682,34 +2835,46 @@ square-packing-in-square-98:
   description: The side of the smallest square into which $98$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 10
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 10
+  upper_bound: 10
 square-packing-in-square-99:
   name: Packing unit squares in a square $s(99)$
   description: The side of the smallest square into which $99$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 10
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 10
+  upper_bound: 10
 square-packing-in-square-100:
   name: Packing unit squares in a square $s(100)$
   description: The side of the smallest square into which $100$ unit squares can be
     packed.
   updates:
-  - type: exact
+  - type: upper_bound
     value: 10
     secondary_source: ejc-ds7-packing-unit-squares
-    date: '?'
+    date: null
+  - type: lower_bound
+    value: 10
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: null
   value: 10
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 10
+  upper_bound: 10

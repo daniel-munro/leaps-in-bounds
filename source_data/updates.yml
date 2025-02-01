@@ -1,32 +1,63 @@
 - constant: ramsey-3-3
-  type: exact
+  type: lower_bound
+  value: 6
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-3
+  type: upper_bound
   value: 6
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-4
-  type: exact
+  type: lower_bound
+  value: 9
+  primary_source: greenwood-gleason-1955
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-4
+  type: upper_bound
   value: 9
   primary_source: greenwood-gleason-1955
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-5
-  type: exact
+  type: lower_bound
+  value: 14
+  primary_source: greenwood-gleason-1955
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-5
+  type: upper_bound
   value: 14
   primary_source: greenwood-gleason-1955
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-6
-  type: exact
+  type: lower_bound
+  value: 18
+  primary_source: kery-1964
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-6
+  type: upper_bound
   value: 18
   primary_source: kery-1964
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-7
-  type: exact
+  type: lower_bound
+  value: 23
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-7
+  type: upper_bound
   value: 23
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-8
-  type: exact
+  type: lower_bound
+  value: 28
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-8
+  type: upper_bound
   value: 28
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-9
-  type: exact
+  type: lower_bound
+  value: 36
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-3-9
+  type: upper_bound
   value: 36
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-3-10
@@ -78,12 +109,21 @@
   value: 87
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-4-4
-  type: exact
+  type: lower_bound
+  value: 18
+  primary_source: greenwood-gleason-1955
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-4-4
+  type: upper_bound
   value: 18
   primary_source: greenwood-gleason-1955
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-4-5
-  type: exact
+  type: lower_bound
+  value: 25
+  secondary_source: ejc-ds1-small-ramsey-numbers
+- constant: ramsey-4-5
+  type: upper_bound
   value: 25
   secondary_source: ejc-ds1-small-ramsey-numbers
 - constant: ramsey-4-6
@@ -696,44 +736,44 @@
   secondary_source: ejc-ds1-small-ramsey-numbers
 
 - constant: square-packing-in-square-1
-  type: exact
+  type: upper_bound
   value: 1
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-2
-  type: exact
+  type: upper_bound
   value: 2
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-3
-  type: exact
+  type: upper_bound
   value: 2
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-4
-  type: exact
+  type: upper_bound
   value: 2
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-5
-  type: exact
+  type: upper_bound
   value: "2 + \\frac{1}{\\sqrt{2}}"
   primary_source: gobel-1979
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-6
-  type: exact
+  type: upper_bound
   value: 3
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-7
-  type: exact
+  type: upper_bound
   value: 3
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-8
-  type: exact
+  type: upper_bound
   value: 3
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-9
-  type: exact
+  type: upper_bound
   value: 3
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-10
-  type: exact
+  type: upper_bound
   value: "3 + \\frac{1}{\\sqrt{2}}"
   primary_source: gobel-1979
   secondary_source: ejc-ds7-packing-unit-squares
@@ -750,15 +790,15 @@
   value: 4
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-14
-  type: exact
+  type: upper_bound
   value: 4
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-15
-  type: exact
+  type: upper_bound
   value: 4
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-16
-  type: exact
+  type: upper_bound
   value: 4
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-17
@@ -786,15 +826,15 @@
   value: 5
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-23
-  type: exact
+  type: upper_bound
   value: 5
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-24
-  type: exact
+  type: upper_bound
   value: 5
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-25
-  type: exact
+  type: upper_bound
   value: 5
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-26
@@ -831,15 +871,15 @@
   value: 6
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-34
-  type: exact
+  type: upper_bound
   value: 6
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-35
-  type: exact
+  type: upper_bound
   value: 6
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-36
-  type: exact
+  type: upper_bound
   value: 6
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-37
@@ -884,15 +924,15 @@
   value: 7
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-47
-  type: exact
+  type: upper_bound
   value: 7
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-48
-  type: exact
+  type: upper_bound
   value: 7
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-49
-  type: exact
+  type: upper_bound
   value: 7
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-50
@@ -945,15 +985,15 @@
   value: 8
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-62
-  type: exact
+  type: upper_bound
   value: 8
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-63
-  type: exact
+  type: upper_bound
   value: 8
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-64
-  type: exact
+  type: upper_bound
   value: 8
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-65
@@ -1014,15 +1054,15 @@
   value: 9
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-79
-  type: exact
+  type: upper_bound
   value: 9
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-80
-  type: exact
+  type: upper_bound
   value: 9
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-81
-  type: exact
+  type: upper_bound
   value: 9
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-82
@@ -1091,16 +1131,57 @@
   value: 10
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-98
-  type: exact
+  type: upper_bound
   value: 10
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-99
-  type: exact
+  type: upper_bound
   value: 10
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-100
-  type: exact
+  type: upper_bound
   value: 10
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-1
+  type: lower_bound
+  value: 1
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-2
+  type: lower_bound
+  value: 2
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-3
+  type: lower_bound
+  value: 2
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-4
+  type: lower_bound
+  value: 2
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-5
+  type: lower_bound
+  value: "2 + \\frac{1}{\\sqrt{2}}"
+  primary_source: gobel-1979
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-6
+  type: lower_bound
+  value: 3
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-7
+  type: lower_bound
+  value: 3
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-8
+  type: lower_bound
+  value: 3
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-9
+  type: lower_bound
+  value: 3
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-10
+  type: lower_bound
+  value: "3 + \\frac{1}{\\sqrt{2}}"
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-11
   type: lower_bound
@@ -1113,6 +1194,18 @@
 - constant: square-packing-in-square-13
   type: lower_bound
   value: 3.8437
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-14
+  type: lower_bound
+  value: 4
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-15
+  type: lower_bound
+  value: 4
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-16
+  type: lower_bound
+  value: 4
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-17
   type: lower_bound
@@ -1138,6 +1231,18 @@
   type: lower_bound
   value: "2\\sqrt{2}+2"
   secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-23
+  type: lower_bound
+  value: 5
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-24
+  type: lower_bound
+  value: 5
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-25
+  type: lower_bound
+  value: 5
+  secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-26
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{27+2\\sqrt{10}}{13}"
@@ -1162,6 +1267,18 @@
   type: lower_bound
   value: 5.6415
   secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-34
+  type: lower_bound
+  value: 6
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-35
+  type: lower_bound
+  value: 6
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-36
+  type: lower_bound
+  value: 6
+  secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-37
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{113+10\\sqrt{3}}{37}"
@@ -1182,6 +1299,18 @@
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{8}{\\sqrt{5}}"
   secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-47
+  type: lower_bound
+  value: 7
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-48
+  type: lower_bound
+  value: 7
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-49
+  type: lower_bound
+  value: 7
+  secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-50
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{101+3\\sqrt{14}}{25}"
@@ -1197,6 +1326,18 @@
 - constant: square-packing-in-square-53
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{101+3\\sqrt{14}}{25}"
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-62
+  type: lower_bound
+  value: 8
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-63
+  type: lower_bound
+  value: 8
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-64
+  type: lower_bound
+  value: 8
   secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-65
   type: lower_bound
@@ -1214,6 +1355,18 @@
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{71}{13}"
   secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-79
+  type: lower_bound
+  value: 9
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-80
+  type: lower_bound
+  value: 9
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-81
+  type: lower_bound
+  value: 9
+  secondary_source: ejc-ds7-packing-unit-squares
 - constant: square-packing-in-square-82
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{288+12\\sqrt{3}}{41}"
@@ -1229,5 +1382,17 @@
 - constant: square-packing-in-square-85
   type: lower_bound
   value: "2\\sqrt{2}+\\frac{288+12\\sqrt{3}}{41}"
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-98
+  type: lower_bound
+  value: 10
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-99
+  type: lower_bound
+  value: 10
+  secondary_source: ejc-ds7-packing-unit-squares
+- constant: square-packing-in-square-100
+  type: lower_bound
+  value: 10
   secondary_source: ejc-ds7-packing-unit-squares
 

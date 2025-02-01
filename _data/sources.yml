@@ -11,9 +11,9 @@ ejc-ds7-packing-unit-squares:
   doi: "https://doi.org/10.37236/28"
 
 greenwood-gleason-1955:
-  string: "R.E. Greenwood and A.M. Gleason, Combinatorial Relations and Chromatic Graphs, Canadian Jour-
-nal of Mathematics, 7 (1955) 1-7."
+  string: "R.E. Greenwood and A.M. Gleason, Combinatorial Relations and Chromatic Graphs, Canadian Journal of Mathematics, 7 (1955) 1-7."
   date: "1955"
+  doi: "https://doi.org/10.4153/CJM-1955-001-4"
   notes: "[GG] in https://doi.org/10.37236/21"
 
 kery-1964:

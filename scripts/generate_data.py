@@ -58,20 +58,16 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
         constant["lower_bound"] = None
         constant["upper_bound"] = None
     for update in updates:
+        assert update["type"] in ["lower_bound", "upper_bound"]
+        assert update["value"] is not None
         constant = constants[update["constant"]]
+        assert constant["value"] is None, "Constant already has an exact value"
         del update["constant"]
         constant["updates"].append(update)
-        if update["type"] == "exact":
-            assert constant["value"] is None # Exact values should only be discovered once
-            constant["value"] = update["value"]
-        else:
-            assert update["type"] in ["lower_bound", "upper_bound"]
-            constant[update["type"]] = update["value"]
-    # If exact value has been found, remove bounds
-    for constant in constants.values():
-        if constant["value"] is not None:
-            constant["lower_bound"] = None
-            constant["upper_bound"] = None
+        assert constant[update["type"]] != update["value"], "Duplicate update"
+        constant[update["type"]] = update["value"]
+        if constant["lower_bound"] == constant["upper_bound"]:
+            constant["value"] = constant["lower_bound"]
 
 with open("_data/constant_groups.yml", "r") as file:
     groups = yaml.safe_load(file)
@@ -85,8 +81,9 @@ for update in updates:
     if "primary_source" in update:
         update["date"] = sources[update["primary_source"]]["date"]
     else:
-        update["date"] = "?"
-updates.sort(key=lambda x: x["date"])
+        update["date"] = None
+# List non-dated updates first, as it seems more likely for more recent updates to have known dates
+updates.sort(key=lambda x: (x["date"] is not None, x["date"]))
 
 constants = get_constants(groups)
 assign_updates_and_values(constants, updates)
