@@ -17,4 +17,4 @@ This site provides browsing, visualizations, and access to the structured data f
 Contributions are welcome!
 
 - For technical problems and suggestions, [open an issue on GitHub](https://github.com/daniel-munro/leaps-in-bounds/issues).
-- To contribute data, post in the GitHub Discussions or email [Daniel Munro](https://danmun.ro).
+- To contribute data, post in the [GitHub Discussions](https://github.com/daniel-munro/leaps-in-bounds/discussions) or email [Daniel Munro](https://danmun.ro).

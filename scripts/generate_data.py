@@ -82,7 +82,10 @@ with open("_data/sources.yml", "r") as file:
 with open("source_data/updates.yml", "r") as file:
     updates = yaml.safe_load(file)
 for update in updates:
-    update["date"] = sources[update["primary_source"]]["date"]
+    if "primary_source" in update:
+        update["date"] = sources[update["primary_source"]]["date"]
+    else:
+        update["date"] = "?"
 updates.sort(key=lambda x: x["date"])
 
 constants = get_constants(groups)

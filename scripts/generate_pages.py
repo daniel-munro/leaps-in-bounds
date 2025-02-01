@@ -11,7 +11,7 @@ def generate_grid_html(group: dict, constants: dict) -> str:
     
     html = [
         '<div class="table-responsive">',
-        '  <table class="table table-bordered border-secondary-subtle constant-grid">',
+        '  <table class="table table-bordered border-secondary-subtle align-middle constant-grid">',
         '    <thead>',
         f'      <tr><th scope="col">{param1}\\{param2}</th>'
     ]
@@ -36,15 +36,21 @@ def generate_grid_html(group: dict, constants: dict) -> str:
             const = constants[const_id]
             if const['value'] is not None:
                 cell_content = str(const['value'])
-                cell_class = ' class="table-success"'
+                cell_class = 'value-exact'
             else:
                 lb = const['lower_bound'] if const['lower_bound'] is not None else '?'
                 ub = const['upper_bound'] if const['upper_bound'] is not None else '?'
-                cell_content = f"{lb} - {ub}"
-                cell_class = ''
+                # cell_content = f"{lb}&ndash;{ub}"
+                cell_content = f"{lb}<br>{ub}"
+                if lb == '?' and ub == '?':
+                    cell_class = 'value-unbounded'
+                elif lb == '?' or ub == '?':
+                    cell_class = 'value-half-bounded'
+                else:
+                    cell_class = 'value-bounded'
                 
             html.append(
-                f'        <td{cell_class}><a href="/constants/{const_id}" '
+                f'        <td class="constant-cell {cell_class}"><a href="/constants/{const_id}" '
                 f'class="cell-link">{cell_content}</a></td>'
             )
         html.append('      </tr>')
@@ -81,17 +87,23 @@ def generate_sequence_html(group: dict, constants: dict) -> str:
             
         const = constants[const_id]
         if const['value'] is not None:
-            content = str(const['value'])
-            box_class = ' box-exact'
+            content = f"${const['value']}$"
+            box_class = ' value-exact'
         else:
             lb = const['lower_bound'] if const['lower_bound'] is not None else '?'
             ub = const['upper_bound'] if const['upper_bound'] is not None else '?'
-            content = f"{lb} - {ub}"
-            box_class = ''
+            # content = f"{lb}&ndash;{ub}"
+            content = f"${lb}$<br>${ub}$"
+            if lb == '?' and ub == '?':
+                box_class = ' value-unbounded'
+            elif lb == '?' or ub == '?':
+                box_class = ' value-half-bounded'
+            else:
+                box_class = ' value-bounded'
             
         html.append(
             f'  <a href="/constants/{const_id}" class="constant-box{box_class}">'
-            f'<strong>{v}</strong>: {content}'
+            f'<strong>{v}</strong><br><div class="constant-box-values">{content}</div>'
             f'  </a>'
         )
 

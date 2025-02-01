@@ -3,8 +3,12 @@ ramsey-3-3:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{3}$ in the second color.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 6
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  value: 6
   lower_bound: null
   upper_bound: null
 ramsey-3-4:
@@ -54,8 +58,12 @@ ramsey-3-7:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{7}$ in the second color.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 23
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  value: 23
   lower_bound: null
   upper_bound: null
 ramsey-3-8:
@@ -63,8 +71,12 @@ ramsey-3-8:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 28
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  value: 28
   lower_bound: null
   upper_bound: null
 ramsey-3-9:
@@ -72,8 +84,12 @@ ramsey-3-9:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 36
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  value: 36
   lower_bound: null
   upper_bound: null
 ramsey-3-10:
@@ -81,55 +97,103 @@ ramsey-3-10:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 40
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 41
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 40
+  upper_bound: 41
 ramsey-3-11:
   name: Ramsey number $R(3,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 47
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 50
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 47
+  upper_bound: 50
 ramsey-3-12:
   name: Ramsey number $R(3,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 53
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 59
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 53
+  upper_bound: 59
 ramsey-3-13:
   name: Ramsey number $R(3,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 60
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 68
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 60
+  upper_bound: 68
 ramsey-3-14:
   name: Ramsey number $R(3,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{14}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 67
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 77
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 67
+  upper_bound: 77
 ramsey-3-15:
   name: Ramsey number $R(3,15)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{3}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 74
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 87
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 74
+  upper_bound: 87
 ramsey-4-4:
   name: Ramsey number $R(4,4)$
   description: The smallest number $n$ such that any two-coloring of the edges of
@@ -149,8 +213,12 @@ ramsey-4-5:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{5}$ in the second color.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 25
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  value: 25
   lower_bound: null
   upper_bound: null
 ramsey-4-6:
@@ -158,478 +226,1062 @@ ramsey-4-6:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{6}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 36
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 41
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 40
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 36
+  upper_bound: 40
 ramsey-4-7:
   name: Ramsey number $R(4,7)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{7}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 49
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 61
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 58
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 49
+  upper_bound: 58
 ramsey-4-8:
   name: Ramsey number $R(4,8)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 59
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 84
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 79
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 59
+  upper_bound: 79
 ramsey-4-9:
   name: Ramsey number $R(4,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 73
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 115
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 105
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 73
+  upper_bound: 105
 ramsey-4-10:
   name: Ramsey number $R(4,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 92
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 149
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 135
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 92
+  upper_bound: 135
 ramsey-4-11:
   name: Ramsey number $R(4,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 102
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 191
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 170
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 102
+  upper_bound: 170
 ramsey-4-12:
   name: Ramsey number $R(4,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 128
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 238
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 210
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 128
+  upper_bound: 210
 ramsey-4-13:
   name: Ramsey number $R(4,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 138
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 291
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 256
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 138
+  upper_bound: 256
 ramsey-4-14:
   name: Ramsey number $R(4,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{14}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 147
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 349
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 307
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 147
+  upper_bound: 307
 ramsey-4-15:
   name: Ramsey number $R(4,15)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{4}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 158
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 417
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 364
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 158
+  upper_bound: 364
 ramsey-5-5:
   name: Ramsey number $R(5,5)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{5}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 43
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 48
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 46
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 43
+  upper_bound: 46
 ramsey-5-6:
   name: Ramsey number $R(5,6)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{6}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 59
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 87
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 85
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 59
+  upper_bound: 85
 ramsey-5-7:
   name: Ramsey number $R(5,7)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{7}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 80
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 143
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 133
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 80
+  upper_bound: 133
 ramsey-5-8:
   name: Ramsey number $R(5,8)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 101
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 216
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 193
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 101
+  upper_bound: 193
 ramsey-5-9:
   name: Ramsey number $R(5,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 133
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 316
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 282
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 133
+  upper_bound: 282
 ramsey-5-10:
   name: Ramsey number $R(5,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 149
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 442
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 381
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 149
+  upper_bound: 381
 ramsey-5-11:
   name: Ramsey number $R(5,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 183
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 633
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 511
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 183
+  upper_bound: 511
 ramsey-5-12:
   name: Ramsey number $R(5,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 203
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 848
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 672
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 203
+  upper_bound: 672
 ramsey-5-13:
   name: Ramsey number $R(5,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 233
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1138
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 860
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 233
+  upper_bound: 860
 ramsey-5-14:
   name: Ramsey number $R(5,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{14}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 267
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1461
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1081
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 267
+  upper_bound: 1081
 ramsey-5-15:
   name: Ramsey number $R(5,15)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{5}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 275
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1878
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1341
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 275
+  upper_bound: 1341
 ramsey-6-6:
   name: Ramsey number $R(6,6)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{6}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 102
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 165
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 160
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 102
+  upper_bound: 160
 ramsey-6-7:
   name: Ramsey number $R(6,7)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{7}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 115
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 298
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 270
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 115
+  upper_bound: 270
 ramsey-6-8:
   name: Ramsey number $R(6,8)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 134
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 495
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 423
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 134
+  upper_bound: 423
 ramsey-6-9:
   name: Ramsey number $R(6,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 183
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 780
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 651
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 183
+  upper_bound: 651
 ramsey-6-10:
   name: Ramsey number $R(6,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 204
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1171
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 944
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 204
+  upper_bound: 944
 ramsey-6-11:
   name: Ramsey number $R(6,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 262
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1804
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1346
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 262
+  upper_bound: 1346
 ramsey-6-12:
   name: Ramsey number $R(6,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 294
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 2566
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1855
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 294
+  upper_bound: 1855
 ramsey-6-13:
   name: Ramsey number $R(6,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 347
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 3703
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 2499
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 347
+  upper_bound: 2499
 ramsey-6-14:
   name: Ramsey number $R(6,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{14}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 5033
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 3301
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 3301
 ramsey-6-15:
   name: Ramsey number $R(6,15)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{6}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 401
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 6911
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 4305
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 401
+  upper_bound: 4305
 ramsey-7-7:
   name: Ramsey number $R(7,7)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{7}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 205
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 540
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 492
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 205
+  upper_bound: 492
 ramsey-7-8:
   name: Ramsey number $R(7,8)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 219
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1031
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 832
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 219
+  upper_bound: 832
 ramsey-7-9:
   name: Ramsey number $R(7,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 252
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1713
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1368
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 252
+  upper_bound: 1368
 ramsey-7-10:
   name: Ramsey number $R(7,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 292
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 2826
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 2119
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 292
+  upper_bound: 2119
 ramsey-7-11:
   name: Ramsey number $R(7,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 405
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 4553
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 3197
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 405
+  upper_bound: 3197
 ramsey-7-12:
   name: Ramsey number $R(7,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 417
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 6954
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 4665
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 417
+  upper_bound: 4665
 ramsey-7-13:
   name: Ramsey number $R(7,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 511
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 10578
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 6653
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 511
+  upper_bound: 6653
 ramsey-7-14:
   name: Ramsey number $R(7,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{14}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 15263
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 9260
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 9260
 ramsey-7-15:
   name: Ramsey number $R(7,15)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{7}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 22112
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 12635
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 12635
 ramsey-8-8:
   name: Ramsey number $R(8,8)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{8}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 282
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1870
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 1518
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 282
+  upper_bound: 1518
 ramsey-8-9:
   name: Ramsey number $R(8,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 329
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 3583
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 2662
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 329
+  upper_bound: 2662
 ramsey-8-10:
   name: Ramsey number $R(8,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 343
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 6090
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 4402
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 343
+  upper_bound: 4402
 ramsey-8-11:
   name: Ramsey number $R(8,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 457
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 10630
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 7040
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 457
+  upper_bound: 7040
 ramsey-8-12:
   name: Ramsey number $R(8,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 16944
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 10836
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 10836
 ramsey-8-13:
   name: Ramsey number $R(8,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 817
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 27485
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 817
+  upper_bound: 27485
 ramsey-8-14:
   name: Ramsey number $R(8,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{14}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 41525
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 41525
 ramsey-8-15:
   name: Ramsey number $R(8,15)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{8}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 873
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 63609
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 873
+  upper_bound: 63609
 ramsey-9-9:
   name: Ramsey number $R(9,9)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{9}$ in the first
     color or a monochromatic $K_{9}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 565
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 6588
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 4956
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 565
+  upper_bound: 4956
 ramsey-9-10:
   name: Ramsey number $R(9,10)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{9}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 581
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 12677
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 8675
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 581
+  upper_bound: 8675
 ramsey-9-11:
   name: Ramsey number $R(9,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{9}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 22325
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 14631
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 14631
 ramsey-9-12:
   name: Ramsey number $R(9,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{9}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 38832
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 38832
 ramsey-9-13:
   name: Ramsey number $R(9,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{9}$ in the first
     color or a monochromatic $K_{13}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 64864
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 64864
 ramsey-9-14:
   name: Ramsey number $R(9,14)$
   description: The smallest number $n$ such that any two-coloring of the edges of
@@ -653,28 +1305,48 @@ ramsey-10-10:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{10}$ in the first
     color or a monochromatic $K_{10}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 798
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 23556
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
+  - type: upper_bound
+    value: 16064
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
+  lower_bound: 798
+  upper_bound: 16064
 ramsey-10-11:
   name: Ramsey number $R(10,11)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{10}$ in the first
     color or a monochromatic $K_{11}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 45881
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 45881
 ramsey-10-12:
   name: Ramsey number $R(10,12)$
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{10}$ in the first
     color or a monochromatic $K_{12}$ in the second color.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 81123
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
   lower_bound: null
-  upper_bound: null
+  upper_bound: 81123
 ramsey-10-13:
   name: Ramsey number $R(10,13)$
   description: The smallest number $n$ such that any two-coloring of the edges of
@@ -698,708 +1370,811 @@ ramsey-10-15:
   description: The smallest number $n$ such that any two-coloring of the edges of
     the complete graph $K_n$ must contain either a monochromatic $K_{10}$ in the first
     color or a monochromatic $K_{15}$ in the second color.
-  updates: []
+  updates:
+  - type: lower_bound
+    value: 1313
+    secondary_source: ejc-ds1-small-ramsey-numbers
+    date: '?'
   value: null
+  lower_bound: 1313
+  upper_bound: null
+square-packing-in-square-1:
+  name: Packing unit squares in a square $s(1)$
+  description: The side of the smallest square into which $1$ unit squares can be
+    packed.
+  updates:
+  - type: exact
+    value: 1
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 1
   lower_bound: null
   upper_bound: null
-square-packing-2:
-  name: Unit square packing $s(2)$
+square-packing-in-square-2:
+  name: Packing unit squares in a square $s(2)$
   description: The side of the smallest square into which $2$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 2
   lower_bound: null
   upper_bound: null
-square-packing-3:
-  name: Unit square packing $s(3)$
+square-packing-in-square-3:
+  name: Packing unit squares in a square $s(3)$
   description: The side of the smallest square into which $3$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 2
   lower_bound: null
   upper_bound: null
-square-packing-4:
-  name: Unit square packing $s(4)$
+square-packing-in-square-4:
+  name: Packing unit squares in a square $s(4)$
   description: The side of the smallest square into which $4$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 2
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 2
   lower_bound: null
   upper_bound: null
-square-packing-5:
-  name: Unit square packing $s(5)$
+square-packing-in-square-5:
+  name: Packing unit squares in a square $s(5)$
   description: The side of the smallest square into which $5$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 2 + \frac{1}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 2 + \frac{1}{\sqrt{2}}
   lower_bound: null
   upper_bound: null
-square-packing-6:
-  name: Unit square packing $s(6)$
+square-packing-in-square-6:
+  name: Packing unit squares in a square $s(6)$
   description: The side of the smallest square into which $6$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 3
   lower_bound: null
   upper_bound: null
-square-packing-7:
-  name: Unit square packing $s(7)$
+square-packing-in-square-7:
+  name: Packing unit squares in a square $s(7)$
   description: The side of the smallest square into which $7$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 3
   lower_bound: null
   upper_bound: null
-square-packing-8:
-  name: Unit square packing $s(8)$
+square-packing-in-square-8:
+  name: Packing unit squares in a square $s(8)$
   description: The side of the smallest square into which $8$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 3
   lower_bound: null
   upper_bound: null
-square-packing-9:
-  name: Unit square packing $s(9)$
+square-packing-in-square-9:
+  name: Packing unit squares in a square $s(9)$
   description: The side of the smallest square into which $9$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 3
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 3
   lower_bound: null
   upper_bound: null
-square-packing-10:
-  name: Unit square packing $s(10)$
+square-packing-in-square-10:
+  name: Packing unit squares in a square $s(10)$
   description: The side of the smallest square into which $10$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 3 + \frac{1}{\sqrt{2}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 3 + \frac{1}{\sqrt{2}}
   lower_bound: null
   upper_bound: null
-square-packing-11:
-  name: Unit square packing $s(11)$
+square-packing-in-square-11:
+  name: Packing unit squares in a square $s(11)$
   description: The side of the smallest square into which $11$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}3.8771'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2 + \frac{4}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
-square-packing-12:
-  name: Unit square packing $s(12)$
+  lower_bound: 2 + \frac{4}{\sqrt{5}}
+  upper_bound: '{\approx}3.8771'
+square-packing-in-square-12:
+  name: Packing unit squares in a square $s(12)$
   description: The side of the smallest square into which $12$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 2 + \frac{4}{\sqrt{5}}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
-square-packing-13:
-  name: Unit square packing $s(13)$
+  lower_bound: 2 + \frac{4}{\sqrt{5}}
+  upper_bound: 4
+square-packing-in-square-13:
+  name: Packing unit squares in a square $s(13)$
   description: The side of the smallest square into which $13$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: 3.8437
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
-square-packing-14:
-  name: Unit square packing $s(14)$
+  lower_bound: 3.8437
+  upper_bound: 4
+square-packing-in-square-14:
+  name: Packing unit squares in a square $s(14)$
   description: The side of the smallest square into which $14$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 4
   lower_bound: null
   upper_bound: null
-square-packing-15:
-  name: Unit square packing $s(15)$
+square-packing-in-square-15:
+  name: Packing unit squares in a square $s(15)$
   description: The side of the smallest square into which $15$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 4
   lower_bound: null
   upper_bound: null
-square-packing-16:
-  name: Unit square packing $s(16)$
+square-packing-in-square-16:
+  name: Packing unit squares in a square $s(16)$
   description: The side of the smallest square into which $16$ unit squares can be
     packed.
-  updates: []
-  value: null
+  updates:
+  - type: exact
+    value: 4
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  value: 4
   lower_bound: null
   upper_bound: null
-square-packing-17:
-  name: Unit square packing $s(17)$
+square-packing-in-square-17:
+  name: Packing unit squares in a square $s(17)$
   description: The side of the smallest square into which $17$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: '{\approx}4.6756'
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: \frac{40\sqrt{2}+19}{17}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
-square-packing-18:
-  name: Unit square packing $s(18)$
+  lower_bound: \frac{40\sqrt{2}+19}{17}
+  upper_bound: '{\approx}4.6756'
+square-packing-in-square-18:
+  name: Packing unit squares in a square $s(18)$
   description: The side of the smallest square into which $18$ unit squares can be
     packed.
-  updates: []
+  updates:
+  - type: upper_bound
+    value: \frac{7+\sqrt{7}}{2}
+    secondary_source: ejc-ds7-packing-unit-squares
+    date: '?'
+  - type: lower_bound
+    value: \frac{40\sqrt{2}+19}{17}
+    date: '?'
   value: null
-  lower_bound: null
-  upper_bound: null
-square-packing-19:
-  name: Unit square packing $s(19)$
+  lower_bound: \frac{40\sqrt{2}+19}{17}
+  upper_bound: \frac{7+\sqrt{7}}{2}
+square-packing-in-square-19:
+  name: Packing unit squares in a square $s(19)$
   description: The side of the smallest square into which $19$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-20:
-  name: Unit square packing $s(20)$
+square-packing-in-square-20:
+  name: Packing unit squares in a square $s(20)$
   description: The side of the smallest square into which $20$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-21:
-  name: Unit square packing $s(21)$
+square-packing-in-square-21:
+  name: Packing unit squares in a square $s(21)$
   description: The side of the smallest square into which $21$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-22:
-  name: Unit square packing $s(22)$
+square-packing-in-square-22:
+  name: Packing unit squares in a square $s(22)$
   description: The side of the smallest square into which $22$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-23:
-  name: Unit square packing $s(23)$
+square-packing-in-square-23:
+  name: Packing unit squares in a square $s(23)$
   description: The side of the smallest square into which $23$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-24:
-  name: Unit square packing $s(24)$
+square-packing-in-square-24:
+  name: Packing unit squares in a square $s(24)$
   description: The side of the smallest square into which $24$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-25:
-  name: Unit square packing $s(25)$
+square-packing-in-square-25:
+  name: Packing unit squares in a square $s(25)$
   description: The side of the smallest square into which $25$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-26:
-  name: Unit square packing $s(26)$
+square-packing-in-square-26:
+  name: Packing unit squares in a square $s(26)$
   description: The side of the smallest square into which $26$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-27:
-  name: Unit square packing $s(27)$
+square-packing-in-square-27:
+  name: Packing unit squares in a square $s(27)$
   description: The side of the smallest square into which $27$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-28:
-  name: Unit square packing $s(28)$
+square-packing-in-square-28:
+  name: Packing unit squares in a square $s(28)$
   description: The side of the smallest square into which $28$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-29:
-  name: Unit square packing $s(29)$
+square-packing-in-square-29:
+  name: Packing unit squares in a square $s(29)$
   description: The side of the smallest square into which $29$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-30:
-  name: Unit square packing $s(30)$
+square-packing-in-square-30:
+  name: Packing unit squares in a square $s(30)$
   description: The side of the smallest square into which $30$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-31:
-  name: Unit square packing $s(31)$
+square-packing-in-square-31:
+  name: Packing unit squares in a square $s(31)$
   description: The side of the smallest square into which $31$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-32:
-  name: Unit square packing $s(32)$
+square-packing-in-square-32:
+  name: Packing unit squares in a square $s(32)$
   description: The side of the smallest square into which $32$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-33:
-  name: Unit square packing $s(33)$
+square-packing-in-square-33:
+  name: Packing unit squares in a square $s(33)$
   description: The side of the smallest square into which $33$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-34:
-  name: Unit square packing $s(34)$
+square-packing-in-square-34:
+  name: Packing unit squares in a square $s(34)$
   description: The side of the smallest square into which $34$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-35:
-  name: Unit square packing $s(35)$
+square-packing-in-square-35:
+  name: Packing unit squares in a square $s(35)$
   description: The side of the smallest square into which $35$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-36:
-  name: Unit square packing $s(36)$
+square-packing-in-square-36:
+  name: Packing unit squares in a square $s(36)$
   description: The side of the smallest square into which $36$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-37:
-  name: Unit square packing $s(37)$
+square-packing-in-square-37:
+  name: Packing unit squares in a square $s(37)$
   description: The side of the smallest square into which $37$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-38:
-  name: Unit square packing $s(38)$
+square-packing-in-square-38:
+  name: Packing unit squares in a square $s(38)$
   description: The side of the smallest square into which $38$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-39:
-  name: Unit square packing $s(39)$
+square-packing-in-square-39:
+  name: Packing unit squares in a square $s(39)$
   description: The side of the smallest square into which $39$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-40:
-  name: Unit square packing $s(40)$
+square-packing-in-square-40:
+  name: Packing unit squares in a square $s(40)$
   description: The side of the smallest square into which $40$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-41:
-  name: Unit square packing $s(41)$
+square-packing-in-square-41:
+  name: Packing unit squares in a square $s(41)$
   description: The side of the smallest square into which $41$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-42:
-  name: Unit square packing $s(42)$
+square-packing-in-square-42:
+  name: Packing unit squares in a square $s(42)$
   description: The side of the smallest square into which $42$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-43:
-  name: Unit square packing $s(43)$
+square-packing-in-square-43:
+  name: Packing unit squares in a square $s(43)$
   description: The side of the smallest square into which $43$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-44:
-  name: Unit square packing $s(44)$
+square-packing-in-square-44:
+  name: Packing unit squares in a square $s(44)$
   description: The side of the smallest square into which $44$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-45:
-  name: Unit square packing $s(45)$
+square-packing-in-square-45:
+  name: Packing unit squares in a square $s(45)$
   description: The side of the smallest square into which $45$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-46:
-  name: Unit square packing $s(46)$
+square-packing-in-square-46:
+  name: Packing unit squares in a square $s(46)$
   description: The side of the smallest square into which $46$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-47:
-  name: Unit square packing $s(47)$
+square-packing-in-square-47:
+  name: Packing unit squares in a square $s(47)$
   description: The side of the smallest square into which $47$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-48:
-  name: Unit square packing $s(48)$
+square-packing-in-square-48:
+  name: Packing unit squares in a square $s(48)$
   description: The side of the smallest square into which $48$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-49:
-  name: Unit square packing $s(49)$
+square-packing-in-square-49:
+  name: Packing unit squares in a square $s(49)$
   description: The side of the smallest square into which $49$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-50:
-  name: Unit square packing $s(50)$
+square-packing-in-square-50:
+  name: Packing unit squares in a square $s(50)$
   description: The side of the smallest square into which $50$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-51:
-  name: Unit square packing $s(51)$
+square-packing-in-square-51:
+  name: Packing unit squares in a square $s(51)$
   description: The side of the smallest square into which $51$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-52:
-  name: Unit square packing $s(52)$
+square-packing-in-square-52:
+  name: Packing unit squares in a square $s(52)$
   description: The side of the smallest square into which $52$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-53:
-  name: Unit square packing $s(53)$
+square-packing-in-square-53:
+  name: Packing unit squares in a square $s(53)$
   description: The side of the smallest square into which $53$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-54:
-  name: Unit square packing $s(54)$
+square-packing-in-square-54:
+  name: Packing unit squares in a square $s(54)$
   description: The side of the smallest square into which $54$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-55:
-  name: Unit square packing $s(55)$
+square-packing-in-square-55:
+  name: Packing unit squares in a square $s(55)$
   description: The side of the smallest square into which $55$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-56:
-  name: Unit square packing $s(56)$
+square-packing-in-square-56:
+  name: Packing unit squares in a square $s(56)$
   description: The side of the smallest square into which $56$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-57:
-  name: Unit square packing $s(57)$
+square-packing-in-square-57:
+  name: Packing unit squares in a square $s(57)$
   description: The side of the smallest square into which $57$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-58:
-  name: Unit square packing $s(58)$
+square-packing-in-square-58:
+  name: Packing unit squares in a square $s(58)$
   description: The side of the smallest square into which $58$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-59:
-  name: Unit square packing $s(59)$
+square-packing-in-square-59:
+  name: Packing unit squares in a square $s(59)$
   description: The side of the smallest square into which $59$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-60:
-  name: Unit square packing $s(60)$
+square-packing-in-square-60:
+  name: Packing unit squares in a square $s(60)$
   description: The side of the smallest square into which $60$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-61:
-  name: Unit square packing $s(61)$
+square-packing-in-square-61:
+  name: Packing unit squares in a square $s(61)$
   description: The side of the smallest square into which $61$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-62:
-  name: Unit square packing $s(62)$
+square-packing-in-square-62:
+  name: Packing unit squares in a square $s(62)$
   description: The side of the smallest square into which $62$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-63:
-  name: Unit square packing $s(63)$
+square-packing-in-square-63:
+  name: Packing unit squares in a square $s(63)$
   description: The side of the smallest square into which $63$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-64:
-  name: Unit square packing $s(64)$
+square-packing-in-square-64:
+  name: Packing unit squares in a square $s(64)$
   description: The side of the smallest square into which $64$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-65:
-  name: Unit square packing $s(65)$
+square-packing-in-square-65:
+  name: Packing unit squares in a square $s(65)$
   description: The side of the smallest square into which $65$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-66:
-  name: Unit square packing $s(66)$
+square-packing-in-square-66:
+  name: Packing unit squares in a square $s(66)$
   description: The side of the smallest square into which $66$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-67:
-  name: Unit square packing $s(67)$
+square-packing-in-square-67:
+  name: Packing unit squares in a square $s(67)$
   description: The side of the smallest square into which $67$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-68:
-  name: Unit square packing $s(68)$
+square-packing-in-square-68:
+  name: Packing unit squares in a square $s(68)$
   description: The side of the smallest square into which $68$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-69:
-  name: Unit square packing $s(69)$
+square-packing-in-square-69:
+  name: Packing unit squares in a square $s(69)$
   description: The side of the smallest square into which $69$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-70:
-  name: Unit square packing $s(70)$
+square-packing-in-square-70:
+  name: Packing unit squares in a square $s(70)$
   description: The side of the smallest square into which $70$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-71:
-  name: Unit square packing $s(71)$
+square-packing-in-square-71:
+  name: Packing unit squares in a square $s(71)$
   description: The side of the smallest square into which $71$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-72:
-  name: Unit square packing $s(72)$
+square-packing-in-square-72:
+  name: Packing unit squares in a square $s(72)$
   description: The side of the smallest square into which $72$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-73:
-  name: Unit square packing $s(73)$
+square-packing-in-square-73:
+  name: Packing unit squares in a square $s(73)$
   description: The side of the smallest square into which $73$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-74:
-  name: Unit square packing $s(74)$
+square-packing-in-square-74:
+  name: Packing unit squares in a square $s(74)$
   description: The side of the smallest square into which $74$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-75:
-  name: Unit square packing $s(75)$
+square-packing-in-square-75:
+  name: Packing unit squares in a square $s(75)$
   description: The side of the smallest square into which $75$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-76:
-  name: Unit square packing $s(76)$
+square-packing-in-square-76:
+  name: Packing unit squares in a square $s(76)$
   description: The side of the smallest square into which $76$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-77:
-  name: Unit square packing $s(77)$
+square-packing-in-square-77:
+  name: Packing unit squares in a square $s(77)$
   description: The side of the smallest square into which $77$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-78:
-  name: Unit square packing $s(78)$
+square-packing-in-square-78:
+  name: Packing unit squares in a square $s(78)$
   description: The side of the smallest square into which $78$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-79:
-  name: Unit square packing $s(79)$
+square-packing-in-square-79:
+  name: Packing unit squares in a square $s(79)$
   description: The side of the smallest square into which $79$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-80:
-  name: Unit square packing $s(80)$
+square-packing-in-square-80:
+  name: Packing unit squares in a square $s(80)$
   description: The side of the smallest square into which $80$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-81:
-  name: Unit square packing $s(81)$
+square-packing-in-square-81:
+  name: Packing unit squares in a square $s(81)$
   description: The side of the smallest square into which $81$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-82:
-  name: Unit square packing $s(82)$
+square-packing-in-square-82:
+  name: Packing unit squares in a square $s(82)$
   description: The side of the smallest square into which $82$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-83:
-  name: Unit square packing $s(83)$
+square-packing-in-square-83:
+  name: Packing unit squares in a square $s(83)$
   description: The side of the smallest square into which $83$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-84:
-  name: Unit square packing $s(84)$
+square-packing-in-square-84:
+  name: Packing unit squares in a square $s(84)$
   description: The side of the smallest square into which $84$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-85:
-  name: Unit square packing $s(85)$
+square-packing-in-square-85:
+  name: Packing unit squares in a square $s(85)$
   description: The side of the smallest square into which $85$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-86:
-  name: Unit square packing $s(86)$
+square-packing-in-square-86:
+  name: Packing unit squares in a square $s(86)$
   description: The side of the smallest square into which $86$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-87:
-  name: Unit square packing $s(87)$
+square-packing-in-square-87:
+  name: Packing unit squares in a square $s(87)$
   description: The side of the smallest square into which $87$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-88:
-  name: Unit square packing $s(88)$
+square-packing-in-square-88:
+  name: Packing unit squares in a square $s(88)$
   description: The side of the smallest square into which $88$ unit squares can be
     packed.
   updates: []
   value: null
   lower_bound: null
   upper_bound: null
-square-packing-89:
-  name: Unit square packing $s(89)$
+square-packing-in-square-89:
+  name: Packing unit squares in a square $s(89)$
   description: The side of the smallest square into which $89$ unit squares can be
     packed.
   updates: []

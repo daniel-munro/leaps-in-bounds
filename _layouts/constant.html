@@ -24,9 +24,13 @@ layout: default
         {% else %}
           {{ update.type }}:
       {% endcase %}
-      {{ update.value }}
-      {% assign primary = site.data.sources[update.primary_source] %}
-      <br>{{ primary.string }}
+      ${{ update.value }}$
+      {% if update.primary_source %}
+        {% assign primary = site.data.sources[update.primary_source] %}
+        <br>{{ primary.string }}
+      {% else %}
+        <br><em>Reference unknown</em>
+      {% endif %}
       {% if update.secondary_source %}
         {% assign secondary = site.data.sources[update.secondary_source] %}
         <br>[via {{ secondary.name }}, {{ secondary.author }}, {{ secondary.date }}]

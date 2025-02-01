@@ -12,5 +12,5 @@ permalink: /constants/
 {{ group[1].group_description }}
 
 {% include constant_tables/{{ group.first }}.html %}
-
+<br>
 {% endfor %}
