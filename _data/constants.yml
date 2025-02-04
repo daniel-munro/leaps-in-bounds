@@ -3089,3 +3089,387 @@ busy-beaver-ones-7:
   value: null
   lower_bound: 10^{10^{10^{10^{18705353}}}}
   upper_bound: null
+kissing-number-1:
+  name: Kissing number for $\mathbb{R}^{1}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{1}$.
+  updates:
+  - type: lower_bound
+    value: 2
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 2
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: 2
+  lower_bound: 2
+  upper_bound: 2
+kissing-number-2:
+  name: Kissing number for $\mathbb{R}^{2}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{2}$.
+  updates:
+  - type: lower_bound
+    value: 6
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 6
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: 6
+  lower_bound: 6
+  upper_bound: 6
+kissing-number-3:
+  name: Kissing number for $\mathbb{R}^{3}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{3}$.
+  updates:
+  - type: lower_bound
+    value: 12
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 12
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: 12
+  lower_bound: 12
+  upper_bound: 12
+kissing-number-4:
+  name: Kissing number for $\mathbb{R}^{4}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{4}$.
+  updates:
+  - type: lower_bound
+    value: 24
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 24
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: 24
+  lower_bound: 24
+  upper_bound: 24
+kissing-number-5:
+  name: Kissing number for $\mathbb{R}^{5}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{5}$.
+  updates:
+  - type: lower_bound
+    value: 40
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 44
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 40
+  upper_bound: 44
+kissing-number-6:
+  name: Kissing number for $\mathbb{R}^{6}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{6}$.
+  updates:
+  - type: lower_bound
+    value: 72
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 77
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 72
+  upper_bound: 77
+kissing-number-7:
+  name: Kissing number for $\mathbb{R}^{7}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{7}$.
+  updates:
+  - type: lower_bound
+    value: 126
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 134
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 126
+  upper_bound: 134
+kissing-number-8:
+  name: Kissing number for $\mathbb{R}^{8}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{8}$.
+  updates:
+  - type: lower_bound
+    value: 240
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 240
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: 240
+  lower_bound: 240
+  upper_bound: 240
+kissing-number-9:
+  name: Kissing number for $\mathbb{R}^{9}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{9}$.
+  updates:
+  - type: lower_bound
+    value: 306
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 363
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 306
+  upper_bound: 363
+kissing-number-10:
+  name: Kissing number for $\mathbb{R}^{10}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{10}$.
+  updates:
+  - type: lower_bound
+    value: 510
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 553
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 510
+  upper_bound: 553
+kissing-number-11:
+  name: Kissing number for $\mathbb{R}^{11}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{11}$.
+  updates:
+  - type: lower_bound
+    value: 592
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 868
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 592
+  upper_bound: 868
+kissing-number-12:
+  name: Kissing number for $\mathbb{R}^{12}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{12}$.
+  updates:
+  - type: lower_bound
+    value: 840
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 1355
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 840
+  upper_bound: 1355
+kissing-number-13:
+  name: Kissing number for $\mathbb{R}^{13}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{13}$.
+  updates:
+  - type: lower_bound
+    value: 1154
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 2064
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 1154
+  upper_bound: 2064
+kissing-number-14:
+  name: Kissing number for $\mathbb{R}^{14}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{14}$.
+  updates:
+  - type: lower_bound
+    value: 1932
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 3174
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 1932
+  upper_bound: 3174
+kissing-number-15:
+  name: Kissing number for $\mathbb{R}^{15}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{15}$.
+  updates:
+  - type: lower_bound
+    value: 2564
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 4853
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 2564
+  upper_bound: 4853
+kissing-number-16:
+  name: Kissing number for $\mathbb{R}^{16}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{16}$.
+  updates:
+  - type: lower_bound
+    value: 4320
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 7320
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 4320
+  upper_bound: 7320
+kissing-number-17:
+  name: Kissing number for $\mathbb{R}^{17}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{17}$.
+  updates:
+  - type: lower_bound
+    value: 5730
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 10978
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 5730
+  upper_bound: 10978
+kissing-number-18:
+  name: Kissing number for $\mathbb{R}^{18}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{18}$.
+  updates:
+  - type: lower_bound
+    value: 7654
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 16406
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 7654
+  upper_bound: 16406
+kissing-number-19:
+  name: Kissing number for $\mathbb{R}^{19}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{19}$.
+  updates:
+  - type: lower_bound
+    value: 11692
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 24417
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 11692
+  upper_bound: 24417
+kissing-number-20:
+  name: Kissing number for $\mathbb{R}^{20}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{20}$.
+  updates:
+  - type: lower_bound
+    value: 19448
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 36195
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 19448
+  upper_bound: 36195
+kissing-number-21:
+  name: Kissing number for $\mathbb{R}^{21}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{21}$.
+  updates:
+  - type: lower_bound
+    value: 29768
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 53524
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 29768
+  upper_bound: 53524
+kissing-number-22:
+  name: Kissing number for $\mathbb{R}^{22}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{22}$.
+  updates:
+  - type: lower_bound
+    value: 49896
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 80810
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 49896
+  upper_bound: 80810
+kissing-number-23:
+  name: Kissing number for $\mathbb{R}^{23}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{23}$.
+  updates:
+  - type: lower_bound
+    value: 93150
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 122351
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: null
+  lower_bound: 93150
+  upper_bound: 122351
+kissing-number-24:
+  name: Kissing number for $\mathbb{R}^{24}$
+  description: The maximum number of non-overlapping unit spheres that can touch a
+    central unit sphere in $\mathbb{R}^{24}$.
+  updates:
+  - type: lower_bound
+    value: 196560
+    secondary_source: wikipedia-kissing-number
+    date: null
+  - type: upper_bound
+    value: 196560
+    secondary_source: wikipedia-kissing-number
+    date: null
+  value: 196560
+  lower_bound: 196560
+  upper_bound: 196560

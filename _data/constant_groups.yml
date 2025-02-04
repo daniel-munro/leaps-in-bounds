@@ -47,3 +47,13 @@ busy-beaver-ones:
   description_template: "The maximal number of 1s that a ${n}$-state Turing machine can print on an initially blank tape before eventually halting."
   parameters: [n]
   parameter_values: [[[1, 7]]]
+
+kissing-number:
+  group_name: "Kissing number"
+  group_description: "The kissing number of $\\mathbb{R}^n$ is the maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{R}^n$."
+  display_type: sequence
+  id_template: "kissing-number-{n}"
+  name_template: "Kissing number for $\\mathbb{{R}}^{{{n}}}$"
+  description_template: "The maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{{R}}^{{{n}}}$."
+  parameters: [n]
+  parameter_values: [[[1, 24]]]

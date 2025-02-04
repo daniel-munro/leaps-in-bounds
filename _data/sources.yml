@@ -24,6 +24,10 @@ aaronson-2020:
   date: "2020-09-29"
   doi: "https://doi.org/10.1145/3427361.3427369"
 
+wikipedia-kissing-number:
+  name: "Kissing number - Wikipedia"
+  url: "https://en.wikipedia.org/wiki/Kissing_number"
+
 greenwood-gleason-1955:
   string: "R.E. Greenwood and A.M. Gleason, Combinatorial Relations and Chromatic Graphs, Canadian Journal of Mathematics, 7 (1955) 1-7."
   date: "1955"
