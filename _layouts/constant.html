@@ -48,7 +48,24 @@ layout: default
       {% endif %}
       {% if update.secondary_source %}
         {% assign secondary = site.data.sources[update.secondary_source] %}
-        <br>[via <a href="{{ secondary.doi }}">{{ secondary.name }}</a>, {{ secondary.author }}, {{ secondary.date }}]
+        {% assign name_link = secondary.name %}
+        {% if secondary.doi %}
+          {% assign name_link = '<a href="' | append: secondary.doi | append: '">' | append: secondary.name | append: '</a>' %}
+        {% elsif secondary.url %}
+          {% assign name_link = '<a href="' | append: secondary.url | append: '">' | append: secondary.name | append: '</a>' %}
+        {% endif %}
+        
+        {% assign author_part = "" %}
+        {% if secondary.author %}
+          {% assign author_part = ", " | append: secondary.author %}
+        {% endif %}
+        
+        {% assign date_part = "" %}
+        {% if secondary.date %}
+          {% assign date_part = ", " | append: secondary.date %}
+        {% endif %}
+        
+        <br>[via {{ name_link }}{{ author_part }}{{ date_part }}]
       {% endif %}
     </li>
   {% endfor %}

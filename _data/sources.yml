@@ -10,6 +10,20 @@ ejc-ds7-packing-unit-squares:
   date: "2009-08-14"
   doi: "https://doi.org/10.37236/28"
 
+oeis-A060843:
+  name: "Sequence A060843 in the OEIS"
+  url: "https://oeis.org/A060843"
+
+oeis-A028444:
+  name: "Sequence A028444 in the OEIS"
+  url: "https://oeis.org/A028444"
+
+aaronson-2020:
+  name: "The Busy Beaver Frontier"
+  author: "Scott Aaronson"
+  date: "2020-09-29"
+  doi: "https://doi.org/10.1145/3427361.3427369"
+
 greenwood-gleason-1955:
   string: "R.E. Greenwood and A.M. Gleason, Combinatorial Relations and Chromatic Graphs, Canadian Journal of Mathematics, 7 (1955) 1-7."
   date: "1955"
@@ -25,3 +39,21 @@ gobel-1979:
   string: "F. Göbel, Geometrical Packing and Covering Problems, in Packing and Covering in Combinatorics, A. Schrijver (ed.), Math Centrum Tracts 106 (1979) 179-199."
   date: "1979"
   notes: "[7] in https://doi.org/10.37236/28"
+
+lin-1965:
+  string: "Shen Lin and Tibor Rado. 1965. Computer Studies of Turing Machine Problems. J. ACM 12, 2 (April 1965), 196-212."
+  date: "1965-04-01"
+  doi: "https://doi.org/10.1145/321264.321270"
+
+brady-1983:
+  string: "Brady, A. H. (1983). The determination of the value of Rado's noncomputable function Σ(k) for four-state Turing machines. Mathematics of Computation, 40(162), 647-665."
+  date: "1983-04"
+  doi: "https://doi.org/10.1090/S0025-5718-1983-0689479-6"
+
+marxen-1990:
+  string: "Marxen, H., & Buntrock, J. (1990). Attacking the busy beaver 5. Bulletin of the EATCS, 40, 247-251."
+  date: "1990-02"
+
+kropitz-2011:
+  string: "Kropitz, P. (2011). Problém busy beaver."
+  date: "2011"

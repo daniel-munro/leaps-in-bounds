@@ -28,3 +28,22 @@ square-packing:
   parameters: [n]
   parameter_values: [[[1, 100]]]
 
+busy-beaver-shift:
+  group_name: "Busy Beaver shift function"
+  group_description: "The Busy Beaver shift function $BB(n)$ ($S(n)$) is the maximal number of steps that an n-state Turing machine can make on an initially blank tape before eventually halting."
+  display_type: sequence
+  id_template: "busy-beaver-shift-{n}"
+  name_template: "Busy Beaver number $BB({n})$"
+  description_template: "The maximal number of steps that a ${n}$-state Turing machine can make on an initially blank tape before eventually halting."
+  parameters: [n]
+  parameter_values: [[[1, 7]]]
+
+busy-beaver-ones:
+  group_name: "Busy Beaver ones function"
+  group_description: "The Busy Beaver ones function $\\Sigma(n)$ (Rado's sigma function) is the maximal number of 1s that an n-state Turing machine can print on an initially blank tape before eventually halting."
+  display_type: sequence
+  id_template: "busy-beaver-ones-{n}"
+  name_template: "Busy Beaver ones function value $\\Sigma({n})$"
+  description_template: "The maximal number of 1s that a ${n}$-state Turing machine can print on an initially blank tape before eventually halting."
+  parameters: [n]
+  parameter_values: [[[1, 7]]]
