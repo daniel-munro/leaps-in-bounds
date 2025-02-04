@@ -8,7 +8,35 @@
 
 from collections import defaultdict
 import itertools
+import pathlib
 import yaml
+
+def load_updates(updates_dir: str, sources: dict) -> list[dict]:
+    updates = []
+    
+    # Get all .yml and .yaml files in updates directory
+    updates_dir = pathlib.Path(updates_dir)
+    yaml_files = list(updates_dir.glob("*.yml")) + list(updates_dir.glob("*.yaml"))
+    
+    for yaml_file in yaml_files:
+        with open(yaml_file, "r") as file:
+            updates_by_source = yaml.safe_load(file)
+        if updates_by_source is None:
+            continue
+            
+        for source_id, source_updates in updates_by_source.items():
+            for update in source_updates:
+                update["secondary_source"] = source_id
+                if "primary_source" in update:
+                    update["date"] = sources[update["primary_source"]]["date"]
+                else:
+                    update["date"] = None
+                updates.append(update)
+                
+    # List non-dated updates first, as it seems more likely for more recent updates to have known dates
+    # (Multiple updates for the same bound ought to always be dated though.)
+    updates.sort(key=lambda x: (x["date"] is not None, x["date"]))
+    return updates
 
 def get_constants(groups: dict) -> dict:
     """Generate constants from constant groups.
@@ -58,14 +86,18 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
         constant["lower_bound"] = None
         constant["upper_bound"] = None
     for update in updates:
-        assert update["type"] in ["lower_bound", "upper_bound"]
-        assert update["value"] is not None
+        assert not ("lower_bound" in update and "upper_bound" in update), "Update cannot have both bounds"
+        assert "lower_bound" in update or "upper_bound" in update, "Update must have one bound"
+        bound_type = "lower_bound" if "lower_bound" in update else "upper_bound"
+        bound_value = update[bound_type]
+        assert bound_value is not None
         constant = constants[update["constant"]]
         assert constant["value"] is None, "Constant already has an exact value"
-        del update["constant"]
-        constant["updates"].append(update)
-        assert constant[update["type"]] != update["value"], "Duplicate update"
-        constant[update["type"]] = update["value"]
+        update_copy = update.copy()
+        del update_copy["constant"]
+        constant["updates"].append(update_copy)
+        assert constant[bound_type] != bound_value, "Duplicate update"
+        constant[bound_type] = bound_value
         if constant["lower_bound"] == constant["upper_bound"]:
             constant["value"] = constant["lower_bound"]
 
@@ -75,16 +107,7 @@ with open("_data/constant_groups.yml", "r") as file:
 with open("_data/sources.yml", "r") as file:
     sources = yaml.safe_load(file)
 
-with open("source_data/updates.yml", "r") as file:
-    updates = yaml.safe_load(file)
-for update in updates:
-    if "primary_source" in update:
-        update["date"] = sources[update["primary_source"]]["date"]
-    else:
-        update["date"] = None
-# List non-dated updates first, as it seems more likely for more recent updates to have known dates
-updates.sort(key=lambda x: (x["date"] is not None, x["date"]))
-
+updates = load_updates("source_data/updates", sources)
 constants = get_constants(groups)
 assign_updates_and_values(constants, updates)
 
