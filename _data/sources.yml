@@ -1,3 +1,7 @@
+#####################
+# Secondary sources #
+#####################
+
 ejc-ds1-small-ramsey-numbers:
   name: "Small Ramsey Numbers"
   author: "Stanisław Radziszowski"
@@ -28,6 +32,16 @@ wikipedia-kissing-number:
   name: "Kissing number - Wikipedia"
   url: "https://en.wikipedia.org/wiki/Kissing_number"
 
+wikipedia-degree-diameter:
+  name: "Table of the largest known graphs of a given diameter and maximal degree - Wikipedia"
+  url: "https://en.wikipedia.org/wiki/Table_of_the_largest_known_graphs_of_a_given_diameter_and_maximal_degree"
+
+###################
+# Primary sources #
+###################
+
+# Ramsey numbers
+
 greenwood-gleason-1955:
   string: "R.E. Greenwood and A.M. Gleason, Combinatorial Relations and Chromatic Graphs, Canadian Journal of Mathematics, 7 (1955) 1-7."
   date: "1955"
@@ -39,10 +53,14 @@ kery-1964:
   date: "1964"
   notes: "[Kéry] in https://doi.org/10.37236/28"
 
+# Packing unit squares
+
 gobel-1979:
   string: "F. Göbel, Geometrical Packing and Covering Problems, in Packing and Covering in Combinatorics, A. Schrijver (ed.), Math Centrum Tracts 106 (1979) 179-199."
   date: "1979"
   notes: "[7] in https://doi.org/10.37236/28"
+
+# Busy Beaver
 
 lin-1965:
   string: "Shen Lin and Tibor Rado. 1965. Computer Studies of Turing Machine Problems. J. ACM 12, 2 (April 1965), 196-212."
@@ -61,3 +79,113 @@ marxen-1990:
 kropitz-2011:
   string: "Kropitz, P. (2011). Problém busy beaver."
   date: "2011"
+
+# Degree-diameter
+
+loz-siran-2008:
+  date: "2008"
+  url: "https://ajc.maths.uq.edu.au/pdf/41/ajc_v41_p063.pdf"
+
+jianxiang-chen-2018:
+  string: "Jianxiang Chen, 2018"
+  date: "2018"
+
+conder-2006:
+  url: "https://www.math.auckland.ac.nz/~conder/symmcubic2048list.txt"
+
+comellas-gomez-1994:
+  url: "https://arxiv.org/abs/math/9411218"
+
+sampels-1997:
+  doi: "https://doi.org/10.1007/BFb0024505"
+
+dinneen-hafner-1994:
+  doi: "https://doi.org/10.1002/net.3230240702"
+
+pelakhaty-2021:
+  string: "Vlad Pelakhaty, 2021"
+
+canale-2012:
+  string: "Eduardo A. Canale, 2012"
+
+abas-2016:
+  date: "2016-10"
+  doi: "https://doi.org/10.1016/j.ejc.2016.04.008"
+
+elspasgraphs:
+  doi: "https://doi.org/10.1109/SWCT.1964.27"
+
+dotygraph:
+  string: "Doty, Karl (1982), Large regular interconnection networks, Proceedings of the 3rd International Conference on Distributed Computing Systems, IEEE Computer Society, pp. 312-317"
+
+buset-2000:
+  doi: "https://doi.org/10.1016/S0166-218X(99)00204-8"
+
+afygraph:
+  doi: "https://doi.org/10.1002/jgt.3190100211"
+
+exoographs:
+  string: "Geoffrey Exoo, 1998 through 2010"
+
+exoo-post-2001:
+  string: "Geoffrey Exoo, after May 2001 (i.e. after https://doi.org/10.1002/jgt.1007)"
+
+allwrightgraph:
+  doi: "https://doi.org/10.1016/0166-218X(92)90120-Y"
+
+delorme85agraphs:
+  doi: "https://doi.org/10.1016/S0195-6698(85)80043-3"
+
+delorme85bgraphs:
+  date: "1985"
+  doi: "https://doi.org/10.1002/jgt.3190090304"
+
+pinedagraphs:
+  doi: "https://doi.org/10.1016/j.endm.2006.06.044"
+
+wegnergraph:
+  doi: "http://dx.doi.org/10.17877/DE290R-16496"
+
+molodtsov-2006:
+  string: "Molodtsov, Sergey (2006), General Theory of Information Transfer and Combinatorics, pp. 853-857"
+
+dfgraphs:
+  date: "1984-09"
+  doi: "https://doi.org/10.1109/TC.1984.1676504"
+
+bdfgraph:
+  date: "1982"
+  doi: "https://doi.org/10.1016/S0304-0208(08)73544-8"
+
+mmsgraphs:
+  date: "1998-09"
+  doi: "https://doi.org/10.1006/jctb.1998.1828"
+
+comellasgraphs:
+  doi: "https://doi.org/10.48550/arXiv.2406.18994"
+
+canale12graphs:
+  url: "https://web.archive.org/web/20200928131319/http://premat.fing.edu.uy/papers/2013/153.pdf"
+
+storwickgraphs:
+  doi: "https://doi.org/10.1109/T-C.1970.222861"
+
+mitjana-comellas-1995:
+  date: "1995"
+  string: "Margarida Mitjana and Francesc Comellas in 1995"
+
+gomez09graphs:
+  date: "2008-06-03"
+  doi: "https://doi.org/10.1002/net.20254"
+
+gomezfiolgraphs:
+  string: "Gómez, José; Fiol, Miquel (1985), Dense compound graphs, Ars Combinatoria, 20: 211-237"
+  date: "1985"
+
+gfsgraphs:
+  date: "1993-04-28"
+  doi: "https://doi.org/10.1016/0012-365X(93)90368-4"
+
+exoo-2001:
+  date: "2001-05-25"
+  doi: "https://doi.org/10.1002/jgt.1007"

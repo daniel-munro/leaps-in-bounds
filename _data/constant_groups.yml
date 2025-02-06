@@ -110,3 +110,26 @@ kissing-number:
     total_updates: 48
     updates_with_sources: 0
     source_coverage: 0.0
+degree-diameter:
+  name: Degree-diameter problem
+  description: $N(d,k)$ is the largest possible number of vertices in a graph of maximum
+    degree $d$ and diameter $k$.
+  display_type: grid
+  display_rows: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  display_columns: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+  id_template: degree-diameter-{d}-{k}
+  name_template: Degree-diameter problem $N({d},{k})$
+  description_template: The largest possible number of vertices in a graph of maximum
+    degree ${d}$ and diameter ${k}$.
+  parameters: [d, k]
+  parameter_values: [[[3, 20], [2, 10]]]
+  research_status: initial
+  stats:
+    total_constants: 162
+    exact_values: 7
+    bounded: 0
+    half_bounded: 119
+    unbounded: 36
+    total_updates: 142
+    updates_with_sources: 138
+    source_coverage: 97.18

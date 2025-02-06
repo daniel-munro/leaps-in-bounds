@@ -12,6 +12,15 @@ import pathlib
 import yaml
 
 def load_updates(updates_dir: str, sources: dict) -> list[dict]:
+    """Load updates from a directory of YAML files.
+
+    Args:
+        updates_dir: Directory containing YAML files with updates.
+        sources: Dictionary of sources.
+
+    Returns:
+        List of updates sorted chronologically.
+    """
     updates = []
     
     # Get all .yml and .yaml files in updates directory
@@ -26,9 +35,14 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
             
         for source_id, source_updates in updates_by_source.items():
             for update in source_updates:
-                update["secondary_source"] = source_id
+                if source_id != "none":
+                    update["secondary_source"] = source_id
                 if "primary_source" in update:
-                    update["date"] = sources[update["primary_source"]]["date"]
+                    primary_source = sources[update["primary_source"]]
+                    if "date" in primary_source:
+                        update["date"] = primary_source["date"]
+                    else:
+                        update["date"] = None
                 else:
                     update["date"] = None
                 updates.append(update)

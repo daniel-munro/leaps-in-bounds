@@ -3057,3 +3057,1853 @@ kissing-number-24:
   value: 196560
   lower_bound: 196560
   upper_bound: 196560
+degree-diameter-3-2:
+  name: Degree-diameter problem $N(3,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $2$.
+  updates:
+  - lower_bound: 10
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 10
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 10
+  lower_bound: 10
+  upper_bound: 10
+degree-diameter-3-3:
+  name: Degree-diameter problem $N(3,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $3$.
+  updates:
+  - lower_bound: 20
+    primary_source: elspasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 20
+    primary_source: elspasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 20
+  lower_bound: 20
+  upper_bound: 20
+degree-diameter-3-4:
+  name: Degree-diameter problem $N(3,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $4$.
+  updates:
+  - lower_bound: 38
+    primary_source: dotygraph
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 38
+    primary_source: buset-2000
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 38
+  lower_bound: 38
+  upper_bound: 38
+degree-diameter-3-5:
+  name: Degree-diameter problem $N(3,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $5$.
+  updates:
+  - lower_bound: 70
+    primary_source: afygraph
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 70
+  upper_bound: null
+degree-diameter-3-6:
+  name: Degree-diameter problem $N(3,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $6$.
+  updates:
+  - lower_bound: 132
+    primary_source: exoographs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 132
+  upper_bound: null
+degree-diameter-3-7:
+  name: Degree-diameter problem $N(3,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $7$.
+  updates:
+  - lower_bound: 196
+    primary_source: exoo-post-2001
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - lower_bound: 190
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  value: null
+  lower_bound: 190
+  upper_bound: null
+degree-diameter-3-8:
+  name: Degree-diameter problem $N(3,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $8$.
+  updates:
+  - lower_bound: 330
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  - lower_bound: 360
+    primary_source: jianxiang-chen-2018
+    secondary_source: wikipedia-degree-diameter
+    date: '2018'
+  value: null
+  lower_bound: 360
+  upper_bound: null
+degree-diameter-3-9:
+  name: Degree-diameter problem $N(3,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $9$.
+  updates:
+  - lower_bound: 600
+    primary_source: exoographs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 600
+  upper_bound: null
+degree-diameter-3-10:
+  name: Degree-diameter problem $N(3,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $3$ and diameter $10$.
+  updates:
+  - lower_bound: 1250
+    primary_source: conder-2006
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 1250
+  upper_bound: null
+degree-diameter-4-2:
+  name: Degree-diameter problem $N(4,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $2$.
+  updates:
+  - lower_bound: 15
+    primary_source: elspasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 15
+    primary_source: elspasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 15
+  lower_bound: 15
+  upper_bound: 15
+degree-diameter-4-3:
+  name: Degree-diameter problem $N(4,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $3$.
+  updates:
+  - lower_bound: 41
+    primary_source: allwrightgraph
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 41
+  upper_bound: null
+degree-diameter-4-4:
+  name: Degree-diameter problem $N(4,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $4$.
+  updates:
+  - lower_bound: 98
+    primary_source: exoo-post-2001
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - lower_bound: 96
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  value: null
+  lower_bound: 96
+  upper_bound: null
+degree-diameter-4-5:
+  name: Degree-diameter problem $N(4,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $5$.
+  updates:
+  - lower_bound: 364
+    primary_source: delorme85agraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 364
+  upper_bound: null
+degree-diameter-4-6:
+  name: Degree-diameter problem $N(4,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $6$.
+  updates:
+  - lower_bound: 740
+    primary_source: comellas-gomez-1994
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 740
+  upper_bound: null
+degree-diameter-4-7:
+  name: Degree-diameter problem $N(4,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $7$.
+  updates:
+  - lower_bound: 1320
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1320
+  upper_bound: null
+degree-diameter-4-8:
+  name: Degree-diameter problem $N(4,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $8$.
+  updates:
+  - lower_bound: 3243
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 3243
+  upper_bound: null
+degree-diameter-4-9:
+  name: Degree-diameter problem $N(4,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $9$.
+  updates:
+  - lower_bound: 7575
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 7575
+  upper_bound: null
+degree-diameter-4-10:
+  name: Degree-diameter problem $N(4,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $4$ and diameter $10$.
+  updates:
+  - lower_bound: 17703
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 17703
+  upper_bound: null
+degree-diameter-5-2:
+  name: Degree-diameter problem $N(5,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $2$.
+  updates:
+  - lower_bound: 24
+    primary_source: elspasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 24
+    primary_source: elspasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 24
+  lower_bound: 24
+  upper_bound: 24
+degree-diameter-5-3:
+  name: Degree-diameter problem $N(5,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $3$.
+  updates:
+  - lower_bound: 72
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  value: null
+  lower_bound: 72
+  upper_bound: null
+degree-diameter-5-4:
+  name: Degree-diameter problem $N(5,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $4$.
+  updates:
+  - lower_bound: 212
+    primary_source: exoographs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 212
+  upper_bound: null
+degree-diameter-5-5:
+  name: Degree-diameter problem $N(5,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $5$.
+  updates:
+  - lower_bound: 624
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 624
+  upper_bound: null
+degree-diameter-5-6:
+  name: Degree-diameter problem $N(5,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $6$.
+  updates:
+  - lower_bound: 2772
+    primary_source: pinedagraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 2772
+  upper_bound: null
+degree-diameter-5-7:
+  name: Degree-diameter problem $N(5,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $7$.
+  updates:
+  - lower_bound: 5516
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 5516
+  upper_bound: null
+degree-diameter-5-8:
+  name: Degree-diameter problem $N(5,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $8$.
+  updates:
+  - lower_bound: 17030
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 17030
+  upper_bound: null
+degree-diameter-5-9:
+  name: Degree-diameter problem $N(5,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $9$.
+  updates:
+  - lower_bound: 57840
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 57840
+  upper_bound: null
+degree-diameter-5-10:
+  name: Degree-diameter problem $N(5,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $5$ and diameter $10$.
+  updates:
+  - lower_bound: 187056
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 187056
+  upper_bound: null
+degree-diameter-6-2:
+  name: Degree-diameter problem $N(6,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $2$.
+  updates:
+  - lower_bound: 32
+    primary_source: wegnergraph
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 32
+    primary_source: molodtsov-2006
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 32
+  lower_bound: 32
+  upper_bound: 32
+degree-diameter-6-3:
+  name: Degree-diameter problem $N(6,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $3$.
+  updates:
+  - lower_bound: 111
+    primary_source: exoo-post-2001
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - lower_bound: 110
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  value: null
+  lower_bound: 110
+  upper_bound: null
+degree-diameter-6-4:
+  name: Degree-diameter problem $N(6,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $4$.
+  updates:
+  - lower_bound: 380
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  - lower_bound: 390
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 390
+  upper_bound: null
+degree-diameter-6-5:
+  name: Degree-diameter problem $N(6,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $5$.
+  updates:
+  - lower_bound: 1404
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1404
+  upper_bound: null
+degree-diameter-6-6:
+  name: Degree-diameter problem $N(6,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $6$.
+  updates:
+  - lower_bound: 7917
+    primary_source: pinedagraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 7917
+  upper_bound: null
+degree-diameter-6-7:
+  name: Degree-diameter problem $N(6,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $7$.
+  updates:
+  - lower_bound: 19383
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 19383
+  upper_bound: null
+degree-diameter-6-8:
+  name: Degree-diameter problem $N(6,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $8$.
+  updates:
+  - lower_bound: 76891
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 76891
+  upper_bound: null
+degree-diameter-6-9:
+  name: Degree-diameter problem $N(6,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $9$.
+  updates:
+  - lower_bound: 331387
+    primary_source: canale12graphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 331387
+  upper_bound: null
+degree-diameter-6-10:
+  name: Degree-diameter problem $N(6,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $6$ and diameter $10$.
+  updates:
+  - lower_bound: 1253615
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1253615
+  upper_bound: null
+degree-diameter-7-2:
+  name: Degree-diameter problem $N(7,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $2$.
+  updates:
+  - lower_bound: 50
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - upper_bound: 50
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: 50
+  lower_bound: 50
+  upper_bound: 50
+degree-diameter-7-3:
+  name: Degree-diameter problem $N(7,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $3$.
+  updates:
+  - lower_bound: 168
+    primary_source: exoo-post-2001
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - lower_bound: 148
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  value: null
+  lower_bound: 148
+  upper_bound: null
+degree-diameter-7-4:
+  name: Degree-diameter problem $N(7,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $4$.
+  updates:
+  - lower_bound: 672
+    primary_source: sampels-1997
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 672
+  upper_bound: null
+degree-diameter-7-5:
+  name: Degree-diameter problem $N(7,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $5$.
+  updates:
+  - lower_bound: 2756
+    primary_source: dinneen-hafner-1994
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 2756
+  upper_bound: null
+degree-diameter-7-6:
+  name: Degree-diameter problem $N(7,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $6$.
+  updates:
+  - lower_bound: 12264
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 12264
+  upper_bound: null
+degree-diameter-7-7:
+  name: Degree-diameter problem $N(7,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $7$.
+  updates:
+  - lower_bound: 53020
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 53020
+  upper_bound: null
+degree-diameter-7-8:
+  name: Degree-diameter problem $N(7,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $8$.
+  updates:
+  - lower_bound: 249660
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 249660
+  upper_bound: null
+degree-diameter-7-9:
+  name: Degree-diameter problem $N(7,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $9$.
+  updates:
+  - lower_bound: 1223050
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1223050
+  upper_bound: null
+degree-diameter-7-10:
+  name: Degree-diameter problem $N(7,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $7$ and diameter $10$.
+  updates:
+  - lower_bound: 6007230
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 6007230
+  upper_bound: null
+degree-diameter-8-2:
+  name: Degree-diameter problem $N(8,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $2$.
+  updates:
+  - lower_bound: 57
+    primary_source: storwickgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 57
+  upper_bound: null
+degree-diameter-8-3:
+  name: Degree-diameter problem $N(8,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $3$.
+  updates:
+  - lower_bound: 253
+    primary_source: mitjana-comellas-1995
+    secondary_source: wikipedia-degree-diameter
+    date: '1995'
+  value: null
+  lower_bound: 253
+  upper_bound: null
+degree-diameter-8-4:
+  name: Degree-diameter problem $N(8,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $4$.
+  updates:
+  - lower_bound: 1100
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1100
+  upper_bound: null
+degree-diameter-8-5:
+  name: Degree-diameter problem $N(8,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $5$.
+  updates:
+  - lower_bound: 5115
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 5115
+  upper_bound: null
+degree-diameter-8-6:
+  name: Degree-diameter problem $N(8,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $6$.
+  updates:
+  - lower_bound: 39672
+    primary_source: gomez09graphs
+    secondary_source: wikipedia-degree-diameter
+    date: '2008-06-03'
+  value: null
+  lower_bound: 39672
+  upper_bound: null
+degree-diameter-8-7:
+  name: Degree-diameter problem $N(8,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $7$.
+  updates:
+  - lower_bound: 131137
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 131137
+  upper_bound: null
+degree-diameter-8-8:
+  name: Degree-diameter problem $N(8,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $8$.
+  updates:
+  - lower_bound: 734820
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 734820
+  upper_bound: null
+degree-diameter-8-9:
+  name: Degree-diameter problem $N(8,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $9$.
+  updates:
+  - lower_bound: 4243100
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 4243100
+  upper_bound: null
+degree-diameter-8-10:
+  name: Degree-diameter problem $N(8,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $8$ and diameter $10$.
+  updates:
+  - lower_bound: 24897161
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 24897161
+  upper_bound: null
+degree-diameter-9-2:
+  name: Degree-diameter problem $N(9,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $2$.
+  updates:
+  - lower_bound: 74
+    primary_source: storwickgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 74
+  upper_bound: null
+degree-diameter-9-3:
+  name: Degree-diameter problem $N(9,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $3$.
+  updates:
+  - lower_bound: 585
+    primary_source: delorme85agraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 585
+  upper_bound: null
+degree-diameter-9-4:
+  name: Degree-diameter problem $N(9,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $4$.
+  updates:
+  - lower_bound: 1640
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 1640
+  upper_bound: null
+degree-diameter-9-5:
+  name: Degree-diameter problem $N(9,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $5$.
+  updates:
+  - lower_bound: 8268
+    primary_source: canale12graphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 8268
+  upper_bound: null
+degree-diameter-9-6:
+  name: Degree-diameter problem $N(9,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $6$.
+  updates:
+  - lower_bound: 75893
+    primary_source: pinedagraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 75893
+  upper_bound: null
+degree-diameter-9-7:
+  name: Degree-diameter problem $N(9,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $7$.
+  updates:
+  - lower_bound: 279616
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 279616
+  upper_bound: null
+degree-diameter-9-8:
+  name: Degree-diameter problem $N(9,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $8$.
+  updates:
+  - lower_bound: 1697688
+    primary_source: canale12graphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 1697688
+  upper_bound: null
+degree-diameter-9-9:
+  name: Degree-diameter problem $N(9,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $9$.
+  updates:
+  - lower_bound: 12123288
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 12123288
+  upper_bound: null
+degree-diameter-9-10:
+  name: Degree-diameter problem $N(9,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $9$ and diameter $10$.
+  updates:
+  - lower_bound: 65866350
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 65866350
+  upper_bound: null
+degree-diameter-10-2:
+  name: Degree-diameter problem $N(10,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $2$.
+  updates:
+  - lower_bound: 91
+    primary_source: storwickgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 91
+  upper_bound: null
+degree-diameter-10-3:
+  name: Degree-diameter problem $N(10,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $3$.
+  updates:
+  - lower_bound: 650
+    primary_source: delorme85agraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 650
+  upper_bound: null
+degree-diameter-10-4:
+  name: Degree-diameter problem $N(10,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $4$.
+  updates:
+  - lower_bound: 2331
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 2331
+  upper_bound: null
+degree-diameter-10-5:
+  name: Degree-diameter problem $N(10,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $5$.
+  updates:
+  - lower_bound: 13203
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 13203
+  upper_bound: null
+degree-diameter-10-6:
+  name: Degree-diameter problem $N(10,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $6$.
+  updates:
+  - lower_bound: 134690
+    primary_source: gomez09graphs
+    secondary_source: wikipedia-degree-diameter
+    date: '2008-06-03'
+  value: null
+  lower_bound: 134690
+  upper_bound: null
+degree-diameter-10-7:
+  name: Degree-diameter problem $N(10,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $7$.
+  updates:
+  - lower_bound: 583083
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 583083
+  upper_bound: null
+degree-diameter-10-8:
+  name: Degree-diameter problem $N(10,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $8$.
+  updates:
+  - lower_bound: 4293452
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 4293452
+  upper_bound: null
+degree-diameter-10-9:
+  name: Degree-diameter problem $N(10,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $9$.
+  updates:
+  - lower_bound: 27997191
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 27997191
+  upper_bound: null
+degree-diameter-10-10:
+  name: Degree-diameter problem $N(10,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $10$ and diameter $10$.
+  updates:
+  - lower_bound: 201038922
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 201038922
+  upper_bound: null
+degree-diameter-11-2:
+  name: Degree-diameter problem $N(11,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $2$.
+  updates:
+  - lower_bound: 104
+    primary_source: exoographs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 104
+  upper_bound: null
+degree-diameter-11-3:
+  name: Degree-diameter problem $N(11,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $3$.
+  updates:
+  - lower_bound: 715
+    primary_source: delorme85agraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 715
+  upper_bound: null
+degree-diameter-11-4:
+  name: Degree-diameter problem $N(11,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $4$.
+  updates:
+  - lower_bound: 3200
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 3200
+  upper_bound: null
+degree-diameter-11-5:
+  name: Degree-diameter problem $N(11,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $5$.
+  updates:
+  - lower_bound: 19620
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 19620
+  upper_bound: null
+degree-diameter-11-6:
+  name: Degree-diameter problem $N(11,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $6$.
+  updates:
+  - lower_bound: 156864
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 156864
+  upper_bound: null
+degree-diameter-11-7:
+  name: Degree-diameter problem $N(11,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $7$.
+  updates:
+  - lower_bound: 1001268
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1001268
+  upper_bound: null
+degree-diameter-11-8:
+  name: Degree-diameter problem $N(11,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $8$.
+  updates:
+  - lower_bound: 7442328
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 7442328
+  upper_bound: null
+degree-diameter-11-9:
+  name: Degree-diameter problem $N(11,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $9$.
+  updates:
+  - lower_bound: 72933102
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 72933102
+  upper_bound: null
+degree-diameter-11-10:
+  name: Degree-diameter problem $N(11,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $11$ and diameter $10$.
+  updates:
+  - lower_bound: 600380000
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 600380000
+  upper_bound: null
+degree-diameter-12-2:
+  name: Degree-diameter problem $N(12,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $2$.
+  updates:
+  - lower_bound: 133
+    primary_source: dfgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: 1984-09
+  value: null
+  lower_bound: 133
+  upper_bound: null
+degree-diameter-12-3:
+  name: Degree-diameter problem $N(12,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $3$.
+  updates:
+  - lower_bound: 786
+    primary_source: gomez09graphs
+    secondary_source: wikipedia-degree-diameter
+    date: '2008-06-03'
+  value: null
+  lower_bound: 786
+  upper_bound: null
+degree-diameter-12-4:
+  name: Degree-diameter problem $N(12,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $4$.
+  updates:
+  - lower_bound: 4680
+    primary_source: bdfgraph
+    secondary_source: wikipedia-degree-diameter
+    date: '1982'
+  value: null
+  lower_bound: 4680
+  upper_bound: null
+degree-diameter-12-5:
+  name: Degree-diameter problem $N(12,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $5$.
+  updates:
+  - lower_bound: 29621
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 29621
+  upper_bound: null
+degree-diameter-12-6:
+  name: Degree-diameter problem $N(12,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $6$.
+  updates:
+  - lower_bound: 359772
+    primary_source: pinedagraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 359772
+  upper_bound: null
+degree-diameter-12-7:
+  name: Degree-diameter problem $N(12,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $7$.
+  updates:
+  - lower_bound: 1999500
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1999500
+  upper_bound: null
+degree-diameter-12-8:
+  name: Degree-diameter problem $N(12,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $8$.
+  updates:
+  - lower_bound: 15924326
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 15924326
+  upper_bound: null
+degree-diameter-12-9:
+  name: Degree-diameter problem $N(12,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $9$.
+  updates:
+  - lower_bound: 158158875
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 158158875
+  upper_bound: null
+degree-diameter-12-10:
+  name: Degree-diameter problem $N(12,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $12$ and diameter $10$.
+  updates:
+  - lower_bound: 1506252500
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1506252500
+  upper_bound: null
+degree-diameter-13-2:
+  name: Degree-diameter problem $N(13,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $2$.
+  updates:
+  - lower_bound: 162
+    primary_source: mmsgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: 1998-09
+  value: null
+  lower_bound: 162
+  upper_bound: null
+degree-diameter-13-3:
+  name: Degree-diameter problem $N(13,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $3$.
+  updates:
+  - lower_bound: 856
+    primary_source: pelakhaty-2021
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  - lower_bound: 851
+    primary_source: gomez09graphs
+    date: '2008-06-03'
+  value: null
+  lower_bound: 851
+  upper_bound: null
+degree-diameter-13-4:
+  name: Degree-diameter problem $N(13,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $4$.
+  updates:
+  - lower_bound: 6560
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 6560
+  upper_bound: null
+degree-diameter-13-5:
+  name: Degree-diameter problem $N(13,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $5$.
+  updates:
+  - lower_bound: 40488
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 40488
+  upper_bound: null
+degree-diameter-13-6:
+  name: Degree-diameter problem $N(13,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $6$.
+  updates:
+  - lower_bound: 531440
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 531440
+  upper_bound: null
+degree-diameter-13-7:
+  name: Degree-diameter problem $N(13,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $7$.
+  updates:
+  - lower_bound: 3322080
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 3322080
+  upper_bound: null
+degree-diameter-13-8:
+  name: Degree-diameter problem $N(13,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $8$.
+  updates:
+  - lower_bound: 29927790
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 29927790
+  upper_bound: null
+degree-diameter-13-9:
+  name: Degree-diameter problem $N(13,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $9$.
+  updates:
+  - lower_bound: 249155760
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 249155760
+  upper_bound: null
+degree-diameter-13-10:
+  name: Degree-diameter problem $N(13,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $13$ and diameter $10$.
+  updates:
+  - lower_bound: 3077200700
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 3077200700
+  upper_bound: null
+degree-diameter-14-2:
+  name: Degree-diameter problem $N(14,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $2$.
+  updates:
+  - lower_bound: 183
+    primary_source: dfgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: 1984-09
+  value: null
+  lower_bound: 183
+  upper_bound: null
+degree-diameter-14-3:
+  name: Degree-diameter problem $N(14,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $3$.
+  updates:
+  - lower_bound: 912
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  - lower_bound: 916
+    primary_source: gomez09graphs
+    secondary_source: wikipedia-degree-diameter
+    date: '2008-06-03'
+  value: null
+  lower_bound: 916
+  upper_bound: null
+degree-diameter-14-4:
+  name: Degree-diameter problem $N(14,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $4$.
+  updates:
+  - lower_bound: 8200
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 8200
+  upper_bound: null
+degree-diameter-14-5:
+  name: Degree-diameter problem $N(14,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $5$.
+  updates:
+  - lower_bound: 58095
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 58095
+  upper_bound: null
+degree-diameter-14-6:
+  name: Degree-diameter problem $N(14,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $6$.
+  updates:
+  - lower_bound: 816294
+    primary_source: pinedagraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 816294
+  upper_bound: null
+degree-diameter-14-7:
+  name: Degree-diameter problem $N(14,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $7$.
+  updates:
+  - lower_bound: 6200460
+    primary_source: gfsgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1993-04-28'
+  value: null
+  lower_bound: 6200460
+  upper_bound: null
+degree-diameter-14-8:
+  name: Degree-diameter problem $N(14,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $8$.
+  updates:
+  - lower_bound: 55913932
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 55913932
+  upper_bound: null
+degree-diameter-14-9:
+  name: Degree-diameter problem $N(14,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $9$.
+  updates:
+  - lower_bound: 600123780
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 600123780
+  upper_bound: null
+degree-diameter-14-10:
+  name: Degree-diameter problem $N(14,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $14$ and diameter $10$.
+  updates:
+  - lower_bound: 7041746081
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 7041746081
+  upper_bound: null
+degree-diameter-15-2:
+  name: Degree-diameter problem $N(15,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $2$.
+  updates:
+  - lower_bound: 187
+    primary_source: canale-2012
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 187
+  upper_bound: null
+degree-diameter-15-3:
+  name: Degree-diameter problem $N(15,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $3$.
+  updates:
+  - lower_bound: 1215
+    primary_source: delorme85bgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 1215
+  upper_bound: null
+degree-diameter-15-4:
+  name: Degree-diameter problem $N(15,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $4$.
+  updates:
+  - lower_bound: 11712
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 11712
+  upper_bound: null
+degree-diameter-15-5:
+  name: Degree-diameter problem $N(15,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $5$.
+  updates:
+  - lower_bound: 77520
+    primary_source: comellasgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: null
+  value: null
+  lower_bound: 77520
+  upper_bound: null
+degree-diameter-15-6:
+  name: Degree-diameter problem $N(15,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $6$.
+  updates:
+  - lower_bound: 1417248
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 1417248
+  upper_bound: null
+degree-diameter-15-7:
+  name: Degree-diameter problem $N(15,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $7$.
+  updates:
+  - lower_bound: 8599986
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 8599986
+  upper_bound: null
+degree-diameter-15-8:
+  name: Degree-diameter problem $N(15,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $8$.
+  updates:
+  - lower_bound: 90001236
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 90001236
+  upper_bound: null
+degree-diameter-15-9:
+  name: Degree-diameter problem $N(15,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $9$.
+  updates:
+  - lower_bound: 1171998164
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 1171998164
+  upper_bound: null
+degree-diameter-15-10:
+  name: Degree-diameter problem $N(15,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $15$ and diameter $10$.
+  updates:
+  - lower_bound: 10012349898
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 10012349898
+  upper_bound: null
+degree-diameter-16-2:
+  name: Degree-diameter problem $N(16,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $2$.
+  updates:
+  - lower_bound: 198
+    primary_source: exoo-2001
+    date: '2001-05-25'
+  - lower_bound: 200
+    primary_source: abas-2016
+    secondary_source: wikipedia-degree-diameter
+    date: 2016-10
+  value: null
+  lower_bound: 200
+  upper_bound: null
+degree-diameter-16-3:
+  name: Degree-diameter problem $N(16,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $3$.
+  updates:
+  - lower_bound: 1600
+    primary_source: delorme85bgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 1600
+  upper_bound: null
+degree-diameter-16-4:
+  name: Degree-diameter problem $N(16,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $4$.
+  updates:
+  - lower_bound: 14640
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 14640
+  upper_bound: null
+degree-diameter-16-5:
+  name: Degree-diameter problem $N(16,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $5$.
+  updates:
+  - lower_bound: 132496
+    primary_source: delorme85bgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 132496
+  upper_bound: null
+degree-diameter-16-6:
+  name: Degree-diameter problem $N(16,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $6$.
+  updates:
+  - lower_bound: 1771560
+    primary_source: gomezfiolgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1985'
+  value: null
+  lower_bound: 1771560
+  upper_bound: null
+degree-diameter-16-7:
+  name: Degree-diameter problem $N(16,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $7$.
+  updates:
+  - lower_bound: 14882658
+    primary_source: gfsgraphs
+    secondary_source: wikipedia-degree-diameter
+    date: '1993-04-28'
+  value: null
+  lower_bound: 14882658
+  upper_bound: null
+degree-diameter-16-8:
+  name: Degree-diameter problem $N(16,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $8$.
+  updates:
+  - lower_bound: 140559416
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 140559416
+  upper_bound: null
+degree-diameter-16-9:
+  name: Degree-diameter problem $N(16,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $9$.
+  updates:
+  - lower_bound: 2025125476
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 2025125476
+  upper_bound: null
+degree-diameter-16-10:
+  name: Degree-diameter problem $N(16,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $16$ and diameter $10$.
+  updates:
+  - lower_bound: 12951451931
+    primary_source: loz-siran-2008
+    secondary_source: wikipedia-degree-diameter
+    date: '2008'
+  value: null
+  lower_bound: 12951451931
+  upper_bound: null
+degree-diameter-17-2:
+  name: Degree-diameter problem $N(17,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $2$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-3:
+  name: Degree-diameter problem $N(17,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $3$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-4:
+  name: Degree-diameter problem $N(17,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $4$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-5:
+  name: Degree-diameter problem $N(17,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $5$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-6:
+  name: Degree-diameter problem $N(17,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $6$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-7:
+  name: Degree-diameter problem $N(17,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $7$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-8:
+  name: Degree-diameter problem $N(17,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $8$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-9:
+  name: Degree-diameter problem $N(17,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $9$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-17-10:
+  name: Degree-diameter problem $N(17,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $17$ and diameter $10$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-2:
+  name: Degree-diameter problem $N(18,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $2$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-3:
+  name: Degree-diameter problem $N(18,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $3$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-4:
+  name: Degree-diameter problem $N(18,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $4$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-5:
+  name: Degree-diameter problem $N(18,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $5$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-6:
+  name: Degree-diameter problem $N(18,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $6$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-7:
+  name: Degree-diameter problem $N(18,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $7$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-8:
+  name: Degree-diameter problem $N(18,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $8$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-9:
+  name: Degree-diameter problem $N(18,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $9$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-18-10:
+  name: Degree-diameter problem $N(18,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $18$ and diameter $10$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-2:
+  name: Degree-diameter problem $N(19,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $2$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-3:
+  name: Degree-diameter problem $N(19,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $3$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-4:
+  name: Degree-diameter problem $N(19,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $4$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-5:
+  name: Degree-diameter problem $N(19,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $5$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-6:
+  name: Degree-diameter problem $N(19,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $6$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-7:
+  name: Degree-diameter problem $N(19,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $7$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-8:
+  name: Degree-diameter problem $N(19,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $8$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-9:
+  name: Degree-diameter problem $N(19,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $9$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-19-10:
+  name: Degree-diameter problem $N(19,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $19$ and diameter $10$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-2:
+  name: Degree-diameter problem $N(20,2)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $2$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-3:
+  name: Degree-diameter problem $N(20,3)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $3$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-4:
+  name: Degree-diameter problem $N(20,4)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $4$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-5:
+  name: Degree-diameter problem $N(20,5)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $5$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-6:
+  name: Degree-diameter problem $N(20,6)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $6$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-7:
+  name: Degree-diameter problem $N(20,7)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $7$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-8:
+  name: Degree-diameter problem $N(20,8)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $8$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-9:
+  name: Degree-diameter problem $N(20,9)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $9$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
+degree-diameter-20-10:
+  name: Degree-diameter problem $N(20,10)$
+  description: The largest possible number of vertices in a graph of maximum degree
+    $20$ and diameter $10$.
+  updates: []
+  value: null
+  lower_bound: null
+  upper_bound: null
