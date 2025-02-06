@@ -101,7 +101,76 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
         if constant["lower_bound"] == constant["upper_bound"]:
             constant["value"] = constant["lower_bound"]
 
-with open("_data/constant_groups.yml", "r") as file:
+def calculate_group_stats(group_id: str, constants: dict) -> dict:
+    """Calculate statistics for a constant group.
+
+    Args:
+        group_id: ID of the constant group.
+        constants: Dictionary of all constants.
+
+    Returns:
+        Dictionary containing group statistics.
+    """
+    stats = {
+        "total_constants": 0,
+        "exact_values": 0,
+        "bounded": 0,
+        "half_bounded": 0,
+        "unbounded": 0,
+        "total_updates": 0,
+        "updates_with_sources": 0,
+    }
+    
+    # Find constants belonging to this group
+    group_constants = {
+        id: const for id, const in constants.items() 
+        if id.startswith(group_id)
+    }
+    
+    stats["total_constants"] = len(group_constants)
+    
+    # Analyze constant values
+    for const in group_constants.values():
+        if const["value"] is not None:
+            stats["exact_values"] += 1
+        elif const["lower_bound"] is not None and const["upper_bound"] is not None:
+            stats["bounded"] += 1
+        elif const["lower_bound"] is not None or const["upper_bound"] is not None:
+            stats["half_bounded"] += 1
+        else:
+            stats["unbounded"] += 1
+            
+        # Count updates and their sources
+        stats["total_updates"] += len(const["updates"])
+        stats["updates_with_sources"] += sum(
+            1 for update in const["updates"] 
+            if "primary_source" in update
+        )
+    
+    # Calculate percentages
+    if stats["total_updates"] > 0:
+        stats["source_coverage"] = round(
+            stats["updates_with_sources"] / stats["total_updates"] * 100, 2
+        )
+    else:
+        stats["source_coverage"] = 0.00
+        
+    return stats
+
+def write_groups(groups: dict, filename: str):
+    """Write processed constant groups info to file, with compact lists."""
+    # Set compact list representer
+    def compact_lists_representer(dumper, data):
+        return dumper.represent_sequence('tag:yaml.org,2002:seq', data, flow_style=True)
+    yaml.add_representer(list, compact_lists_representer)
+    # Write groups with compact lists
+    with open(filename, "w") as file:
+        yaml.dump(groups, file, sort_keys=False)
+    # Restore default list representer
+    default_representer = yaml.representer.SafeRepresenter.represent_list
+    yaml.add_representer(list, default_representer)
+
+with open("source_data/constant_groups.yml", "r") as file:
     groups = yaml.safe_load(file)
 
 with open("_data/sources.yml", "r") as file:
@@ -110,6 +179,12 @@ with open("_data/sources.yml", "r") as file:
 updates = load_updates("source_data/updates", sources)
 constants = get_constants(groups)
 assign_updates_and_values(constants, updates)
+
+# Add statistics to each group
+for group_id, group in groups.items():
+    group["stats"] = calculate_group_stats(group_id, constants)
+
+write_groups(groups, "_data/constant_groups.yml")
 
 with open("_data/constants.yml", "w") as file:
     yaml.dump(constants, file, sort_keys=False)

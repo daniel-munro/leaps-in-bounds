@@ -99,3 +99,12 @@ h1 {
 .constant-box-values br {
     display: none;
 }
+
+.constant-groups-overview {
+    margin: 2rem 0;
+}
+  
+.constant-groups-overview .badge {
+    font-size: 0.9em;
+    padding: 0.4em 0.6em;
+}

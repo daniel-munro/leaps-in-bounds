@@ -1,0 +1,64 @@
+ramsey:
+  name: "Ramsey numbers"
+  description: "Ramsey number $R(r,s)$ is the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_r$ in the first color or a monochromatic $K_s$ in the second color."
+  display_type: grid
+  display_rows: [3, 4, 5, 6, 7, 8, 9, 10]
+  display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  id_template: "ramsey-{r}-{s}"
+  name_template: "Ramsey number $R({r},{s})$"
+  description_template: "The smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_{{{r}}}$ in the first color or a monochromatic $K_{{{s}}}$ in the second color."
+  parameters: [r, s]
+  parameter_values:
+  - [3, [3, 15]]
+  - [4, [4, 15]]
+  - [5, [5, 15]]
+  - [6, [6, 15]]
+  - [7, [7, 15]]
+  - [8, [8, 15]]
+  - [9, [9, 15]]
+  - [10, [10, 15]]
+  research_status: "initial"
+
+square-packing:
+  name: "Packing unit squares in a square"
+  description: "$s(n)$ is the side of the smallest square into which $n$ unit squares can be packed."
+  display_type: sequence
+  id_template: "square-packing-in-square-{n}"
+  name_template: "Packing unit squares in a square $s({n})$"
+  description_template: "The side of the smallest square into which ${n}$ unit squares can be packed."
+  parameters: [n]
+  parameter_values: [[[1, 100]]]
+  research_status: "initial"
+
+busy-beaver-shift:
+  name: "Busy Beaver shift function"
+  description: "The Busy Beaver shift function $BB(n)$ ($S(n)$) is the maximal number of steps that an n-state Turing machine can make on an initially blank tape before eventually halting."
+  display_type: sequence
+  id_template: "busy-beaver-shift-{n}"
+  name_template: "Busy Beaver number $BB({n})$"
+  description_template: "The maximal number of steps that a ${n}$-state Turing machine can make on an initially blank tape before eventually halting."
+  parameters: [n]
+  parameter_values: [[[1, 7]]]
+  research_status: "initial"
+
+busy-beaver-ones:
+  name: "Busy Beaver ones function"
+  description: "The Busy Beaver ones function $\\Sigma(n)$ (Rado's sigma function) is the maximal number of 1s that an n-state Turing machine can print on an initially blank tape before eventually halting."
+  display_type: sequence
+  id_template: "busy-beaver-ones-{n}"
+  name_template: "Busy Beaver ones function value $\\Sigma({n})$"
+  description_template: "The maximal number of 1s that a ${n}$-state Turing machine can print on an initially blank tape before eventually halting."
+  parameters: [n]
+  parameter_values: [[[1, 7]]]
+  research_status: "initial"
+
+kissing-number:
+  name: "Kissing number"
+  description: "The kissing number of $\\mathbb{R}^n$ is the maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{R}^n$."
+  display_type: sequence
+  id_template: "kissing-number-{n}"
+  name_template: "Kissing number for $\\mathbb{{R}}^{{{n}}}$"
+  description_template: "The maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{{R}}^{{{n}}}$."
+  parameters: [n]
+  parameter_values: [[[1, 24]]]
+  research_status: "initial"

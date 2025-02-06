@@ -12,6 +12,8 @@ This is a collaborative effort to compile data on historical progress on solved 
 
 This site provides browsing, visualizations, and access to the structured data for other uses.
 
+{% include constant_group_status.html %}
+
 ## Contributing
 
 Contributions are welcome!
