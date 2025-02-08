@@ -13,6 +13,4 @@ cp _data/sources.yml data/
 cp _data/updates.yml data/
 python scripts/convert_data.py
 
-python scripts/validate_data.py
-
-bundle exec jekyll serve
+bundle exec jekyll build

@@ -2,8 +2,11 @@
 
 1. Generate list of constants from constant groups.
 2. Use sources to assign dates to updates.
-3. Find most recent updates for each constant's bounds or exact value.
-4. Save constants to _data/constants.yml.
+3. Save all updates to _data/updates.yml.
+4. Find most recent updates for each constant's bounds or exact value.
+5. Save constants to _data/constants.yml.
+6. Add statistics to each constant group.
+7. Save constant groups to _data/constant_groups.yml.
 """
 
 from collections import defaultdict
@@ -191,14 +194,19 @@ with open("_data/sources.yml", "r") as file:
     sources = yaml.safe_load(file)
 
 updates = load_updates("source_data/updates", sources)
+
+# Save combined updates for download
+with open("_data/updates.yml", "w") as file:
+    yaml.dump(updates, file, sort_keys=False)
+
 constants = get_constants(groups)
 assign_updates_and_values(constants, updates)
+
+with open("_data/constants.yml", "w") as file:
+    yaml.dump(constants, file, sort_keys=False)
 
 # Add statistics to each group
 for group_id, group in groups.items():
     group["stats"] = calculate_group_stats(group_id, constants)
 
 write_groups(groups, "_data/constant_groups.yml")
-
-with open("_data/constants.yml", "w") as file:
-    yaml.dump(constants, file, sort_keys=False)

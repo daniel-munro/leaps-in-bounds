@@ -1,8 +1,10 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
+
+# About
 
 Leaps in Bounds was created and organized by [Daniel Munro](https://danmun.ro).
 
