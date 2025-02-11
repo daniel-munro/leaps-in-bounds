@@ -65,7 +65,16 @@ def get_constants(groups: dict) -> dict:
         Dictionary of constants.
     """
     constants = {}
-    for group in groups.values():
+    for group_id, group in groups.items():
+        # Handle single-constant groups (empty parameters list)
+        if not group.get("parameters"):
+            constant = {
+                "name": group["name"],
+                "description": group["description"]
+            }
+            constants[group_id] = constant
+            continue
+
         param_values = []
         for values in group["parameter_values"]:
             # Some items in values list are numbers, others are length-2 lists

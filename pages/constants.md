@@ -11,7 +11,7 @@ permalink: /constants/
 
 {{ group[1].description }}
 
-<p>Research status: {% if group[1].research_status == "initial" %}
+<p>Compilation status: {% if group[1].research_status == "initial" %}
 <span class="badge bg-warning">Initial</span>
 {% elsif group[1].research_status == "sourced" %}
 <span class="badge bg-info">Sourced</span>

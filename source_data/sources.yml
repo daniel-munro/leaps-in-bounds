@@ -42,6 +42,11 @@ combi-wiki-degree-diameter:
   date: "2022-02-18"
   url: "http://combinatoricswiki.org/wiki/The_Degree_Diameter_Problem_for_General_Graphs"
 
+wikipedia-debruijn-newman:
+  string: "de Bruijn-Newman constant - Wikipedia"
+  date: "2025-02-04"
+  url: "https://en.wikipedia.org/wiki/De_Bruijn-Newman_constant"
+
 ###################
 # Primary sources #
 ###################
@@ -249,3 +254,60 @@ loz-pineda-2010:
   string: "Loz, E., & Pineda-Villavicencio, G. (2010). New benchmarks for large-scale networks with given maximum degree and diameter. The Computer Journal, 53(7), 1092-1105."
   date: "2010-09"
   doi: "https://doi.org/10.1093/comjnl/bxp091"
+
+# de Bruijn-Newman
+
+csordas-norfolk-varga-1987:
+  string: "Csordas, G., Norfolk, T. S., & Varga, R. S. (1987). A low bound for the de Bruijn-newman constant Λ. Numerische Mathematik, 52, 483-497."
+  date: "1987-09"
+  doi: "https://doi.org/10.1007/BF01400887"
+
+teriele-1990:
+  string: "te Riele, H. J. (1990). A new lower bound for the de Bruijn-Newman constant. Numerische Mathematik, 58, 661-667."
+  date: "1990-12"
+  doi: "https://doi.org/10.1007/BF01385647"
+
+csordas-ruttan-varga-1991:
+  string: "Csordas, G., Ruttan, A., & Varga, R. S. (1991). The Laguerre inequalities with applications to a problem associated with the Riemann hypothesis. Numerical Algorithms, 1(2), 305-329."
+  date: "1991-06"
+  doi: "https://doi.org/10.1007/BF02142328"
+
+csordas-o-s-v-1993:
+  string: "Csordas, G., Odlyzko, A. M., Smith, W., & Varga, R. S. (1993). A new Lehmer pair of zeros and a new lower bound for the de Bruijn-Newman constant Λ. Electronic Transactions on Numerical Analysis, 1, 104-111."
+  date: "1993-12"
+  url: "https://etna.ricam.oeaw.ac.at/volumes/1993-2000/vol1/abstract.php?vol=1&pages=104-111"
+
+odlyzko-2000:
+  string: "Odlyzko, A. M. (2000). An improved bound for the de Bruijn-Newman constant. Numerical Algorithms, 25, 293-303."
+  date: "2000-09"
+  doi: "https://doi.org/10.1023/A:1016677511798"
+
+saouter-gourdon-demichel-2011:
+  string: "Saouter, Y., Gourdon, X., & Demichel, P. (2011). An improved lower bound for the de Bruijn-Newman constant. Mathematics of Computation, 80(276), 2281-2287."
+  date: "2011-03-09"
+  doi: "https://doi.org/10.1090/S0025-5718-2011-02472-5"
+
+rodgers-tao-2018:
+  string: "Rodgers, B., & Tao, T. (2020, January). The de Bruijn-Newman constant is non-negative. In Forum of Mathematics, Pi (Vol. 8, p. e6). Cambridge University Press."
+  date: "2020-04-06"
+  doi: "https://doi.org/10.1017/fmp.2020.6"
+
+debruijn-1950:
+  string: "de Bruijn, N. G. (1950). The roots of trigonometric integrals. Duke Math. J., 17(1), 197-226."
+  date: "1950-09"
+  doi: "https://doi.org/10.1215/S0012-7094-50-01720-0"
+
+ki-kim-lee-2009:
+  string: "Ki, H., Kim, Y. O., & Lee, J. (2009). On the de Bruijn-Newman constant. Advances in Mathematics, 222(1), 281-306."
+  date: "2009-09-10"
+  doi: "https://doi.org/10.1016/j.aim.2009.04.003"
+
+polymath-2019:
+  string: "Polymath, D. H. J. (2019). Effective approximation of heat flow evolution of the Riemann ξ function, and a new upper bound for the de Bruijn-Newman constant. Research in the Mathematical Sciences, 6, 1-67."
+  date: "2019-08-26"
+  doi: "https://doi.org/10.1007/s40687-019-0193-1"
+
+platt-trudgian-2020:
+  string: "Platt, D., & Trudgian, T. (2021). The Riemann hypothesis is true up to 3· 10 12. Bulletin of the London Mathematical Society, 53(3), 792-797."
+  date: "2021-01-22"
+  doi: "https://doi.org/10.1112/blms.12460"

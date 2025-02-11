@@ -110,6 +110,34 @@ def generate_sequence_html(group: dict, constants: dict) -> str:
     html.append('</div>')
     return '\n'.join(html) + '\n'
 
+def generate_single_html(group: dict, constants: dict) -> str:
+    """Generate HTML for a constant group with no parameters."""
+    html = ['<div class="constant-sequence">']
+    
+    const = constants[group['id']]
+    if const['value'] is not None:
+        content = f"${const['value']}$"
+        box_class = ' value-exact'
+    else:
+        lb = const['lower_bound'] if const['lower_bound'] is not None else '?'
+        ub = const['upper_bound'] if const['upper_bound'] is not None else '?'
+        content = f"${lb}$<br>${ub}$"
+        if lb == '?' and ub == '?':
+            box_class = ' value-unbounded'
+        elif lb == '?' or ub == '?':
+            box_class = ' value-half-bounded'
+        else:
+            box_class = ' value-bounded'
+        
+    html.append(
+        f'  <a href="/constants/{group["id"]}" class="constant-box{box_class}">'
+        f'<div class="constant-box-values">{content}</div>'
+        f'  </a>'
+    )
+
+    html.append('</div>')
+    return '\n'.join(html) + '\n'
+
 with open("_data/constants.yml", "r") as file:
     constants = yaml.safe_load(file)
 
@@ -135,6 +163,9 @@ for id, group in constant_groups.items():
         html = generate_grid_html(group, constants)
     elif group['display_type'] == 'sequence':
         html = generate_sequence_html(group, constants)
+    elif group['display_type'] == 'single':
+        group['id'] = id
+        html = generate_single_html(group, constants)
     else:
         raise ValueError(f"Unknown display type: {group['display_type']}")
     with open(f"_includes/constant_tables/{id}.html", "w") as file:

@@ -75,3 +75,10 @@ degree-diameter:
   parameters: [d, k]
   parameter_values: [[[3, 20], [2, 10]]]
   research_status: "initial"
+
+debruijn-newman:
+  name: "de Bruijn-Newman constant"
+  description: "The de Bruijn-Newman constant $\\Lambda$ is defined via the zeros of a certain function $H(\\lambda,z)$, where $\\lambda$ is a real parameter and $z$ is a complex variable.  More precisely, $H(\\lambda, z):=\\int_{0}^{\\infty} e^{\\lambda u^{2}} \\Phi(u) \\cos (z u) \\, du$, where $\\Phi$ is the super-exponentially decaying function $\\Phi(u) = \\sum_{n=1}^{\\infty} (2\\pi^2n^4e^{9u}-3\\pi n^2 e^{5u} ) e^{-\\pi n^2 e^{4u}}$ and $\\Lambda$ is the unique real number with the property that $H$ has only real zeros if and only if $\\lambda\\geq \\Lambda$."
+  display_type: single
+  parameters: []
+  research_status: "sourced"
