@@ -36,30 +36,25 @@ layout: default
       {% endif %}
       {% if update.primary_source %}
         {% assign primary = site.data.sources[update.primary_source] %}
-        <br>{% if primary.doi %}<a href="{{ primary.doi }}">{{ primary.string }}</a>{% else %}{{ primary.string }}{% endif %}
+        <br>{% if primary.doi %}
+          <a href="{{ primary.doi }}">{{ primary.string }}</a>
+        {% elsif primary.url %}
+          <a href="{{ primary.url }}">{{ primary.string }}</a>
+        {% else %}
+          {{ primary.string }}
+        {% endif %}
       {% else %}
         <br><em>Reference unknown</em>
       {% endif %}
       {% if update.secondary_source %}
         {% assign secondary = site.data.sources[update.secondary_source] %}
-        {% assign name_link = secondary.name %}
         {% if secondary.doi %}
-          {% assign name_link = '<a href="' | append: secondary.doi | append: '">' | append: secondary.name | append: '</a>' %}
+          <br>[via <a href="{{ secondary.doi }}">{{ secondary.string }}</a>]
         {% elsif secondary.url %}
-          {% assign name_link = '<a href="' | append: secondary.url | append: '">' | append: secondary.name | append: '</a>' %}
+          <br>[via <a href="{{ secondary.url }}">{{ secondary.string }}</a>]
+        {% else %}
+          <br>[via {{ secondary.string }}]
         {% endif %}
-        
-        {% assign author_part = "" %}
-        {% if secondary.author %}
-          {% assign author_part = ", " | append: secondary.author %}
-        {% endif %}
-        
-        {% assign date_part = "" %}
-        {% if secondary.date %}
-          {% assign date_part = ", " | append: secondary.date %}
-        {% endif %}
-        
-        <br>[via {{ name_link }}{{ author_part }}{{ date_part }}]
       {% endif %}
     </li>
   {% endfor %}

@@ -1,7 +1,7 @@
 set -e
 
 mkdir -p _data
-cp -i source_data/sources.yml _data/
+cp source_data/sources.yml _data/
 python scripts/process_data.py
 python scripts/generate_pages.py
 

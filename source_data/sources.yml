@@ -3,38 +3,44 @@
 #####################
 
 ejc-ds1-small-ramsey-numbers:
-  name: "Small Ramsey Numbers"
-  author: "Stanisław Radziszowski"
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, 2024-09-06"
   date: "2024-09-06"
   doi: "https://doi.org/10.37236/21"
 
 ejc-ds7-packing-unit-squares:
-  name: "Packing Unit Squares in Squares: A Survey and New Results"
-  author: "Erich Friedman"
+  string: "Packing Unit Squares in Squares: A Survey and New Results, Erich Friedman, 2009-08-14"
   date: "2009-08-14"
   doi: "https://doi.org/10.37236/28"
 
 oeis-A060843:
-  name: "Sequence A060843 in the OEIS"
+  string: "Sequence A060843 in the OEIS"
+  date: "2024"
   url: "https://oeis.org/A060843"
 
 oeis-A028444:
-  name: "Sequence A028444 in the OEIS"
+  string: "Sequence A028444 in the OEIS"
+  date: "2011"
   url: "https://oeis.org/A028444"
 
 aaronson-2020:
-  name: "The Busy Beaver Frontier"
-  author: "Scott Aaronson"
+  string: "The Busy Beaver Frontier, Scott Aaronson, 2020-09-29"
   date: "2020-09-29"
   doi: "https://doi.org/10.1145/3427361.3427369"
 
 wikipedia-kissing-number:
-  name: "Kissing number - Wikipedia"
+  string: "Kissing number - Wikipedia"
+  date: "2025-01-21"
   url: "https://en.wikipedia.org/wiki/Kissing_number"
 
 wikipedia-degree-diameter:
-  name: "Table of the largest known graphs of a given diameter and maximal degree - Wikipedia"
+  string: "Table of the largest known graphs of a given diameter and maximal degree - Wikipedia"
+  date: "2025-01-31"
   url: "https://en.wikipedia.org/wiki/Table_of_the_largest_known_graphs_of_a_given_diameter_and_maximal_degree"
+
+combi-wiki-degree-diameter:
+  string: "The Degree Diameter Problem for General Graphs - Combinatorics Wiki"
+  date: "2022-02-18"
+  url: "http://combinatoricswiki.org/wiki/The_Degree_Diameter_Problem_for_General_Graphs"
 
 ###################
 # Primary sources #
@@ -79,10 +85,12 @@ marxen-1990:
 kropitz-2011:
   string: "Kropitz, P. (2011). Problém busy beaver."
   date: "2011"
+  url: "https://dspace.cuni.cz/handle/20.500.11956/37142?show=full"
 
 # Degree-diameter
 
 loz-siran-2008:
+  string: "Loz, E., & Sirán, J. (2008). New record graphs in the degree-diameter problem. Australasian Journal of Combinatorics, 41, 63."
   date: "2008"
   url: "https://ajc.maths.uq.edu.au/pdf/41/ajc_v41_p063.pdf"
 
@@ -91,37 +99,56 @@ jianxiang-chen-2018:
   date: "2018"
 
 conder-2006:
+  string: "Conder, M. (2006). Trivalent (cubic) symmetric graphs on up to 2048 vertices."
+  date: "2006-08-17"
   url: "https://www.math.auckland.ac.nz/~conder/symmcubic2048list.txt"
 
 comellas-gomez-1994:
+  string: "Comellas, F., & Gómez, J. (1994). New large graphs with given degree and diameter. arXiv preprint math/9411218."
+  date: "1994-11-03"
+  doi: "https://doi.org/10.48550/arXiv.math/9411218"
   url: "https://arxiv.org/abs/math/9411218"
 
 sampels-1997:
+  string: "Sampels, M. (1997). Large networks with small diameter. In: Möhring, R.H. (eds) Graph-Theoretic Concepts in Computer Science. WG 1997. Lecture Notes in Computer Science, vol 1335. Springer, Berlin, Heidelberg."
+  date: "1997"
   doi: "https://doi.org/10.1007/BFb0024505"
 
 dinneen-hafner-1994:
+  string: "Dinneen, M. J., & Hafner, P. R. (1994). New results for the degree/diameter problem. Networks, 24(7), 359-367."
+  date: "1994-10"
   doi: "https://doi.org/10.1002/net.3230240702"
 
 pelakhaty-2021:
   string: "Vlad Pelakhaty, 2021"
+  date: "2021"
 
 canale-2012:
   string: "Eduardo A. Canale, 2012"
+  date: "2012"
 
 abas-2016:
+  string: "Abas, M. (2016). Cayley graphs of diameter two with order greater than 0.684 of the Moore bound for any degree. European Journal of Combinatorics, 57, 109-120."
   date: "2016-10"
   doi: "https://doi.org/10.1016/j.ejc.2016.04.008"
 
 elspasgraphs:
+  string: "Elspas, B. (1964, November). Topological constraints on interconnection-limited logic. In 1964 Proceedings of the Fifth Annual Symposium on Switching Circuit Theory and Logical Design (pp. 133-137). IEEE."
+  date: "1964-11"
   doi: "https://doi.org/10.1109/SWCT.1964.27"
 
 dotygraph:
   string: "Doty, Karl (1982), Large regular interconnection networks, Proceedings of the 3rd International Conference on Distributed Computing Systems, IEEE Computer Society, pp. 312-317"
+  date: "1982-10"
 
 buset-2000:
+  string: "Buset, D. (2000). Maximal cubic graphs with diameter 4. Discrete applied mathematics, 101(1-3), 53-61."
+  date: "2000-04-15"
   doi: "https://doi.org/10.1016/S0166-218X(99)00204-8"
 
 afygraph:
+  string: "Alegre, I., Fiol, M. A., & Yebra, J. L. A. (1986). Some large graphs with given degree and diameter. Journal of graph theory, 10(2), 219-224."
+  date: "1986"
   doi: "https://doi.org/10.1002/jgt.3190100211"
 
 exoographs:
@@ -129,45 +156,66 @@ exoographs:
 
 exoo-post-2001:
   string: "Geoffrey Exoo, after May 2001 (i.e. after https://doi.org/10.1002/jgt.1007)"
+  date: "2001-06"
 
 allwrightgraph:
+  string: "Allwright, J. (1992). New (Δ, D) graphs discovered by heuristic search. Discrete Applied Mathematics, 37, 3-8."
+  date: "1992-07-15"
   doi: "https://doi.org/10.1016/0166-218X(92)90120-Y"
 
 delorme85agraphs:
+  string: "Delorme, C. (1985). Grands graphes de degré et diametre donnés. European Journal of Combinatorics, 6(4), 291-302."
+  date: "1985-12"
   doi: "https://doi.org/10.1016/S0195-6698(85)80043-3"
 
 delorme85bgraphs:
+  string: "Delorme, C. (1985). Large bipartite graphs with given degree and diameter. Journal of graph theory, 9(3), 325-334."
   date: "1985"
   doi: "https://doi.org/10.1002/jgt.3190090304"
 
 pinedagraphs:
+  string: "Pineda-Villavicencio, G., Gómez, J., Miller, M., & Pérez-Rosés, H. (2006). New largest graphs of diameter 6: (Extended Abstract). Electronic Notes in Discrete Mathematics, 24, 153-160."
+  date: "2006-07-15"
   doi: "https://doi.org/10.1016/j.endm.2006.06.044"
 
 wegnergraph:
+  string: "Wegner, G. (1977). Graphs with given diameter and a coloring problem."
+  date: "1977"
   doi: "http://dx.doi.org/10.17877/DE290R-16496"
 
 molodtsov-2006:
-  string: "Molodtsov, Sergey (2006), General Theory of Information Transfer and Combinatorics, pp. 853-857"
+  string: "Molodtsov, S. G. (2006). Largest graphs of diameter 2 and maximum degree 6. General Theory of Information Transfer and Combinatorics, 853-857."
+  date: "2006"
+  doi: "https://doi.org/10.1007/11889342_54"
 
 dfgraphs:
-  date: "1984-09"
+  string: "Delorme, & Farhi. (1984). Large graphs with given degree and diameter—Part I. IEEE transactions on computers, 100(9), 857-860."
+  date: "1984-09-30"
   doi: "https://doi.org/10.1109/TC.1984.1676504"
 
 bdfgraph:
+  string: "Bermond, J. C., Delorme, C., & Farhi, G. (1982). Large graphs with given degree and diameter III. In North-Holland Mathematics Studies (Vol. 62, pp. 23-31). North-Holland."
   date: "1982"
   doi: "https://doi.org/10.1016/S0304-0208(08)73544-8"
 
 mmsgraphs:
+  string: "McKay, B. D., Miller, M., & Širáň, J. (1998). A note on large graphs of diameter two and given maximum degree. Journal of Combinatorial Theory, Series B, 74(1), 110-118."
   date: "1998-09"
   doi: "https://doi.org/10.1006/jctb.1998.1828"
 
 comellasgraphs:
+  string: "Comellas, F. (2024). Table of large graphs with given degree and diameter. arXiv preprint arXiv:2406.18994."
+  date: "2024-06-27"
   doi: "https://doi.org/10.48550/arXiv.2406.18994"
 
 canale12graphs:
+  string: "Canale, E., & Rodríguez, A. (2012). On the application of voltage graphs to the degree/diameter problem."
+  date: "2012-12-11"
   url: "https://web.archive.org/web/20200928131319/http://premat.fing.edu.uy/papers/2013/153.pdf"
 
 storwickgraphs:
+  string: "Storwick, R. M. (1970). Improved construction techniques for (d, k) graphs. IEEE Transactions on Computers, 100(12), 1214-1216."
+  date: "1970-12-31"
   doi: "https://doi.org/10.1109/T-C.1970.222861"
 
 mitjana-comellas-1995:
@@ -175,6 +223,7 @@ mitjana-comellas-1995:
   string: "Margarida Mitjana and Francesc Comellas in 1995"
 
 gomez09graphs:
+  string: "Gómez, J. (2009), Some new large (Δ, 3)-graphs. Networks, 53: 1-5."
   date: "2008-06-03"
   doi: "https://doi.org/10.1002/net.20254"
 
@@ -183,9 +232,20 @@ gomezfiolgraphs:
   date: "1985"
 
 gfsgraphs:
+  string: "Gómez, J., Fiol, M. A., & Serra, O. (1993). On large (Δ, D)-graphs. Discrete Mathematics, 114(1-3), 219-235."
   date: "1993-04-28"
   doi: "https://doi.org/10.1016/0012-365X(93)90368-4"
 
 exoo-2001:
+  string: "Exoo, G. (2001). A family of graphs and the degree/diameter problem. Journal of Graph Theory, 37(2), 118-124."
   date: "2001-05-25"
   doi: "https://doi.org/10.1002/jgt.1007"
+
+brown-1966:
+  string: "Brown, W. G. (1966)."
+  date: "1966"
+
+loz-pineda-2010:
+  string: "Loz, E., & Pineda-Villavicencio, G. (2010). New benchmarks for large-scale networks with given maximum degree and diameter. The Computer Journal, 53(7), 1092-1105."
+  date: "2010-09"
+  doi: "https://doi.org/10.1093/comjnl/bxp091"
