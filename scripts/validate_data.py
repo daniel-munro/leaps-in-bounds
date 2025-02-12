@@ -2,9 +2,19 @@
 
 import yaml
 
-# Load sources
+# Create custom loader to check for duplicates
+class DuplicateKeyCheckLoader(yaml.SafeLoader):
+    def construct_mapping(self, node, deep=False):
+        mapping = {}
+        for key_node, value_node in node.value:
+            key = self.construct_object(key_node)
+            if key in mapping:
+                raise ValueError(f"Duplicate key found in YAML: {key}")
+            mapping[key] = self.construct_object(value_node)
+        return mapping
+
 with open('_data/sources.yml') as f:
-    sources = yaml.safe_load(f)
+    sources = yaml.load(f, Loader=DuplicateKeyCheckLoader)
 
 # Check for missing dates and strings
 missing_dates = [id for id, source in sources.items() if 'date' not in source]

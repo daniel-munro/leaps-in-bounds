@@ -47,6 +47,11 @@ wikipedia-debruijn-newman:
   date: "2025-02-04"
   url: "https://en.wikipedia.org/wiki/De_Bruijn-Newman_constant"
 
+wikipedia-van-der-waerden:
+  string: "Van der Waerden number - Wikipedia"
+  date: "2025-01-26"
+  url: "https://en.wikipedia.org/wiki/Van_der_Waerden_number"
+
 ###################
 # Primary sources #
 ###################
@@ -311,3 +316,57 @@ platt-trudgian-2020:
   string: "Platt, D., & Trudgian, T. (2021). The Riemann hypothesis is true up to 3· 10 12. Bulletin of the London Mathematical Society, 53(3), 792-797."
   date: "2021-01-22"
   doi: "https://doi.org/10.1112/blms.12460"
+
+# van der Waerden
+
+chvatal-1970:
+  string: "Chvátal, V. (1970). Some unknown van der Waerden numbers. Combinatorial structures and their applications, 31-33."
+  date: "1970"
+
+stevens-shantaram-1978:
+  string: "Stevens, R. S., & Shantaram, R. (1978). Computer-generated van der Waerden partitions. Mathematics of Computation, 32(142), 635-636."
+  date: "1978-04"
+  doi: "https://doi.org/10.1090/S0025-5718-1978-0491468-X"
+
+kouril-paul-2011:
+  string: "Kouril, M., & Paul, J. L. (2008). The van der Waerden number W (2, 6) is 1132. Experimental Mathematics, 17(1), 53-61."
+  date: "2011-01-30"
+  doi: "https://doi.org/10.1080/10586458.2008.10129025"
+
+kouril-pre-2011:
+  string: "Kouril, M. prior to 2011-01-30 (https://doi.org/10.1080/10586458.2008.10129025)"
+  date: "2011-01-29"
+
+rabung-lotts-2012:
+  string: "Rabung, J., & Lotts, M. (2012). Improving the use of cyclic zippers in finding lower bounds for van der Waerden numbers. the electronic journal of combinatorics, P35-P35."
+  date: "2012-06-06"
+  doi: "https://doi.org/10.37236/2363"
+
+kouril-2012:
+  string: "Kouril, Michal (2012). Computing the van der Waerden number W(3,4)=293. Integers. 12: A46."
+  date: "2012"
+
+beeler-oneil-1979:
+  string: "Beeler, M. D., & O'neil, P. E. (1979). Some new van der Waerden numbers. Discrete Mathematics, 28(2), 135-146."
+  date: "1979"
+  doi: "https://doi.org/10.1016/0012-365X(79)90090-6"
+
+rabung-1979:
+  string: "Rabung, J. R. (1979). Some progression-free partitions constructed using Folkman's method. Canadian Mathematical Bulletin, 22(1), 87-91."
+  date: "1979-03-01"
+  doi: "https://doi.org/10.4153/CMB-1979-012-1"
+
+monroe-2019:
+  string: "Monroe, D. (2019). New Lower Bounds for van der Waerden Numbers Using Distributed Computing. arXiv preprint arXiv:1603.03301v6."
+  date: "2019-05-22"
+  doi: "https://doi.org/10.48550/arXiv.1603.03301"
+
+heule-2017:
+  string: "Heule, M. J. (2017). Avoiding triples in arithmetic progression. Journal of Combinatorics, 8(3), 391-422."
+  date: "2017-06-21"
+  doi: "https://dx.doi.org/10.4310/JOC.2017.v8.n3.a1"
+
+blankenship-c-t-2018:
+  string: "Blankenship, T., Cummings, J., & Taranchuk, V. (2018). A new lower bound for van der Waerden numbers. European Journal of Combinatorics, 69, 163-168."
+  date: "2018-03"
+  doi: "https://doi.org/10.1016/j.ejc.2017.10.007"

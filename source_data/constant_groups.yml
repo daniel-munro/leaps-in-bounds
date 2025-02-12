@@ -82,3 +82,16 @@ debruijn-newman:
   display_type: single
   parameters: []
   research_status: "sourced"
+
+van-der-waerden:
+  name: "Van der Waerden numbers"
+  description: "$W(r,k)$ is the smallest number $n$ such that if the integers $1$ to $n$ are colored with $r$ colors, there must be a monochromatic arithmetic progression of length $k$."
+  display_type: grid
+  display_rows: [2, 3, 4, 5, 6]
+  display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11]
+  id_template: "van-der-waerden-{r}-{k}"
+  name_template: "Van der Waerden number $W({r},{k})$"
+  description_template: "The smallest number $n$ such that if the integers $1$ to $n$ are colored with ${r}$ colors, there must be a monochromatic arithmetic progression of length ${k}$."
+  parameters: [r, k]
+  parameter_values: [[[2, 6], [3, 11]]]
+  research_status: "initial"
