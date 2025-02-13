@@ -56,6 +56,9 @@ wikipedia-van-der-waerden:
 # Primary sources #
 ###################
 
+trivial:
+  string: "Trivial or easy according to the secondary source."
+
 # Ramsey numbers
 
 greenwood-gleason-1955:
@@ -68,6 +71,201 @@ kery-1964:
   string: "G. Kéry, On a Theorem of Ramsey (in Hungarian), Matematikai Lapok, 15 (1964) 204-224."
   date: "1964"
   notes: "[Kéry] in https://doi.org/10.37236/28"
+
+kalbfleisch-1966:
+  string: "J.G. Kalbfleisch, Chromatic Graphs and Ramsey's Theorem, Ph.D. thesis, University of Waterloo, January 1966."
+  date: "1966-01"
+  notes: "[Ka2] in https://doi.org/10.37236/28"
+
+graver-yackel-1968:
+  string: "J.E. Graver and J. Yackel, Some Graph Theoretic Results Associated with Ramsey's Theorem, Journal of Combinatorial Theory, 4 (1968) 125-175."
+  date: "1968"
+  notes: "[GrY] in https://doi.org/10.37236/28"
+
+grinstead-roberts-1982:
+  string: "C. Grinstead and S. Roberts, On the Ramsey Numbers R(3, 8) and R(3, 9), Journal of Combinatorial Theory, Series B, 33 (1982) 27-51."
+  date: "1982"
+  notes: "[GR] in https://doi.org/10.37236/28"
+
+mckay-zhang-1992:
+  string: "B.D. McKay and Zhang Ke Min, The Value of the Ramsey Number R(3, 8), Journal of Graph Theory, 16 (1992) 99-105."
+  date: "1992"
+  notes: "[McZ] in https://doi.org/10.37236/28"
+
+exoo-1989c:
+  string: "G. Exoo, On Two Classical Ramsey Numbers of the Form R(3, n), SIAM Journal on Discrete Mathematics, 2 (1989) 488-490."
+  date: "1989"
+  notes: "[Ex5] in https://doi.org/10.37236/28"
+
+angeltveit-2024:
+  string: "V. Angeltveit, R(3, 10) ≤ 41, manuscript (2024)."
+  date: "2024"
+  notes: "[Ang] in https://doi.org/10.37236/28"
+
+exoo-2013:
+  string: "G. Exoo, On Some Small Classical Ramsey Numbers, Electronic Journal of Combinatorics, http://www.combinatorics.org, #P68, 20(1) (2013), 6 pages."
+  date: "2013"
+  notes: "[Ex20] in https://doi.org/10.37236/28"
+
+goedgebeur-radziszowski-2013:
+  string: "J. Goedgebeur and S.P. Radziszowski, New Computational Upper Bounds for Ramsey Numbers R(3, k), Electronic Journal of Combinatorics, http://www.combinatorics.org, #P30, 20(1) (2013), 28 pages."
+  date: "2013"
+  notes: "[GoeR1] in https://doi.org/10.37236/28"
+
+kolodyazhny-2015:
+  string: "M. Kolodyazhny, Novye Nizhnie Granitsy Chisel Ramseya R(3, 12) i R(3, 13) (in Russian), Matematicheskoye i Informacionnoe Modelirovanie, Tyumen, 14 (2015) 126-130."
+  date: "2015"
+  notes: "[Kol1] in https://doi.org/10.37236/28"
+
+lesser-2001:
+  string: "A. Lesser, Theoretical and Computational Aspects of Ramsey Theory, Examensarbeten i Matematik, Matematiska Institutionen, Stockholms Universitet, 3, http://www2.math.su.se/gemensamt/grund/exjobb/matte/2001 (2001)."
+  date: "2001"
+  notes: "[Les] in https://doi.org/10.37236/28"
+
+kolodyazhny-2016:
+  string: "M. Kolodyazhny, graphs available at http://aluarium.net/forum/wiki-article-17.html, personal communication (2016)."
+  date: "2016"
+  notes: "[Kol2] in https://doi.org/10.37236/28"
+
+kalbfleisch-1965:
+  string: "J.G. Kalbfleisch, Construction of Special Edge-Chromatic Graphs, Canadian Mathematical Bulletin, 8 (1965) 575-584."
+  date: "1965"
+  notes: "[Ka1] in https://doi.org/10.37236/28"
+
+mckay-radziszowski-1995:
+  string: "B.D. McKay and S.P. Radziszowski, R(4, 5) = 25, Journal of Graph Theory, 19 (1995) 309-322."
+  date: "1995"
+  notes: "[MR4] in https://doi.org/10.37236/28"
+
+exoo-2012:
+  string: "G. Exoo, On the Ramsey Number R(4, 6), Electronic Journal of Combinatorics, http://www.combinatorics.org, #P66, 19(1) (2012), 5 pages."
+  date: "2012"
+  notes: "[Ex19] in https://doi.org/10.37236/28"
+
+mckay-radziszowski-1997:
+  string: "B.D. McKay and S.P. Radziszowski, Subgraph Counting Identities and Ramsey Numbers, Journal of Combinatorial Theory, Series B, 69 (1997) 193-209."
+  date: "1997"
+  notes: "[MR5] in https://doi.org/10.37236/28"
+
+exoo-1989a:
+  string: "G. Exoo, Applying Optimization Algorithm to Ramsey Problems, in Graph Theory, Combinatorics, Algorithms, and Applications (Y. Alavi ed.), SIAM Philadelphia, (1989) 175-179."
+  date: "1989"
+  notes: "[Ex3] in https://doi.org/10.37236/28"
+
+mackey-1994:
+  string: "J. Mackey, Combinatorial Remedies, Ph.D. thesis, Department of Mathematics, University of Hawaii, 1994."
+  date: "1994"
+  notes: "[Mac] in https://doi.org/10.37236/28"
+
+exoo-2005:
+  string: "G. Exoo, Indiana State University, personal communication (2005-2006). Constructions available at http://cs.indstate.edu/ge/RAMSEY."
+  date: "2005"
+  notes: "[Ex16] in https://doi.org/10.37236/28"
+
+harborth-krause-2003:
+  string: "H. Harborth and S. Krause, Ramsey Numbers for Circulant Colorings, Congressus Numerantium, 161 (2003) 139-150."
+  date: "2003"
+  notes: "[HaKr1] in https://doi.org/10.37236/28"
+
+exoo-tatarevic-2015:
+  string: "G. Exoo and M. Tatarevic, New Lower Bounds for 28 Classical Ramsey Numbers, Electronic Journal of Combinatorics, http:// www.combinatorics.org, #P3.11, 22(3) (2015), 12 pages. Graphs available at the journal site and at http://cs.indstate.edu/ge/RAMSEY/ExTa."
+  date: "2015"
+  notes: "[ExT] in https://doi.org/10.37236/28"
+
+spencer-1994:
+  string: "T. Spencer, University of Nebraska at Omaha, personal communication (1993), and, Upper Bounds for Ramsey Numbers via Linear Programming, manuscript (1994)."
+  date: "1994"
+  notes: "[Spe4] in https://doi.org/10.37236/28"
+
+su-luo-li-1998:
+  string: "Su Wenlong, Luo Haipeng and Li Qiao, New Lower Bounds of Classical Ramsey Numbers R(4, 12), R(5, 11) and R(5, 12), Chinese Science Bulletin, 43, 6 (1998) 528."
+  date: "1998"
+  notes: "[SuLL] in https://doi.org/10.37236/28"
+
+tatarevic-2020:
+  string: "M. Tatarevic, personal communication, graph constructions for lower bounds on Ramsey numbers at http://github.com/milostatarevic/ramsey-numbers/tree/master/graphs (2020)."
+  date: "2020"
+  notes: "[Tat] in https://doi.org/10.37236/28"
+
+exoo-1989b:
+  string: "G. Exoo, A Lower Bound for R(5, 5), Journal of Graph Theory, 13 (1989) 97-98."
+  date: "1989"
+  notes: "[Ex4] in https://doi.org/10.37236/28"
+
+angeltveit-mckay-2018:
+  string: "V. Angeltveit and B.D. McKay, R(5, 5 ) ≤ 48, Journal of Graph Theory, 89 (2018) 5-13."
+  date: "2018"
+  notes: "[AnM1] in https://doi.org/10.37236/28"
+
+exoo-2023:
+  string: "G. Exoo, Indiana State University, A Lower Bound for R(5, 6), manuscript (2023)."
+  date: "2023"
+  notes: "[Ex25] in https://doi.org/10.37236/28"
+
+huang-zhang-1993:
+  string: "Huang Yi Ru and Zhang Ke Min, A New Upper Bound Formula on Ramsey Numbers, Journal of Shanghai University, Natural Science, 7 (1993) 1-3."
+  date: "1993"
+  notes: "[HZ1] in https://doi.org/10.37236/28"
+
+calkin-erdos-tovey-1997:
+  string: "N.J. Calkin, P. Erdős and C.A. Tovey, New Ramsey Bounds from Cyclic Graphs of Prime Order, SIAM Journal on Discrete Mathematics, 10 (1997) 381-387."
+  date: "1997"
+  notes: "[CaET] in https://doi.org/10.37236/28"
+
+kuznetsov-2016:
+  string: "E. Kuznetsov, Computational Lower Limits on Small Ramsey Numbers, preprint, arXiv, http://arxiv.org/abs/1505.07186 (2016)."
+  date: "2016"
+  notes: "[Kuz] in https://doi.org/10.37236/28"
+
+huang-w-s-y-z-h-2007:
+  string: "Huang Yi Ru, Wang Yuandi, Sheng Wancheng, Yang Jiansheng, Zhang Ke Min and Huang Jian, New Upper Bound Formulas with Parameters for Ramsey Numbers, Discrete Mathematics, 307 (2007) 760-763."
+  date: "2007"
+  notes: "[HWSYZH] or [HW+] in https://doi.org/10.37236/28"
+
+mathon-1987:
+  string: "R. Mathon, Lower Bounds for Ramsey Numbers and Association Schemes, Journal of Combinatorial Theory, Series B, 42 (1987) 122-127."
+  date: "1987"
+  notes: "[Math] in https://doi.org/10.37236/28"
+
+huang-zhang-1998:
+  string: "Huang Yi Ru and Zhang Ke Min, An New Upper Bound Formula for Two Color Classical Ramsey Numbers, Journal of Combinatorial Mathematics and Combinatorial Computing, 28 (1998) 347-350."
+  date: "1998"
+  notes: "[HZ2] in https://doi.org/10.37236/28"
+
+xu-xie-e-r-2004:
+  string: "Xu Xiaodong, Xie Zheng, G. Exoo and S.P. Radziszowski, Constructive Lower Bounds on Classical Multicolor Ramsey Numbers, Electronic Journal of Combinatorics, http://www.combinatorics.org, #R35, 11(1) (2004), 24 pages."
+  date: "2004"
+  notes: "[XXER] in https://doi.org/10.37236/28"
+
+xiaodong-s-r-2011:
+  string: "Xiaodong Xu, Zehui Shao and S.P. Radziszowski, More Constructive Lower Bounds on Classical Ramsey Numbers, SIAM Journal on Discrete Mathematics, 25 (2011) 394-400."
+  date: "2011"
+  notes: "[XSR2] in https://doi.org/10.37236/28"
+
+xu-xie-radziszowski-2004:
+  string: "Xu Xiaodong, Xie Zheng and S.P. Radziszowski, A Constructive Approach for the Lower Bounds on the Ramsey Numbers R(s, t), Journal of Graph Theory, 47 (2004) 231-239."
+  date: "2004"
+  notes: "[XuXR] in https://doi.org/10.37236/28"
+
+burling-reyner-1972:
+  string: "J.P. Burling and S.W. Reyner, Some Lower Bounds of the Ramsey Numbers n(k, k), Journal of Combinatorial Theory, Series B, 13 (1972) 168-169."
+  date: "1972"
+  notes: "[BurR] in https://doi.org/10.37236/28"
+
+shi-zhang-2001:
+  string: "Shi Ling Sheng and Zhang Ke Min, An Upper Bound Formula for Ramsey Numbers, manuscript (2001)."
+  date: "2001"
+  notes: "[ShZ1] in https://doi.org/10.37236/28"
+
+shi-2003:
+  string: "Lingsheng Shi, Upper Bounds for Ramsey Numbers, Discrete Mathematics, 270 (2003) 251-265."
+  date: "2003"
+  notes: "[Shi2] in https://doi.org/10.37236/28"
+
+angeltveit-mckay-2019-2024:
+  string: "V. Angeltveit and B.D. McKay, personal communication (2019-2024)."
+  date: "2020"
+  notes: "[AnM2] and [AnM3] in https://doi.org/10.37236/28"
 
 # Packing unit squares
 

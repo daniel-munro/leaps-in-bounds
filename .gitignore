@@ -1,10 +1,12 @@
-_site
-_data
-data
+.DS_Store
+.venv
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
 Gemfile.lock
-.DS_Store
-.venv
+_site
+_data
+data
+_includes/constant_tables
+pages/constants

@@ -1,8 +1,10 @@
 ejc-ds1-small-ramsey-numbers:
 - constant: ramsey-3-3
   lower_bound: 6
+  primary_source: trivial
 - constant: ramsey-3-3
   upper_bound: 6
+  primary_source: trivial
 - constant: ramsey-3-4
   lower_bound: 9
   primary_source: greenwood-gleason-1955
@@ -23,40 +25,58 @@ ejc-ds1-small-ramsey-numbers:
   primary_source: kery-1964
 - constant: ramsey-3-7
   lower_bound: 23
+  primary_source: kalbfleisch-1966
 - constant: ramsey-3-7
   upper_bound: 23
+  primary_source: graver-yackel-1968
 - constant: ramsey-3-8
   lower_bound: 28
+  primary_source: grinstead-roberts-1982
 - constant: ramsey-3-8
   upper_bound: 28
+  primary_source: mckay-zhang-1992
 - constant: ramsey-3-9
   lower_bound: 36
+  primary_source: kalbfleisch-1966
 - constant: ramsey-3-9
   upper_bound: 36
+  primary_source: grinstead-roberts-1982
 - constant: ramsey-3-10
   lower_bound: 40
+  primary_source: exoo-1989c
 - constant: ramsey-3-10
   upper_bound: 41
+  primary_source: angeltveit-2024
 - constant: ramsey-3-11
   lower_bound: 47
+  primary_source: exoo-2013
 - constant: ramsey-3-11
   upper_bound: 50
+  primary_source: goedgebeur-radziszowski-2013
 - constant: ramsey-3-12
   lower_bound: 53
+  primary_source: kolodyazhny-2015
 - constant: ramsey-3-12
   upper_bound: 59
+  primary_source: lesser-2001
 - constant: ramsey-3-13
   lower_bound: 60
+  primary_source: kolodyazhny-2015
 - constant: ramsey-3-13
   upper_bound: 68
+  primary_source: goedgebeur-radziszowski-2013
 - constant: ramsey-3-14
   lower_bound: 67
+  primary_source: kolodyazhny-2016
 - constant: ramsey-3-14
   upper_bound: 77
+  primary_source: goedgebeur-radziszowski-2013
 - constant: ramsey-3-15
   lower_bound: 74
+  primary_source: kolodyazhny-2016
 - constant: ramsey-3-15
   upper_bound: 87
+  primary_source: goedgebeur-radziszowski-2013
 - constant: ramsey-4-4
   lower_bound: 18
   primary_source: greenwood-gleason-1955
@@ -65,309 +85,463 @@ ejc-ds1-small-ramsey-numbers:
   primary_source: greenwood-gleason-1955
 - constant: ramsey-4-5
   lower_bound: 25
+  primary_source: kalbfleisch-1965
 - constant: ramsey-4-5
   upper_bound: 25
+  primary_source: mckay-radziszowski-1995
 - constant: ramsey-4-6
   lower_bound: 36
+  primary_source: exoo-2012
 - constant: ramsey-4-6
   upper_bound: 41
+  primary_source: mckay-radziszowski-1997
 - constant: ramsey-4-7
   lower_bound: 49
+  primary_source: exoo-1989a
 - constant: ramsey-4-7
   upper_bound: 61
+  primary_source: mackey-1994
 - constant: ramsey-4-8
   lower_bound: 59
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-4-8
   upper_bound: 84
+  primary_source: mackey-1994
 - constant: ramsey-4-9
   lower_bound: 73
+  primary_source: exoo-2005
 - constant: ramsey-4-9
   upper_bound: 115
+  primary_source: mackey-1994
 - constant: ramsey-4-10
   lower_bound: 92
+  primary_source: harborth-krause-2003
 - constant: ramsey-4-10
   upper_bound: 149
+  primary_source: mackey-1994
 - constant: ramsey-4-11
   lower_bound: 102
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-4-11
   upper_bound: 191
+  primary_source: spencer-1994
 - constant: ramsey-4-12
   lower_bound: 128
+  primary_source: su-luo-li-1998
 - constant: ramsey-4-12
   upper_bound: 238
+  primary_source: spencer-1994
 - constant: ramsey-4-13
   lower_bound: 138
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-4-13
   upper_bound: 291
+  primary_source: spencer-1994
 - constant: ramsey-4-14
   lower_bound: 147
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-4-14
   upper_bound: 349
+  primary_source: spencer-1994
 - constant: ramsey-4-15
   lower_bound: 158
+  primary_source: tatarevic-2020
 - constant: ramsey-4-15
   upper_bound: 417
+  primary_source: spencer-1994
 - constant: ramsey-5-5
   lower_bound: 43
+  primary_source: exoo-1989b
 - constant: ramsey-5-5
   upper_bound: 48
+  primary_source: angeltveit-mckay-2018
 - constant: ramsey-5-6
   lower_bound: 59
+  primary_source: exoo-2023
 - constant: ramsey-5-6
   upper_bound: 87
+  primary_source: huang-zhang-1993
 - constant: ramsey-5-7
   lower_bound: 80
+  primary_source: calkin-erdos-tovey-1997
 - constant: ramsey-5-7
   upper_bound: 143
+  primary_source: huang-zhang-1993
 - constant: ramsey-5-8
   lower_bound: 101
+  primary_source: harborth-krause-2003
 - constant: ramsey-5-8
   upper_bound: 216
+  primary_source: spencer-1994
 - constant: ramsey-5-9
   lower_bound: 133
+  primary_source: kuznetsov-2016
 - constant: ramsey-5-9
   upper_bound: 316
+  primary_source: mackey-1994
 - constant: ramsey-5-10
   lower_bound: 149
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-5-10
   upper_bound: 442
+  primary_source: mackey-1994
 - constant: ramsey-5-11
   lower_bound: 183
+  primary_source: kuznetsov-2016
 - constant: ramsey-5-11
   upper_bound: 633
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-5-12
   lower_bound: 203
+  primary_source: kuznetsov-2016
 - constant: ramsey-5-12
   upper_bound: 848
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-5-13
   lower_bound: 233
+  primary_source: kuznetsov-2016
 - constant: ramsey-5-13
   upper_bound: 1138
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-5-14
   lower_bound: 267
+  primary_source: kuznetsov-2016
 - constant: ramsey-5-14
   upper_bound: 1461
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-5-15
   lower_bound: 275
+  primary_source: trivial
 - constant: ramsey-5-15
   upper_bound: 1878
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-6-6
   lower_bound: 102
+  primary_source: kalbfleisch-1966
 - constant: ramsey-6-6
   upper_bound: 165
+  primary_source: mackey-1994
 - constant: ramsey-6-7
   lower_bound: 115
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-6-7
   upper_bound: 298
+  primary_source: huang-zhang-1993
 - constant: ramsey-6-8
   lower_bound: 134
+  primary_source: exoo-tatarevic-2015
 - constant: ramsey-6-8
   upper_bound: 495
+  primary_source: mackey-1994
 - constant: ramsey-6-9
   lower_bound: 183
+  primary_source: kuznetsov-2016
 - constant: ramsey-6-9
   upper_bound: 780
+  primary_source: mackey-1994
 - constant: ramsey-6-10
   lower_bound: 204
+  primary_source: kuznetsov-2016
 - constant: ramsey-6-10
   upper_bound: 1171
+  primary_source: mackey-1994
 - constant: ramsey-6-11
   lower_bound: 262
+  primary_source: tatarevic-2020
 - constant: ramsey-6-11
   upper_bound: 1804
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-6-12
   lower_bound: 294
+  primary_source: kuznetsov-2016
 - constant: ramsey-6-12
   upper_bound: 2566
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-6-13
   lower_bound: 347
+  primary_source: kuznetsov-2016
 - constant: ramsey-6-13
   upper_bound: 3703
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-6-14
   upper_bound: 5033
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-6-15
   lower_bound: 401
+  primary_source: trivial
 - constant: ramsey-6-15
   upper_bound: 6911
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-7-7
   lower_bound: 205
+  primary_source: mathon-1987
 - constant: ramsey-7-7
   upper_bound: 540
+  primary_source: mackey-1994
 - constant: ramsey-7-8
   lower_bound: 219
+  primary_source: tatarevic-2020
 - constant: ramsey-7-8
   upper_bound: 1031
+  primary_source: huang-zhang-1993
 - constant: ramsey-7-9
   lower_bound: 252
+  primary_source: kuznetsov-2016
 - constant: ramsey-7-9
   upper_bound: 1713
+  primary_source: huang-zhang-1998
 - constant: ramsey-7-10
   lower_bound: 292
+  primary_source: kuznetsov-2016
 - constant: ramsey-7-10
   upper_bound: 2826
+  primary_source: mackey-1994
 - constant: ramsey-7-11
   lower_bound: 405
+  primary_source: xu-xie-e-r-2004
 - constant: ramsey-7-11
   upper_bound: 4553
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-7-12
   lower_bound: 417
+  primary_source: xiaodong-s-r-2011
 - constant: ramsey-7-12
   upper_bound: 6954
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-7-13
   lower_bound: 511
+  primary_source: xu-xie-radziszowski-2004
 - constant: ramsey-7-13
   upper_bound: 10578
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-7-14
   upper_bound: 15263
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-7-15
   upper_bound: 22112
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-8-8
   lower_bound: 282
+  primary_source: burling-reyner-1972
 - constant: ramsey-8-8
   upper_bound: 1870
+  primary_source: mackey-1994
 - constant: ramsey-8-9
   lower_bound: 329
+  primary_source: kuznetsov-2016
 - constant: ramsey-8-9
   upper_bound: 3583
+  primary_source: trivial
 - constant: ramsey-8-10
   lower_bound: 343
+  primary_source: kuznetsov-2016
 - constant: ramsey-8-10
   upper_bound: 6090
+  primary_source: huang-zhang-1998
 - constant: ramsey-8-11
   lower_bound: 457
+  primary_source: trivial
 - constant: ramsey-8-11
   upper_bound: 10630
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-8-12
   upper_bound: 16944
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-8-13
   lower_bound: 817
+  primary_source: xu-xie-e-r-2004
 - constant: ramsey-8-13
   upper_bound: 27485
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-8-14
   upper_bound: 41525
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-8-15
   lower_bound: 873
+  primary_source: trivial
 - constant: ramsey-8-15
   upper_bound: 63609
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-9-9
   lower_bound: 565
+  primary_source: mathon-1987
 - constant: ramsey-9-9
   upper_bound: 6588
+  primary_source: shi-zhang-2001
 - constant: ramsey-9-10
   lower_bound: 581
+  primary_source: xiaodong-s-r-2011
 - constant: ramsey-9-10
   upper_bound: 12677
+  primary_source: trivial
 - constant: ramsey-9-11
   upper_bound: 22325
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-9-12
   upper_bound: 38832
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-9-13
   upper_bound: 64864
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-10-10
   lower_bound: 798
+  primary_source: mathon-1987
 - constant: ramsey-10-10
   upper_bound: 23556
+  primary_source: shi-2003
 - constant: ramsey-10-11
   upper_bound: 45881
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-10-12
   upper_bound: 81123
+  primary_source: huang-w-s-y-z-h-2007
 - constant: ramsey-10-15
   lower_bound: 1313
+  primary_source: trivial
 - constant: ramsey-4-6
   upper_bound: 40
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-7
   upper_bound: 58
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-8
   upper_bound: 79
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-9
   upper_bound: 105
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-10
   upper_bound: 135
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-11
   upper_bound: 170
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-12
   upper_bound: 210
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-13
   upper_bound: 256
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-14
   upper_bound: 307
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-4-15
   upper_bound: 364
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-5
   upper_bound: 46
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-6
   upper_bound: 85
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-7
   upper_bound: 133
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-8
   upper_bound: 193
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-9
   upper_bound: 282
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-10
   upper_bound: 381
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-11
   upper_bound: 511
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-12
   upper_bound: 672
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-13
   upper_bound: 860
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-14
   upper_bound: 1081
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-5-15
   upper_bound: 1341
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-6
   upper_bound: 160
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-7
   upper_bound: 270
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-8
   upper_bound: 423
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-9
   upper_bound: 651
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-10
   upper_bound: 944
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-11
   upper_bound: 1346
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-12
   upper_bound: 1855
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-13
   upper_bound: 2499
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-14
   upper_bound: 3301
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-6-15
   upper_bound: 4305
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-7
   upper_bound: 492
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-8
   upper_bound: 832
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-9
   upper_bound: 1368
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-10
   upper_bound: 2119
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-11
   upper_bound: 3197
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-12
   upper_bound: 4665
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-13
   upper_bound: 6653
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-14
   upper_bound: 9260
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-7-15
   upper_bound: 12635
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-8-8
   upper_bound: 1518
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-8-9
   upper_bound: 2662
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-8-10
   upper_bound: 4402
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-8-11
   upper_bound: 7040
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-8-12
   upper_bound: 10836
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-9-9
   upper_bound: 4956
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-9-10
   upper_bound: 8675
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-9-11
   upper_bound: 14631
+  primary_source: angeltveit-mckay-2019-2024
 - constant: ramsey-10-10
   upper_bound: 16064
+  primary_source: angeltveit-mckay-2019-2024

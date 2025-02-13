@@ -17,7 +17,7 @@ ramsey:
   - [8, [8, 15]]
   - [9, [9, 15]]
   - [10, [10, 15]]
-  research_status: "initial"
+  research_status: "sourced"
 
 square-packing:
   name: "Packing unit squares in a square"
