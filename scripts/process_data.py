@@ -9,16 +9,16 @@
 7. Save constant groups to _data/constant_groups.yml.
 """
 
-from collections import defaultdict
 import itertools
 import pathlib
 import yaml
+import csv
 
 def load_updates(updates_dir: str, sources: dict) -> list[dict]:
-    """Load updates from a directory of YAML files.
+    """Load updates from a directory of CSV files.
 
     Args:
-        updates_dir: Directory containing YAML files with updates.
+        updates_dir: Directory containing CSV files with updates.
         sources: Dictionary of sources.
 
     Returns:
@@ -26,28 +26,51 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
     """
     updates = []
     
-    # Get all .yml and .yaml files in updates directory
+    # Get all .csv files in updates directory
     updates_dir = pathlib.Path(updates_dir)
-    yaml_files = list(updates_dir.glob("*.yml")) + list(updates_dir.glob("*.yaml"))
+    csv_files = list(updates_dir.glob("*.csv"))
     
-    for yaml_file in yaml_files:
-        with open(yaml_file, "r") as file:
-            updates_by_source = yaml.safe_load(file)
-        if updates_by_source is None:
-            continue
-            
-        for source_id, source_updates in updates_by_source.items():
-            for update in source_updates:
-                if source_id != "none":
-                    update["secondary_source"] = source_id
-                if "primary_source" in update:
+    for csv_file in csv_files:
+        with open(csv_file, "r", newline='') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                update = {
+                    k: v if v != '' else None 
+                    for k, v in row.items()
+                }
+                
+                # Validate and convert bounds to type and value
+                has_lower = update.get('lower_bound') is not None
+                has_upper = update.get('upper_bound') is not None
+                
+                if has_lower == has_upper:
+                    raise ValueError(f"Update must have exactly one bound set, but has lower={has_lower}, upper={has_upper}")
+                
+                if has_lower:
+                    update['type'] = 'lower_bound'
+                    update['value'] = update['lower_bound']
+                else:
+                    update['type'] = 'upper_bound'
+                    update['value'] = update['upper_bound']
+                
+                del update['lower_bound']
+                del update['upper_bound']
+                
+                if update.get('primary_source'):
                     primary_source = sources[update["primary_source"]]
-                    if "date" in primary_source:
-                        update["date"] = primary_source["date"]
-                    else:
-                        update["date"] = None
+                    update["date"] = primary_source.get("date")
                 else:
                     update["date"] = None
+                    
+                field_order = [
+                    "constant",
+                    "type",
+                    "value",
+                    "date",
+                    "primary_source",
+                    "secondary_source"
+                ]
+                update = {k: update[k] for k in field_order}
                 updates.append(update)
                 
     # List non-dated updates first, as it seems more likely for more recent updates to have known dates
@@ -107,22 +130,23 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
         updates: List of updates in chronological order to process.
     """
     for constant in constants.values():
-        constant["updates"] = []
         constant["value"] = None
         constant["lower_bound"] = None
         constant["upper_bound"] = None
+        constant["updates"] = []
     for update in updates:
-        assert not ("lower_bound" in update and "upper_bound" in update), "Update cannot have both bounds"
-        assert "lower_bound" in update or "upper_bound" in update, "Update must have one bound"
-        bound_type = "lower_bound" if "lower_bound" in update else "upper_bound"
-        bound_value = update[bound_type]
-        assert bound_value is not None
         constant = constants[update["constant"]]
-        assert constant["value"] is None, "Constant already has an exact value"
+        if constant["value"] is not None:
+            print(f"Invalid update for constant with exact value: {update}")
+            raise AssertionError("Constant already has an exact value")
         update_copy = update.copy()
         del update_copy["constant"]
         constant["updates"].append(update_copy)
-        assert constant[bound_type] != bound_value, "Duplicate update"
+        bound_type = update["type"]
+        bound_value = update["value"]
+        if constant[bound_type] == bound_value:
+            print(f"Duplicate update: {update}")
+            raise AssertionError("Duplicate update")
         constant[bound_type] = bound_value
         if constant["lower_bound"] == constant["upper_bound"]:
             constant["value"] = constant["lower_bound"]
@@ -170,7 +194,7 @@ def calculate_group_stats(group_id: str, constants: dict) -> dict:
         stats["total_updates"] += len(const["updates"])
         stats["updates_with_sources"] += sum(
             1 for update in const["updates"] 
-            if "primary_source" in update
+            if update.get("primary_source") is not None
         )
     
     # Calculate percentages

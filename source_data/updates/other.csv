@@ -1,0 +1,12 @@
+constant,lower_bound,upper_bound,primary_source,secondary_source
+debruijn-newman,-50,,csordas-norfolk-varga-1987,wikipedia-debruijn-newman
+debruijn-newman,-5,,teriele-1990,wikipedia-debruijn-newman
+debruijn-newman,-0.0991,,csordas-ruttan-varga-1991,wikipedia-debruijn-newman
+debruijn-newman,-5.895 \times 10^{-9},,csordas-o-s-v-1993,wikipedia-debruijn-newman
+debruijn-newman,-2.7 \times 10^{-9},,odlyzko-2000,wikipedia-debruijn-newman
+debruijn-newman,-1.1 \times 10^{-11},,saouter-gourdon-demichel-2011,wikipedia-debruijn-newman
+debruijn-newman,\ge 0,,rodgers-tao-2018,wikipedia-debruijn-newman
+debruijn-newman,,\le 0.5,debruijn-1950,wikipedia-debruijn-newman
+debruijn-newman,,\lt 0.5,ki-kim-lee-2009,wikipedia-debruijn-newman
+debruijn-newman,,\le 0.22,polymath-2019,wikipedia-debruijn-newman
+debruijn-newman,,\le 0.2,platt-trudgian-2020,wikipedia-debruijn-newman

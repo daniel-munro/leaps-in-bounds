@@ -29,10 +29,10 @@ layout: default
       {% if update.date != null %}
         <strong>{{ update.date }}</strong>
       {% endif %}
-      {% if update.lower_bound != null %}
-        Lower bound: ${{ update.lower_bound }}$
+      {% if update.type == 'lower_bound' %}
+        Lower bound: ${{ update.value }}$
       {% else %}
-        Upper bound: ${{ update.upper_bound }}$
+        Upper bound: ${{ update.value }}$
       {% endif %}
       {% if update.primary_source %}
         {% assign primary = site.data.sources[update.primary_source] %}

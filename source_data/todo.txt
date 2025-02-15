@@ -1,0 +1,1 @@
+degree-diameter: check for older updates in source delorme85agraphs, which has a table of lower bounds as of 1983

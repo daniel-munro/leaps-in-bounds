@@ -15,7 +15,7 @@ with open("_data/sources.yml", "r") as file:
 with open("_data/updates.yml", "r") as file:
     updates = yaml.safe_load(file)
 
-# Convert constants to TSV
+# Convert constants to CSV and TSV
 constants_list = []
 for constant_id, constant_data in constants.items():
     constant_dict = {'id': constant_id}
@@ -24,9 +24,10 @@ for constant_id, constant_data in constants.items():
             constant_dict[k] = v
     constants_list.append(constant_dict)
 constants_df = pd.DataFrame(constants_list)
+constants_df.to_csv("data/constants.csv", index=False)
 constants_df.to_csv("data/constants.tsv", sep="\t", index=False)
 
-# Convert constant groups to TSV
+# Convert constant groups to CSV and TSV
 groups_list = []
 for group_id, group_data in groups.items():
     group_dict = {'id': group_id}
@@ -38,33 +39,20 @@ for group_id, group_data in groups.items():
             group_dict[k] = v
     groups_list.append(group_dict)
 groups_df = pd.DataFrame(groups_list)
+groups_df.to_csv("data/constant_groups.csv", index=False)
 groups_df.to_csv("data/constant_groups.tsv", sep="\t", index=False)
 
-# Convert sources to TSV
+# Convert sources to CSV and TSV
 sources_list = []
 for source_id, source_data in sources.items():
     source_dict = {'id': source_id}
     source_dict.update(source_data)
     sources_list.append(source_dict)
 sources_df = pd.DataFrame(sources_list)
+sources_df.to_csv("data/sources.csv", index=False)
 sources_df.to_csv("data/sources.tsv", sep="\t", index=False)
 
-# Convert updates to TSV
-updates_list = []
-for update in updates:
-    assert not ('lower_bound' in update and 'upper_bound' in update), \
-        f"Update for {update['constant']} has both bounds"
-
-    update_dict = {
-        'constant': update['constant'],
-        'type': 'lower_bound' if 'lower_bound' in update else 'upper_bound',
-        'value': update['lower_bound'] if 'lower_bound' in update else update['upper_bound'],
-        'date': update.get('date'),
-        'primary_source': update.get('primary_source'),
-        'secondary_source': update.get('secondary_source')
-    }
-        
-    updates_list.append(update_dict)
-    
-updates_df = pd.DataFrame(updates_list)
+# Convert updates to CSV and TSV
+updates_df = pd.DataFrame(updates)
+updates_df.to_csv("data/updates.csv", index=False)
 updates_df.to_csv("data/updates.tsv", sep="\t", index=False)
