@@ -44,7 +44,7 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
                 has_upper = update.get('upper_bound') is not None
                 
                 if has_lower == has_upper:
-                    raise ValueError(f"Update must have exactly one bound set, but has lower={has_lower}, upper={has_upper}")
+                    raise ValueError(f"Update must have exactly one bound set: {update}")
                 
                 if has_lower:
                     update['type'] = 'lower_bound'

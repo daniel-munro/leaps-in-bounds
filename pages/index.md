@@ -3,8 +3,9 @@ layout: default
 permalink: /
 ---
 
-<div class="hero text-center py-5">
-  <h1 class="display-4 fw-bold">[Leaps in Bounds]</h1>
+<div class="hero text-center pt-3 pb-5">
+  <img src="/assets/images/logo.png" alt="Leaps in Bounds Logo" class="img-fluid mb-4" style="max-width: 200px;">
+  <h1 class="display-4 fw-bold">Leaps in Bounds</h1>
   <p class="lead mt-3">Repository of progress on mathematical unknowns</p>
 </div>
 

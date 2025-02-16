@@ -76,6 +76,19 @@ degree-diameter:
   parameter_values: [[[3, 20], [2, 10]]]
   research_status: "initial"
 
+cage:
+  name: "Cages"
+  description: "$n(k,g)$ is the order of a $(k,g)$-cage, a $k$-regular graph of girth $g$ of minimum order."
+  display_type: grid
+  display_rows: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  id_template: "cage-{k}-{g}"
+  name_template: "Cage order $n({k},{g})$"
+  description_template: "The order of a $({k},{g})$-cage, a ${k}$-regular graph of girth ${g}$ of minimum order."
+  parameters: [k, g]
+  parameter_values: [[[3, 20], [3, 16]]]
+  research_status: "initial"
+
 debruijn-newman:
   name: "de Bruijn-Newman constant"
   description: "The de Bruijn-Newman constant $\\Lambda$ is defined via the zeros of a certain function $H(\\lambda,z)$, where $\\lambda$ is a real parameter and $z$ is a complex variable.  More precisely, $H(\\lambda, z):=\\int_{0}^{\\infty} e^{\\lambda u^{2}} \\Phi(u) \\cos (z u) \\, du$, where $\\Phi$ is the super-exponentially decaying function $\\Phi(u) = \\sum_{n=1}^{\\infty} (2\\pi^2n^4e^{9u}-3\\pi n^2 e^{5u} ) e^{-\\pi n^2 e^{4u}}$ and $\\Lambda$ is the unique real number with the property that $H$ has only real zeros if and only if $\\lambda\\geq \\Lambda$."
