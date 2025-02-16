@@ -35,6 +35,9 @@ for group_id, group_data in groups.items():
         if k == 'stats':
             for stat_k, stat_v in v.items():
                 group_dict[f'stats_{stat_k}'] = stat_v
+        elif k == 'external_ids':
+            for id_k, id_v in v.items():
+                group_dict[f'id_{id_k}'] = id_v
         else:
             group_dict[k] = v
     groups_list.append(group_dict)

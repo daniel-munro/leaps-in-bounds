@@ -1,6 +1,13 @@
 ramsey:
   name: "Ramsey numbers"
   description: "Ramsey number $R(r,s)$ is the smallest number $n$ such that any two-coloring of the edges of the complete graph $K_n$ must contain either a monochromatic $K_r$ in the first color or a monochromatic $K_s$ in the second color."
+  external_ids:
+    mathworld: RamseyNumber
+    metamath: df-ram
+    msc: 05D10
+    planetmath: RamseyNumbers
+    wikidata: Q16424100
+    wikipedia_en: Ramsey_number
   display_type: grid
   display_rows: [3, 4, 5, 6, 7, 8, 9, 10]
   display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
@@ -17,55 +24,75 @@ ramsey:
   - [8, [8, 15]]
   - [9, [9, 15]]
   - [10, [10, 15]]
-  research_status: "sourced"
+  research_status: sourced
 
 square-packing:
   name: "Packing unit squares in a square"
   description: "$s(n)$ is the side of the smallest square into which $n$ unit squares can be packed."
+  external_ids:
+    mathworld: SquarePacking
+    wikidata: Q7582076
+    wikipedia_en: Square_packing
   display_type: sequence
   id_template: "square-packing-in-square-{n}"
   name_template: "Packing unit squares in a square $s({n})$"
   description_template: "The side of the smallest square into which ${n}$ unit squares can be packed."
   parameters: [n]
   parameter_values: [[[1, 100]]]
-  research_status: "initial"
+  research_status: initial
 
 busy-beaver-shift:
   name: "Busy Beaver shift function"
   description: "The Busy Beaver shift function $BB(n)$ ($S(n)$) is the maximal number of steps that an n-state Turing machine can make on an initially blank tape before eventually halting."
+  external_ids:
+    mathworld: BusyBeaver
+    wikidata: Q1427965
+    wikipedia_en: Busy_beaver
   display_type: sequence
   id_template: "busy-beaver-shift-{n}"
   name_template: "Busy Beaver number $BB({n})$"
   description_template: "The maximal number of steps that a ${n}$-state Turing machine can make on an initially blank tape before eventually halting."
   parameters: [n]
   parameter_values: [[[1, 7]]]
-  research_status: "initial"
+  research_status: initial
 
 busy-beaver-ones:
   name: "Busy Beaver ones function"
   description: "The Busy Beaver ones function $\\Sigma(n)$ (Rado's sigma function) is the maximal number of 1s that an n-state Turing machine can print on an initially blank tape before eventually halting."
+  external_ids:
+    mathworld: BusyBeaver
+    wikidata: Q1427965
+    wikipedia_en: Busy_beaver
   display_type: sequence
   id_template: "busy-beaver-ones-{n}"
   name_template: "Busy Beaver ones function value $\\Sigma({n})$"
   description_template: "The maximal number of 1s that a ${n}$-state Turing machine can print on an initially blank tape before eventually halting."
   parameters: [n]
   parameter_values: [[[1, 7]]]
-  research_status: "initial"
+  research_status: initial
 
 kissing-number:
-  name: "Kissing number"
+  name: "Kissing numbers"
   description: "The kissing number of $\\mathbb{R}^n$ is the maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{R}^n$."
+  external_ids:
+    mathworld: KissingNumber
+    wikidata: Q1371530
+    wikipedia_en: Kissing_number
   display_type: sequence
   id_template: "kissing-number-{n}"
   name_template: "Kissing number for $\\mathbb{{R}}^{{{n}}}$"
   description_template: "The maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{{R}}^{{{n}}}$."
   parameters: [n]
   parameter_values: [[[1, 24]]]
-  research_status: "initial"
+  research_status: initial
 
 degree-diameter:
   name: "Degree-diameter problem"
   description: "$N(d,k)$ is the largest possible number of vertices in a graph of maximum degree $d$ and diameter $k$."
+  external_ids:
+    mathworld: Degree-DiameterProblem
+    wikidata: Q5251835
+    wikipedia_en: Degree_diameter_problem
   display_type: grid
   display_rows: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   display_columns: [2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -74,11 +101,14 @@ degree-diameter:
   description_template: "The largest possible number of vertices in a graph of maximum degree ${d}$ and diameter ${k}$."
   parameters: [d, k]
   parameter_values: [[[3, 20], [2, 10]]]
-  research_status: "initial"
+  research_status: initial
 
 cage:
   name: "Cages"
   description: "$n(k,g)$ is the order of a $(k,g)$-cage, a $k$-regular graph of girth $g$ of minimum order."
+  external_ids:
+    mathworld: CageGraph
+    wikipedia_en: Cage_(graph_theory)
   display_type: grid
   display_rows: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
@@ -87,18 +117,26 @@ cage:
   description_template: "The order of a $({k},{g})$-cage, a ${k}$-regular graph of girth ${g}$ of minimum order."
   parameters: [k, g]
   parameter_values: [[[3, 20], [3, 16]]]
-  research_status: "initial"
+  research_status: initial
 
 debruijn-newman:
   name: "de Bruijn-Newman constant"
   description: "The de Bruijn-Newman constant $\\Lambda$ is defined via the zeros of a certain function $H(\\lambda,z)$, where $\\lambda$ is a real parameter and $z$ is a complex variable.  More precisely, $H(\\lambda, z):=\\int_{0}^{\\infty} e^{\\lambda u^{2}} \\Phi(u) \\cos (z u) \\, du$, where $\\Phi$ is the super-exponentially decaying function $\\Phi(u) = \\sum_{n=1}^{\\infty} (2\\pi^2n^4e^{9u}-3\\pi n^2 e^{5u} ) e^{-\\pi n^2 e^{4u}}$ and $\\Lambda$ is the unique real number with the property that $H$ has only real zeros if and only if $\\lambda\\geq \\Lambda$."
+  external_ids:
+    mathworld: deBruijn-NewmanConstant
+    wikidata: Q2248459
+    wikipedia_en: De_Bruijn–Newman_constant
   display_type: single
   parameters: []
-  research_status: "sourced"
+  research_status: sourced
 
 van-der-waerden:
   name: "Van der Waerden numbers"
   description: "$W(r,k)$ is the smallest number $n$ such that if the integers $1$ to $n$ are colored with $r$ colors, there must be a monochromatic arithmetic progression of length $k$."
+  external_ids:
+    mathworld: vanderWaerdenNumber
+    wikidata: Q7913892
+    wikipedia_en: Van_der_Waerden_number
   display_type: grid
   display_rows: [2, 3, 4, 5, 6]
   display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -107,4 +145,4 @@ van-der-waerden:
   description_template: "The smallest number $n$ such that if the integers $1$ to $n$ are colored with ${r}$ colors, there must be a monochromatic arithmetic progression of length ${k}$."
   parameters: [r, k]
   parameter_values: [[[2, 6], [3, 11]]]
-  research_status: "initial"
+  research_status: initial
