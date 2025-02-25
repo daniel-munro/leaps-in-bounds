@@ -11,7 +11,7 @@ def generate_grid_html(group: dict, constants: dict) -> str:
     
     html = [
         '<div class="table-responsive">',
-        '  <table class="table table-bordered border-secondary-subtle align-middle constant-grid">',
+        '  <table class="table table-bordered border-secondary-subtle align-middle constant-grid w-auto">',
         '    <thead>',
         f'      <tr><th scope="col">{param1}\\{param2}</th>'
     ]

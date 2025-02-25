@@ -31,6 +31,7 @@ permalink: /constants/
     {% if group[1].external_ids.metamath %}<a class="btn btn-outline-secondary btn-sm" href="http://us.metamath.org/mpeuni/{{ group[1].external_ids.metamath }}.html">Metamath</a>{% endif %}
     {% if group[1].external_ids.msc %}<a class="btn btn-outline-secondary btn-sm" href="https://mathscinet.ams.org/msc/msc2020.html?t={{ group[1].external_ids.msc }}">MSC2020</a>{% endif %}
     {% if group[1].external_ids.planetmath %}<a class="btn btn-outline-secondary btn-sm" href="https://planetmath.org/{{ group[1].external_ids.planetmath }}">PlanetMath</a>{% endif %}
+    {% if group[1].external_ids.oeis %}<a class="btn btn-outline-secondary btn-sm" href="https://oeis.org/{{ group[1].external_ids.oeis }}">OEIS</a>{% endif %}
   </p>
 {% endif %}
 

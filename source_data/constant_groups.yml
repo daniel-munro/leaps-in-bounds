@@ -48,6 +48,7 @@ busy-beaver-shift:
     mathworld: BusyBeaver
     wikidata: Q1427965
     wikipedia_en: Busy_beaver
+    oeis: A060843
   display_type: sequence
   id_template: "busy-beaver-shift-{n}"
   name_template: "Busy Beaver number $BB({n})$"
@@ -63,6 +64,7 @@ busy-beaver-ones:
     mathworld: BusyBeaver
     wikidata: Q1427965
     wikipedia_en: Busy_beaver
+    oeis: A028444
   display_type: sequence
   id_template: "busy-beaver-ones-{n}"
   name_template: "Busy Beaver ones function value $\\Sigma({n})$"
@@ -145,4 +147,71 @@ van-der-waerden:
   description_template: "The smallest number $n$ such that if the integers $1$ to $n$ are colored with ${r}$ colors, there must be a monochromatic arithmetic progression of length ${k}$."
   parameters: [r, k]
   parameter_values: [[[2, 6], [3, 11]]]
+  research_status: initial
+
+stamp-folding:
+  name: "Stamp folding"
+  description: "The number of distinct ways to fold a strip of $n$ labeled stamps."
+  external_ids:
+    mathworld: StampFolding
+    wikidata: Q6753749
+    wikipedia_en: Map_folding
+    oeis: A000136
+  display_type: sequence
+  id_template: "stamp-folding-{n}"
+  name_template: "Stamp folding $s({n})$"
+  description_template: "The number of distinct ways to fold a strip of ${n}$ labeled stamps."
+  parameters: [n]
+  parameter_values: [[[1, 29]]]
+  research_status: initial
+
+map-folding:
+  name: "Map folding"
+  description: "The number of distinct ways to fold an $m \\times n$ rectangle into a unit square."
+  external_ids:
+    mathworld: MapFolding
+    wikidata: Q6753749
+    wikipedia_en: Map_folding
+    oeis: A001418
+  display_type: grid
+  display_rows: [2, 3, 4, 5, 6, 7]
+  display_columns: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  id_template: "map-folding-{m}-{n}"
+  name_template: "Map folding (${m} \\times {n})$"
+  description_template: "The number of distinct ways to fold a ${m} \\times {n}$ rectangle into a unit square."
+  parameters: [m, n]
+  parameter_values:
+  - [2, [2, 18]]
+  - [3, [3, 18]]
+  - [4, [4, 18]]
+  - [5, [5, 18]]
+  - [6, [6, 18]]
+  - [7, [7, 18]]
+  research_status: initial
+
+disk-covering:
+  name: "Disk covering problem"
+  description: "The smallest value $r(n)$ such that $n$ disks of radius $r(n)$ can be arranged to cover the unit disk."
+  external_ids:
+    mathworld: DiskCoveringProblem
+    wikipedia_en: Disk_covering_problem
+  display_type: sequence
+  id_template: "disk-covering-{n}"
+  name_template: "Disk covering problem $r({n})$"
+  description_template: "The smallest value $r({n})$ such that ${n}$ disks of radius $r({n})$ can be arranged to cover the unit disk."
+  parameters: [n]
+  parameter_values: [[[1, 25]]]
+  research_status: initial
+
+circle-in-equilateral:
+  name: "Circle packing in an equilateral triangle"
+  description: "The side length of the smallest equilateral triangle into which $n$ unit circles can be packed."
+  external_ids:
+    wikipedia_en: Circle_packing_in_an_equilateral_triangle
+  display_type: sequence
+  id_template: "circle-in-equilateral-{n}"
+  name_template: "Packing ${n}$ unit circles in an equilateral triangle"
+  description_template: "The side length of the smallest equilateral triangle into which ${n}$ unit circles can be packed."
+  parameters: [n]
+  parameter_values: [[[1, 15]]]
   research_status: initial

@@ -62,6 +62,36 @@ wikipedia-cage:
   date: "2025-01-14"
   url: "https://en.wikipedia.org/wiki/Cage_(graph_theory)"
 
+friedman-circles-in-triangles:
+  string: "Circles in Triangles, Erich Friedman"
+  date: "2002-07-19"
+  url: "https://erich-friedman.github.io/packing/cirintri/"
+
+friedman-circles-covering-circles:
+  string: "Circles Covering Circles, Erich Friedman"
+  date: "2019-08-16"
+  url: "https://erich-friedman.github.io/packing/circovcir/"
+
+wikipedia-disk-covering:
+  string: "Disk covering problem - Wikipedia"
+  date: "2025-01-21"
+  url: "https://en.wikipedia.org/wiki/Disk_covering_problem"
+
+oeis-a000136-stamp-folding:
+  string: "Number of ways of folding a strip of n labeled stamps. - OEIS"
+  date: "2025-02-16"
+  url: "https://oeis.org/A000136"
+
+oeis-a001418-map-folding-n-n:
+  string: "Number of ways of folding an n X n sheet of stamps. - OEIS"
+  date: "2025-02-16"
+  url: "https://oeis.org/A001418"
+
+oeis-a001415-map-folding-2-n:
+  string: "Number of ways of folding a 2 X n strip of stamps. - OEIS"
+  date: "2025-02-16"
+  url: "https://oeis.org/A001415"
+
 ###################
 # Primary sources #
 ###################
@@ -594,3 +624,62 @@ exoo-circa-2012:
   string: "G. Exoo, Regular graphs of given degree and girth."
   date: "2012"
   url: "https://web.archive.org/web/20120316225548/http://ginger.indstate.edu/ge/CAGES/"
+
+# Disk covering problem
+
+bezdek-1983:
+  string: "Károly Bezdek in 1983"
+  date: "1983"
+
+bezdek-1979:
+  string: "Károly Bezdek in 1979"
+  date: "1979"
+
+toth-1996:
+  string: "Gábor Fejes Tóth in 1996"
+  date: "1996"
+
+toth-2005:
+  string: "Gábor Fejes Tóth in 2005"
+  date: "2005"
+
+melissen-1997:
+  string: "Hans Melissen in 1997"
+  date: "1997"
+
+tan-2018:
+  string: "Jeremy Tan in 2018"
+  date: "2018"
+
+# Circle in equilateral triangle
+
+milano-1987:
+  string: "Milano in 1987"
+  date: "1987"
+
+oler-groemer-1961:
+  string: "Oler and Groemer in 1961"
+  date: "1961"
+
+melissen-1993:
+  string: "Melissen, H. (1993). Densest packings of congruent circles in an equilateral triangle. The American Mathematical Monthly, 100(10), 916-925."
+  date: "1993-12"
+  doi: "https://doi.org/10.2307/2324212"
+
+melissen-1994a:
+  string: "Melissen, J. B. M. (1994). Optimal packings of eleven equal circles in an equilateral triangle. Acta Mathematica Hungarica, 65(4), 389-393."
+  date: "1994-12-01"
+  doi: "https://doi.org/10.1007/bf01876040"
+
+melissen-1994b:
+  string: "Melissen in 1994"
+  date: "1994"
+
+erdos-oler-1961:
+  string: "Erdős and Oler in 1961"
+  date: "1961"
+
+erdos-groemer-1961:
+  string: "Erdős and Groemer in 1961"
+  date: "1961"
+
