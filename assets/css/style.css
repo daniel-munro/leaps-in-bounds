@@ -32,8 +32,9 @@ h1 {
 }
 
 .constant-cell {
-    padding: 1rem !important;
+    padding: 0.3rem 1rem !important;
     height: 60px;  /* Ensure consistent height */
+    font-size: 0.85em;
 }
 
 .constant-cell:hover {
@@ -41,11 +42,11 @@ h1 {
 }
 
 .cell-link {
-    display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: inherit;
+    height: 100%;
 }
 
 .constant-sequence {
@@ -87,17 +88,18 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.2em;
 }
 
-.constant-box-values br {
-    display: none;
+/* Add styling for KaTeX spans to ensure they stack vertically */
+.cell-link .katex {
+    display: inline-block;
+    margin: 0.5em 0;
 }
 
 .constant-groups-overview {
     margin: 2rem 0;
 }
-  
+
 .constant-groups-overview .badge {
     font-size: 0.9em;
     padding: 0.4em 0.6em;

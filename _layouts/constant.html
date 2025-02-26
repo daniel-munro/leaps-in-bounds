@@ -9,13 +9,34 @@ layout: default
 <p>{{ constant.description }}</p>
 
 <div class="mt-4">
-  {% if constant.value != null %}
-    <p><strong>Value:</strong> ${{ constant.value }}$</p>
+  {% if constant.exact_value != null %}
+    <p>
+      <strong>Value:</strong> ${{ constant.exact_value.latex }}$
+      {% if constant.exact_value.alt_display != null %}
+        ({{ constant.exact_value.alt_display }})
+      {% endif %}
+    </p>
   {% else %}
     <p>
-      <strong>Lower bound:</strong> {% if constant.lower_bound != null %}${{ constant.lower_bound }}${% else %}Unknown{% endif %}
+      <strong>Lower bound:</strong> 
+      {% if constant.lower_bound != null %}
+        ${{ constant.lower_bound.latex }}$
+        {% if constant.lower_bound.alt_display != null %}
+          ({{ constant.lower_bound.alt_display }})
+        {% endif %}
+      {% else %}
+        Unknown
+      {% endif %}
       <br>
-      <strong>Upper bound:</strong> {% if constant.upper_bound != null %}${{ constant.upper_bound }}${% else %}Unknown{% endif %}
+      <strong>Upper bound:</strong> 
+      {% if constant.upper_bound != null %}
+        ${{ constant.upper_bound.latex }}$
+        {% if constant.upper_bound.alt_display != null %}
+          ({{ constant.upper_bound.alt_display }})
+        {% endif %}
+      {% else %}
+        Unknown
+      {% endif %}
     </p>
   {% endif %}
 </div>
@@ -30,9 +51,15 @@ layout: default
         <strong>{{ update.date }}</strong>
       {% endif %}
       {% if update.type == 'lower_bound' %}
-        Lower bound: ${{ update.value }}$
+        Lower bound: ${{ update.value.latex }}$
+        {% if update.value.alt_display != null %}
+          ({{ update.value.alt_display }})
+        {% endif %}
       {% else %}
-        Upper bound: ${{ update.value }}$
+        Upper bound: ${{ update.value.latex }}$
+        {% if update.value.alt_display != null %}
+          ({{ update.value.alt_display }})
+        {% endif %}
       {% endif %}
       {% if update.primary_source %}
         {% assign primary = site.data.sources[update.primary_source] %}

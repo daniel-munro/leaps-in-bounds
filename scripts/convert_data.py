@@ -3,6 +3,15 @@
 import pandas as pd
 import yaml
 
+def flatten_value_dict(data_dict, field_name):
+    """Flatten a value dictionary into separate fields for CSV export."""
+    for subfield in ['latex', 'decimal_approx', 'alt_display']:
+        if data_dict[field_name] is not None and subfield in data_dict[field_name]:
+            data_dict[f"{field_name}_{subfield}"] = data_dict[field_name][subfield]
+        else:
+            data_dict[f"{field_name}_{subfield}"] = None
+    del data_dict[field_name]
+
 with open("_data/constants.yml", "r") as file:
     constants = yaml.safe_load(file)
 
@@ -22,7 +31,14 @@ for constant_id, constant_data in constants.items():
     for k, v in constant_data.items():
         if k not in ['updates', 'description']:
             constant_dict[k] = v
+    
+    # Flatten nested value dictionaries
+    flatten_value_dict(constant_dict, 'exact_value')
+    flatten_value_dict(constant_dict, 'lower_bound')
+    flatten_value_dict(constant_dict, 'upper_bound')
+            
     constants_list.append(constant_dict)
+
 constants_df = pd.DataFrame(constants_list)
 constants_df.to_csv("data/constants.csv", index=False)
 constants_df.to_csv("data/constants.tsv", sep="\t", index=False)
@@ -56,6 +72,12 @@ sources_df.to_csv("data/sources.csv", index=False)
 sources_df.to_csv("data/sources.tsv", sep="\t", index=False)
 
 # Convert updates to CSV and TSV
-updates_df = pd.DataFrame(updates)
+updates_list = []
+for update in updates:
+    update_dict = update.copy()
+    flatten_value_dict(update_dict, 'value')
+    updates_list.append(update_dict)
+    
+updates_df = pd.DataFrame(updates_list)
 updates_df.to_csv("data/updates.csv", index=False)
 updates_df.to_csv("data/updates.tsv", sep="\t", index=False)

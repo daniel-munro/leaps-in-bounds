@@ -26,7 +26,7 @@ square-packing-in-square-24,,5,,ejc-ds7-packing-unit-squares
 square-packing-in-square-25,,5,,ejc-ds7-packing-unit-squares
 square-packing-in-square-26,,\frac{7}{2}+\frac{3\sqrt{2}}{2},,ejc-ds7-packing-unit-squares
 square-packing-in-square-27,,5+\frac{1}{\sqrt{2}},gobel-1979,ejc-ds7-packing-unit-squares
-square-packing-in-square-28,,2+2\sqrt{2},,ejc-ds7-packing-unit-squares
+square-packing-in-square-28,,3+2\sqrt{2},,ejc-ds7-packing-unit-squares
 square-packing-in-square-29,,{\approx}5.9344,,ejc-ds7-packing-unit-squares
 square-packing-in-square-30,,6,,ejc-ds7-packing-unit-squares
 square-packing-in-square-31,,6,,ejc-ds7-packing-unit-squares
@@ -38,7 +38,7 @@ square-packing-in-square-36,,6,,ejc-ds7-packing-unit-squares
 square-packing-in-square-37,,{\approx}6.5987,,ejc-ds7-packing-unit-squares
 square-packing-in-square-38,,6+\frac{1}{\sqrt{2}},gobel-1979,ejc-ds7-packing-unit-squares
 square-packing-in-square-39,,{\approx}6.8189,,ejc-ds7-packing-unit-squares
-square-packing-in-square-40,,4+\frac{2}{\sqrt{2}},,ejc-ds7-packing-unit-squares
+square-packing-in-square-40,,4+2\sqrt{2},,ejc-ds7-packing-unit-squares
 square-packing-in-square-41,,{\approx}6.9473,,ejc-ds7-packing-unit-squares
 square-packing-in-square-42,,7,,ejc-ds7-packing-unit-squares
 square-packing-in-square-43,,7,,ejc-ds7-packing-unit-squares
@@ -155,10 +155,10 @@ square-packing-in-square-68,2\sqrt{2}+\frac{71}{13},,,ejc-ds7-packing-unit-squar
 square-packing-in-square-79,9,,,ejc-ds7-packing-unit-squares
 square-packing-in-square-80,9,,,ejc-ds7-packing-unit-squares
 square-packing-in-square-81,9,,,ejc-ds7-packing-unit-squares
-square-packing-in-square-82,2\sqrt{2}+\frac{288+12\sqrt{3}}{41},,,ejc-ds7-packing-unit-squares
-square-packing-in-square-83,2\sqrt{2}+\frac{288+12\sqrt{3}}{41},,,ejc-ds7-packing-unit-squares
-square-packing-in-square-84,2\sqrt{2}+\frac{288+12\sqrt{3}}{41},,,ejc-ds7-packing-unit-squares
-square-packing-in-square-85,2\sqrt{2}+\frac{288+12\sqrt{3}}{41},,,ejc-ds7-packing-unit-squares
+square-packing-in-square-82,{\approx}9.2667,,,ejc-ds7-packing-unit-squares
+square-packing-in-square-83,{\approx}9.2667,,,ejc-ds7-packing-unit-squares
+square-packing-in-square-84,{\approx}9.2667,,,ejc-ds7-packing-unit-squares
+square-packing-in-square-85,{\approx}9.2667,,,ejc-ds7-packing-unit-squares
 square-packing-in-square-98,10,,,ejc-ds7-packing-unit-squares
 square-packing-in-square-99,10,,,ejc-ds7-packing-unit-squares
 square-packing-in-square-100,10,,,ejc-ds7-packing-unit-squares

@@ -13,6 +13,13 @@ import itertools
 import pathlib
 import yaml
 import csv
+from value_utils import Value, QuotedString
+
+def quoted_string_representer(dumper, data):
+    return dumper.represent_scalar('tag:yaml.org,2002:str', data, style="'")
+
+# Register the representer
+yaml.add_representer(QuotedString, quoted_string_representer)
 
 def load_updates(updates_dir: str, sources: dict) -> list[dict]:
     """Load updates from a directory of CSV files.
@@ -48,10 +55,10 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
                 
                 if has_lower:
                     update['type'] = 'lower_bound'
-                    update['value'] = update['lower_bound']
+                    update['value'] = Value(update['lower_bound'])
                 else:
                     update['type'] = 'upper_bound'
-                    update['value'] = update['upper_bound']
+                    update['value'] = Value(update['upper_bound'])
                 
                 del update['lower_bound']
                 del update['upper_bound']
@@ -70,7 +77,7 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
                     "primary_source",
                     "secondary_source"
                 ]
-                update = {k: update[k] for k in field_order}
+                update = {k: update.get(k) for k in field_order}
                 updates.append(update)
                 
     # List non-dated updates first, as it seems more likely for more recent updates to have known dates
@@ -130,26 +137,48 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
         updates: List of updates in chronological order to process.
     """
     for constant in constants.values():
-        constant["value"] = None
+        constant["exact_value"] = None
         constant["lower_bound"] = None
         constant["upper_bound"] = None
         constant["updates"] = []
+        
     for update in updates:
         constant = constants[update["constant"]]
-        if constant["value"] is not None:
+        if constant["exact_value"] is not None:
             print(f"Invalid update for constant with exact value: {update}")
             raise AssertionError("Constant already has an exact value")
+            
         update_copy = update.copy()
         del update_copy["constant"]
+        update_copy["value"] = update_copy["value"].to_dict()
         constant["updates"].append(update_copy)
+        
         bound_type = update["type"]
         bound_value = update["value"]
-        if constant[bound_type] == bound_value:
-            print(f"Duplicate update: {update}")
-            raise AssertionError("Duplicate update")
-        constant[bound_type] = bound_value
-        if constant["lower_bound"] == constant["upper_bound"]:
-            constant["value"] = constant["lower_bound"]
+        
+        # Create or update the bound and check if it's an improvement
+        # Allow equal decimal approximations in case improvement is beyond the precision limit
+        # (or an update like <=0.5 -> <0.5)
+        if bound_type == "lower_bound":
+            if constant["lower_bound"] is not None:
+                if bound_value.less_than(constant["lower_bound"]):
+                    raise AssertionError(f"Lower bound is not an improvement")
+            constant["lower_bound"] = bound_value
+        else:  # upper_bound
+            if constant["upper_bound"] is not None:
+                if constant["upper_bound"].less_than(bound_value):
+                    raise AssertionError(f"Upper bound is not an improvement")
+            constant["upper_bound"] = bound_value
+        
+        # Check if bounds are now equal, indicating an exact value
+        if (constant["lower_bound"] and constant["upper_bound"] and 
+            constant["lower_bound"].latex == constant["upper_bound"].latex):
+            constant["exact_value"] = constant["lower_bound"]
+            
+        # Check if bounds are inconsistent
+        if (constant["lower_bound"] and constant["upper_bound"] and 
+            constant["upper_bound"].less_than(constant["lower_bound"])):
+            raise AssertionError(f"Lower bound exceeds upper bound")
 
 def calculate_group_stats(group_id: str, constants: dict) -> dict:
     """Calculate statistics for a constant group.
@@ -181,7 +210,7 @@ def calculate_group_stats(group_id: str, constants: dict) -> dict:
     
     # Analyze constant values
     for const in group_constants.values():
-        if const["value"] is not None:
+        if const["exact_value"] is not None:
             stats["exact_values"] += 1
         elif const["lower_bound"] is not None and const["upper_bound"] is not None:
             stats["bounded"] += 1
@@ -228,13 +257,23 @@ with open("_data/sources.yml", "r") as file:
 
 updates = load_updates("source_data/updates", sources)
 
-# Save combined updates for download
-with open("_data/updates.yml", "w") as file:
-    yaml.dump(updates, file, sort_keys=False)
-
 constants = get_constants(groups)
 assign_updates_and_values(constants, updates)
 
+# Save combined updates for download
+for update in updates:
+    update["value"] = update["value"].to_dict()
+with open("_data/updates.yml", "w") as file:
+    yaml.dump(updates, file, sort_keys=False)
+
+# Save constants for download
+for constant in constants.values():
+    if constant["exact_value"] is not None:
+        constant["exact_value"] = constant["exact_value"].to_dict()
+    if constant["lower_bound"] is not None:
+        constant["lower_bound"] = constant["lower_bound"].to_dict()
+    if constant["upper_bound"] is not None:
+        constant["upper_bound"] = constant["upper_bound"].to_dict()
 with open("_data/constants.yml", "w") as file:
     yaml.dump(constants, file, sort_keys=False)
 
