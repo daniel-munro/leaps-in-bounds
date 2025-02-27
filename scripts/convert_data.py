@@ -1,5 +1,6 @@
 """Convert YAML data to other formats for download."""
 
+import json
 import pandas as pd
 import yaml
 
@@ -23,6 +24,19 @@ with open("_data/sources.yml", "r") as file:
 
 with open("_data/updates.yml", "r") as file:
     updates = yaml.safe_load(file)
+
+# Export original nested data structures to JSON
+with open("data/constants.json", "w") as f:
+    json.dump(constants, f, indent=2)
+
+with open("data/constant_groups.json", "w") as f:
+    json.dump(groups, f, indent=2)
+
+with open("data/sources.json", "w") as f:
+    json.dump(sources, f, indent=2)
+
+with open("data/updates.json", "w") as f:
+    json.dump(updates, f, indent=2)
 
 # Convert constants to CSV and TSV
 constants_list = []
