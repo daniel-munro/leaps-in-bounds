@@ -2,24 +2,24 @@
 
 1. Generate list of constants from constant groups.
 2. Use sources to assign dates to updates.
-3. Save all updates to _data/updates.yml.
-4. Find most recent updates for each constant's bounds or exact value.
-5. Save constants to _data/constants.yml.
-6. Add statistics to each constant group.
-7. Save constant groups to _data/constant_groups.yml.
+3. Find most recent updates for each constant's bounds or exact value.
+4. Process images for constants.
+5. Add statistics to each constant group.
 """
 
 import itertools
 import pathlib
 import yaml
 import csv
-from value_utils import Value, QuotedString
+from utils import Value, QuotedString, process_constant_images
+
 
 def quoted_string_representer(dumper, data):
     return dumper.represent_scalar('tag:yaml.org,2002:str', data, style="'")
 
 # Register the representer
 yaml.add_representer(QuotedString, quoted_string_representer)
+
 
 def load_updates(updates_dir: str, sources: dict) -> list[dict]:
     """Load updates from a directory of CSV files.
@@ -85,6 +85,7 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
     updates.sort(key=lambda x: (x["date"] is not None, x["date"]))
     return updates
 
+
 def get_constants(groups: dict) -> dict:
     """Generate constants from constant groups.
 
@@ -128,6 +129,7 @@ def get_constants(groups: dict) -> dict:
             constant["description"] = group["description_template"].format(**params)
             constants[id] = constant
     return constants
+
 
 def assign_updates_and_values(constants: dict, updates: list[dict]):
     """Assign updates and values to constants.
@@ -179,6 +181,7 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
         if (constant["lower_bound"] and constant["upper_bound"] and 
             constant["upper_bound"].less_than(constant["lower_bound"])):
             raise AssertionError(f"Lower bound exceeds upper bound")
+
 
 def calculate_group_stats(group_id: str, constants: dict) -> dict:
     """Calculate statistics for a constant group.
@@ -236,6 +239,20 @@ def calculate_group_stats(group_id: str, constants: dict) -> dict:
         
     return stats
 
+
+def write_constants(constants: dict, filename: str):
+    """Write processed constants info to file."""
+    for constant in constants.values():
+        if constant["exact_value"] is not None:
+            constant["exact_value"] = constant["exact_value"].to_dict()
+        if constant["lower_bound"] is not None:
+            constant["lower_bound"] = constant["lower_bound"].to_dict()
+        if constant["upper_bound"] is not None:
+            constant["upper_bound"] = constant["upper_bound"].to_dict()
+    with open(filename, "w") as file:
+        yaml.dump(constants, file, sort_keys=False)
+
+
 def write_groups(groups: dict, filename: str):
     """Write processed constant groups info to file, with compact lists."""
     # Set compact list representer
@@ -249,16 +266,28 @@ def write_groups(groups: dict, filename: str):
     default_representer = yaml.representer.SafeRepresenter.represent_list
     yaml.add_representer(list, default_representer)
 
+
 with open("source_data/constant_groups.yml", "r") as file:
     groups = yaml.safe_load(file)
 
 with open("_data/sources.yml", "r") as file:
     sources = yaml.safe_load(file)
 
+# Load source data for constants (for image metadata)
+with open('source_data/constants.yml', 'r') as file:
+    constants_metadata = yaml.safe_load(file) or {}
+
 updates = load_updates("source_data/updates", sources)
 
 constants = get_constants(groups)
 assign_updates_and_values(constants, updates)
+
+# Cache images and update constants with image metadata
+process_constant_images(constants_metadata)
+for constant_id, data in constants_metadata.items():
+    if data:
+        for field in data:
+            constants[constant_id][field] = data[field]
 
 # Save combined updates for download
 for update in updates:
@@ -267,15 +296,7 @@ with open("_data/updates.yml", "w") as file:
     yaml.dump(updates, file, sort_keys=False)
 
 # Save constants for download
-for constant in constants.values():
-    if constant["exact_value"] is not None:
-        constant["exact_value"] = constant["exact_value"].to_dict()
-    if constant["lower_bound"] is not None:
-        constant["lower_bound"] = constant["lower_bound"].to_dict()
-    if constant["upper_bound"] is not None:
-        constant["upper_bound"] = constant["upper_bound"].to_dict()
-with open("_data/constants.yml", "w") as file:
-    yaml.dump(constants, file, sort_keys=False)
+write_constants(constants, "_data/constants.yml")
 
 # Add statistics to each group
 for group_id, group in groups.items():

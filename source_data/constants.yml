@@ -1,0 +1,17 @@
+# Not all constants need to be included here, only those with special metadata
+# such as an image. The full set will be generated from the constant group
+# metadata.
+
+ramsey-3-3:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ramsey_theorem_visual_proof.svg/480px-Ramsey_theorem_visual_proof.svg.png"
+    credit: "Cmglee, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Proof of Ramsey's theorem for R(3,3)"
+
+square-packing-in-square-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/6/6b/5_kvadratoj_en_kvadrato.svg"
+    credit: "Amit6, via Wikimedia Commons"
+    license: "Public domain"
+    alt_text: "Optimal packing of 5 unit squares in a square"

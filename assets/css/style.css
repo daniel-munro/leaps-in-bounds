@@ -32,8 +32,9 @@ h1 {
 }
 
 .constant-cell {
-    padding: 0.3rem 1rem !important;
-    height: 60px;  /* Ensure consistent height */
+    padding: 0.2rem 1rem !important;
+    height: auto;
+    min-height: 60px;
     font-size: 0.85em;
 }
 
@@ -42,11 +43,18 @@ h1 {
 }
 
 .cell-link {
-    align-items: center;
-    justify-content: center;
+    display: block;
     text-decoration: none;
     color: inherit;
     height: 100%;
+    width: 100%;
+    line-height: 1; /* Tighten line spacing */
+}
+
+.cell-link br {
+    display: block;
+    content: "";
+    margin: 2px 0; /* Very small margin */
 }
 
 .constant-sequence {
@@ -103,4 +111,39 @@ h1 {
 .constant-groups-overview .badge {
     font-size: 0.9em;
     padding: 0.4em 0.6em;
+}
+
+/* Styling for constant images */
+.constant-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.constant-image img {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+}
+
+.constant-group-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+}
+
+.constant-group-image img {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+}
+
+.image-credit {
+    color: #6c757d;
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-style: italic;
 }

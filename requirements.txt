@@ -1,4 +1,6 @@
 antlr4-python3-runtime==4.11.0
 pandas==2.2.3
+pillow==11.1.0
 PyYAML==6.0.2
+requests==2.32.3
 sympy==1.13.3

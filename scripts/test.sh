@@ -7,10 +7,6 @@ python scripts/generate_pages.py
 
 # Copy and convert data for download
 mkdir -p data
-cp _data/constants.yml data/
-cp _data/constant_groups.yml data/
-cp _data/sources.yml data/
-cp _data/updates.yml data/
 python scripts/convert_data.py
 
 python scripts/validate_data.py

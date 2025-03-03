@@ -25,7 +25,34 @@ with open("_data/sources.yml", "r") as file:
 with open("_data/updates.yml", "r") as file:
     updates = yaml.safe_load(file)
 
-# Export original nested data structures to JSON
+# Remove extraneous fields
+for constant in constants.values():
+    if 'image' in constant:
+        del constant['image']
+for group in groups.values():
+    if 'display_rows' in group:
+        del group['display_rows']
+    if 'display_columns' in group:
+        del group['display_columns']
+    if 'parameter_values' in group:
+        del group['parameter_values']
+    if 'representative_image' in group:
+        del group['representative_image']
+
+# Export nested data structures to YAML
+with open("data/constants.yml", "w") as f:
+    yaml.dump(constants, f, sort_keys=False)
+
+with open("data/constant_groups.yml", "w") as f:
+    yaml.dump(groups, f, sort_keys=False)
+
+with open("data/sources.yml", "w") as f:
+    yaml.dump(sources, f, sort_keys=False)
+
+with open("data/updates.yml", "w") as f:
+    yaml.dump(updates, f, sort_keys=False)
+
+# Export nested data structures to JSON
 with open("data/constants.json", "w") as f:
     json.dump(constants, f, indent=2)
 

@@ -21,6 +21,17 @@ permalink: /constants/
 {% for group in site.data.constant_groups %}
 ## {{ group[1].name }} {#{{ group.first }}}
 
+{% if group[1].representative_image %}
+{% assign image_id = group[1].representative_image %}
+{% assign image = site.data.constants[image_id].image %}
+<div class="constant-group-image">
+  <img src="{{ image.path }}" alt="{{ image.alt_text }}">
+  <div class="image-credit">
+    <span>{{ image.credit }}. {{ image.license }}.</span>
+  </div>
+</div>
+{% endif %}
+
 {{ group[1].description }}
 
 {% if group[1].external_ids %}
