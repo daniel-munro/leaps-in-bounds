@@ -15,3 +15,263 @@ square-packing-in-square-5:
     credit: "Amit6, via Wikimedia Commons"
     license: "Public domain"
     alt_text: "Optimal packing of 5 unit squares in a square"
+
+busy-beaver-shift-1:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Busybeaver1rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 1-state busy beaver"
+
+busy-beaver-shift-2:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Busybeaver2rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 2-state busy beaver"
+
+busy-beaver-shift-4:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/7/79/Busybeaver4rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 4-state busy beaver"
+
+busy-beaver-shift-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Busy_Beaver_5_spacetime.png"
+    credit: "--MULLIGANACEOUS--, via Wikimedia Commons"
+    license: "Public domain"
+    alt_text: "Simplified spacetime diagram of the fifth busy beaver machine"
+
+busy-beaver-ones-1:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Busybeaver1rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 1-state busy beaver"
+
+busy-beaver-ones-2:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Busybeaver2rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 2-state busy beaver"
+
+busy-beaver-ones-3:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Busybeaver3rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 3-state busy beaver"
+
+busy-beaver-ones-4:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/7/79/Busybeaver4rules.png"
+    credit: "OrdinaryArtery, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Rule set for 4-state busy beaver"
+
+busy-beaver-ones-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Busy_Beaver_5_spacetime.png"
+    credit: "--MULLIGANACEOUS--, via Wikimedia Commons"
+    license: "Public domain"
+    alt_text: "Simplified spacetime diagram of the fifth busy beaver machine"
+
+kissing-number-1:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/5/54/Kissing-1d.svg"
+    credit: "N.Mori, via Wikimedia Commons"
+    license: "Public domain"
+    alt_text: "Kissing number 1"
+
+kissing-number-2:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Kissing-2d.svg"
+    credit: "N.Mori, via Wikimedia Commons"
+    license: "Public domain"
+    alt_text: "Kissing number 2"
+
+kissing-number-3:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Kissing-3d.png"
+    credit: "Robertwb at English Wikipedia, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Kissing number 3"
+
+cage-3-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/9/91/Petersen1_tiny.svg"
+    credit: "Leshabirukov, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Petersen graph"
+
+cage-3-6:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/0/06/Heawood_Graph.svg"
+    credit: "Koko90, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Heawood graph"
+
+cage-3-7:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/8/8f/McGee_graph_hamiltonian.svg"
+    credit: "Koko90, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "McGee graph"
+
+cage-3-8:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/4/41/Tutte_eight_cage.svg"
+    credit: "David Benbennick, via Wikimedia Commons"
+    license: "Public domain"
+    alt_text: "Tutte-Coxeter graph"
+
+cage-3-10:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Balaban_10-cage.svg"
+    credit: "Koko90, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Balaban 10-cage"
+
+cage-3-11:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Balaban_11-cage.svg"
+    credit: "Koko90, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Balaban 11-cage"
+
+cage-4-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Robertson_graph_hamiltonian.svg"
+    credit: "Koko90, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Robertson graph"
+
+cage-7-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Hoffman-Singleton_graph.svg"
+    credit: "Uzyel, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Hoffman-Singleton graph"
+
+stamp-folding-3:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Stampfoldings1x3.png"
+    credit: "Robert Dickau, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Folding three stamps"
+
+map-folding-2-2:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/e/e8/MapFoldings-2x2.png"
+    credit: "Robert Dickau, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Folding a 2x2 grid"
+
+circle-in-equilateral-1:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/CircleInEquilateralTrianglePacking%281%29.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing one unit circle in an equilateral triangle"
+
+circle-in-equilateral-2:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/f/f6/Circle_packing_in_equilateral_triangle_for_2_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing two unit circles in an equilateral triangle"
+
+circle-in-equilateral-3:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Circle_packing_in_equilateral_triangle_for_3_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing three unit circles in an equilateral triangle"
+
+circle-in-equilateral-4:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Circle_packing_in_equilateral_triangle_for_4_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing four unit circles in an equilateral triangle"
+
+circle-in-equilateral-5:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/e/ea/Circle_packing_in_equilateral_triangle_for_5_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing five unit circles in an equilateral triangle"
+
+circle-in-equilateral-6:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Circle_packing_in_equilateral_triangle_for_6.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing six unit circles in an equilateral triangle"
+
+circle-in-equilateral-7:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Circle_packing_in_equilateral_triangle_for_7_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing seven unit circles in an equilateral triangle"
+
+circle-in-equilateral-8:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/4/44/Circle_packing_in_equilateral_triangle_for_8_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing eight unit circles in an equilateral triangle"
+
+circle-in-equilateral-9:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Circle_packing_in_equilateral_triangle_for_9_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing nine unit circles in an equilateral triangle"
+
+circle-in-equilateral-10:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Circle_packing_in_equilateral_triangle_for_10_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing ten unit circles in an equilateral triangle"
+
+circle-in-equilateral-11:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Ircle_packing_in_equilateral_triangle_for_11_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing 11 unit circles in an equilateral triangle"
+
+circle-in-equilateral-12:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Circle_packing_in_equilateral_triangle_for_12_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing 12 unit circles in an equilateral triangle"
+
+circle-in-equilateral-13:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Circle_packing_in_equilateral_triangle_for_13_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing 13 unit circles in an equilateral triangle"
+
+circle-in-equilateral-14:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Circle_packing_in_equilateral_triangle_for_14_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing 14 unit circles in an equilateral triangle"
+
+circle-in-equilateral-15:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Circle_packing_in_equilateral_triangle_for_15_circles.png"
+    credit: "OwOUwUOwU, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "Packing 15 unit circles in an equilateral triangle"
+

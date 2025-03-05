@@ -52,6 +52,7 @@ busy-beaver-shift:
     wikipedia_en: Busy_beaver
     oeis: A060843
   display_type: sequence
+  representative_image: busy-beaver-shift-5
   id_template: "busy-beaver-shift-{n}"
   name_template: "Busy Beaver number $BB({n})$"
   description_template: "The maximal number of steps that a ${n}$-state Turing machine can make on an initially blank tape before eventually halting."
@@ -68,6 +69,7 @@ busy-beaver-ones:
     wikipedia_en: Busy_beaver
     oeis: A028444
   display_type: sequence
+  representative_image: busy-beaver-ones-4
   id_template: "busy-beaver-ones-{n}"
   name_template: "Busy Beaver ones function value $\\Sigma({n})$"
   description_template: "The maximal number of 1s that a ${n}$-state Turing machine can print on an initially blank tape before eventually halting."
@@ -83,6 +85,7 @@ kissing-number:
     wikidata: Q1371530
     wikipedia_en: Kissing_number
   display_type: sequence
+  representative_image: kissing-number-3
   id_template: "kissing-number-{n}"
   name_template: "Kissing number for $\\mathbb{{R}}^{{{n}}}$"
   description_template: "The maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{{R}}^{{{n}}}$."
@@ -116,6 +119,7 @@ cage:
   display_type: grid
   display_rows: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  representative_image: cage-3-8
   id_template: "cage-{k}-{g}"
   name_template: "Cage order $n({k},{g})$"
   description_template: "The order of a $({k},{g})$-cage, a ${k}$-regular graph of girth ${g}$ of minimum order."
@@ -160,6 +164,7 @@ stamp-folding:
     wikipedia_en: Map_folding
     oeis: A000136
   display_type: sequence
+  representative_image: stamp-folding-3
   id_template: "stamp-folding-{n}"
   name_template: "Stamp folding $s({n})$"
   description_template: "The number of distinct ways to fold a strip of ${n}$ labeled stamps."
@@ -178,6 +183,7 @@ map-folding:
   display_type: grid
   display_rows: [2, 3, 4, 5, 6, 7]
   display_columns: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  representative_image: map-folding-2-2
   id_template: "map-folding-{m}-{n}"
   name_template: "Map folding (${m} \\times {n})$"
   description_template: "The number of distinct ways to fold a ${m} \\times {n}$ rectangle into a unit square."
@@ -211,6 +217,7 @@ circle-in-equilateral:
   external_ids:
     wikipedia_en: Circle_packing_in_an_equilateral_triangle
   display_type: sequence
+  representative_image: circle-in-equilateral-11
   id_template: "circle-in-equilateral-{n}"
   name_template: "Packing ${n}$ unit circles in an equilateral triangle"
   description_template: "The side length of the smallest equilateral triangle into which ${n}$ unit circles can be packed."

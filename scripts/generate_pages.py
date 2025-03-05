@@ -9,8 +9,7 @@ def html_for_value(value: dict | None) -> str:
         return '$?$'
     html = f'${value["latex"]}$'
     if value.get('alt_display') is not None:
-        tooltip_attr = f' title="{value["alt_display"]}"'
-        html = f'<span{tooltip_attr}>{html}</span>'
+        html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
     return html
 
 def generate_grid_html(group: dict, constants: dict) -> str:

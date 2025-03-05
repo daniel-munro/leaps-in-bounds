@@ -25,7 +25,7 @@ permalink: /constants/
 {% assign image_id = group[1].representative_image %}
 {% assign image = site.data.constants[image_id].image %}
 <div class="constant-group-image">
-  <img src="{{ image.path }}" alt="{{ image.alt_text }}">
+  <img src="{{ image.path }}" alt="{{ image.alt_text }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ image.alt_text }}">
   <div class="image-credit">
     <span>{{ image.credit }}. {{ image.license }}.</span>
   </div>
