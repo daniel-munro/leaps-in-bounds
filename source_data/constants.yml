@@ -275,3 +275,10 @@ circle-in-equilateral-15:
     license: "CC BY-SA 4.0"
     alt_text: "Packing 15 unit circles in an equilateral triangle"
 
+minimal-superpermutation-3:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/1/19/Superpermutation_distribution.png"
+    credit: "IntegralPython, via Wikimedia Commons"
+    license: "CC BY-SA 4.0"
+    alt_text: "The distribution of permutations in a 3 symbol superpermutation"
+

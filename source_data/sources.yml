@@ -92,6 +92,11 @@ oeis-a001415-map-folding-2-n:
   date: "2025-02-16"
   url: "https://oeis.org/A001415"
 
+egan-superpermutations:
+  string: "Superpermutations - Greg Egan"
+  date: "2019-06-13"
+  url: "https://www.gregegan.net/SCIENCE/Superpermutations/Superpermutations.html"
+
 ###################
 # Primary sources #
 ###################
@@ -682,4 +687,23 @@ erdos-oler-1961:
 erdos-groemer-1961:
   string: "Erdős and Groemer in 1961"
   date: "1961"
+
+# Minimal superpermutations
+
+chaffin-2014:
+  string: "Ben Chaffin in 2014"
+  date: "2014"
+
+houston-2014:
+  string: "Houston, R. (2014). Tackling the minimal superpermutation problem. arXiv preprint arXiv:1408.5108."
+  date: "2014-08-21"
+  doi: "https://doi.org/10.48550/arXiv.1408.5108"
+
+coanda-2019:
+  string: "Charlie Vane (Bogdan Coanda) on 2019-02-01"
+  date: "2019-02-01"
+
+houston-egan-2019:
+  string: "Robin Houston and Greg Egan on 2019-02-27"
+  date: "2019-02-27"
 

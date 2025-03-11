@@ -224,3 +224,19 @@ circle-in-equilateral:
   parameters: [n]
   parameter_values: [[[1, 15]]]
   research_status: initial
+
+minimal-superpermutation:
+  name: "Minimal superpermutation problem"
+  description: "$L(n)$ is the shortest length of a string that contains each permutation of $n$ symbols as a substring."
+  external_ids:
+    wikidata: Q17048413
+    wikipedia_en: Superpermutation
+  display_type: sequence
+  representative_image: minimal-superpermutation-3
+  id_template: "minimal-superpermutation-{n}"
+  name_template: "Minimal superpermutation length $L({n})$"
+  description_template: "The shortest length of a string that contains each permutation of ${n}$ symbols as a substring."
+  parameters: [n]
+  parameter_values: [[[1, 9]]]
+  research_status: initial
+
