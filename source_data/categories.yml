@@ -1,0 +1,38 @@
+- msc: "03D"
+  name: "Computability and recursion theory"
+  groups:
+    - busy-beaver-ones
+    - busy-beaver-shift
+
+- msc: "05A"
+  name: "Enumerative combinatorics"
+  groups:
+    - minimal-superpermutation
+    - stamp-folding
+
+- msc: "05C"
+  name: "Graph theory"
+  groups:
+    - cage
+    - degree-diameter
+
+- msc: "05D"
+  name: "Extremal combinatorics"
+  groups:
+    - ramsey
+    - van-der-waerden
+
+- msc: "52C"
+  name: "Discrete geometry"
+  groups:
+    - circle-in-equilateral
+    - disk-covering
+    - kissing-number
+    - map-folding
+    - square-packing
+
+- msc: "11"
+  name: "Number theory"
+  groups:
+    - debruijn-newman
+

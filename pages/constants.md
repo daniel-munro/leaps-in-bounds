@@ -11,18 +11,31 @@ permalink: /constants/
     Jump to group
   </button>
   <ul class="dropdown-menu" aria-labelledby="groupDropdown">
-    {% for group in site.data.constant_groups %}
-      <li><a class="dropdown-item" href="#{{ group.first }}">{{ group[1].name }}</a></li>
+    {% for category in site.data.categories %}
+      <li>
+        <h6 class="dropdown-header">{{ category.msc }} {{ category.name }}</h6>
+      </li>
+      {% for group_id in category.groups %}
+        {% assign group = site.data.constant_groups[group_id] %}
+        <li><a class="dropdown-item ps-4" href="#{{ group_id }}">{{ group.name }}</a></li>
+      {% endfor %}
+      {% unless forloop.last %}
+        <li><hr class="dropdown-divider"></li>
+      {% endunless %}
     {% endfor %}
   </ul>
 </div>
 
+{% for category in site.data.categories %}
+<hr>
+<h2 class="text-center">{{ category.msc }} {{ category.name }}</h2>
 
-{% for group in site.data.constant_groups %}
-## {{ group[1].name }} {#{{ group.first }}}
+{% for group_id in category.groups %}
+{% assign group = site.data.constant_groups[group_id] %}
+### {{ group.name }} {#{{ group_id }}}
 
-{% if group[1].representative_image %}
-{% assign image_id = group[1].representative_image %}
+{% if group.representative_image %}
+{% assign image_id = group.representative_image %}
 {% assign image = site.data.constants[image_id].image %}
 <div class="constant-group-image">
   <img src="{{ image.path }}" alt="{{ image.alt_text }}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ image.alt_text }}">
@@ -32,21 +45,21 @@ permalink: /constants/
 </div>
 {% endif %}
 
-{{ group[1].description }}
+{{ group.description }}
 
-{% if group[1].external_ids %}
+{% if group.external_ids %}
   <p class="d-flex flex-wrap gap-2">
-    {% if group[1].external_ids.wikipedia_en %}<a class="btn btn-outline-secondary btn-sm" href="https://en.wikipedia.org/wiki/{{ group[1].external_ids.wikipedia_en }}">Wikipedia</a>{% endif %}
-    {% if group[1].external_ids.wikidata %}<a class="btn btn-outline-secondary btn-sm" href="https://www.wikidata.org/wiki/{{ group[1].external_ids.wikidata }}">Wikidata</a>{% endif %}
-    {% if group[1].external_ids.mathworld %}<a class="btn btn-outline-secondary btn-sm" href="https://mathworld.wolfram.com/{{ group[1].external_ids.mathworld }}.html">MathWorld</a>{% endif %}
-    {% if group[1].external_ids.metamath %}<a class="btn btn-outline-secondary btn-sm" href="http://us.metamath.org/mpeuni/{{ group[1].external_ids.metamath }}.html">Metamath</a>{% endif %}
-    {% if group[1].external_ids.msc %}<a class="btn btn-outline-secondary btn-sm" href="https://mathscinet.ams.org/msc/msc2020.html?t={{ group[1].external_ids.msc }}">MSC2020</a>{% endif %}
-    {% if group[1].external_ids.planetmath %}<a class="btn btn-outline-secondary btn-sm" href="https://planetmath.org/{{ group[1].external_ids.planetmath }}">PlanetMath</a>{% endif %}
-    {% if group[1].external_ids.oeis %}<a class="btn btn-outline-secondary btn-sm" href="https://oeis.org/{{ group[1].external_ids.oeis }}">OEIS</a>{% endif %}
+    {% if group.external_ids.wikipedia_en %}<a class="btn btn-outline-secondary btn-sm" href="https://en.wikipedia.org/wiki/{{ group.external_ids.wikipedia_en }}">Wikipedia</a>{% endif %}
+    {% if group.external_ids.wikidata %}<a class="btn btn-outline-secondary btn-sm" href="https://www.wikidata.org/wiki/{{ group.external_ids.wikidata }}">Wikidata</a>{% endif %}
+    {% if group.external_ids.mathworld %}<a class="btn btn-outline-secondary btn-sm" href="https://mathworld.wolfram.com/{{ group.external_ids.mathworld }}.html">MathWorld</a>{% endif %}
+    {% if group.external_ids.metamath %}<a class="btn btn-outline-secondary btn-sm" href="http://us.metamath.org/mpeuni/{{ group.external_ids.metamath }}.html">Metamath</a>{% endif %}
+    {% if group.external_ids.msc %}<a class="btn btn-outline-secondary btn-sm" href="https://mathscinet.ams.org/msc/msc2020.html?t={{ group.external_ids.msc }}">MSC2020</a>{% endif %}
+    {% if group.external_ids.planetmath %}<a class="btn btn-outline-secondary btn-sm" href="https://planetmath.org/{{ group.external_ids.planetmath }}">PlanetMath</a>{% endif %}
+    {% if group.external_ids.oeis %}<a class="btn btn-outline-secondary btn-sm" href="https://oeis.org/{{ group.external_ids.oeis }}">OEIS</a>{% endif %}
   </p>
 {% endif %}
 
-<p>Compilation status: {% case group[1].research_status %}
+<p>Compilation status: {% case group.research_status %}
   {% when "initial" %}
     <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="top" 
       title="Basic, incomplete information gathered">Initial</span>
@@ -61,6 +74,8 @@ permalink: /constants/
       title="Compilation status not specified">Unknown</span>
 {% endcase %}</p>
 
-{% include constant_tables/{{ group.first }}.html %}
+{% include constant_tables/{{ group_id }}.html %}
 <br>
+{% endfor %}
+
 {% endfor %}

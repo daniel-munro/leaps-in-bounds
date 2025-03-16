@@ -298,6 +298,13 @@ with open("_data/updates.yml", "w") as file:
 # Save constants for download
 write_constants(constants, "_data/constants.yml")
 
+# Add category to each group
+with open("source_data/categories.yml", "r") as file:
+    categories = yaml.safe_load(file)
+for category in categories:
+    for group_id in category["groups"]:
+        groups[group_id]["category"] = f"{category['msc']} {category['name']}"
+
 # Add statistics to each group
 for group_id, group in groups.items():
     group["stats"] = calculate_group_stats(group_id, constants)

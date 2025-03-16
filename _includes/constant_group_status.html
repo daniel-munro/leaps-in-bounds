@@ -13,37 +13,43 @@
         </tr>
       </thead>
       <tbody>
-      {% for group in site.data.constant_groups %}
+      {% for category in site.data.categories %}
         <tr>
-          <td><a href="/constants/#{{ group.first }}">{{ group[1].name }}</a></td>
-          <td>{{ group[1].stats.total_constants }}</td>
-          <td>
-            {% case group[1].research_status %}
-              {% when 'initial' %}
-                <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  title="Basic, incomplete information gathered">Initial</span>
-              {% when 'sourced' %}
-                <span class="badge bg-info" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  title="All current values and bounds are present and sourced">Sourced</span>
-              {% when 'thorough' %}
-                <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  title="Comprehensive research, all historical bounds updates that could be found are present and sourced">Thorough</span>
-              {% else %}
-                <span class="badge bg-secondary" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  title="Compilation status not specified">Unknown</span>
-            {% endcase %}
-          </td>
-          <td>
-            {% assign coverage = group[1].stats.source_coverage %}
-            {% if coverage == 100 %}
-              <span class="badge bg-success">{{ coverage }}%</span>
-            {% elsif coverage > 0 %}
-              <span class="badge bg-warning">{{ coverage }}%</span>
-            {% else %}
-              <span class="badge bg-danger">0%</span>
-            {% endif %}
-          </td>
+          <td colspan="4" class="fw-bold category-separator" style="color: #777; border-top: 2px solid #dee2e6;">{{ category.msc }} {{ category.name }}</td>
         </tr>
+        {% for group_id in category.groups %}
+          {% assign group = site.data.constant_groups[group_id] %}
+          <tr>
+            <td><a href="/constants/#{{ group_id }}">{{ group.name }}</a></td>
+            <td>{{ group.stats.total_constants }}</td>
+            <td>
+              {% case group.research_status %}
+                {% when 'initial' %}
+                  <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    title="Basic, incomplete information gathered">Initial</span>
+                {% when 'sourced' %}
+                  <span class="badge bg-info" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    title="All current values and bounds are present and sourced">Sourced</span>
+                {% when 'thorough' %}
+                  <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    title="Comprehensive research, all historical bounds updates that could be found are present and sourced">Thorough</span>
+                {% else %}
+                  <span class="badge bg-secondary" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    title="Compilation status not specified">Unknown</span>
+              {% endcase %}
+            </td>
+            <td>
+              {% assign coverage = group.stats.source_coverage %}
+              {% if coverage == 100 %}
+                <span class="badge bg-success">{{ coverage }}%</span>
+              {% elsif coverage > 0 %}
+                <span class="badge bg-warning">{{ coverage }}%</span>
+              {% else %}
+                <span class="badge bg-danger">0%</span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
       {% endfor %}
       </tbody>
     </table>
