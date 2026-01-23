@@ -44,3 +44,7 @@ Contributions are welcome!
 
 - For technical problems and suggestions, open an issue on GitHub.
 - To contribute data, post in the GitHub Discussions or email [Daniel Munro](https://danmun.ro).
+
+## Related Projects
+
+- [Optimization Constants in Mathematics](https://github.com/teorth/optimizationproblems) - A curated collection of optimization constants in mathematics, often arising from solving a variational problem, or finding the best constant in a functional inequality.
