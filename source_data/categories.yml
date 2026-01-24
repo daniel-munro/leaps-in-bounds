@@ -25,6 +25,8 @@
 - msc: "52C"
   name: "Discrete geometry"
   groups:
+    - affine-line-arrangements
+    - affine-line-arrangements-general-position
     - circle-in-equilateral
     - disk-covering
     - kissing-number
@@ -35,4 +37,3 @@
   name: "Number theory"
   groups:
     - debruijn-newman
-

@@ -97,6 +97,16 @@ egan-superpermutations:
   date: "2019-06-13"
   url: "https://www.gregegan.net/SCIENCE/Superpermutations/Superpermutations.html"
 
+oeis-a241600-lines-on-plane:
+  string: "Number of ways of arranging n lines in the (affine) plane. - OEIS"
+  date: "2026-01-24"
+  url: "https://oeis.org/A241600"
+
+oeis-a090338-lines-on-plane-general:
+  string: "Number of ways of arranging n straight lines in general position in the (affine) plane. - OEIS"
+  date: "2026-01-24"
+  url: "https://oeis.org/A090338"
+
 ###################
 # Primary sources #
 ###################

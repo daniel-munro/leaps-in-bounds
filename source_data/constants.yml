@@ -282,3 +282,16 @@ minimal-superpermutation-3:
     license: "CC BY-SA 4.0"
     alt_text: "The distribution of permutations in a 3 symbol superpermutation"
 
+affine-line-arrangements-6:
+  image:
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/6/67/Lines.svg"
+    credit: "Mik, via Wikimedia Commons"
+    license: "CC BY-SA 3.0"
+    alt_text: "Six lines intersecting at one point"
+
+affine-line-arrangements-general-position-5:
+  image:
+    source_url: "https://oeis.org/A090338/a090338.gif"
+    credit: "Jon Wild and Laurence Reeves, via OEIS"
+    license: "OEIS terms of use"
+    alt_text: "All arrangements of five lines in general position"
