@@ -11,17 +11,21 @@ import itertools
 import pathlib
 import yaml
 import csv
+from typing import Any, Mapping
 from utils import Value, QuotedString, process_constant_images
 
 
-def quoted_string_representer(dumper, data):
+def quoted_string_representer(dumper: yaml.Dumper, data: QuotedString) -> Any:
     return dumper.represent_scalar('tag:yaml.org,2002:str', data, style="'")
 
 # Register the representer
 yaml.add_representer(QuotedString, quoted_string_representer)
 
 
-def load_updates(updates_dir: str, sources: dict) -> list[dict]:
+def load_updates(
+    updates_dir: str | pathlib.Path,
+    sources: Mapping[str, Mapping[str, Any]],
+) -> list[dict[str, Any]]:
     """Load updates from a directory of CSV files.
 
     Args:
@@ -86,7 +90,7 @@ def load_updates(updates_dir: str, sources: dict) -> list[dict]:
     return updates
 
 
-def get_constants(groups: dict) -> dict:
+def get_constants(groups: Mapping[str, Mapping[str, Any]]) -> dict[str, dict[str, Any]]:
     """Generate constants from constant groups.
 
     Args:
@@ -131,7 +135,10 @@ def get_constants(groups: dict) -> dict:
     return constants
 
 
-def assign_updates_and_values(constants: dict, updates: list[dict]):
+def assign_updates_and_values(
+    constants: dict[str, dict[str, Any]],
+    updates: list[dict[str, Any]],
+) -> None:
     """Assign updates and values to constants.
 
     Args:
@@ -183,7 +190,10 @@ def assign_updates_and_values(constants: dict, updates: list[dict]):
             raise AssertionError(f"Lower bound exceeds upper bound")
 
 
-def calculate_group_stats(group_id: str, constants: dict) -> dict:
+def calculate_group_stats(
+    group_id: str,
+    constants: Mapping[str, Mapping[str, Any]],
+) -> dict[str, Any]:
     """Calculate statistics for a constant group.
 
     Args:
@@ -240,8 +250,8 @@ def calculate_group_stats(group_id: str, constants: dict) -> dict:
     return stats
 
 
-def write_constants(constants: dict, filename: str):
-    """Write processed constants info to file."""
+def write_constants(constants: dict[str, dict[str, Any]], filename: str) -> None:
+    """Write processed constants info to a YAML file."""
     for constant in constants.values():
         if constant["exact_value"] is not None:
             constant["exact_value"] = constant["exact_value"].to_dict()
@@ -253,8 +263,8 @@ def write_constants(constants: dict, filename: str):
         yaml.dump(constants, file, sort_keys=False)
 
 
-def write_groups(groups: dict, filename: str):
-    """Write processed constant groups info to file, with compact lists."""
+def write_groups(groups: dict[str, dict[str, Any]], filename: str) -> None:
+    """Write processed constant groups info to a YAML file, with compact lists."""
     # Set compact list representer
     def compact_lists_representer(dumper, data):
         return dumper.represent_sequence('tag:yaml.org,2002:seq', data, flow_style=True)

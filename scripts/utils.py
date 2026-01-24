@@ -7,12 +7,13 @@ from PIL import Image
 import io
 from sympy.parsing.latex import parse_latex
 from sympy import N
+from typing import Any, MutableMapping
 
 
 class Value:
     """Class representing a mathematical value with multiple representations."""
 
-    def __init__(self, latex_expr):
+    def __init__(self, latex_expr: str) -> None:
         self.latex = latex_expr
         self.decimal_approx = self._parse_latex_value(latex_expr)
         patterns = [r'\sqrt', r'\frac', r'\over', r'\pi', r'^{', r'_{']
@@ -57,13 +58,13 @@ class Value:
         except Exception as e:
             raise ValueError(f"Error parsing LaTeX expression '{latex_str}': {e}")
         
-    def less_than(self, other):
+    def less_than(self, other: "Value") -> bool | None:
         """Check if this value is less than another value."""
         if self.decimal_approx is None or other.decimal_approx is None:
             return None
         return self.decimal_approx < other.decimal_approx
     
-    def to_dict(self):
+    def to_dict(self) -> dict[str, Any]:
         """Convert to dict for YAML serialization."""
         return {
             "latex": self.latex,
@@ -79,7 +80,7 @@ class QuotedString(str):
     pass
 
 
-def download_image(url: str, file_extension: str, output_path: str) -> str:
+def download_image(url: str, file_extension: str, output_path: str) -> None:
     """Download an image from a URL and save it to a file."""
     try:
         user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15'
@@ -109,7 +110,7 @@ def download_image(url: str, file_extension: str, output_path: str) -> str:
         print(f"Error processing image {output_path}: {e}")
         
 
-def process_constant_images(constants: dict) -> None:
+def process_constant_images(constants: MutableMapping[str, Any]) -> None:
     """Process images for constants.
     
     Downloads images, optimizes them, and updates constants with image paths.

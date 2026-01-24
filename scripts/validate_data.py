@@ -1,10 +1,15 @@
 """Check for issues with the data."""
 
 import yaml
+from typing import Any
+from yaml.nodes import Node
 
 # Create custom loader to check for duplicates
 class DuplicateKeyCheckLoader(yaml.SafeLoader):
-    def construct_mapping(self, node, deep=False):
+    """YAML loader that raises on duplicate keys."""
+
+    def construct_mapping(self, node: Node, deep: bool = False) -> dict[Any, Any]:
+        """Construct a mapping while rejecting duplicate keys."""
         mapping = {}
         for key_node, value_node in node.value:
             key = self.construct_object(key_node)

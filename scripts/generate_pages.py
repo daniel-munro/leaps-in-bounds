@@ -2,9 +2,10 @@
 
 import os
 import yaml
+from typing import Any, Mapping
 
-def html_for_value(value: dict | None) -> str:
-    """Generate HTML for a value, possibly with a tooltip."""
+def html_for_value(value: Mapping[str, Any] | None) -> str:
+    """Generate HTML for a value, including an optional tooltip."""
     if value is None:
         return '$?$'
     html = f'${value["latex"]}$'
@@ -12,7 +13,10 @@ def html_for_value(value: dict | None) -> str:
         html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
     return html
 
-def generate_grid_html(group: dict, constants: dict) -> str:
+def generate_grid_html(
+    group: Mapping[str, Any],
+    constants: Mapping[str, Mapping[str, Any]],
+) -> str:
     """Generate HTML table for a constant group with two parameters."""
     param1, param2 = group['parameters']
     rows = group['display_rows']
@@ -73,7 +77,10 @@ def generate_grid_html(group: dict, constants: dict) -> str:
     
     return '\n'.join(html) + '\n'
 
-def generate_sequence_html(group: dict, constants: dict) -> str:
+def generate_sequence_html(
+    group: Mapping[str, Any],
+    constants: Mapping[str, Mapping[str, Any]],
+) -> str:
     """Generate HTML for a constant group with one parameter."""
     param = group['parameters'][0]
     values = []
@@ -121,7 +128,10 @@ def generate_sequence_html(group: dict, constants: dict) -> str:
     html.append('</div>')
     return '\n'.join(html) + '\n'
 
-def generate_single_html(group: dict, constants: dict) -> str:
+def generate_single_html(
+    group: Mapping[str, Any],
+    constants: Mapping[str, Mapping[str, Any]],
+) -> str:
     """Generate HTML for a constant group with no parameters."""
     html = ['<div class="constant-sequence">']
     

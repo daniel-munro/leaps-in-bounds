@@ -3,8 +3,9 @@
 import json
 import pandas as pd
 import yaml
+from typing import Any, MutableMapping
 
-def flatten_value_dict(data_dict, field_name):
+def flatten_value_dict(data_dict: MutableMapping[str, Any], field_name: str) -> None:
     """Flatten a value dictionary into separate fields for CSV export."""
     for subfield in ['latex', 'decimal_approx', 'alt_display']:
         if data_dict[field_name] is not None and subfield in data_dict[field_name]:

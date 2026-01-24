@@ -8,6 +8,16 @@ This site provides browsing, visualizations, and access to the structured data f
 
 [leapsinbounds.org](https://leapsinbounds.org)
 
+## Data Organization
+
+There are three data layers that feed the site, each with a different purpose:
+
+- `source_data/`: The hand-edited source of truth. This is where new constants, groups, sources, categories, and updates are authored. Updates live in `source_data/updates/*.csv` and are merged during processing.
+- `_data/`: The processed, Jekyll-consumable dataset. `scripts/build.sh` (and `scripts/test.sh`) copy `source_data/sources.yml` and `source_data/categories.yml` here, then `scripts/process_data.py` generates `_data/constants.yml`, `_data/constant_groups.yml`, and `_data/updates.yml` by expanding groups into constants, assigning dates, computing stats, and attaching images/metadata. Jekyll reads `_data/` directly for rendering.
+- `data/`: The public export layer for downloads. `scripts/convert_data.py` converts `_data/` into YAML/JSON/CSV/TSV in `data/` and flattens nested fields for tabular formats.
+
+In short: edit `source_data/` → run the build/test scripts → `_data/` powers the site → `data/` powers downloads.
+
 ## Development Setup
 
 Some data is preprocessed using Python scripts. If you don't need to modify the data, you can skip the Python setup (steps 1 and 2).
