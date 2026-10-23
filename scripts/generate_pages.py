@@ -13,6 +13,18 @@ def html_for_value(value: Mapping[str, Any] | None) -> str:
         html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
     return html
 
+def verified_mark(const: Mapping[str, Any]) -> str:
+    """Generate a check mark noting a constant's verified bounds, if any."""
+    parts = []
+    if const['verified_lower_bound'] is not None:
+        parts.append(f"lower bound {const['verified_lower_bound']['latex']}")
+    if const['verified_upper_bound'] is not None:
+        parts.append(f"upper bound {const['verified_upper_bound']['latex']}")
+    if not parts:
+        return ''
+    title = 'Verified ' + ' and '.join(parts)
+    return f'<span class="verified-mark" data-bs-toggle="tooltip" data-bs-placement="top" title="{title}">✓</span>'
+
 def generate_grid_html(
     group: Mapping[str, Any],
     constants: Mapping[str, Mapping[str, Any]],
@@ -65,7 +77,7 @@ def generate_grid_html(
             
             html.append(
                 f'        <td class="constant-cell {cell_class}"><a href="/constants/{const_id}" '
-                f'class="cell-link">{cell_content}</a></td>'
+                f'class="cell-link">{cell_content}</a>{verified_mark(const)}</td>'
             )
         html.append('      </tr>')
     
@@ -122,7 +134,7 @@ def generate_sequence_html(
         html.append(
             f'  <a href="/constants/{const_id}" class="constant-box{box_class}">'
             f'<strong>{v}</strong><br><div class="constant-box-values">{content}</div>'
-            f'  </a>'
+            f'{verified_mark(const)}</a>'
         )
 
     html.append('</div>')
@@ -155,7 +167,7 @@ def generate_single_html(
     html.append(
         f'  <a href="/constants/{group["id"]}" class="constant-box{box_class}">'
         f'<div class="constant-box-values">{content}</div>'
-        f'  </a>'
+        f'{verified_mark(const)}</a>'
     )
 
     html.append('</div>')

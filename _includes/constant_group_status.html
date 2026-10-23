@@ -10,12 +10,14 @@
             title="<b>Initial:</b> Basic, incomplete information gathered<br><b>Sourced:</b> All current values and bounds are present and sourced<br><b>Thorough:</b> Comprehensive research, all historical bounds updates that could be found are present and sourced"></i></th>
           <th>Sources <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" 
             title="Percent of bounds updates that have been assigned a source"></i></th>
+          <th>Verified <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Number of lower and upper bounds backed by an automatically checked certificate"></i></th>
         </tr>
       </thead>
       <tbody>
       {% for category in site.data.categories %}
         <tr>
-          <td colspan="4" class="fw-bold category-separator" style="color: #777; border-top: 2px solid #dee2e6;">{{ category.msc }} {{ category.name }}</td>
+          <td colspan="5" class="fw-bold category-separator" style="color: #777; border-top: 2px solid #dee2e6;">{{ category.msc }} {{ category.name }}</td>
         </tr>
         {% for group_id in category.groups %}
           {% assign group = site.data.constant_groups[group_id] %}
@@ -46,6 +48,14 @@
                 <span class="badge bg-warning">{{ coverage }}%</span>
               {% else %}
                 <span class="badge bg-danger">0%</span>
+              {% endif %}
+            </td>
+            <td>
+              {% assign verified = group.stats.verified_lower_bounds | plus: group.stats.verified_upper_bounds %}
+              {% if verified > 0 %}
+                <span class="badge bg-success">{{ verified }}</span>
+              {% else %}
+                <span class="text-muted">&ndash;</span>
               {% endif %}
             </td>
           </tr>

@@ -1,0 +1,109 @@
+"""Verify certificates and check them against each other and the literature.
+
+Usage:
+    python scripts/check_certificates.py [--lean] [--improves FILE ...]
+
+--lean checks Lean proofs (needs the formal/ project built); without it they
+are skipped. --improves requires the given certificate files to be strictly
+stronger than every other certificate for the same bound, as for new
+submissions.
+"""
+
+import argparse
+import pathlib
+import sys
+
+import yaml
+
+from certificates import (
+    CertificateError,
+    best_certificates,
+    check_certificate,
+    is_better,
+    load_certificates,
+)
+from process_data import assign_updates_and_values, get_constants, load_updates
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--lean", action="store_true", help="also check Lean proofs")
+    parser.add_argument("--improves", nargs="*", default=[], metavar="FILE",
+                        help="certificate files that must improve on all others")
+    args = parser.parse_args()
+
+    with open("source_data/constant_groups.yml") as file:
+        groups = yaml.safe_load(file)
+    with open("source_data/sources.yml") as file:
+        sources = yaml.safe_load(file)
+    constants = get_constants(groups)
+    assign_updates_and_values(constants, load_updates("source_data/updates", sources))
+
+    errors = []
+    try:
+        certificates = load_certificates()
+    except CertificateError as e:
+        sys.exit(f"Error: {e}")
+
+    # Check each certificate's evidence
+    failed = set()
+    for cert in certificates.values():
+        try:
+            if cert["constant"] not in constants:
+                raise CertificateError(f"Unknown constant {cert['constant']}")
+            if "source" in cert and cert["source"] not in sources:
+                raise CertificateError(f"Unknown source {cert['source']}")
+            if check_certificate(cert, lean=args.lean):
+                print(f"ok       {cert['id']}")
+            else:
+                print(f"skipped  {cert['id']} (Lean; run with --lean)")
+        except CertificateError as e:
+            errors.append(f"{cert['id']}: {e}")
+            failed.add(cert["id"])
+            print(f"FAILED   {cert['id']}")
+    certificates = {k: v for k, v in certificates.items() if k not in failed}
+
+    # Check verified bounds against each other and against the literature
+    best = best_certificates(certificates)
+    for (constant_id, bound), cert in best.items():
+        if bound != "lower":
+            continue
+        upper = best.get((constant_id, "upper"))
+        if upper is not None and cert["value"] > upper["value"]:
+            errors.append(f"{cert['id']} contradicts {upper['id']}")
+    for (constant_id, bound), cert in best.items():
+        opposite = constants[constant_id]["upper_bound" if bound == "lower" else "lower_bound"]
+        if opposite is None or opposite.decimal_approx is None:
+            continue
+        if is_better(bound, cert["value"], opposite.decimal_approx):
+            errors.append(
+                f"{cert['id']} contradicts the literature {'upper' if bound == 'lower' else 'lower'} "
+                f"bound ${opposite.latex}$ for {constant_id}"
+            )
+
+    # Check that new submissions improve on existing certificates
+    for path in args.improves:
+        cert_id = pathlib.Path(path).stem
+        if cert_id in failed:
+            continue
+        if cert_id not in certificates:
+            errors.append(f"{path} is not a certificate")
+            continue
+        cert = certificates[cert_id]
+        others = {k: v for k, v in certificates.items() if k != cert_id}
+        previous = best_certificates(others).get((cert["constant"], cert["bound"]))
+        if previous is not None and not is_better(cert["bound"], cert["value"], previous["value"]):
+            errors.append(f"{cert_id} does not improve on {previous['id']} ({cert['bound']} bound {previous['value']})")
+        else:
+            was = previous["value"] if previous else "none"
+            print(f"improves {cert['constant']} {cert['bound']} bound: {was} -> {cert['value']}")
+
+    if errors:
+        print("\nErrors:")
+        for error in errors:
+            print(f"- {error}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

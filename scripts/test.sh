@@ -11,5 +11,6 @@ mkdir -p data
 python scripts/convert_data.py
 
 python scripts/validate_data.py
+python scripts/check_certificates.py
 
 bundle exec jekyll serve

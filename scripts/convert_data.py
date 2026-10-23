@@ -71,13 +71,15 @@ constants_list = []
 for constant_id, constant_data in constants.items():
     constant_dict = {'id': constant_id}
     for k, v in constant_data.items():
-        if k not in ['updates', 'description']:
+        if k not in ['updates', 'description', 'certificates']:
             constant_dict[k] = v
     
     # Flatten nested value dictionaries
     flatten_value_dict(constant_dict, 'exact_value')
     flatten_value_dict(constant_dict, 'lower_bound')
     flatten_value_dict(constant_dict, 'upper_bound')
+    flatten_value_dict(constant_dict, 'verified_lower_bound')
+    flatten_value_dict(constant_dict, 'verified_upper_bound')
             
     constants_list.append(constant_dict)
 
