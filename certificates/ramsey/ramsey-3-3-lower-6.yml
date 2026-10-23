@@ -1,0 +1,10 @@
+constant: ramsey-3-3
+bound: lower
+value: 6
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.Ramsey33
+  theorem: LeapsInBounds.Proofs.Ramsey33.lower
+submitted_by: Daniel Munro
+date: 2026-10-22
+notes: The 5-cycle has no triangle and neither does its complement (checked by decide).

@@ -50,8 +50,49 @@ layout: default
   {% endif %}
 </div>
 
+{% if constant.certifiable %}
+<h2>Verified bounds</h2>
 
-<h2>Updates</h2>
+<p class="text-muted small">
+  Verified bounds come with a certificate that is checked automatically: a formal proof in Lean, or an explicit construction checked by a program.
+  <a href="{{ site.repository }}/blob/main/certificates/README.md">Submit a certificate</a>.
+</p>
+
+{% assign verified_sides = "lower,upper" | split: "," %}
+<ul>
+  {% for side in verified_sides %}
+  {% if side == "lower" %}
+    {% assign verified_value = constant.verified_lower_bound %}
+    {% assign verified_id = constant.verified_lower_certificate %}
+  {% else %}
+    {% assign verified_value = constant.verified_upper_bound %}
+    {% assign verified_id = constant.verified_upper_certificate %}
+  {% endif %}
+  <li>
+    <strong>{{ side | capitalize }} bound:</strong>
+    {% if verified_value != null %}
+      ${{ verified_value.latex }}$
+      {% assign cert = constant.certificates | where: "id", verified_id | first %}
+      {% if cert.kind == "lean" %}
+        <span class="badge bg-success">Lean proof</span>
+      {% else %}
+        <span class="badge bg-success">Checked construction</span>
+      {% endif %}
+      <br><a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
+      submitted by {{ cert.submitted_by }}, {{ cert.date }}
+      {% if cert.source %}
+        {% assign source = site.data.sources[cert.source] %}
+        <br>[construction from {{ source.string }}]
+      {% endif %}
+    {% else %}
+      <em>None yet</em>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<h2>Updates from the literature</h2>
 
 <ul>
   {% for update in constant.updates %}

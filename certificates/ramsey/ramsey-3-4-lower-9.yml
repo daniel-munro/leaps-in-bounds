@@ -1,0 +1,11 @@
+constant: ramsey-3-4
+bound: lower
+value: 9
+kind: witness
+witness:
+  format: graph6
+  data: 'GhdHKc'
+submitted_by: Daniel Munro
+date: 2026-10-22
+source: greenwood-gleason-1955
+notes: Circulant graph C8(1,4) (the Wagner graph) has no 3-clique and no independent set of size 4.

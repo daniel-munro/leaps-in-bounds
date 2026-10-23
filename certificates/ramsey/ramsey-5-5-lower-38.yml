@@ -1,0 +1,10 @@
+constant: ramsey-5-5
+bound: lower
+value: 38
+kind: witness
+witness:
+  format: graph6
+  data: 'dlthktLhme|L|L]efhg|LbstFhhFhgbssG|L`FhiC]ecG|LCG|LaC]ew`FhnCG|L{Obstw`Fhlw`Fhi{ObssnCG|Ldw`FhmVaC]eknCG|LknCG|L'
+submitted_by: Daniel Munro
+date: 2026-10-22
+notes: Paley graph of order 37 has no 5-clique and no independent set of size 5.

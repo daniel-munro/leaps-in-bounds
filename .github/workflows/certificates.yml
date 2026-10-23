@@ -1,0 +1,64 @@
+name: Certificates
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Submissions run untrusted Lean code at build time, so keep the token read-only.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Lean
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch Mathlib and build proofs
+        working-directory: formal
+        run: |
+          lake exe cache get
+          lake build
+
+      - name: Find new certificates
+        id: changed
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          files=$(git diff --name-only --diff-filter=A "origin/$BASE_REF...HEAD" -- 'certificates/*.yml' | tr '\n' ' ')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+
+      - name: Check certificates
+        env:
+          NEW_FILES: ${{ steps.changed.outputs.files }}
+        run: python scripts/check_certificates.py --lean --improves $NEW_FILES
+
+      - name: Flag changes to trusted files
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          trusted=$(git diff --name-only "origin/$BASE_REF...HEAD" -- \
+            formal/LeapsInBounds/Statements formal/lakefile.toml formal/lean-toolchain \
+            formal/lake-manifest.json scripts .github)
+          if [ -n "$trusted" ]; then
+            echo "::warning::This PR changes files that define or check what certificates mean, so it needs careful review:"
+            echo "$trusted"
+          fi

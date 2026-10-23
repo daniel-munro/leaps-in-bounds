@@ -147,3 +147,16 @@ h1 {
     margin-top: 0.5rem;
     font-style: italic;
 }
+
+.constant-cell, .constant-box {
+    position: relative;
+}
+
+.verified-mark {
+    position: absolute;
+    top: 1px;
+    right: 3px;
+    font-size: 0.7em;
+    color: #198754;
+    font-weight: bold;
+}

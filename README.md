@@ -18,6 +18,16 @@ There are three data layers that feed the site, each with a different purpose:
 
 In short: edit `source_data/` → run the build/test scripts → `_data/` powers the site → `data/` powers downloads.
 
+## Verified Bounds (Pilot)
+
+Alongside bounds from the literature, constants can have verified bounds backed by a certificate that is checked automatically: an explicit construction checked by a program, or a formal proof in Lean.
+
+- `certificates/`: One YAML file per certificate. See [certificates/README.md](certificates/README.md) for the format and how to submit one.
+- `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
+- `scripts/check_certificates.py`: Verifies all certificates. CI runs it on every pull request.
+
+Only the Ramsey numbers accept certificates so far.
+
 ## Development Setup
 
 Some data is preprocessed using Python scripts. If you don't need to modify the data, you can skip the Python setup (steps 1 and 2).

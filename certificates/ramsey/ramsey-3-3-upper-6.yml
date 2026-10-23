@@ -1,0 +1,10 @@
+constant: ramsey-3-3
+bound: upper
+value: 6
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.Ramsey33
+  theorem: LeapsInBounds.Proofs.Ramsey33.upper
+submitted_by: Daniel Munro
+date: 2026-10-22
+notes: Pigeonhole on the five edges at one vertex.

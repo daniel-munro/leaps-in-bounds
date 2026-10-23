@@ -3,8 +3,9 @@
 1. Generate list of constants from constant groups.
 2. Use sources to assign dates to updates.
 3. Find most recent updates for each constant's bounds or exact value.
-4. Process images for constants.
-5. Add statistics to each constant group.
+4. Attach certificates and find verified bounds.
+5. Process images for constants.
+6. Add statistics to each constant group.
 """
 
 import itertools
@@ -12,6 +13,7 @@ import pathlib
 import yaml
 import csv
 from typing import Any, Mapping
+from certificates import FAMILIES, best_certificates, load_certificates
 from utils import Value, QuotedString, process_constant_images
 
 
@@ -105,7 +107,8 @@ def get_constants(groups: Mapping[str, Mapping[str, Any]]) -> dict[str, dict[str
         if not group.get("parameters"):
             constant = {
                 "name": group["name"],
-                "description": group["description"]
+                "description": group["description"],
+                "group": group_id,
             }
             constants[group_id] = constant
             continue
@@ -131,6 +134,7 @@ def get_constants(groups: Mapping[str, Mapping[str, Any]]) -> dict[str, dict[str
             id = group["id_template"].format(**params)
             constant["name"] = group["name_template"].format(**params)
             constant["description"] = group["description_template"].format(**params)
+            constant["group"] = group_id
             constants[id] = constant
     return constants
 
@@ -190,6 +194,41 @@ def assign_updates_and_values(
             raise AssertionError(f"Lower bound exceeds upper bound")
 
 
+def assign_certificates(
+    constants: dict[str, dict[str, Any]],
+    certificates: Mapping[str, Mapping[str, Any]],
+) -> None:
+    """Attach certificates to constants and set their verified bounds.
+
+    Certificates are assumed to have been checked already (see
+    scripts/check_certificates.py, which runs in CI).
+
+    Args:
+        constants: Dictionary of constants.
+        certificates: Dictionary of certificates.
+    """
+    for constant in constants.values():
+        constant["certifiable"] = constant["group"] in FAMILIES
+        constant["verified_lower_bound"] = None
+        constant["verified_lower_certificate"] = None
+        constant["verified_upper_bound"] = None
+        constant["verified_upper_certificate"] = None
+        constant["certificates"] = []
+
+    for cert in sorted(certificates.values(), key=lambda c: c["date"]):
+        if cert["constant"] not in constants:
+            raise ValueError(f"Certificate {cert['id']} is for unknown constant {cert['constant']}")
+        fields = ["id", "bound", "value", "kind", "submitted_by", "date", "source", "notes", "path"]
+        summary = {k: cert[k] for k in fields if k in cert}
+        if cert["kind"] == "lean":
+            summary["theorem"] = cert["lean"]["theorem"]
+        constants[cert["constant"]]["certificates"].append(summary)
+
+    for (constant_id, bound), cert in best_certificates(certificates).items():
+        constants[constant_id][f"verified_{bound}_bound"] = Value(str(cert["value"]))
+        constants[constant_id][f"verified_{bound}_certificate"] = cert["id"]
+
+
 def calculate_group_stats(
     group_id: str,
     constants: Mapping[str, Mapping[str, Any]],
@@ -211,12 +250,14 @@ def calculate_group_stats(
         "unbounded": 0,
         "total_updates": 0,
         "updates_with_sources": 0,
+        "verified_lower_bounds": 0,
+        "verified_upper_bounds": 0,
     }
     
     # Find constants belonging to this group
     group_constants = {
-        id: const for id, const in constants.items() 
-        if id.startswith(group_id)
+        id: const for id, const in constants.items()
+        if const["group"] == group_id
     }
     
     stats["total_constants"] = len(group_constants)
@@ -238,6 +279,8 @@ def calculate_group_stats(
             1 for update in const["updates"] 
             if update.get("primary_source") is not None
         )
+        stats["verified_lower_bounds"] += const["verified_lower_bound"] is not None
+        stats["verified_upper_bounds"] += const["verified_upper_bound"] is not None
     
     # Calculate percentages
     if stats["total_updates"] > 0:
@@ -252,13 +295,11 @@ def calculate_group_stats(
 
 def write_constants(constants: dict[str, dict[str, Any]], filename: str) -> None:
     """Write processed constants info to a YAML file."""
+    value_fields = ["exact_value", "lower_bound", "upper_bound", "verified_lower_bound", "verified_upper_bound"]
     for constant in constants.values():
-        if constant["exact_value"] is not None:
-            constant["exact_value"] = constant["exact_value"].to_dict()
-        if constant["lower_bound"] is not None:
-            constant["lower_bound"] = constant["lower_bound"].to_dict()
-        if constant["upper_bound"] is not None:
-            constant["upper_bound"] = constant["upper_bound"].to_dict()
+        for field in value_fields:
+            if constant[field] is not None:
+                constant[field] = constant[field].to_dict()
     with open(filename, "w") as file:
         yaml.dump(constants, file, sort_keys=False)
 
@@ -277,46 +318,54 @@ def write_groups(groups: dict[str, dict[str, Any]], filename: str) -> None:
     yaml.add_representer(list, default_representer)
 
 
-with open("source_data/constant_groups.yml", "r") as file:
-    groups = yaml.safe_load(file)
+def main() -> None:
+    with open("source_data/constant_groups.yml", "r") as file:
+        groups = yaml.safe_load(file)
 
-with open("_data/sources.yml", "r") as file:
-    sources = yaml.safe_load(file)
+    with open("_data/sources.yml", "r") as file:
+        sources = yaml.safe_load(file)
 
-# Load source data for constants (for image metadata)
-with open('source_data/constants.yml', 'r') as file:
-    constants_metadata = yaml.safe_load(file) or {}
+    # Load source data for constants (for image metadata)
+    with open('source_data/constants.yml', 'r') as file:
+        constants_metadata = yaml.safe_load(file) or {}
 
-updates = load_updates("source_data/updates", sources)
+    updates = load_updates("source_data/updates", sources)
 
-constants = get_constants(groups)
-assign_updates_and_values(constants, updates)
+    constants = get_constants(groups)
+    assign_updates_and_values(constants, updates)
 
-# Cache images and update constants with image metadata
-process_constant_images(constants_metadata)
-for constant_id, data in constants_metadata.items():
-    if data:
-        for field in data:
-            constants[constant_id][field] = data[field]
+    # Cache images and update constants with image metadata
+    process_constant_images(constants_metadata)
+    for constant_id, data in constants_metadata.items():
+        if data:
+            for field in data:
+                constants[constant_id][field] = data[field]
 
-# Save combined updates for download
-for update in updates:
-    update["value"] = update["value"].to_dict()
-with open("_data/updates.yml", "w") as file:
-    yaml.dump(updates, file, sort_keys=False)
+    certificates = load_certificates()
+    assign_certificates(constants, certificates)
 
-# Save constants for download
-write_constants(constants, "_data/constants.yml")
+    # Save combined updates for download
+    for update in updates:
+        update["value"] = update["value"].to_dict()
+    with open("_data/updates.yml", "w") as file:
+        yaml.dump(updates, file, sort_keys=False)
 
-# Add category to each group
-with open("source_data/categories.yml", "r") as file:
-    categories = yaml.safe_load(file)
-for category in categories:
-    for group_id in category["groups"]:
-        groups[group_id]["category"] = f"{category['msc']} {category['name']}"
+    # Save constants for download
+    write_constants(constants, "_data/constants.yml")
 
-# Add statistics to each group
-for group_id, group in groups.items():
-    group["stats"] = calculate_group_stats(group_id, constants)
+    # Add category to each group
+    with open("source_data/categories.yml", "r") as file:
+        categories = yaml.safe_load(file)
+    for category in categories:
+        for group_id in category["groups"]:
+            groups[group_id]["category"] = f"{category['msc']} {category['name']}"
 
-write_groups(groups, "_data/constant_groups.yml")
+    # Add statistics to each group
+    for group_id, group in groups.items():
+        group["stats"] = calculate_group_stats(group_id, constants)
+
+    write_groups(groups, "_data/constant_groups.yml")
+
+
+if __name__ == "__main__":
+    main()
