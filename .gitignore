@@ -3,6 +3,7 @@
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.claude
 vendor
 Gemfile.lock
 __pycache__
