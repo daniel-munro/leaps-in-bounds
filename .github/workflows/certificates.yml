@@ -1,9 +1,16 @@
 name: Certificates
 
+# Certificates are also checked against the literature (without Lean) in the Site workflow
 on:
   pull_request:
+    paths: &paths
+      - "certificates/**"
+      - "formal/**"
+      - "scripts/**"
+      - ".github/**"
   push:
     branches: [main]
+    paths: *paths
 
 # Submissions run untrusted Lean code at build time, so keep the token read-only.
 permissions:

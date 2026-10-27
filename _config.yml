@@ -53,3 +53,8 @@ exclude:
   - vendor/ruby/
   - scripts/
   - source_data/
+  - certificates/
+  - formal/
+  - README.md
+  - LICENSE
+  - requirements.txt

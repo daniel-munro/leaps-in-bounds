@@ -1,3 +1,5 @@
+# Process data, check it, and build the site.
+# Usage: sh scripts/build.sh [serve]
 set -e
 
 mkdir -p _data
@@ -10,4 +12,11 @@ python scripts/generate_pages.py
 mkdir -p data
 python scripts/convert_data.py
 
-bundle exec jekyll build
+python scripts/validate_data.py
+python scripts/check_certificates.py
+
+if [ "$1" = "serve" ]; then
+    bundle exec jekyll serve
+else
+    bundle exec jekyll build
+fi
