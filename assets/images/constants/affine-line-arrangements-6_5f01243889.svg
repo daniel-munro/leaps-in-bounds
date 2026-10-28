@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="400"
+   height="400"
+   id="svg2">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath3413">
+      <rect
+         width="400"
+         height="400"
+         x="0"
+         y="-6.2003354e-15"
+         id="rect3415"
+         style="opacity:0.5;fill:#7f7f7f;fill-opacity:1;stroke:none;stroke-width:0.99750626;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath3417">
+      <rect
+         width="400"
+         height="400"
+         x="0"
+         y="-6.2003354e-15"
+         id="rect3419"
+         style="opacity:0.5;fill:#7f7f7f;fill-opacity:1;stroke:none;stroke-width:0.99750626;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+    <clipPath
+       id="clipPath3421">
+      <rect
+         width="400"
+         height="400"
+         x="0"
+         y="-6.2003354e-15"
+         id="rect3423"
+         style="opacity:0.5;fill:#7f7f7f;fill-opacity:1;stroke:none;stroke-width:0.99750626;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </clipPath>
+  </defs>
+  <text
+     x="210.13374"
+     y="205.57553"
+     clip-path="url(#clipPath3421)"
+     id="text2383"
+     xml:space="preserve"
+     style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Comic Sans MS;-inkscape-font-specification:Comic Sans MS"><tspan
+       x="210.13374"
+       y="205.57553"
+       id="tspan2385"
+       style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman;-inkscape-font-specification:Times New Roman">A</tspan></text>
+  <g
+     clip-path="url(#clipPath3417)"
+     id="g3405">
+    <path
+       d="M -82.76508,509.18052 L 482.76508,-109.18056"
+       id="path3403"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 446.7358,538.6298 L -46.7358,-138.62976"
+       id="path3401"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 330.07584,598.28252 L 69.92412,-198.28252"
+       id="path3399"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 187.26976,618.79188 L 212.7302,-218.79188"
+       id="path3397"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 79.2458,601.20708 L 320.7542,-201.20708"
+       id="path3395"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M -34.11376,547.4758 L 434.11376,-147.4758"
+       id="path2387"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+  <path
+     d="M 203.00174,200 C 203.0032,201.0734 202.4314,202.06588 201.50204,202.60302 C 200.5727,203.14014 199.42728,203.14014 198.49794,202.60302 C 197.56858,202.06588 196.99678,201.0734 196.99824,200 C 196.99678,198.9266 197.56858,197.93412 198.49794,197.39698 C 199.42728,196.85986 200.5727,196.85986 201.50204,197.39698 C 202.4314,197.93412 203.0032,198.9266 203.00174,200 z"
+     clip-path="url(#clipPath3413)"
+     id="path2399"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+</svg>

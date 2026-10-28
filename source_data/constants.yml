@@ -4,7 +4,7 @@
 
 ramsey-3-3:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ramsey_theorem_visual_proof.svg/480px-Ramsey_theorem_visual_proof.svg.png"
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ramsey_theorem_visual_proof.svg/500px-Ramsey_theorem_visual_proof.svg.png"
     credit: "Cmglee, via Wikimedia Commons"
     license: "CC BY-SA 4.0"
     alt_text: "Proof of Ramsey's theorem for R(3,3)"
@@ -172,7 +172,7 @@ map-folding-2-2:
 
 circle-in-equilateral-1:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/0/0e/CircleInEquilateralTrianglePacking%281%29.png"
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Circle_packing_in_equilateral_triangle_for_1_circle.png"
     credit: "OwOUwUOwU, via Wikimedia Commons"
     license: "CC BY-SA 4.0"
     alt_text: "Packing one unit circle in an equilateral triangle"
@@ -207,7 +207,7 @@ circle-in-equilateral-5:
 
 circle-in-equilateral-6:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Circle_packing_in_equilateral_triangle_for_6.png"
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/f/fe/Circle_packing_in_equilateral_triangle_for_6_circles.png"
     credit: "OwOUwUOwU, via Wikimedia Commons"
     license: "CC BY-SA 4.0"
     alt_text: "Packing six unit circles in an equilateral triangle"
@@ -242,7 +242,7 @@ circle-in-equilateral-10:
 
 circle-in-equilateral-11:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/b1/Ircle_packing_in_equilateral_triangle_for_11_circles.png"
+    source_url: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Circle_packing_in_equilateral_triangle_for_11_circles.png"
     credit: "OwOUwUOwU, via Wikimedia Commons"
     license: "CC BY-SA 4.0"
     alt_text: "Packing 11 unit circles in an equilateral triangle"

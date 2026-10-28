@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="272.7106781186548" height="272.7106781186548" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="0" y="0" width="100%" height="100%" fill="white" />
+<g stroke="black" stroke-width="2" transform="translate(1,1)">
+<g id="b">
+<g id="a">
+<path fill="#82fa82" d="M0,0 h100 v100 H0 z" />
+<path fill="#dcdc64" d="M0,100 h100 v70.7106781186548 H0 z" />
+</g>
+<use x="0" y="0" xlink:href="#a" transform="rotate(90 135.3553390593274 135.3553390593274)" />
+</g>
+<use x="0" y="0" xlink:href="#b" transform="rotate(180 135.3553390593274 135.3553390593274)" />
+<path transform="rotate(45 135.3553390593274 135.3553390593274)" fill="#82fa82" d="M85.3553390593274,85.3553390593274 h100 v100 h-100 z" />
+</g>
+</svg>
