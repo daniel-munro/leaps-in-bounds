@@ -3,6 +3,8 @@
 import os
 import requests
 import hashlib
+import time
+import truststore
 from PIL import Image
 import io
 from sympy.parsing.latex import parse_latex
@@ -80,40 +82,51 @@ class QuotedString(str):
     pass
 
 
-def download_image(url: str, file_extension: str, output_path: str) -> None:
-    """Download an image from a URL and save it to a file."""
-    try:
-        user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15'
-        response = requests.get(url, headers={'User-Agent': user_agent})
-        
-        if response.status_code == 200:
-            # For SVG files, just save as-is
-            if file_extension == '.svg':
-                with open(output_path, 'wb') as f:
-                    f.write(response.content)
-            else:
-                # Process raster images
-                img = Image.open(io.BytesIO(response.content))
-                
-                # Resize if needed (e.g., max height of 800px)
-                max_height = 800
-                if img.height > max_height:
-                    ratio = max_height / img.height
-                    new_size = (int(img.width * ratio), max_height)
-                    img = img.resize(new_size, Image.LANCZOS)
-                
-                # Save with optimization
-                img.save(output_path, optimize=True, quality=85)
-        else:
-            print(f"Failed to download image to {output_path}: {response.status_code}")
-    except Exception as e:
-        print(f"Error processing image {output_path}: {e}")
-        
+# Use the OS certificate store so downloads work behind TLS-inspecting proxies
+truststore.inject_into_ssl()
+
+USER_AGENT = 'LeapsInBoundsBot/1.0 (https://github.com/daniel-munro/leaps-in-bounds)'
+
+
+def download_image(url: str, file_extension: str, output_path: str, retries: int = 3) -> None:
+    """Download an image from a URL and save it to a file.
+
+    Retries with backoff when rate limited, and raises if the download fails.
+    """
+    for attempt in range(retries):
+        response = requests.get(url, headers={'User-Agent': USER_AGENT}, timeout=30)
+        if response.status_code != 429 or attempt == retries - 1:
+            break
+        wait = int(response.headers.get('Retry-After', 5 * 2 ** attempt))
+        print(f"Rate limited, retrying in {wait}s...")
+        time.sleep(wait)
+    response.raise_for_status()
+
+    # For SVG files, just save as-is
+    if file_extension == '.svg':
+        with open(output_path, 'wb') as f:
+            f.write(response.content)
+        return
+
+    # Process raster images
+    img = Image.open(io.BytesIO(response.content))
+
+    # Resize if needed (e.g., max height of 800px)
+    max_height = 800
+    if img.height > max_height:
+        ratio = max_height / img.height
+        new_size = (int(img.width * ratio), max_height)
+        img = img.resize(new_size, Image.LANCZOS)
+
+    # Save with optimization
+    img.save(output_path, optimize=True, quality=85)
+
 
 def process_constant_images(constants: MutableMapping[str, Any]) -> None:
     """Process images for constants.
     
-    Downloads images, optimizes them, and updates constants with image paths.
+    Downloads images not already cached, optimizes them, and updates constants
+    with image paths. Cached images no longer referenced are removed.
     
     Args:
         constants: Dictionary of constants.
@@ -121,6 +134,7 @@ def process_constant_images(constants: MutableMapping[str, Any]) -> None:
     # Create output directory if it doesn't exist
     output_dir = 'assets/images/constants'
     os.makedirs(output_dir, exist_ok=True)
+    used_files = set()
     
     # Process each constant with image data
     for constant_id, data in constants.items():
@@ -137,12 +151,17 @@ def process_constant_images(constants: MutableMapping[str, Any]) -> None:
 
         # Generate hash of the URL to use in filename
         url_hash = hashlib.md5(source_url.encode()).hexdigest()[:10]  # First 10 chars of hash for brevity
-        output_path = os.path.join(output_dir, f"{constant_id}_{url_hash}{file_extension}")
+        filename = f"{constant_id}_{url_hash}{file_extension}"
+        output_path = os.path.join(output_dir, filename)
+        used_files.add(filename)
         
         if not os.path.exists(output_path):
             # Download the image
             print(f"Downloading image for {constant_id} from {source_url}...")
-            download_image(source_url, file_extension, output_path)
+            try:
+                download_image(source_url, file_extension, output_path)
+            except Exception as e:
+                raise RuntimeError(f"Failed to download image for {constant_id} from {source_url}: {e}") from e
         
         # Update the constant with the image path
         image_path = f"/{output_path}"
@@ -150,5 +169,9 @@ def process_constant_images(constants: MutableMapping[str, Any]) -> None:
         
         # Remove source_url from the output as we don't need it in the final data
         del constants[constant_id]['image']['source_url']
-    
-    # print(f"Processed images for constants with image data.")
+
+    # Remove cached images that no constant references anymore
+    for filename in os.listdir(output_dir):
+        if filename not in used_files and not filename.startswith('.'):
+            print(f"Removing unused image {filename}")
+            os.remove(os.path.join(output_dir, filename))
