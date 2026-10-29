@@ -1,0 +1,10 @@
+constant: van-der-waerden-3-3
+bound: lower
+value: 27
+kind: witness
+witness:
+  format: coloring
+  data: '00110012122020010112022121'
+submitted_by: Claude
+date: 2026-10-28
+notes: Found by backtracking search.

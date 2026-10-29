@@ -1,0 +1,10 @@
+constant: cage-6-6
+bound: upper
+value: 62
+kind: witness
+witness:
+  format: sparse6
+  file: cage-6-6-upper-62.s6
+submitted_by: Claude
+date: 2026-10-28
+notes: Incidence graph of the projective plane $PG(2,5)$.

@@ -1,0 +1,10 @@
+constant: degree-diameter-7-2
+bound: lower
+value: 50
+kind: witness
+witness:
+  format: graph6
+  file: degree-diameter-7-2-lower-50.g6
+submitted_by: Claude
+date: 2026-10-28
+notes: The Hoffman-Singleton graph, a Moore graph.

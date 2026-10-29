@@ -1,0 +1,10 @@
+constant: cage-7-3
+bound: upper
+value: 8
+kind: witness
+witness:
+  format: graph6
+  data: 'G~~~~{'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete graph $K_{8}$.

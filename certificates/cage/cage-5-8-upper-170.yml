@@ -1,0 +1,10 @@
+constant: cage-5-8
+bound: upper
+value: 170
+kind: witness
+witness:
+  format: sparse6
+  file: cage-5-8-upper-170.s6
+submitted_by: Claude
+date: 2026-10-28
+notes: Incidence graph of the symplectic generalized quadrangle $W(4)$.

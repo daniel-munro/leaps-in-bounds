@@ -1,0 +1,10 @@
+constant: cage-14-3
+bound: upper
+value: 15
+kind: witness
+witness:
+  format: graph6
+  data: 'N~~~~~~~~~~~~~~~~~w'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete graph $K_{15}$.

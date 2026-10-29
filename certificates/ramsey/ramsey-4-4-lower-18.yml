@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: graph6
   data: 'PzlXWmJpZDeJEJbDgp\EJsWk'
-submitted_by: Daniel Munro
+submitted_by: Claude
 date: 2026-10-22
 source: greenwood-gleason-1955
 notes: Paley graph of order 17 has no 4-clique and no independent set of size 4.

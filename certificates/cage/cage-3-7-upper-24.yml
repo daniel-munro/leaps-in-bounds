@@ -1,0 +1,10 @@
+constant: cage-3-7
+bound: upper
+value: 24
+kind: witness
+witness:
+  format: sparse6
+  data: ':W_`abcde`FghcI_JkfLbMniOePaQlRhSdT_OU'
+submitted_by: Claude
+date: 2026-10-28
+notes: The McGee graph, LCF notation $[12,7,-7]^8$.

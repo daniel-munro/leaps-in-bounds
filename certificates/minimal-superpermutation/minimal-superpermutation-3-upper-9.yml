@@ -1,0 +1,11 @@
+constant: minimal-superpermutation-3
+bound: upper
+value: 9
+kind: witness
+witness:
+  format: string
+  data: '123121321'
+submitted_by: Claude
+date: 2026-10-28
+source: egan-superpermutations
+notes: The standard recursive construction, of length 1! + 2! + ... + n!.

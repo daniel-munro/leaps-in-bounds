@@ -1,0 +1,10 @@
+constant: cage-4-4
+bound: upper
+value: 8
+kind: witness
+witness:
+  format: graph6
+  data: 'G?~vf_'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete bipartite graph $K_{4,4}$.

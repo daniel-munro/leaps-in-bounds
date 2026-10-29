@@ -1,0 +1,10 @@
+constant: cage-7-5
+bound: upper
+value: 50
+kind: witness
+witness:
+  format: graph6
+  file: cage-7-5-upper-50.g6
+submitted_by: Claude
+date: 2026-10-28
+notes: The Hoffman-Singleton graph (Robertson's pentagon-pentagram construction).

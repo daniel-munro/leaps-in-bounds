@@ -1,0 +1,10 @@
+constant: cage-3-4
+bound: upper
+value: 6
+kind: witness
+witness:
+  format: graph6
+  data: 'EFz_'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete bipartite graph $K_{3,3}$.

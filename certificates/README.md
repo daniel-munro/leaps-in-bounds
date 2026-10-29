@@ -4,7 +4,7 @@ A certificate claims a lower or upper bound on one constant and comes with evide
 
 Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks every certificate, and a new certificate must be strictly stronger than the existing ones for the same bound.
 
-This is a pilot. Only the Ramsey numbers (`ramsey-{r}-{s}`) accept certificates so far.
+This is a pilot. Only the families listed [below](#families) accept certificates so far.
 
 ## File format
 
@@ -45,6 +45,10 @@ A theorem in the [`formal/`](../formal) Lean project whose type is exactly the f
 
 The statement files are trusted: they define what every certificate means. Submissions should only add files under `formal/LeapsInBounds/Proofs/`. CI flags any pull request that changes the statements or the checking scripts.
 
+## Graph witnesses
+
+Families whose witnesses are graphs accept them in [graph6 or sparse6](https://users.cecs.anu.edu.au/~bdm/data/formats.txt) format (`format: graph6` or `format: sparse6`), with vertices numbered from 0. Use whichever is shorter: graph6 for dense graphs, sparse6 for sparse ones. By convention, witness files use the extensions `.g6` and `.s6`.
+
 ## Families
 
 ### Ramsey numbers: `ramsey-{r}-{s}`
@@ -56,7 +60,43 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Ramsey.lean`](../form
 
 The same file proves that a lower bound never exceeds an upper bound, as a sanity check on the definitions.
 
-Witnesses can certify lower bounds only. A witness for `R(r,s) >= n` is a graph on `n - 1` vertices in [graph6](https://users.cecs.anu.edu.au/~bdm/data/formats.txt) format, with no `r`-clique and no independent set of size `s`.
+Witnesses can certify lower bounds only. A witness for `R(r,s) >= n` is a graph on `n - 1` vertices with no `r`-clique and no independent set of size `s`.
+
+### Van der Waerden numbers: `van-der-waerden-{r}-{k}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/VanDerWaerden.lean`](../formal/LeapsInBounds/Statements/VanDerWaerden.lean):
+
+- `LowerBound r k n` means `W(r,k) >= n`: some `r`-coloring of `n - 1` consecutive integers has no monochromatic arithmetic progression of length `k`.
+- `UpperBound r k n` means `W(r,k) <= n`: every `r`-coloring of `n` consecutive integers has one.
+
+Witnesses can certify lower bounds only. A witness for `W(r,k) >= n` uses `format: coloring`: a string of `n - 1` digits from `0` to `r - 1` (so `r <= 10`), the colors of consecutive integers, with no monochromatic arithmetic progression of length `k`. Whitespace is ignored.
+
+### Cages: `cage-{k}-{g}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Cage.lean`](../formal/LeapsInBounds/Statements/Cage.lean):
+
+- `LowerBound k g n` means `n(k,g) >= n`: no graph on fewer than `n` vertices is `k`-regular with girth `g`.
+- `UpperBound k g n` means `n(k,g) <= n`: some graph on `n` vertices is `k`-regular with girth `g`.
+
+Witnesses can certify upper bounds only. A witness for `n(k,g) <= n` is a `k`-regular graph of girth exactly `g` on `n` vertices.
+
+### Degree-diameter problem: `degree-diameter-{d}-{k}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/DegreeDiameter.lean`](../formal/LeapsInBounds/Statements/DegreeDiameter.lean):
+
+- `LowerBound d k n` means `N(d,k) >= n`: some graph on `n` vertices has maximum degree at most `d` and diameter at most `k`.
+- `UpperBound d k n` means `N(d,k) <= n`: every such graph has at most `n` vertices.
+
+Witnesses can certify lower bounds only. A witness for `N(d,k) >= n` is a graph on `n` vertices with maximum degree at most `d` and diameter at most `k`.
+
+### Minimal superpermutations: `minimal-superpermutation-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Superpermutation.lean`](../formal/LeapsInBounds/Statements/Superpermutation.lean):
+
+- `LowerBound n m` means `L(n) >= m`: every string containing all permutations of `n` symbols has length at least `m`.
+- `UpperBound n m` means `L(n) <= m`: some such string has length at most `m`.
+
+Witnesses can certify upper bounds only. A witness for `L(n) <= m` uses `format: string`: a string of at most `m` digits from `1` to `n` (so `n <= 9`) that contains every permutation of those digits as a contiguous substring. Whitespace is ignored.
 
 ## Checking locally
 
@@ -71,7 +111,7 @@ cd formal && lake exe cache get && lake build && cd ..
 python scripts/check_certificates.py --lean
 ```
 
-Add `--improves certificates/ramsey/<file>.yml` to check that a new certificate beats the existing ones, as CI does.
+Add `--improves certificates/<group>/<file>.yml` to check that a new certificate beats the existing ones, as CI does.
 
 ## Known gaps
 

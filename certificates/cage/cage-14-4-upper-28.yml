@@ -1,0 +1,10 @@
+constant: cage-14-4
+bound: upper
+value: 28
+kind: witness
+witness:
+  format: graph6
+  data: '[???????????????^~~~}~~r~~F~}F~}B~~?~~oF~}?^~w?~~o?~~o?^~w?F~}??'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete bipartite graph $K_{14,14}$.

@@ -1,0 +1,11 @@
+constant: minimal-superpermutation-5
+bound: upper
+value: 153
+kind: witness
+witness:
+  format: string
+  file: minimal-superpermutation-5-upper-153.txt
+submitted_by: Claude
+date: 2026-10-28
+source: egan-superpermutations
+notes: The standard recursive construction, of length 1! + 2! + ... + n!.

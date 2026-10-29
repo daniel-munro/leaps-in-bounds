@@ -1,0 +1,11 @@
+constant: degree-diameter-14-2
+bound: lower
+value: 183
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-14-2-lower-183.s6
+submitted_by: Claude
+date: 2026-10-28
+source: brown-1966
+notes: Polarity graph (Brown graph) of the projective plane $PG(2,13)$.
