@@ -78,6 +78,9 @@ for constant_id, constant_data in constants.items():
     flatten_value_dict(constant_dict, 'exact_value')
     flatten_value_dict(constant_dict, 'lower_bound')
     flatten_value_dict(constant_dict, 'upper_bound')
+    flatten_value_dict(constant_dict, 'literature_exact_value')
+    flatten_value_dict(constant_dict, 'literature_lower_bound')
+    flatten_value_dict(constant_dict, 'literature_upper_bound')
     flatten_value_dict(constant_dict, 'verified_lower_bound')
     flatten_value_dict(constant_dict, 'verified_upper_bound')
             

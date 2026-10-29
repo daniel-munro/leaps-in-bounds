@@ -1,0 +1,20 @@
+{% comment %}
+Badge noting that a constant's best bound on one side is verified.
+Parameters: side ("lower" or "upper"), label (badge text).
+{% endcomment %}
+{% assign source_key = include.side | append: "_bound_source" %}
+{% assign source = constant[source_key] %}
+{% if source == "both" %}
+  <span class="badge bg-success">{{ include.label }}</span>
+{% elsif source == "verified" %}
+  {% assign literature_key = "literature_" | append: include.side | append: "_bound" %}
+  {% assign literature = constant[literature_key] %}
+  <span class="badge bg-verified-new">{{ include.label }}</span>
+  <span class="text-muted small">
+    {% if literature != null %}
+      (the literature has ${{ literature.latex }}$)
+    {% else %}
+      (not in the literature)
+    {% endif %}
+  </span>
+{% endif %}

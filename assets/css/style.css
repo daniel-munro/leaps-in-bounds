@@ -32,6 +32,7 @@ h1 {
 }
 
 .constant-cell {
+    white-space: nowrap;
     padding: 0.2rem 1rem !important;
     height: auto;
     min-height: 60px;
@@ -90,6 +91,7 @@ h1 {
 }
 
 .constant-box-values {
+    white-space: nowrap;
     font-size: 0.85em;
     min-height: 55px;
     display: flex;
@@ -148,15 +150,19 @@ h1 {
     font-style: italic;
 }
 
-.constant-cell, .constant-box {
-    position: relative;
-}
-
 .verified-mark {
-    position: absolute;
-    top: 1px;
-    right: 3px;
+    vertical-align: super;
+    margin-left: 1px;
     font-size: 0.7em;
     color: #198754;
     font-weight: bold;
+}
+
+/* Verified value that is stronger than, or absent from, the literature */
+.verified-new {
+    color: #6f42c1;
+}
+
+.bg-verified-new {
+    background-color: #6f42c1 !important;
 }
