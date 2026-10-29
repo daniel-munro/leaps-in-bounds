@@ -1,0 +1,10 @@
+constant: cage-10-3
+bound: upper
+value: 11
+kind: witness
+witness:
+  format: graph6
+  data: 'J~~~~~~~~~_'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete graph $K_{11}$.

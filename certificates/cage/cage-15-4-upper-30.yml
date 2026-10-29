@@ -1,0 +1,10 @@
+constant: cage-15-4
+bound: upper
+value: 30
+kind: witness
+witness:
+  format: graph6
+  data: ']?????????????????F~~~~z~~f~~F~~B~~_~~wF~~?^~{?~~w?~~w?^~{?F~~??~~w?B~~_??'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete bipartite graph $K_{15,15}$.

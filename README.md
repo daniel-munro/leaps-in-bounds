@@ -26,7 +26,7 @@ Alongside bounds from the literature, constants can have verified bounds backed 
 - `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
 - `scripts/check_certificates.py`: Verifies all certificates. CI runs it on pull requests (with Lean proofs only when certificates, proofs, or scripts change).
 
-Only the Ramsey numbers accept certificates so far.
+So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, and minimal superpermutations.
 
 ## Development Setup
 

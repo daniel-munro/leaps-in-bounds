@@ -5,6 +5,6 @@ kind: lean
 lean:
   module: LeapsInBounds.Proofs.Ramsey33
   theorem: LeapsInBounds.Proofs.Ramsey33.upper
-submitted_by: Daniel Munro
+submitted_by: Claude
 date: 2026-10-22
 notes: Pigeonhole on the five edges at one vertex.

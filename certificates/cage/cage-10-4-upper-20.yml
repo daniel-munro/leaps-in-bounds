@@ -1,0 +1,10 @@
+constant: cage-10-4
+bound: upper
+value: 20
+kind: witness
+witness:
+  format: graph6
+  data: 'S???????F~~}~{~{^}F~_~{B~oF~_F~_?'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete bipartite graph $K_{10,10}$.

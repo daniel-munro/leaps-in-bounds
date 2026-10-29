@@ -1,0 +1,10 @@
+constant: cage-18-6
+bound: upper
+value: 614
+kind: witness
+witness:
+  format: sparse6
+  file: cage-18-6-upper-614.s6
+submitted_by: Claude
+date: 2026-10-28
+notes: Incidence graph of the projective plane $PG(2,17)$.

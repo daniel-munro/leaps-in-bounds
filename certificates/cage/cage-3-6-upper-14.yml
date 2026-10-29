@@ -1,0 +1,10 @@
+constant: cage-3-6
+bound: upper
+value: 14
+kind: witness
+witness:
+  format: graph6
+  data: 'M???AiWKf?HO`_J??'
+submitted_by: Claude
+date: 2026-10-28
+notes: Incidence graph of the projective plane $PG(2,2)$.

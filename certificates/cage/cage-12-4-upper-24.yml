@@ -1,0 +1,10 @@
+constant: cage-12-4
+bound: upper
+value: 24
+kind: witness
+witness:
+  format: graph6
+  data: 'W???????????~~~~^~f~w~~B~{F~wF~wB~{?~~?F~w?^~_?'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete bipartite graph $K_{12,12}$.

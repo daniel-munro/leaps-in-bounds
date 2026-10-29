@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: graph6
   file: ramsey-6-6-lower-102.g6
-submitted_by: Daniel Munro
+submitted_by: Claude
 date: 2026-10-22
 source: kalbfleisch-1966
 notes: Paley graph of order 101 has no 6-clique and no independent set of size 6.

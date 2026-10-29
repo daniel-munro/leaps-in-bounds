@@ -1,0 +1,10 @@
+constant: cage-20-3
+bound: upper
+value: 21
+kind: witness
+witness:
+  format: graph6
+  data: 'T~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+submitted_by: Claude
+date: 2026-10-28
+notes: The complete graph $K_{21}$.
