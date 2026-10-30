@@ -1,0 +1,15 @@
+constant: kissing-number-5
+bound: lower
+value: 40
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1 1 0 0 0
+  symmetries:
+  - [2, 1, 3, 4, 5]
+  - [2, 3, 4, 5, 1]
+  - [-1, 2, 3, 4, 5]
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Roots of $D_5$: all vectors with two entries $\pm 1$.'

@@ -105,6 +105,29 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Superpermutation.lean
 
 Witnesses can certify upper bounds only. A witness for `L(n) <= m` uses `format: string`: a string of at most `m` digits from `1` to `n` (so `n <= 9`) that contains every permutation of those digits as a contiguous substring. Whitespace is ignored.
 
+### Kissing numbers: `kissing-number-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/KissingNumber.lean`](../formal/LeapsInBounds/Statements/KissingNumber.lean):
+
+- `LowerBound n k` means `τ(n) >= k`: some `k` unit vectors in `ℝⁿ` are at distance at least 1 from each other (so unit spheres centered at twice these vectors touch the unit sphere at the origin without overlapping).
+- `UpperBound n k` means `τ(n) <= k`: every such set of unit vectors has at most `k` vectors.
+
+Witnesses can certify lower bounds only. A witness for `τ(n) >= k` uses `format: vectors`: `k` integer vectors, one per line with whitespace-separated entries, all with the same squared norm `N`, spanning a space of dimension at most `n` (they can have more than `n` coordinates), with every inner product between two of them at most `N / 2`. Normalized, these are unit vectors at angles of at least 60°, which is the same condition.
+
+Large symmetric configurations can be given as a few seed vectors and a list of `symmetries`: signed permutations of the coordinates, each written as a list `s` of the numbers `±1` to `±m` in some order, mapping `x` to the vector whose `i`-th entry is `sign(s[i]) * x[|s[i]|]`. The configuration is then every image of the seeds under repeated symmetries, and must have exactly `k` vectors. The symmetries don't need to be symmetries of anything in particular: the checker only uses them to generate the vectors. For example, the 240 roots of `E_8` (scaled by 2):
+
+```yaml
+witness:
+  format: vectors
+  data: |
+    2 2 0 0 0 0 0 0
+    1 1 1 1 1 1 1 1
+  symmetries:
+  - [2, 1, 3, 4, 5, 6, 7, 8]     # swap the first two coordinates
+  - [2, 3, 4, 5, 6, 7, 8, 1]     # cycle the coordinates
+  - [-1, -2, 3, 4, 5, 6, 7, 8]   # negate the first two coordinates
+```
+
 ## Checking locally
 
 ```bash
@@ -123,3 +146,4 @@ Add `--improves certificates/<group>/<file>.yml` to check that a new certificate
 ## Known gaps
 
 - Values are integers for now. Families with real-valued constants will need exact or interval-arithmetic witnesses.
+- Kissing number witnesses must have integer coordinates (up to scaling). Some record configurations, such as those in dimensions 17 to 21, need irrational coordinates, so they can't be submitted yet.

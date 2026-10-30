@@ -1,0 +1,15 @@
+constant: kissing-number-3
+bound: lower
+value: 12
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1 1 0
+  symmetries:
+  - [2, 1, 3]
+  - [2, 3, 1]
+  - [-1, 2, 3]
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Roots of $D_3$: all vectors with two entries $\pm 1$.'

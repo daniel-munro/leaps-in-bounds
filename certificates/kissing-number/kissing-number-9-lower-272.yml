@@ -1,0 +1,12 @@
+constant: kissing-number-9
+bound: lower
+value: 272
+kind: witness
+witness:
+  format: vectors
+  file: kissing-number-9-lower-272.txt
+  symmetries:
+  - [-1, -2, -3, -4, -5, -6, -7, 8, -9]
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Minimal vectors of the laminated lattice $\Lambda_{9}$: minimal vectors of the Leech lattice (scaled to norm 32) orthogonal to 15 of them, with zero coordinates dropped.'

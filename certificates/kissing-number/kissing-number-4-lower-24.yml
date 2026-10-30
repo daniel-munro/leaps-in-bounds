@@ -1,0 +1,15 @@
+constant: kissing-number-4
+bound: lower
+value: 24
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1 1 0 0
+  symmetries:
+  - [2, 1, 3, 4]
+  - [2, 3, 4, 1]
+  - [-1, 2, 3, 4]
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Roots of $D_4$: all vectors with two entries $\pm 1$.'
