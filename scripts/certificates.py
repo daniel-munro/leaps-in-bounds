@@ -466,14 +466,18 @@ def get_family(constant_id: str) -> tuple[Family, dict[str, int]]:
 # Verification #
 ################
 
-def check_lean(certs: list[Mapping[str, Any]]) -> dict[str, str]:
+def check_lean(certs: list[Mapping[str, Any]], build: bool = True) -> dict[str, str]:
     """Check that each certificate's named theorem proves the expected
-    statement using only allowed axioms. Requires the formal/ project to be
-    built. Returns an error message for each certificate that fails.
+    statement using only allowed axioms. Returns an error message for each
+    certificate that fails.
+
+    Builds the proof modules first unless build is False, in which case they
+    must already be compiled. Building runs the submission's code, so CI
+    builds them in a separate job.
 
     The comparison is done by scripts/check_lean.lean, which builds the
     expected statement directly rather than elaborating it alongside the
-    submitted proof, so the proof can't change what the statement means.
+    submitted proof, and replays the proofs through the kernel.
     """
     errors = {}
     entries = []
@@ -495,10 +499,11 @@ def check_lean(certs: list[Mapping[str, Any]]) -> dict[str, str]:
     modules = sorted({entry["proofModule"] for entry in entries})
     if not modules:
         return errors
-    build = subprocess.run(["lake", "build", *modules], cwd=FORMAL_DIR, capture_output=True, text=True)
-    if build.returncode != 0:
-        output = build.stdout + build.stderr
-        return errors | {entry["id"]: f"lake build failed:\n{output}" for entry in entries}
+    if build:
+        result = subprocess.run(["lake", "build", *modules], cwd=FORMAL_DIR, capture_output=True, text=True)
+        if result.returncode != 0:
+            output = result.stdout + result.stderr
+            return errors | {entry["id"]: f"lake build failed:\n{output}" for entry in entries}
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as file:
         json.dump(entries, file)
         input_path = pathlib.Path(file.name)

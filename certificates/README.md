@@ -4,7 +4,7 @@ A certificate claims a lower or upper bound on one constant and comes with evide
 
 Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks every certificate, and a new certificate must be strictly stronger than the existing ones for the same bound.
 
-This is a pilot. Only the families listed [below](#families) accept certificates so far.
+Only the families listed [below](#families) accept certificates so far.
 
 ## File format
 
@@ -43,9 +43,12 @@ An explicit construction, checked by a verifier for the constant's family in [`s
 
 A theorem in the [`formal/`](../formal) Lean project whose type is exactly the family's formal statement of the bound, as defined in `formal/LeapsInBounds/Statements/`. The checker compiles the proof, then [`scripts/check_lean.lean`](../scripts/check_lean.lean) reads the compiled theorem and checks that:
 
-- its type is the statement (syntactically, or else as checked by the Lean kernel), built directly from the trusted statement's name and the certificate's numbers rather than parsed, so notation, macros or instances in the submission can't change what the statement means;
+- every declaration in the proof modules passes the Lean kernel, replayed on top of the trusted modules (so options like `debug.skipKernelTC` don't help);
+- its type is the statement (syntactically, or else as checked by the kernel), built directly from the trusted statement's name and the certificate's numbers rather than parsed, so notation, macros or instances in the submission can't change what the statement means;
 - the statement it refers to is the one in `formal/LeapsInBounds/Statements/` (a proof module that redeclares it fails to load);
 - it depends only on the standard axioms `propext`, `Classical.choice` and `Quot.sound`. That rules out `sorry`, new axioms and `native_decide`.
+
+Compiling a proof runs code from the submission, such as `#eval` or custom elaborators. CI compiles the proofs in a separate job with a read-only token, and the check job uses only the compiled proof modules, which it replays through the kernel rather than trusting. The check itself runs none of the submission's code.
 
 The statement files are trusted: they define what every certificate means. Submissions should only add files under `formal/LeapsInBounds/Proofs/`. CI flags any pull request that changes the statements or the checking scripts.
 
@@ -119,5 +122,4 @@ Add `--improves certificates/<group>/<file>.yml` to check that a new certificate
 
 ## Known gaps
 
-- Compiling Lean runs code from the submission, such as `#eval` or custom elaborators. CI runs with a read-only token and no secrets for this reason. The check itself only reads the compiled declarations and runs none of the submission's code, but it runs on the same machine after the build, so code run during the build could in principle tamper with the compiled files or the checker. Until the check runs separately and replays the proofs through the kernel, pull requests that add Lean proofs need a look for code that runs at build time.
 - Values are integers for now. Families with real-valued constants will need exact or interval-arithmetic witnesses.
