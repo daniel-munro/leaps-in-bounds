@@ -1,0 +1,13 @@
+constant: kissing-number-1
+bound: lower
+value: 2
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1
+  symmetries:
+  - [-1]
+submitted_by: Claude
+date: 2026-10-30
+notes: 'The two unit vectors $\pm 1$.'

@@ -1,0 +1,12 @@
+constant: kissing-number-11
+bound: lower
+value: 438
+kind: witness
+witness:
+  format: vectors
+  file: kissing-number-11-lower-438.txt
+  symmetries:
+  - [1, -2, -3, 4, 5, -6, -7, -8, -9, -10, 11, -12]
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Minimal vectors of the laminated lattice $\Lambda_{11}$: minimal vectors of the Leech lattice (scaled to norm 32) orthogonal to 13 of them, with zero coordinates dropped.'
