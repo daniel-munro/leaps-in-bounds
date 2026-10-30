@@ -467,55 +467,84 @@ def get_family(constant_id: str) -> tuple[Family, dict[str, int]]:
 # Verification #
 ################
 
-def check_lean(cert: Mapping[str, Any], family: Family, params: Mapping[str, int]) -> None:
-    """Check that the named theorem proves the expected statement using only
-    allowed axioms. Requires the formal/ project to be built."""
-    module = cert["lean"]["module"]
-    theorem = cert["lean"]["theorem"]
-    if not module.startswith("LeapsInBounds.Proofs."):
-        raise CertificateError("Lean proofs must live under LeapsInBounds.Proofs")
-    statement = family.lean_statement(params, cert["bound"], cert["value"])
-    source = (
-        f"import {family.lean_module}\n"
-        f"import {module}\n\n"
-        f"example : {statement} := {theorem}\n\n"
-        f"#print axioms {theorem}\n"
-    )
+def check_lean(certs: list[Mapping[str, Any]]) -> dict[str, str]:
+    """Check that each certificate's named theorem proves the expected
+    statement using only allowed axioms. Requires the formal/ project to be
+    built. Returns an error message for each certificate that fails.
+
+    Certificates are checked in one Lean file per proof module, since
+    importing Mathlib dominates the time to check each one.
+    """
+    errors = {}
+    by_module: dict[str, list[Mapping[str, Any]]] = {}
+    for cert in certs:
+        module = cert["lean"]["module"]
+        if not module.startswith("LeapsInBounds.Proofs."):
+            errors[cert["id"]] = "Lean proofs must live under LeapsInBounds.Proofs"
+        else:
+            by_module.setdefault(module, []).append(cert)
+    for module, module_certs in by_module.items():
+        errors |= check_lean_module(module, module_certs)
+    return errors
+
+
+def check_lean_module(module: str, certs: list[Mapping[str, Any]]) -> dict[str, str]:
+    """Check certificates whose proofs are in one module, as in check_lean."""
     build = subprocess.run(["lake", "build", module], cwd=FORMAL_DIR, capture_output=True, text=True)
     if build.returncode != 0:
-        raise CertificateError(f"lake build {module} failed:\n{build.stdout}{build.stderr}")
+        return {cert["id"]: f"lake build {module} failed:\n{build.stdout}{build.stderr}" for cert in certs}
+    statements = {}
+    for cert in certs:
+        family, params = get_family(cert["constant"])
+        statements[cert["id"]] = (family, family.lean_statement(params, cert["bound"], cert["value"]))
+    imports = sorted({family.lean_module for family, _ in statements.values()}) + [module]
+    lines = [f"import {name}" for name in imports] + [""]
+    # Certificates checked on each line (1-based)
+    cert_lines: dict[int, list[str]] = {}
+    for cert in certs:
+        cert_lines[len(lines) + 1] = [cert["id"]]
+        lines.append(f"example : {statements[cert['id']][1]} := {cert['lean']['theorem']}")
+    lines.append("")
+    for theorem in sorted({cert["lean"]["theorem"] for cert in certs}):
+        cert_lines[len(lines) + 1] = [cert["id"] for cert in certs if cert["lean"]["theorem"] == theorem]
+        lines.append(f"#print axioms {theorem}")
     with tempfile.NamedTemporaryFile("w", suffix=".lean", dir=FORMAL_DIR, delete=False) as file:
-        file.write(source)
+        file.write("\n".join(lines) + "\n")
         check_path = pathlib.Path(file.name)
     try:
         result = subprocess.run(["lake", "env", "lean", check_path.name], cwd=FORMAL_DIR, capture_output=True, text=True)
     finally:
         check_path.unlink()
     output = result.stdout + result.stderr
-    if result.returncode != 0 or re.search(r":\d+:\d+: error", output):
-        raise CertificateError(f"Theorem {theorem} does not prove `{statement}`:\n{output}")
-    if "does not depend on any axioms" in output:
-        return
-    match = re.search(r"depends on axioms: \[(.*?)\]", output, re.DOTALL)
-    if not match:
-        raise CertificateError(f"Could not read axioms from Lean output:\n{output}")
-    axioms = {a.strip() for a in match.group(1).split(",")}
-    disallowed = axioms - ALLOWED_AXIOMS
-    if disallowed:
-        raise CertificateError(f"Proof uses disallowed axioms: {sorted(disallowed)}")
+
+    errors = {}
+    error_lines = {int(line) for line in re.findall(r":(\d+):\d+: error", output)}
+    if (result.returncode != 0 and not error_lines) or error_lines - cert_lines.keys():
+        # An error outside the certificates' lines, such as in an import
+        return {cert["id"]: f"Lean check of {module} failed:\n{output}" for cert in certs}
+    for line in error_lines:
+        for cert_id in cert_lines[line]:
+            theorem = next(c["lean"]["theorem"] for c in certs if c["id"] == cert_id)
+            errors[cert_id] = f"Theorem {theorem} does not prove `{statements[cert_id][1]}`:\n{output}"
+
+    axioms = {name: set() for name in re.findall(r"'(\S+)' does not depend on any axioms", output)}
+    for name, listed in re.findall(r"'(\S+)' depends on axioms: \[(.*?)\]", output, re.DOTALL):
+        axioms[name] = {a.strip() for a in listed.split(",")}
+    for cert in certs:
+        theorem = cert["lean"]["theorem"]
+        if cert["id"] in errors:
+            continue
+        if theorem not in axioms:
+            errors[cert["id"]] = f"Could not read axioms of {theorem} from Lean output:\n{output}"
+        elif disallowed := axioms[theorem] - ALLOWED_AXIOMS:
+            errors[cert["id"]] = f"Proof uses disallowed axioms: {sorted(disallowed)}"
+    return errors
 
 
-def check_certificate(cert: Mapping[str, Any], lean: bool) -> bool:
-    """Verify a certificate's evidence. Returns False if it was skipped
-    because it's a Lean proof and lean is False."""
+def check_witness(cert: Mapping[str, Any]) -> None:
+    """Verify a witness certificate's evidence."""
     family, params = get_family(cert["constant"])
-    if cert["kind"] == "witness":
-        family.check_witness(params, cert["bound"], cert["value"], cert)
-        return True
-    if not lean:
-        return False
-    check_lean(cert, family, params)
-    return True
+    family.check_witness(params, cert["bound"], cert["value"], cert)
 
 
 def is_better(bound: str, a: float, b: float) -> bool:

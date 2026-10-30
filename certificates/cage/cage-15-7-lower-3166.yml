@@ -1,0 +1,10 @@
+constant: cage-15-7
+bound: lower
+value: 3166
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.MooreBound
+  theorem: LeapsInBounds.Proofs.MooreBound.lower_15_7
+submitted_by: Claude
+date: 2026-10-29
+notes: Moore bound. The paths of length at most 3 into a vertex start at distinct vertices, since two with the same start would form a cycle shorter than 7.

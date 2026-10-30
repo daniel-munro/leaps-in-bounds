@@ -1,0 +1,10 @@
+constant: cage-11-14
+bound: lower
+value: 2222222
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.MooreBound
+  theorem: LeapsInBounds.Proofs.MooreBound.lower_11_14
+submitted_by: Claude
+date: 2026-10-29
+notes: Moore bound. The paths of length less than 7 into either end of an edge, avoiding the other end, start at distinct vertices, since two with the same start would form a cycle shorter than 14.

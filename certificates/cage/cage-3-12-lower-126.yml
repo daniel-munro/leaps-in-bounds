@@ -1,0 +1,10 @@
+constant: cage-3-12
+bound: lower
+value: 126
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.MooreBound
+  theorem: LeapsInBounds.Proofs.MooreBound.lower_3_12
+submitted_by: Claude
+date: 2026-10-29
+notes: Moore bound. The paths of length less than 6 into either end of an edge, avoiding the other end, start at distinct vertices, since two with the same start would form a cycle shorter than 12.
