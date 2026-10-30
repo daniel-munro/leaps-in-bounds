@@ -1,0 +1,10 @@
+constant: cage-19-3
+bound: lower
+value: 20
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CageSmallGirth
+  theorem: LeapsInBounds.Proofs.CageSmallGirth.lower_19_3
+submitted_by: Claude
+date: 2026-10-29
+notes: Each vertex has 19 neighbors other than itself.

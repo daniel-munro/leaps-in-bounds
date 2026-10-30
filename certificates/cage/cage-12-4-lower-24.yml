@@ -1,0 +1,10 @@
+constant: cage-12-4
+bound: lower
+value: 24
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CageSmallGirth
+  theorem: LeapsInBounds.Proofs.CageSmallGirth.lower_12_4
+submitted_by: Claude
+date: 2026-10-29
+notes: Two adjacent vertices have disjoint neighborhoods, since a common neighbor would form a triangle.

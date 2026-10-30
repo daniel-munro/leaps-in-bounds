@@ -1,0 +1,10 @@
+constant: cage-6-3
+bound: lower
+value: 7
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CageSmallGirth
+  theorem: LeapsInBounds.Proofs.CageSmallGirth.lower_6_3
+submitted_by: Claude
+date: 2026-10-29
+notes: Each vertex has 6 neighbors other than itself.

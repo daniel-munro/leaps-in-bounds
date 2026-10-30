@@ -1,0 +1,10 @@
+constant: cage-18-3
+bound: lower
+value: 19
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CageSmallGirth
+  theorem: LeapsInBounds.Proofs.CageSmallGirth.lower_18_3
+submitted_by: Claude
+date: 2026-10-29
+notes: Each vertex has 18 neighbors other than itself.

@@ -1,0 +1,10 @@
+constant: cage-13-3
+bound: lower
+value: 14
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CageSmallGirth
+  theorem: LeapsInBounds.Proofs.CageSmallGirth.lower_13_3
+submitted_by: Claude
+date: 2026-10-29
+notes: Each vertex has 13 neighbors other than itself.
