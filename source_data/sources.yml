@@ -37,6 +37,11 @@ wikipedia-kissing-number:
   date: "2025-01-21"
   url: "https://en.wikipedia.org/wiki/Kissing_number"
 
+cohn-kissing-numbers:
+  string: "Kissing numbers, Henry Cohn"
+  date: "2026-10-30"
+  url: "https://cohn.mit.edu/kissing-numbers/"
+
 wikipedia-degree-diameter:
   string: "Table of the largest known graphs of a given diameter and maximal degree - Wikipedia"
   date: "2025-01-31"
@@ -717,3 +722,123 @@ houston-egan-2019:
   string: "Robin Houston and Greg Egan on 2019-02-27"
   date: "2019-02-27"
 
+# Kissing numbers
+
+schlafli-1901:
+  string: "L. Schläfli, Theorie der vielfachen Kontinuität, Denkschriften der Schweizerischen naturforschenden Gesellschaft 38 (1901)."
+  date: "1901"
+  notes: "Written in 1852. [19] in https://cohn.mit.edu/kissing-numbers/"
+
+korkine-zolotareff-1873:
+  string: "A. Korkine and G. Zolotareff, Sur les formes quadratiques, Mathematische Annalen 6 (1873) 366-389."
+  date: "1873"
+  doi: "https://doi.org/10.1007/BF01442795"
+
+barnes-wall-1959:
+  string: "E.S. Barnes and G.E. Wall, Some extreme forms defined in terms of Abelian groups, Journal of the Australian Mathematical Society 1 (1959) 47-63."
+  date: "1959"
+  doi: "https://doi.org/10.1017/S1446788700025064"
+
+leech-1967:
+  string: "J. Leech, Notes on sphere packings, Canadian Journal of Mathematics 19 (1967) 251-267."
+  date: "1967"
+  doi: "https://doi.org/10.4153/CJM-1967-017-0"
+
+leech-sloane-1971:
+  string: "J. Leech and N.J.A. Sloane, Sphere packings and error-correcting codes, Canadian Journal of Mathematics 23 (1971) 718-745."
+  date: "1971"
+  doi: "https://doi.org/10.4153/CJM-1971-081-3"
+
+zinoviev-ericson-1999:
+  string: "V.A. Zinoviev and T. Ericson, New lower bounds for contact numbers in small dimensions, Problems of Information Transmission 35 (1999) 287-294."
+  date: "1999"
+  url: "https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=ppi&paperid=457&option_lang=eng"
+
+ganzhinov-2022:
+  string: "M. Ganzhinov, Highly symmetric lines, Linear Algebra and its Applications 722 (2025) 12-37, arXiv:2207.08266."
+  date: "2022-07-17"
+  doi: "https://doi.org/10.1016/j.laa.2025.05.002"
+  url: "https://arxiv.org/abs/2207.08266"
+
+novikov-et-al-2025:
+  string: "A. Novikov et al. (Google DeepMind), AlphaEvolve: A coding agent for scientific and algorithmic discovery, arXiv:2506.13131."
+  date: "2025-06-16"
+  url: "https://arxiv.org/abs/2506.13131"
+  notes: "Appendix B.11."
+
+bianchi-et-al-2026:
+  string: "F. Bianchi, Y. Kwon, A. Pappu, and J. Zou, Harnessing the Collective Intelligence of AI Agents in the Wild for New Discoveries, arXiv:2606.10402."
+  date: "2026-06-09"
+  url: "https://arxiv.org/abs/2606.10402"
+
+takhanov-assylbekov-yun-2026:
+  string: "R. Takhanov, Z. Assylbekov, and S. Yun, Structure of kissing arrangements in R^12 and a place for the 841st sphere, arXiv:2606.18984."
+  date: "2026-06-17"
+  url: "https://arxiv.org/abs/2606.18984"
+  notes: "The arrangement of 841 points is constructed numerically."
+
+cohn-li-2024:
+  string: "H. Cohn and A. Li, Improved kissing numbers in seventeen through twenty-one dimensions, arXiv:2411.04916."
+  date: "2024-11-07"
+  url: "https://arxiv.org/abs/2411.04916"
+
+ho-2026:
+  string: "B.S. Ho, A new lower bound for the kissing number in 19 dimensions, arXiv:2603.10425."
+  date: "2026-03-11"
+  url: "https://arxiv.org/abs/2603.10425"
+
+kravatskiy-2026:
+  string: "A. Kravatskiy, KissingNumbers (GitHub repository), 2026."
+  date: "2026-09-17"
+  url: "https://github.com/alexlegeartis/KissingNumbers"
+  notes: "Not peer reviewed. [8] in https://cohn.mit.edu/kissing-numbers/"
+
+li-2026:
+  string: "K. Li, Improved Kissing Numbers in Nineteen and Twenty-One Dimensions, Hexagon hexagon:2610.00248."
+  date: "2026-10-14"
+  url: "https://hexagonmath.org/2610.00248v1"
+  notes: "Not peer reviewed. [14] in https://cohn.mit.edu/kissing-numbers/"
+
+schutte-van-der-waerden-1953:
+  string: "K. Schütte and B.L. van der Waerden, Das Problem der dreizehn Kugeln, Mathematische Annalen 125 (1953) 325-334."
+  date: "1953"
+  doi: "https://doi.org/10.1007/BF01343127"
+
+musin-2003:
+  string: "O.R. Musin, The kissing number in four dimensions, Annals of Mathematics 168 (2008) 1-32, arXiv:math/0309430."
+  date: "2003-09-26"
+  doi: "https://doi.org/10.4007/annals.2008.168.1"
+  url: "https://arxiv.org/abs/math/0309430"
+
+odlyzko-sloane-1979:
+  string: "A.M. Odlyzko and N.J.A. Sloane, New bounds on the number of unit spheres that can touch a unit sphere in n dimensions, Journal of Combinatorial Theory, Series A 26 (1979) 210-214."
+  date: "1979"
+  doi: "https://doi.org/10.1016/0097-3165(79)90074-8"
+  notes: "Found independently by V.I. Levenšteĭn, Doklady Akademii Nauk SSSR 245 (1979) 1299-1303."
+
+bachoc-vallentin-2008:
+  string: "C. Bachoc and F. Vallentin, New upper bounds for kissing numbers from semidefinite programming, Journal of the American Mathematical Society 21 (2008) 909-924."
+  date: "2008"
+  doi: "https://doi.org/10.1090/S0894-0347-07-00589-9"
+
+mittelmann-vallentin-2009:
+  string: "H.D. Mittelmann and F. Vallentin, High accuracy semidefinite programming bounds for kissing numbers, Experimental Mathematics 19 (2010) 174-178, arXiv:0902.1105."
+  date: "2009-02-06"
+  doi: "https://doi.org/10.1080/10586458.2010.10129070"
+  url: "https://arxiv.org/abs/0902.1105"
+
+machado-oliveira-2018:
+  string: "F.C. Machado and F.M. de Oliveira Filho, Improving the semidefinite programming bound for the kissing number by exploiting polynomial symmetry, Experimental Mathematics 27 (2018) 362-369."
+  date: "2018"
+  doi: "https://doi.org/10.1080/10586458.2017.1286273"
+
+leijenhorst-de-laat-2022:
+  string: "N. Leijenhorst and D. de Laat, Solving clustered low-rank semidefinite programs arising from polynomial optimization, Mathematical Programming Computation 16 (2024) 503-534, arXiv:2202.12077."
+  date: "2022-02-24"
+  doi: "https://doi.org/10.1007/s12532-024-00264-w"
+  url: "https://arxiv.org/abs/2202.12077"
+
+de-laat-leijenhorst-de-muinck-keizer-2024:
+  string: "D. de Laat, N.M. Leijenhorst, and W.H.H. de Muinck Keizer, Optimality and uniqueness of the D4 root system, arXiv:2404.18794."
+  date: "2024-04-29"
+  url: "https://arxiv.org/abs/2404.18794"
