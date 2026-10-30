@@ -1,0 +1,10 @@
+constant: square-packing-in-square-19
+bound: lower
+value: '\sqrt{19}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_19
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 19 squares have disjoint interiors, so their total area 19 is at most the area of the square containing them.'

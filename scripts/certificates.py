@@ -57,11 +57,36 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
             raise CertificateError(f"{path}: kind must be 'witness' or 'lean'")
         if cert["kind"] not in cert:
             raise CertificateError(f"{path}: kind is '{cert['kind']}' but there is no '{cert['kind']}' section")
+        cert["approx"] = value_approx(cert["value"], path)
         cert["id"] = cert_id
         cert["path"] = str(path)
         cert["date"] = str(cert["date"])
         certificates[cert_id] = cert
     return certificates
+
+
+SQRT_PATTERN = re.compile(r"\\sqrt\{(\d+)\}")
+
+
+def value_approx(value: Any, path: Any = None) -> float:
+    """Numeric value of a certificate's bound, which is an integer or a string
+    `\\sqrt{m}` for a natural number m."""
+    if isinstance(value, int) and not isinstance(value, bool):
+        return value
+    if isinstance(value, str) and SQRT_PATTERN.fullmatch(value):
+        return math.sqrt(int(SQRT_PATTERN.fullmatch(value).group(1)))
+    raise CertificateError(f"{path}: value must be an integer or '\\sqrt{{m}}', not {value!r}")
+
+
+def sqrt_argument(value: int | str) -> int:
+    """The m with value = √m, for an integer value or one written `\\sqrt{m}`.
+    Square roots of perfect squares must be written as integers."""
+    if isinstance(value, int):
+        return value * value
+    m = int(SQRT_PATTERN.fullmatch(value).group(1))
+    if math.isqrt(m) ** 2 == m:
+        raise CertificateError(f"Write \\sqrt{{{m}}} as {math.isqrt(m)}")
+    return m
 
 
 #########
@@ -293,9 +318,11 @@ class Family:
     lean_module: str
     # (params, bound, value) -> Lean constant stating the bound, and its
     # natural number arguments.
-    lean_statement: Callable[[Mapping[str, int], str, int], tuple[str, list[int]]]
+    lean_statement: Callable[[Mapping[str, int], str, int | str], tuple[str, list[int]]]
     # (params, bound, value, cert) -> None, raising CertificateError if invalid.
-    check_witness: Callable[[Mapping[str, int], str, int, Mapping[str, Any]], None]
+    check_witness: Callable[[Mapping[str, int], str, int | str, Mapping[str, Any]], None]
+    # Whether values can be square roots, written `\sqrt{m}`, besides integers.
+    sqrt_values: bool = False
 
 
 def ramsey_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
@@ -541,6 +568,15 @@ def kissing_number_check_witness(params: Mapping[str, int], bound: str, value: i
             raise CertificateError(f"Some vectors have inner product more than {norm} / 2")
 
 
+def square_packing_lean_statement(params: Mapping[str, int], bound: str, value: int | str) -> tuple[str, list[int]]:
+    name = "SqrtLowerBound" if bound == "lower" else "SqrtUpperBound"
+    return f"LeapsInBounds.SquarePacking.{name}", [params['n'], sqrt_argument(value)]
+
+
+def square_packing_check_witness(params: Mapping[str, int], bound: str, value: int | str, cert: Mapping[str, Any]) -> None:
+    raise CertificateError("Square packing bounds can only be certified by Lean proofs so far")
+
+
 # Keyed by constant group ID.
 FAMILIES = {
     "ramsey": Family(
@@ -578,6 +614,13 @@ FAMILIES = {
         lean_module="LeapsInBounds.Statements.KissingNumber",
         lean_statement=kissing_number_lean_statement,
         check_witness=kissing_number_check_witness,
+    ),
+    "square-packing": Family(
+        id_pattern=re.compile(r"square-packing-in-square-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.SquarePacking",
+        lean_statement=square_packing_lean_statement,
+        check_witness=square_packing_check_witness,
+        sqrt_values=True,
     ),
 }
 
@@ -673,6 +716,6 @@ def best_certificates(certificates: Mapping[str, Mapping[str, Any]]) -> dict[tup
     best = {}
     for cert in sorted(certificates.values(), key=lambda c: c["date"]):
         key = (cert["constant"], cert["bound"])
-        if key not in best or is_better(cert["bound"], cert["value"], best[key]["value"]):
+        if key not in best or is_better(cert["bound"], cert["approx"], best[key]["approx"]):
             best[key] = cert
     return best

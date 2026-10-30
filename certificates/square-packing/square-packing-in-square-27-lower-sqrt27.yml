@@ -1,0 +1,10 @@
+constant: square-packing-in-square-27
+bound: lower
+value: '\sqrt{27}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_27
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 27 squares have disjoint interiors, so their total area 27 is at most the area of the square containing them.'

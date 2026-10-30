@@ -76,6 +76,9 @@ layout: default
     <strong>{{ side | capitalize }} bound:</strong>
     {% if verified_value != null %}
       ${{ verified_value.latex }}$
+      {% if verified_value.alt_display != null %}
+        ({{ verified_value.alt_display }})
+      {% endif %}
       {% assign cert = constant.certificates | where: "id", verified_id | first %}
       {% if cert.kind == "lean" %}
         <span class="badge bg-success">Lean proof</span>

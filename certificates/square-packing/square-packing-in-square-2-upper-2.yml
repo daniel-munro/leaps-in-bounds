@@ -1,0 +1,10 @@
+constant: square-packing-in-square-2
+bound: upper
+value: 2
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.upper_2
+submitted_by: Claude
+date: 2026-10-30
+notes: 'The squares fit in a 2 × 2 grid.'

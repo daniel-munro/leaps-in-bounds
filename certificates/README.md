@@ -13,7 +13,7 @@ One YAML file per certificate, in `certificates/<group>/`. The file name (withou
 ```yaml
 constant: ramsey-4-4      # constant ID, as on the site
 bound: lower              # lower or upper
-value: 18                 # the bound: R(4,4) >= 18
+value: 18                 # the bound: R(4,4) >= 18 (an integer, or '\sqrt{m}' where the family allows it)
 kind: witness             # witness or lean
 witness:                  # for kind: witness (see the family's rules below)
   format: graph6
@@ -128,6 +128,15 @@ witness:
   - [-1, -2, 3, 4, 5, 6, 7, 8]   # negate the first two coordinates
 ```
 
+### Packing unit squares in a square: `square-packing-in-square-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/SquarePacking.lean`](../formal/LeapsInBounds/Statements/SquarePacking.lean). A unit square is the image of `[0, 1]²` under an isometry of the plane, and a packing of `n` of them in `[0, s]²` has pairwise disjoint interiors.
+
+- `SqrtLowerBound n m` means `s(n) >= √m`: no packing of `n` unit squares fits in a square of side less than `√m`.
+- `SqrtUpperBound n m` means `s(n) <= √m`: `n` unit squares can be packed in a square of side `√m`.
+
+Values can be integers `k` (proving the statement with `m = k²`) or square roots written `'\sqrt{m}'`, with `m` not a perfect square. Only Lean proofs are accepted so far.
+
 ## Checking locally
 
 ```bash
@@ -145,5 +154,5 @@ Add `--improves certificates/<group>/<file>.yml` to check that a new certificate
 
 ## Known gaps
 
-- Values are integers for now. Families with real-valued constants will need exact or interval-arithmetic witnesses.
+- Values are integers or square roots of integers for now. Other real values, such as most known square packings, will need exact or interval-arithmetic witnesses or more general statements.
 - Kissing number witnesses must have integer coordinates (up to scaling). Some record configurations, such as those in dimensions 17 to 21, need irrational coordinates, so they can't be submitted yet.

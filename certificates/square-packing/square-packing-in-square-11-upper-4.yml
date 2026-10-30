@@ -1,0 +1,10 @@
+constant: square-packing-in-square-11
+bound: upper
+value: 4
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.upper_11
+submitted_by: Claude
+date: 2026-10-30
+notes: 'The squares fit in a 4 × 4 grid.'
