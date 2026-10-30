@@ -1,0 +1,10 @@
+constant: cage-10-5
+bound: lower
+value: 101
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.MooreBound
+  theorem: LeapsInBounds.Proofs.MooreBound.lower_10_5
+submitted_by: Claude
+date: 2026-10-29
+notes: Moore bound. The paths of length at most 2 into a vertex start at distinct vertices, since two with the same start would form a cycle shorter than 5.

@@ -18,7 +18,9 @@ import yaml
 from certificates import (
     CertificateError,
     best_certificates,
-    check_certificate,
+    check_lean,
+    check_witness,
+    get_family,
     is_better,
     load_certificates,
 )
@@ -45,22 +47,32 @@ def main() -> None:
     except CertificateError as e:
         sys.exit(f"Error: {e}")
 
-    # Check each certificate's evidence
-    failed = set()
+    # Check each certificate's evidence, with Lean proofs checked together
+    failed = {}
+    lean_certs = []
     for cert in certificates.values():
         try:
             if cert["constant"] not in constants:
                 raise CertificateError(f"Unknown constant {cert['constant']}")
             if "source" in cert and cert["source"] not in sources:
                 raise CertificateError(f"Unknown source {cert['source']}")
-            if check_certificate(cert, lean=args.lean):
-                print(f"ok       {cert['id']}")
-            else:
-                print(f"skipped  {cert['id']} (Lean; run with --lean)")
+            get_family(cert["constant"])
+            if cert["kind"] == "witness":
+                check_witness(cert)
+            elif args.lean:
+                lean_certs.append(cert)
         except CertificateError as e:
-            errors.append(f"{cert['id']}: {e}")
-            failed.add(cert["id"])
+            failed[cert["id"]] = str(e)
+    if lean_certs:
+        failed |= check_lean(lean_certs)
+    for cert in certificates.values():
+        if cert["id"] in failed:
+            errors.append(f"{cert['id']}: {failed[cert['id']]}")
             print(f"FAILED   {cert['id']}")
+        elif cert["kind"] == "lean" and not args.lean:
+            print(f"skipped  {cert['id']} (Lean; run with --lean)")
+        else:
+            print(f"ok       {cert['id']}")
     certificates = {k: v for k, v in certificates.items() if k not in failed}
 
     # Check verified bounds against each other and against the literature
