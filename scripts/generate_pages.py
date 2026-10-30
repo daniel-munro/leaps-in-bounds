@@ -13,17 +13,46 @@ def html_for_value(value: Mapping[str, Any] | None) -> str:
         html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
     return html
 
-def verified_mark(const: Mapping[str, Any]) -> str:
-    """Generate a check mark noting a constant's verified bounds, if any."""
-    parts = []
-    if const['verified_lower_bound'] is not None:
-        parts.append(f"lower bound {const['verified_lower_bound']['latex']}")
-    if const['verified_upper_bound'] is not None:
-        parts.append(f"upper bound {const['verified_upper_bound']['latex']}")
-    if not parts:
+def verified_mark(const: Mapping[str, Any], sides: list[str]) -> str:
+    """Generate a check mark noting that a displayed value is verified on the
+    given sides, highlighted if it's stronger than (or absent from) the
+    literature."""
+    sides = [side for side in sides if const[f'{side}_bound_source'] in ('verified', 'both')]
+    if not sides:
         return ''
-    title = 'Verified ' + ' and '.join(parts)
-    return f'<span class="verified-mark" data-bs-toggle="tooltip" data-bs-placement="top" title="{title}">✓</span>'
+    notes = []
+    for side in sides:
+        note = f"Verified {side} bound by certificate {const[f'verified_{side}_certificate']}"
+        if const[f'{side}_bound_source'] == 'verified':
+            literature = const[f'literature_{side}_bound']
+            if literature is None:
+                note += '; none in the literature'
+            else:
+                note += f"; the literature has {literature['latex']}"
+        notes.append(note)
+    new = any(const[f'{side}_bound_source'] == 'verified' for side in sides)
+    css_class = 'verified-mark verified-new' if new else 'verified-mark'
+    title = '. '.join(notes)
+    return f'<span class="{css_class}" data-bs-toggle="tooltip" data-bs-placement="top" title="{title}">✓</span>'
+
+def cell_content(const: Mapping[str, Any]) -> tuple[str, str]:
+    """Generate the displayed value or bounds for a constant, with marks on
+    verified values, and the CSS class for how well it's known."""
+    def marked(value: Mapping[str, Any] | None, sides: list[str]) -> str:
+        # Keep the mark on the same line as its value (sequence boxes stack children)
+        return f'<span>{html_for_value(value)}{verified_mark(const, sides)}</span>'
+
+    if const['exact_value'] is not None:
+        return marked(const['exact_value'], ['lower', 'upper']), 'value-exact'
+    lb = marked(const['lower_bound'], ['lower'])
+    ub = marked(const['upper_bound'], ['upper'])
+    if const['lower_bound'] is None and const['upper_bound'] is None:
+        css_class = 'value-unbounded'
+    elif const['lower_bound'] is None or const['upper_bound'] is None:
+        css_class = 'value-half-bounded'
+    else:
+        css_class = 'value-bounded'
+    return f"{lb}<br>{ub}", css_class
 
 def generate_grid_html(
     group: Mapping[str, Any],
@@ -58,26 +87,10 @@ def generate_grid_html(
                 html.append('        <td class="table-secondary"></td>')
                 continue
                 
-            const = constants[const_id]
-            
-            if const['exact_value'] is not None:
-                cell_content = html_for_value(const['exact_value'])
-                cell_class = 'value-exact'
-            else:
-                lb = html_for_value(const['lower_bound'])
-                ub = html_for_value(const['upper_bound'])
-                cell_content = f"{lb}<br>{ub}"
-
-                if const['lower_bound'] is None and const['upper_bound'] is None:
-                    cell_class = 'value-unbounded'
-                elif const['lower_bound'] is None or const['upper_bound'] is None:
-                    cell_class = 'value-half-bounded'
-                else:
-                    cell_class = 'value-bounded'
-            
+            content, cell_class = cell_content(constants[const_id])
             html.append(
                 f'        <td class="constant-cell {cell_class}"><a href="/constants/{const_id}" '
-                f'class="cell-link">{cell_content}</a>{verified_mark(const)}</td>'
+                f'class="cell-link">{content}</a></td>'
             )
         html.append('      </tr>')
     
@@ -114,27 +127,10 @@ def generate_sequence_html(
         if const_id not in constants:
             continue
             
-        const = constants[const_id]
-        
-        if const['exact_value'] is not None:
-            content = html_for_value(const['exact_value'])
-            box_class = ' value-exact'
-        else:            
-            lb = html_for_value(const['lower_bound'])
-            ub = html_for_value(const['upper_bound'])
-            content = f"{lb}<br>{ub}"
-            
-            if const['lower_bound'] is None and const['upper_bound'] is None:
-                box_class = ' value-unbounded'
-            elif const['lower_bound'] is None or const['upper_bound'] is None:
-                box_class = ' value-half-bounded'
-            else:
-                box_class = ' value-bounded'
-            
+        content, box_class = cell_content(constants[const_id])
         html.append(
-            f'  <a href="/constants/{const_id}" class="constant-box{box_class}">'
-            f'<strong>{v}</strong><br><div class="constant-box-values">{content}</div>'
-            f'{verified_mark(const)}</a>'
+            f'  <a href="/constants/{const_id}" class="constant-box {box_class}">'
+            f'<strong>{v}</strong><br><div class="constant-box-values">{content}</div></a>'
         )
 
     html.append('</div>')
@@ -147,27 +143,10 @@ def generate_single_html(
     """Generate HTML for a constant group with no parameters."""
     html = ['<div class="constant-sequence">']
     
-    const = constants[group['id']]
-    
-    if const['exact_value'] is not None:
-        content_value = html_for_value(const['exact_value'])
-        box_class = ' value-exact'
-    else:
-        lb = html_for_value(const['lower_bound'])
-        ub = html_for_value(const['upper_bound'])
-        content = f"{lb}<br>{ub}"
-
-        if const['lower_bound'] is None and const['upper_bound'] is None:
-            box_class = ' value-unbounded'
-        elif const['lower_bound'] is None or const['upper_bound'] is None:
-            box_class = ' value-half-bounded'
-        else:
-            box_class = ' value-bounded'
-    
+    content, box_class = cell_content(constants[group['id']])
     html.append(
-        f'  <a href="/constants/{group["id"]}" class="constant-box{box_class}">'
-        f'<div class="constant-box-values">{content}</div>'
-        f'{verified_mark(const)}</a>'
+        f'  <a href="/constants/{group["id"]}" class="constant-box {box_class}">'
+        f'<div class="constant-box-values">{content}</div></a>'
     )
 
     html.append('</div>')

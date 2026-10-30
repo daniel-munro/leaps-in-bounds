@@ -24,6 +24,8 @@ layout: default
       {% if constant.exact_value.alt_display != null %}
         ({{ constant.exact_value.alt_display }})
       {% endif %}
+      {% include bound_source.html side="lower" label="Verified lower bound" %}
+      {% include bound_source.html side="upper" label="Verified upper bound" %}
     </p>
   {% else %}
     <p>
@@ -33,6 +35,7 @@ layout: default
         {% if constant.lower_bound.alt_display != null %}
           ({{ constant.lower_bound.alt_display }})
         {% endif %}
+        {% include bound_source.html side="lower" label="Verified" %}
       {% else %}
         Unknown
       {% endif %}
@@ -43,6 +46,7 @@ layout: default
         {% if constant.upper_bound.alt_display != null %}
           ({{ constant.upper_bound.alt_display }})
         {% endif %}
+        {% include bound_source.html side="upper" label="Verified" %}
       {% else %}
         Unknown
       {% endif %}

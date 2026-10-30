@@ -4,8 +4,9 @@
 2. Use sources to assign dates to updates.
 3. Find most recent updates for each constant's bounds or exact value.
 4. Attach certificates and find verified bounds.
-5. Process images for constants.
-6. Add statistics to each constant group.
+5. Combine literature and verified bounds into the best bounds.
+6. Process images for constants.
+7. Add statistics to each constant group.
 """
 
 import itertools
@@ -13,7 +14,7 @@ import pathlib
 import yaml
 import csv
 from typing import Any, Mapping
-from certificates import FAMILIES, best_certificates, load_certificates
+from certificates import FAMILIES, best_certificates, is_better, load_certificates
 from utils import Value, QuotedString, process_constant_images
 
 
@@ -229,6 +230,42 @@ def assign_certificates(
         constants[constant_id][f"verified_{bound}_certificate"] = cert["id"]
 
 
+def combine_bounds(constants: dict[str, dict[str, Any]]) -> None:
+    """Set each constant's bounds to the strongest from the literature or a
+    certificate, assuming both are correct.
+
+    The literature bounds move to literature_exact_value,
+    literature_lower_bound and literature_upper_bound, and lower_bound_source
+    and upper_bound_source say where each bound comes from: "literature",
+    "verified", or "both" when they're equal. The exact value is known when
+    the lower and upper bounds are equal, whatever their sources.
+    """
+    for constant in constants.values():
+        for field in ["exact_value", "lower_bound", "upper_bound"]:
+            constant[f"literature_{field}"] = constant[field]
+        for side in ["lower", "upper"]:
+            literature = constant[f"{side}_bound"]
+            verified = constant[f"verified_{side}_bound"]
+            if verified is None:
+                best, source = literature, "literature" if literature is not None else None
+            elif literature is None or literature.decimal_approx is None:
+                best, source = verified, "verified"
+            elif is_better(side, verified.decimal_approx, literature.decimal_approx):
+                best, source = verified, "verified"
+            elif verified.decimal_approx == literature.decimal_approx:
+                best, source = literature, "both"
+            else:
+                best, source = literature, "literature"
+            constant[f"{side}_bound"] = best
+            constant[f"{side}_bound_source"] = source
+        lower, upper = constant["lower_bound"], constant["upper_bound"]
+        if constant["exact_value"] is None and lower is not None and upper is not None and (
+            lower.latex == upper.latex
+            or lower.decimal_approx is not None and lower.decimal_approx == upper.decimal_approx
+        ):
+            constant["exact_value"] = lower
+
+
 def calculate_group_stats(
     group_id: str,
     constants: Mapping[str, Mapping[str, Any]],
@@ -295,7 +332,11 @@ def calculate_group_stats(
 
 def write_constants(constants: dict[str, dict[str, Any]], filename: str) -> None:
     """Write processed constants info to a YAML file."""
-    value_fields = ["exact_value", "lower_bound", "upper_bound", "verified_lower_bound", "verified_upper_bound"]
+    value_fields = [
+        "exact_value", "lower_bound", "upper_bound",
+        "literature_exact_value", "literature_lower_bound", "literature_upper_bound",
+        "verified_lower_bound", "verified_upper_bound",
+    ]
     for constant in constants.values():
         for field in value_fields:
             if constant[field] is not None:
@@ -343,6 +384,7 @@ def main() -> None:
 
     certificates = load_certificates()
     assign_certificates(constants, certificates)
+    combine_bounds(constants)
 
     # Save combined updates for download
     for update in updates:
