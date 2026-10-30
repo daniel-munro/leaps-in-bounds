@@ -41,7 +41,11 @@ An explicit construction, checked by a verifier for the constant's family in [`s
 
 ### lean
 
-A theorem in the [`formal/`](../formal) Lean project whose type is exactly the family's formal statement of the bound, as defined in `formal/LeapsInBounds/Statements/`. The checker compiles the proof and checks that it depends only on the standard axioms `propext`, `Classical.choice` and `Quot.sound`. That rules out `sorry`, new axioms and `native_decide`.
+A theorem in the [`formal/`](../formal) Lean project whose type is exactly the family's formal statement of the bound, as defined in `formal/LeapsInBounds/Statements/`. The checker compiles the proof, then [`scripts/check_lean.lean`](../scripts/check_lean.lean) reads the compiled theorem and checks that:
+
+- its type is the statement (syntactically, or else as checked by the Lean kernel), built directly from the trusted statement's name and the certificate's numbers rather than parsed, so notation, macros or instances in the submission can't change what the statement means;
+- the statement it refers to is the one in `formal/LeapsInBounds/Statements/` (a proof module that redeclares it fails to load);
+- it depends only on the standard axioms `propext`, `Classical.choice` and `Quot.sound`. That rules out `sorry`, new axioms and `native_decide`.
 
 The statement files are trusted: they define what every certificate means. Submissions should only add files under `formal/LeapsInBounds/Proofs/`. CI flags any pull request that changes the statements or the checking scripts.
 
@@ -115,6 +119,5 @@ Add `--improves certificates/<group>/<file>.yml` to check that a new certificate
 
 ## Known gaps
 
-- The Lean check elaborates the expected statement in the same environment as the submitted proof, so a malicious submission could in principle use macros or notation to change what the statement means. Pull requests that touch Lean still need human review until the check compares the proof's type against the statement compiled separately, in a clean environment.
-- Compiling Lean runs code from the submission. CI runs with a read-only token and no secrets for this reason.
+- Compiling Lean runs code from the submission, such as `#eval` or custom elaborators. CI runs with a read-only token and no secrets for this reason. The check itself only reads the compiled declarations and runs none of the submission's code, but it runs on the same machine after the build, so code run during the build could in principle tamper with the compiled files or the checker. Until the check runs separately and replays the proofs through the kernel, pull requests that add Lean proofs need a look for code that runs at build time.
 - Values are integers for now. Families with real-valued constants will need exact or interval-arithmetic witnesses.
