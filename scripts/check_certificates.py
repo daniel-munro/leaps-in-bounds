@@ -58,7 +58,9 @@ def main() -> None:
                 raise CertificateError(f"Unknown constant {cert['constant']}")
             if "source" in cert and cert["source"] not in sources:
                 raise CertificateError(f"Unknown source {cert['source']}")
-            get_family(cert["constant"])
+            family, _ = get_family(cert["constant"])
+            if not family.sqrt_values and not isinstance(cert["value"], int):
+                raise CertificateError("Values for this family must be integers")
             if cert["kind"] == "witness":
                 check_witness(cert)
             elif args.lean:
@@ -83,13 +85,13 @@ def main() -> None:
         if bound != "lower":
             continue
         upper = best.get((constant_id, "upper"))
-        if upper is not None and cert["value"] > upper["value"]:
+        if upper is not None and cert["approx"] > upper["approx"]:
             errors.append(f"{cert['id']} contradicts {upper['id']}")
     for (constant_id, bound), cert in best.items():
         opposite = constants[constant_id]["upper_bound" if bound == "lower" else "lower_bound"]
         if opposite is None or opposite.decimal_approx is None:
             continue
-        if is_better(bound, cert["value"], opposite.decimal_approx):
+        if is_better(bound, cert["approx"], opposite.decimal_approx):
             errors.append(
                 f"{cert['id']} contradicts the literature {'upper' if bound == 'lower' else 'lower'} "
                 f"bound ${opposite.latex}$ for {constant_id}"
@@ -106,7 +108,7 @@ def main() -> None:
         cert = certificates[cert_id]
         others = {k: v for k, v in certificates.items() if k != cert_id}
         previous = best_certificates(others).get((cert["constant"], cert["bound"]))
-        if previous is not None and not is_better(cert["bound"], cert["value"], previous["value"]):
+        if previous is not None and not is_better(cert["bound"], cert["approx"], previous["approx"]):
             errors.append(f"{cert_id} does not improve on {previous['id']} ({cert['bound']} bound {previous['value']})")
         else:
             was = previous["value"] if previous else "none"

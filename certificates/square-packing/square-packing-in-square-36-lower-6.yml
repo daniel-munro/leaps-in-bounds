@@ -1,0 +1,10 @@
+constant: square-packing-in-square-36
+bound: lower
+value: 6
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_36
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 36 squares have disjoint interiors, so their total area 36 is at most the area of the square containing them.'

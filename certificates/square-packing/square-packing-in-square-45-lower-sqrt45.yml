@@ -1,0 +1,10 @@
+constant: square-packing-in-square-45
+bound: lower
+value: '\sqrt{45}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_45
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 45 squares have disjoint interiors, so their total area 45 is at most the area of the square containing them.'

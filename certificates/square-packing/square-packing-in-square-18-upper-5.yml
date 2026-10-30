@@ -1,0 +1,10 @@
+constant: square-packing-in-square-18
+bound: upper
+value: 5
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.upper_18
+submitted_by: Claude
+date: 2026-10-30
+notes: 'The squares fit in a 5 × 5 grid.'

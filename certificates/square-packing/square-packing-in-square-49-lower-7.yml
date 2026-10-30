@@ -1,0 +1,10 @@
+constant: square-packing-in-square-49
+bound: lower
+value: 7
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_49
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 49 squares have disjoint interiors, so their total area 49 is at most the area of the square containing them.'

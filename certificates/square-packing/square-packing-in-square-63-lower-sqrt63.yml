@@ -1,0 +1,10 @@
+constant: square-packing-in-square-63
+bound: lower
+value: '\sqrt{63}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_63
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 63 squares have disjoint interiors, so their total area 63 is at most the area of the square containing them.'

@@ -1,0 +1,10 @@
+constant: square-packing-in-square-53
+bound: lower
+value: '\sqrt{53}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_53
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 53 squares have disjoint interiors, so their total area 53 is at most the area of the square containing them.'

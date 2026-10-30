@@ -1,0 +1,10 @@
+constant: square-packing-in-square-30
+bound: upper
+value: 6
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.upper_30
+submitted_by: Claude
+date: 2026-10-30
+notes: 'The squares fit in a 6 × 6 grid.'

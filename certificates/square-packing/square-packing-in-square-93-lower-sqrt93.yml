@@ -1,0 +1,10 @@
+constant: square-packing-in-square-93
+bound: lower
+value: '\sqrt{93}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_93
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 93 squares have disjoint interiors, so their total area 93 is at most the area of the square containing them.'

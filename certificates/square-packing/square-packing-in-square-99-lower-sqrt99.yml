@@ -1,0 +1,10 @@
+constant: square-packing-in-square-99
+bound: lower
+value: '\sqrt{99}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_99
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 99 squares have disjoint interiors, so their total area 99 is at most the area of the square containing them.'

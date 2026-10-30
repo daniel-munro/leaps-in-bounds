@@ -1,0 +1,10 @@
+constant: square-packing-in-square-35
+bound: lower
+value: '\sqrt{35}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_35
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 35 squares have disjoint interiors, so their total area 35 is at most the area of the square containing them.'

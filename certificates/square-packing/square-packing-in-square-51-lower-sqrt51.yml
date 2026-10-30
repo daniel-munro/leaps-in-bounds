@@ -1,0 +1,10 @@
+constant: square-packing-in-square-51
+bound: lower
+value: '\sqrt{51}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_51
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 51 squares have disjoint interiors, so their total area 51 is at most the area of the square containing them.'

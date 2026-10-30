@@ -1,0 +1,10 @@
+constant: square-packing-in-square-73
+bound: lower
+value: '\sqrt{73}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_73
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 73 squares have disjoint interiors, so their total area 73 is at most the area of the square containing them.'

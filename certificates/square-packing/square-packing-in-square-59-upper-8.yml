@@ -1,0 +1,10 @@
+constant: square-packing-in-square-59
+bound: upper
+value: 8
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.upper_59
+submitted_by: Claude
+date: 2026-10-30
+notes: 'The squares fit in a 8 × 8 grid.'

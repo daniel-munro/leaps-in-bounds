@@ -1,0 +1,10 @@
+constant: square-packing-in-square-15
+bound: lower
+value: '\sqrt{15}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_15
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 15 squares have disjoint interiors, so their total area 15 is at most the area of the square containing them.'

@@ -1,0 +1,10 @@
+constant: square-packing-in-square-70
+bound: lower
+value: '\sqrt{70}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SquarePackingBasic
+  theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_70
+submitted_by: Claude
+date: 2026-10-30
+notes: 'Area bound: the 70 squares have disjoint interiors, so their total area 70 is at most the area of the square containing them.'
