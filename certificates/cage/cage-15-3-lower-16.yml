@@ -1,0 +1,10 @@
+constant: cage-15-3
+bound: lower
+value: 16
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CageSmallGirth
+  theorem: LeapsInBounds.Proofs.CageSmallGirth.lower_15_3
+submitted_by: Claude
+date: 2026-10-29
+notes: Each vertex has 15 neighbors other than itself.
