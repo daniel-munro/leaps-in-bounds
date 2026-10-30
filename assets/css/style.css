@@ -163,6 +163,24 @@ h1 {
     color: #6f42c1;
 }
 
+/* Lower (top) and upper (bottom) marks beside an exact value */
+.exact-marks {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    margin-left: 1px;
+}
+
+.exact-marks > span {
+    height: 0.9em;
+    line-height: 0.9em;
+}
+
+.exact-marks .verified-mark {
+    vertical-align: top;
+    margin-left: 0;
+}
+
 .bg-verified-new {
     background-color: #6f42c1 !important;
 }

@@ -13,39 +13,38 @@ def html_for_value(value: Mapping[str, Any] | None) -> str:
         html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
     return html
 
-def verified_mark(const: Mapping[str, Any], sides: list[str]) -> str:
-    """Generate a check mark noting that a displayed value is verified on the
-    given sides, highlighted if it's stronger than (or absent from) the
+def verified_mark(const: Mapping[str, Any], side: str) -> str:
+    """Generate a check mark noting that a constant's lower or upper bound is
+    verified, highlighted if it's stronger than (or absent from) the
     literature."""
-    sides = [side for side in sides if const[f'{side}_bound_source'] in ('verified', 'both')]
-    if not sides:
+    source = const[f'{side}_bound_source']
+    if source not in ('verified', 'both'):
         return ''
-    notes = []
-    for side in sides:
-        note = f"Verified {side} bound by certificate {const[f'verified_{side}_certificate']}"
-        if const[f'{side}_bound_source'] == 'verified':
-            literature = const[f'literature_{side}_bound']
-            if literature is None:
-                note += '; none in the literature'
-            else:
-                note += f"; the literature has {literature['latex']}"
-        notes.append(note)
-    new = any(const[f'{side}_bound_source'] == 'verified' for side in sides)
-    css_class = 'verified-mark verified-new' if new else 'verified-mark'
-    title = '. '.join(notes)
+    title = f"Verified {side} bound by certificate {const[f'verified_{side}_certificate']}"
+    css_class = 'verified-mark'
+    if source == 'verified':
+        css_class += ' verified-new'
+        literature = const[f'literature_{side}_bound']
+        if literature is None:
+            title += '; none in the literature'
+        else:
+            title += f"; the literature has {literature['latex']}"
     return f'<span class="{css_class}" data-bs-toggle="tooltip" data-bs-placement="top" title="{title}">✓</span>'
 
 def cell_content(const: Mapping[str, Any]) -> tuple[str, str]:
     """Generate the displayed value or bounds for a constant, with marks on
     verified values, and the CSS class for how well it's known."""
-    def marked(value: Mapping[str, Any] | None, sides: list[str]) -> str:
-        # Keep the mark on the same line as its value (sequence boxes stack children)
-        return f'<span>{html_for_value(value)}{verified_mark(const, sides)}</span>'
-
     if const['exact_value'] is not None:
-        return marked(const['exact_value'], ['lower', 'upper']), 'value-exact'
-    lb = marked(const['lower_bound'], ['lower'])
-    ub = marked(const['upper_bound'], ['upper'])
+        # Lower and upper marks stacked beside the value, in the same order as bounds
+        marks = (
+            f'<span class="exact-marks"><span>{verified_mark(const, "lower")}</span>'
+            f'<span>{verified_mark(const, "upper")}</span></span>'
+        )
+        return f'<span>{html_for_value(const["exact_value"])}{marks}</span>', 'value-exact'
+
+    # Keep each mark on the same line as its value (sequence boxes stack children)
+    lb = f'<span>{html_for_value(const["lower_bound"])}{verified_mark(const, "lower")}</span>'
+    ub = f'<span>{html_for_value(const["upper_bound"])}{verified_mark(const, "upper")}</span>'
     if const['lower_bound'] is None and const['upper_bound'] is None:
         css_class = 'value-unbounded'
     elif const['lower_bound'] is None or const['upper_bound'] is None:
