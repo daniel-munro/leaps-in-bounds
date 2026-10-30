@@ -12,6 +12,7 @@ in a secondary source:
 See certificates/README.md for the file format.
 """
 
+import json
 import math
 import pathlib
 import re
@@ -24,10 +25,7 @@ import yaml
 
 CERTIFICATES_DIR = pathlib.Path("certificates")
 FORMAL_DIR = pathlib.Path("formal")
-
-# Axioms a Lean proof may depend on. Notably excludes sorryAx and
-# Lean.ofReduceBool (used by native_decide, which trusts the compiler).
-ALLOWED_AXIOMS = {"propext", "Classical.choice", "Quot.sound"}
+CHECK_LEAN_SCRIPT = pathlib.Path("scripts/check_lean.lean")
 
 REQUIRED_FIELDS = ["constant", "bound", "value", "kind", "submitted_by", "date"]
 
@@ -291,15 +289,16 @@ class Family:
     id_pattern: re.Pattern[str]
     # Lean module containing the formal statements.
     lean_module: str
-    # (params, bound, value) -> Lean proposition stating the bound.
-    lean_statement: Callable[[Mapping[str, int], str, int], str]
+    # (params, bound, value) -> Lean constant stating the bound, and its
+    # natural number arguments.
+    lean_statement: Callable[[Mapping[str, int], str, int], tuple[str, list[int]]]
     # (params, bound, value, cert) -> None, raising CertificateError if invalid.
     check_witness: Callable[[Mapping[str, int], str, int, Mapping[str, Any]], None]
 
 
-def ramsey_lean_statement(params: Mapping[str, int], bound: str, value: int) -> str:
+def ramsey_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
     name = "LowerBound" if bound == "lower" else "UpperBound"
-    return f"LeapsInBounds.Ramsey.{name} {params['r']} {params['s']} {value}"
+    return f"LeapsInBounds.Ramsey.{name}", [params['r'], params['s'], value]
 
 
 def ramsey_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
@@ -316,9 +315,9 @@ def ramsey_check_witness(params: Mapping[str, int], bound: str, value: int, cert
         raise CertificateError(f"Graph contains an independent set of size {params['s']}")
 
 
-def van_der_waerden_lean_statement(params: Mapping[str, int], bound: str, value: int) -> str:
+def van_der_waerden_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
     name = "LowerBound" if bound == "lower" else "UpperBound"
-    return f"LeapsInBounds.VanDerWaerden.{name} {params['r']} {params['k']} {value}"
+    return f"LeapsInBounds.VanDerWaerden.{name}", [params['r'], params['k'], value]
 
 
 def has_monochromatic_ap(colors: str, k: int) -> bool:
@@ -355,9 +354,9 @@ def van_der_waerden_check_witness(params: Mapping[str, int], bound: str, value: 
         raise CertificateError(f"Coloring has a monochromatic arithmetic progression of length {k}")
 
 
-def cage_lean_statement(params: Mapping[str, int], bound: str, value: int) -> str:
+def cage_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
     name = "LowerBound" if bound == "lower" else "UpperBound"
-    return f"LeapsInBounds.Cage.{name} {params['k']} {params['g']} {value}"
+    return f"LeapsInBounds.Cage.{name}", [params['k'], params['g'], value]
 
 
 def cage_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
@@ -374,9 +373,9 @@ def cage_check_witness(params: Mapping[str, int], bound: str, value: int, cert: 
         raise CertificateError(f"Graph has girth {girth(adj)}, not {params['g']}")
 
 
-def degree_diameter_lean_statement(params: Mapping[str, int], bound: str, value: int) -> str:
+def degree_diameter_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
     name = "LowerBound" if bound == "lower" else "UpperBound"
-    return f"LeapsInBounds.DegreeDiameter.{name} {params['d']} {params['k']} {value}"
+    return f"LeapsInBounds.DegreeDiameter.{name}", [params['d'], params['k'], value]
 
 
 def degree_diameter_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
@@ -393,9 +392,9 @@ def degree_diameter_check_witness(params: Mapping[str, int], bound: str, value: 
         raise CertificateError(f"Graph has diameter more than {params['k']}")
 
 
-def superpermutation_lean_statement(params: Mapping[str, int], bound: str, value: int) -> str:
+def superpermutation_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
     name = "LowerBound" if bound == "lower" else "UpperBound"
-    return f"LeapsInBounds.Superpermutation.{name} {params['n']} {value}"
+    return f"LeapsInBounds.Superpermutation.{name}", [params['n'], value]
 
 
 def superpermutation_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
@@ -472,72 +471,55 @@ def check_lean(certs: list[Mapping[str, Any]]) -> dict[str, str]:
     statement using only allowed axioms. Requires the formal/ project to be
     built. Returns an error message for each certificate that fails.
 
-    Certificates are checked in one Lean file per proof module, since
-    importing Mathlib dominates the time to check each one.
+    The comparison is done by scripts/check_lean.lean, which builds the
+    expected statement directly rather than elaborating it alongside the
+    submitted proof, so the proof can't change what the statement means.
     """
     errors = {}
-    by_module: dict[str, list[Mapping[str, Any]]] = {}
+    entries = []
     for cert in certs:
         module = cert["lean"]["module"]
         if not module.startswith("LeapsInBounds.Proofs."):
             errors[cert["id"]] = "Lean proofs must live under LeapsInBounds.Proofs"
-        else:
-            by_module.setdefault(module, []).append(cert)
-    for module, module_certs in by_module.items():
-        errors |= check_lean_module(module, module_certs)
-    return errors
-
-
-def check_lean_module(module: str, certs: list[Mapping[str, Any]]) -> dict[str, str]:
-    """Check certificates whose proofs are in one module, as in check_lean."""
-    build = subprocess.run(["lake", "build", module], cwd=FORMAL_DIR, capture_output=True, text=True)
-    if build.returncode != 0:
-        return {cert["id"]: f"lake build {module} failed:\n{build.stdout}{build.stderr}" for cert in certs}
-    statements = {}
-    for cert in certs:
-        family, params = get_family(cert["constant"])
-        statements[cert["id"]] = (family, family.lean_statement(params, cert["bound"], cert["value"]))
-    imports = sorted({family.lean_module for family, _ in statements.values()}) + [module]
-    lines = [f"import {name}" for name in imports] + [""]
-    # Certificates checked on each line (1-based)
-    cert_lines: dict[int, list[str]] = {}
-    for cert in certs:
-        cert_lines[len(lines) + 1] = [cert["id"]]
-        lines.append(f"example : {statements[cert['id']][1]} := {cert['lean']['theorem']}")
-    lines.append("")
-    for theorem in sorted({cert["lean"]["theorem"] for cert in certs}):
-        cert_lines[len(lines) + 1] = [cert["id"] for cert in certs if cert["lean"]["theorem"] == theorem]
-        lines.append(f"#print axioms {theorem}")
-    with tempfile.NamedTemporaryFile("w", suffix=".lean", dir=FORMAL_DIR, delete=False) as file:
-        file.write("\n".join(lines) + "\n")
-        check_path = pathlib.Path(file.name)
-    try:
-        result = subprocess.run(["lake", "env", "lean", check_path.name], cwd=FORMAL_DIR, capture_output=True, text=True)
-    finally:
-        check_path.unlink()
-    output = result.stdout + result.stderr
-
-    errors = {}
-    error_lines = {int(line) for line in re.findall(r":(\d+):\d+: error", output)}
-    if (result.returncode != 0 and not error_lines) or error_lines - cert_lines.keys():
-        # An error outside the certificates' lines, such as in an import
-        return {cert["id"]: f"Lean check of {module} failed:\n{output}" for cert in certs}
-    for line in error_lines:
-        for cert_id in cert_lines[line]:
-            theorem = next(c["lean"]["theorem"] for c in certs if c["id"] == cert_id)
-            errors[cert_id] = f"Theorem {theorem} does not prove `{statements[cert_id][1]}`:\n{output}"
-
-    axioms = {name: set() for name in re.findall(r"'(\S+)' does not depend on any axioms", output)}
-    for name, listed in re.findall(r"'(\S+)' depends on axioms: \[(.*?)\]", output, re.DOTALL):
-        axioms[name] = {a.strip() for a in listed.split(",")}
-    for cert in certs:
-        theorem = cert["lean"]["theorem"]
-        if cert["id"] in errors:
             continue
-        if theorem not in axioms:
-            errors[cert["id"]] = f"Could not read axioms of {theorem} from Lean output:\n{output}"
-        elif disallowed := axioms[theorem] - ALLOWED_AXIOMS:
-            errors[cert["id"]] = f"Proof uses disallowed axioms: {sorted(disallowed)}"
+        family, params = get_family(cert["constant"])
+        statement, args = family.lean_statement(params, cert["bound"], cert["value"])
+        entries.append({
+            "id": cert["id"],
+            "statementModule": family.lean_module,
+            "statement": statement,
+            "args": args,
+            "proofModule": module,
+            "theorem": cert["lean"]["theorem"],
+        })
+    modules = sorted({entry["proofModule"] for entry in entries})
+    if not modules:
+        return errors
+    build = subprocess.run(["lake", "build", *modules], cwd=FORMAL_DIR, capture_output=True, text=True)
+    if build.returncode != 0:
+        output = build.stdout + build.stderr
+        return errors | {entry["id"]: f"lake build failed:\n{output}" for entry in entries}
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as file:
+        json.dump(entries, file)
+        input_path = pathlib.Path(file.name)
+    try:
+        result = subprocess.run(
+            ["lake", "env", "lean", "--run", str(CHECK_LEAN_SCRIPT.resolve()), str(input_path)],
+            cwd=FORMAL_DIR, capture_output=True, text=True,
+        )
+    finally:
+        input_path.unlink()
+    try:
+        failures = json.loads(result.stdout) if result.returncode == 0 else None
+    except json.JSONDecodeError:
+        failures = None
+    if failures is None:
+        output = result.stdout + result.stderr
+        return errors | {entry["id"]: f"Lean check failed:\n{output}" for entry in entries}
+    for entry in entries:
+        if entry["id"] in failures:
+            statement = " ".join([entry["statement"], *map(str, entry["args"])])
+            errors[entry["id"]] = f"Theorem {entry['theorem']} does not prove `{statement}`: {failures[entry['id']]}"
     return errors
 
 
