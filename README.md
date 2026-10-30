@@ -18,13 +18,13 @@ There are three data layers that feed the site, each with a different purpose:
 
 In short: edit `source_data/` → run the build/test scripts → `_data/` powers the site → `data/` powers downloads.
 
-## Verified Bounds (Pilot)
+## Verified Bounds
 
 Alongside bounds from the literature, constants can have verified bounds backed by a certificate that is checked automatically: an explicit construction checked by a program, or a formal proof in Lean.
 
 - `certificates/`: One YAML file per certificate. See [certificates/README.md](certificates/README.md) for the format and how to submit one.
 - `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
-- `scripts/check_certificates.py`: Verifies all certificates. CI runs it on pull requests (with Lean proofs only when certificates, proofs, or scripts change).
+- `scripts/check_certificates.py`: Verifies all certificates. CI runs it on pull requests (with Lean proofs only when certificates, proofs, or scripts change), compiling submitted proofs in a separate job from the check.
 
 So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, and minimal superpermutations.
 
