@@ -16,6 +16,10 @@ unification hints) can change what it means. The proof modules are loaded
 without running any of their code: only their declarations are read, and the
 type of each theorem is compared with the expected type by syntactic equality
 or, failing that, by the kernel.
+
+Every declaration in the proof modules is also replayed through the kernel on
+top of the other imported modules, so a compiled proof module is trusted no
+more than its source would be, even if it was tampered with.
 -/
 import Lean
 
@@ -68,6 +72,23 @@ def check (env : Environment) (c : Cert) : IO (Option String) := do
     return s!"Proof uses disallowed axioms: {disallowed}"
   return none
 
+/-- Modules whose compiled files come from the submission rather than from the
+trusted build. -/
+def isProofModule (module : Name) : Bool :=
+  (`LeapsInBounds.Proofs).isPrefixOf module
+
+/-- Send every declaration in the proof modules imported by `env` to the
+kernel, on top of an environment that imports only the other modules. -/
+def replayProofs (env : Environment) : IO Unit := do
+  let mut newConstants : Std.HashMap Name ConstantInfo := {}
+  for module in env.header.moduleNames, data in env.header.moduleData do
+    if isProofModule module then
+      for name in data.constNames, info in data.constants do
+        newConstants := newConstants.insert name info
+  let trusted := env.header.moduleNames.filter (!isProofModule ·)
+  let base ← importModules (trusted.map ({ module := · })) {}
+  discard <| base.toKernelEnv.replay newConstants
+
 def main (args : List String) : IO UInt32 := do
   let [path] := args | throw <| .userError "usage: check_lean.lean <input.json>"
   let json ← IO.ofExcept <| Json.parse (← IO.FS.readFile path)
@@ -83,6 +104,12 @@ def main (args : List String) : IO UInt32 := do
     catch e =>
       for c in group do
         errors := (c.id, toJson s!"Could not import {modules}: {e}") :: errors
+      continue
+    try
+      replayProofs env
+    catch e =>
+      for c in group do
+        errors := (c.id, toJson s!"The kernel rejected a declaration in {proofModule}: {e}") :: errors
       continue
     for c in group do
       if let some err ← check env c then

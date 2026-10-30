@@ -17,7 +17,32 @@ permissions:
   contents: read
 
 jobs:
+  # Compiling the proofs runs code from the submission, so it happens in its own
+  # job, and only the compiled proof modules are passed on. The check job
+  # replays them through the kernel, so it doesn't trust what this job produces.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Lean
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch Mathlib and build proofs
+        working-directory: formal
+        run: |
+          lake exe cache get
+          lake build
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: proofs
+          path: formal/.lake/build/lib/lean/LeapsInBounds/Proofs/
+
   check:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -32,16 +57,30 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
+      # A lakefile.lean would run code from the submission in this job
+      - name: Refuse Lean code in the Lake configuration
+        run: |
+          if [ -n "$(find formal -name lakefile.lean -not -path 'formal/.lake/*')" ]; then
+            echo "::error::lakefile.lean is not allowed; use lakefile.toml"
+            exit 1
+          fi
+
       - name: Install Lean
         run: |
           curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
-      - name: Fetch Mathlib and build proofs
+      # Builds only the statements, which import nothing but Mathlib
+      - name: Fetch Mathlib and build statements
         working-directory: formal
         run: |
           lake exe cache get
-          lake build
+          lake build $(cd LeapsInBounds/Statements && ls *.lean | sed 's/\.lean$//; s/^/LeapsInBounds.Statements./')
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: proofs
+          path: formal/.lake/build/lib/lean/LeapsInBounds/Proofs/
 
       - name: Find new certificates
         id: changed
@@ -55,7 +94,7 @@ jobs:
       - name: Check certificates
         env:
           NEW_FILES: ${{ steps.changed.outputs.files }}
-        run: python scripts/check_certificates.py --lean --improves $NEW_FILES
+        run: python scripts/check_certificates.py --lean --no-build --improves $NEW_FILES
 
       - name: Flag changes to trusted files
         if: github.event_name == 'pull_request'

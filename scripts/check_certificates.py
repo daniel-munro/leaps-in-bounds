@@ -1,10 +1,11 @@
 """Verify certificates and check them against each other and the literature.
 
 Usage:
-    python scripts/check_certificates.py [--lean] [--improves FILE ...]
+    python scripts/check_certificates.py [--lean [--no-build]] [--improves FILE ...]
 
---lean checks Lean proofs (needs the formal/ project built); without it they
-are skipped. --improves requires the given certificate files to be strictly
+--lean checks Lean proofs (needs Mathlib fetched in formal/); without it they
+are skipped. It builds the proof modules first, unless --no-build is given
+because they were compiled elsewhere, as in CI. --improves requires the given certificate files to be strictly
 stronger than every other certificate for the same bound, as for new
 submissions.
 """
@@ -30,6 +31,7 @@ from process_data import assign_updates_and_values, get_constants, load_updates
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--lean", action="store_true", help="also check Lean proofs")
+    parser.add_argument("--no-build", action="store_true", help="check Lean proofs without building them")
     parser.add_argument("--improves", nargs="*", default=[], metavar="FILE",
                         help="certificate files that must improve on all others")
     args = parser.parse_args()
@@ -64,7 +66,7 @@ def main() -> None:
         except CertificateError as e:
             failed[cert["id"]] = str(e)
     if lean_certs:
-        failed |= check_lean(lean_certs)
+        failed |= check_lean(lean_certs, build=not args.no_build)
     for cert in certificates.values():
         if cert["id"] in failed:
             errors.append(f"{cert['id']}: {failed[cert['id']]}")
