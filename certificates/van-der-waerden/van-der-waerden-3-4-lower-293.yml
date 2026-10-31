@@ -1,0 +1,11 @@
+constant: van-der-waerden-3-4
+bound: lower
+value: 293
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-3-4-lower-293.txt
+submitted_by: Claude
+date: 2026-10-31
+source: rabung-1979
+notes: 'Rabung''s construction: color each nonzero residue mod 97 by its discrete logarithm base 5 mod 3 and 0 by color 0, repeat it for 3 periods, then extend greedily at the ends by 1 more integer.'
