@@ -1,0 +1,11 @@
+constant: van-der-waerden-2-7
+bound: lower
+value: 3704
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-2-7-lower-3704.txt
+submitted_by: Claude
+date: 2026-10-31
+source: rabung-lotts-2012
+notes: 'Rabung''s construction: color each nonzero residue mod 617 by its discrete logarithm base 3 mod 2 and 0 by color 0, repeat it for 6 periods, then extend greedily at the ends by 1 more integer.'

@@ -1,0 +1,11 @@
+constant: van-der-waerden-3-8
+bound: lower
+value: 238401
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-3-8-lower-238401.txt
+submitted_by: Claude
+date: 2026-10-31
+source: rabung-lotts-2012
+notes: 'Rabung''s construction: color each nonzero residue mod 34057 by its discrete logarithm base 5 mod 3 and 0 by color 0, repeat it for 7 periods, then extend greedily at the ends by 1 more integer.'

@@ -1,0 +1,11 @@
+constant: van-der-waerden-4-4
+bound: lower
+value: 1049
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-4-4-lower-1049.txt
+submitted_by: Claude
+date: 2026-10-31
+source: rabung-lotts-2012
+notes: 'Rabung''s construction: color each nonzero residue mod 349 by its discrete logarithm base 2 mod 4 and 0 by color 0, repeat it for 3 periods, then extend greedily at the ends by 1 more integer.'
