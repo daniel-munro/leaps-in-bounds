@@ -19,6 +19,7 @@ import re
 import subprocess
 import tempfile
 from dataclasses import dataclass
+from fractions import Fraction
 from typing import Any, Callable, Mapping
 
 import numpy as np
@@ -65,17 +66,171 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
     return certificates
 
 
+#########
+# Values #
+#########
+
+# Bounds are integers, or for some families square roots `\sqrt{m}` or sums of
+# rational multiples of square roots, such as `4+2\sqrt{3}+\frac{4\sqrt{6}}{3}`
+# (see Family.values).
+
 SQRT_PATTERN = re.compile(r"\\sqrt\{(\d+)\}")
+RADICAL_TERM = re.compile(r"([+-]?)(?:\\frac\{(\d*)(?:\\sqrt\{(\d+)\})?\}\{(\d+)\}|(\d*)(?:\\sqrt\{(\d+)\})?)")
+MAX_RADICAND = 10**9
+
+
+def squarefree_part(m: int) -> tuple[int, int]:
+    """Write m = k² r with r squarefree, returning (k, r)."""
+    k, r, p = 1, 1, 2
+    while p * p <= m:
+        while m % (p * p) == 0:
+            m //= p * p
+            k *= p
+        if m % p == 0:
+            m //= p
+            r *= p
+        p += 1
+    return k, r * m
+
+
+def prime_factors(m: int) -> list[int]:
+    """The distinct prime factors of m, in increasing order."""
+    primes, p = [], 2
+    while p * p <= m:
+        if m % p == 0:
+            primes.append(p)
+            while m % p == 0:
+                m //= p
+        p += 1
+    return primes + [m] if m > 1 else primes
+
+
+class Radical:
+    """An exact real number ∑ cᵢ √mᵢ, with rational cᵢ and distinct squarefree
+    mᵢ (mᵢ = 1 for the rational part), stored as {mᵢ: cᵢ}."""
+
+    def __init__(self, terms: Mapping[int, Fraction] | None = None) -> None:
+        self.terms = {m: Fraction(c) for m, c in (terms or {}).items() if c}
+
+    @classmethod
+    def sqrt(cls, m: int, c: Fraction | int = 1) -> "Radical":
+        """c √m."""
+        k, r = squarefree_part(m)
+        return cls({r: Fraction(c) * k})
+
+    def __add__(self, other: "Radical | Fraction | int") -> "Radical":
+        terms = dict(self.terms)
+        for m, c in to_radical(other).terms.items():
+            terms[m] = terms.get(m, 0) + c
+        return Radical(terms)
+
+    __radd__ = __add__
+
+    def __neg__(self) -> "Radical":
+        return Radical({m: -c for m, c in self.terms.items()})
+
+    def __sub__(self, other: "Radical | Fraction | int") -> "Radical":
+        return self + -to_radical(other)
+
+    def __rsub__(self, other: "Radical | Fraction | int") -> "Radical":
+        return to_radical(other) + -self
+
+    def __mul__(self, other: "Radical | Fraction | int") -> "Radical":
+        out = Radical()
+        for m, c in self.terms.items():
+            for n, d in to_radical(other).terms.items():
+                g = math.gcd(m, n)  # √m √n = g √(mn / g²)
+                out += Radical({m * n // (g * g): c * d * g})
+        return out
+
+    __rmul__ = __mul__
+
+    def sign(self) -> int:
+        """The exact sign: -1, 0 or 1.
+
+        For the largest prime p in a radicand, write x = u + v √p with no √p
+        in u or v. If u and v have the same sign (or one is 0), so does x.
+        Otherwise x has the sign of u times that of u² - p v², since
+        x (u - v √p) = u² - p v² and u - v √p has the sign of u.
+        """
+        if not self.terms:
+            return 0
+        p = max(max(prime_factors(m), default=1) for m in self.terms)
+        if p == 1:
+            return 1 if self.terms[1] > 0 else -1
+        u = Radical({m: c for m, c in self.terms.items() if m % p})
+        v = Radical({m // p: c for m, c in self.terms.items() if m % p == 0})
+        su, sv = u.sign(), v.sign()
+        if su == 0 or su == sv:
+            return sv
+        if sv == 0:
+            return su
+        return su * (u * u - p * v * v).sign()
+
+    def __float__(self) -> float:
+        return math.fsum(float(c) * math.sqrt(m) for m, c in self.terms.items())
+
+    def lean_args(self) -> tuple[list[list[int]], int]:
+        """The terms [[c₁, m₁], ...] and denominator d with self = (∑ cᵢ √mᵢ) / d,
+        for integers cᵢ, d the least common denominator, and mᵢ increasing."""
+        d = math.lcm(*(c.denominator for c in self.terms.values()))
+        return [[int(c * d), m] for m, c in sorted(self.terms.items())], d
+
+
+def to_radical(x: "Radical | Fraction | int") -> Radical:
+    return x if isinstance(x, Radical) else Radical({1: Fraction(x)})
+
+
+def parse_radical(text: Any) -> Radical:
+    """Parse an integer, or a string summing terms `a`, `a\\sqrt{m}` or
+    `\\frac{a\\sqrt{m}}{b}`, each with an optional sign, where a can be
+    omitted before a square root."""
+    if isinstance(text, int) and not isinstance(text, bool):
+        return to_radical(text)
+    error = CertificateError(f"Can't read {text!r} as a sum of rational multiples of square roots")
+    if not isinstance(text, str):
+        raise error
+    s = re.sub(r"\s*([+-])\s*", r"\1", text.strip())
+    if not s or any(c.isspace() for c in s):
+        raise error
+    total, pos = Radical(), 0
+    while pos < len(s):
+        match = RADICAL_TERM.match(s, pos)
+        if match.end() == pos or (pos > 0 and not match.group(1)):
+            raise error
+        sign, frac_coef, frac_root, den, coef, root = match.groups()
+        if den is not None:
+            coef, root = frac_coef, frac_root
+        if not coef and not root:
+            raise error
+        c, m, d = int(coef or 1), int(root or 1), int(den or 1)
+        if d == 0 or m > MAX_RADICAND:
+            raise error
+        total += Radical.sqrt(m, Fraction(-c if sign == "-" else c, d))
+        pos = match.end()
+    return total
 
 
 def value_approx(value: Any, path: Any = None) -> float:
-    """Numeric value of a certificate's bound, which is an integer or a string
-    `\\sqrt{m}` for a natural number m."""
+    """Numeric value of a certificate's bound: an integer, or a string that
+    parse_radical reads."""
+    try:
+        return float(parse_radical(value))
+    except CertificateError:
+        raise CertificateError(f"{path}: value must be an integer or a sum of rational multiples of square roots, not {value!r}")
+
+
+def check_value_type(values: str, value: Any) -> None:
+    """Check that a value has a form allowed by a family (see Family.values)."""
     if isinstance(value, int) and not isinstance(value, bool):
-        return value
-    if isinstance(value, str) and SQRT_PATTERN.fullmatch(value):
-        return math.sqrt(int(SQRT_PATTERN.fullmatch(value).group(1)))
-    raise CertificateError(f"{path}: value must be an integer or '\\sqrt{{m}}', not {value!r}")
+        return
+    if values == "sqrt" and isinstance(value, str) and SQRT_PATTERN.fullmatch(value):
+        return
+    if values == "radical":
+        parse_radical(value)
+        return
+    allowed = {"integer": "integers", "sqrt": "integers or '\\sqrt{m}'"}.get(values)
+    raise CertificateError(f"Values for this family must be {allowed}")
 
 
 def sqrt_argument(value: int | str) -> int:
@@ -317,12 +472,15 @@ class Family:
     # Lean module containing the formal statements.
     lean_module: str
     # (params, bound, value) -> Lean constant stating the bound, and its
-    # natural number arguments.
-    lean_statement: Callable[[Mapping[str, int], str, int | str], tuple[str, list[int]]]
+    # arguments: natural numbers, or lists of [integer, natural number] pairs
+    # (List (ℤ × ℕ) in Lean).
+    lean_statement: Callable[[Mapping[str, int], str, int | str], tuple[str, list[Any]]]
     # (params, bound, value, cert) -> None, raising CertificateError if invalid.
     check_witness: Callable[[Mapping[str, int], str, int | str, Mapping[str, Any]], None]
-    # Whether values can be square roots, written `\sqrt{m}`, besides integers.
-    sqrt_values: bool = False
+    # Which values are allowed: "integer", "sqrt" (also `\sqrt{m}`), or
+    # "radical" (sums of rational multiples of square roots, read by
+    # parse_radical).
+    values: str = "integer"
 
 
 def ramsey_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
@@ -577,6 +735,59 @@ def square_packing_check_witness(params: Mapping[str, int], bound: str, value: i
     raise CertificateError("Square packing bounds can only be certified by Lean proofs so far")
 
 
+def circle_in_triangle_lean_statement(params: Mapping[str, int], bound: str, value: int | str) -> tuple[str, list[Any]]:
+    name = "RadicalLowerBound" if bound == "lower" else "RadicalUpperBound"
+    terms, d = parse_radical(value).lean_args()
+    return f"LeapsInBounds.CircleInTriangle.{name}", [params['n'], terms, d]
+
+
+def read_points(data: str) -> list[tuple[Radical, Radical]]:
+    """Parse points `x, y`, one per line, with coordinates read by
+    parse_radical."""
+    points = []
+    for line in data.splitlines():
+        if line.strip():
+            coords = line.split(",")
+            if len(coords) != 2:
+                raise CertificateError(f"Expected a point 'x, y', not {line.strip()!r}")
+            points.append((parse_radical(coords[0]), parse_radical(coords[1])))
+    return points
+
+
+def circle_in_triangle_check_witness(params: Mapping[str, int], bound: str, value: int | str, cert: Mapping[str, Any]) -> None:
+    """The side s(n) of the smallest equilateral triangle containing n unit
+    circles with disjoint interiors is at most value if there are n centers
+    at distance at least 2 from each other, and at least 1 from each side of
+    the triangle with vertices (0, 0), (value, 0) and (value / 2, value √3 / 2).
+
+    Coordinates are exact sums of rational multiples of square roots, so the
+    inequalities, including the equalities where circles touch, are decided
+    exactly.
+    """
+    if bound != "upper":
+        raise CertificateError("Circle packing witnesses can only certify upper bounds")
+    if cert["witness"].get("format") != "points":
+        raise CertificateError("Circle packing witnesses must use format: points")
+    s = parse_radical(value)
+    points = read_points(read_witness_data(cert))
+    if len(points) != params["n"]:
+        raise CertificateError(f"Witness has {len(points)} centers, not {params['n']}")
+    # Deciding signs takes time exponential in the number of primes
+    radicands = {m for x, y in points for m in [*x.terms, *y.terms, *s.terms]}
+    if len({p for m in radicands for p in prime_factors(m)}) > 6:
+        raise CertificateError("Coordinates can use square roots of at most 6 different primes")
+    sqrt3 = Radical.sqrt(3)
+    for i, (x, y) in enumerate(points):
+        # Distances to the sides y = 0, y = √3 x and y = √3 (s - x)
+        if (y - 1).sign() < 0 or (sqrt3 * x - y - 2).sign() < 0 or (sqrt3 * (s - x) - y - 2).sign() < 0:
+            raise CertificateError(f"Circle {i + 1} is not inside the triangle")
+    for i in range(len(points)):
+        for j in range(i):
+            dx, dy = points[i][0] - points[j][0], points[i][1] - points[j][1]
+            if (dx * dx + dy * dy - 4).sign() < 0:
+                raise CertificateError(f"Circles {j + 1} and {i + 1} overlap")
+
+
 # Keyed by constant group ID.
 FAMILIES = {
     "ramsey": Family(
@@ -620,7 +831,14 @@ FAMILIES = {
         lean_module="LeapsInBounds.Statements.SquarePacking",
         lean_statement=square_packing_lean_statement,
         check_witness=square_packing_check_witness,
-        sqrt_values=True,
+        values="sqrt",
+    ),
+    "circle-in-equilateral": Family(
+        id_pattern=re.compile(r"circle-in-equilateral-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.CircleInTriangle",
+        lean_statement=circle_in_triangle_lean_statement,
+        check_witness=circle_in_triangle_check_witness,
+        values="radical",
     ),
 }
 
@@ -694,9 +912,16 @@ def check_lean(certs: list[Mapping[str, Any]], build: bool = True) -> dict[str, 
         return errors | {entry["id"]: f"Lean check failed:\n{output}" for entry in entries}
     for entry in entries:
         if entry["id"] in failures:
-            statement = " ".join([entry["statement"], *map(str, entry["args"])])
+            statement = " ".join([entry["statement"], *map(lean_arg, entry["args"])])
             errors[entry["id"]] = f"Theorem {entry['theorem']} does not prove `{statement}`: {failures[entry['id']]}"
     return errors
+
+
+def lean_arg(arg: int | list[list[int]]) -> str:
+    """Write a statement argument as Lean source, for messages."""
+    if isinstance(arg, int):
+        return str(arg)
+    return "[" + ", ".join(f"({c}, {m})" for c, m in arg) + "]"
 
 
 def check_witness(cert: Mapping[str, Any]) -> None:

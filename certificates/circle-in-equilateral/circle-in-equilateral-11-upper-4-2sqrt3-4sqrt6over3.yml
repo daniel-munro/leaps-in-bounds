@@ -1,0 +1,21 @@
+constant: circle-in-equilateral-11
+bound: upper
+value: '4+2\sqrt{3}+\frac{4\sqrt{6}}{3}'
+kind: witness
+witness:
+  format: points
+  data: |
+    \sqrt{3}, 1
+    2+\sqrt{3}+\frac{2\sqrt{6}}{3}, 1
+    4+\sqrt{3}+\frac{4\sqrt{6}}{3}, 1
+    1+\sqrt{3}+\frac{\sqrt{6}}{3}, 1+\sqrt{2}-\frac{\sqrt{3}}{3}
+    3+\sqrt{3}+\sqrt{6}, 1+\sqrt{2}-\frac{\sqrt{3}}{3}
+    \frac{11}{2}, 3
+    \sqrt{3}+\frac{2\sqrt{6}}{3}, 1+2\sqrt{2}
+    4+\sqrt{3}+\frac{2\sqrt{6}}{3}, 1+2\sqrt{2}
+    1+\sqrt{3}+\frac{2\sqrt{6}}{3}, 1+2\sqrt{2}+\sqrt{3}
+    3+\sqrt{3}+\frac{2\sqrt{6}}{3}, 1+2\sqrt{2}+\sqrt{3}
+    2+\sqrt{3}+\frac{2\sqrt{6}}{3}, 1+2\sqrt{2}+2\sqrt{3}
+submitted_by: Claude Opus 5.5
+date: 2026-11-01
+source: melissen-1994a

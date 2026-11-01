@@ -20,6 +20,7 @@ from certificates import (
     CertificateError,
     best_certificates,
     check_lean,
+    check_value_type,
     check_witness,
     get_family,
     is_better,
@@ -59,8 +60,7 @@ def main() -> None:
             if "source" in cert and cert["source"] not in sources:
                 raise CertificateError(f"Unknown source {cert['source']}")
             family, _ = get_family(cert["constant"])
-            if not family.sqrt_values and not isinstance(cert["value"], int):
-                raise CertificateError("Values for this family must be integers")
+            check_value_type(family.values, cert["value"])
             if cert["kind"] == "witness":
                 check_witness(cert)
             elif args.lean:
@@ -91,7 +91,8 @@ def main() -> None:
         opposite = constants[constant_id]["upper_bound" if bound == "lower" else "lower_bound"]
         if opposite is None or opposite.decimal_approx is None:
             continue
-        if is_better(bound, cert["approx"], opposite.decimal_approx):
+        # Literature values are rounded to 7 significant digits
+        if is_better(bound, float(f"{cert['approx']:.7g}"), opposite.decimal_approx):
             errors.append(
                 f"{cert['id']} contradicts the literature {'upper' if bound == 'lower' else 'lower'} "
                 f"bound ${opposite.latex}$ for {constant_id}"

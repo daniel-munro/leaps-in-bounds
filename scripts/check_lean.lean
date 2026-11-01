@@ -6,7 +6,8 @@ scripts/certificates.py, from formal/, as
 
 The input is a JSON list of certificates, each with fields `id`,
 `statementModule`, `statement` (the constant naming the bound, such as
-`LeapsInBounds.Cage.LowerBound`), `args` (its natural number arguments),
+`LeapsInBounds.Cage.LowerBound`), `args` (its arguments: natural numbers, or
+lists of `[integer, natural number]` pairs for a `List (ℤ × ℕ)`),
 `proofModule` and `theorem`. Prints a JSON object mapping the ID of each
 certificate that fails to an error message.
 
@@ -33,9 +34,20 @@ structure Cert where
   id : String
   statementModule : Name
   statement : Name
-  args : List Nat
+  args : List Expr
   proofModule : Name
   thm : Name
+
+/-- A statement argument: a natural number, or a list of `[c, m]` pairs with
+`c` an integer and `m` a natural number, as a `List (ℤ × ℕ)`. -/
+def argOfJson (j : Json) : Except String Expr := do
+  match j with
+  | .arr pairs =>
+    let pairs ← pairs.toList.mapM fun p => do
+      let #[c, m] := (← p.getArr?) | throw s!"expected a pair [c, m], not {p}"
+      return ((← fromJson? c : Int), (← fromJson? m : Nat))
+    return toExpr pairs
+  | _ => return mkNatLit (← fromJson? j)
 
 def Cert.ofJson (j : Json) : Except String Cert := do
   let name (field : String) : Except String Name := return (← j.getObjValAs? String field).toName
@@ -43,7 +55,7 @@ def Cert.ofJson (j : Json) : Except String Cert := do
     id := ← j.getObjValAs? String "id"
     statementModule := ← name "statementModule"
     statement := ← name "statement"
-    args := ← j.getObjValAs? (List Nat) "args"
+    args := ← (← j.getObjValAs? (List Json) "args").mapM argOfJson
     proofModule := ← name "proofModule"
     thm := ← name "theorem"
   }
@@ -63,7 +75,7 @@ def check (env : Environment) (c : Cert) : IO (Option String) := do
     | return s!"{c.thm} is not a theorem"
   unless val.levelParams.isEmpty do
     return s!"{c.thm} has universe parameters"
-  let expected := mkAppN (mkConst c.statement) (c.args.map mkNatLit).toArray
+  let expected := mkAppN (mkConst c.statement) c.args.toArray
   unless val.type == expected || Kernel.isDefEqGuarded env {} val.type expected do
     return s!"{c.thm} has type `{val.type}`, not `{expected}`"
   return none

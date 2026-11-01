@@ -1,0 +1,10 @@
+constant: circle-in-equilateral-2
+bound: lower
+value: '2+2\sqrt{3}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CircleInTriangleBasic
+  theorem: LeapsInBounds.Proofs.CircleInTriangleBasic.lower_two
+submitted_by: Claude Opus 5.5
+date: 2026-11-01
+notes: The centers lie in a triangle of side s - 2√3, at distance at least 2 from each other.

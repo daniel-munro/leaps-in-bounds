@@ -1,0 +1,10 @@
+constant: circle-in-equilateral-1
+bound: lower
+value: '2\sqrt{3}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CircleInTriangleBasic
+  theorem: LeapsInBounds.Proofs.CircleInTriangleBasic.lower_one
+submitted_by: Claude Opus 5.5
+date: 2026-11-01
+notes: The center is at distance at least 1 from each side.

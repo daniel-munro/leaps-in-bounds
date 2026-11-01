@@ -13,7 +13,7 @@ One YAML file per certificate, in `certificates/<group>/`. The file name (withou
 ```yaml
 constant: ramsey-4-4      # constant ID, as on the site
 bound: lower              # lower or upper
-value: 18                 # the bound: R(4,4) >= 18 (an integer, or '\sqrt{m}' where the family allows it)
+value: 18                 # the bound: R(4,4) >= 18 (an integer, or another form where the family allows it)
 kind: witness             # witness or lean
 witness:                  # for kind: witness (see the family's rules below)
   format: graph6
@@ -137,6 +137,27 @@ Formal statements are in [`formal/LeapsInBounds/Statements/SquarePacking.lean`](
 
 Values can be integers `k` (proving the statement with `m = k²`) or square roots written `'\sqrt{m}'`, with `m` not a perfect square. Only Lean proofs are accepted so far.
 
+### Packing unit circles in an equilateral triangle: `circle-in-equilateral-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/CircleInTriangle.lean`](../formal/LeapsInBounds/Statements/CircleInTriangle.lean). A packing of `n` unit circles in the equilateral triangle with vertices `(0, 0)`, `(s, 0)` and `(s / 2, s√3 / 2)` places `n` closed unit disks inside it with pairwise disjoint interiors.
+
+- `RadicalLowerBound n terms d` means `s(n) >= radical terms d`: no packing of `n` unit circles fits in an equilateral triangle of smaller side.
+- `RadicalUpperBound n terms d` means `s(n) <= radical terms d`: `n` unit circles can be packed in an equilateral triangle of that side.
+
+Values are sums of rational multiples of square roots, written in LaTeX as a sum of terms `a`, `a\sqrt{m}` or `\frac{a\sqrt{m}}{b}` (each with an optional sign, and `a` optional before a square root), such as `'4+2\sqrt{3}+\frac{4\sqrt{6}}{3}'`. In Lean, `radical terms d` (from [`Radical.lean`](../formal/LeapsInBounds/Statements/Radical.lean)) is the real number `(c₁ √m₁ + ⋯ + cₖ √mₖ) / d` for `terms = [(c₁, m₁), …, (cₖ, mₖ)]`. The checker rewrites the value with squarefree `mᵢ` in increasing order (`1` for the rational part), integer `cᵢ`, and `d` the least common denominator, so that value must be proved as `RadicalLowerBound n [(12, 1), (6, 3), (4, 6)] 3` or `RadicalUpperBound n [(12, 1), (6, 3), (4, 6)] 3`.
+
+Witnesses can certify upper bounds only. A witness for `s(n) <= v` uses `format: points`: the `n` centers in the triangle above with `s = v`, one per line as `x, y`, with coordinates in the same form as values. The checker decides exactly, without rounding, that each center is at distance at least 1 from each side of the triangle and at least 2 from the other centers, so circles can touch each other and the sides. For example, 4 circles in a triangle of side `4√3`:
+
+```yaml
+witness:
+  format: points
+  data: |
+    \sqrt{3}, 1
+    3\sqrt{3}, 1
+    2\sqrt{3}, 2
+    2\sqrt{3}, 4
+```
+
 ## Checking locally
 
 ```bash
@@ -154,5 +175,5 @@ Add `--improves certificates/<group>/<file>.yml` to check that a new certificate
 
 ## Known gaps
 
-- Values are integers or square roots of integers for now. Other real values, such as most known square packings, will need exact or interval-arithmetic witnesses or more general statements.
+- Values are integers or sums of rational multiples of square roots for now. Other real values, such as most known square packings and disk coverings, will need more general exact arithmetic (such as nested square roots or roots of polynomials), or interval arithmetic for bounds that aren't tight.
 - Kissing number witnesses must have integer coordinates (up to scaling). Some record configurations, such as those in dimensions 17 to 21, need irrational coordinates, so they can't be submitted yet.
