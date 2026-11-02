@@ -1,0 +1,10 @@
+constant: ramsey-3-12
+bound: lower
+value: 49
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-3-12-lower-49.g6
+submitted_by: Claude
+date: 2026-11-02
+notes: 'Circulant graph C48(8,14,18,21,23,24) has no 3-clique and no independent set of size 12.'

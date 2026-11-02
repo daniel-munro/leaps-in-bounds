@@ -1,0 +1,10 @@
+constant: ramsey-4-6
+bound: lower
+value: 34
+kind: witness
+witness:
+  format: graph6
+  data: '`UxpoyMPpFQMQMhFIPpQMDGwIPoIPoDGy@QMOIPt?hFI@QMI@QMd?hFHOIPpI@QMCgDGyHOIPuHOIPvCgDGxpI@QM'
+submitted_by: Claude
+date: 2026-11-02
+notes: 'Circulant graph C33(2,3,4,8,11,13) has no 4-clique and no independent set of size 6.'
