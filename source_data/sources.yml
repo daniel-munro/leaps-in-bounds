@@ -52,6 +52,11 @@ combi-wiki-degree-diameter:
   date: "2022-02-18"
   url: "http://combinatoricswiki.org/wiki/The_Degree_Diameter_Problem_for_General_Graphs"
 
+comellas-degree-diameter-table:
+  string: "Comellas, F. The (Degree, Diameter) Problem for Graphs (records table), last changed November 2, 2026"
+  date: "2026-11-02"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+
 wikipedia-debruijn-newman:
   string: "de Bruijn-Newman constant - Wikipedia"
   date: "2025-02-04"
@@ -517,6 +522,81 @@ loz-pineda-2010:
   string: "Loz, E., & Pineda-Villavicencio, G. (2010). New benchmarks for large-scale networks with given maximum degree and diameter. The Computer Journal, 53(7), 1092-1105."
   date: "2010-09"
   doi: "https://doi.org/10.1093/comjnl/bxp091"
+
+rajiv-2026-08:
+  string: "Rajiv, R. (2026). Improved lower bounds for the degree-diameter problem from metacyclic groups, coset graphs and affine lifts. Zenodo."
+  date: "2026-08-24"
+  doi: "https://doi.org/10.5281/zenodo.22073603"
+
+bhakar-2026-08:
+  string: "Nishant Bhakar in August 2026"
+  date: "2026-08"
+
+gupta-2026-09:
+  string: "Rithwik Gupta in September 2026"
+  date: "2026-09"
+
+yugeswardeenoo-2026-09:
+  string: "Dharunish Yugeswardeenoo in September 2026"
+  date: "2026-09"
+
+amarel-et-al-2026:
+  string: "J. Amarel, N. DeBardeleben, M. Grosskopf, V. Job, E. Lawrence, L. Monroe, and R. Somasundaram (LANL, using URSA) in September 2026"
+  date: "2026-09"
+
+rajiv-2026-09a:
+  string: "Rajiv, R. (2026). Large graphs of diameter five from a duality of order four of the split Cayley hexagon H(9). Zenodo."
+  date: "2026-09-23"
+  doi: "https://doi.org/10.5281/zenodo.22907863"
+
+rajiv-2026-09b:
+  string: "Rajiv, R. (2026). New lower bounds for the degree-diameter problem from Cayley graphs, orbit graphs and lifts. Zenodo."
+  date: "2026-09-24"
+  doi: "https://doi.org/10.5281/zenodo.22928337"
+
+mizuno-2026-09:
+  string: "Ryosuke Mizuno in September 2026"
+  date: "2026-09"
+
+rajiv-2026-09c:
+  string: "Rajiv, R. (2026). New lower bounds for the degree-diameter problem from generalized quadrangles and hexagons. Zenodo."
+  date: "2026-09-30"
+  doi: "https://doi.org/10.5281/zenodo.23052995"
+
+rajiv-2026-09d:
+  string: "Rajiv, R. (2026). New lower bounds for the degree-diameter problem from Cayley graphs of metacyclic groups, orbit graphs and clique substitution. Zenodo."
+  date: "2026-09-30"
+  doi: "https://doi.org/10.5281/zenodo.23057003"
+
+de-messieres-2026-10:
+  string: "Michel de Messieres in October 2026"
+  date: "2026-10"
+
+yugeswardeenoo-2026-10:
+  string: "Dharunish Yugeswardeenoo in October 2026"
+  date: "2026-10"
+
+bhakar-2026-10:
+  string: "Nishant Bhakar in October 2026"
+  date: "2026-10"
+  url: "https://github.com/f4t4nt/degree-diameter-graphs"
+
+mccormick-2026-10:
+  string: "Mike McCormick in October 2026"
+  date: "2026-10"
+
+comellas-2026-10:
+  string: "Francesc Comellas in October 2026"
+  date: "2026-10"
+
+badaoui-vaughan-2026-10:
+  string: "Sami Hani Badaoui and Sarah Ellen Mary Vaughan in October 2026"
+  date: "2026-10"
+
+rajiv-2026-10:
+  string: "Rajiv, R. (2026). New lower bounds for the degree-diameter problem from Cayley graphs of metacyclic groups, slack filling and chart lifts. Zenodo."
+  date: "2026-10-30"
+  doi: "https://doi.org/10.5281/zenodo.23788455"
 
 # de Bruijn-Newman
 
