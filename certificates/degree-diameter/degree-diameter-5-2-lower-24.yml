@@ -1,0 +1,10 @@
+constant: degree-diameter-5-2
+bound: lower
+value: 24
+kind: witness
+witness:
+  format: graph6
+  data: 'WG@GgOWGcG?FOP?SUH??QG@B?`?E?xP?aGOGS?cGgAOOOOH'
+submitted_by: Claude
+date: 2026-11-02
+notes: Found by simulated annealing.

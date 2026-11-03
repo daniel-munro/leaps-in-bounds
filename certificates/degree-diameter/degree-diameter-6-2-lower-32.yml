@@ -1,0 +1,11 @@
+constant: degree-diameter-6-2
+bound: lower
+value: 32
+kind: witness
+witness:
+  format: graph6
+  file: degree-diameter-6-2-lower-32.g6
+submitted_by: Claude
+date: 2026-11-02
+source: mmsgraphs
+notes: McKay-Miller-Širáň graph for $q = 4$.

@@ -440,13 +440,14 @@ def girth(adj: list[int]) -> float:
 def eccentricity_at_most(adj: list[int], source: int, k: int) -> bool:
     """Check whether every vertex is within distance k of source."""
     full = (1 << len(adj)) - 1
-    reached = 1 << source
+    reached = layer = 1 << source
     for _ in range(k):
         if reached == full:
             break
         new = 0
-        for v in bits(reached):
+        for v in bits(layer):
             new |= adj[v]
+        layer = new & ~reached
         reached |= new
     return reached == full
 

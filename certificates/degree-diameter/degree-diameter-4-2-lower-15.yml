@@ -1,0 +1,10 @@
+constant: degree-diameter-4-2
+bound: lower
+value: 15
+kind: witness
+witness:
+  format: graph6
+  data: 'NFC_S?cAYMP_GoogGAo'
+submitted_by: Claude
+date: 2026-11-02
+notes: Found by simulated annealing.

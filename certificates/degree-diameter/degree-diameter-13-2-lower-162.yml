@@ -1,0 +1,11 @@
+constant: degree-diameter-13-2
+bound: lower
+value: 162
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-13-2-lower-162.s6
+submitted_by: Claude
+date: 2026-11-02
+source: mmsgraphs
+notes: McKay-Miller-Širáň graph for $q = 9$.

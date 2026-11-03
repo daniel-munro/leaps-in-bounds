@@ -1,0 +1,10 @@
+constant: degree-diameter-3-4
+bound: lower
+value: 38
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-3-4-lower-38.s6
+submitted_by: Claude
+date: 2026-11-02
+notes: Found by simulated annealing.
