@@ -281,3 +281,20 @@ affine-line-arrangements-general-position:
   parameters: [n]
   parameter_values: [[[1, 12]]]
   research_status: initial
+
+golomb-ruler:
+  name: "Optimal Golomb rulers"
+  description: "A Golomb ruler is a set of integer marks such that no two pairs of marks are the same distance apart. $G(n)$ is the shortest length of a Golomb ruler with $n$ marks."
+  external_ids:
+    mathworld: GolombRuler
+    msc: 05B10
+    oeis: A003022
+    wikipedia_en: Golomb_ruler
+  display_type: sequence
+  representative_image: golomb-ruler-5
+  id_template: "golomb-ruler-{n}"
+  name_template: "Optimal Golomb ruler $G({n})$"
+  description_template: "The shortest length of a Golomb ruler with ${n}$ marks: a set of ${n}$ integers such that no two pairs of them are the same distance apart."
+  parameters: [n]
+  parameter_values: [[[1, 30]]]
+  research_status: initial

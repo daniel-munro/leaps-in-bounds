@@ -142,6 +142,16 @@ monroe-2022:
   date: "2022-11-20"
   doi: "https://doi.org/10.48550/arXiv.1603.03301"
 
+shearer-golomb-table:
+  string: "Table of lengths of shortest known Golomb rulers, James B. Shearer (IBM)"
+  date: "1999"
+  url: "https://web.archive.org/web/2017/http://www.research.ibm.com/people/s/shearer/grtab.html"
+
+wikipedia-golomb-ruler:
+  string: "Golomb ruler - Wikipedia"
+  date: "2026-11-03"
+  url: "https://en.wikipedia.org/wiki/Golomb_ruler"
+
 ###################
 # Primary sources #
 ###################
@@ -1055,3 +1065,102 @@ de-laat-leijenhorst-de-muinck-keizer-2024:
   string: "D. de Laat, N.M. Leijenhorst, and W.H.H. de Muinck Keizer, Optimality and uniqueness of the D4 root system, arXiv:2404.18794."
   date: "2024-04-29"
   url: "https://arxiv.org/abs/2404.18794"
+
+# Golomb rulers
+
+babcock-1953:
+  string: "W.C. Babcock, Intermodulation interference in radio systems, Bell System Technical Journal 32 (1953) 63-73."
+  date: "1953-01"
+  doi: "https://doi.org/10.1002/j.1538-7305.1953.tb01422.x"
+  notes: "Dated 1952 in https://web.archive.org/web/2017/http://www.research.ibm.com/people/s/shearer/grtab.html"
+
+robinson-bernstein-1967:
+  string: "J.P. Robinson and A.J. Bernstein, A class of binary recurrent codes with limited error propagation, IEEE Transactions on Information Theory 13 (1967) 106-113."
+  date: "1967-01"
+  doi: "https://doi.org/10.1109/TIT.1967.1053951"
+  notes: "Rulers from the projective plane construction. The proofs of optimality for 5 to 7 marks are dated '1967?' in https://web.archive.org/web/2017/http://www.research.ibm.com/people/s/shearer/grtab.html"
+
+mixon-1972:
+  string: "William Mixon, unpublished, reported in M. Gardner, Mathematical Games, Scientific American 226(3) (1972) 108-112."
+  date: "1972-03"
+  doi: "https://doi.org/10.1038/scientificamerican0372-108"
+
+robinson-1979:
+  string: "J.P. Robinson, Optimum Golomb rulers, IEEE Transactions on Computers C-28 (1979) 943-944."
+  date: "1979-12"
+  doi: "https://doi.org/10.1109/TC.1979.1675284"
+
+robinson-1983:
+  string: "J.P. Robinson, Addendum to 'Optimum Golomb rulers', IEEE Transactions on Computers C-32 (1983) 201."
+  date: "1983-02"
+  notes: "The search was done in 1981, per https://web.archive.org/web/2017/http://www.research.ibm.com/people/s/shearer/grtab.html"
+
+atkinson-hassenklover-1984:
+  string: "M.D. Atkinson and A. Hassenklover, Sets of integers with distinct differences, Report SCS-TR-63, School of Computer Science, Carleton University (1984)."
+  date: "1984-10"
+  url: "https://carleton.ca/scs/research/scs-technical-reports/technical-reports-1984/tr-63-sets-of-integers-with-distinct-differences"
+  notes: "Rulers from the projective and affine plane constructions, also tabulated in M.D. Atkinson, N. Santoro and J. Urrutia, IEEE Transactions on Communications 34 (1986) 614-617, https://doi.org/10.1109/TCOM.1986.1096587"
+
+shearer-1990:
+  string: "J.B. Shearer, Some new optimum Golomb rulers, IEEE Transactions on Information Theory 36 (1990) 183-184."
+  date: "1990-01"
+  doi: "https://doi.org/10.1109/18.50388"
+  notes: "The searches were done in 1985 (14 and 15 marks) and 1986 (16 marks), per https://web.archive.org/web/2017/http://www.research.ibm.com/people/s/shearer/grtab.html"
+
+sibert-1993:
+  string: "W. Olin Sibert in 1993, unpublished."
+  date: "1993"
+  notes: "Cited in https://doi.org/10.1109/18.651068"
+
+dollas-rankin-mccracken-1998:
+  string: "A. Dollas, W.T. Rankin and D. McCracken, A new algorithm for Golomb ruler derivation and proof of the 19 mark ruler, IEEE Transactions on Information Theory 44 (1998) 379-382."
+  date: "1998-01"
+  doi: "https://doi.org/10.1109/18.651068"
+  notes: "The search finished in 1993 or 1994; see W.T. Rankin, Optimal Golomb rulers: an exhaustive parallel search implementation, M.S. thesis, Duke University (1993)."
+
+garry-vanderschel-1997:
+  string: "M. Garry, D. Vanderschel et al., In Search Of The Optimal 20, 21 & 22 Mark Golomb Rulers (distributed search), 20 marks."
+  date: "1997"
+  url: "https://web.archive.org/web/2000/http://members.aol.com/golomb20/index.html"
+  notes: "Dated '1997?' in https://web.archive.org/web/2017/http://www.research.ibm.com/people/s/shearer/grtab.html"
+
+garry-vanderschel-1998:
+  string: "M. Garry, D. Vanderschel et al., In Search Of The Optimal 20, 21 & 22 Mark Golomb Rulers (distributed search), 21 marks."
+  date: "1998-05-08"
+  url: "https://web.archive.org/web/2000/http://members.aol.com/golomb20/index.html"
+
+garry-vanderschel-1999a:
+  string: "M. Garry, D. Vanderschel et al., In Search Of The Optimal 20, 21 & 22 Mark Golomb Rulers (distributed search), 22 marks."
+  date: "1999-04"
+  url: "https://web.archive.org/web/2000/http://members.aol.com/golomb20/index.html"
+
+garry-vanderschel-1999b:
+  string: "M. Garry, D. Vanderschel et al., distributed search for the optimal 23 mark Golomb ruler."
+  date: "1999-06"
+  url: "https://web.archive.org/web/2000/http://members.aol.com/golomb20/index.html"
+
+distributed-net-ogr-24:
+  string: "distributed.net, OGR-24 completed (project started February 2000; final stub verified 2004-10-13), announced 2004-11-01."
+  date: "2004-10-13"
+  url: "https://blogs.distributed.net/2004/11/01/10/24/nugget/"
+
+distributed-net-ogr-25:
+  string: "distributed.net, OGR-25 completed, announced 2008-10-25."
+  date: "2008-10-24"
+  url: "https://blogs.distributed.net/2008/10/25/23/14/bovine/"
+
+distributed-net-ogr-26:
+  string: "distributed.net, OGR-26 completed, announced 2009-02-24."
+  date: "2009-02-24"
+  url: "https://blogs.distributed.net/2009/02/24/17/26/bovine/"
+
+distributed-net-ogr-27:
+  string: "distributed.net, OGR-27 completed, announced 2014-02-25."
+  date: "2014-02-19"
+  url: "https://blogs.distributed.net/2014/02/"
+  notes: "Sources give the completion date as 2014-02-19 or 2014-02-24."
+
+distributed-net-ogr-28:
+  string: "distributed.net, OGR-28 completed, announced 2022-11-23."
+  date: "2022-11-23"
+  url: "https://blogs.distributed.net/2022/11/23/03/28/bovine/"

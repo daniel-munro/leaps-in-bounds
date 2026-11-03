@@ -11,6 +11,11 @@
     - minimal-superpermutation
     - stamp-folding
 
+- msc: "05B"
+  name: "Designs and configurations"
+  groups:
+    - golomb-ruler
+
 - msc: "05C"
   name: "Graph theory"
   groups:
