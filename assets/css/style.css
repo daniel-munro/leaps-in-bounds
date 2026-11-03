@@ -33,22 +33,24 @@ h1 {
 
 .constant-cell {
     white-space: nowrap;
-    padding: 0.2rem 1rem 0.7rem !important;  /* Room at the bottom for brackets */
-    height: auto;
-    min-height: 60px;
+    padding: 0 !important;  /* The link has the padding, so the whole cell is clickable */
+    height: 1px;  /* Any height lets the link fill the cell with height: 100% */
     font-size: 0.85em;
 }
 
+/* Darken the cell's own color (Bootstrap tables shade cells with an inset shadow) */
 .constant-cell:hover {
-    background-color: #f8f9fa !important;
+    --bs-table-bg-state: rgba(0, 0, 0, 0.06);
 }
 
 .cell-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.2rem 1rem 0.7rem;  /* Room at the bottom for brackets */
     text-decoration: none;
     color: inherit;
     height: 100%;
-    width: 100%;
     line-height: 1; /* Tighten line spacing */
 }
 
@@ -86,8 +88,9 @@ h1 {
     border-bottom-right-radius: 0.5rem;
 }
 
+/* Darken the box's own color */
 .constant-box:hover {
-    background-color: #f8f9fa !important;
+    box-shadow: inset 0 0 0 9999px rgba(0, 0, 0, 0.06);
 }
 
 .constant-box-values {

@@ -93,9 +93,10 @@ def generate_grid_html(
                 continue
                 
             content, cell_class = cell_content(constants[const_id])
+            # The link fills the cell and centers its content in one block
             html.append(
                 f'        <td class="constant-cell {cell_class}"><a href="/constants/{const_id}" '
-                f'class="cell-link">{content}</a></td>'
+                f'class="cell-link"><div>{content}</div></a></td>'
             )
         html.append('      </tr>')
     
