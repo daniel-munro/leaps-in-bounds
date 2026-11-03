@@ -33,7 +33,7 @@ h1 {
 
 .constant-cell {
     white-space: nowrap;
-    padding: 0.2rem 1rem !important;
+    padding: 0.2rem 1rem 0.7rem !important;  /* Room at the bottom for brackets */
     height: auto;
     min-height: 60px;
     font-size: 0.85em;
@@ -152,12 +152,30 @@ h1 {
     font-style: italic;
 }
 
-.verified-mark {
-    vertical-align: super;
-    margin-left: 1px;
-    font-size: 0.7em;
-    color: #198754;
+/* Brackets in a cell's corner for verified lower ([) and upper (]) bounds */
+.constant-cell, .constant-box {
+    position: relative;
+}
+
+.verified-brackets {
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+    display: flex;
+    font-size: 0.95rem;
     font-weight: bold;
+    line-height: 1;
+}
+
+/* Fixed slots, so a lone bracket sits where it would in a pair */
+.verified-brackets > span {
+    width: 0.4em;
+    text-align: center;
+}
+
+/* Verified value equal to the best in the literature */
+.verified-equal {
+    color: #198754;
 }
 
 /* Verified value that is stronger than, or absent from, the literature */
@@ -165,22 +183,9 @@ h1 {
     color: #6f42c1;
 }
 
-/* Lower (top) and upper (bottom) marks beside an exact value */
-.exact-marks {
-    display: inline-flex;
-    flex-direction: column;
-    vertical-align: middle;
-    margin-left: 1px;
-}
-
-.exact-marks > span {
-    height: 0.9em;
-    line-height: 0.9em;
-}
-
-.exact-marks .verified-mark {
-    vertical-align: top;
-    margin-left: 0;
+/* Verified value that is weaker than the literature */
+.verified-weaker {
+    color: #8a9199;
 }
 
 .bg-verified-new {

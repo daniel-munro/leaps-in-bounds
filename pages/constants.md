@@ -6,6 +6,14 @@ permalink: /constants/
 
 # Constants
 
+<p class="text-muted small">
+  Brackets in a cell's corner mark bounds verified by an automatically checked certificate:
+  <b>[</b> lower, <b>]</b> upper.
+  <b class="verified-equal">Green</b> matches the best bound in the literature,
+  <b class="verified-new">purple</b> is stronger than (or absent from) it,
+  and <b class="verified-weaker">gray</b> is weaker.
+</p>
+
 <div class="dropdown mb-4">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="groupDropdown" data-bs-toggle="dropdown" aria-expanded="false">
     Jump to group

@@ -13,45 +13,54 @@ def html_for_value(value: Mapping[str, Any] | None) -> str:
         html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
     return html
 
-def verified_mark(const: Mapping[str, Any], side: str) -> str:
-    """Generate a check mark noting that a constant's lower or upper bound is
-    verified, highlighted if it's stronger than (or absent from) the
-    literature."""
+def verified_bracket(const: Mapping[str, Any], side: str) -> str:
+    """Generate a bracket noting that a constant has a verified lower ([) or
+    upper (]) bound: green if it matches the best literature bound, purple if
+    it's stronger than (or absent from) the literature, and gray if it's
+    weaker."""
+    verified = const[f'verified_{side}_bound']
+    if verified is None:
+        return '<span></span>'  # Keep the other bracket in its slot
     source = const[f'{side}_bound_source']
-    if source not in ('verified', 'both'):
-        return ''
-    title = f"Verified {side} bound by certificate {const[f'verified_{side}_certificate']}"
-    css_class = 'verified-mark'
-    if source == 'verified':
-        css_class += ' verified-new'
+    css_class = {'both': 'verified-equal', 'verified': 'verified-new', 'literature': 'verified-weaker'}[source]
+    title = f"Verified {side} bound {verified['latex']} by certificate {const[f'verified_{side}_certificate']}"
+    if source != 'both':
         literature = const[f'literature_{side}_bound']
         if literature is None:
             title += '; none in the literature'
         else:
             title += f"; the literature has {literature['latex']}"
-    return f'<span class="{css_class}" data-bs-toggle="tooltip" data-bs-placement="top" title="{title}">✓</span>'
+    bracket = '[' if side == 'lower' else ']'
+    return (
+        f'<span class="{css_class}" data-bs-toggle="tooltip" data-bs-placement="top" '
+        f'title="{title}" aria-label="{title}">{bracket}</span>'
+    )
+
+def verified_brackets(const: Mapping[str, Any]) -> str:
+    """Generate the brackets in a cell's corner for its verified bounds."""
+    if const['verified_lower_bound'] is None and const['verified_upper_bound'] is None:
+        return ''
+    return (
+        f'<span class="verified-brackets">{verified_bracket(const, "lower")}'
+        f'{verified_bracket(const, "upper")}</span>'
+    )
 
 def cell_content(const: Mapping[str, Any]) -> tuple[str, str]:
-    """Generate the displayed value or bounds for a constant, with marks on
-    verified values, and the CSS class for how well it's known."""
+    """Generate the displayed value or bounds for a constant, with brackets
+    for verified bounds, and the CSS class for how well it's known."""
+    brackets = verified_brackets(const)
     if const['exact_value'] is not None:
-        # Lower and upper marks stacked beside the value, in the same order as bounds
-        marks = (
-            f'<span class="exact-marks"><span>{verified_mark(const, "lower")}</span>'
-            f'<span>{verified_mark(const, "upper")}</span></span>'
-        )
-        return f'<span>{html_for_value(const["exact_value"])}{marks}</span>', 'value-exact'
+        return f'<span>{html_for_value(const["exact_value"])}</span>{brackets}', 'value-exact'
 
-    # Keep each mark on the same line as its value (sequence boxes stack children)
-    lb = f'<span>{html_for_value(const["lower_bound"])}{verified_mark(const, "lower")}</span>'
-    ub = f'<span>{html_for_value(const["upper_bound"])}{verified_mark(const, "upper")}</span>'
+    lb = f'<span>{html_for_value(const["lower_bound"])}</span>'
+    ub = f'<span>{html_for_value(const["upper_bound"])}</span>'
     if const['lower_bound'] is None and const['upper_bound'] is None:
         css_class = 'value-unbounded'
     elif const['lower_bound'] is None or const['upper_bound'] is None:
         css_class = 'value-half-bounded'
     else:
         css_class = 'value-bounded'
-    return f"{lb}<br>{ub}", css_class
+    return f"{lb}<br>{ub}{brackets}", css_class
 
 def generate_grid_html(
     group: Mapping[str, Any],
