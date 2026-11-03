@@ -1,0 +1,10 @@
+constant: golomb-ruler-26
+bound: upper
+value: 492
+kind: witness
+witness:
+  format: marks
+  data: '0 1 33 83 104 110 124 163 185 200 203 249 251 258 314 318 343 356 386 430 440 456 464 475 487 492'
+submitted_by: Claude
+date: 2026-11-03
+source: atkinson-hassenklover-1984

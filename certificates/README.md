@@ -158,6 +158,25 @@ witness:
     2\sqrt{3}, 4
 ```
 
+### Schur numbers: `schur-{k}` and `weak-schur-{k}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Schur.lean`](../formal/LeapsInBounds/Statements/Schur.lean):
+
+- `LowerBound k n` means `S(k) >= n`: some `k`-coloring of `1, …, n` has no monochromatic solution to `x + y = z` (with `x = y` allowed).
+- `UpperBound k n` means `S(k) <= n`: every `k`-coloring of `1, …, n + 1` has one.
+- `WeakLowerBound k n` and `WeakUpperBound k n` are the same for the weak Schur number `WS(k)`, counting only solutions with `x ≠ y`.
+
+Witnesses can certify lower bounds only. A witness for `S(k) >= n` or `WS(k) >= n` uses `format: coloring`: a string of `n` digits from `0` to `k - 1` (so `k <= 10`), the colors of `1, …, n`, with no monochromatic solution. Whitespace is ignored.
+
+### Optimal Golomb rulers: `golomb-ruler-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Golomb.lean`](../formal/LeapsInBounds/Statements/Golomb.lean):
+
+- `LowerBound n L` means `G(n) >= L`: every Golomb ruler with `n` marks has two marks at least `L` apart.
+- `UpperBound n L` means `G(n) <= L`: some Golomb ruler with `n` marks has its marks in `0, …, L`.
+
+Witnesses can certify upper bounds only. A witness for `G(n) <= L` uses `format: marks`: `n` distinct integers from `0` to `L`, separated by whitespace or commas, whose pairwise differences are all distinct. For example, `'0 1 4 9 11'` for `G(5) <= 11`.
+
 ## Checking locally
 
 ```bash

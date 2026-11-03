@@ -1,0 +1,9 @@
+constant: golomb-ruler-4
+bound: upper
+value: 6
+kind: witness
+witness:
+  format: marks
+  data: '0 1 4 6'
+submitted_by: Claude
+date: 2026-11-03

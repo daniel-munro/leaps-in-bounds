@@ -1,0 +1,10 @@
+constant: golomb-ruler-6
+bound: upper
+value: 17
+kind: witness
+witness:
+  format: marks
+  data: '0 1 4 10 12 17'
+submitted_by: Claude
+date: 2026-11-03
+source: babcock-1953

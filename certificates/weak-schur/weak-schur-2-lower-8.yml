@@ -1,0 +1,9 @@
+constant: weak-schur-2
+bound: lower
+value: 8
+kind: witness
+witness:
+  format: coloring
+  data: '00101110'
+submitted_by: Claude
+date: 2026-11-03

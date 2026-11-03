@@ -12,6 +12,7 @@ in a secondary source:
 See certificates/README.md for the file format.
 """
 
+import itertools
 import json
 import math
 import pathlib
@@ -789,6 +790,91 @@ def circle_in_triangle_check_witness(params: Mapping[str, int], bound: str, valu
                 raise CertificateError(f"Circles {j + 1} and {i + 1} overlap")
 
 
+def schur_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "LowerBound" if bound == "lower" else "UpperBound"
+    return f"LeapsInBounds.Schur.{name}", [params['k'], value]
+
+
+def weak_schur_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "WeakLowerBound" if bound == "lower" else "WeakUpperBound"
+    return f"LeapsInBounds.Schur.{name}", [params['k'], value]
+
+
+def has_monochromatic_sum(colors: str, weak: bool = False) -> bool:
+    """Check whether a coloring of 1, ..., n (one character per integer) has
+    a monochromatic solution to x + y = z, with x ≠ y if weak."""
+    for color in set(colors):
+        # Bit i is set if integer i has this color
+        mask = sum(1 << (i + 1) for i, c in enumerate(colors) if c == color)
+        for x in bits(mask):
+            # Bit y is set if y and x + y both have this color
+            sums = (mask >> x) & mask
+            if weak:
+                sums &= ~(1 << x)
+            if sums:
+                return True
+    return False
+
+
+def schur_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], weak: bool) -> None:
+    """S(k) >= value (or WS(k) >= value) is witnessed by a k-coloring of 1, ...,
+    value with no monochromatic solution to x + y = z (with x ≠ y for WS)."""
+    if bound != "lower":
+        raise CertificateError("Schur witnesses can only certify lower bounds")
+    if cert["witness"].get("format") != "coloring":
+        raise CertificateError("Schur witnesses must use format: coloring")
+    k = params["k"]
+    if k > 10:
+        raise CertificateError("Schur witnesses need k <= 10")
+    colors = "".join(read_witness_data(cert).split())
+    if not set(colors) <= set("0123456789"[:k]):
+        raise CertificateError(f"Coloring must use the digits 0 to {k - 1}")
+    if len(colors) != value:
+        raise CertificateError(f"Coloring has {len(colors)} integers, but a lower bound of {value} needs {value}")
+    if has_monochromatic_sum(colors, weak):
+        raise CertificateError(f"Coloring has a monochromatic solution to x + y = z{' with x ≠ y' if weak else ''}")
+
+
+def schur_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    schur_witness(params, bound, value, cert, weak=False)
+
+
+def weak_schur_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    schur_witness(params, bound, value, cert, weak=True)
+
+
+def golomb_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "LowerBound" if bound == "lower" else "UpperBound"
+    return f"LeapsInBounds.Golomb.{name}", [params['n'], value]
+
+
+def read_marks(data: str) -> list[int]:
+    """Parse marks: integers separated by whitespace or commas."""
+    try:
+        return [int(x) for x in data.replace(",", " ").split()]
+    except ValueError:
+        raise CertificateError("Marks must be integers")
+
+
+def golomb_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    """G(n) <= value is witnessed by n distinct marks in 0, ..., value whose
+    pairwise differences are distinct."""
+    if bound != "upper":
+        raise CertificateError("Golomb ruler witnesses can only certify upper bounds")
+    if cert["witness"].get("format") != "marks":
+        raise CertificateError("Golomb ruler witnesses must use format: marks")
+    marks = read_marks(read_witness_data(cert))
+    if len(set(marks)) != len(marks):
+        raise CertificateError("Marks must be distinct")
+    if len(marks) != params["n"]:
+        raise CertificateError(f"Ruler has {len(marks)} marks, not {params['n']}")
+    if any(not 0 <= a <= value for a in marks):
+        raise CertificateError(f"Marks must be between 0 and {value}")
+    differences = [b - a for a, b in itertools.combinations(sorted(marks), 2)]
+    if len(set(differences)) != len(differences):
+        raise CertificateError("Two pairs of marks are the same distance apart")
+
+
 # Keyed by constant group ID.
 FAMILIES = {
     "ramsey": Family(
@@ -840,6 +926,24 @@ FAMILIES = {
         lean_statement=circle_in_triangle_lean_statement,
         check_witness=circle_in_triangle_check_witness,
         values="radical",
+    ),
+    "schur": Family(
+        id_pattern=re.compile(r"schur-(?P<k>\d+)"),
+        lean_module="LeapsInBounds.Statements.Schur",
+        lean_statement=schur_lean_statement,
+        check_witness=schur_check_witness,
+    ),
+    "weak-schur": Family(
+        id_pattern=re.compile(r"weak-schur-(?P<k>\d+)"),
+        lean_module="LeapsInBounds.Statements.Schur",
+        lean_statement=weak_schur_lean_statement,
+        check_witness=weak_schur_check_witness,
+    ),
+    "golomb-ruler": Family(
+        id_pattern=re.compile(r"golomb-ruler-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.Golomb",
+        lean_statement=golomb_lean_statement,
+        check_witness=golomb_check_witness,
     ),
 }
 

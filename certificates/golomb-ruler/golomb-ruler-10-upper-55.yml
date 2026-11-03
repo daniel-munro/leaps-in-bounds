@@ -1,0 +1,10 @@
+constant: golomb-ruler-10
+bound: upper
+value: 55
+kind: witness
+witness:
+  format: marks
+  data: '0 1 6 10 23 26 34 41 53 55'
+submitted_by: Claude
+date: 2026-11-03
+source: robinson-bernstein-1967

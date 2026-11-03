@@ -1,0 +1,10 @@
+constant: golomb-ruler-17
+bound: upper
+value: 199
+kind: witness
+witness:
+  format: marks
+  data: '0 5 7 17 52 56 67 80 81 100 122 138 159 165 168 191 199'
+submitted_by: Claude
+date: 2026-11-03
+source: atkinson-hassenklover-1984

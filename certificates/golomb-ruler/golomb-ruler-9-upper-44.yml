@@ -1,0 +1,10 @@
+constant: golomb-ruler-9
+bound: upper
+value: 44
+kind: witness
+witness:
+  format: marks
+  data: '0 1 5 12 25 27 35 41 44'
+submitted_by: Claude
+date: 2026-11-03
+source: mixon-1972

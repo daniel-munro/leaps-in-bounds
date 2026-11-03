@@ -1,0 +1,10 @@
+constant: weak-schur-3
+bound: lower
+value: 23
+kind: witness
+witness:
+  format: coloring
+  data: '00101110220222220212101'
+submitted_by: Claude
+date: 2026-11-03
+notes: "Found by SAT search."

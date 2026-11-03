@@ -1,0 +1,10 @@
+constant: golomb-ruler-23
+bound: upper
+value: 372
+kind: witness
+witness:
+  format: marks
+  data: '0 3 7 17 61 66 91 99 114 159 171 199 200 226 235 246 277 316 329 348 350 366 372'
+submitted_by: Claude
+date: 2026-11-03
+source: robinson-bernstein-1967

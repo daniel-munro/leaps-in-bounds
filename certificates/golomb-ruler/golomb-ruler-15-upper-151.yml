@@ -1,0 +1,10 @@
+constant: golomb-ruler-15
+bound: upper
+value: 151
+kind: witness
+witness:
+  format: marks
+  data: '0 4 20 30 57 59 62 76 100 111 123 136 144 145 151'
+submitted_by: Claude
+date: 2026-11-03
+source: shearer-1990
