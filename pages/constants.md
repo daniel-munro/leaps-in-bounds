@@ -89,3 +89,5 @@ permalink: /constants/
 {% endfor %}
 
 {% endfor %}
+
+<script defer src="{{ site.baseurl }}/assets/js/constant_cards.js"></script>

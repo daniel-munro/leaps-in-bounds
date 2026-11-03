@@ -1,17 +1,17 @@
-"""Generate constant page templates and constant tables."""
+"""Generate constant page templates, constant tables, and the hover cards
+shown for constants in the tables."""
 
+import json
 import os
 import yaml
+from html import escape
 from typing import Any, Mapping
 
 def html_for_value(value: Mapping[str, Any] | None) -> str:
-    """Generate HTML for a value, including an optional tooltip."""
+    """Generate HTML for a value (details like alt_display are in its card)."""
     if value is None:
         return '$?$'
-    html = f'${value["latex"]}$'
-    if value.get('alt_display') is not None:
-        html = f'<span data-bs-toggle="tooltip" data-bs-placement="top" title="{value["alt_display"]}">{html}</span>'
-    return html
+    return f'${value["latex"]}$'
 
 def verified_bracket(const: Mapping[str, Any], side: str) -> str:
     """Generate a bracket noting that a constant has a verified lower ([) or
@@ -23,18 +23,15 @@ def verified_bracket(const: Mapping[str, Any], side: str) -> str:
         return '<span></span>'  # Keep the other bracket in its slot
     source = const[f'{side}_bound_source']
     css_class = {'both': 'verified-equal', 'verified': 'verified-new', 'literature': 'verified-weaker'}[source]
-    title = f"Verified {side} bound {verified['latex']} by certificate {const[f'verified_{side}_certificate']}"
+    label = f"Verified {side} bound {verified['latex']} by certificate {const[f'verified_{side}_certificate']}"
     if source != 'both':
         literature = const[f'literature_{side}_bound']
         if literature is None:
-            title += '; none in the literature'
+            label += '; none in the literature'
         else:
-            title += f"; the literature has {literature['latex']}"
+            label += f"; the literature has {literature['latex']}"
     bracket = '[' if side == 'lower' else ']'
-    return (
-        f'<span class="{css_class}" data-bs-toggle="tooltip" data-bs-placement="top" '
-        f'title="{title}" aria-label="{title}">{bracket}</span>'
-    )
+    return f'<span class="{css_class}" aria-label="{label}">{bracket}</span>'
 
 def verified_brackets(const: Mapping[str, Any]) -> str:
     """Generate the brackets in a cell's corner for its verified bounds."""
@@ -160,8 +157,96 @@ def generate_single_html(
     html.append('</div>')
     return '\n'.join(html) + '\n'
 
+def card_value(value: Mapping[str, Any]) -> str:
+    """Generate card HTML for a value, with its alternative display if any."""
+    html = f'${escape(value["latex"])}$'
+    if value.get('alt_display') is not None:
+        html += f' <span class="text-muted">({escape(str(value["alt_display"]))})</span>'
+    return html
+
+def card_reference(
+    const: Mapping[str, Any],
+    side: str,
+    sources: Mapping[str, Mapping[str, Any]],
+) -> str:
+    """Generate card HTML for where a constant's literature lower or upper
+    bound was published, noting its value if a verified bound beats it."""
+    literature = const[f'literature_{side}_bound']
+    if literature is None:
+        return ''
+    # The latest update of a side is its literature bound
+    update = [u for u in const['updates'] if u['type'] == f'{side}_bound'][-1]
+    if update.get('primary_source'):
+        reference = sources[update['primary_source']]['string']
+    elif update.get('secondary_source'):
+        reference = f"via {sources[update['secondary_source']]['string']}"
+    else:
+        reference = 'Reference unknown'
+    prefix = f'Literature has {card_value(literature)}: ' if const[f'{side}_bound_source'] == 'verified' else ''
+    date = f'{update["date"]}, ' if update.get('date') else ''
+    return f'<div class="constant-card-source">{prefix}{escape(date)}{escape(reference)}</div>'
+
+def card_verification(const: Mapping[str, Any], side: str) -> str:
+    """Generate card HTML for how a constant's lower or upper bound is
+    verified, if it is, colored like its bracket."""
+    verified = const[f'verified_{side}_bound']
+    if verified is None:
+        return ''
+    certificate = next(c for c in const['certificates'] if c['id'] == const[f'verified_{side}_certificate'])
+    kind = 'Lean proof' if certificate['kind'] == 'lean' else 'checked construction'
+    source = const[f'{side}_bound_source']
+    if source == 'literature':
+        # Weaker than the literature, so give the verified value too
+        return f'<div><span class="verified-weaker">✓</span> Verified {card_value(verified)} by {kind}</div>'
+    css_class = 'verified-new' if source == 'verified' else 'verified-equal'
+    note = '; not in the literature' if const[f'literature_{side}_bound'] is None else ''
+    return f'<div><span class="{css_class}">✓</span> Verified by {kind}{note}</div>'
+
+def generate_card_html(
+    const: Mapping[str, Any],
+    sources: Mapping[str, Mapping[str, Any]],
+) -> str:
+    """Generate the hover card for a constant: its image, name, value or bounds,
+    and where they come from."""
+    html = ['<div class="constant-card">', '<div class="constant-card-head">']
+    if const.get('image'):
+        html.append(f'<img src="{escape(const["image"]["path"])}" alt="{escape(const["image"]["alt_text"])}">')
+    html.append(f'<div class="constant-card-name">{escape(const["name"])}')
+    if const['exact_value'] is not None:
+        html.append(f'<div class="constant-card-value">= {card_value(const["exact_value"])}</div>')
+    html.extend(['</div>', '</div>', '<dl class="constant-card-bounds">'])
+
+    references = {side: card_reference(const, side, sources) for side in ('lower', 'upper')}
+    rows = []
+    if const['exact_value'] is not None and references['lower'] == references['upper']:
+        # Often one paper settles both bounds, so name it once
+        rows.append(('Source', references['lower']))
+        references = {'lower': '', 'upper': ''}
+    for side in ('lower', 'upper'):
+        if const['exact_value'] is not None:
+            # The value is in the head, so just say where each bound comes from
+            value = ''
+        elif const[f'{side}_bound'] is None:
+            value = '<div class="text-muted">Unknown</div>'
+        else:
+            value = f'<div>{card_value(const[f"{side}_bound"])}</div>'
+        rows.append((side.capitalize(), value + references[side] + card_verification(const, side)))
+    for label, content in rows:
+        if content:
+            html.append(f'<dt>{label}</dt><dd>{content}</dd>')
+    html.extend(['</dl>', '</div>'])
+    return ''.join(html)
+
 with open("_data/constants.yml", "r") as file:
     constants = yaml.safe_load(file)
+
+with open("_data/sources.yml", "r") as file:
+    sources = yaml.safe_load(file)
+
+# Hover cards, loaded by the constants page when first needed
+os.makedirs("assets/generated", exist_ok=True)
+with open("assets/generated/constant_cards.json", "w") as file:
+    json.dump({id: generate_card_html(constant, sources) for id, constant in constants.items()}, file)
 
 os.makedirs("pages/constants", exist_ok=True)
 

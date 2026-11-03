@@ -191,3 +191,55 @@ h1 {
 .bg-verified-new {
     background-color: #6f42c1 !important;
 }
+
+/* Hover cards for constants in the tables */
+.constant-card-popover {
+    --bs-popover-max-width: 380px;
+    --bs-popover-font-size: 0.95rem;
+    font-family: 'STIX Two Text', serif;
+}
+
+.constant-card-head {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.constant-card-head img {
+    width: 120px;
+    height: 120px;
+    flex: none;
+    object-fit: contain;
+}
+
+.constant-card-name {
+    font-weight: 600;
+}
+
+.constant-card-value {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.constant-card-bounds {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 0.75rem;
+    margin: 0.6rem 0 0;
+    padding-top: 0.6rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.constant-card-bounds dt {
+    font-weight: normal;
+    color: #6c757d;
+}
+
+.constant-card-bounds dd {
+    margin: 0;
+}
+
+.constant-card-source {
+    color: #6c757d;
+    font-size: 0.9em;
+}
