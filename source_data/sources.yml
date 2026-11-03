@@ -152,6 +152,16 @@ wikipedia-golomb-ruler:
   date: "2026-11-03"
   url: "https://en.wikipedia.org/wiki/Golomb_ruler"
 
+oeis-a045652-schur:
+  string: "Schur numbers: largest integer n for which the interval [1,n] can be partitioned into k sum-free sets. - OEIS"
+  date: "2026-11-03"
+  url: "https://oeis.org/A045652"
+
+oeis-a072842-weak-schur:
+  string: "Weak Schur numbers: largest integer n for which the interval [1,n] can be partitioned into k weakly sum-free sets. - OEIS"
+  date: "2026-11-03"
+  url: "https://oeis.org/A072842"
+
 ###################
 # Primary sources #
 ###################
@@ -1164,3 +1174,125 @@ distributed-net-ogr-28:
   string: "distributed.net, OGR-28 completed, announced 2022-11-23."
   date: "2022-11-23"
   url: "https://blogs.distributed.net/2022/11/23/03/28/bovine/"
+
+# Schur numbers
+
+schur-1916:
+  string: "I. Schur, Über die Kongruenz x^m + y^m ≡ z^m (mod p), Jahresbericht der Deutschen Mathematiker-Vereinigung 25 (1916) 114-116."
+  date: "1916"
+  notes: "Proves S(k) >= 3 S(k-1) + 1, so S(k) >= (3^k - 1) / 2."
+
+golomb-baumert-1965:
+  string: "S.W. Golomb and L.D. Baumert, Backtrack Programming, Journal of the ACM 12 (1965) 516-524."
+  date: "1965-10"
+  doi: "https://doi.org/10.1145/321296.321300"
+  notes: "The computer search for S(4) is by L.D. Baumert, Sum-free sets, JPL Research Summary No. 36-10 (1961)."
+
+whitehead-1973:
+  string: "E.G. Whitehead, The Ramsey number N(3,3,3,3;2), Discrete Mathematics 4 (1973) 389-396."
+  date: "1973-04"
+  doi: "https://doi.org/10.1016/0012-365X(73)90174-X"
+  notes: "Credited with S(5) <= 321 in https://doi.org/10.37236/1188. The same bound follows from R.W. Irving, Acta Arithmetica 25 (1973) 55-64."
+
+fredricksen-1979:
+  string: "H. Fredricksen, Schur numbers and the Ramsey numbers N(3,3,...,3;2), Journal of Combinatorial Theory, Series A 27 (1979) 376-377."
+  date: "1979-11"
+  doi: "https://doi.org/10.1016/0097-3165(79)90028-1"
+
+exoo-1994:
+  string: "G. Exoo, A Lower Bound for Schur Numbers and Multicolor Ramsey Numbers of K3, Electronic Journal of Combinatorics 1 (1994) #R8."
+  date: "1994-09-18"
+  doi: "https://doi.org/10.37236/1188"
+
+fredricksen-sweet-2000:
+  string: "H. Fredricksen and M.M. Sweet, Symmetric Sum-Free Partitions and Lower Bounds for Schur Numbers, Electronic Journal of Combinatorics 7 (2000) #R32."
+  date: "2000-05-18"
+  doi: "https://doi.org/10.37236/1510"
+  notes: "The upper bound S(5) <= 315 follows from the bound R(3,3,3,3,3) <= 317 in https://doi.org/10.37236/21"
+
+heule-2017-schur:
+  string: "M.J.H. Heule, Schur Number Five, Proceedings of the AAAI Conference on Artificial Intelligence 32 (2018) 6598-6606, arXiv:1711.08076."
+  date: "2017-11-21"
+  doi: "https://doi.org/10.1609/aaai.v32i1.12209"
+  url: "https://arxiv.org/abs/1711.08076"
+
+rowley-2019:
+  string: "F. Rowley, A generalised linear Ramsey graph construction, Australasian Journal of Combinatorics 81 (2021) 245-256, arXiv:1912.01164."
+  date: "2019-12-03"
+  url: "https://arxiv.org/abs/1912.01164"
+  notes: "Credited with S(8) >= 5286 in https://arxiv.org/abs/2112.03175"
+
+rowley-2021:
+  string: "F. Rowley, An Improved Lower Bound for S(7) and Some Interesting Templates, arXiv:2107.03560."
+  date: "2021-07-08"
+  url: "https://arxiv.org/abs/2107.03560"
+
+ageron-et-al-2021:
+  string: "R. Ageron, P. Casteras, T. Pellerin, Y. Portella, A. Rimmel and J. Tomasik, New lower bounds for Schur and weak Schur numbers, arXiv:2112.03175."
+  date: "2021-12-06"
+  url: "https://arxiv.org/abs/2112.03175"
+
+bengone-et-al-2026:
+  string: "Bengone, Brouk, Grinsztajn, Helbert, Lugherini, Rimmel and Tomasik, Shifted S-templates and improved lower bounds for Schur numbers, arXiv:2607.15034."
+  date: "2026-07-16"
+  url: "https://arxiv.org/abs/2607.15034"
+  notes: "Not peer reviewed."
+
+chen-zhu-long-2026:
+  string: "Z. Chen, L. Zhu and F. Long, A new lower bound for the sixth Schur number: S(6) >= 537, arXiv:2610.31362."
+  date: "2026-10-22"
+  url: "https://arxiv.org/abs/2610.31362"
+  notes: "Not peer reviewed. S(8) >= 5372 follows from S(6) >= 537 by a recurrence."
+
+# Weak Schur numbers
+
+blanchard-harary-reis-2006:
+  string: "P.F. Blanchard, F. Harary and R. Reis, Partitions into sum-free sets, Integers 6 (2006) #A7."
+  date: "2006"
+  url: "https://math.colgate.edu/~integers/g7/g7.Abstract.html"
+  notes: "Values claimed without proof by G.W. Walker, American Mathematical Monthly 59 (1952) 253."
+
+eliahou-et-al-2012:
+  string: "S. Eliahou, J.M. Marín, M.P. Revuelta and M.I. Sanz, Weak Schur numbers and the search for G. W. Walker's lost partitions, Computers & Mathematics with Applications 63 (2012) 175-182."
+  date: "2011-11"
+  doi: "https://doi.org/10.1016/j.camwa.2011.11.006"
+
+robilliard-et-al-2012:
+  string: "D. Robilliard, C. Fonlupt, V. Marion-Poty and A. Boumaza, A Multilevel Tabu Search with Backtracking for Exploring Weak Schur Numbers, Artificial Evolution (EA 2011), Lecture Notes in Computer Science 7401 (2012) 109-119."
+  date: "2012"
+  doi: "https://doi.org/10.1007/978-3-642-35533-2_10"
+
+le-bras-gomes-selman-2012:
+  string: "R. Le Bras, C.P. Gomes and B. Selman, From Streamlined Combinatorial Search to Efficient Constructive Procedures, Proceedings of the AAAI Conference on Artificial Intelligence 26 (2012) 499-506."
+  date: "2012-07"
+  doi: "https://doi.org/10.1609/aaai.v26i1.8147"
+
+eliahou-et-al-2013:
+  string: "S. Eliahou, C. Fonlupt, J. Fromentin, V. Marion-Poty, D. Robilliard and F. Teytaud, Investigating Monte-Carlo Methods on the Weak Schur Problem, EvoCOP 2013, Lecture Notes in Computer Science 7832 (2013) 191-201."
+  date: "2013-04"
+  doi: "https://doi.org/10.1007/978-3-642-37198-1_17"
+
+bouzy-2015:
+  string: "B. Bouzy, An Abstract Procedure to Compute Weak Schur Number Lower Bounds, LIPADE technical report TR-2 (2015)."
+  date: "2015-09-17"
+
+rafilipojaona-2017:
+  string: "F. Rafilipojaona, Lower bounds on the weak Schur numbers up to 9 colors, Integers 17 (2017) #A39."
+  date: "2017"
+
+rowley-2020:
+  string: "F. Rowley, New lower bounds for weak Schur partitions, Integers 21 (2021) #A59, arXiv:2011.11292."
+  date: "2020-11-23"
+  url: "https://arxiv.org/abs/2011.11292"
+
+rowley-2025:
+  string: "F. Rowley, comment with a partition of [1,207] into 5 weakly sum-free sets, Sequence A072842 in the OEIS, 2025-08-29."
+  date: "2025-08-29"
+  url: "https://oeis.org/A072842"
+  notes: "Refutes Walker's 1952 claim that WS(5) = 196."
+
+rodrigo-2026:
+  string: "S.E. Rodrigo, A new lower bound for the sixth weak Schur number: WS(6) >= 650, Zenodo preprint."
+  date: "2026-06-10"
+  doi: "https://doi.org/10.5281/zenodo.20633634"
+  notes: "Not peer reviewed."
