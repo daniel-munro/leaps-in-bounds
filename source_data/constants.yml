@@ -519,3 +519,188 @@ van-der-waerden-4-3:
   image:
     generated: van-der-waerden-4-3.svg
     alt_text: "Coloring of 1 to 75 with 4 colors and no monochromatic arithmetic progression of length 3"
+
+schur-2:
+  image:
+    generated: schur-2.svg
+    alt_text: "Coloring of 1 to 4 with two colors and no monochromatic solution to x + y = z"
+
+schur-3:
+  image:
+    generated: schur-3.svg
+    alt_text: "Coloring of 1 to 13 with three colors and no monochromatic solution to x + y = z"
+
+schur-4:
+  image:
+    generated: schur-4.svg
+    alt_text: "Coloring of 1 to 44 with four colors and no monochromatic solution to x + y = z"
+
+schur-5:
+  image:
+    generated: schur-5.svg
+    alt_text: "Coloring of 1 to 160 with five colors and no monochromatic solution to x + y = z"
+
+weak-schur-2:
+  image:
+    generated: weak-schur-2.svg
+    alt_text: "Coloring of 1 to 8 with two colors and no monochromatic solution to x + y = z with x and y different"
+
+weak-schur-3:
+  image:
+    generated: weak-schur-3.svg
+    alt_text: "Coloring of 1 to 23 with three colors and no monochromatic solution to x + y = z with x and y different"
+
+weak-schur-4:
+  image:
+    generated: weak-schur-4.svg
+    alt_text: "Coloring of 1 to 66 with four colors and no monochromatic solution to x + y = z with x and y different"
+
+weak-schur-5:
+  image:
+    generated: weak-schur-5.svg
+    alt_text: "Coloring of 1 to 207 with five colors and no monochromatic solution to x + y = z with x and y different"
+
+golomb-ruler-2:
+  image:
+    generated: golomb-ruler-2.svg
+    alt_text: "Optimal Golomb ruler with 2 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-3:
+  image:
+    generated: golomb-ruler-3.svg
+    alt_text: "Optimal Golomb ruler with 3 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-4:
+  image:
+    generated: golomb-ruler-4.svg
+    alt_text: "Optimal Golomb ruler with 4 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-5:
+  image:
+    generated: golomb-ruler-5.svg
+    alt_text: "Optimal Golomb ruler with 5 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-6:
+  image:
+    generated: golomb-ruler-6.svg
+    alt_text: "Optimal Golomb ruler with 6 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-7:
+  image:
+    generated: golomb-ruler-7.svg
+    alt_text: "Optimal Golomb ruler with 7 marks"
+
+golomb-ruler-8:
+  image:
+    generated: golomb-ruler-8.svg
+    alt_text: "Optimal Golomb ruler with 8 marks"
+
+golomb-ruler-9:
+  image:
+    generated: golomb-ruler-9.svg
+    alt_text: "Optimal Golomb ruler with 9 marks"
+
+golomb-ruler-10:
+  image:
+    generated: golomb-ruler-10.svg
+    alt_text: "Optimal Golomb ruler with 10 marks"
+
+golomb-ruler-11:
+  image:
+    generated: golomb-ruler-11.svg
+    alt_text: "Optimal Golomb ruler with 11 marks"
+
+golomb-ruler-12:
+  image:
+    generated: golomb-ruler-12.svg
+    alt_text: "Optimal Golomb ruler with 12 marks"
+
+golomb-ruler-13:
+  image:
+    generated: golomb-ruler-13.svg
+    alt_text: "Optimal Golomb ruler with 13 marks"
+
+golomb-ruler-14:
+  image:
+    generated: golomb-ruler-14.svg
+    alt_text: "Optimal Golomb ruler with 14 marks"
+
+golomb-ruler-15:
+  image:
+    generated: golomb-ruler-15.svg
+    alt_text: "Optimal Golomb ruler with 15 marks"
+
+golomb-ruler-16:
+  image:
+    generated: golomb-ruler-16.svg
+    alt_text: "Optimal Golomb ruler with 16 marks"
+
+golomb-ruler-17:
+  image:
+    generated: golomb-ruler-17.svg
+    alt_text: "Optimal Golomb ruler with 17 marks"
+
+golomb-ruler-18:
+  image:
+    generated: golomb-ruler-18.svg
+    alt_text: "Optimal Golomb ruler with 18 marks"
+
+golomb-ruler-19:
+  image:
+    generated: golomb-ruler-19.svg
+    alt_text: "Optimal Golomb ruler with 19 marks"
+
+golomb-ruler-20:
+  image:
+    generated: golomb-ruler-20.svg
+    alt_text: "Optimal Golomb ruler with 20 marks"
+
+golomb-ruler-21:
+  image:
+    generated: golomb-ruler-21.svg
+    alt_text: "Optimal Golomb ruler with 21 marks"
+
+golomb-ruler-22:
+  image:
+    generated: golomb-ruler-22.svg
+    alt_text: "Optimal Golomb ruler with 22 marks"
+
+golomb-ruler-23:
+  image:
+    generated: golomb-ruler-23.svg
+    alt_text: "Optimal Golomb ruler with 23 marks"
+
+golomb-ruler-24:
+  image:
+    generated: golomb-ruler-24.svg
+    alt_text: "Optimal Golomb ruler with 24 marks"
+
+golomb-ruler-25:
+  image:
+    generated: golomb-ruler-25.svg
+    alt_text: "Optimal Golomb ruler with 25 marks"
+
+golomb-ruler-26:
+  image:
+    generated: golomb-ruler-26.svg
+    alt_text: "Optimal Golomb ruler with 26 marks"
+
+golomb-ruler-27:
+  image:
+    generated: golomb-ruler-27.svg
+    alt_text: "Optimal Golomb ruler with 27 marks"
+
+golomb-ruler-28:
+  image:
+    generated: golomb-ruler-28.svg
+    alt_text: "Optimal Golomb ruler with 28 marks"
+
+golomb-ruler-29:
+  image:
+    generated: golomb-ruler-29.svg
+    alt_text: "Shortest known Golomb ruler with 29 marks"
+
+golomb-ruler-30:
+  image:
+    generated: golomb-ruler-30.svg
+    alt_text: "Shortest known Golomb ruler with 30 marks"

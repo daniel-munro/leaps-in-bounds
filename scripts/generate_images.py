@@ -35,8 +35,8 @@ from typing import Any, Callable, Iterable, Sequence
 
 import yaml
 
-from certificates import (eccentricity_at_most, girth, load_certificates, orbit_closure, read_graph, read_points,
-                          read_symmetries, read_vectors, read_witness_data)
+from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, load_certificates, orbit_closure, read_graph,
+                          read_marks, read_points, read_symmetries, read_vectors, read_witness_data)
 from utils import GENERATED_IMAGES_DIR
 
 #########
@@ -306,6 +306,23 @@ def render_van_der_waerden(constant_id: str, r: int, k: int) -> Svg | None:
     if cert is None:
         return None
     colors = "".join(read_witness_data(cert).split())
+    return draw_coloring(colors)
+
+
+def render_schur(constant_id: str, k: int, weak: bool) -> Svg | None:
+    """A coloring of 1, ..., S(k) (or WS(k)) with no monochromatic solution
+    to x + y = z (with x ≠ y for WS), as rows of colored cells."""
+    cert = witness(constant_id, "lower")
+    if cert is None or k < 2:
+        return None
+    colors = "".join(read_witness_data(cert).split())
+    check(not has_monochromatic_sum(colors, weak), f"{constant_id}: coloring has a monochromatic sum")
+    return draw_coloring(colors)
+
+
+def draw_coloring(colors: str) -> Svg | None:
+    """A coloring of 1, ..., n (one digit per integer) as rows of colored
+    cells, numbered if there are only a few."""
     n = len(colors)
     if n > 300:
         return None
@@ -472,6 +489,40 @@ def render_superpermutation(constant_id: str, n: int) -> Svg | None:
     svg.add(svg.group((svg.polyline([(i + 0.15, -0.2 - 0.35 * lane + 0.12), (i + 0.15, -0.2 - 0.35 * lane),
                                       (i + n - 0.15, -0.2 - 0.35 * lane), (i + n - 0.15, -0.2 - 0.35 * lane + 0.12)])
                        for i, lane in brackets), fill="none", stroke=EDGE, stroke_width=1.5))
+    return svg
+
+
+##########
+# Rulers #
+##########
+
+def render_golomb_ruler(constant_id: str, n: int) -> Svg | None:
+    """The shortest known Golomb ruler with n marks. For a few marks, each
+    distance between two marks is drawn below the ruler, shortest first, to
+    show that they're all different."""
+    cert = witness(constant_id, "upper")
+    if cert is None or n < 2:
+        return None
+    marks = sorted(read_marks(read_witness_data(cert)))
+    pairs = sorted(itertools.combinations(marks, 2), key=lambda p: p[1] - p[0])
+    check(len({b - a for a, b in pairs}) == len(pairs), f"{constant_id}: distances repeat")
+    length = marks[-1] - marks[0]
+    if exact_value(constant_id) is not None:
+        check(length == exact_value(constant_id), f"{constant_id}: ruler isn't optimal")
+    rows = pairs if n <= 6 else []
+    u = length / (10 if rows else 16)  # height of the ruler, in the ruler's units
+    depth = 0.7 * u * len(rows)
+    label = 0.6 * u if rows else 0
+    svg = Svg(-u, -depth - 0.4 * u, length + (1.6 if rows else 1) * u, u + 1.4 * label + 0.2 * u, size=max(SIZE, min(600, 40 * n)))
+    svg.add(svg.rect(marks[0], 0, length, u, fill=FILL, stroke=INK, stroke_width=1))
+    svg.add(svg.group((svg.line((a, 0), (a, u)) for a in marks), stroke=INK, stroke_width=2))
+    if label:
+        svg.add(svg.group((svg.text((a, u + 0.75 * label), a, label) for a in marks), fill=INK, font_family=FONT))
+    for i, (a, b) in enumerate(rows):
+        y = -0.7 * u * (i + 1)
+        svg.add(svg.line((a, y), (b, y), stroke=EDGE, stroke_width=2),
+                svg.group((svg.circle((x, y), 0.1 * u) for x in (a, b)), fill=EDGE),
+                svg.text((b + 0.8 * u, y), b - a, 0.55 * u, fill=INK, font_family=FONT))
     return svg
 
 
@@ -666,6 +717,9 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "stamp-folding": ("stamp-folding-", lambda c: render_stamp_folding(c, *ints(c, "stamp-folding-"))),
     "busy-beaver-shift": ("busy-beaver-shift-", lambda c: render_busy_beaver(c, "shift", *ints(c, "busy-beaver-shift-"))),
     "busy-beaver-ones": ("busy-beaver-ones-", lambda c: render_busy_beaver(c, "ones", *ints(c, "busy-beaver-ones-"))),
+    "schur": ("schur-", lambda c: render_schur(c, *ints(c, "schur-"), weak=False)),
+    "weak-schur": ("weak-schur-", lambda c: render_schur(c, *ints(c, "weak-schur-"), weak=True)),
+    "golomb-ruler": ("golomb-ruler-", lambda c: render_golomb_ruler(c, *ints(c, "golomb-ruler-"))),
 }
 
 
