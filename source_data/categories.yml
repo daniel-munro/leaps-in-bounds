@@ -20,7 +20,9 @@
   name: "Graph theory"
   groups:
     - cage
+    - coil-in-the-box
     - degree-diameter
+    - snake-in-the-box
 
 - msc: "05D"
   name: "Extremal combinatorics"

@@ -329,3 +329,34 @@ weak-schur:
   parameters: [k]
   parameter_values: [[[1, 9]]]
   research_status: initial
+
+snake-in-the-box:
+  name: "Snake-in-the-box"
+  description: "A snake in the $n$-dimensional hypercube is an induced path: a path whose vertices are adjacent only when they're consecutive on the path. $s(n)$ is the length, in edges, of the longest snake in the $n$-dimensional hypercube."
+  external_ids:
+    msc: 05C38
+    oeis: A099155
+    wikipedia_en: Snake-in-the-box
+  display_type: sequence
+  representative_image: snake-in-the-box-5
+  id_template: "snake-in-the-box-{n}"
+  name_template: "Snake-in-the-box $s({n})$"
+  description_template: "The length, in edges, of the longest induced path in the ${n}$-dimensional hypercube."
+  parameters: [n]
+  parameter_values: [[[1, 13]]]
+  research_status: initial
+
+coil-in-the-box:
+  name: "Coil-in-the-box"
+  description: "A coil in the $n$-dimensional hypercube is an induced cycle: a cycle whose vertices are adjacent only when they're consecutive around the cycle. $c(n)$ is the length, in edges, of the longest coil in the $n$-dimensional hypercube."
+  external_ids:
+    msc: 05C38
+    oeis: A000937
+  display_type: sequence
+  representative_image: coil-in-the-box-5
+  id_template: "coil-in-the-box-{n}"
+  name_template: "Coil-in-the-box $c({n})$"
+  description_template: "The length, in edges, of the longest induced cycle in the ${n}$-dimensional hypercube."
+  parameters: [n]
+  parameter_values: [[[2, 13]]]
+  research_status: initial

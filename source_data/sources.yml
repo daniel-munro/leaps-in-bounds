@@ -162,6 +162,27 @@ oeis-a072842-weak-schur:
   date: "2026-11-03"
   url: "https://oeis.org/A072842"
 
+minortriad-snake:
+  string: "Snake-in-the-box records, Tom Ace, retrieved 2026-11-04"
+  date: "2026-11-04"
+  url: "https://www.minortriad.com/snake/"
+  notes: "Records and witnesses for n <= 13, with a dated log of updates."
+
+uga-sib-records:
+  string: "Snake-in-the-box records, Institute for Artificial Intelligence, University of Georgia (archived)"
+  date: "2016"
+  url: "https://web.archive.org/web/2016/http://ai1.ai.uga.edu/sib/sibwiki/doku.php/records"
+
+oeis-a099155-snake:
+  string: "Sequence A099155 in the OEIS"
+  date: "2026"
+  url: "https://oeis.org/A099155"
+
+oeis-a000937-coil:
+  string: "Sequence A000937 in the OEIS"
+  date: "2026"
+  url: "https://oeis.org/A000937"
+
 ###################
 # Primary sources #
 ###################
@@ -1340,3 +1361,247 @@ christ-2011:
   date: "2011"
   doi: "https://doi.org/10.3929/ethz-a-007018092"
   notes: "The database (https://geometry.inf.ethz.ch/christt/linearr/) lists all simple arrangements of up to 9 lines; OEIS A090338 takes a(9) from it."
+
+# Snake-in-the-box and coil-in-the-box
+
+kautz-1958:
+  string: "W.H. Kautz, Unit-distance error-checking codes, IRE Transactions on Electronic Computers EC-7 (1958) 179-180."
+  date: "1958"
+  doi: "https://doi.org/10.1109/TEC.1958.5222529"
+
+davies-1965:
+  string: "D.W. Davies, Longest \"separated\" paths and loops in an N cube, IEEE Transactions on Electronic Computers EC-14 (1965) 261."
+  date: "1965"
+  doi: "https://doi.org/10.1109/PGEC.1965.264259"
+
+potter-et-al-1994:
+  string: "W.D. Potter, R.W. Robinson, J.A. Miller, K.J. Kochut and D.Z. Redys, Using the genetic algorithm to find snake-in-the-box codes, Proceedings of the 7th International Conference on Industrial and Engineering Applications of Artificial Intelligence and Expert Systems (IEA/AIE 1994) 421-426."
+  date: "1994"
+
+kochut-1996:
+  string: "K.J. Kochut, Snake-in-the-box codes for dimension 7, Journal of Combinatorial Mathematics and Combinatorial Computing 20 (1996) 175-185."
+  date: "1996"
+
+paterson-tuliani-1998:
+  string: "K.G. Paterson and J. Tuliani, Some new circuit codes, IEEE Transactions on Information Theory 44 (1998) 1305-1309."
+  date: "1998-05"
+  doi: "https://doi.org/10.1109/18.669420"
+
+rajan-shende-1999:
+  string: "D.S. Rajan and A.M. Shende, Maximal and reversible snakes in hypercubes, 24th Australasian Conference on Combinatorial Mathematics and Combinatorial Computing (1999)."
+  date: "1999"
+  notes: "Cited in https://cdn.aaai.org/FLAIRS/2005/Flairs05-044.pdf"
+
+casella-potter-2005a:
+  string: "D.A. Casella and W.D. Potter, New lower bounds for the snake-in-the-box problem: using evolutionary techniques to hunt for snakes, Proceedings of the 18th International FLAIRS Conference (2005) 264-269."
+  date: "2005-05"
+  url: "https://cdn.aaai.org/FLAIRS/2005/Flairs05-044.pdf"
+
+casella-potter-2005b:
+  string: "D.A. Casella and W.D. Potter, Using evolutionary techniques to hunt for snakes and coils, 2005 IEEE Congress on Evolutionary Computation, vol. 3, 2499-2505."
+  date: "2005-09"
+  doi: "https://doi.org/10.1109/CEC.2005.1555007"
+
+tuohy-potter-casella-2007:
+  string: "D.R. Tuohy, W.D. Potter and D.A. Casella, Searching for snake-in-the-box codes with evolved pruning models, Proceedings of the 2007 International Conference on Genetic and Evolutionary Methods (GEM'07) 3-9."
+  date: "2007-06"
+  notes: "Credited with s(9) >= 188 in https://arxiv.org/abs/1201.1647"
+
+wynn-2009:
+  string: "E. Wynn, personal communication, recorded on the University of Georgia snake-in-the-box records page (2009)."
+  date: "2009-11"
+  url: "https://web.archive.org/web/2010/http://www.ai.uga.edu/sib/records/"
+
+carlson-hougen-2010:
+  string: "B.P. Carlson and D.F. Hougen, Phenotype feedback genetic algorithm operators for heuristic encoding of snakes within hypercubes, Proceedings of the 12th Annual Conference on Genetic and Evolutionary Computation (GECCO '10) 791-798."
+  date: "2010-07-07"
+  doi: "https://doi.org/10.1145/1830483.1830622"
+  notes: "Reported to the University of Georgia records page in November 2009."
+
+kinny-2011:
+  string: "D. Kinny, personal communication, recorded on the University of Georgia snake-in-the-box records page (2011)."
+  date: "2011-11-01"
+  url: "https://web.archive.org/web/2012/http://ai1.ai.uga.edu/sib/sibwiki/doku.php/records"
+
+wynn-2012:
+  string: "E. Wynn, Constructing circuit codes by permuting initial sequences, arXiv:1201.1647."
+  date: "2012-01-08"
+  url: "https://arxiv.org/abs/1201.1647"
+  notes: "The snake of length 190 and coil of length 188 in dimension 9 were reported to the University of Georgia records page in 2009 and 2010."
+
+kinny-2012:
+  string: "D. Kinny, A new approach to the snake-in-the-box problem, Proceedings of the 20th European Conference on Artificial Intelligence (ECAI 2012) 462-467."
+  date: "2012-08"
+  doi: "https://doi.org/10.3233/978-1-61499-098-7-462"
+
+ostergard-pettersson-2014-coil:
+  string: "P.R.J. Östergård and V.H. Pettersson, On the maximum length of coil-in-the-box codes in dimension 8, Discrete Applied Mathematics 179 (2014) 193-200."
+  date: "2014"
+  doi: "https://doi.org/10.1016/j.dam.2014.07.010"
+
+ostergard-pettersson-2014-snake:
+  string: "P.R.J. Östergård and V.H. Pettersson, Exhaustive search for snake-in-the-box codes, Graphs and Combinatorics 31 (2015) 1019-1028."
+  date: "2014-05-01"
+  doi: "https://doi.org/10.1007/s00373-014-1423-3"
+
+meyerson-et-al-2015:
+  string: "S.J. Meyerson, W.E. Whiteside, T.E. Drapela and W.D. Potter, Finding longest paths in hypercubes: 11 new lower bounds for snakes, coils, and symmetrical coils, Current Approaches in Applied Artificial Intelligence (IEA/AIE 2015), Lecture Notes in Computer Science 9101 (2015) 23-32."
+  date: "2015-06"
+  doi: "https://doi.org/10.1007/978-3-319-19066-2_3"
+  notes: "Reported to the University of Georgia records page by July 2014."
+
+allison-paulusma-2016a:
+  string: "D. Allison and D. Paulusma, New bounds for the snake-in-the-box problem, arXiv:1603.05119v1."
+  date: "2016-03-01"
+  url: "https://arxiv.org/abs/1603.05119v1"
+
+allison-paulusma-2016b:
+  string: "D. Allison and D. Paulusma, New bounds for the snake-in-the-box problem, arXiv:1603.05119v2."
+  date: "2016-06-16"
+  url: "https://arxiv.org/abs/1603.05119v2"
+
+ace-2025a:
+  string: "T. Ace, A new lower bound for SIB in a 10-dimensional hypercube, Zenodo."
+  date: "2025-10-13"
+  doi: "https://doi.org/10.5281/zenodo.17344872"
+
+ace-2025b:
+  string: "T. Ace, New lower bounds for snake-in-the-box in 11-, 12- and 13-dimensional hypercubes, Zenodo."
+  date: "2025-11-06"
+  doi: "https://doi.org/10.5281/zenodo.17538015"
+
+ace-2025c:
+  string: "T. Ace, New lower bounds for snake-in-the-box in 10-, 11-, 12- and 13-dimensional hypercubes, Zenodo."
+  date: "2025-12-05"
+  doi: "https://doi.org/10.5281/zenodo.17832883"
+
+ace-2025d:
+  string: "T. Ace, New lower bounds for snake-in-the-box in 10-, 11-, 12- and 13-dimensional hypercubes, Zenodo."
+  date: "2025-12-28"
+  doi: "https://doi.org/10.5281/zenodo.18079790"
+
+ace-2026-01-02:
+  string: "T. Ace, snake-in-the-box records page (2026-01-02)."
+  date: "2026-01-02"
+  url: "https://www.minortriad.com/snake/"
+
+ace-2026-01-04:
+  string: "T. Ace, snake-in-the-box records page (2026-01-04)."
+  date: "2026-01-04"
+  url: "https://www.minortriad.com/snake/"
+
+han-zheng-2026:
+  string: "Z. Han and J. Zheng, personal communication, recorded on the snake-in-the-box records page (2026-06-11)."
+  date: "2026-06-11"
+  url: "https://www.minortriad.com/snake/"
+
+ace-2026a:
+  string: "T. Ace, Priming snake-in-the-box search with seed snakes in n-1 and n-2 dimensions, Zenodo."
+  date: "2026-06-19"
+  doi: "https://doi.org/10.5281/zenodo.20753867"
+
+ace-2026-06-26:
+  string: "T. Ace, snake-in-the-box records page (2026-06-26)."
+  date: "2026-06-26"
+  url: "https://www.minortriad.com/snake/"
+
+echols-2026-06-26:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-06-26)."
+  date: "2026-06-26"
+  url: "https://www.minortriad.com/snake/"
+
+echols-2026-06-28:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-06-28)."
+  date: "2026-06-28"
+  url: "https://www.minortriad.com/snake/"
+  notes: "A snake in dimension 11 found inside Ace's snake of length 1465 in dimension 12."
+
+ace-2026-07-01:
+  string: "T. Ace, snake-in-the-box records page (2026-07-01)."
+  date: "2026-07-01"
+  url: "https://www.minortriad.com/snake/"
+
+echols-2026-07-01:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-07-01)."
+  date: "2026-07-01"
+  url: "https://www.minortriad.com/snake/"
+
+echols-2026-07-08:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-07-08)."
+  date: "2026-07-08"
+  url: "https://www.minortriad.com/snake/"
+
+orland-et-al-2026:
+  string: "M. Orland, B. Fagan, et al., A census of new snake-in-the-box records, arXiv:2607.15270v1."
+  date: "2026-07-16"
+  url: "https://arxiv.org/abs/2607.15270v1"
+  notes: "Not peer reviewed. Retitled New snake-in-the-box records via snakepit surgery and learned construction in v3. Records and witnesses at https://github.com/Math-AI-Caltech/Snake-in-the-Box"
+
+ace-2026-07-16:
+  string: "T. Ace, snake-in-the-box records page (2026-07-16)."
+  date: "2026-07-16"
+  url: "https://www.minortriad.com/snake/"
+
+ace-2026-07-17:
+  string: "T. Ace, snake-in-the-box records page (2026-07-17)."
+  date: "2026-07-17"
+  url: "https://www.minortriad.com/snake/"
+  notes: "The coil of length 734 in dimension 11 is also claimed in v3 of https://arxiv.org/abs/2607.15270"
+
+echols-2026-07-22:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-07-22)."
+  date: "2026-07-22"
+  url: "https://www.minortriad.com/snake/"
+
+ace-2026-07-22:
+  string: "T. Ace, snake-in-the-box records page (2026-07-22)."
+  date: "2026-07-22"
+  url: "https://www.minortriad.com/snake/"
+
+echols-2026-07-23:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-07-23)."
+  date: "2026-07-23"
+  url: "https://www.minortriad.com/snake/"
+
+orland-et-al-2026-coil-13:
+  string: "M. Orland, B. Fagan, et al., snake-in-the-box records dataset, Math-AI-Caltech/Snake-in-the-Box on GitHub."
+  date: "2026-08-06"
+  url: "https://github.com/Math-AI-Caltech/Snake-in-the-Box"
+  notes: "Published in v3 of https://arxiv.org/abs/2607.15270 (2026-09-30)."
+
+ace-2026b:
+  string: "T. Ace, Priming snake-in-the-box search with seed snakes in n-1 and n-2 dimensions, Zenodo."
+  date: "2026-08-11"
+  doi: "https://doi.org/10.5281/zenodo.21895629"
+
+echols-2026-08-13:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-08-13)."
+  date: "2026-08-13"
+  url: "https://www.minortriad.com/snake/"
+
+echols-2026-08-29:
+  string: "W. Echols, personal communication, recorded on the snake-in-the-box records page (2026-08-29)."
+  date: "2026-08-29"
+  url: "https://www.minortriad.com/snake/"
+
+itty-2026:
+  string: "N. Itty, personal communication, recorded on the snake-in-the-box records page (2026-08-31)."
+  date: "2026-08-31"
+  url: "https://www.minortriad.com/snake/"
+  notes: "Snakes also at https://github.com/tommyet/snakes"
+
+taylor-2026:
+  string: "T. Taylor, Constructing longer snakes and improved asymptotic bounds in hypercubes, arXiv:2609.27483."
+  date: "2026-09-23"
+  url: "https://arxiv.org/abs/2609.27483"
+  notes: "Not peer reviewed."
+
+toner-2026:
+  string: "W. Toner, snake of length 2946 in the 13-dimensional hypercube, Zenodo record 23299075."
+  date: "2026-10-11"
+  doi: "https://doi.org/10.5281/zenodo.23299075"
+  notes: "Improves Toner's snake of length 2944 from the same day (https://doi.org/10.5281/zenodo.23297780)."
+
+abbott-katchalski-1991:
+  string: "H.L. Abbott and M. Katchalski, On the construction of snake in the box codes, Utilitas Mathematica 40 (1991) 97-116."
+  date: "1991"

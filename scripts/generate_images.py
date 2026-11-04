@@ -35,8 +35,9 @@ from typing import Any, Callable, Iterable, Sequence
 
 import yaml
 
-from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, load_certificates, orbit_closure, read_graph,
-                          read_marks, read_points, read_symmetries, read_vectors, read_witness_data)
+from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, is_snake, load_certificates, orbit_closure,
+                          read_graph, read_marks, read_points, read_symmetries, read_transitions, read_vectors,
+                          read_witness_data, transition_vertices)
 from utils import GENERATED_IMAGES_DIR
 
 #########
@@ -526,6 +527,54 @@ def render_golomb_ruler(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+##############
+# Hypercubes #
+##############
+
+# Projections of Q_n to the plane, as the image of each unit vector: a small
+# cube for the first three coordinates, offset along longer vectors for the
+# others, chosen by a random search so that no vertex is close to an edge it
+# isn't on.
+HYPERCUBE_PROJECTIONS = {
+    2: [(1, 0), (0, 1)],
+    3: [(1, 0), (0, 1), (0.42, 0.3)],
+    4: [(1, 0), (0, 1), (0.42, 0.3), (-0.43, 1.79)],
+    5: [(1, 0), (0, 1), (0.42, 0.3), (-0.47, 1.97), (1.93, 0.65)],
+}
+
+
+def render_snake(constant_id: str, n: int, coil: bool) -> Svg | None:
+    """The longest known snake (or coil) in Q_n, drawn over a projection of
+    the hypercube."""
+    cert = witness(constant_id, "lower")
+    if cert is None or n < 2 or n not in HYPERCUBE_PROJECTIONS:
+        return None
+    transitions = read_transitions(read_witness_data(cert), n)
+    check(is_snake(transitions, n, coil), f"{constant_id}: not an induced {'cycle' if coil else 'path'}")
+    if exact_value(constant_id) is not None:
+        check(len(transitions) == exact_value(constant_id), f"{constant_id}: witness isn't optimal")
+    vectors = HYPERCUBE_PROJECTIONS[n]
+    pos = [(sum(vectors[i][0] for i in range(n) if v >> i & 1), sum(vectors[i][1] for i in range(n) if v >> i & 1))
+           for v in range(1 << n)]
+    xs, ys = [p[0] for p in pos], [p[1] for p in pos]
+    m = 0.15
+    svg = Svg(min(xs) - m, min(ys) - m, max(xs) + m, max(ys) + m, size=SIZE if n <= 4 else 400)
+    px = 1 / svg.scale  # one pixel, in drawing units
+    svg.add(svg.group((svg.line(pos[v], pos[v ^ 1 << i]) for v in range(1 << n) for i in range(n) if not v >> i & 1),
+                      stroke=MUTED, stroke_width=1.25 if n <= 4 else 1))
+    vertices = transition_vertices(transitions)
+    path = [pos[v] for v in vertices]
+    style = dict(fill="none", stroke=EDGE, stroke_width=4 if n <= 4 else 3, stroke_linecap="round", stroke_linejoin="round")
+    svg.add(svg.polygon(path[:-1], **style) if coil else svg.polyline(path, **style))
+    on_path = set(vertices)
+    radius = (3 if n <= 4 else 2) * px
+    svg.add(svg.group((svg.circle(pos[v], radius) for v in range(1 << n) if v not in on_path), fill="#adb5bd"))
+    svg.add(svg.group((svg.circle(pos[v], radius * 1.4) for v in on_path), fill=INK, stroke="white", stroke_width=1))
+    if not coil:
+        svg.add(svg.group((svg.circle(path[i], radius * 2) for i in (0, -1)), fill=PALETTE[1], stroke="white", stroke_width=1))
+    return svg
+
+
 def stamp_foldings(n: int) -> list[tuple[int, ...]]:
     """All foldings of a strip of n stamps, as the position of each stamp in
     the folded stack. The crease after stamp i is on the right for even i and
@@ -720,6 +769,8 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "schur": ("schur-", lambda c: render_schur(c, *ints(c, "schur-"), weak=False)),
     "weak-schur": ("weak-schur-", lambda c: render_schur(c, *ints(c, "weak-schur-"), weak=True)),
     "golomb-ruler": ("golomb-ruler-", lambda c: render_golomb_ruler(c, *ints(c, "golomb-ruler-"))),
+    "snake-in-the-box": ("snake-in-the-box-", lambda c: render_snake(c, *ints(c, "snake-in-the-box-"), coil=False)),
+    "coil-in-the-box": ("coil-in-the-box-", lambda c: render_snake(c, *ints(c, "coil-in-the-box-"), coil=True)),
 }
 
 

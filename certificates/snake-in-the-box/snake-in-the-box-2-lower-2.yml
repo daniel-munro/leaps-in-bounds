@@ -1,0 +1,10 @@
+constant: snake-in-the-box-2
+bound: lower
+value: 2
+kind: witness
+witness:
+  format: transitions
+  data: '01'
+submitted_by: Claude
+date: 2026-11-04
+notes: Found by exhaustive search.

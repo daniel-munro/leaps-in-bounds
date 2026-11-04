@@ -1,0 +1,10 @@
+constant: coil-in-the-box-4
+bound: lower
+value: 8
+kind: witness
+witness:
+  format: transitions
+  data: '01203123'
+submitted_by: Claude
+date: 2026-11-04
+notes: Found by exhaustive search.

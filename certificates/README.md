@@ -179,6 +179,16 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Golomb.lean`](../form
 
 Witnesses can certify upper bounds only. A witness for `G(n) <= L` uses `format: marks`: `n` distinct integers from `0` to `L`, separated by whitespace or commas, whose pairwise differences are all distinct. For example, `'0 1 4 9 11'` for `G(5) <= 11`.
 
+### Snake-in-the-box and coil-in-the-box: `snake-in-the-box-{n}` and `coil-in-the-box-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/SnakeInTheBox.lean`](../formal/LeapsInBounds/Statements/SnakeInTheBox.lean). The vertices of the hypercube `Q_n` are the binary vectors of length `n`, two of them adjacent if they differ in one coordinate. A snake is an induced path in `Q_n` (its vertices are adjacent only when consecutive), and a coil is an induced cycle. Lengths count edges.
+
+- `LowerBound n L` means some snake in `Q_n` has length at least `L`.
+- `UpperBound n L` means every snake in `Q_n` has length at most `L`.
+- `CoilLowerBound n L` and `CoilUpperBound n L` are the same for coils.
+
+Witnesses can certify lower bounds only. A witness for a snake or coil of length `L` uses `format: transitions`: its transition sequence, the `L` coordinates (from `0` to `n - 1`) that change along its edges in order, starting from the vertex `0`. Each coordinate is one character, in base 36 (`0` to `9`, then `a` to `z`, so `n <= 36`), and whitespace is ignored. A coil's transitions must lead back to `0`. For example, `'0120'` for a snake of length 4 in `Q_3` (`000`, `001`, `011`, `111`, `110`), or `'012012'` for a coil of length 6.
+
 ### Arrangements of lines: `affine-line-arrangements-{n}` and `affine-line-arrangements-general-position-{n}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/LineArrangement.lean`](../formal/LeapsInBounds/Statements/LineArrangement.lean). The combinatorial type of an arrangement of distinct lines in the plane is given by its covectors, the vectors of signs saying which side of each line a point is on, up to renumbering the lines and swapping their sides. This identifies mirror images.

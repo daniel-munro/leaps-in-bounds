@@ -1,0 +1,10 @@
+constant: snake-in-the-box-5
+bound: lower
+value: 13
+kind: witness
+witness:
+  format: transitions
+  data: '0123014021032'
+submitted_by: Claude
+date: 2026-11-04
+notes: Found by exhaustive search.

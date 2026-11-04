@@ -704,3 +704,43 @@ golomb-ruler-30:
   image:
     generated: golomb-ruler-30.svg
     alt_text: "Shortest known Golomb ruler with 30 marks"
+
+snake-in-the-box-2:
+  image:
+    generated: snake-in-the-box-2.svg
+    alt_text: "Snake of length 2 in the square, an induced path drawn over its edges, with its ends marked"
+
+snake-in-the-box-3:
+  image:
+    generated: snake-in-the-box-3.svg
+    alt_text: "Snake of length 4 in the cube, an induced path drawn over its edges, with its ends marked"
+
+snake-in-the-box-4:
+  image:
+    generated: snake-in-the-box-4.svg
+    alt_text: "Snake of length 7 in the 4-dimensional hypercube, an induced path drawn over its edges, with its ends marked"
+
+snake-in-the-box-5:
+  image:
+    generated: snake-in-the-box-5.svg
+    alt_text: "Snake of length 13 in the 5-dimensional hypercube, an induced path drawn over its edges, with its ends marked"
+
+coil-in-the-box-2:
+  image:
+    generated: coil-in-the-box-2.svg
+    alt_text: "Coil of length 4 in the square, an induced cycle drawn over its edges"
+
+coil-in-the-box-3:
+  image:
+    generated: coil-in-the-box-3.svg
+    alt_text: "Coil of length 6 in the cube, an induced cycle drawn over its edges"
+
+coil-in-the-box-4:
+  image:
+    generated: coil-in-the-box-4.svg
+    alt_text: "Coil of length 8 in the 4-dimensional hypercube, an induced cycle drawn over its edges"
+
+coil-in-the-box-5:
+  image:
+    generated: coil-in-the-box-5.svg
+    alt_text: "Coil of length 14 in the 5-dimensional hypercube, an induced cycle drawn over its edges"
