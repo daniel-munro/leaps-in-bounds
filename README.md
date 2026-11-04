@@ -24,6 +24,7 @@ Alongside bounds from the literature, constants can have verified bounds backed 
 
 - `certificates/`: One YAML file per certificate. See [certificates/README.md](certificates/README.md) for the format and how to submit one.
 - `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
+- `notes/`: Working notes on searches for verified bounds, one scratchpad per constant group, so people and agents can build on earlier attempts instead of repeating them. See [notes/README.md](notes/README.md).
 - `scripts/check_certificates.py`: Verifies all certificates. CI runs it on pull requests (with Lean proofs only when certificates, proofs, or scripts change), compiling submitted proofs in a separate job from the check.
 
 So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle, Schur and weak Schur numbers, and optimal Golomb rulers.

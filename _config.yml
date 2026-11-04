@@ -55,6 +55,7 @@ exclude:
   - source_data/
   - certificates/
   - formal/
+  - notes/
   - README.md
   - LICENSE
   - requirements.txt
