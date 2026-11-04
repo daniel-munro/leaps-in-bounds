@@ -6,10 +6,10 @@ degree-diameter-3-3,,20,elspasgraphs,wikipedia-degree-diameter
 degree-diameter-3-4,38,,dotygraph,wikipedia-degree-diameter
 degree-diameter-3-4,,38,buset-2000,wikipedia-degree-diameter
 degree-diameter-3-5,70,,afygraph,wikipedia-degree-diameter
-degree-diameter-3-6,132,,exoographs,wikipedia-degree-diameter
+degree-diameter-3-6,132,,exoo-1998-05,wikipedia-degree-diameter
 degree-diameter-3-7,196,,exoo-post-2001,wikipedia-degree-diameter
 degree-diameter-3-8,360,,jianxiang-chen-2018,wikipedia-degree-diameter
-degree-diameter-3-9,600,,exoographs,wikipedia-degree-diameter
+degree-diameter-3-9,600,,exoo-2008-01,wikipedia-degree-diameter
 degree-diameter-3-10,1250,,conder-2006,wikipedia-degree-diameter
 degree-diameter-4-2,15,,elspasgraphs,wikipedia-degree-diameter
 degree-diameter-4-2,,15,elspasgraphs,wikipedia-degree-diameter
@@ -23,7 +23,7 @@ degree-diameter-4-9,7575,,loz-siran-2008,wikipedia-degree-diameter
 degree-diameter-4-10,17703,,loz-siran-2008,wikipedia-degree-diameter
 degree-diameter-5-2,24,,elspasgraphs,wikipedia-degree-diameter
 degree-diameter-5-2,,24,elspasgraphs,wikipedia-degree-diameter
-degree-diameter-5-4,212,,exoographs,wikipedia-degree-diameter
+degree-diameter-5-4,212,,exoo-2010-05,wikipedia-degree-diameter
 degree-diameter-5-5,624,,loz-siran-2008,wikipedia-degree-diameter
 degree-diameter-5-6,2772,,pinedagraphs,wikipedia-degree-diameter
 degree-diameter-5-7,5516,,loz-siran-2008,wikipedia-degree-diameter
@@ -77,7 +77,7 @@ degree-diameter-10-7,583083,,loz-siran-2008,wikipedia-degree-diameter
 degree-diameter-10-8,4293452,,loz-siran-2008,wikipedia-degree-diameter
 degree-diameter-10-9,27997191,,loz-siran-2008,wikipedia-degree-diameter
 degree-diameter-10-10,201038922,,loz-siran-2008,wikipedia-degree-diameter
-degree-diameter-11-2,104,,exoographs,wikipedia-degree-diameter
+degree-diameter-11-2,104,,exoo-2006-05,wikipedia-degree-diameter
 degree-diameter-11-3,715,,delorme85agraphs,wikipedia-degree-diameter
 degree-diameter-11-4,3200,,gomezfiolgraphs,wikipedia-degree-diameter
 degree-diameter-11-5,19620,,comellasgraphs,wikipedia-degree-diameter

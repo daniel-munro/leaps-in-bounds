@@ -166,6 +166,7 @@ oeis-a072842-weak-schur:
 # Primary sources #
 ###################
 
+# Deliberately undated (exempt in scripts/validate_data.py): no source is needed for trivial bounds.
 trivial:
   string: "Trivial or easy according to the secondary source."
 
@@ -559,8 +560,27 @@ afygraph:
   date: "1986"
   doi: "https://doi.org/10.1002/jgt.3190100211"
 
-exoographs:
-  string: "Geoffrey Exoo, 1998 through 2010"
+exoo-1998-05:
+  string: "Geoffrey Exoo, communicated to F. Comellas on May 22, 1998. Construction in G. Exoo, A family of graphs and the degree/diameter problem, J. Graph Theory 37 (2001), 118-124."
+  date: "1998-05-22"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g6.html"
+
+exoo-2006-05:
+  string: "Geoffrey Exoo, communicated to F. Comellas on May 13, 2006"
+  date: "2006-05-13"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g2.html"
+
+exoo-2008-01:
+  string: "Geoffrey Exoo, communicated to F. Comellas on January 28, 2008"
+  date: "2008-01-28"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  notes: "Date from the legend of Comellas's table. Wikipedia says the graph was found in 2010."
+
+exoo-2010-05:
+  string: "Geoffrey Exoo, communicated to F. Comellas on May 21, 2010"
+  date: "2010-05-21"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  notes: "Date from the legend of Comellas's table. The former-result entry for (5,4) on https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html instead says the 212-vertex graph was communicated by Eyal Loz in July 2006, with a link to Exoo's data."
 
 exoo-post-2001:
   string: "Geoffrey Exoo, after May 2001 (i.e. after https://doi.org/10.1002/jgt.1007)"

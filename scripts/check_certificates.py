@@ -1,7 +1,7 @@
 """Verify certificates and check them against each other and the literature.
 
 Usage:
-    python scripts/check_certificates.py [--lean [--no-build]] [--improves FILE ...]
+    python scripts/check_certificates.py [--lean [--no-build]] [--improves FILE ...] [-v]
 
 --lean checks Lean proofs (needs Mathlib fetched in formal/); without it they
 are skipped. It builds the proof modules first, unless --no-build is given
@@ -35,6 +35,7 @@ def main() -> None:
     parser.add_argument("--no-build", action="store_true", help="check Lean proofs without building them")
     parser.add_argument("--improves", nargs="*", default=[], metavar="FILE",
                         help="certificate files that must improve on all others")
+    parser.add_argument("-v", "--verbose", action="store_true", help="list every certificate, not just failures")
     args = parser.parse_args()
 
     with open("source_data/constant_groups.yml") as file:
@@ -69,14 +70,24 @@ def main() -> None:
             failed[cert["id"]] = str(e)
     if lean_certs:
         failed |= check_lean(lean_certs, build=not args.no_build)
+    counts = {"ok": 0, "skipped": 0, "FAILED": 0}
     for cert in certificates.values():
         if cert["id"] in failed:
             errors.append(f"{cert['id']}: {failed[cert['id']]}")
-            print(f"FAILED   {cert['id']}")
+            status = "FAILED"
         elif cert["kind"] == "lean" and not args.lean:
-            print(f"skipped  {cert['id']} (Lean; run with --lean)")
+            status = "skipped"
         else:
-            print(f"ok       {cert['id']}")
+            status = "ok"
+        counts[status] += 1
+        if status == "FAILED" or args.verbose:
+            print(f"{status:8} {cert['id']}")
+    summary = f"Checked {len(certificates)} certificates: {counts['ok']} ok"
+    if counts["skipped"]:
+        summary += f", {counts['skipped']} Lean proofs skipped (run with --lean)"
+    if counts["FAILED"]:
+        summary += f", {counts['FAILED']} failed"
+    print(summary)
     certificates = {k: v for k, v in certificates.items() if k not in failed}
 
     # Check verified bounds against each other and against the literature

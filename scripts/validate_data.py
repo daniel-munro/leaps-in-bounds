@@ -21,11 +21,12 @@ class DuplicateKeyCheckLoader(yaml.SafeLoader):
 with open('_data/sources.yml') as f:
     sources = yaml.load(f, Loader=DuplicateKeyCheckLoader)
 
-# Check for missing dates and strings
-missing_dates = [id for id, source in sources.items() if 'date' not in source]
+# Check for missing dates and strings. Trivial bounds have no date by design.
+UNDATED_SOURCES = {'trivial'}
+missing_dates = [id for id, source in sources.items() if 'date' not in source and id not in UNDATED_SOURCES]
 missing_strings = [id for id, source in sources.items() if 'string' not in source]
 
 if missing_dates:
-    print(f"Warning: {len(missing_dates)} sources are missing dates")
+    print(f"Warning: {len(missing_dates)} sources are missing dates: {', '.join(missing_dates)}")
 if missing_strings:
-    print(f"Warning: {len(missing_strings)} sources are missing string representations")
+    print(f"Warning: {len(missing_strings)} sources are missing string representations: {', '.join(missing_strings)}")
