@@ -48,6 +48,13 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/sources.tsv">sources.tsv</a></td>
     </tr>
     <tr>
+      <td><strong>Certificates</strong><br>Verified bounds, who submitted them, and how they compare with the literature (<a href="{{ site.baseurl }}/verified/">browse</a>)</td>
+      <td><a href="{{ site.baseurl }}/data/certificates.yml">certificates.yml</a></td>
+      <td><a href="{{ site.baseurl }}/data/certificates.json">certificates.json</a></td>
+      <td><a href="{{ site.baseurl }}/data/certificates.csv">certificates.csv</a></td>
+      <td><a href="{{ site.baseurl }}/data/certificates.tsv">certificates.tsv</a></td>
+    </tr>
+    <tr>
       <td><strong>Unverified bounds</strong><br>Bounds from the literature that no certificate matches yet (<a href="{{ site.baseurl }}/unverified/">browse</a>)</td>
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.yml">unverified_bounds.yml</a></td>
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.json">unverified_bounds.json</a></td>

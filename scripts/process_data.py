@@ -5,7 +5,8 @@
 3. Find most recent updates for each constant's bounds or exact value.
 4. Attach certificates and find verified bounds.
 5. Combine literature and verified bounds into the best bounds.
-   List the literature bounds that no certificate matches yet.
+   List the literature bounds that no certificate matches yet, and all
+   certificates with how they compare with the literature.
 6. Process images for constants.
 7. Add statistics to each constant group.
 """
@@ -305,6 +306,46 @@ def find_unverified_bounds(constants: Mapping[str, Mapping[str, Any]]) -> list[d
     return unverified
 
 
+def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, Any]]:
+    """List all certificates, newest first, with whether each is the
+    constant's verified bound and how it compares with the best bound in
+    the literature ("new" when the literature has none, "stronger", "equal"
+    or "weaker"). Call after combine_bounds.
+    """
+    rows = []
+    for constant_id, constant in constants.items():
+        for cert in constant["certificates"]:
+            side = cert["bound"]
+            value = Value(str(cert["value"]))
+            literature = constant[f"literature_{side}_bound"]
+            if literature is None or literature.decimal_approx is None:
+                comparison = "new"
+            elif is_better(side, value.decimal_approx, literature.decimal_approx):
+                comparison = "stronger"
+            elif value.decimal_approx == literature.decimal_approx:
+                comparison = "equal"
+            else:
+                comparison = "weaker"
+            rows.append({
+                "id": cert["id"],
+                "constant": constant_id,
+                "group": constant["group"],
+                "bound": side,
+                "value": value.to_dict(),
+                "kind": cert["kind"],
+                "submitted_by": cert["submitted_by"],
+                "date": cert["date"],
+                "current": constant[f"verified_{side}_certificate"] == cert["id"],
+                "literature": literature.to_dict() if literature is not None else None,
+                "comparison": comparison,
+                "source": cert.get("source"),
+                "path": cert["path"],
+            })
+    rows.sort(key=lambda row: row["id"])
+    rows.sort(key=lambda row: row["date"], reverse=True)
+    return rows
+
+
 def calculate_group_stats(
     group_id: str,
     constants: Mapping[str, Mapping[str, Any]],
@@ -427,6 +468,8 @@ def main() -> None:
     unverified = find_unverified_bounds(constants)
     with open("_data/unverified_bounds.yml", "w") as file:
         yaml.dump(unverified, file, sort_keys=False)
+    with open("_data/certificates.yml", "w") as file:
+        yaml.dump(list_certificates(constants), file, sort_keys=False)
 
     # Save combined updates for download
     for update in updates:

@@ -15,6 +15,34 @@ This site provides browsing, visualizations, and access to the structured data f
 
 {% include constant_group_status.html %}
 
+## Recently verified
+
+{% assign batches = site.data.certificates | group_by_exp: "cert", "cert.date | append: ' ' | append: cert.submitted_by" %}
+<ul>
+  {% for batch in batches limit: 5 %}
+    {% assign first = batch.items.first %}
+    <li>
+      {{ first.date }}, <strong>{{ first.submitted_by }}</strong>:
+      {% if batch.size == 1 %}
+        {% assign constant = site.data.constants[first.constant] %}
+        {% if first.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
+        <a href="{{ site.baseurl }}/constants/{{ first.constant }}">{{ constant.name }}</a> ${{ relation }} {{ first.value.latex }}$
+        {% include certificate_comparison.html cert=first %}
+      {% else %}
+        {% assign group_ids = batch.items | map: "group" | uniq %}
+        {% assign new_rows = batch.items | where: "comparison", "new" %}
+        {% assign stronger_rows = batch.items | where: "comparison", "stronger" %}
+        {% assign beyond = new_rows.size | plus: stronger_rows.size %}
+        {{ batch.size }} certificates{% if beyond > 0 %}, {{ beyond }} beyond the literature{% endif %}, in
+        {% if group_ids.size > 4 %}{% assign shown = 3 %}{% else %}{% assign shown = 4 %}{% endif %}
+        {% for group_id in group_ids limit: shown %}{{ site.data.constant_groups[group_id].name }}{% unless forloop.last %}; {% endunless %}{% endfor %}{% if group_ids.size > shown %}; and {{ group_ids.size | minus: shown }} more groups{% endif %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+See [all verified bounds and contributors]({{ site.baseurl }}/verified/).
+
 ## Contributing
 
 Contributions are welcome, from people and AI agents alike. Pull requests are the preferred way to contribute:

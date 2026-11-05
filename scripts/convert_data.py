@@ -29,6 +29,9 @@ with open("_data/updates.yml", "r") as file:
 with open("_data/unverified_bounds.yml", "r") as file:
     unverified = yaml.safe_load(file)
 
+with open("_data/certificates.yml", "r") as file:
+    certificates = yaml.safe_load(file)
+
 # Remove extraneous fields
 for constant in constants.values():
     if 'image' in constant:
@@ -59,6 +62,9 @@ with open("data/updates.yml", "w") as f:
 with open("data/unverified_bounds.yml", "w") as f:
     yaml.dump(unverified, f, sort_keys=False)
 
+with open("data/certificates.yml", "w") as f:
+    yaml.dump(certificates, f, sort_keys=False)
+
 # Export nested data structures to JSON
 with open("data/constants.json", "w") as f:
     json.dump(constants, f, indent=2)
@@ -74,6 +80,9 @@ with open("data/updates.json", "w") as f:
 
 with open("data/unverified_bounds.json", "w") as f:
     json.dump(unverified, f, indent=2)
+
+with open("data/certificates.json", "w") as f:
+    json.dump(certificates, f, indent=2)
 
 # Convert constants to CSV and TSV
 constants_list = []
@@ -149,3 +158,15 @@ for row in unverified:
 unverified_df = pd.DataFrame(unverified_list)
 unverified_df.to_csv("data/unverified_bounds.csv", index=False)
 unverified_df.to_csv("data/unverified_bounds.tsv", sep="\t", index=False)
+
+# Convert certificates to CSV and TSV
+certificates_list = []
+for row in certificates:
+    row_dict = row.copy()
+    flatten_value_dict(row_dict, 'value')
+    flatten_value_dict(row_dict, 'literature')
+    certificates_list.append(row_dict)
+
+certificates_df = pd.DataFrame(certificates_list)
+certificates_df.to_csv("data/certificates.csv", index=False)
+certificates_df.to_csv("data/certificates.tsv", sep="\t", index=False)
