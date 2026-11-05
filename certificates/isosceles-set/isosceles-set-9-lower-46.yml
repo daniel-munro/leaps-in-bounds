@@ -1,0 +1,10 @@
+constant: isosceles-set-9
+bound: lower
+value: 46
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-9-lower-46.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "The midpoints of the edges of a regular 9-simplex, as the points e_i + e_j of R^10, and the simplex's center. Since the midpoints are a two-distance set on a sphere about the center, every triangle is isosceles."

@@ -395,3 +395,19 @@ no-three-in-line:
   parameters: [n]
   parameter_values: [[[1, 78]]]
   research_status: initial
+
+isosceles-set:
+  name: "Isosceles sets"
+  description: "An isosceles set is a set of points in which every three points form an isosceles triangle. $i(n)$ is the size of the largest isosceles set in the $n$-dimensional Euclidean space $\\mathbb{R}^n$. Erdős asked for $i(3)$ in 1946."
+  external_ids:
+    msc: 52C10
+    oeis: A175769
+    wikidata: Q55614672
+  display_type: sequence
+  representative_image: isosceles-set-2
+  id_template: "isosceles-set-{n}"
+  name_template: "Isosceles set $i({n})$"
+  description_template: "The size of the largest set of points in $\\mathbb{{R}}^{{{n}}}$ in which every three points form an isosceles triangle."
+  parameters: [n]
+  parameter_values: [[[1, 12]]]
+  research_status: initial

@@ -1,0 +1,11 @@
+constant: isosceles-set-2
+bound: lower
+value: 6
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-2-lower-6.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: erdos-1946
+notes: "The vertices and center of a regular pentagon: the five neighbors of the vertex (0, 1, φ) of the icosahedron with vertices the cyclic permutations of (0, ±1, ±φ), and their center."

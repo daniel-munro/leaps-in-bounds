@@ -221,6 +221,11 @@ wikipedia-no-three-in-line:
   date: "2026-07-09"
   url: "https://en.wikipedia.org/wiki/No-three-in-line_problem"
 
+oeis-a175769-isosceles-set:
+  string: "Sequence A175769 in the OEIS"
+  date: "2026-11-05"
+  url: "https://oeis.org/A175769"
+
 ###################
 # Primary sources #
 ###################
@@ -1882,3 +1887,39 @@ prellberg-2026-10-28:
   string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-10-28)."
   date: "2026-10-28"
   url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+# Isosceles sets
+
+erdos-1946:
+  string: "P. Erdős, Problem E735, The American Mathematical Monthly 53 (1946) 394."
+  date: "1946-08"
+  doi: "https://doi.org/10.2307/2305860"
+  notes: "Notes that six points in the plane, the vertices and center of a regular pentagon, have all triangles isosceles."
+
+kelly-1947:
+  string: "P. Erdős and L.M. Kelly, Solution to Problem E735: Isosceles n-points, The American Mathematical Monthly 54 (1947) 227-229."
+  date: "1947-04"
+  doi: "https://doi.org/10.2307/2304710"
+  notes: "Kelly's solution: no isosceles set of 7 points in the plane, and an isosceles set of 8 points in 3-space."
+
+croft-1962:
+  string: "H.T. Croft, 9-point and 7-point configurations in 3-space, Proceedings of the London Mathematical Society (3) 12 (1962) 400-424."
+  date: "1962"
+  doi: "https://doi.org/10.1112/plms/s3-12.1.400"
+
+blokhuis-1984:
+  string: "A. Blokhuis, Few-distance sets, CWI Tract 7 (1984) 1-70."
+  date: "1984"
+  notes: "Proves that an isosceles set in R^n has at most (n+2 choose 2) points."
+
+lisonek-1997:
+  string: "P. Lisoněk, New maximal two-distance sets, Journal of Combinatorial Theory, Series A 77 (1997) 318-338."
+  date: "1997-02"
+  doi: "https://doi.org/10.1006/jcta.1997.2749"
+  notes: "Finds a 45-point two-distance set in R^8, which is also an isosceles set."
+
+ionin-2009:
+  string: "Y.J. Ionin, Isosceles sets, The Electronic Journal of Combinatorics 16 (2009) R141."
+  date: "2009-11-24"
+  doi: "https://doi.org/10.37236/230"
+  notes: "Determines the largest isosceles sets in R^n for n <= 8, from the largest two-distance sets and Blokhuis' structure theorem."

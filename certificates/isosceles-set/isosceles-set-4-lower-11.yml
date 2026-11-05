@@ -1,0 +1,10 @@
+constant: isosceles-set-4
+bound: lower
+value: 11
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-4-lower-11.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "The midpoints of the edges of a regular 4-simplex, as the points e_i + e_j of R^5, and the simplex's center."

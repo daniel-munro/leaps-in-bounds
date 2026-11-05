@@ -211,6 +211,15 @@ Formal statements are in [`formal/LeapsInBounds/Statements/NoThreeInLine.lean`](
 
 Witnesses can certify lower bounds only. A witness for `D(n) >= L` uses `format: points`: `L` distinct points, separated by whitespace, each written `x,y`. For example, `'0,0 0,1 1,0 1,1'` for `D(2) >= 4`.
 
+### Isosceles sets: `isosceles-set-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/IsoscelesSet.lean`](../formal/LeapsInBounds/Statements/IsoscelesSet.lean). An isosceles set is a set of points any three of which form an isosceles triangle.
+
+- `LowerBound n L` means `i(n) >= L`: some isosceles set in `R^n` has at least `L` points.
+- `UpperBound n L` means `i(n) <= L`: every isosceles set in `R^n` has at most `L` points.
+
+Witnesses can certify lower bounds only. A witness for `i(n) >= L` uses `format: points`: `L` distinct points, one per line, with coordinates separated by commas. Each coordinate is a sum of rational multiples of square roots, written in LaTeX as a sum of terms `a`, `a\sqrt{m}` or `\frac{a\sqrt{m}}{b}`, such as `\frac{1}{2}+\frac{\sqrt{5}}{2}`. The points can have more than `n` coordinates, as long as they span an affine subspace of dimension at most `n`, which the checker computes exactly. This allows simple coordinates for many constructions, such as the points `e_i + e_j` of `R^(n+1)`, which lie in a hyperplane. For example, the three lines `0`, `1` and `2` for `i(1) >= 3`.
+
 ### Arrangements of lines: `affine-line-arrangements-{n}` and `affine-line-arrangements-general-position-{n}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/LineArrangement.lean`](../formal/LeapsInBounds/Statements/LineArrangement.lean). The combinatorial type of an arrangement of distinct lines in the plane is given by its covectors, the vectors of signs saying which side of each line a point is on, up to renumbering the lines and swapping their sides. This identifies mirror images.

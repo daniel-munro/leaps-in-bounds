@@ -1,0 +1,10 @@
+constant: isosceles-set-10
+bound: lower
+value: 56
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-10-lower-56.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "The midpoints of the edges of a regular 10-simplex, as the points e_i + e_j of R^11, and the simplex's center. Since the midpoints are a two-distance set on a sphere about the center, every triangle is isosceles."

@@ -1,0 +1,11 @@
+constant: isosceles-set-6
+bound: lower
+value: 28
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-6-lower-28.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: ionin-2009
+notes: "The 27-point two-distance set T in R^8 described by Ionin (due to Coxeter), and the center Q of the sphere containing it."

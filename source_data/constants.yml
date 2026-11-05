@@ -1159,3 +1159,18 @@ no-three-in-line-78:
   image:
     generated: no-three-in-line-78.svg
     alt_text: "156 points of the 78 by 78 grid with no three on a line"
+
+isosceles-set-1:
+  image:
+    generated: isosceles-set-1.svg
+    alt_text: "The ends and midpoint of a segment, an isosceles set of 3 points on a line"
+
+isosceles-set-2:
+  image:
+    generated: isosceles-set-2.svg
+    alt_text: "The vertices and center of a regular pentagon, an isosceles set of 6 points in the plane, with segments colored by length"
+
+isosceles-set-3:
+  image:
+    generated: isosceles-set-3.svg
+    alt_text: "Kelly's isosceles set of 8 points in space: a regular pentagon, its center, and two points on its axis, with segments colored by length"

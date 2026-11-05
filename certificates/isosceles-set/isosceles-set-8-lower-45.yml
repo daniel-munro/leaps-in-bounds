@@ -1,0 +1,11 @@
+constant: isosceles-set-8
+bound: lower
+value: 45
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-8-lower-45.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: lisonek-1997
+notes: "Lisoněk's two-distance set in R^9: the points e_i + e_j and the points (1/3, ..., 1/3) - e_i, all in the hyperplane where the coordinates sum to 2."

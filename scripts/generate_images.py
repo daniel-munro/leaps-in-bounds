@@ -35,9 +35,10 @@ from typing import Any, Callable, Iterable, Sequence
 
 import yaml
 
-from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, is_cap, is_snake, load_certificates,
-                          no_three_collinear, orbit_closure, read_grid_points, read_graph, read_marks, read_points, read_symmetries, read_ternary_points,
-                          read_transitions, read_vectors, read_witness_data, transition_vertices)
+from certificates import (Radical, affine_dimension, eccentricity_at_most, girth, has_monochromatic_sum, is_cap,
+                          is_isosceles_set, is_snake, load_certificates, no_three_collinear, orbit_closure, read_graph,
+                          read_grid_points, read_marks, read_points, read_radical_points, read_symmetries,
+                          read_ternary_points, read_transitions, read_vectors, read_witness_data, transition_vertices)
 from utils import GENERATED_IMAGES_DIR
 
 #########
@@ -814,6 +815,68 @@ def render_no_three_in_line(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+##################
+# Isosceles sets #
+##################
+
+def render_isosceles_set(constant_id: str, n: int) -> Svg | None:
+    """An isosceles set in the line, plane or space, with each segment between
+    two points colored by its length."""
+    cert = witness(constant_id, "lower")
+    if cert is None or n > 3:
+        return None
+    exact = read_radical_points(read_witness_data(cert))
+    check(is_isosceles_set(exact) and affine_dimension(exact) <= n, f"{constant_id}: not an isosceles set in R^{n}")
+    if exact_value(constant_id) is not None:
+        check(len(exact) == exact_value(constant_id), f"{constant_id}: witness isn't optimal")
+    # Coordinates in an orthonormal basis of the points' affine span
+    pts = [[float(c) for c in p] for p in exact]
+    diffs = [[a - b for a, b in zip(p, pts[0])] for p in pts]
+    basis: list[list[float]] = []
+    for d in diffs:
+        v = d[:]
+        for b in basis:
+            dot = sum(x * y for x, y in zip(v, b))
+            v = [x - dot * y for x, y in zip(v, b)]
+        norm = math.sqrt(sum(x * x for x in v))
+        if norm > 1e-9:
+            basis.append([x / norm for x in v])
+    local = [[sum(x * y for x, y in zip(d, b)) for b in basis] + [0.0] * (3 - len(basis)) for d in diffs]
+    if n == 1:
+        flat = [(c[0], 0.0) for c in local]
+    elif n == 2:
+        flat = [(c[0], c[1]) for c in local]
+    else:
+        # Put the line through the two points farthest apart (the axis of Kelly's set) upright, then tilt
+        i, k = max(itertools.combinations(range(len(local)), 2), key=lambda e: math.dist(local[e[0]], local[e[1]]))
+        up = [a - b for a, b in zip(local[k], local[i])]
+        norm = math.sqrt(sum(x * x for x in up))
+        up = [x / norm for x in up]
+        e1 = next(v for v in ([1.0, 0, 0], [0, 1.0, 0]) if abs(sum(a * b for a, b in zip(v, up))) < 0.9)
+        dot = sum(a * b for a, b in zip(e1, up))
+        e1 = [a - dot * b for a, b in zip(e1, up)]
+        norm = math.sqrt(sum(x * x for x in e1))
+        e1 = [x / norm for x in e1]
+        e2 = [up[1] * e1[2] - up[2] * e1[1], up[2] * e1[0] - up[0] * e1[2], up[0] * e1[1] - up[1] * e1[0]]
+        flat = []
+        for c in local:
+            x, y, z = (sum(a * b for a, b in zip(c, e)) for e in (e1, e2, up))
+            flat.append((x + 0.35 * y, z + 0.3 * y))
+    xs, ys = [p[0] for p in flat], [p[1] for p in flat]
+    span = max(max(xs) - min(xs), max(ys) - min(ys))
+    m = 0.08 * span
+    svg = Svg(min(xs) - m, min(ys) - m, max(xs) + m, max(ys) + m)
+    squared = [[sum(((a - b) * (a - b) for a, b in zip(p, q)), Radical()) for q in exact] for p in exact]
+    lengths = sorted({squared[i][j] for i in range(len(exact)) for j in range(i + 1, len(exact))}, key=float)
+    segments = sorted(((i, j) for i in range(len(exact)) for j in range(i + 1, len(exact))),
+                      key=lambda e: -float(squared[e[0]][e[1]]))
+    for i, j in segments:
+        color = PALETTE[lengths.index(squared[i][j]) % len(PALETTE)]
+        svg.add(svg.line(flat[i], flat[j], stroke=color, stroke_width=2.5 if n == 1 else 1.75, stroke_opacity=0.85))
+    svg.add(svg.group((svg.circle(p, 5 / svg.scale) for p in flat), fill=INK, stroke="white", stroke_width=1.5))
+    return svg
+
+
 ############
 # Families #
 ############
@@ -842,6 +905,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "coil-in-the-box": ("coil-in-the-box-", lambda c: render_snake(c, *ints(c, "coil-in-the-box-"), coil=True)),
     "cap-set": ("cap-set-", lambda c: render_cap_set(c, *ints(c, "cap-set-"))),
     "no-three-in-line": ("no-three-in-line-", lambda c: render_no_three_in_line(c, *ints(c, "no-three-in-line-"))),
+    "isosceles-set": ("isosceles-set-", lambda c: render_isosceles_set(c, *ints(c, "isosceles-set-"))),
 }
 
 

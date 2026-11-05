@@ -1,0 +1,6 @@
+\frac{1}{2}+\frac{\sqrt{5}}{2}, 0, 1
+1, \frac{1}{2}+\frac{\sqrt{5}}{2}, 0
+-\frac{1}{2}-\frac{\sqrt{5}}{2}, 0, 1
+0, -1, \frac{1}{2}+\frac{\sqrt{5}}{2}
+-1, \frac{1}{2}+\frac{\sqrt{5}}{2}, 0
+0, \frac{\sqrt{5}}{5}, \frac{1}{2}+\frac{\sqrt{5}}{10}

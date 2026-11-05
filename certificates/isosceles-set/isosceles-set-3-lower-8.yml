@@ -1,0 +1,11 @@
+constant: isosceles-set-3
+bound: lower
+value: 8
+kind: witness
+witness:
+  format: points
+  file: isosceles-set-3-lower-8.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: kelly-1947
+notes: "Kelly's set: the pentagon and center of this group's certificate for n = 2, and the two points on the pentagon's axis at the pentagon's circumradius from the center. The axis uses two extra coordinates, so that the coordinates are sums of rational multiples of square roots."
