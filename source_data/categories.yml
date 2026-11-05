@@ -37,6 +37,11 @@
   groups:
     - debruijn-newman
 
+- msc: "51E"
+  name: "Finite geometry and special incidence structures"
+  groups:
+    - cap-set
+
 - msc: "52C"
   name: "Discrete geometry"
   groups:

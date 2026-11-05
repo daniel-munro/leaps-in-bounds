@@ -1,6 +1,7 @@
 module
 
 public import LeapsInBounds.Statements.Cage
+public import LeapsInBounds.Statements.CapSet
 public import LeapsInBounds.Statements.CircleInTriangle
 public import LeapsInBounds.Statements.DegreeDiameter
 public import LeapsInBounds.Statements.Golomb

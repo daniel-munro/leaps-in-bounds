@@ -360,3 +360,20 @@ coil-in-the-box:
   parameters: [n]
   parameter_values: [[[2, 13]]]
   research_status: initial
+
+cap-set:
+  name: "Cap sets"
+  description: "A cap set is a set of points in the $n$-dimensional affine space $\\mathbb{F}_3^n$ with no three on a line, or equivalently no three distinct points $x, y, z$ with $x + y + z = 0$. In the card game SET, it's a collection of cards with no set among them. $r(n)$ is the size of the largest cap set in $\\mathbb{F}_3^n$."
+  external_ids:
+    msc: 51E22
+    oeis: A090245
+    wikidata: Q28455422
+    wikipedia_en: Cap_set
+  display_type: sequence
+  representative_image: cap-set-4
+  id_template: "cap-set-{n}"
+  name_template: "Cap set $r({n})$"
+  description_template: "The size of the largest set of points in $\\mathbb{{F}}_3^{{{n}}}$ with no three on a line."
+  parameters: [n]
+  parameter_values: [[[1, 8]]]
+  research_status: initial

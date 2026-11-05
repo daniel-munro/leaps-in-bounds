@@ -1,0 +1,10 @@
+constant: cap-set-4
+bound: lower
+value: 20
+kind: witness
+witness:
+  format: points
+  data: '0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1012 1022 1102 1202 2012 2102 2110 2111 2122 2212'
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "Found by a depth-first search written by Claude (an AI agent)."

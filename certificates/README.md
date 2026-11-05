@@ -193,6 +193,15 @@ Formal statements are in [`formal/LeapsInBounds/Statements/SnakeInTheBox.lean`](
 
 Witnesses can certify lower bounds only. A witness for a snake or coil of length `L` uses `format: transitions`: its transition sequence, the `L` coordinates (from `0` to `n - 1`) that change along its edges in order, starting from the vertex `0`. Each coordinate is one character, in base 36 (`0` to `9`, then `a` to `z`, so `n <= 36`), and whitespace is ignored. A coil's transitions must lead back to `0`. For example, `'0120'` for a snake of length 4 in `Q_3` (`000`, `001`, `011`, `111`, `110`), or `'012012'` for a coil of length 6.
 
+### Cap sets: `cap-set-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/CapSet.lean`](../formal/LeapsInBounds/Statements/CapSet.lean). A cap set is a set of points in `F_3^n` with no three on a line. Three distinct points `x`, `y`, `z` are on a line exactly when `x + y + z = 0`.
+
+- `LowerBound n L` means `r(n) >= L`: some cap set in `F_3^n` has at least `L` points.
+- `UpperBound n L` means `r(n) <= L`: every cap set in `F_3^n` has at most `L` points.
+
+Witnesses can certify lower bounds only. A witness for `r(n) >= L` uses `format: points`: `L` distinct points, separated by whitespace, each written as its `n` coordinates, digits from `0` to `2` with nothing between them. For example, `'00 01 10 11'` for `r(2) >= 4`.
+
 ### Arrangements of lines: `affine-line-arrangements-{n}` and `affine-line-arrangements-general-position-{n}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/LineArrangement.lean`](../formal/LeapsInBounds/Statements/LineArrangement.lean). The combinatorial type of an arrangement of distinct lines in the plane is given by its covectors, the vectors of signs saying which side of each line a point is on, up to renumbering the lines and swapping their sides. This identifies mirror images.

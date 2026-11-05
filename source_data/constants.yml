@@ -744,3 +744,33 @@ coil-in-the-box-5:
   image:
     generated: coil-in-the-box-5.svg
     alt_text: "Coil of length 14 in the 5-dimensional hypercube, an induced cycle drawn over its edges"
+
+cap-set-1:
+  image:
+    generated: cap-set-1.svg
+    alt_text: "Cap set of 2 points, no three on a line, in the line of 3 points"
+
+cap-set-2:
+  image:
+    generated: cap-set-2.svg
+    alt_text: "Cap set of 4 points, no three on a line, in the 3 by 3 grid of points of the plane over the field with 3 elements"
+
+cap-set-3:
+  image:
+    generated: cap-set-3.svg
+    alt_text: "Cap set of 9 points, no three on a line, in 3-dimensional space over the field with 3 elements, drawn as three 3 by 3 grids side by side"
+
+cap-set-4:
+  image:
+    generated: cap-set-4.svg
+    alt_text: "Cap set of 20 points, no three on a line, in 4-dimensional space over the field with 3 elements, drawn as a 3 by 3 grid of 3 by 3 grids, like the cards of the game SET"
+
+cap-set-5:
+  image:
+    generated: cap-set-5.svg
+    alt_text: "Cap set of 45 points, no three on a line, in 5-dimensional space over the field with 3 elements, drawn as nested 3 by 3 grids"
+
+cap-set-6:
+  image:
+    generated: cap-set-6.svg
+    alt_text: "Cap set of 112 points, no three on a line, in 6-dimensional space over the field with 3 elements, drawn as nested 3 by 3 grids"

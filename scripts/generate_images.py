@@ -35,9 +35,9 @@ from typing import Any, Callable, Iterable, Sequence
 
 import yaml
 
-from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, is_snake, load_certificates, orbit_closure,
-                          read_graph, read_marks, read_points, read_symmetries, read_transitions, read_vectors,
-                          read_witness_data, transition_vertices)
+from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, is_cap, is_snake, load_certificates,
+                          orbit_closure, read_graph, read_marks, read_points, read_symmetries, read_ternary_points,
+                          read_transitions, read_vectors, read_witness_data, transition_vertices)
 from utils import GENERATED_IMAGES_DIR
 
 #########
@@ -746,6 +746,48 @@ def render_busy_beaver(constant_id: str, kind: str, n: int) -> Svg | None:
 
 
 ############
+# Cap sets #
+############
+
+def render_cap_set(constant_id: str, n: int) -> Svg | None:
+    """The largest known cap set in F_3^n, drawn as in the card game SET: the
+    points of F_3^n are cells of a grid, nested 3 by 3 blocks, with even
+    coordinates across and odd coordinates up, from the innermost blocks out.
+    Gaps between blocks widen with their level, so lines show as rows,
+    columns and diagonals of blocks."""
+    cert = witness(constant_id, "lower")
+    if cert is None or n > 6:
+        return None
+    points = read_ternary_points(read_witness_data(cert), n)
+    check(is_cap(points), f"{constant_id}: three points are on a line")
+    if exact_value(constant_id) is not None:
+        check(len(points) == exact_value(constant_id), f"{constant_id}: witness isn't optimal")
+    gap = [0.0, 0.35, 0.8, 1.6]  # between blocks at each level, in cells
+
+    def coord(digits: Sequence[int]) -> float:
+        x, size = 0.0, 1.0  # size of a block at this level, with its gaps
+        for level, d in enumerate(digits):
+            x += d * (size + gap[level + 1])
+            size = 3 * size + 2 * gap[level + 1]
+        return x
+
+    cols, rows = (n + 1) // 2, n // 2
+    width = coord([2] * cols) + 1
+    height = coord([2] * rows) + 1 if rows else 1
+    svg = Svg(0, 0, width, height, size=SIZE if n <= 4 else 400)
+    cap = set(points)
+    cells, dots = [], []
+    for p in itertools.product(range(3), repeat=n):
+        x, y = coord(p[0::2]), coord(p[1::2])
+        cells.append(svg.rect(x + 0.06, y + 0.06, 0.88, 0.88))
+        if p in cap:
+            dots.append(svg.circle((x + 0.5, y + 0.5), 0.36))
+    svg.add(svg.group(cells, fill=MUTED, rx=1.5 if n >= 5 else 3))
+    svg.add(svg.group(dots, fill=EDGE))
+    return svg
+
+
+############
 # Families #
 ############
 
@@ -771,6 +813,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "golomb-ruler": ("golomb-ruler-", lambda c: render_golomb_ruler(c, *ints(c, "golomb-ruler-"))),
     "snake-in-the-box": ("snake-in-the-box-", lambda c: render_snake(c, *ints(c, "snake-in-the-box-"), coil=False)),
     "coil-in-the-box": ("coil-in-the-box-", lambda c: render_snake(c, *ints(c, "coil-in-the-box-"), coil=True)),
+    "cap-set": ("cap-set-", lambda c: render_cap_set(c, *ints(c, "cap-set-"))),
 }
 
 

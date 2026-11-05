@@ -1,0 +1,10 @@
+constant: cap-set-3
+bound: lower
+value: 9
+kind: witness
+witness:
+  format: points
+  data: '000 001 010 011 100 101 112 122 212'
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "Found by a depth-first search written by Claude (an AI agent)."

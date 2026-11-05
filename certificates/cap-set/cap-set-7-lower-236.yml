@@ -1,0 +1,11 @@
+constant: cap-set-7
+bound: lower
+value: 236
+kind: witness
+witness:
+  format: points
+  file: cap-set-7-lower-236.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: edel-bierbrauer-2001
+notes: "The affine part of Edel's 248-cap in PG(7,3), http://www.yvesedel.de/Matritzen/CAPs/Matrizen/(248,7,3).html, retrieved 2026-11-05: the 236 columns of its check matrix with last coordinate 1, with that coordinate dropped. Calderbank and Fishburn (1994) are credited with the first 236-cap."

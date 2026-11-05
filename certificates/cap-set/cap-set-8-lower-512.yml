@@ -1,0 +1,11 @@
+constant: cap-set-8
+bound: lower
+value: 512
+kind: witness
+witness:
+  format: points
+  file: cap-set-8-lower-512.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: romera-paredes-et-al-2023
+notes: "From https://github.com/google-deepmind/funsearch/blob/main/cap_set/n8_size512.txt, retrieved 2026-11-05."

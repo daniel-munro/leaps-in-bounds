@@ -1,0 +1,10 @@
+constant: cap-set-1
+bound: lower
+value: 2
+kind: witness
+witness:
+  format: points
+  data: '0 1'
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "Two points."

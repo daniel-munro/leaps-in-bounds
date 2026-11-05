@@ -1,0 +1,10 @@
+constant: cap-set-6
+bound: lower
+value: 112
+kind: witness
+witness:
+  format: points
+  file: cap-set-6-lower-112.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "A hyperplane section of the 236-cap in this group's certificate for n = 7."

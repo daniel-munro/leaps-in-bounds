@@ -183,6 +183,28 @@ oeis-a000937-coil:
   date: "2026"
   url: "https://oeis.org/A000937"
 
+oeis-a090245-cap-set:
+  string: "Sequence A090245 in the OEIS"
+  date: "2026-11-05"
+  url: "https://oeis.org/A090245"
+
+wikipedia-cap-set:
+  string: "Cap set - Wikipedia"
+  date: "2026-10-21"
+  url: "https://en.wikipedia.org/wiki/Cap_set"
+
+edel-caps-page:
+  string: "Caps, Yves Edel, 2010-04-28"
+  date: "2010-04-28"
+  url: "http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html"
+  notes: "Tables and explicit large caps in projective spaces, including the 248-cap in PG(7,3) whose affine part is a 236-cap in AG(7,3)."
+
+karapetyan-karapetyan-2026:
+  string: "I. Karapetyan and K. Karapetyan, New method for constructing complete cap sets, arXiv:2601.16917."
+  date: "2026-01-23"
+  url: "https://arxiv.org/abs/2601.16917"
+  notes: "The introduction summarizes the known values and bounds for AG(n,3)."
+
 ###################
 # Primary sources #
 ###################
@@ -1605,3 +1627,70 @@ toner-2026:
 abbott-katchalski-1991:
   string: "H.L. Abbott and M. Katchalski, On the construction of snake in the box codes, Utilitas Mathematica 40 (1991) 97-116."
   date: "1991"
+
+# Cap sets
+
+bose-1947:
+  string: "R.C. Bose, Mathematical theory of the symmetrical factorial design, Sankhyā 8 (1947) 107-166."
+  date: "1947"
+  notes: "The largest caps in AG(2,q) and AG(3,q) for odd q have q + 1 and q^2 points."
+
+pellegrino-1970:
+  string: "G. Pellegrino, Sul massimo ordine delle calotte in S_{4,3}, Le Matematiche 25 (1970) 149-157."
+  date: "1970"
+  url: "https://zbmath.org/0223.50020"
+
+hill-1973:
+  string: "R. Hill, On the largest size of cap in S_{5,3}, Atti della Accademia Nazionale dei Lincei. Rendiconti. Classe di Scienze Fisiche, Matematiche e Naturali 54 (1973) 378-384."
+  date: "1973"
+  notes: "Constructs the 56-cap in PG(5,3). Deleting the 11 points of one of its hyperplane sections gives a 45-cap in AG(5,3) (http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html), and the 112-cap in AG(6,3) comes from it too (https://doi.org/10.1038/s41586-023-06924-6)."
+
+calderbank-fishburn-1994:
+  string: "A.R. Calderbank and P.C. Fishburn, Maximal three-independent subsets of {0, 1, 2}^n, Designs, Codes and Cryptography 4 (1994) 203-211."
+  date: "1994-07"
+  doi: "https://doi.org/10.1007/BF01388452"
+  notes: "Credited with the 236-cap in AG(7,3) in https://arxiv.org/abs/2601.16917"
+
+edel-bierbrauer-2001:
+  string: "Y. Edel and J. Bierbrauer, Large caps in small spaces, Designs, Codes and Cryptography 23 (2001) 197-212."
+  date: "2001-07"
+  doi: "https://doi.org/10.1023/A:1011216716700"
+  notes: "With edel-2004, the source of the 496-cap in AG(8,3) according to https://doi.org/10.1038/s41586-023-06924-6"
+
+bierbrauer-edel-2002:
+  string: "J. Bierbrauer and Y. Edel, Bounds on affine caps, Journal of Combinatorial Designs 10 (2002) 111-115."
+  date: "2002-02-07"
+  doi: "https://doi.org/10.1002/jcd.10000"
+
+edel-ferret-landjev-storme-2002:
+  string: "Y. Edel, S. Ferret, I. Landjev and L. Storme, The classification of the largest caps in AG(5,3), Journal of Combinatorial Theory, Series A 99 (2002) 95-110."
+  date: "2002-07"
+  doi: "https://doi.org/10.1006/jcta.2002.3261"
+
+edel-2004:
+  string: "Y. Edel, Extensions of generalized product caps, Designs, Codes and Cryptography 31 (2004) 5-14."
+  date: "2004-01"
+  doi: "https://doi.org/10.1023/A:1027365901231"
+
+potechin-2008:
+  string: "A. Potechin, Maximal caps in AG(6,3), Designs, Codes and Cryptography 46 (2008) 243-259."
+  date: "2008-01-10"
+  doi: "https://doi.org/10.1007/s10623-007-9132-z"
+
+versluis-2017:
+  string: "N.D. Versluis, On the cap set problem: upper bounds on maximal cardinalities of caps in dimensions seven to ten, Bachelor's thesis, Delft University of Technology (2017)."
+  date: "2017-07"
+  url: "https://repository.tudelft.nl/record/uuid:6818b21f-038d-4700-afcd-e6dac79e7e82"
+  notes: "Not peer reviewed. Computer-assisted, by two recursive methods. Gives upper bounds of 291, 771, 2070 and 5619 for dimensions 7 to 10."
+
+thackeray-2022:
+  string: "H.(M.)R. Thackeray, The cap set problem: up to dimension 7, arXiv:2206.09804."
+  date: "2022-06-20"
+  url: "https://arxiv.org/abs/2206.09804"
+  notes: "Not peer reviewed. Proves that there are no 289-caps in AG(7,3)."
+
+romera-paredes-et-al-2023:
+  string: "B. Romera-Paredes, M. Barekatain, A. Novikov, M. Balog, M.P. Kumar, E. Dupont, F.J.R. Ruiz, J.S. Ellenberg, P. Wang, O. Fawzi, P. Kohli and A. Fawzi, Mathematical discoveries from program search with large language models, Nature 625 (2024) 468-475."
+  date: "2023-12-14"
+  doi: "https://doi.org/10.1038/s41586-023-06924-6"
+  notes: "FunSearch. The 512-cap in AG(8,3) is at https://github.com/google-deepmind/funsearch/blob/main/cap_set/n8_size512.txt"
