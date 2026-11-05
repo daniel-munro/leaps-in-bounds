@@ -11,6 +11,6 @@ witness:
     13 0 6 1 1 0 13 -9 10 3 -13 7 12 13 0
     19 0 -4 18 19 -12 19 -13 3 4 -19 7 1 -1 0
     19 0 -1 4 19 -6 6 -19 6 1 -19 4 19 -9 -5
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 notes: 'One arrangement per row: a b c for each line a x + b y = c. Found by adding lines near pairs of vertices to arrangements of one fewer line, then rounding to small integers.'

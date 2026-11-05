@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-13-2-lower-162.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 source: mmsgraphs
 notes: McKay-Miller-Širáň graph for $q = 9$.

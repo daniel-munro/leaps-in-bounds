@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: marks
   data: '0 1 4 11 26 32 56 68 76 115 117 134 150 163 168 177'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: shearer-1990

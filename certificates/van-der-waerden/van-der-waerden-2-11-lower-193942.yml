@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: coloring
   file: van-der-waerden-2-11-lower-193942.txt
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: rabung-lotts-2012
 notes: 'Zipped Rabung construction: color each nonzero residue x mod 9697 by the discrete logarithm of x base 10 mod 2, then zip it to a coloring mod 19394 (x gets the color of x mod 9697, flipped when x is odd). Take 10 periods plus one integer, and color the multiples of 9697 by backtracking search.'

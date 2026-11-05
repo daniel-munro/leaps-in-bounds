@@ -5,6 +5,6 @@ kind: lean
 lean:
   module: LeapsInBounds.Proofs.SquarePackingBasic
   theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_100
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-30
 notes: 'Area bound: the 100 squares have disjoint interiors, so their total area 100 is at most the area of the square containing them.'

@@ -8,6 +8,6 @@ witness:
   symmetries:
   - [1, -2, -3, 4, 5, 6, -7, -8, -9, -10, -11, 12, 13, 14, -15]
   - [-1, -2, -3, -4, 5, -6, -7, 8, -9, 10, 11, -12, 13, 14, 15]
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-30
 notes: 'Minimal vectors of the laminated lattice $\Lambda_{14}$: minimal vectors of the Leech lattice (scaled to norm 32) orthogonal to 10 of them, with zero coordinates dropped.'

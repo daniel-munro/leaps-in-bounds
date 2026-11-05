@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: marks
   data: '0 2 5 25 37 43 59 70 85 89 98 99 106'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: robinson-1983

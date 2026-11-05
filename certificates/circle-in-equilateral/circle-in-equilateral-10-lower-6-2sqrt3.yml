@@ -5,6 +5,6 @@ kind: lean
 lean:
   module: LeapsInBounds.Proofs.CircleInTriangleBasic
   theorem: LeapsInBounds.Proofs.CircleInTriangleBasic.lower_ten
-submitted_by: Claude Opus 5.5
+submitted_by: daniel-munro
 date: 2026-11-01
 notes: Two of the centers lie in the same one of 9 triangles cut from the triangle of centers.

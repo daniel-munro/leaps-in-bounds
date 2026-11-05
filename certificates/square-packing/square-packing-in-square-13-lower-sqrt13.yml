@@ -5,6 +5,6 @@ kind: lean
 lean:
   module: LeapsInBounds.Proofs.SquarePackingBasic
   theorem: LeapsInBounds.Proofs.SquarePackingBasic.lower_13
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-30
 notes: 'Area bound: the 13 squares have disjoint interiors, so their total area 13 is at most the area of the square containing them.'

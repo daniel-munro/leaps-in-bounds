@@ -22,7 +22,7 @@ This site provides browsing, visualizations, and access to the structured data f
   {% for batch in batches limit: 5 %}
     {% assign first = batch.items.first %}
     <li>
-      {{ first.date }}, <strong>{{ first.submitted_by }}</strong>:
+      {{ first.date }}, <a href="https://github.com/{{ first.submitted_by }}">{{ first.submitted_by }}</a>:
       {% if batch.size == 1 %}
         {% assign constant = site.data.constants[first.constant] %}
         {% if first.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
@@ -30,10 +30,7 @@ This site provides browsing, visualizations, and access to the structured data f
         {% include certificate_comparison.html cert=first %}
       {% else %}
         {% assign group_ids = batch.items | map: "group" | uniq %}
-        {% assign new_rows = batch.items | where: "comparison", "new" %}
-        {% assign stronger_rows = batch.items | where: "comparison", "stronger" %}
-        {% assign beyond = new_rows.size | plus: stronger_rows.size %}
-        {{ batch.size }} certificates{% if beyond > 0 %}, {{ beyond }} beyond the literature{% endif %}, in
+        {{ batch.size }} certificates, in
         {% if group_ids.size > 4 %}{% assign shown = 3 %}{% else %}{% assign shown = 4 %}{% endif %}
         {% for group_id in group_ids limit: shown %}{{ site.data.constant_groups[group_id].name }}{% unless forloop.last %}; {% endunless %}{% endfor %}{% if group_ids.size > shown %}; and {{ group_ids.size | minus: shown }} more groups{% endif %}
       {% endif %}

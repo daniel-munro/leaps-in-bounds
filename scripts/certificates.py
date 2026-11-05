@@ -32,6 +32,7 @@ FORMAL_DIR = pathlib.Path("formal")
 CHECK_LEAN_SCRIPT = pathlib.Path("scripts/check_lean.lean")
 
 REQUIRED_FIELDS = ["constant", "bound", "value", "kind", "submitted_by", "date"]
+GITHUB_USERNAME = re.compile(r"[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}")
 
 
 class CertificateError(Exception):
@@ -55,6 +56,8 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
             raise CertificateError(f"{path}: missing fields {missing}")
         if cert["bound"] not in ("lower", "upper"):
             raise CertificateError(f"{path}: bound must be 'lower' or 'upper'")
+        if not isinstance(cert["submitted_by"], str) or not GITHUB_USERNAME.fullmatch(cert["submitted_by"]):
+            raise CertificateError(f"{path}: submitted_by must be a GitHub username")
         if cert["kind"] not in ("witness", "lean"):
             raise CertificateError(f"{path}: kind must be 'witness' or 'lean'")
         if cert["kind"] not in cert:

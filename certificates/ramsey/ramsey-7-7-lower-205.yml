@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: graph6
   file: ramsey-7-7-lower-205.g6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 source: mathon-1987
 notes: 'Two copies of the Paley graph $P(101)$, with $a$ in the first adjacent to $b$ in the second when $a - b$ is a nonsquare, plus two vertices adjacent to all of the first and all of the second copy, respectively. It has no 7-clique and no independent set of size 7.'

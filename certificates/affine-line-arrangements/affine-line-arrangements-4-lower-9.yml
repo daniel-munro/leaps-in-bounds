@@ -14,6 +14,6 @@ witness:
     0 1 2 2 -1 0 1 2 2 1 -1 0
     1 0 1 1 -1 1 0 1 0 2 1 2
     1 -2 -4 1 -2 0 1 -2 1 1 -2 -3
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 notes: 'One arrangement per row: a b c for each line a x + b y = c. Most are lines through two points of a small grid; the rest were found by adding lines to arrangements of one fewer line.'

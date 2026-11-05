@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: marks
   data: '0 7 11 31 43 53 100 121 144 150 202 220 229 268 284 285 356 371 390 416 430 465 467 528 582 590 595 620 623'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: atkinson-hassenklover-1984

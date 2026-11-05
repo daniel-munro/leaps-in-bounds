@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-3-10-lower-820.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{41} \rtimes \mathbb{Z}_{20}$, with product $(a, b)(c, e) = (a + 21^b c, b + e)$, and connection set $\{(39, 7), (10, 13), (8, 10)\}$, found by random search.'

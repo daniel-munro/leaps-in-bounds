@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-5-4-lower-210.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{35} \rtimes \mathbb{Z}_{6}$, with product $(a, b)(c, e) = (a + 9^b c, b + e)$, and connection set $\{(11, 4), (19, 2), (26, 1), (1, 5), (7, 3)\}$, found by random search.'

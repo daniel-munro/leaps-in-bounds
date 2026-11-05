@@ -10,6 +10,6 @@ witness:
   symmetries:
   - [2, 1, 3, 4, 5, 6, 7, 8]
   - [2, 3, 4, 5, 6, 7, 8, 1]
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-30
 notes: 'Roots of $E_7$: roots of $E_8$ (scaled by 2) orthogonal to $(1^8)$.'

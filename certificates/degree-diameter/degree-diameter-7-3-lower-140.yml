@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-7-3-lower-140.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{5} \rtimes \mathbb{Z}_{28}$, with product $(a, b)(c, e) = (a + 2^b c, b + e)$, and connection set $\{(0, 21), (0, 7), (1, 18), (1, 10), (1, 13), (2, 15), (4, 14)\}$, found by random search.'

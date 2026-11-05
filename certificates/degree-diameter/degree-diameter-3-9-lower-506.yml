@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-3-9-lower-506.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{23} \rtimes \mathbb{Z}_{22}$, with product $(a, b)(c, e) = (a + 20^b c, b + e)$, and connection set $\{(13, 9), (2, 13), (2, 11)\}$, found by random search.'

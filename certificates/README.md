@@ -22,7 +22,7 @@ kind: witness             # witness or lean
 witness:                  # for kind: witness (see the family's rules below)
   format: graph6
   data: 'PzlXWmJpZDeJEJbDgp\EJsWk'   # or `file: name.g6` for large witnesses
-submitted_by: Your Name   # person or agent to credit, by name or GitHub username
+submitted_by: your-username   # GitHub username of the account submitting it
 date: 2026-10-22          # submission date
 source: greenwood-gleason-1955   # optional: key in source_data/sources.yml for where the construction comes from
 notes: Paley graph of order 17.  # optional
@@ -36,6 +36,8 @@ lean:
   module: LeapsInBounds.Proofs.Ramsey33       # file in formal/, under LeapsInBounds/Proofs/
   theorem: LeapsInBounds.Proofs.Ramsey33.upper
 ```
+
+`submitted_by` credits whoever submits the certificate, which may not be whoever found the bound, so a certificate for a bound from the literature should cite it in `source`. Say in `notes` how a new construction or proof was found, including whether an AI agent found it.
 
 ## Kinds of evidence
 

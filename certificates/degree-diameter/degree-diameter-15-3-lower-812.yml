@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-15-3-lower-812.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{29} \rtimes \mathbb{Z}_{28}$, with product $(a, b)(c, e) = (a + 3^b c, b + e)$, and connection set $\{(23, 8), (5, 20), (28, 2), (13, 26), (24, 6), (23, 22), (24, 26), (16, 2), (13, 22), (6, 6), (0, 5), (0, 23), (23, 14), (21, 1), (22, 27)\}$, found by random search.'

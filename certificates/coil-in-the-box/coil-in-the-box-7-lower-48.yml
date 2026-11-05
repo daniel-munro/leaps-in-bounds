@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: transitions
   data: '012310412015046501520631463051356206452105245064'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 source: kochut-1996
 notes: "From the snake-in-the-box records page, https://www.minortriad.com/snake/, retrieved 2026-11-04."

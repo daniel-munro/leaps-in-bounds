@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: transitions
   file: snake-in-the-box-13-lower-2946.txt
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 source: toner-2026
 notes: "From the snake-in-the-box records page, https://www.minortriad.com/snake/, retrieved 2026-11-04."

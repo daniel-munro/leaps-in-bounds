@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: transitions
   file: coil-in-the-box-12-lower-1468.txt
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 source: echols-2026-07-22
 notes: "From the snake-in-the-box records page, https://www.minortriad.com/snake/, retrieved 2026-11-04."

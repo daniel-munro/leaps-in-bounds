@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   data: ':Yl@CFI_CDEbCHJaCGK_@AB`EHK`DGJ_IJKbEGIaDHI_FGHaEFJbDFK'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: Incidence graph of the projective plane $PG(2,3)$.

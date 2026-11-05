@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-3-6-lower-64.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: The graph found by simulated annealing for $N(3,5)$, which also has diameter at most 6.

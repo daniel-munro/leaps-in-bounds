@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'O????B~~v}^w~o~o^wF}?'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: The complete bipartite graph $K_{8,8}$.

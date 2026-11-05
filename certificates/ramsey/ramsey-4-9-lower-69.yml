@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   file: ramsey-4-9-lower-69.g6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Circulant graph C68(5,9,12,13,14,16,18,20,25,26,33) has no 4-clique and no independent set of size 9.'

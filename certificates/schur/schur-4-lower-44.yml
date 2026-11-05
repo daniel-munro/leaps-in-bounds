@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: coloring
   data: '03302222033011132201111110223311033022022330'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: golomb-baumert-1965
 notes: "Found by SAT search."

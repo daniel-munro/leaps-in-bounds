@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'NFC_S?cAYMP_GoogGAo'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: Found by simulated annealing.

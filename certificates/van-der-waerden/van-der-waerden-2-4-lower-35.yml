@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: coloring
   data: '0010001110100100011101001000111011'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: Found by backtracking search.

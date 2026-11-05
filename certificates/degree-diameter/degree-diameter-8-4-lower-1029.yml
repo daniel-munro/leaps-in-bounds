@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-8-4-lower-1029.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{49} \rtimes \mathbb{Z}_{21}$, with product $(a, b)(c, e) = (a + 39^b c, b + e)$, and connection set $\{(15, 12), (48, 9), (13, 5), (4, 16), (5, 10), (32, 11), (10, 20), (2, 1)\}$, found by random search.'

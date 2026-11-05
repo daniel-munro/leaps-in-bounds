@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-12-3-lower-558.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{31} \rtimes \mathbb{Z}_{18}$, with product $(a, b)(c, e) = (a + 25^b c, b + e)$, and connection set $\{(20, 4), (24, 14), (14, 10), (23, 8), (28, 8), (13, 10), (2, 1), (21, 17), (4, 16), (11, 2), (17, 11), (9, 7)\}$, found by random search.'

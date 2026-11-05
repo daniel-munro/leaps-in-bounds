@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   data: ':]n?BC_FG_JK`BD`FH`JLaBEaFIaJMcHMcILdGMdIKeGLeHK'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: Incidence graph of the symplectic generalized quadrangle $W(2)$.

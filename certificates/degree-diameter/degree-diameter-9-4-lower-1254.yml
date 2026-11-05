@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-9-4-lower-1254.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{209} \rtimes \mathbb{Z}_{6}$, with product $(a, b)(c, e) = (a + 87^b c, b + e)$, and connection set $\{(35, 5), (90, 1), (127, 4), (137, 2), (105, 1), (6, 5), (201, 2), (107, 4), (19, 3)\}$, found by random search.'

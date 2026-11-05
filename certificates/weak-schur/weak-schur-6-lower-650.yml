@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: coloring
   file: weak-schur-6-lower-650.txt
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: rodrigo-2026
 notes: "Partition from https://doi.org/10.5281/zenodo.20633634"

@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: transitions
   data: '01203104201350120310420135'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 notes: Found by depth-first search.

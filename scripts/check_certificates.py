@@ -38,14 +38,14 @@ def literature_comparison(cert: dict[str, Any], constant: dict[str, Any]) -> str
     """Describe how a certificate's bound compares with the best in the literature."""
     literature = constant[f"{cert['bound']}_bound"]
     if literature is None or literature.decimal_approx is None:
-        return "no bound in the literature yet: **new**"
+        return "no bound from the literature recorded on the site"
     # Literature values are rounded to 7 significant digits
     approx = float(f"{cert['approx']:.7g}")
     if is_better(cert["bound"], approx, literature.decimal_approx):
-        return f"beats the best known `{literature.latex}`: **new record**"
+        return f"stronger than the best recorded, `{literature.latex}`"
     if approx == literature.decimal_approx:
-        return "matches the best known"
-    return f"weaker than the best known `{literature.latex}`"
+        return "matches the best recorded"
+    return f"weaker than the best recorded, `{literature.latex}`"
 
 
 def format_summary(
@@ -91,8 +91,8 @@ def format_summary(
     if passed:
         lines.append(
             "A maintainer will still review the source and the description before merging. "
-            "If a certificate improves on the literature, its source should say where the construction "
-            "or proof comes from, or its notes how it was found."
+            "A certificate for a bound from the literature should cite it in `source`, and one for a "
+            "new bound should say in `notes` how it was found."
         )
     else:
         lines.append(

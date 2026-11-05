@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: coloring
   file: weak-schur-5-lower-207.txt
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: rowley-2025
 notes: "Rowley's partition, as given in OEIS A072842."

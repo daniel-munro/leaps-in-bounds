@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-4-5-lower-205.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{41} \rtimes \mathbb{Z}_{5}$, with product $(a, b)(c, e) = (a + 37^b c, b + e)$, and connection set $\{(23, 1), (16, 4), (0, 4), (0, 1)\}$, found by random search.'

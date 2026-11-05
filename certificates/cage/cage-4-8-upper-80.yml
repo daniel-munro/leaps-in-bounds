@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: cage-4-8-upper-80.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: Incidence graph of the symplectic generalized quadrangle $W(3)$.

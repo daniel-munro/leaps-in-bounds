@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: marks
   data: '0 1 4 10 12 17'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: babcock-1953

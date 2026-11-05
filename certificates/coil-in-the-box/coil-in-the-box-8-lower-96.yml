@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: transitions
   data: '012031042103516534012403540217512453045243546043016071046107512574016407540613516457045647542047'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-04
 source: ostergard-pettersson-2014-coil
 notes: "From the snake-in-the-box records page, https://www.minortriad.com/snake/, retrieved 2026-11-04."

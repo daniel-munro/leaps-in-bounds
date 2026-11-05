@@ -1,10 +1,10 @@
 {% comment %}
 Badge comparing a certificate (include.cert, a row of site.data.certificates)
-with the best bound in the literature.
+with the best bound from the literature recorded on the site, which may be incomplete.
 {% endcomment %}
 {% case include.cert.comparison %}
-  {% when "new" %}<span class="badge bg-verified-new">Not in the literature</span>
-  {% when "stronger" %}<span class="badge bg-verified-new">Beats the literature</span>
+  {% when "new" %}<span class="badge bg-verified-new">No literature bound recorded</span>
+  {% when "stronger" %}<span class="badge bg-verified-new">Stronger than recorded</span>
   {% when "equal" %}<span class="badge bg-success">Matches the literature</span>
   {% else %}<span class="badge bg-secondary">Weaker than the literature</span>
 {% endcase %}

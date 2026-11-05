@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'WUxpoyMPpFQMQMhFIPpQMdGxIPpIPodGyHQMpIPvChFMHQM'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Circulant graph C24(2,3,4,8,11) has no 4-clique and no independent set of size 5.'

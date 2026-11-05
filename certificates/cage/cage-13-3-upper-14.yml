@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'M~~~~~~~~~~~~~~~_'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: The complete graph $K_{14}$.

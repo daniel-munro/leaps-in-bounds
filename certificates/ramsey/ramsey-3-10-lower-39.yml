@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'e??CE@_kAoT_T_IoAk?T_@U?Ak?AkC@U@?T_GAk?_Io@?T_@?T_?_Io?GAkC@?T_OC@UA_GAkA_GAkDOC@UBS@?T_Y_GAk@i?_IoBS@?T_BS@?T_@i?_Io?'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Circulant graph C38(6,7,9,11,19) has no 3-clique and no independent set of size 10.'

@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: degree-diameter-10-3-lower-366.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{122} \rtimes \mathbb{Z}_{3}$, with product $(a, b)(c, e) = (a + 13^b c, b + e)$, and connection set $\{(75, 2), (1, 1), (106, 1), (20, 2), (89, 2), (63, 1), (33, 1), (35, 2), (111, 2), (21, 1)\}$, found by random search.'

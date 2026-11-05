@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: marks
   data: '0 9 33 37 38 97 122 129 140 142 152 191 205 208 252 278 286 326 332 353 368 384 403 425'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: robinson-bernstein-1967

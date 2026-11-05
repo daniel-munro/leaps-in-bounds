@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: coloring
   data: '001110100010110111101101000101110000100001001011101000101101111011010001011100001000010000111010001111011110110100010111000010000100001110100010110111101111000101110000100001000'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: rabung-lotts-2012
 notes: 'Zipped Rabung construction: color each nonzero residue x mod 11 by the discrete logarithm of x base 2 mod 2, zip it to a coloring mod 22 (x gets the color of x mod 11, flipped when x is odd), then zip again to a coloring mod 44 (2i gets the color of i, 2i + 1 the flipped color of i + 6). Take 4 periods plus one integer, and color the multiples of 11 by backtracking search.'

@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: sparse6
   file: cage-9-6-upper-146.s6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-28
 notes: Incidence graph of the projective plane $PG(2,8)$.

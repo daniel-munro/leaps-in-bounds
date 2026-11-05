@@ -88,7 +88,7 @@ layout: default
         <span class="badge bg-success">Checked construction</span>
       {% endif %}
       <br><a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
-      submitted by <strong>{{ cert.submitted_by }}</strong>, {{ cert.date }}
+      submitted by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>, {{ cert.date }}
       {% if cert.source %}
         {% assign source = site.data.sources[cert.source] %}
         <br>[construction from {{ source.string }}]

@@ -5,7 +5,7 @@ kind: witness
 witness:
   format: coloring
   file: schur-5-lower-160.txt
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-03
 source: exoo-1994
 notes: "Exoo's partition, as given in OEIS A045652."

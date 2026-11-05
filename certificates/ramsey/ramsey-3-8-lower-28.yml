@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'Z`h_OoW?b@C?@K_GIOgO@U@?DXK?T?EUQQAS_\CB?_a?{_PdEC?@_AeGGgCW'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Found by tabu search over edge flips: a graph on 27 vertices with no 3-clique and no independent set of size 8.'

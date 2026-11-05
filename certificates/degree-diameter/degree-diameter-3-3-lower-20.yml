@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   data: 'S?IEOoOC@??@?COGG?oIGG?_C@K?_?@OC'
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: Found by simulated annealing.

@@ -5,6 +5,6 @@ kind: witness
 witness:
   format: graph6
   file: ramsey-5-7-lower-71.g6
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-11-02
 notes: 'Circulant graph C70(1,4,6,9,12,14,15,16,20,21,24,31,32,33,35) has no 5-clique and no independent set of size 7.'

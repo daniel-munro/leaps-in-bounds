@@ -5,6 +5,6 @@ kind: lean
 lean:
   module: LeapsInBounds.Proofs.SquarePackingBasic
   theorem: LeapsInBounds.Proofs.SquarePackingBasic.upper_50
-submitted_by: Claude
+submitted_by: daniel-munro
 date: 2026-10-30
 notes: 'The squares fit in a 8 × 8 grid.'
