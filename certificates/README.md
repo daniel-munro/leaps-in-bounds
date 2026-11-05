@@ -4,7 +4,7 @@ A certificate claims a lower or upper bound on one constant and comes with evide
 
 Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks every certificate, and a new certificate must be strictly stronger than the existing ones for the same bound.
 
-Only the families listed [below](#families) accept certificates so far.
+Only the families listed [below](#families) accept certificates so far. To ask for another group of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
 
 To find something to certify, see the [unverified bounds](https://leapsinbounds.org/unverified/) (also as [JSON](https://leapsinbounds.org/data/unverified_bounds.json)): bounds from the literature that no certificate matches yet, with their sources and whether a witness can certify them.
 
@@ -22,7 +22,7 @@ kind: witness             # witness or lean
 witness:                  # for kind: witness (see the family's rules below)
   format: graph6
   data: 'PzlXWmJpZDeJEJbDgp\EJsWk'   # or `file: name.g6` for large witnesses
-submitted_by: Your Name   # person or agent to credit
+submitted_by: Your Name   # person or agent to credit, by name or GitHub username
 date: 2026-10-22          # submission date
 source: greenwood-gleason-1955   # optional: key in source_data/sources.yml for where the construction comes from
 notes: Paley graph of order 17.  # optional

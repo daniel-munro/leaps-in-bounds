@@ -5,7 +5,7 @@ kind: lean
 lean:
   module: LeapsInBounds.Proofs.Schur8Lower5372
   theorem: LeapsInBounds.Proofs.Schur8Lower5372.schur8_lower_5372
-submitted_by: schur-lane
+submitted_by: darkhipo
 date: 2026-11-04
 source: chen-zhu-long-2026
 notes: "Eight-color coloring from data/S8_n5372.txt in the ancillary files of arXiv:2610.31362 (Chen, Zhu, Long; colors re-indexed from 1..8 to 0..7). The certificate data is generated into the Lean module by a script; a per-color bitmask is derived from it inside Lean and checked by kernel `decide` (43k boolean membership/shift checks), then bridged to the trusted LowerBound statement. No native_decide; axioms propext, Classical.choice, Quot.sound only."
