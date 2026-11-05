@@ -2,7 +2,7 @@
 
 A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. The site shows the strongest certificate on each side as the constant's **verified** bound, alongside the bounds from the literature.
 
-Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks every certificate, and a new certificate must be strictly stronger than the existing ones for the same bound.
+Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks every certificate, and a new certificate must be strictly stronger than the existing ones for the same bound. CI comments on the pull request with the result for each new certificate and how it compares with the best bound in the literature. (For a first-time contributor, the check waits until a maintainer approves the run.)
 
 Only the families listed [below](#families) accept certificates so far. To ask for another group of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
 

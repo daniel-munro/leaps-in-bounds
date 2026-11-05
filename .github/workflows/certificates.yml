@@ -94,7 +94,19 @@ jobs:
       - name: Check certificates
         env:
           NEW_FILES: ${{ steps.changed.outputs.files }}
-        run: python scripts/check_certificates.py --lean --no-build --improves $NEW_FILES
+        run: python scripts/check_certificates.py --lean --no-build --improves $NEW_FILES --summary certificate-summary.md
+
+      - name: Show the summary
+        if: always() && hashFiles('certificate-summary.md') != ''
+        run: cat certificate-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      # The Certificate comment workflow posts the summary on the pull request,
+      # since this one can't write to pull requests from forks
+      - uses: actions/upload-artifact@v7
+        if: always() && github.event_name == 'pull_request' && hashFiles('certificate-summary.md') != ''
+        with:
+          name: certificate-summary
+          path: certificate-summary.md
 
       - name: Flag changes to trusted files
         if: github.event_name == 'pull_request'

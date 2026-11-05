@@ -1,0 +1,75 @@
+name: Certificate comment
+
+# Posts the Certificates workflow's summary on the pull request. Runs from the
+# default branch with permission to comment, which the Certificates workflow
+# doesn't have for pull requests from forks. It never checks out or runs code
+# from the pull request: the summary is only read and posted as text.
+on:
+  workflow_run:
+    workflows: [Certificates]
+    types: [completed]
+
+permissions:
+  actions: read
+  pull-requests: write
+
+jobs:
+  comment:
+    if: github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find the pull request
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          number=$(gh pr list --repo "$REPO" --state open --limit 100 --json number,headRefOid \
+            --jq ".[] | select(.headRefOid == \"$HEAD_SHA\") | .number" | head -n 1)
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/download-artifact@v8
+        if: steps.pr.outputs.number != ''
+        continue-on-error: true
+        with:
+          name: certificate-summary
+          path: summary
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Post or update the comment
+        if: steps.pr.outputs.number != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          NUMBER: ${{ steps.pr.outputs.number }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          marker='<!-- certificate-check -->'
+          if [ -f summary/certificate-summary.md ]; then
+            # The summary comes from the pull request's own copy of the checker,
+            # so limit its length and keep it from mentioning anyone
+            body=$(head -c 30000 summary/certificate-summary.md | sed 's/@/@\xe2\x80\x8b/g')
+          elif [ "$CONCLUSION" = "failure" ]; then
+            body="$marker
+          ## Certificate check failed ❌
+
+          The check stopped before it could report on the certificates, for example because a Lean proof didn't compile. See the run for details."
+          else
+            echo "Nothing to report"
+            exit 0
+          fi
+          body="$body
+
+          <sub>Commit ${HEAD_SHA:0:7} · [workflow run]($RUN_URL)</sub>"
+
+          existing=$(gh api "repos/$REPO/issues/$NUMBER/comments" --paginate \
+            --jq ".[] | select(.user.login == \"github-actions[bot]\" and (.body | startswith(\"$marker\"))) | .id" | head -n 1)
+          if [ -n "$existing" ]; then
+            gh api --method PATCH "repos/$REPO/issues/comments/$existing" -f body="$body" > /dev/null
+          else
+            gh pr comment "$NUMBER" --repo "$REPO" --body "$body"
+          fi
