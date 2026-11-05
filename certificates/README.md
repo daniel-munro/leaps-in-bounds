@@ -202,6 +202,15 @@ Formal statements are in [`formal/LeapsInBounds/Statements/CapSet.lean`](../form
 
 Witnesses can certify lower bounds only. A witness for `r(n) >= L` uses `format: points`: `L` distinct points, separated by whitespace, each written as its `n` coordinates, digits from `0` to `2` with nothing between them. For example, `'00 01 10 11'` for `r(2) >= 4`.
 
+### No-three-in-line problem: `no-three-in-line-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/NoThreeInLine.lean`](../formal/LeapsInBounds/Statements/NoThreeInLine.lean). The points of the `n × n` grid are the pairs `(x, y)` of integers from `0` to `n - 1`.
+
+- `LowerBound n L` means `D(n) >= L`: some `L` points of the grid have no three on a line.
+- `UpperBound n L` means `D(n) <= L`: any points of the grid with no three on a line number at most `L`.
+
+Witnesses can certify lower bounds only. A witness for `D(n) >= L` uses `format: points`: `L` distinct points, separated by whitespace, each written `x,y`. For example, `'0,0 0,1 1,0 1,1'` for `D(2) >= 4`.
+
 ### Arrangements of lines: `affine-line-arrangements-{n}` and `affine-line-arrangements-general-position-{n}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/LineArrangement.lean`](../formal/LeapsInBounds/Statements/LineArrangement.lean). The combinatorial type of an arrangement of distinct lines in the plane is given by its covectors, the vectors of signs saying which side of each line a point is on, up to renumbering the lines and swapping their sides. This identifies mirror images.

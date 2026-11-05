@@ -377,3 +377,21 @@ cap-set:
   parameters: [n]
   parameter_values: [[[1, 8]]]
   research_status: initial
+
+no-three-in-line:
+  name: "No-three-in-line problem"
+  description: "$D(n)$ is the largest number of points of the $n \\times n$ grid that can be chosen with no three on a line, in any direction. Since each row holds at most two of them, $D(n) \\le 2n$. It's conjectured that $D(n) < 2n$ for all large $n$."
+  external_ids:
+    mathworld: No-Three-in-a-LineProblem
+    msc: 52C10
+    oeis: A272651
+    wikidata: Q6580594
+    wikipedia_en: No-three-in-line_problem
+  display_type: sequence
+  representative_image: no-three-in-line-10
+  id_template: "no-three-in-line-{n}"
+  name_template: "No-three-in-line $D({n})$"
+  description_template: "The largest number of points of the ${n} \\times {n}$ grid with no three on a line."
+  parameters: [n]
+  parameter_values: [[[1, 78]]]
+  research_status: initial

@@ -36,7 +36,7 @@ from typing import Any, Callable, Iterable, Sequence
 import yaml
 
 from certificates import (eccentricity_at_most, girth, has_monochromatic_sum, is_cap, is_snake, load_certificates,
-                          orbit_closure, read_graph, read_marks, read_points, read_symmetries, read_ternary_points,
+                          no_three_collinear, orbit_closure, read_grid_points, read_graph, read_marks, read_points, read_symmetries, read_ternary_points,
                           read_transitions, read_vectors, read_witness_data, transition_vertices)
 from utils import GENERATED_IMAGES_DIR
 
@@ -787,6 +787,33 @@ def render_cap_set(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+####################
+# No-three-in-line #
+####################
+
+def render_no_three_in_line(constant_id: str, n: int) -> Svg | None:
+    """The points of a no-three-in-line configuration, drawn on the n x n
+    grid."""
+    cert = witness(constant_id, "lower")
+    if cert is None or n < 2:
+        return None
+    points = read_grid_points(read_witness_data(cert))
+    check(no_three_collinear(points), f"{constant_id}: three points are on a line")
+    if exact_value(constant_id) is not None:
+        check(len(points) == exact_value(constant_id), f"{constant_id}: witness isn't optimal")
+    m = 0.5
+    svg = Svg(-m, -m, n - 1 + m, n - 1 + m, size=SIZE if n <= 30 else 400)
+    if n <= 30:  # grid lines, or for larger grids just its square, since lines would crowd out the points
+        grid = [svg.line((i, 0), (i, n - 1)) for i in range(n)] + [svg.line((0, i), (n - 1, i)) for i in range(n)]
+        svg.add(svg.group(grid, stroke=MUTED, stroke_width=1))
+        radius = 0.32
+    else:
+        svg.add(svg.rect(-m, -m, n, n, fill="#f1f3f5", stroke=MUTED, stroke_width=1))
+        radius = 0.5
+    svg.add(svg.group((svg.circle((y, n - 1 - x), radius) for x, y in points), fill=EDGE))
+    return svg
+
+
 ############
 # Families #
 ############
@@ -814,6 +841,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "snake-in-the-box": ("snake-in-the-box-", lambda c: render_snake(c, *ints(c, "snake-in-the-box-"), coil=False)),
     "coil-in-the-box": ("coil-in-the-box-", lambda c: render_snake(c, *ints(c, "coil-in-the-box-"), coil=True)),
     "cap-set": ("cap-set-", lambda c: render_cap_set(c, *ints(c, "cap-set-"))),
+    "no-three-in-line": ("no-three-in-line-", lambda c: render_no_three_in_line(c, *ints(c, "no-three-in-line-"))),
 }
 
 

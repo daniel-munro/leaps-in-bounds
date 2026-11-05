@@ -1,0 +1,11 @@
+constant: no-three-in-line-6
+bound: lower
+value: 12
+kind: witness
+witness:
+  format: points
+  data: '0,0 0,2 1,2 1,4 2,0 2,1 3,4 3,5 4,1 4,3 5,3 5,5'
+submitted_by: daniel-munro
+date: 2026-11-05
+source: flammenkamp-no3in
+notes: "The first configuration for this n in Flammenkamp's list of known configurations, http://wwwhomes.uni-bielefeld.de/achim/no3in/data_1997/known_solutions, retrieved 2026-11-05, decoded with each row's two columns as (row, column)."

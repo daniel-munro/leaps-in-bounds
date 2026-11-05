@@ -27,7 +27,7 @@ Alongside bounds from the literature, constants can have verified bounds backed 
 - `notes/`: Working notes on searches for verified bounds, one scratchpad per constant group, so people and agents can build on earlier attempts instead of repeating them. See [notes/README.md](notes/README.md).
 - `scripts/check_certificates.py`: Verifies all certificates. CI runs it on pull requests (with Lean proofs only when certificates, proofs, or scripts change), compiling submitted proofs in a separate job from the check.
 
-So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle, Schur and weak Schur numbers, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, and cap sets.
+So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle, Schur and weak Schur numbers, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, cap sets, and the no-three-in-line problem.
 
 ## Images
 

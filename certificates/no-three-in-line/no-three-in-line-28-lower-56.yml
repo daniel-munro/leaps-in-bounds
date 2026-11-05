@@ -1,0 +1,11 @@
+constant: no-three-in-line-28
+bound: lower
+value: 56
+kind: witness
+witness:
+  format: points
+  file: no-three-in-line-28-lower-56.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: flammenkamp-no3in
+notes: "The first configuration for this n in Flammenkamp's list of known configurations, http://wwwhomes.uni-bielefeld.de/achim/no3in/data_1997/known_solutions, retrieved 2026-11-05, decoded with each row's two columns as (row, column)."

@@ -1,0 +1,10 @@
+constant: no-three-in-line-77
+bound: lower
+value: 152
+kind: witness
+witness:
+  format: points
+  file: no-three-in-line-77-lower-152.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+notes: "The 152-point configuration in this group's certificate for n = 76, which also fits in the 77 x 77 grid."

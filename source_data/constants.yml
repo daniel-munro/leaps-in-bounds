@@ -774,3 +774,388 @@ cap-set-6:
   image:
     generated: cap-set-6.svg
     alt_text: "Cap set of 112 points, no three on a line, in 6-dimensional space over the field with 3 elements, drawn as nested 3 by 3 grids"
+
+no-three-in-line-2:
+  image:
+    generated: no-three-in-line-2.svg
+    alt_text: "4 points of the 2 by 2 grid with no three on a line"
+
+no-three-in-line-3:
+  image:
+    generated: no-three-in-line-3.svg
+    alt_text: "6 points of the 3 by 3 grid with no three on a line"
+
+no-three-in-line-4:
+  image:
+    generated: no-three-in-line-4.svg
+    alt_text: "8 points of the 4 by 4 grid with no three on a line"
+
+no-three-in-line-5:
+  image:
+    generated: no-three-in-line-5.svg
+    alt_text: "10 points of the 5 by 5 grid with no three on a line"
+
+no-three-in-line-6:
+  image:
+    generated: no-three-in-line-6.svg
+    alt_text: "12 points of the 6 by 6 grid with no three on a line"
+
+no-three-in-line-7:
+  image:
+    generated: no-three-in-line-7.svg
+    alt_text: "14 points of the 7 by 7 grid with no three on a line"
+
+no-three-in-line-8:
+  image:
+    generated: no-three-in-line-8.svg
+    alt_text: "16 points of the 8 by 8 grid with no three on a line"
+
+no-three-in-line-9:
+  image:
+    generated: no-three-in-line-9.svg
+    alt_text: "18 points of the 9 by 9 grid with no three on a line"
+
+no-three-in-line-10:
+  image:
+    generated: no-three-in-line-10.svg
+    alt_text: "20 points of the 10 by 10 grid with no three on a line"
+
+no-three-in-line-11:
+  image:
+    generated: no-three-in-line-11.svg
+    alt_text: "22 points of the 11 by 11 grid with no three on a line"
+
+no-three-in-line-12:
+  image:
+    generated: no-three-in-line-12.svg
+    alt_text: "24 points of the 12 by 12 grid with no three on a line"
+
+no-three-in-line-13:
+  image:
+    generated: no-three-in-line-13.svg
+    alt_text: "26 points of the 13 by 13 grid with no three on a line"
+
+no-three-in-line-14:
+  image:
+    generated: no-three-in-line-14.svg
+    alt_text: "28 points of the 14 by 14 grid with no three on a line"
+
+no-three-in-line-15:
+  image:
+    generated: no-three-in-line-15.svg
+    alt_text: "30 points of the 15 by 15 grid with no three on a line"
+
+no-three-in-line-16:
+  image:
+    generated: no-three-in-line-16.svg
+    alt_text: "32 points of the 16 by 16 grid with no three on a line"
+
+no-three-in-line-17:
+  image:
+    generated: no-three-in-line-17.svg
+    alt_text: "34 points of the 17 by 17 grid with no three on a line"
+
+no-three-in-line-18:
+  image:
+    generated: no-three-in-line-18.svg
+    alt_text: "36 points of the 18 by 18 grid with no three on a line"
+
+no-three-in-line-19:
+  image:
+    generated: no-three-in-line-19.svg
+    alt_text: "38 points of the 19 by 19 grid with no three on a line"
+
+no-three-in-line-20:
+  image:
+    generated: no-three-in-line-20.svg
+    alt_text: "40 points of the 20 by 20 grid with no three on a line"
+
+no-three-in-line-21:
+  image:
+    generated: no-three-in-line-21.svg
+    alt_text: "42 points of the 21 by 21 grid with no three on a line"
+
+no-three-in-line-22:
+  image:
+    generated: no-three-in-line-22.svg
+    alt_text: "44 points of the 22 by 22 grid with no three on a line"
+
+no-three-in-line-23:
+  image:
+    generated: no-three-in-line-23.svg
+    alt_text: "46 points of the 23 by 23 grid with no three on a line"
+
+no-three-in-line-24:
+  image:
+    generated: no-three-in-line-24.svg
+    alt_text: "48 points of the 24 by 24 grid with no three on a line"
+
+no-three-in-line-25:
+  image:
+    generated: no-three-in-line-25.svg
+    alt_text: "50 points of the 25 by 25 grid with no three on a line"
+
+no-three-in-line-26:
+  image:
+    generated: no-three-in-line-26.svg
+    alt_text: "52 points of the 26 by 26 grid with no three on a line"
+
+no-three-in-line-27:
+  image:
+    generated: no-three-in-line-27.svg
+    alt_text: "54 points of the 27 by 27 grid with no three on a line"
+
+no-three-in-line-28:
+  image:
+    generated: no-three-in-line-28.svg
+    alt_text: "56 points of the 28 by 28 grid with no three on a line"
+
+no-three-in-line-29:
+  image:
+    generated: no-three-in-line-29.svg
+    alt_text: "58 points of the 29 by 29 grid with no three on a line"
+
+no-three-in-line-30:
+  image:
+    generated: no-three-in-line-30.svg
+    alt_text: "60 points of the 30 by 30 grid with no three on a line"
+
+no-three-in-line-31:
+  image:
+    generated: no-three-in-line-31.svg
+    alt_text: "62 points of the 31 by 31 grid with no three on a line"
+
+no-three-in-line-32:
+  image:
+    generated: no-three-in-line-32.svg
+    alt_text: "64 points of the 32 by 32 grid with no three on a line"
+
+no-three-in-line-33:
+  image:
+    generated: no-three-in-line-33.svg
+    alt_text: "66 points of the 33 by 33 grid with no three on a line"
+
+no-three-in-line-34:
+  image:
+    generated: no-three-in-line-34.svg
+    alt_text: "68 points of the 34 by 34 grid with no three on a line"
+
+no-three-in-line-35:
+  image:
+    generated: no-three-in-line-35.svg
+    alt_text: "70 points of the 35 by 35 grid with no three on a line"
+
+no-three-in-line-36:
+  image:
+    generated: no-three-in-line-36.svg
+    alt_text: "72 points of the 36 by 36 grid with no three on a line"
+
+no-three-in-line-37:
+  image:
+    generated: no-three-in-line-37.svg
+    alt_text: "74 points of the 37 by 37 grid with no three on a line"
+
+no-three-in-line-38:
+  image:
+    generated: no-three-in-line-38.svg
+    alt_text: "76 points of the 38 by 38 grid with no three on a line"
+
+no-three-in-line-39:
+  image:
+    generated: no-three-in-line-39.svg
+    alt_text: "78 points of the 39 by 39 grid with no three on a line"
+
+no-three-in-line-40:
+  image:
+    generated: no-three-in-line-40.svg
+    alt_text: "80 points of the 40 by 40 grid with no three on a line"
+
+no-three-in-line-41:
+  image:
+    generated: no-three-in-line-41.svg
+    alt_text: "82 points of the 41 by 41 grid with no three on a line"
+
+no-three-in-line-42:
+  image:
+    generated: no-three-in-line-42.svg
+    alt_text: "84 points of the 42 by 42 grid with no three on a line"
+
+no-three-in-line-43:
+  image:
+    generated: no-three-in-line-43.svg
+    alt_text: "86 points of the 43 by 43 grid with no three on a line"
+
+no-three-in-line-44:
+  image:
+    generated: no-three-in-line-44.svg
+    alt_text: "88 points of the 44 by 44 grid with no three on a line"
+
+no-three-in-line-45:
+  image:
+    generated: no-three-in-line-45.svg
+    alt_text: "90 points of the 45 by 45 grid with no three on a line"
+
+no-three-in-line-46:
+  image:
+    generated: no-three-in-line-46.svg
+    alt_text: "92 points of the 46 by 46 grid with no three on a line"
+
+no-three-in-line-47:
+  image:
+    generated: no-three-in-line-47.svg
+    alt_text: "94 points of the 47 by 47 grid with no three on a line"
+
+no-three-in-line-48:
+  image:
+    generated: no-three-in-line-48.svg
+    alt_text: "96 points of the 48 by 48 grid with no three on a line"
+
+no-three-in-line-49:
+  image:
+    generated: no-three-in-line-49.svg
+    alt_text: "98 points of the 49 by 49 grid with no three on a line"
+
+no-three-in-line-50:
+  image:
+    generated: no-three-in-line-50.svg
+    alt_text: "100 points of the 50 by 50 grid with no three on a line"
+
+no-three-in-line-51:
+  image:
+    generated: no-three-in-line-51.svg
+    alt_text: "102 points of the 51 by 51 grid with no three on a line"
+
+no-three-in-line-52:
+  image:
+    generated: no-three-in-line-52.svg
+    alt_text: "104 points of the 52 by 52 grid with no three on a line"
+
+no-three-in-line-53:
+  image:
+    generated: no-three-in-line-53.svg
+    alt_text: "106 points of the 53 by 53 grid with no three on a line"
+
+no-three-in-line-54:
+  image:
+    generated: no-three-in-line-54.svg
+    alt_text: "108 points of the 54 by 54 grid with no three on a line"
+
+no-three-in-line-55:
+  image:
+    generated: no-three-in-line-55.svg
+    alt_text: "110 points of the 55 by 55 grid with no three on a line"
+
+no-three-in-line-56:
+  image:
+    generated: no-three-in-line-56.svg
+    alt_text: "112 points of the 56 by 56 grid with no three on a line"
+
+no-three-in-line-57:
+  image:
+    generated: no-three-in-line-57.svg
+    alt_text: "114 points of the 57 by 57 grid with no three on a line"
+
+no-three-in-line-58:
+  image:
+    generated: no-three-in-line-58.svg
+    alt_text: "116 points of the 58 by 58 grid with no three on a line"
+
+no-three-in-line-59:
+  image:
+    generated: no-three-in-line-59.svg
+    alt_text: "118 points of the 59 by 59 grid with no three on a line"
+
+no-three-in-line-60:
+  image:
+    generated: no-three-in-line-60.svg
+    alt_text: "120 points of the 60 by 60 grid with no three on a line"
+
+no-three-in-line-61:
+  image:
+    generated: no-three-in-line-61.svg
+    alt_text: "122 points of the 61 by 61 grid with no three on a line"
+
+no-three-in-line-62:
+  image:
+    generated: no-three-in-line-62.svg
+    alt_text: "124 points of the 62 by 62 grid with no three on a line"
+
+no-three-in-line-63:
+  image:
+    generated: no-three-in-line-63.svg
+    alt_text: "126 points of the 63 by 63 grid with no three on a line"
+
+no-three-in-line-64:
+  image:
+    generated: no-three-in-line-64.svg
+    alt_text: "128 points of the 64 by 64 grid with no three on a line"
+
+no-three-in-line-65:
+  image:
+    generated: no-three-in-line-65.svg
+    alt_text: "130 points of the 65 by 65 grid with no three on a line"
+
+no-three-in-line-66:
+  image:
+    generated: no-three-in-line-66.svg
+    alt_text: "132 points of the 66 by 66 grid with no three on a line"
+
+no-three-in-line-67:
+  image:
+    generated: no-three-in-line-67.svg
+    alt_text: "134 points of the 67 by 67 grid with no three on a line"
+
+no-three-in-line-68:
+  image:
+    generated: no-three-in-line-68.svg
+    alt_text: "136 points of the 68 by 68 grid with no three on a line"
+
+no-three-in-line-69:
+  image:
+    generated: no-three-in-line-69.svg
+    alt_text: "138 points of the 69 by 69 grid with no three on a line"
+
+no-three-in-line-70:
+  image:
+    generated: no-three-in-line-70.svg
+    alt_text: "140 points of the 70 by 70 grid with no three on a line"
+
+no-three-in-line-71:
+  image:
+    generated: no-three-in-line-71.svg
+    alt_text: "142 points of the 71 by 71 grid with no three on a line"
+
+no-three-in-line-72:
+  image:
+    generated: no-three-in-line-72.svg
+    alt_text: "144 points of the 72 by 72 grid with no three on a line"
+
+no-three-in-line-73:
+  image:
+    generated: no-three-in-line-73.svg
+    alt_text: "146 points of the 73 by 73 grid with no three on a line"
+
+no-three-in-line-74:
+  image:
+    generated: no-three-in-line-74.svg
+    alt_text: "148 points of the 74 by 74 grid with no three on a line"
+
+no-three-in-line-75:
+  image:
+    generated: no-three-in-line-75.svg
+    alt_text: "148 points of the 75 by 75 grid with no three on a line"
+
+no-three-in-line-76:
+  image:
+    generated: no-three-in-line-76.svg
+    alt_text: "152 points of the 76 by 76 grid with no three on a line"
+
+no-three-in-line-77:
+  image:
+    generated: no-three-in-line-77.svg
+    alt_text: "152 points of the 77 by 77 grid with no three on a line"
+
+no-three-in-line-78:
+  image:
+    generated: no-three-in-line-78.svg
+    alt_text: "156 points of the 78 by 78 grid with no three on a line"

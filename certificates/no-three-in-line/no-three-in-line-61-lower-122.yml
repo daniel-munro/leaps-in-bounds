@@ -1,0 +1,11 @@
+constant: no-three-in-line-61
+bound: lower
+value: 122
+kind: witness
+witness:
+  format: points
+  file: no-three-in-line-61-lower-122.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: prellberg-2026
+notes: "From https://oeis.org/A272651/a272651_15.txt, retrieved 2026-11-05, with coordinates (x, y) as given there."

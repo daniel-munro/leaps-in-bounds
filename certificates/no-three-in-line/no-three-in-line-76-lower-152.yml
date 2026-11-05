@@ -1,0 +1,11 @@
+constant: no-three-in-line-76
+bound: lower
+value: 152
+kind: witness
+witness:
+  format: points
+  file: no-three-in-line-76-lower-152.txt
+submitted_by: daniel-munro
+date: 2026-11-05
+source: heule-2026-08-10
+notes: "The first configuration for this n in the database at http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html, retrieved 2026-11-05."

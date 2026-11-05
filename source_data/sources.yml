@@ -205,6 +205,22 @@ karapetyan-karapetyan-2026:
   url: "https://arxiv.org/abs/2601.16917"
   notes: "The introduction summarizes the known values and bounds for AG(n,3)."
 
+flammenkamp-no3in:
+  string: "The No-Three-in-Line Problem, Achim Flammenkamp, 2026-10-28"
+  date: "2026-10-28"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Records with dated announcements, and a database of known configurations."
+
+oeis-a272651-no-three-in-line:
+  string: "Sequence A272651 in the OEIS"
+  date: "2026-11-05"
+  url: "https://oeis.org/A272651"
+
+wikipedia-no-three-in-line:
+  string: "No-three-in-line problem - Wikipedia"
+  date: "2026-07-09"
+  url: "https://en.wikipedia.org/wiki/No-three-in-line_problem"
+
 ###################
 # Primary sources #
 ###################
@@ -1694,3 +1710,175 @@ romera-paredes-et-al-2023:
   date: "2023-12-14"
   doi: "https://doi.org/10.1038/s41586-023-06924-6"
   notes: "FunSearch. The 512-cap in AG(8,3) is at https://github.com/google-deepmind/funsearch/blob/main/cap_set/n8_size512.txt"
+
+# No-three-in-line problem
+
+dudeney-1906:
+  string: "H.E. Dudeney, The Tribune, November 7, 1906. Reprinted as puzzle 317, A puzzle with pawns, in Amusements in Mathematics, Nelson, Edinburgh (1917) 94, 222."
+  date: "1906-11-07"
+  url: "https://archive.org/details/amusementsinmath00dude/page/94/mode/2up"
+  notes: "16 pawns on a chessboard with no three in a line."
+
+hall-et-al-1975:
+  string: "R.R. Hall, T.H. Jackson, A. Sudbery and K. Wild, Some advances in the no-three-in-line problem, Journal of Combinatorial Theory, Series A 18 (1975) 336-341."
+  date: "1975-05"
+  doi: "https://doi.org/10.1016/0097-3165(75)90043-6"
+  notes: "Credited with solutions for n <= 10 on the records page, http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+craggs-hughes-jones-1976:
+  string: "D. Craggs and R. Hughes-Jones, On the no-three-in-line problem, Journal of Combinatorial Theory, Series A 20 (1976) 363-364."
+  date: "1976-05"
+  doi: "https://doi.org/10.1016/0097-3165(76)90030-3"
+
+gardner-1977:
+  string: "M. Gardner, Mathematical Games, Scientific American 236 (March 1977) 139-140."
+  date: "1977-03"
+  notes: "Credited with solutions for n = 13 to 16 on the records page, http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+klove-1978:
+  string: "T. Kløve, On the no-three-in-line problem, II, Journal of Combinatorial Theory, Series A 24 (1978) 126-127."
+  date: "1978-01"
+  doi: "https://doi.org/10.1016/0097-3165(78)90053-5"
+
+klove-1979:
+  string: "T. Kløve, On the no-three-in-line problem, III, Journal of Combinatorial Theory, Series A 26 (1979) 82-83."
+  date: "1979-01"
+  doi: "https://doi.org/10.1016/0097-3165(79)90055-4"
+
+anderson-1979:
+  string: "D.B. Anderson, Update on the no-three-in-line problem, Journal of Combinatorial Theory, Series A 27 (1979) 365-366."
+  date: "1979-11"
+  doi: "https://doi.org/10.1016/0097-3165(79)90025-6"
+
+harborth-oertel-prellberg-1988:
+  string: "H. Harborth, P. Oertel and T. Prellberg, No-three-in-line for seventeen and nineteen, Discrete Mathematics 73 (1988) 89-90."
+  date: "1988"
+  doi: "https://doi.org/10.1016/0012-365X(88)90135-5"
+
+gerken-1990:
+  string: "Gerken, personal communication to H. Harborth (1990), cited on the no-three-in-line records page."
+  date: "1990"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+flammenkamp-1992:
+  string: "A. Flammenkamp, Progress in the no-three-in-line problem, Journal of Combinatorial Theory, Series A 60 (1992) 305-311."
+  date: "1992-07"
+  doi: "https://doi.org/10.1016/0097-3165(92)90012-J"
+  notes: "Its table, http://wwwhomes.uni-bielefeld.de/achim/no3in/table_old.txt, has solutions for every n <= 46 except 33, 37, 39, 41, 43 and 45."
+
+flammenkamp-1998:
+  string: "A. Flammenkamp, Progress in the no-three-in-line problem, II, Journal of Combinatorial Theory, Series A 81 (1998) 108-113."
+  date: "1998-01"
+  doi: "https://doi.org/10.1006/jcta.1997.2829"
+  notes: "The odd solutions, for n = 33 to 45, were found from December 1996 to January 1997 (http://wwwhomes.uni-bielefeld.de/achim/no3in/odd_results.html)."
+
+prellberg-2025:
+  string: "T. Prellberg, No-three-in-line for forty-seven and forty-nine (2025-09-13)."
+  date: "2025-09-13"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/Prellberg_Sep_2025.pdf"
+  notes: "Not peer reviewed. Solutions for n = 43 to 50, found by constraint satisfaction."
+
+prellberg-2025-10-28:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2025-10-28)."
+  date: "2025-10-28"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "New solutions for n = 51 and 53 to 56 from a search continued after prellberg-2025, ending with n = 58 on 2025-10-28. OEIS A272651 dates a(47) to a(56) to the same day."
+
+prellberg-2025-11:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2025-11)."
+  date: "2025-11"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "The first solution for n = 57, by the end of November 2025."
+
+prellberg-2026-01:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-01)."
+  date: "2026-01"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026-02-11:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-02-11)."
+  date: "2026-02-11"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026-02-13:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-02-13)."
+  date: "2026-02-13"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026-02-17:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-02-17)."
+  date: "2026-02-17"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026-02-20:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-02-20)."
+  date: "2026-02-20"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026-03-09:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-03-09)."
+  date: "2026-03-09"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026-03-23:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-03-23)."
+  date: "2026-03-23"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+prellberg-2026:
+  string: "T. Prellberg, No three in line configurations, OEIS A272651 (2026-02-20)."
+  date: "2026-02-20"
+  url: "https://oeis.org/A272651/a272651_15.txt"
+  notes: "Solutions for n = 47 to 64."
+
+heule-2026-06-17:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-06-17)."
+  date: "2026-06-17"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+heule-2026-06-18:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-06-18)."
+  date: "2026-06-18"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+heule-2026-06-21:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-06-21)."
+  date: "2026-06-21"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+heule-2026-06-25:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-06-25)."
+  date: "2026-06-25"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+prellberg-2026-07-20:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-07-20)."
+  date: "2026-07-20"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+
+heule-2026-08-10:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-08-10)."
+  date: "2026-08-10"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+heule-2026-08-17:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-08-17)."
+  date: "2026-08-17"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+heule-2026-08-19:
+  string: "M. Heule, personal communication, recorded on the no-three-in-line records page (2026-08-19)."
+  date: "2026-08-19"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
+  notes: "Found with a SAT solver."
+
+prellberg-2026-10-28:
+  string: "T. Prellberg, personal communication, recorded on the no-three-in-line records page (2026-10-28)."
+  date: "2026-10-28"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
