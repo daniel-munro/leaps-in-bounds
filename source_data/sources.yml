@@ -646,14 +646,164 @@ exoo-2010-05:
   url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
   notes: "Date from the legend of Comellas's table. The former-result entry for (5,4) on https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html instead says the 212-vertex graph was communicated by Eyal Loz in July 2006, with a link to Exoo's data."
 
-exoo-post-2001:
-  string: "Geoffrey Exoo, after May 2001 (i.e. after https://doi.org/10.1002/jgt.1007)"
-  date: "2001-06"
+comellas-table-1995-02:
+  string: "Comellas, F., & Delorme, C. Table of largest known (Δ,D)-graphs, version of February 1995 (archived December 1, 1996)."
+  date: "1995-02"
+  url: "https://web.archive.org/web/19961201101336/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+comellas-table-1997-08:
+  string: "Comellas, F., & Delorme, C. Table of largest known (Δ,D)-graphs, version last changed August 5, 1997 (archived January 26, 1998)."
+  date: "1997-08-05"
+  url: "https://web.archive.org/web/19980126110830/http://www-mat.upc.es:80/grup_de_grafs/table_g.html"
+
+comellas-table-1998-07:
+  string: "Comellas, F., & Delorme, C. Table of largest known (Δ,D)-graphs, version last changed July 13, 1998 (archived July 17, 1998)."
+  date: "1998-07-13"
+  url: "https://web.archive.org/web/19980717033033/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+hafner-1997-04:
+  string: "Paul R. Hafner, communicated to F. Comellas on April 24, 1997, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1997-04-24"
+  url: "https://web.archive.org/web/19980717033033/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+hafner-1997-07:
+  string: "Paul R. Hafner, communicated to F. Comellas on July 14, 1997, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1997-07-14"
+  url: "https://web.archive.org/web/19980717033033/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+gomez-pelayo-1997-07:
+  string: "José Gómez and Ignacio Pelayo, communicated to F. Comellas on July 30, 1997, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1997-07-30"
+  url: "https://web.archive.org/web/19980717033033/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+gomez-pelayo-1998-02:
+  string: "José Gómez and Ignacio Pelayo, communicated to F. Comellas on February 20, 1998, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1998-02-20"
+  url: "https://web.archive.org/web/19980717033033/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+quisquater-1998-02:
+  string: "Jean-Jacques Quisquater, communicated to F. Comellas on February 27, 1998, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1998-02-27"
+  url: "https://web.archive.org/web/19980717033033/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+
+hafner-1998-07:
+  string: "Paul R. Hafner, communicated to F. Comellas between July 1997 and July 1998, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1998-07-17"
+  url: "https://web.archive.org/web/19990117005251/http://maite71.upc.es:80/grup_de_grafs/table_g.html"
+  notes: "First listed in a version of the table that also includes an update dated July 17, 1998, which is used as the date."
+
+exoo-1999-06:
+  string: "Geoffrey Exoo, communicated to F. Comellas on June 9, 1999, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "1999-06-09"
+  url: "https://web.archive.org/web/20030122235147/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+hafner-2003-01:
+  string: "Paul R. Hafner, communicated to F. Comellas in January 2003, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2003-01"
+  url: "https://web.archive.org/web/20030122235147/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+gomez-2003-06:
+  string: "José Gómez, communicated to F. Comellas in June 2003, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2003-06"
+  url: "https://web.archive.org/web/20040209110551/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+  notes: "See also J. Gómez, On large (Δ,6)-graphs, Networks 46 (2005), 82-87."
+
+exoo-2004-08:
+  string: "Geoffrey Exoo, communicated to F. Comellas on August 22-28, 2004, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2004-08-28"
+  url: "https://web.archive.org/web/20050726080808/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-by-2004-09:
+  string: "Geoffrey Exoo, communicated to F. Comellas by September 16, 2004 (when the table first lists it), as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2004-09-16"
+  url: "https://web.archive.org/web/20041011192155/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2005-03-07:
+  string: "Geoffrey Exoo, communicated to F. Comellas on March 7, 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-03-07"
+  url: "https://web.archive.org/web/20050726080808/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2005-03-18:
+  string: "Geoffrey Exoo, communicated to F. Comellas on March 18, 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-03-18"
+  url: "https://web.archive.org/web/20050726080808/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+gomez-miller-2005-04:
+  string: "José Gómez and Mirka Miller, communicated to F. Comellas in April 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-04"
+  url: "https://web.archive.org/web/20050726080808/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2005-05:
+  string: "Geoffrey Exoo, communicated to F. Comellas on May 24, 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-05-24"
+  url: "https://web.archive.org/web/20050726080808/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2005-09:
+  string: "Geoffrey Exoo, communicated to F. Comellas on September 12, 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-09-12"
+  url: "https://web.archive.org/web/20060923023642/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-by-2005-09:
+  string: "Geoffrey Exoo, communicated to F. Comellas by September 24, 2005 (when the table first lists it), as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-09-24"
+  url: "https://web.archive.org/web/20051025063745/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2005-11-01:
+  string: "Geoffrey Exoo, communicated to F. Comellas on November 1, 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-11-01"
+  url: "https://web.archive.org/web/20060923023642/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2005-11:
+  string: "Geoffrey Exoo, communicated to F. Comellas on November 12-24, 2005, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-11-24"
+  url: "https://web.archive.org/web/20060923023642/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-by-2005-12:
+  string: "Geoffrey Exoo, communicated to F. Comellas by December 11, 2005 (when the table first lists it), as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2005-12-11"
+  url: "https://web.archive.org/web/20051212161600/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-by-2006-06:
+  string: "Geoffrey Exoo, communicated to F. Comellas by June 8, 2006 (when the table first lists it), as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2006-06-08"
+  url: "https://web.archive.org/web/20060619090145/http://maite71.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+loz-2006-07:
+  string: "Eyal Loz, communicated to F. Comellas on July 3-11, 2006, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2006-07-11"
+  url: "https://web.archive.org/web/20060923023642/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+  notes: "See also loz-siran-2008."
+
+exoo-2006-07:
+  string: "Geoffrey Exoo, communicated to F. Comellas on July 27, 2006, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2006-07-27"
+  url: "https://web.archive.org/web/20060923023642/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+loz-2006-08:
+  string: "Eyal Loz, communicated to F. Comellas in August 2006, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2006-08"
+  url: "https://web.archive.org/web/20060923023642/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+  notes: "See also loz-siran-2008."
+
+quisquater-2007-10:
+  string: "Jean-Jacques Quisquater, communicated to F. Comellas on October 19, 2007, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2007-10-19"
+  url: "https://web.archive.org/web/20071219113413/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html"
+
+exoo-2010-05-19:
+  string: "Geoffrey Exoo, communicated to F. Comellas on May 19, 2010, as listed in the archived table of largest known (Δ,D)-graphs."
+  date: "2010-05-19"
+  url: "https://web.archive.org/web/20130520012715/http://www-mat.upc.es:80/grup_de_grafs/grafs/taula_delta_d.html/"
 
 allwrightgraph:
   string: "Allwright, J. (1992). New (Δ, D) graphs discovered by heuristic search. Discrete Applied Mathematics, 37, 3-8."
   date: "1992-07-15"
   doi: "https://doi.org/10.1016/0166-218X(92)90120-Y"
+
+von-conta-1983:
+  string: "von Conta, C. (1983). Torus and other networks as communication networks with up to some hundred points. IEEE Transactions on Computers, C-32(7), 657-666."
+  date: "1983-07"
+  doi: "https://doi.org/10.1109/TC.1983.1676297"
 
 delorme85agraphs:
   string: "Delorme, C. (1985). Grands graphes de degré et diametre donnés. European Journal of Combinatorics, 6(4), 291-302."
