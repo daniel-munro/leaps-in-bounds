@@ -21,7 +21,7 @@ import subprocess
 import tempfile
 from dataclasses import dataclass
 from fractions import Fraction
-from typing import Any, Callable, Mapping
+from typing import Any, Callable, Iterator, Mapping
 
 import numpy as np
 import sympy
@@ -412,18 +412,68 @@ def complement(adj: list[int]) -> list[int]:
 
 def has_clique(adj: list[int], k: int) -> bool:
     """Check whether a graph has a clique with k vertices."""
-    def extend(candidates: int, needed: int) -> bool:
-        if needed == 0:
-            return True
-        while candidates:
-            if candidates.bit_count() < needed:
-                return False
-            v = candidates.bit_length() - 1
-            candidates &= ~(1 << v)
-            if extend(candidates & adj[v], needed - 1):
-                return True
+    return any(clique_search(adj, candidates, needed) for candidates, needed in clique_roots(adj, k))
+
+
+def clique_roots(adj: list[int], k: int) -> list[tuple[int, int]]:
+    """Searches, as (candidates, needed) pairs, that between them find a
+    k-clique if the graph has one."""
+    if k <= 0:
+        return [(0, 0)]
+    if is_circulant(adj):
+        # Vertex-transitive, so any clique can be moved to contain vertex 0
+        return [(adj[0], k - 1)] if adj else []
+    return [((1 << len(adj)) - 1, k)]
+
+
+def clique_search(adj: list[int], candidates: int, needed: int) -> bool:
+    """Check whether some `needed` vertices among `candidates` form a clique."""
+    if needed <= 1:
+        return needed <= 0 or candidates != 0
+    if candidates.bit_count() < needed:
         return False
-    return extend((1 << len(adj)) - 1, k)
+    return any(clique_search(adj, sub, needed - 1) for sub in clique_branches(adj, candidates, needed))
+
+
+def clique_branches(adj: list[int], candidates: int, needed: int) -> Iterator[int]:
+    """Split the search for a clique of `needed` vertices (at least 2) among
+    `candidates` into searches for `needed - 1` vertices among each yielded set.
+
+    Branch and bound with a greedy colouring bound (Tomita and Seki's MCQ):
+    the candidates are split into colour classes, sets of pairwise
+    non-adjacent vertices, so a clique among them has at most one vertex per
+    class. Vertices are tried in reverse colouring order, each with its
+    neighbours among the candidates not yet tried, and once those (coloured
+    before the current vertex, plus it) use fewer colours than the clique
+    needs, no clique can be completed.
+    """
+    order = []
+    colors = []
+    uncolored = candidates
+    color = 0
+    while uncolored:
+        color += 1
+        available = uncolored
+        while available:
+            low = available & -available
+            v = low.bit_length() - 1
+            available &= ~adj[v] & ~low
+            uncolored &= ~low
+            order.append(v)
+            colors.append(color)
+    for i in range(len(order) - 1, -1, -1):
+        if colors[i] < needed:
+            return
+        v = order[i]
+        yield candidates & adj[v]
+        candidates &= ~(1 << v)
+
+
+def is_circulant(adj: list[int]) -> bool:
+    """Check whether i -> i + 1 (mod n) is an automorphism of the graph."""
+    n = len(adj)
+    full = (1 << n) - 1
+    return all(((adj[i] << 1) | (adj[i] >> (n - 1))) & full == adj[(i + 1) % n] for i in range(n))
 
 
 def bits(mask: int) -> list[int]:
