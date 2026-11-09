@@ -20,7 +20,7 @@ In short: edit `source_data/` → run the build/test scripts → `_data/` powers
 
 ## Verified Bounds
 
-Alongside bounds from the literature, constants can have verified bounds backed by a certificate whose evidence has been checked here: an explicit construction checked by a program, or a formal proof in Lean. Evidence too slow to check here can be attested instead, by someone who checked it with a checker they published.
+Alongside bounds from the literature, constants can have verified bounds backed by a certificate whose evidence has been checked here: an explicit construction checked by a program, or a formal proof in Lean. Evidence too slow to check here, or too large to keep here, can be attested instead, by someone who checked it with a checker they published.
 
 - `certificates/`: One YAML file per certificate. See [certificates/README.md](certificates/README.md) for the format and how to submit one.
 - `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
