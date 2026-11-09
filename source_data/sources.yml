@@ -454,6 +454,36 @@ angeltveit-mckay-2019-2024:
   date: "2020"
   notes: "[AnM2] and [AnM3] in https://doi.org/10.37236/21"
 
+google-research-2026:
+  string: "Google Research, ramsey_number_bounds: improved lower bounds on Ramsey numbers, GitHub repository, 2026."
+  date: "2026-10-22"
+  url: "https://github.com/google-research/google-research/tree/0d94f8c4d92678ce5f7a0eacae725f79174cfb03/ramsey_number_bounds"
+  notes: "Not peer reviewed. Colourings found with AI-generated search code, with a notebook to check them. Dated by the commit that added the R(8,12) colouring; other bounds in the repository were added on other dates."
+
+canli-2026a:
+  string: "A. Canli (Quantavane), Ramsey number lower bounds from Quantavane, GitHub repository, 2026-10-25."
+  date: "2026-10-25"
+  url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/21ede2c042cce0fe9311c78cca8ad58531632b17"
+  notes: "Not peer reviewed. Colourings for R(5,15) >= 279 and R(8,12) >= 512, with a checker. Written up in A. Canli, New lower bounds for the Ramsey numbers R(5,15) and R(8,12), Zenodo, 2026-11-01, https://doi.org/10.5281/zenodo.23857057. The searches were run by an AI agent."
+
+canli-2026b:
+  string: "A. Canli, New lower bounds for the Ramsey numbers R(5,15) and R(8,12), version 2, Zenodo."
+  date: "2026-11-03"
+  doi: "https://doi.org/10.5281/zenodo.23920916"
+  notes: "Not peer reviewed. R(8,12) >= 519; the colouring is in https://github.com/arhancanli/quantavane-ramsey-records/tree/ee821217e5b1d01b648deaf8d5629f0f1c83e589. The searches were run by an AI agent."
+
+canli-2026c:
+  string: "A. Canli (Quantavane), Ramsey number lower bounds from Quantavane, GitHub repository, 2026-11-05."
+  date: "2026-11-05"
+  url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/6f907e04548d8ef3144005d327bff3660c81fa16"
+  notes: "Not peer reviewed. Two circulant colourings for R(5,15) >= 283, with a checker. The searches were run by an AI agent."
+
+canli-2026d:
+  string: "A. Canli (Quantavane), Ramsey number lower bounds from Quantavane, GitHub repository, 2026-11-06."
+  date: "2026-11-06"
+  url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/3ae0f3feaec12221028b92036c39f042f0b1197a"
+  notes: "Not peer reviewed. A colouring for R(8,12) >= 523, with a checker. The searches were run by an AI agent."
+
 # Packing unit squares
 
 kearney-shiu-2002:
@@ -1477,6 +1507,12 @@ chen-zhu-long-2026:
   date: "2026-10-22"
   url: "https://arxiv.org/abs/2610.31362"
   notes: "Not peer reviewed. S(8) >= 5372 follows from S(6) >= 537 by a recurrence."
+
+mckenna-2026:
+  string: "A. McKenna, The sixth Schur number is at least 538, Zenodo."
+  date: "2026-11-04"
+  doi: "https://doi.org/10.5281/zenodo.23939242"
+  notes: "Not peer reviewed. The partition is checked directly and in Lean 4. S(8) >= 5382 follows by known recursive constructions."
 
 # Weak Schur numbers
 

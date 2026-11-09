@@ -1,0 +1,16 @@
+constant: cage-7-9
+bound: upper
+value: 17600
+kind: witness
+witness:
+  format: sparse6
+  file: cage-7-9-upper-17600.s6
+submitted_by: arhancanli
+date: 2026-11-08
+notes: >-
+  A 7-regular graph of girth 9 on 17600 vertices: a cyclic lift (block circulant) of K_8 over Z_2200. Vertex (u, a),
+  u in 0..7 and a in Z_2200, is vertex u*2200 + a; each edge uv of K_8 with voltage x joins (u, a) to
+  (v, a + x mod 2200). The voltages were found by a tabu search over cyclic voltage assignments that counts the closed
+  walks of length below 9 in K_8 with voltage sum 0; the search was written and run by an AI agent (Claude,
+  Anthropic) for Quantavane. Checked by two separately written programs (breadth-first search from every vertex, and
+  non-backtracking walk counts). The House of Graphs cage table had no entry for (7,9) on 7 Nov 2026.

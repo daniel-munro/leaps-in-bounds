@@ -1,0 +1,18 @@
+constant: weak-schur-7
+bound: lower
+value: 2154
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-7-lower-2154.txt
+submitted_by: arhancanli
+date: 2026-11-08
+notes: >-
+  A weak Schur partition of [1, 2154] into 7 sets: Rowley's first construction (rowley-2020, Theorem 1:
+  WS(k+1) >= 4 S(k) + 2) applied to Adam McKenna's partition of [1, 538] into 6 sum-free sets ("The sixth Schur
+  number is at least 538", Zenodo, 4 Nov 2026, doi:10.5281/zenodo.23937655, file schur6-538.word, colours renumbered
+  in the order of their least elements). T_i = {4i - 1, 4i, 4i + 1} takes the colour of i for i in [1, 538], and
+  {1, 2, 6, 10, ..., 2154} is the seventh colour. This improves the published WS(7) >= 2146 (Rowley, from
+  S(6) >= 536). Built by our own script and checked by three programs of our own (a C bitset scan over each colour
+  class, a NumPy FFT convolution and an exact number-theoretic transform modulo 2013265921), written by an AI agent
+  (Claude, Anthropic) for Quantavane; each rejects a copy with one number recoloured.

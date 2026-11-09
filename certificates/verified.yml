@@ -1347,6 +1347,11 @@ cage-6-9-lower-937:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+cage-6-9-upper-5600:
+  sha256: ba74319a727666abc697579947181f2cf3fccb304b4e424605ac1d5378147be9
+  checker: 78fed2f94e8e158b3aecad93939dee7d9eb7e91e
+  verified_by: daniel-munro
+  date: '2026-11-08'
 cage-7-10-lower-3110:
   sha256: 007ed09aeaca48028c1b83e619e838fd3d39b84fb05e0984577182b1880a3f0f
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -1430,6 +1435,11 @@ cage-7-8-lower-518:
 cage-7-9-lower-1814:
   sha256: b24e1b50ac539712eec74711f9edeef5f8b78fb4216d9d280fc3f10aa689d528
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
+  verified_by: daniel-munro
+  date: '2026-11-08'
+cage-7-9-upper-17600:
+  sha256: d4fc1d83b53dd44ec1009e8387f9d92f408a5b5922c8f33e6b9bc4d2d522cd1f
+  checker: 78fed2f94e8e158b3aecad93939dee7d9eb7e91e
   verified_by: daniel-munro
   date: '2026-11-08'
 cage-8-10-lower-5602:
@@ -2922,6 +2932,11 @@ ramsey-4-9-lower-69:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+ramsey-5-15-lower-283:
+  sha256: 16f6fcb2fc24c0d8454b85a323a47ccec90689b3ad4c4790f81f0dd7e13f45d3
+  checker: 78fed2f94e8e158b3aecad93939dee7d9eb7e91e
+  verified_by: daniel-munro
+  date: '2026-11-08'
 ramsey-5-5-lower-38:
   sha256: c563bbd6941e7f371b6384f530b5e4894ef3d7f766f629a53268ba3abab5be05
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -4175,5 +4190,20 @@ weak-schur-5-lower-207:
 weak-schur-6-lower-650:
   sha256: d0492fc8ec5ef4624c52916e64f268bec90a253accbbbbca60ed01f113e0755a
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
+  verified_by: daniel-munro
+  date: '2026-11-08'
+weak-schur-7-lower-2154:
+  sha256: 2c497ff5eacc36dcca0642d4d7c3e2fbbf07e4520ba4cfb5709e3cb4f1b0cb68
+  checker: 78fed2f94e8e158b3aecad93939dee7d9eb7e91e
+  verified_by: daniel-munro
+  date: '2026-11-08'
+weak-schur-8-lower-7002:
+  sha256: 423c03b8464af57c7aee3fc2ab489ee25f4f68bfab99621f01549945a598383d
+  checker: 78fed2f94e8e158b3aecad93939dee7d9eb7e91e
+  verified_by: daniel-munro
+  date: '2026-11-08'
+weak-schur-9-lower-22620:
+  sha256: 110aa306a98d1ae89b67c85a98a43d6051383687ba9cd4d6a7a308e5766793b4
+  checker: 78fed2f94e8e158b3aecad93939dee7d9eb7e91e
   verified_by: daniel-munro
   date: '2026-11-08'

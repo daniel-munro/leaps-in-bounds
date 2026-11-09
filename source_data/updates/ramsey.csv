@@ -71,6 +71,8 @@ ramsey-5-14,267,,kuznetsov-2016,ejc-ds1-small-ramsey-numbers
 ramsey-5-14,,1461,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-5-15,275,,trivial,ejc-ds1-small-ramsey-numbers
 ramsey-5-15,,1878,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
+ramsey-5-15,279,,canli-2026a,
+ramsey-5-15,283,,canli-2026c,
 ramsey-6-6,102,,kalbfleisch-1966,ejc-ds1-small-ramsey-numbers
 ramsey-6-6,,165,mackey-1994,ejc-ds1-small-ramsey-numbers
 ramsey-6-7,115,,exoo-tatarevic-2015,ejc-ds1-small-ramsey-numbers
@@ -115,6 +117,10 @@ ramsey-8-10,,6090,huang-zhang-1998,ejc-ds1-small-ramsey-numbers
 ramsey-8-11,457,,trivial,ejc-ds1-small-ramsey-numbers
 ramsey-8-11,,10630,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-8-12,,16944,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
+ramsey-8-12,511,,google-research-2026,
+ramsey-8-12,512,,canli-2026a,
+ramsey-8-12,519,,canli-2026b,
+ramsey-8-12,523,,canli-2026d,
 ramsey-8-13,817,,xu-xie-e-r-2004,ejc-ds1-small-ramsey-numbers
 ramsey-8-13,,27485,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-8-14,,41525,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers

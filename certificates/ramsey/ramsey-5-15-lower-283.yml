@@ -1,0 +1,18 @@
+constant: ramsey-5-15
+bound: lower
+value: 283
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-5-15-lower-283.g6
+submitted_by: arhancanli
+date: 2026-11-08
+notes: >-
+  A circulant graph on 282 vertices with no 5-clique and no independent set of size 15: vertices 0 to 281, with i and
+  j adjacent when min(|i-j|, 282-|i-j|) is one of 2, 6, 8, 9, 10, 13, 14, 21, 29, 30, 32, 33, 36, 39, 44, 45, 47, 52,
+  55, 61, 67, 69, 71, 72, 77, 83, 86, 89, 92, 95, 97, 99, 108, 112, 114, 115, 117, 118, 120, 121, 124, 128, 130, 131,
+  132, 135, 136, 139, 141. Found on 5 Nov 2026 by a tabu search over circulant colourings, written and run by an AI
+  agent (Claude, Anthropic) for Quantavane; the line of searches started from E. Kuznetsov's cyclic
+  (5,14)-colouring on 266 vertices (arXiv:1505.07186), scaled up to 276, 278 and then 282 vertices. Checked by two
+  separately written programs (Bron-Kerbosch with Tomita's pivot, and a branch and bound). Data, checker and a note:
+  github.com/arhancanli/quantavane-ramsey-records and doi:10.5281/zenodo.23920916.

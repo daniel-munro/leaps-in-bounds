@@ -1,0 +1,22 @@
+constant: weak-schur-9
+bound: lower
+value: 22620
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-9-lower-22620.txt
+submitted_by: arhancanli
+date: 2026-11-08
+notes: >-
+  A weak Schur partition of [1, 22620] into 9 sets: the WS-template construction of Ageron, Casteras, Pellerin,
+  Portella, Rimmel and Tomasik (ageron-et-al-2021, Theorem 3.17 with their 23-WS-template of width 42 and 4 colours,
+  Table 8, and one last number in the first subset, Proposition 3.20: WS(k+3) >= 42 S(k) + 24) applied to Adam
+  McKenna's partition of [1, 538] into 6 sum-free sets ("The sixth Schur number is at least 538", Zenodo, 4 Nov 2026,
+  doi:10.5281/zenodo.23937655, file schur6-538.word, colours renumbered in the order of their least elements). With
+  a = 42 and b = 23, x <= 23 takes its template colour; for x > 23, with column pi(x) = (x mod 42) + 42 if
+  x mod 42 <= 23 and x mod 42 otherwise, and row lambda(x) = 1 + floor((x - 24) / 42), x takes the template colour of
+  pi(x) when that is one of the three regular colours, and otherwise colour 3 + c, where c is the colour of lambda(x)
+  in the 538-partition; 22620 joins the first colour. This improves the published WS(9) >= 22536 (Ageron et al., from
+  S(6) >= 536). Built by our own script and checked by three programs of our own (a C bitset scan over each colour
+  class, a NumPy FFT convolution and an exact number-theoretic transform modulo 2013265921), written by an AI agent
+  (Claude, Anthropic) for Quantavane; each rejects a copy with one number recoloured.

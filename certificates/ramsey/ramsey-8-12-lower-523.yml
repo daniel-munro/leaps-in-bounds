@@ -1,0 +1,27 @@
+constant: ramsey-8-12
+bound: lower
+value: 523
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-8-12-lower-523.g6
+submitted_by: arhancanli
+date: 2026-11-08
+notes: >-
+  A graph on 522 vertices with no 8-clique and no independent set of size 12. It grew from the 510-vertex graph for
+  R(8,12) >= 511 in google-research/ramsey_number_bounds (improved_bounds), in three steps: to 511 vertices with
+  Fritz Cremer's add-a-vertex-and-repair local search (arXiv:2610.12122), which recolours edges until no 8-clique and
+  no independent 12-set remain (25 Oct 2026); to 518 by copying three vertices whose copies create neither (3 Nov);
+  and to 522 by adding four vertices one at a time, each starting as a copy of an existing vertex and repaired by the
+  same local search (6 Nov). The searches were written and run by an AI agent (Claude, Anthropic) for Quantavane.
+  Checked on all 522 vertices by two separately written programs (Bron-Kerbosch with Tomita's pivot, and a branch and
+  bound): largest clique 7, largest independent set 11. Data, checker and a note:
+  github.com/arhancanli/quantavane-ramsey-records and doi:10.5281/zenodo.23920916.
+attestation:
+  by: Arhan Canli (Quantavane)
+  checker: https://github.com/arhancanli/quantavane-ramsey-records/blob/2aeff3387fe45be8990b4f2cb7b8f891c30fea82/check.c
+  evidence: https://github.com/arhancanli/quantavane-ramsey-records/blob/2aeff3387fe45be8990b4f2cb7b8f891c30fea82/colourings/R8_12_K522.txt
+  command: cc -O2 -o check check.c && ./check colourings/R8_12_K522.txt
+  notes: >-
+    The evidence file is the adjacency matrix of the graph6 witness here, row by row (red edges are 1s), as checked
+    bit for bit when this attestation was added. The checker takes an hour or two on a laptop core.
