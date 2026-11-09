@@ -106,6 +106,7 @@ ramsey-7-12,417,,xiaodong-s-r-2011,ejc-ds1-small-ramsey-numbers
 ramsey-7-12,,6954,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-7-13,511,,xu-xie-radziszowski-2004,ejc-ds1-small-ramsey-numbers
 ramsey-7-13,,10578,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
+ramsey-7-13,513,,google-research-2026,
 ramsey-7-14,,15263,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-7-15,,22112,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-8-8,282,,burling-reyner-1972,ejc-ds1-small-ramsey-numbers
@@ -131,12 +132,14 @@ ramsey-9-9,,6588,shi-zhang-2001,ejc-ds1-small-ramsey-numbers
 ramsey-9-10,581,,xiaodong-s-r-2011,ejc-ds1-small-ramsey-numbers
 ramsey-9-10,,12677,trivial,ejc-ds1-small-ramsey-numbers
 ramsey-9-11,,22325,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
+ramsey-9-11,617,,google-research-2026,
 ramsey-9-12,,38832,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-9-13,,64864,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-10-10,798,,mathon-1987,ejc-ds1-small-ramsey-numbers
 ramsey-10-10,,23556,shi-2003,ejc-ds1-small-ramsey-numbers
 ramsey-10-11,,45881,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
 ramsey-10-12,,81123,huang-w-s-y-z-h-2007,ejc-ds1-small-ramsey-numbers
+ramsey-10-12,856,,google-research-2026,
 ramsey-10-15,1313,,trivial,ejc-ds1-small-ramsey-numbers
 ramsey-4-6,,40,angeltveit-mckay-2019-2024,ejc-ds1-small-ramsey-numbers
 ramsey-4-7,,58,angeltveit-mckay-2019-2024,ejc-ds1-small-ramsey-numbers
@@ -187,7 +190,8 @@ ramsey-9-9,,4956,angeltveit-mckay-2019-2024,ejc-ds1-small-ramsey-numbers
 ramsey-9-10,,8675,angeltveit-mckay-2019-2024,ejc-ds1-small-ramsey-numbers
 ramsey-9-11,,14631,angeltveit-mckay-2019-2024,ejc-ds1-small-ramsey-numbers
 ramsey-10-10,,16064,angeltveit-mckay-2019-2024,ejc-ds1-small-ramsey-numbers
-ramsey-3-13,61,,nagda-raghavan-thakurta-2026,ejc-ds1-small-ramsey-numbers
-ramsey-4-13,139,,nagda-raghavan-thakurta-2026,ejc-ds1-small-ramsey-numbers
-ramsey-4-14,148,,nagda-raghavan-thakurta-2026,ejc-ds1-small-ramsey-numbers
-ramsey-4-15,159,,nagda-raghavan-thakurta-2026,ejc-ds1-small-ramsey-numbers
+ramsey-3-13,61,,google-research-2026a,nagda-raghavan-thakurta-2026
+ramsey-4-13,139,,google-research-2026a,nagda-raghavan-thakurta-2026
+ramsey-4-14,148,,google-research-2026b,nagda-raghavan-thakurta-2026
+ramsey-4-15,159,,google-research-2026a,nagda-raghavan-thakurta-2026
+ramsey-4-15,163,,google-research-2026,

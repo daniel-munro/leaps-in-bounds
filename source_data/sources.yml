@@ -458,7 +458,19 @@ google-research-2026:
   string: "Google Research, ramsey_number_bounds: improved lower bounds on Ramsey numbers, GitHub repository, 2026."
   date: "2026-10-22"
   url: "https://github.com/google-research/google-research/tree/0d94f8c4d92678ce5f7a0eacae725f79174cfb03/ramsey_number_bounds"
-  notes: "Not peer reviewed. Colourings found with AI-generated search code, with a notebook to check them. Dated by the commit that added the R(8,12) colouring; other bounds in the repository were added on other dates."
+  notes: "Not peer reviewed. Colourings found with AI-generated search code, with a notebook to check them. Dated by the commit that added the colourings for R(4,15) >= 163, R(7,13) >= 513, R(8,12) >= 511, R(9,11) >= 617 and R(10,12) >= 856, among others. Earlier bounds in the repository are google-research-2026a and google-research-2026b."
+
+google-research-2026a:
+  string: "Google Research, ramsey_number_bounds: improved lower bounds on Ramsey numbers, GitHub repository, 2026."
+  date: "2026-02-12"
+  url: "https://github.com/google-research/google-research/tree/62d471c0e73cbb808f5bd0341e1d5aa3a5a41ea0/ramsey_number_bounds"
+  notes: "Not peer reviewed. Colourings for R(3,13) >= 61, R(3,18) >= 100, R(4,13) >= 139 and R(4,15) >= 159, found with AlphaEvolve. Dated by the commit that added them (authored 2026-02-10, committed 2026-02-12). Written up by the same team in A. Nagda, P. Raghavan and A. Thakurta, arXiv:2603.09172 (2026-03-10)."
+
+google-research-2026b:
+  string: "Google Research, ramsey_number_bounds: improved lower bounds on Ramsey numbers, GitHub repository, 2026."
+  date: "2026-03-09"
+  url: "https://github.com/google-research/google-research/tree/834d2a8ca7582b5c39481f4284f249f89068b13b/ramsey_number_bounds"
+  notes: "Not peer reviewed. Colouring for R(4,14) >= 148, found with AlphaEvolve. Dated by the commit that added it. Written up by the same team in A. Nagda, P. Raghavan and A. Thakurta, arXiv:2603.09172 (2026-03-10)."
 
 canli-2026a:
   string: "A. Canli (Quantavane), Ramsey number lower bounds from Quantavane, GitHub repository, 2026-10-25."
