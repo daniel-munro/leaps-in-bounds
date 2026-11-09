@@ -6,7 +6,9 @@ permalink: /unverified/
 
 # Unverified bounds
 
-These are the best bounds from the literature that no certificate matches yet, for the families of constants that accept [certificates]({{ site.repository }}/blob/main/certificates/README.md). Each one is a chance to turn a published bound into a verified one.
+These are the best bounds from the literature that no verified certificate matches yet, for the families of constants that accept [certificates]({{ site.repository }}/blob/main/certificates/README.md). Each one is a chance to turn a published bound into a verified one.
+
+Some bounds are <span class="badge bg-attested">Attested</span>: a certificate has the evidence, and someone else says they checked it with a published checker, but checking it here has been too slow so far. Running their checker yourself doesn't make it verified, since that's one more attestation. What helps is making the check fast enough to run here: a faster checker for the family, a smaller witness for the same bound, or a Lean proof.
 
 A <span class="badge bg-success">Witness</span> bound can be certified by giving the construction itself, which is often in the cited source or its ancillary files. A <span class="badge bg-secondary">Lean proof</span> bound needs a formal proof that no better construction exists, which is usually much harder.
 
@@ -56,6 +58,7 @@ This list is also available as [YAML]({{ site.baseurl }}/data/unverified_bounds.
     <tr>
       <th>Constant</th>
       <th>Literature</th>
+      <th>Attested</th>
       <th>Verified</th>
       <th>Evidence</th>
       <th>Source</th>
@@ -67,7 +70,21 @@ This list is also available as [YAML]({{ site.baseurl }}/data/unverified_bounds.
       {% if row.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
       <tr>
         <td><a href="{{ site.baseurl }}/constants/{{ row.constant }}">{{ constant.name }}</a></td>
-        <td class="text-nowrap">${{ relation }} {{ row.literature.latex }}$</td>
+        <td class="text-nowrap">
+          {% if row.literature %}
+            ${{ relation }} {{ row.literature.latex }}$
+          {% else %}
+            <span class="text-muted">none</span>
+          {% endif %}
+        </td>
+        <td class="text-nowrap">
+          {% if row.attested %}
+            {% assign attested_cert = constant.certificates | where: "id", row.attested_certificate | first %}
+            <a href="{{ attested_cert.attestation.checker }}">${{ relation }} {{ row.attested.latex }}$</a>
+          {% else %}
+            <span class="text-muted">none</span>
+          {% endif %}
+        </td>
         <td class="text-nowrap">
           {% if row.verified %}
             ${{ relation }} {{ row.verified.latex }}$

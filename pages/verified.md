@@ -6,7 +6,9 @@ permalink: /verified/
 
 # Verified bounds
 
-Verified bounds come with a [certificate]({{ site.repository }}/blob/main/certificates/README.md) that is checked automatically: an explicit construction checked by a program, or a formal proof in Lean. Anyone can submit one, and each is credited to the GitHub account that submitted it, which may not be whoever found the bound. See the [unverified bounds]({{ site.baseurl }}/unverified/) for bounds from the literature that still need one.
+Verified bounds come with a [certificate]({{ site.repository }}/blob/main/certificates/README.md) whose evidence has been checked here: an explicit construction checked by a program, or a formal proof in Lean. Anyone can submit one, and each is credited to the GitHub account that submitted it, which may not be whoever found the bound. See the [unverified bounds]({{ site.baseurl }}/unverified/) for bounds from the literature that still need one.
+
+Some certificates are <span class="badge bg-attested">Attested</span> instead: their evidence is here, but too slow to check here so far, and someone else says they checked it with a checker they published. Anyone can run that checker on the evidence, but until it's checked here, an attested bound isn't verified.
 
 All certificates are also available as [YAML]({{ site.baseurl }}/data/certificates.yml), [JSON]({{ site.baseurl }}/data/certificates.json), [CSV]({{ site.baseurl }}/data/certificates.csv) or [TSV]({{ site.baseurl }}/data/certificates.tsv).
 
@@ -58,7 +60,7 @@ All certificates are also available as [YAML]({{ site.baseurl }}/data/certificat
         <td><a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a></td>
         <td><a href="{{ site.baseurl }}/constants/{{ cert.constant }}">{{ constant.name }}</a></td>
         <td class="text-nowrap"><a href="{{ site.repository }}/blob/main/{{ cert.path }}">${{ relation }} {{ cert.value.latex }}$</a></td>
-        <td>{% if cert.kind == "lean" %}Lean proof{% else %}Construction{% endif %}</td>
+        <td>{% if cert.kind == "lean" %}Lean proof{% else %}Construction{% endif %}{% if cert.status == "attested" %} <span class="badge bg-attested">Attested</span>{% endif %}</td>
         <td>{% include certificate_comparison.html cert=cert %}</td>
       </tr>
     {% endfor %}

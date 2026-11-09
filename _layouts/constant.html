@@ -60,7 +60,8 @@ layout: default
 <h2>Verified bounds</h2>
 
 <p class="text-muted small">
-  Verified bounds come with a certificate that is checked automatically: a formal proof in Lean, or an explicit construction checked by a program.
+  Verified bounds come with a certificate whose evidence has been checked here: a formal proof in Lean, or an explicit construction checked by a program.
+  An <span class="badge bg-attested">Attested</span> bound comes with evidence that someone else checked with a published checker, but that hasn't been checked here yet.
   <a href="{{ site.repository }}/blob/main/certificates/README.md">Submit a certificate</a>.
 </p>
 
@@ -70,12 +71,32 @@ layout: default
   {% if side == "lower" %}
     {% assign verified_value = constant.verified_lower_bound %}
     {% assign verified_id = constant.verified_lower_certificate %}
+    {% assign attested_value = constant.attested_lower_bound %}
+    {% assign attested_id = constant.attested_lower_certificate %}
   {% else %}
     {% assign verified_value = constant.verified_upper_bound %}
     {% assign verified_id = constant.verified_upper_certificate %}
+    {% assign attested_value = constant.attested_upper_bound %}
+    {% assign attested_id = constant.attested_upper_certificate %}
   {% endif %}
   <li>
     <strong>{{ side | capitalize }} bound:</strong>
+    {% if attested_value != null %}
+      {% assign cert = constant.certificates | where: "id", attested_id | first %}
+      ${{ attested_value.latex }}$
+      {% if attested_value.alt_display != null %}
+        ({{ attested_value.alt_display }})
+      {% endif %}
+      <span class="badge bg-attested">Attested</span>
+      <br><a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
+      submitted by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>, {{ cert.date }}
+      <br>[checked by {{ cert.attestation.by }} with <a href="{{ cert.attestation.checker }}">their checker</a>, not yet here]
+      {% if cert.source %}
+        {% assign source = site.data.sources[cert.source] %}
+        <br>[construction from {{ source.string }}]
+      {% endif %}
+      {% if verified_value != null %}<br>{% endif %}
+    {% endif %}
     {% if verified_value != null %}
       ${{ verified_value.latex }}$
       {% if verified_value.alt_display != null %}
@@ -93,7 +114,7 @@ layout: default
         {% assign source = site.data.sources[cert.source] %}
         <br>[construction from {{ source.string }}]
       {% endif %}
-    {% else %}
+    {% elsif attested_value == null %}
       <em>None yet</em>
     {% endif %}
   </li>

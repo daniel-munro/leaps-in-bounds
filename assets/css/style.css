@@ -195,6 +195,17 @@ h1 {
     background-color: #6f42c1 !important;
 }
 
+/* Attested value: checked elsewhere with a published checker, but not here.
+   Dark enough to read on the pale yellow of a bounded cell. */
+.attested {
+    color: #c08a00;
+}
+
+.bg-attested {
+    background-color: #f0b400 !important;
+    color: #212529 !important;
+}
+
 /* Hover cards for constants in the tables */
 .constant-card-popover {
     --bs-popover-max-width: 380px;

@@ -101,6 +101,8 @@ for constant_id, constant_data in constants.items():
     flatten_value_dict(constant_dict, 'literature_upper_bound')
     flatten_value_dict(constant_dict, 'verified_lower_bound')
     flatten_value_dict(constant_dict, 'verified_upper_bound')
+    flatten_value_dict(constant_dict, 'attested_lower_bound')
+    flatten_value_dict(constant_dict, 'attested_upper_bound')
             
     constants_list.append(constant_dict)
 
@@ -152,6 +154,7 @@ unverified_list = []
 for row in unverified:
     row_dict = row.copy()
     flatten_value_dict(row_dict, 'literature')
+    flatten_value_dict(row_dict, 'attested')
     flatten_value_dict(row_dict, 'verified')
     unverified_list.append(row_dict)
 

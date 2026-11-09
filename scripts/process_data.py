@@ -16,7 +16,14 @@ import pathlib
 import yaml
 import csv
 from typing import Any, Mapping
-from certificates import FAMILIES, best_certificates, is_better, load_certificates
+from certificates import (
+    FAMILIES,
+    best_certificates,
+    certificate_status,
+    is_better,
+    load_certificates,
+    load_manifest,
+)
 from utils import Value, QuotedString, process_constant_images
 
 
@@ -200,36 +207,60 @@ def assign_updates_and_values(
 def assign_certificates(
     constants: dict[str, dict[str, Any]],
     certificates: Mapping[str, Mapping[str, Any]],
+    manifest: Mapping[str, Mapping[str, Any]],
 ) -> None:
-    """Attach certificates to constants and set their verified bounds.
+    """Attach certificates to constants and set their verified and attested
+    bounds.
 
-    Certificates are assumed to have been checked already (see
-    scripts/check_certificates.py, which runs in CI).
+    A certificate is verified if the manifest records that a trusted verifier
+    checked its evidence, and attested if it cites someone else's published
+    checker instead (see scripts/check_certificates.py, which runs in CI).
+    Certificates that are neither, awaiting verification, are left out.
+
+    The verified bound on each side comes from the strongest verified
+    certificate. The attested bound is set only when an attested certificate
+    is strictly stronger than that.
 
     Args:
         constants: Dictionary of constants.
         certificates: Dictionary of certificates.
+        manifest: Manifest of verified certificates.
     """
     for constant in constants.values():
         constant["certifiable"] = constant["group"] in FAMILIES
-        constant["verified_lower_bound"] = None
-        constant["verified_lower_certificate"] = None
-        constant["verified_upper_bound"] = None
-        constant["verified_upper_certificate"] = None
+        for side in ["lower", "upper"]:
+            for tier in ["verified", "attested"]:
+                constant[f"{tier}_{side}_bound"] = None
+                constant[f"{tier}_{side}_certificate"] = None
         constant["certificates"] = []
 
+    by_status: dict[str, dict[str, Mapping[str, Any]]] = {"verified": {}, "attested": {}}
+    left_out = 0
     for cert in sorted(certificates.values(), key=lambda c: c["date"]):
         if cert["constant"] not in constants:
             raise ValueError(f"Certificate {cert['id']} is for unknown constant {cert['constant']}")
-        fields = ["id", "bound", "value", "kind", "submitted_by", "date", "source", "notes", "path"]
+        status = certificate_status(cert, manifest)
+        if status not in by_status:
+            left_out += 1
+            continue
+        by_status[status][cert["id"]] = cert
+        fields = ["id", "bound", "value", "kind", "submitted_by", "date", "source", "notes", "path", "attestation"]
         summary = {k: cert[k] for k in fields if k in cert}
+        summary["status"] = status
         if cert["kind"] == "lean":
             summary["theorem"] = cert["lean"]["theorem"]
         constants[cert["constant"]]["certificates"].append(summary)
 
-    for (constant_id, bound), cert in best_certificates(certificates).items():
+    if left_out:
+        print(f"Leaving out {left_out} certificates awaiting verification")
+    for (constant_id, bound), cert in best_certificates(by_status["verified"]).items():
         constants[constant_id][f"verified_{bound}_bound"] = Value(str(cert["value"]))
         constants[constant_id][f"verified_{bound}_certificate"] = cert["id"]
+    for (constant_id, bound), cert in best_certificates(by_status["attested"]).items():
+        verified = constants[constant_id][f"verified_{bound}_bound"]
+        if verified is None or is_better(bound, cert["approx"], verified.decimal_approx):
+            constants[constant_id][f"attested_{bound}_bound"] = Value(str(cert["value"]))
+            constants[constant_id][f"attested_{bound}_certificate"] = cert["id"]
 
 
 def combine_bounds(constants: dict[str, dict[str, Any]]) -> None:
@@ -239,8 +270,9 @@ def combine_bounds(constants: dict[str, dict[str, Any]]) -> None:
     The literature bounds move to literature_exact_value,
     literature_lower_bound and literature_upper_bound, and lower_bound_source
     and upper_bound_source say where each bound comes from: "literature",
-    "verified", or "both" when they're equal. The exact value is known when
-    the lower and upper bounds are equal, whatever their sources.
+    "verified", "both" when those are equal, or "attested" when an attested
+    certificate is stronger than both. The exact value is known when the
+    lower and upper bounds are equal, whatever their sources.
     """
     for constant in constants.values():
         for field in ["exact_value", "lower_bound", "upper_bound"]:
@@ -258,6 +290,10 @@ def combine_bounds(constants: dict[str, dict[str, Any]]) -> None:
                 best, source = literature, "both"
             else:
                 best, source = literature, "literature"
+            attested = constant[f"attested_{side}_bound"]
+            if attested is not None and (best is None or best.decimal_approx is None
+                                         or is_better(side, attested.decimal_approx, best.decimal_approx)):
+                best, source = attested, "attested"
             constant[f"{side}_bound"] = best
             constant[f"{side}_bound_source"] = source
         lower, upper = constant["lower_bound"], constant["upper_bound"]
@@ -269,8 +305,9 @@ def combine_bounds(constants: dict[str, dict[str, Any]]) -> None:
 
 
 def find_unverified_bounds(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, Any]]:
-    """List the literature bounds that no certificate matches yet, for
-    constants in families that accept certificates.
+    """List the bounds that no verified certificate matches yet, for
+    constants in families that accept certificates: bounds from the
+    literature, and attested bounds, whose checks haven't been run here.
 
     Each entry says whether a witness can certify that bound or it needs a
     Lean proof, and which source gave the literature bound. Call after
@@ -284,20 +321,33 @@ def find_unverified_bounds(constants: Mapping[str, Mapping[str, Any]]) -> list[d
         for side in ["lower", "upper"]:
             literature = constant[f"literature_{side}_bound"]
             verified = constant[f"verified_{side}_bound"]
-            if literature is None or literature.decimal_approx is None:
+            attested = constant[f"attested_{side}_bound"]
+            if literature is not None and literature.decimal_approx is None:
+                literature = None
+            targets = [v for v in [literature, attested] if v is not None]
+            if not targets:
                 continue
-            if verified is not None and not is_better(side, literature.decimal_approx, verified.decimal_approx):
+            if verified is not None and not any(
+                is_better(side, v.decimal_approx, verified.decimal_approx) for v in targets
+            ):
                 continue
-            update = next(
+            update = literature and next(
                 (u for u in reversed(constant["updates"])
                  if u["type"] == f"{side}_bound" and u["value"]["latex"] == literature.latex),
                 None,
             )
+            if literature is not None and verified is not None and not is_better(
+                side, literature.decimal_approx, verified.decimal_approx
+            ):
+                # Only the attested bound is unverified
+                literature, update = None, None
             unverified.append({
                 "constant": constant_id,
                 "group": constant["group"],
                 "bound": side,
-                "literature": literature.to_dict(),
+                "literature": literature.to_dict() if literature is not None else None,
+                "attested": attested.to_dict() if attested is not None else None,
+                "attested_certificate": constant[f"attested_{side}_certificate"],
                 "verified": verified.to_dict() if verified is not None else None,
                 "verified_certificate": constant[f"verified_{side}_certificate"],
                 "evidence": "witness" if family.witness_bound == side else "lean",
@@ -335,7 +385,11 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
                 "kind": cert["kind"],
                 "submitted_by": cert["submitted_by"],
                 "date": cert["date"],
-                "current": constant[f"verified_{side}_certificate"] == cert["id"],
+                "current": cert["id"] in (constant[f"verified_{side}_certificate"],
+                                          constant[f"attested_{side}_certificate"]),
+                "status": cert["status"],
+                "attested_by": cert["attestation"]["by"] if "attestation" in cert else None,
+                "checker": cert["attestation"]["checker"] if "attestation" in cert else None,
                 "literature": literature.to_dict() if literature is not None else None,
                 "comparison": comparison,
                 "source": cert.get("source"),
@@ -369,6 +423,7 @@ def calculate_group_stats(
         "updates_with_sources": 0,
         "verified_lower_bounds": 0,
         "verified_upper_bounds": 0,
+        "attested_bounds": 0,
     }
     
     # Find constants belonging to this group
@@ -398,6 +453,7 @@ def calculate_group_stats(
         )
         stats["verified_lower_bounds"] += const["verified_lower_bound"] is not None
         stats["verified_upper_bounds"] += const["verified_upper_bound"] is not None
+        stats["attested_bounds"] += (const["attested_lower_bound"] is not None) + (const["attested_upper_bound"] is not None)
     
     # Calculate percentages
     if stats["total_updates"] > 0:
@@ -416,6 +472,7 @@ def write_constants(constants: dict[str, dict[str, Any]], filename: str) -> None
         "exact_value", "lower_bound", "upper_bound",
         "literature_exact_value", "literature_lower_bound", "literature_upper_bound",
         "verified_lower_bound", "verified_upper_bound",
+        "attested_lower_bound", "attested_upper_bound",
     ]
     for constant in constants.values():
         for field in value_fields:
@@ -463,7 +520,7 @@ def main() -> None:
                 constants[constant_id][field] = data[field]
 
     certificates = load_certificates()
-    assign_certificates(constants, certificates)
+    assign_certificates(constants, certificates, load_manifest())
     combine_bounds(constants)
     unverified = find_unverified_bounds(constants)
     with open("_data/unverified_bounds.yml", "w") as file:

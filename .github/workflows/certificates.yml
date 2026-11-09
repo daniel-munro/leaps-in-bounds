@@ -1,6 +1,10 @@
 name: Certificates
 
-# Certificates are also checked against the literature (without Lean) in the Site workflow
+# Checks that every certificate is well formed and either verified (its
+# evidence hash matches an entry in certificates/verified.yml) or attested.
+# It never runs the checkers on the evidence, or any code from a submission:
+# a maintainer verifies new certificates locally with
+# scripts/verify_certificates.py and adds them to the manifest.
 on:
   pull_request:
     paths: &paths
@@ -12,37 +16,11 @@ on:
     branches: [main]
     paths: *paths
 
-# Submissions run untrusted Lean code at build time, so keep the token read-only.
 permissions:
   contents: read
 
 jobs:
-  # Compiling the proofs runs code from the submission, so it happens in its own
-  # job, and only the compiled proof modules are passed on. The check job
-  # replays them through the kernel, so it doesn't trust what this job produces.
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-
-      - name: Install Lean
-        run: |
-          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-
-      - name: Fetch Mathlib and build proofs
-        working-directory: formal
-        run: |
-          lake exe cache get
-          lake build
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: proofs
-          path: formal/.lake/build/lib/lean/LeapsInBounds/Proofs/
-
   check:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -57,44 +35,19 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      # A lakefile.lean would run code from the submission in this job
-      - name: Refuse Lean code in the Lake configuration
-        run: |
-          if [ -n "$(find formal -name lakefile.lean -not -path 'formal/.lake/*')" ]; then
-            echo "::error::lakefile.lean is not allowed; use lakefile.toml"
-            exit 1
-          fi
-
-      - name: Install Lean
-        run: |
-          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-
-      # Builds only the statements, which import nothing but Mathlib
-      - name: Fetch Mathlib and build statements
-        working-directory: formal
-        run: |
-          lake exe cache get
-          lake build $(cd LeapsInBounds/Statements && ls *.lean | sed 's/\.lean$//; s/^/LeapsInBounds.Statements./')
-
-      - uses: actions/download-artifact@v8
-        with:
-          name: proofs
-          path: formal/.lake/build/lib/lean/LeapsInBounds/Proofs/
-
       - name: Find new certificates
         id: changed
         if: github.event_name == 'pull_request'
         env:
           BASE_REF: ${{ github.base_ref }}
         run: |
-          files=$(git diff --name-only --diff-filter=A "origin/$BASE_REF...HEAD" -- 'certificates/*.yml' | tr '\n' ' ')
+          files=$(git diff --name-only --diff-filter=A "origin/$BASE_REF...HEAD" -- 'certificates/*/*.yml' | tr '\n' ' ')
           echo "files=$files" >> "$GITHUB_OUTPUT"
 
       - name: Check certificates
         env:
           NEW_FILES: ${{ steps.changed.outputs.files }}
-        run: python scripts/check_certificates.py --lean --no-build --improves $NEW_FILES --summary certificate-summary.md
+        run: python scripts/check_certificates.py --new $NEW_FILES --summary certificate-summary.md
 
       - name: Show the summary
         if: always() && hashFiles('certificate-summary.md') != ''

@@ -1,8 +1,8 @@
 # Certificates
 
-A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. The site shows the strongest certificate on each side as the constant's **verified** bound, alongside the bounds from the literature.
+A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**, and the site shows the strongest verified certificate on each side alongside the bounds from the literature. Evidence that is too slow to check here can still be **attested**: see [Verification](#verification).
 
-Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks every certificate, and a new certificate must be strictly stronger than the existing ones for the same bound. CI comments on the pull request with the result for each new certificate and how it compares with the best bound in the literature. (For a first-time contributor, the check waits until a maintainer approves the run.)
+Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks that each certificate is well formed and consistent with the others and with the literature, and that a new certificate is at least as strong as the existing ones for the same bound. It comments on the pull request with the result for each new certificate and how it compares with the best bound in the literature. CI doesn't run the checkers on the evidence: a maintainer does that before merging. (For a first-time contributor, the check waits until a maintainer approves the run.)
 
 Only the families listed [below](#families) accept certificates so far. To ask for another group of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
 
@@ -54,9 +54,46 @@ A theorem in the [`formal/`](../formal) Lean project whose type is exactly the f
 - the statement it refers to is the one in `formal/LeapsInBounds/Statements/` (a proof module that redeclares it fails to load);
 - it depends only on the standard axioms `propext`, `Classical.choice` and `Quot.sound`. That rules out `sorry`, new axioms and `native_decide`.
 
-Compiling a proof runs code from the submission, such as `#eval` or custom elaborators. CI compiles the proofs in a separate job with a read-only token, and the check job uses only the compiled proof modules, which it replays through the kernel rather than trusting. The check itself runs none of the submission's code.
+Compiling a proof runs code from the submission, such as `#eval` or custom elaborators, so a maintainer reads a proof before compiling it to verify it. The check then replays the compiled proof modules through the kernel rather than trusting them, and runs none of the submission's code itself.
 
 The statement files are trusted: they define what every certificate means. Submissions should only add files under `formal/LeapsInBounds/Proofs/`. CI flags any pull request that changes the statements or the checking scripts.
+
+## Verification
+
+A certificate's status is one of:
+
+- **Verified:** a trusted verifier (a maintainer, listed in `TRUSTED_VERIFIERS` in [`scripts/certificates.py`](../scripts/certificates.py)) ran the checkers here on its evidence. [`verified.yml`](verified.yml) records this for each verified certificate: a hash of what it claims and its evidence files, the commit of the checkers used, who ran them and when. If the certificate's claim or evidence changes later, the hash no longer matches and the certificate needs verifying again. Other fields, such as `notes`, can change freely.
+- **Attested:** the evidence is here, but checking it here has been too slow so far, and someone else says they checked it with a checker they published. The site shows an attested bound in yellow, separately from verified ones, and lists it among the [unverified bounds](https://leapsinbounds.org/unverified/).
+- **Awaiting verification:** neither yet, as for a new submission. CI fails until a maintainer verifies it, and the site leaves it out.
+
+Anyone can check any certificate themselves, verified or attested, since all the evidence is in this repository.
+
+### Attestations
+
+To submit a certificate whose evidence takes too long to check here (more than an hour or so), add an `attestation` section:
+
+```yaml
+attestation:
+  by: Ada Lovelace (Analytical Engines Ltd)   # who checked it
+  checker: https://github.com/owner/repo/blob/<commit>/check.c   # the checker, at a full commit hash
+  evidence: https://github.com/owner/repo/blob/<commit>/graph.txt  # optional: the file it was run on
+  command: cc -O2 -o check check.c && ./check graph.txt   # how to run it
+  notes: graph.txt is the adjacency matrix of the graph6 witness here.  # optional
+```
+
+The certificate still needs its evidence here, in the format its family accepts. If the checker ran on another file, give it as `evidence` and say in `notes` how it corresponds to the witness here, so a maintainer can confirm that they're the same object, which is usually quick. Links must point to a fixed commit, not a branch, so they can't change later.
+
+Running someone else's checker again doesn't make an attested bound verified, since that's one more attestation. To upgrade one, make it checkable here: a faster checker for its family, a smaller witness for the same bound, or a Lean proof. A new certificate equal to an attested one is accepted for this.
+
+### For maintainers
+
+Before merging a pull request with new certificates, check out its branch and run:
+
+```bash
+python scripts/verify_certificates.py --jobs 4
+```
+
+This checks every certificate awaiting verification, as well as any whose manifest entry differs from the base branch's, so entries a pull request adds itself are checked again rather than trusted. Attested certificates are only checked when named by ID. Certificates that pass get manifest entries; commit `certificates/verified.yml` to the branch. The checkers must be committed, so the recorded commit says exactly what checked the evidence, and the script warns when they differ from the base branch, as when a pull request adds a checker for a new family: review those changes first. `--all` re-checks every certificate except attested ones, as an audit.
 
 ## Graph witnesses
 
@@ -242,18 +279,17 @@ witness:
 
 ## Checking locally
 
-```bash
-python scripts/check_certificates.py                # witnesses only
-```
-
-To also check Lean proofs, install [elan](https://github.com/leanprover/elan), then:
+To run the checkers on certificates, give their IDs:
 
 ```bash
-cd formal && lake exe cache get && lake build && cd ..
-python scripts/check_certificates.py --lean
+python scripts/verify_certificates.py --dry-run ramsey-4-4-lower-18
 ```
 
-Add `--improves certificates/<group>/<file>.yml` to check that a new certificate beats the existing ones, as CI does.
+Lean proofs need [elan](https://github.com/leanprover/elan) and Mathlib (`cd formal && lake exe cache get`). To run CI's checks of structure and consistency, without the checkers:
+
+```bash
+python scripts/check_certificates.py --allow-pending --new certificates/<group>/<file>.yml
+```
 
 ## Known gaps
 

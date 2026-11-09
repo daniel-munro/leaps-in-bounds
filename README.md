@@ -20,12 +20,14 @@ In short: edit `source_data/` → run the build/test scripts → `_data/` powers
 
 ## Verified Bounds
 
-Alongside bounds from the literature, constants can have verified bounds backed by a certificate that is checked automatically: an explicit construction checked by a program, or a formal proof in Lean.
+Alongside bounds from the literature, constants can have verified bounds backed by a certificate whose evidence has been checked here: an explicit construction checked by a program, or a formal proof in Lean. Evidence too slow to check here can be attested instead, by someone who checked it with a checker they published.
 
 - `certificates/`: One YAML file per certificate. See [certificates/README.md](certificates/README.md) for the format and how to submit one.
 - `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
 - `notes/`: Working notes on searches for verified bounds, one scratchpad per constant group, so people and agents can build on earlier attempts instead of repeating them. See [notes/README.md](notes/README.md).
-- `scripts/check_certificates.py`: Verifies all certificates. CI runs it on pull requests (with Lean proofs only when certificates, proofs, or scripts change), compiling submitted proofs in a separate job from the check.
+- `certificates/verified.yml`: The manifest of verified certificates, recording a hash of the evidence that was checked, the commit of the checkers, who ran them and when.
+- `scripts/verify_certificates.py`: Runs the checkers on certificates' evidence and records those that pass in the manifest. A maintainer runs it before merging new certificates.
+- `scripts/check_certificates.py`: Checks that every certificate is well formed, consistent with the others and the literature, and verified or attested. CI runs it on pull requests, without running the checkers.
 
 So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle, Schur and weak Schur numbers, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, cap sets, the no-three-in-line problem, and isosceles sets.
 

@@ -13,7 +13,7 @@ mkdir -p data
 python scripts/convert_data.py
 
 python scripts/validate_data.py
-python scripts/check_certificates.py
+python scripts/check_certificates.py --allow-pending
 python scripts/check_notes.py
 
 if [ "$1" = "serve" ]; then

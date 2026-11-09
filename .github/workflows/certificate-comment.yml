@@ -57,7 +57,7 @@ jobs:
             body="$marker
           ## Certificate check failed ❌
 
-          The check stopped before it could report on the certificates, for example because a Lean proof didn't compile. See the run for details."
+          The check stopped before it could report on the certificates. See the run for details."
           else
             echo "Nothing to report"
             exit 0

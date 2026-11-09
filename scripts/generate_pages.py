@@ -17,7 +17,16 @@ def verified_bracket(const: Mapping[str, Any], side: str) -> str:
     """Generate a bracket noting that a constant has a verified lower ([) or
     upper (]) bound: green if it matches the best literature bound, purple if
     it's stronger than (or absent from) the literature, and gray if it's
-    weaker."""
+    weaker. An attested bound, stronger than any verified one, gets a yellow
+    bracket instead."""
+    bracket = '[' if side == 'lower' else ']'
+    attested = const[f'attested_{side}_bound']
+    if attested is not None:
+        label = (f"Attested {side} bound {attested['latex']} by certificate "
+                 f"{const[f'attested_{side}_certificate']}, checked elsewhere but not here")
+        literature = const[f'literature_{side}_bound']
+        label += '; none in the literature' if literature is None else f"; the literature has {literature['latex']}"
+        return f'<span class="attested" aria-label="{label}">{bracket}</span>'
     verified = const[f'verified_{side}_bound']
     if verified is None:
         return '<span></span>'  # Keep the other bracket in its slot
@@ -30,12 +39,11 @@ def verified_bracket(const: Mapping[str, Any], side: str) -> str:
             label += '; none in the literature'
         else:
             label += f"; the literature has {literature['latex']}"
-    bracket = '[' if side == 'lower' else ']'
     return f'<span class="{css_class}" aria-label="{label}">{bracket}</span>'
 
 def verified_brackets(const: Mapping[str, Any]) -> str:
     """Generate the brackets in a cell's corner for its verified bounds."""
-    if const['verified_lower_bound'] is None and const['verified_upper_bound'] is None:
+    if all(const[f'{tier}_{side}_bound'] is None for tier in ['verified', 'attested'] for side in ['lower', 'upper']):
         return ''
     return (
         f'<span class="verified-brackets">{verified_bracket(const, "lower")}'
@@ -183,25 +191,33 @@ def card_reference(
         reference = f"via {sources[update['secondary_source']]['string']}"
     else:
         reference = 'Reference unknown'
-    prefix = f'Literature has {card_value(literature)}: ' if const[f'{side}_bound_source'] == 'verified' else ''
+    prefix = f'Literature has {card_value(literature)}: ' if const[f'{side}_bound_source'] in ('verified', 'attested') else ''
     date = f'{update["date"]}, ' if update.get('date') else ''
     return f'<div class="constant-card-source">{prefix}{escape(date)}{escape(reference)}</div>'
 
 def card_verification(const: Mapping[str, Any], side: str) -> str:
     """Generate card HTML for how a constant's lower or upper bound is
-    verified, if it is, colored like its bracket."""
+    verified or attested, if it is, colored like its bracket."""
+    html = ''
+    attested = const[f'attested_{side}_bound']
+    if attested is not None:
+        certificate = next(c for c in const['certificates'] if c['id'] == const[f'attested_{side}_certificate'])
+        value = card_value(attested) + ' ' if const[f'{side}_bound_source'] != 'attested' else ''
+        note = '; not in the literature' if const[f'literature_{side}_bound'] is None else ''
+        html += (f'<div><span class="attested">✓</span> Attested {value}by {escape(certificate["attestation"]["by"])}, '
+                 f'checked elsewhere{note}</div>')
     verified = const[f'verified_{side}_bound']
     if verified is None:
-        return ''
+        return html
     certificate = next(c for c in const['certificates'] if c['id'] == const[f'verified_{side}_certificate'])
     kind = 'Lean proof' if certificate['kind'] == 'lean' else 'checked construction'
     source = const[f'{side}_bound_source']
-    if source == 'literature':
-        # Weaker than the literature, so give the verified value too
-        return f'<div><span class="verified-weaker">✓</span> Verified {card_value(verified)} by {kind}</div>'
+    if source in ('literature', 'attested'):
+        # Weaker than the best bound, so give the verified value too
+        return html + f'<div><span class="verified-weaker">✓</span> Verified {card_value(verified)} by {kind}</div>'
     css_class = 'verified-new' if source == 'verified' else 'verified-equal'
     note = '; not in the literature' if const[f'literature_{side}_bound'] is None else ''
-    return f'<div><span class="{css_class}">✓</span> Verified by {kind}{note}</div>'
+    return html + f'<div><span class="{css_class}">✓</span> Verified by {kind}{note}</div>'
 
 def generate_card_html(
     const: Mapping[str, Any],
