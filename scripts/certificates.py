@@ -18,11 +18,13 @@ certificate_status). See certificates/README.md for the file format.
 import hashlib
 import itertools
 import json
+import lzma
 import math
 import pathlib
 import re
 import subprocess
 import tempfile
+import zlib
 from dataclasses import dataclass
 from fractions import Fraction
 from typing import Any, Callable, Iterable, Iterator, Mapping
@@ -51,6 +53,18 @@ MANIFEST_HEADER = """\
 # certificates/README.md. Each entry records the hash of the evidence that was
 # checked, the commit of the checkers used, who ran them, and when.
 """
+# Most bytes of evidence a certificate can keep in the repository: its YAML
+# file and its evidence files, as stored (so compressed, if they are). Larger
+# evidence can only be linked from an attested certificate. The site shows the
+# state of each problem rather than archiving its data.
+MAX_EVIDENCE_BYTES = 500_000
+# Witness files can be compressed with gzip or xz, by their extension, up to
+# this many bytes uncompressed
+COMPRESSED_SUFFIXES = [".gz", ".xz"]
+MAX_UNCOMPRESSED_BYTES = 200_000_000
+# Symbols for colorings and strings with more than 10 colors or symbols
+BASE36 = "0123456789abcdefghijklmnopqrstuvwxyz"
+SHA256 = re.compile(r"[0-9a-f]{64}")
 ATTESTATION_FIELDS = ["by", "checker", "command"]
 PINNED_URL = re.compile(r"^https://\S*\b[0-9a-f]{40}\b")
 LEAN_IMPORT = re.compile(r"^import\s+(\S+)", re.MULTILINE)
@@ -85,6 +99,8 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
             raise CertificateError(f"{path}: kind is '{cert['kind']}' but there is no '{cert['kind']}' section")
         if "attestation" in cert:
             check_attestation(cert["attestation"], path)
+        if cert["kind"] == "witness":
+            check_witness_source(cert, path)
         cert["approx"] = value_approx(cert["value"], path)
         cert["id"] = cert_id
         cert["path"] = str(path)
@@ -109,6 +125,28 @@ def check_attestation(attestation: Any, path: Any) -> None:
             raise CertificateError(
                 f"{path}: attestation {field} must be a URL pinned to a commit (a full 40-character hash)"
             )
+
+
+def check_witness_source(cert: Mapping[str, Any], path: Any) -> None:
+    """Check that a witness gives exactly one of inline data, a file here, or
+    (for an attested certificate only) a link to a file elsewhere."""
+    witness = cert["witness"]
+    if not isinstance(witness, dict):
+        raise CertificateError(f"{path}: witness must be a mapping")
+    sources = [key for key in ["data", "file", "url"] if key in witness]
+    if len(sources) != 1:
+        raise CertificateError(f"{path}: witness needs exactly one of 'data', 'file' or 'url'")
+    if "url" in witness:
+        if "attestation" not in cert:
+            raise CertificateError(
+                f"{path}: a witness given by url can't be checked here, so the certificate needs an attestation"
+            )
+        if not str(witness["url"]).startswith("https://"):
+            raise CertificateError(f"{path}: witness url must be an https URL")
+        if not SHA256.fullmatch(str(witness.get("sha256", ""))):
+            raise CertificateError(f"{path}: a witness given by url needs the file's sha256 (64 lowercase hex digits)")
+    elif "sha256" in witness:
+        raise CertificateError(f"{path}: witness sha256 is only for a witness given by url")
 
 
 ############
@@ -654,12 +692,58 @@ def eccentricity_at_most(adj: list[int], source: int, k: int) -> bool:
 
 
 def read_witness_data(cert: Mapping[str, Any]) -> str:
+    """The witness as text: inline data, or a file here, decompressed if it
+    ends in .gz or .xz."""
     witness = cert["witness"]
     if "data" in witness:
         return witness["data"]
     if "file" in witness:
-        return (pathlib.Path(cert["path"]).parent / witness["file"]).read_text()
-    raise CertificateError(f"{cert['id']}: witness needs 'data' or 'file'")
+        path = pathlib.Path(cert["path"]).parent / witness["file"]
+        data = path.read_bytes()
+        if path.suffix in COMPRESSED_SUFFIXES:
+            data = decompress(data, path.suffix, f"{cert['id']}: {path}")
+        try:
+            return data.decode("ascii")
+        except UnicodeDecodeError:
+            raise CertificateError(f"{cert['id']}: witness file {path} isn't ASCII text")
+    if "url" in witness:
+        raise CertificateError(f"{cert['id']}: the witness is only linked, at {witness['url']}, so it can't be checked here")
+    raise CertificateError(f"{cert['id']}: witness needs 'data', 'file' or 'url'")
+
+
+def decompress(data: bytes, suffix: str, name: str) -> bytes:
+    """Decompress gzip (.gz) or xz (.xz) data, refusing more than
+    MAX_UNCOMPRESSED_BYTES."""
+    decompressor = zlib.decompressobj(wbits=31) if suffix == ".gz" else lzma.LZMADecompressor()
+    try:
+        out = decompressor.decompress(data, MAX_UNCOMPRESSED_BYTES + 1)
+    except (zlib.error, lzma.LZMAError) as e:
+        raise CertificateError(f"{name}: can't decompress: {e}")
+    complete = decompressor.eof
+    if len(out) > MAX_UNCOMPRESSED_BYTES:
+        raise CertificateError(f"{name}: more than {MAX_UNCOMPRESSED_BYTES} bytes uncompressed")
+    if not complete or decompressor.unused_data:
+        raise CertificateError(f"{name}: isn't a single complete {suffix} stream")
+    return out
+
+
+def read_symbols(cert: Mapping[str, Any], symbols: str, what: str) -> str:
+    """Read a witness written one symbol per item, ignoring whitespace and
+    case, and check that it only uses the given symbols."""
+    text = "".join(read_witness_data(cert).split()).lower()
+    if not set(text) <= set(symbols):
+        raise CertificateError(f"{what} must use the symbols {symbols[0]} to {symbols[-1]}")
+    return text
+
+
+def read_coloring(cert: Mapping[str, Any], colors: int) -> str:
+    """Read a coloring with the given number of colors, written in base 36:
+    0 to 9, then a to z."""
+    if cert["witness"].get("format") != "coloring":
+        raise CertificateError("Witness must use format: coloring")
+    if not 1 <= colors <= len(BASE36):
+        raise CertificateError(f"Colorings can have at most {len(BASE36)} colors")
+    return read_symbols(cert, BASE36[:colors], "Coloring")
 
 
 ###########
@@ -728,14 +812,10 @@ def has_monochromatic_ap(colors: str, k: int) -> bool:
 def van_der_waerden_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
     """W(r,k) >= value is witnessed by an r-coloring of value - 1 consecutive
     integers with no monochromatic arithmetic progression of length k."""
-    if cert["witness"].get("format") != "coloring":
-        raise CertificateError("Van der Waerden witnesses must use format: coloring")
     r, k = params["r"], params["k"]
-    if r > 10 or k < 2:
-        raise CertificateError("Van der Waerden witnesses need r <= 10 and k >= 2")
-    colors = "".join(read_witness_data(cert).split())
-    if not set(colors) <= set("0123456789"[:r]):
-        raise CertificateError(f"Coloring must use the digits 0 to {r - 1}")
+    if k < 2:
+        raise CertificateError("Van der Waerden witnesses need k >= 2")
+    colors = read_coloring(cert, r)
     if len(colors) != value - 1:
         raise CertificateError(f"Coloring has {len(colors)} integers, but W(r,k) >= {value} needs {value - 1}")
     if has_monochromatic_ap(colors, k):
@@ -787,12 +867,10 @@ def superpermutation_check_witness(params: Mapping[str, int], bound: str, value:
     if cert["witness"].get("format") != "string":
         raise CertificateError("Superpermutation witnesses must use format: string")
     n = params["n"]
-    if not 1 <= n <= 9:
-        raise CertificateError("Superpermutation witnesses need 1 <= n <= 9")
-    symbols = set("123456789"[:n])
-    string = "".join(read_witness_data(cert).split())
-    if not set(string) <= symbols:
-        raise CertificateError(f"String must use the digits 1 to {n}")
+    if not 1 <= n <= len(BASE36) - 1:
+        raise CertificateError(f"Superpermutation witnesses need 1 <= n <= {len(BASE36) - 1}")
+    string = read_symbols(cert, BASE36[1:n + 1], "String")
+    symbols = set(BASE36[1:n + 1])
     if len(string) > value:
         raise CertificateError(f"String has length {len(string)}, more than {value}")
     windows = {string[i:i + n] for i in range(len(string) - n + 1)}
@@ -1008,14 +1086,7 @@ def has_monochromatic_sum(colors: str, weak: bool = False) -> bool:
 def schur_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], weak: bool) -> None:
     """S(k) >= value (or WS(k) >= value) is witnessed by a k-coloring of 1, ...,
     value with no monochromatic solution to x + y = z (with x ≠ y for WS)."""
-    if cert["witness"].get("format") != "coloring":
-        raise CertificateError("Schur witnesses must use format: coloring")
-    k = params["k"]
-    if k > 10:
-        raise CertificateError("Schur witnesses need k <= 10")
-    colors = "".join(read_witness_data(cert).split())
-    if not set(colors) <= set("0123456789"[:k]):
-        raise CertificateError(f"Coloring must use the digits 0 to {k - 1}")
+    colors = read_coloring(cert, params["k"])
     if len(colors) != value:
         raise CertificateError(f"Coloring has {len(colors)} integers, but a lower bound of {value} needs {value}")
     if has_monochromatic_sum(colors, weak):
@@ -1073,7 +1144,7 @@ def coil_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tu
 def read_transitions(data: str, n: int) -> list[int]:
     """Parse a transition sequence: one character per coordinate, from 0 to
     n - 1, written in base 36 (0 to 9, then a to z). Whitespace is ignored."""
-    digits = "0123456789abcdefghijklmnopqrstuvwxyz"[:n]
+    digits = BASE36[:n]
     transitions = "".join(data.split()).lower()
     if not set(transitions) <= set(digits):
         raise CertificateError(f"Transitions must be coordinates from 0 to {digits[-1]}")

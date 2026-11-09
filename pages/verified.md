@@ -8,7 +8,7 @@ permalink: /verified/
 
 Verified bounds come with a [certificate]({{ site.repository }}/blob/main/certificates/README.md) whose evidence has been checked here: an explicit construction checked by a program, or a formal proof in Lean. Anyone can submit one, and each is credited to the GitHub account that submitted it, which may not be whoever found the bound. See the [unverified bounds]({{ site.baseurl }}/unverified/) for bounds from the literature that still need one.
 
-Some certificates are <span class="badge bg-attested">Attested</span> instead: their evidence is here, but too slow to check here so far, and someone else says they checked it with a checker they published. Anyone can run that checker on the evidence, but until it's checked here, an attested bound isn't verified.
+Some certificates are <span class="badge bg-attested">Attested</span> instead: their evidence is too slow to check here so far, or too large to keep here, and someone else says they checked it with a checker they published. Anyone can run that checker on the evidence, but until it's checked here, an attested bound isn't verified.
 
 All certificates are also available as [YAML]({{ site.baseurl }}/data/certificates.yml), [JSON]({{ site.baseurl }}/data/certificates.json), [CSV]({{ site.baseurl }}/data/certificates.csv) or [TSV]({{ site.baseurl }}/data/certificates.tsv).
 

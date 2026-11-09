@@ -1,6 +1,6 @@
 # Certificates
 
-A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**, and the site shows the strongest verified certificate on each side alongside the bounds from the literature. Evidence that is too slow to check here can still be **attested**: see [Verification](#verification).
+A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**, and the site shows the strongest verified certificate on each side alongside the bounds from the literature. Evidence that is too slow to check here, or too large to keep here, can still be **attested**: see [Verification](#verification).
 
 Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks that each certificate is well formed and consistent with the others and with the literature, and that a new certificate is at least as strong as the existing ones for the same bound. It comments on the pull request with the result for each new certificate and how it compares with the best bound in the literature. CI doesn't run the checkers on the evidence: a maintainer does that before merging. (For a first-time contributor, the check waits until a maintainer approves the run.)
 
@@ -21,7 +21,7 @@ value: 18                 # the bound: R(4,4) >= 18 (an integer, or another form
 kind: witness             # witness or lean
 witness:                  # for kind: witness (see the family's rules below)
   format: graph6
-  data: 'PzlXWmJpZDeJEJbDgp\EJsWk'   # or `file: name.g6` for large witnesses
+  data: 'PzlXWmJpZDeJEJbDgp\EJsWk'   # or `file: name.g6` for large witnesses (see Size limit)
 submitted_by: your-username   # GitHub username of the account submitting it
 date: 2026-10-22          # submission date
 source: greenwood-gleason-1955   # optional: key in source_data/sources.yml for where the construction comes from
@@ -38,6 +38,22 @@ lean:
 ```
 
 `submitted_by` credits whoever submits the certificate, which may not be whoever found the bound, so a certificate for a bound from the literature should cite it in `source`. Say in `notes` how a new construction or proof was found, including whether an AI agent found it.
+
+## Size limit
+
+Leaps in Bounds shows the state of each problem and how it has progressed, rather than archiving data, so a certificate's evidence here is limited to 500 kB: its YAML file and its evidence files together, as stored. CI checks this.
+
+- Witness files can be compressed with gzip or xz, given with the extension `.gz` or `.xz` (such as `file: name.s6.xz`), and the checker decompresses them. Colorings and strings usually shrink by a factor of 10 or more, and graphs by up to half.
+- Larger witnesses can't be verified here, but can still be [attested](#attestations), with a link to the witness instead of a copy:
+
+  ```yaml
+  witness:
+    format: sparse6
+    url: https://zenodo.org/records/1234567/files/cage-11-9.s6.gz   # where to download it
+    sha256: 3f9a...   # SHA-256 of the file at that URL, as downloaded
+  ```
+
+  The hash identifies the file, so anyone who downloads it can tell it's the one attested. Use a host that keeps files permanently, such as Zenodo or a GitHub repository. An attested certificate for a new bound can be its primary source.
 
 ## Kinds of evidence
 
@@ -63,14 +79,14 @@ The statement files are trusted: they define what every certificate means. Submi
 A certificate's status is one of:
 
 - **Verified:** a trusted verifier (a maintainer, listed in `TRUSTED_VERIFIERS` in [`scripts/certificates.py`](../scripts/certificates.py)) ran the checkers here on its evidence. [`verified.yml`](verified.yml) records this for each verified certificate: a hash of what it claims and its evidence files, the commit of the checkers used, who ran them and when. If the certificate's claim or evidence changes later, the hash no longer matches and the certificate needs verifying again. Other fields, such as `notes`, can change freely.
-- **Attested:** the evidence is here, but checking it here has been too slow so far, and someone else says they checked it with a checker they published. The site shows an attested bound in yellow, separately from verified ones, and lists it among the [unverified bounds](https://leapsinbounds.org/unverified/).
+- **Attested:** checking the evidence here has been too slow so far, or it's too large to keep here, and someone else says they checked it with a checker they published. The site shows an attested bound in yellow, separately from verified ones, and lists it among the [unverified bounds](https://leapsinbounds.org/unverified/).
 - **Awaiting verification:** neither yet, as for a new submission. CI fails until a maintainer verifies it, and the site leaves it out.
 
-Anyone can check any certificate themselves, verified or attested, since all the evidence is in this repository.
+Anyone can check any certificate themselves, with the evidence in this repository or, for a witness too large to keep here, linked from it.
 
 ### Attestations
 
-To submit a certificate whose evidence takes too long to check here (more than an hour or so), add an `attestation` section:
+To submit a certificate whose evidence takes too long to check here (more than an hour or so), or is over the [size limit](#size-limit), add an `attestation` section:
 
 ```yaml
 attestation:
@@ -81,9 +97,9 @@ attestation:
   notes: graph.txt is the adjacency matrix of the graph6 witness here.  # optional
 ```
 
-The certificate still needs its evidence here, in the format its family accepts. If the checker ran on another file, give it as `evidence` and say in `notes` how it corresponds to the witness here, so a maintainer can confirm that they're the same object, which is usually quick. Links must point to a fixed commit, not a branch, so they can't change later.
+The certificate still needs its evidence in the format its family accepts: here if it's within the [size limit](#size-limit), and otherwise as a link with its hash. If the checker ran on another file, give it as `evidence` and say in `notes` how it corresponds to the witness here, so a maintainer can confirm that they're the same object, which is usually quick. The `checker` and `evidence` links must point to a fixed commit, not a branch, so they can't change later.
 
-Running someone else's checker again doesn't make an attested bound verified, since that's one more attestation. To upgrade one, make it checkable here: a faster checker for its family, a smaller witness for the same bound, or a Lean proof. A new certificate equal to an attested one is accepted for this.
+Running someone else's checker again doesn't make an attested bound verified, since that's one more attestation. To upgrade one, make it checkable here: a faster checker for its family, a smaller witness for the same bound (within the size limit), or a Lean proof. A new certificate equal to an attested one is accepted for this.
 
 ### For maintainers
 
@@ -94,6 +110,10 @@ python scripts/verify_certificates.py --jobs 4
 ```
 
 This checks every certificate awaiting verification, as well as any whose manifest entry differs from the base branch's, so entries a pull request adds itself are checked again rather than trusted. Attested certificates are only checked when named by ID. Certificates that pass get manifest entries; commit `certificates/verified.yml` to the branch. The checkers must be committed, so the recorded commit says exactly what checked the evidence, and the script warns when they differ from the base branch, as when a pull request adds a checker for a new family: review those changes first. `--all` re-checks every certificate except attested ones, as an audit.
+
+## Colorings
+
+Witnesses with `format: coloring` give one color per integer, in base 36: `0` to `9`, then `a` to `z` for colors 10 to 35 (so at most 36 colors). Whitespace and case are ignored.
 
 ## Graph witnesses
 
@@ -119,7 +139,7 @@ Formal statements are in [`formal/LeapsInBounds/Statements/VanDerWaerden.lean`](
 - `LowerBound r k n` means `W(r,k) >= n`: some `r`-coloring of `n - 1` consecutive integers has no monochromatic arithmetic progression of length `k`.
 - `UpperBound r k n` means `W(r,k) <= n`: every `r`-coloring of `n` consecutive integers has one.
 
-Witnesses can certify lower bounds only. A witness for `W(r,k) >= n` uses `format: coloring`: a string of `n - 1` digits from `0` to `r - 1` (so `r <= 10`), the colors of consecutive integers, with no monochromatic arithmetic progression of length `k`. Whitespace is ignored.
+Witnesses can certify lower bounds only. A witness for `W(r,k) >= n` uses `format: coloring`: a string of `n - 1` colors from `0` to `r - 1`, the colors of consecutive integers, with no monochromatic arithmetic progression of length `k`. See [Colorings](#colorings).
 
 ### Cages: `cage-{k}-{g}`
 
@@ -146,7 +166,7 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Superpermutation.lean
 - `LowerBound n m` means `L(n) >= m`: every string containing all permutations of `n` symbols has length at least `m`.
 - `UpperBound n m` means `L(n) <= m`: some such string has length at most `m`.
 
-Witnesses can certify upper bounds only. A witness for `L(n) <= m` uses `format: string`: a string of at most `m` digits from `1` to `n` (so `n <= 9`) that contains every permutation of those digits as a contiguous substring. Whitespace is ignored.
+Witnesses can certify upper bounds only. A witness for `L(n) <= m` uses `format: string`: a string of at most `m` symbols from `1` to `n` that contains every permutation of those symbols as a contiguous substring. Symbols past `9` are letters, `a` for 10 and so on (so `n <= 35`). Whitespace and case are ignored.
 
 ### Kissing numbers: `kissing-number-{n}`
 
@@ -209,7 +229,7 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Schur.lean`](../forma
 - `UpperBound k n` means `S(k) <= n`: every `k`-coloring of `1, …, n + 1` has one.
 - `WeakLowerBound k n` and `WeakUpperBound k n` are the same for the weak Schur number `WS(k)`, counting only solutions with `x ≠ y`.
 
-Witnesses can certify lower bounds only. A witness for `S(k) >= n` or `WS(k) >= n` uses `format: coloring`: a string of `n` digits from `0` to `k - 1` (so `k <= 10`), the colors of `1, …, n`, with no monochromatic solution. Whitespace is ignored.
+Witnesses can certify lower bounds only. A witness for `S(k) >= n` or `WS(k) >= n` uses `format: coloring`: a string of `n` colors from `0` to `k - 1`, the colors of `1, …, n`, with no monochromatic solution. See [Colorings](#colorings).
 
 ### Optimal Golomb rulers: `golomb-ruler-{n}`
 
