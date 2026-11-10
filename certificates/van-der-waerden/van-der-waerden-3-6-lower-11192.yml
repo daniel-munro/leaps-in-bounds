@@ -1,0 +1,11 @@
+constant: van-der-waerden-3-6
+bound: lower
+value: 11192
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-3-6-lower-11192.txt
+submitted_by: daniel-munro
+date: 2026-11-10
+source: rabung-lotts-2012
+notes: 'Zipped Rabung construction: color each integer x from 0 to 11190 that isn''t a multiple of 373 by the discrete logarithm of x mod 373 base 2, plus the integer part of (x mod 6) / 2, mod 3 (a coloring with period 2238). Color the multiples of 373 by backtracking search. Found by an AI agent (Claude), reproducing the bound.'

@@ -1,0 +1,11 @@
+constant: van-der-waerden-3-10
+bound: lower
+value: 4173725
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-3-10-lower-4173725.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-10
+source: rabung-lotts-2012
+notes: 'Rabung''s construction: color each integer x from 0 to 4173723 that isn''t a multiple of 463747 by the discrete logarithm of x mod 463747 base 3, mod 3 (9 periods plus one integer). Color the multiples of 463747 by backtracking search. Found by an AI agent (Claude), reproducing the bound.'

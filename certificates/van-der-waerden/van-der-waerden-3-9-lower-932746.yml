@@ -1,0 +1,11 @@
+constant: van-der-waerden-3-9
+bound: lower
+value: 932746
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-3-9-lower-932746.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-10
+source: rabung-lotts-2012
+notes: 'Rabung''s construction: color each integer x from 0 to 932744 that isn''t a multiple of 116593 by the discrete logarithm of x mod 116593 base 10, mod 3 (8 periods plus one integer). Color the multiples of 116593 by backtracking search. Found by an AI agent (Claude), reproducing the bound.'

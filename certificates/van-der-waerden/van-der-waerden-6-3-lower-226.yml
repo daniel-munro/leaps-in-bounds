@@ -1,0 +1,11 @@
+constant: van-der-waerden-6-3
+bound: lower
+value: 226
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-6-3-lower-226.txt
+submitted_by: daniel-munro
+date: 2026-11-10
+source: blankenship-c-t-2018
+notes: 'Construction of Blankenship, Cummings and Taranchuk with p = 3, from the 4-coloring of 75 integers in van-der-waerden-4-3-lower-76: integer 3q + j (j = 0, 1, 2) gets the color of q, relabeled by 0123 -> 0123, 2345 or 4501 for j = 0, 1 or 2. A 3-term progression with difference not divisible by 3 meets all three residues, and no color is used for all three. Built by an AI agent (Claude), reproducing the bound.'
