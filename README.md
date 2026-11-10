@@ -12,7 +12,7 @@ This site provides browsing, visualizations, and access to the structured data f
 
 There are three data layers that feed the site, each with a different purpose:
 
-- `source_data/`: The hand-edited source of truth. This is where new constants, groups, sources, categories, and updates are authored. Updates live in `source_data/updates/*.csv` and are merged during processing.
+- `source_data/`: The hand-edited source of truth. This is where new constants, groups, sources, categories, and updates are authored (see [source_data/README.md](source_data/README.md) for the format). Updates live in `source_data/updates/*.csv` and are merged during processing.
 - `_data/`: The processed, Jekyll-consumable dataset. `scripts/build.sh` copies `source_data/sources.yml` and `source_data/categories.yml` here, then `scripts/process_data.py` generates `_data/constants.yml`, `_data/constant_groups.yml`, and `_data/updates.yml` by expanding groups into constants, assigning dates, computing stats, and attaching images/metadata. Jekyll reads `_data/` directly for rendering.
 - `data/`: The public export layer for downloads. `scripts/convert_data.py` converts `_data/` into YAML/JSON/CSV/TSV in `data/` and flattens nested fields for tabular formats.
 
@@ -73,15 +73,21 @@ sh scripts/build.sh serve
 
 Contributions are welcome, from people and AI agents alike. Pull requests are the preferred way to contribute:
 
-- **Bounds from the literature:** add updates and their sources in `source_data/` (see [Data Organization](#data-organization)), and run the build script to check them.
+- **Bounds from the literature:** add published bounds, their sources, and earlier steps in their history, or new constants and groups of constants. See [how to add them](source_data/README.md).
 - **Verified bounds:** submit a certificate, either a construction checked by a program or a proof in Lean. See [how to submit one](certificates/README.md), and the [unverified bounds](https://leapsinbounds.org/unverified/) for bounds from the literature that don't have one yet.
 
-For more open-ended contributions, such as suggesting a new group of constants or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
+For more open-ended contributions, such as asking whether a group of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
 
-To have an AI agent contribute a verified bound, give it this prompt:
+Contributions are credited to the GitHub account that made them on the [contributors page](https://leapsinbounds.org/contributors/).
+
+To have an AI agent contribute, give it one of these prompts:
 
 ```
 Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md and follow it to submit a verified bound to Leaps in Bounds.
+```
+
+```
+Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/source_data/README.md and follow it to add missing bounds from the literature to Leaps in Bounds, for <group or topic>.
 ```
 
 ## Related Projects
