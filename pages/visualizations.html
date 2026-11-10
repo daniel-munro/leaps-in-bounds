@@ -1,0 +1,73 @@
+---
+layout: default
+title: Visualizations
+permalink: /visualizations/
+---
+
+<h1>Visualizations</h1>
+
+<h2 class="h4 mt-4">Bound updates over time</h2>
+<p>Each mark is a published improvement to a bound. Rows are constants, grouped by problem. Hover for a constant's history.</p>
+<div class="viz-controls">
+  <div class="btn-group btn-group-sm" role="group">
+    <input type="radio" class="btn-check" name="tscale" id="tscale-log" value="log" checked>
+    <label class="btn btn-outline-secondary" for="tscale-log">Recent years stretched</label>
+    <input type="radio" class="btn-check" name="tscale" id="tscale-linear" value="linear">
+    <label class="btn btn-outline-secondary" for="tscale-linear">Linear time</label>
+  </div>
+  <div class="viz-legend">
+    <span><svg width="12" height="12"><path transform="translate(6,7)" d="M0,-5L4.3,2.5L-4.3,2.5Z" fill="#2a78d6"/></svg>Lower bound</span>
+    <span><svg width="12" height="12"><path transform="translate(6,5) rotate(180)" d="M0,-5L4.3,2.5L-4.3,2.5Z" fill="#eb6834"/></svg>Upper bound</span>
+    <span><svg width="12" height="12"><path transform="translate(6,6)" d="M0,-6L3.6,0L0,6L-3.6,0Z" fill="#1a9e5c"/></svg>Bounds meet (exact)</span>
+  </div>
+</div>
+<div id="timeline"></div>
+
+<h2 class="h4 mt-5">Closing the gap</h2>
+<p>Each column is a constant, and its bar spans the values still possible. The bottom and top lines are its first lower and upper bounds, and the middle line is its true value. Each later improvement moves a bound one step toward the middle, so the spacing counts improvements, not their size. Steps are even on each side: once the true value is known, the last bound lands on the middle; until then, the true value counts as one more step. A bar running off the edge has no bound on that side yet.</p>
+<div class="viz-controls">
+  <button id="ranges-play" class="btn btn-sm btn-dark" style="min-width:4.5rem">Play</button>
+  <span id="ranges-date" class="viz-date"></span>
+  <input id="ranges-slider" type="range" class="form-range" min="0" value="0">
+</div>
+<div class="viz-controls">
+  <div class="btn-group btn-group-sm" role="group">
+    <input type="radio" class="btn-check" name="pace" id="pace-year" value="year" checked>
+    <label class="btn btn-outline-secondary" for="pace-year">A year per step</label>
+    <input type="radio" class="btn-check" name="pace" id="pace-update" value="update">
+    <label class="btn btn-outline-secondary" for="pace-update">An update per step</label>
+  </div>
+  <div class="btn-group btn-group-sm" role="group">
+    <input type="radio" class="btn-check" name="sort" id="sort-group" value="group" checked>
+    <label class="btn btn-outline-secondary" for="sort-group">Problem order</label>
+    <input type="radio" class="btn-check" name="sort" id="sort-progress" value="progress">
+    <label class="btn btn-outline-secondary" for="sort-progress">Sorted by final progress</label>
+  </div>
+  <label class="d-flex align-items-center gap-2">Speed <input id="ranges-speed" type="range" class="form-range" min="0.25" max="4" step="0.25" value="1" style="width:100px"></label>
+    </div>
+<div class="viz-controls"><div id="ranges-stats" class="viz-stats"></div></div>
+<div id="ranges-ticker" class="viz-ticker"></div>
+<div id="ranges"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>window.SITE_BASEURL = "{{ site.baseurl }}";</script>
+<script src="{{ site.baseurl }}/assets/js/visualizations/common.js"></script>
+<script src="{{ site.baseurl }}/assets/js/visualizations/timeline.js"></script>
+<script src="{{ site.baseurl }}/assets/js/visualizations/ranges.js"></script>
+<script>
+// KaTeX loads deferred in the head, so wait for it before drawing.
+document.addEventListener('DOMContentLoaded', () => {
+loadData().then(data => {
+  const tl = drawTimeline(d3.select('#timeline'), data);
+  d3.selectAll('input[name=tscale]').on('change', function () { tl.setScale(this.value); });
+  const controls = {
+    slider: d3.select('#ranges-slider'), play: d3.select('#ranges-play'), date: d3.select('#ranges-date'),
+    stats: d3.select('#ranges-stats'), ticker: d3.select('#ranges-ticker'),
+  };
+  const rg = drawRanges(d3.select('#ranges'), controls, data);
+  d3.selectAll('input[name=pace]').on('change', function () { rg.setPace(this.value); });
+  d3.selectAll('input[name=sort]').on('change', function () { rg.setSort(this.value); });
+  d3.select('#ranges-speed').on('input', function () { rg.setSpeed(+this.value); });
+});
+});
+</script>
