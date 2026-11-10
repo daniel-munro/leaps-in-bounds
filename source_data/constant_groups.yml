@@ -26,6 +26,7 @@ ramsey:
   - [9, [9, 15]]
   - [10, [10, 15]]
   research_status: sourced
+  added_by: daniel-munro
 
 square-packing:
   name: "Packing unit squares in a square"
@@ -43,6 +44,7 @@ square-packing:
   parameters: [n]
   parameter_values: [[[1, 100]]]
   research_status: initial
+  added_by: daniel-munro
 
 busy-beaver-shift:
   name: "Busy beaver shift function"
@@ -61,6 +63,7 @@ busy-beaver-shift:
   parameters: [n]
   parameter_values: [[[1, 7]]]
   research_status: initial
+  added_by: daniel-munro
 
 busy-beaver-ones:
   name: "Busy beaver ones function"
@@ -79,6 +82,7 @@ busy-beaver-ones:
   parameters: [n]
   parameter_values: [[[1, 7]]]
   research_status: initial
+  added_by: daniel-munro
 
 kissing-number:
   name: "Kissing numbers"
@@ -96,6 +100,7 @@ kissing-number:
   parameters: [n]
   parameter_values: [[[1, 24]]]
   research_status: initial
+  added_by: daniel-munro
 
 degree-diameter:
   name: "Degree-diameter problem"
@@ -115,6 +120,7 @@ degree-diameter:
   parameters: [d, k]
   parameter_values: [[[3, 20], [2, 10]]]
   research_status: initial
+  added_by: daniel-munro
 
 cage:
   name: "Cages"
@@ -133,6 +139,7 @@ cage:
   parameters: [k, g]
   parameter_values: [[[3, 20], [3, 16]]]
   research_status: initial
+  added_by: daniel-munro
 
 debruijn-newman:
   name: "de Bruijn–Newman constant"
@@ -145,6 +152,7 @@ debruijn-newman:
   display_type: single
   parameters: []
   research_status: sourced
+  added_by: daniel-munro
 
 van-der-waerden:
   name: "Van der Waerden numbers"
@@ -164,6 +172,7 @@ van-der-waerden:
   parameters: [r, k]
   parameter_values: [[[2, 6], [3, 11]]]
   research_status: initial
+  added_by: daniel-munro
 
 stamp-folding:
   name: "Stamp folding"
@@ -181,6 +190,7 @@ stamp-folding:
   parameters: [n]
   parameter_values: [[[1, 29]]]
   research_status: initial
+  added_by: daniel-munro
 
 map-folding:
   name: "Map folding"
@@ -206,6 +216,7 @@ map-folding:
   - [6, [6, 18]]
   - [7, [7, 18]]
   research_status: initial
+  added_by: daniel-munro
 
 disk-covering:
   name: "Disk covering problem"
@@ -221,6 +232,7 @@ disk-covering:
   parameters: [n]
   parameter_values: [[[1, 25]]]
   research_status: initial
+  added_by: daniel-munro
 
 circle-in-equilateral:
   name: "Circle packing in an equilateral triangle"
@@ -236,6 +248,7 @@ circle-in-equilateral:
   parameters: [n]
   parameter_values: [[[1, 15]]]
   research_status: initial
+  added_by: daniel-munro
 
 minimal-superpermutation:
   name: "Minimal superpermutation problem"
@@ -253,6 +266,7 @@ minimal-superpermutation:
   parameters: [n]
   parameter_values: [[[1, 9]]]
   research_status: initial
+  added_by: daniel-munro
 
 affine-line-arrangements:
   name: "Arrangements of lines in the affine plane"
@@ -267,6 +281,7 @@ affine-line-arrangements:
   parameters: [n]
   parameter_values: [[[1, 12]]]
   research_status: initial
+  added_by: daniel-munro
 
 affine-line-arrangements-general-position:
   name: "Arrangements of lines in general position"
@@ -281,6 +296,7 @@ affine-line-arrangements-general-position:
   parameters: [n]
   parameter_values: [[[1, 12]]]
   research_status: initial
+  added_by: daniel-munro
 
 golomb-ruler:
   name: "Optimal Golomb rulers"
@@ -298,6 +314,7 @@ golomb-ruler:
   parameters: [n]
   parameter_values: [[[1, 30]]]
   research_status: initial
+  added_by: daniel-munro
 
 schur:
   name: "Schur numbers"
@@ -315,6 +332,7 @@ schur:
   parameters: [k]
   parameter_values: [[[1, 9]]]
   research_status: initial
+  added_by: daniel-munro
 
 weak-schur:
   name: "Weak Schur numbers"
@@ -329,6 +347,7 @@ weak-schur:
   parameters: [k]
   parameter_values: [[[1, 9]]]
   research_status: initial
+  added_by: daniel-munro
 
 snake-in-the-box:
   name: "Snake-in-the-box"
@@ -345,6 +364,7 @@ snake-in-the-box:
   parameters: [n]
   parameter_values: [[[1, 13]]]
   research_status: initial
+  added_by: daniel-munro
 
 coil-in-the-box:
   name: "Coil-in-the-box"
@@ -360,6 +380,7 @@ coil-in-the-box:
   parameters: [n]
   parameter_values: [[[2, 13]]]
   research_status: initial
+  added_by: daniel-munro
 
 cap-set:
   name: "Cap sets"
@@ -377,6 +398,7 @@ cap-set:
   parameters: [n]
   parameter_values: [[[1, 8]]]
   research_status: initial
+  added_by: daniel-munro
 
 no-three-in-line:
   name: "No-three-in-line problem"
@@ -395,6 +417,7 @@ no-three-in-line:
   parameters: [n]
   parameter_values: [[[1, 78]]]
   research_status: initial
+  added_by: daniel-munro
 
 isosceles-set:
   name: "Isosceles sets"
@@ -411,3 +434,4 @@ isosceles-set:
   parameters: [n]
   parameter_values: [[[1, 12]]]
   research_status: initial
+  added_by: daniel-munro

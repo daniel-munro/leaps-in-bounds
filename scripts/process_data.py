@@ -9,6 +9,7 @@
    certificates with how they compare with the literature.
 6. Process images for constants.
 7. Add statistics to each constant group.
+8. List who added sources and constant groups, to credit them.
 """
 
 import itertools
@@ -18,6 +19,7 @@ import csv
 from typing import Any, Mapping
 from certificates import (
     FAMILIES,
+    GITHUB_USERNAME,
     best_certificates,
     certificate_status,
     is_better,
@@ -466,6 +468,45 @@ def calculate_group_stats(
     return stats
 
 
+def list_literature_contributors(
+    groups: Mapping[str, Mapping[str, Any]],
+    sources: Mapping[str, Mapping[str, Any]],
+    updates: list[Mapping[str, Any]],
+) -> list[dict[str, Any]]:
+    """List the GitHub accounts credited with `added_by` on sources and
+    constant groups, with the groups and sources each added and the number
+    of updates citing their sources as the primary source. Most first.
+    """
+    contributors: dict[str, dict[str, Any]] = {}
+
+    def credit(kind: str, item_id: str, item: Mapping[str, Any]) -> dict[str, Any] | None:
+        username = item.get("added_by")
+        if username is None:
+            return None
+        if not isinstance(username, str) or not GITHUB_USERNAME.fullmatch(username):
+            raise ValueError(f"{kind} {item_id}: added_by must be a GitHub username")
+        return contributors.setdefault(
+            username, {"contributor": username, "groups": [], "sources": [], "updates": 0}
+        )
+
+    for group_id, group in groups.items():
+        contributor = credit("Constant group", group_id, group)
+        if contributor is not None:
+            contributor["groups"].append(group_id)
+    for source_id, source in sources.items():
+        contributor = credit("Source", source_id, source)
+        if contributor is not None:
+            contributor["sources"].append(source_id)
+    for update in updates:
+        source = sources.get(update["primary_source"]) if update["primary_source"] else None
+        if source is not None and source.get("added_by") in contributors:
+            contributors[source["added_by"]]["updates"] += 1
+    return sorted(
+        contributors.values(),
+        key=lambda c: (-len(c["groups"]), -c["updates"], -len(c["sources"]), c["contributor"].lower()),
+    )
+
+
 def write_constants(constants: dict[str, dict[str, Any]], filename: str) -> None:
     """Write processed constants info to a YAML file."""
     value_fields = [
@@ -527,6 +568,9 @@ def main() -> None:
         yaml.dump(unverified, file, sort_keys=False)
     with open("_data/certificates.yml", "w") as file:
         yaml.dump(list_certificates(constants), file, sort_keys=False)
+
+    with open("_data/literature_contributors.yml", "w") as file:
+        yaml.dump(list_literature_contributors(groups, sources, updates), file, sort_keys=False)
 
     # Save combined updates for download
     for update in updates:

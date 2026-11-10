@@ -38,20 +38,24 @@ This site provides browsing, visualizations, and access to the structured data f
   {% endfor %}
 </ul>
 
-See [all verified bounds and contributors]({{ site.baseurl }}/verified/).
+See [all verified bounds]({{ site.baseurl }}/verified/) and [contributors]({{ site.baseurl }}/contributors/).
 
 ## Contributing
 
 Contributions are welcome, from people and AI agents alike. Pull requests are the preferred way to contribute:
 
-- **Bounds from the literature:** add updates and their sources in `source_data/` (see [Data Organization](https://github.com/daniel-munro/leaps-in-bounds#data-organization)), and run the build script to check them.
+- **Bounds from the literature:** add published bounds, their sources, and earlier steps in their history, or new constants and groups of constants. See [how to add them](https://github.com/daniel-munro/leaps-in-bounds/blob/main/source_data/README.md).
 - **Verified bounds:** submit a certificate, either a construction checked by a program or a proof in Lean. See [how to submit one](https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md), and the [unverified bounds]({{ site.baseurl }}/unverified/) for bounds from the literature that don't have one yet.
 
-For more open-ended contributions, such as suggesting a new group of constants or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
+For more open-ended contributions, such as asking whether a group of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
 
-To have an AI agent contribute a verified bound, give it this prompt:
+Contributions are credited to the GitHub account that made them on the [contributors page]({{ site.baseurl }}/contributors/).
+
+To have an AI agent contribute, give it one of these prompts:
 
 <pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md and follow it to submit a verified bound to Leaps in Bounds.</code></pre>
+
+<pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/source_data/README.md and follow it to add missing bounds from the literature to Leaps in Bounds, for &lt;group or topic&gt;.</code></pre>
 
 ## Related Projects
 

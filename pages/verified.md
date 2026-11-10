@@ -14,27 +14,7 @@ All certificates are also available as [YAML]({{ site.baseurl }}/data/certificat
 
 {% assign certificates = site.data.certificates %}
 
-## Contributors
-
-{% assign contributors = certificates | group_by: "submitted_by" | sort: "size" | reverse %}
-<table class="table table-sm w-auto">
-  <thead>
-    <tr>
-      <th>Contributor</th>
-      <th class="text-end">Certificates</th>
-      <th>Latest</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for contributor in contributors %}
-      <tr>
-        <td><a href="https://github.com/{{ contributor.name }}">{{ contributor.name }}</a></td>
-        <td class="text-end">{{ contributor.size }}</td>
-        <td>{{ contributor.items.first.date }}</td>
-      </tr>
-    {% endfor %}
-  </tbody>
-</table>
+See the [contributors]({{ site.baseurl }}/contributors/) of certificates and other data.
 
 ## Recent certificates
 
