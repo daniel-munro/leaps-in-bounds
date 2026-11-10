@@ -257,3 +257,23 @@ h1 {
     color: #6c757d;
     font-size: 0.9em;
 }
+
+/* Visualizations page */
+.viz-svg { display: block; overflow: visible; }
+.viz-label { font-size: 13px; fill: #212529; }
+.viz-tick { font-size: 11.5px; fill: #52514e; }
+.viz-muted { fill: #6c757d; color: #6c757d; }
+.viz-tooltip {
+  position: fixed; z-index: 10; display: none; pointer-events: none; max-width: 360px;
+  background: #fff; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px 10px;
+  font-size: 0.85rem; box-shadow: 0 4px 14px rgba(0,0,0,.12);
+}
+.viz-tt-src { color: #6c757d; font-size: 0.8rem; margin: 2px 0 6px; }
+.viz-tt-hist { border-top: 1px solid #eee; padding-top: 4px; }
+.viz-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-bottom: 0.5rem; font-size: 0.95rem; }
+.viz-legend { display: flex; gap: 1rem; font-size: 0.9rem; color: #52514e; }
+.viz-legend svg { vertical-align: -2px; margin-right: 3px; }
+.viz-date { font-size: 1.6rem; font-weight: 600; min-width: 11rem; }
+.viz-stats { display: flex; gap: 1rem; color: #52514e; font-size: 0.9rem; }
+.viz-ticker { min-height: 4.6em; font-size: 0.9rem; color: #212529; }
+#ranges-slider { flex: 1; min-width: 200px; }
