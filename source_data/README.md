@@ -121,7 +121,7 @@ Images and support for certificates can come later. A new group's certificates n
 
 ## Credit
 
-Contributions to the literature data are credited on the [contributors page](https://leapsinbounds.org/contributors/) by the `added_by` field on sources and constant groups: the GitHub account that added them, which is usually whoever opens the pull request. It credits the work of finding and recording the data, not the mathematics, which is credited to the sources themselves. When adding many bounds from one survey, the sources you add are what's credited, so it's worth adding the primary sources rather than citing only the survey.
+Contributions to the literature data are credited on the [contributors page](https://leapsinbounds.org/contributors/) by the `added_by` field on sources and constant groups: the GitHub account that added them, which is usually whoever opens the pull request. When a maintainer adds sources that a contributor pointed to, such as the sources for the earlier bounds behind a certificate, they're credited to the contributor. It credits the work of finding and recording the data, not the mathematics, which is credited to the sources themselves. When adding many bounds from one survey, the sources you add are what's credited, so it's worth adding the primary sources rather than citing only the survey.
 
 ## Checking
 

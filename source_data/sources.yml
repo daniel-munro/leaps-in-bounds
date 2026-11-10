@@ -547,7 +547,7 @@ google-research-2026:
   date: "2026-10-22"
   url: "https://github.com/google-research/google-research/tree/0d94f8c4d92678ce5f7a0eacae725f79174cfb03/ramsey_number_bounds"
   notes: "Not peer reviewed. Colourings found with AI-generated search code, with a notebook to check them. Dated by the commit that added the colourings for R(4,15) >= 163, R(7,13) >= 513, R(8,12) >= 511, R(9,11) >= 617 and R(10,12) >= 856, among others. Earlier bounds in the repository are google-research-2026a and google-research-2026b."
-  added_by: daniel-munro
+  added_by: arhancanli
 
 google-research-2026a:
   string: "Google Research, ramsey_number_bounds: improved lower bounds on Ramsey numbers, GitHub repository, 2026."
@@ -575,21 +575,21 @@ canli-2026b:
   date: "2026-11-03"
   doi: "https://doi.org/10.5281/zenodo.23920916"
   notes: "Not peer reviewed. R(8,12) >= 519; the colouring is in https://github.com/arhancanli/quantavane-ramsey-records/tree/ee821217e5b1d01b648deaf8d5629f0f1c83e589. The searches were run by an AI agent."
-  added_by: daniel-munro
+  added_by: arhancanli
 
 canli-2026c:
   string: "A. Canli (Quantavane), Ramsey number lower bounds from Quantavane, GitHub repository, 2026-11-05."
   date: "2026-11-05"
   url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/6f907e04548d8ef3144005d327bff3660c81fa16"
   notes: "Not peer reviewed. Two circulant colourings for R(5,15) >= 283, with a checker. The searches were run by an AI agent."
-  added_by: daniel-munro
+  added_by: arhancanli
 
 canli-2026d:
   string: "A. Canli (Quantavane), Ramsey number lower bounds from Quantavane, GitHub repository, 2026-11-06."
   date: "2026-11-06"
   url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/3ae0f3feaec12221028b92036c39f042f0b1197a"
   notes: "Not peer reviewed. A colouring for R(8,12) >= 523, with a checker. The searches were run by an AI agent."
-  added_by: daniel-munro
+  added_by: arhancanli
 
 # Packing unit squares
 
@@ -1823,7 +1823,7 @@ mckenna-2026:
   date: "2026-11-04"
   doi: "https://doi.org/10.5281/zenodo.23939242"
   notes: "Not peer reviewed. The partition is checked directly and in Lean 4. S(8) >= 5382 follows by known recursive constructions."
-  added_by: daniel-munro
+  added_by: arhancanli
 
 # Weak Schur numbers
 
