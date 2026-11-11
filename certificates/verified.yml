@@ -3077,6 +3077,326 @@ snake-in-the-box-9-lower-191:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+sorting-network-depth-1-upper-0:
+  sha256: e7bbb51ea306e1c0a37f1c23839b28dd1649f4b06b1a95a07e7a2b5c577d1e44
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-10-upper-7:
+  sha256: fdc001ef5dd4bc0b72928481fc260fdf08da44bbae9ea680acaa325332c65a10
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-11-upper-8:
+  sha256: cc8ec7a6126aaab83e1feac8353d334dc3712c477d328afd6e02491c40562d0e
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-12-upper-8:
+  sha256: 436a9630b637f54a9f1444729b48c7ee2009c3844a8969e7f523997cfeaa6109
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-13-upper-9:
+  sha256: 1ac8a0d6c65b34375f65afe6c9f72e4f81b897d0397715466ce8dcc4c02278ef
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-14-upper-9:
+  sha256: dd375a44ab66acf9750f2faf56530d4bd3ad183badae30dc325a6571628388a0
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-15-upper-9:
+  sha256: 73d6e363dc5574ebbd7b3b801254c7ee47abfdd82b8de3736746d15e0260d6e0
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-16-upper-9:
+  sha256: 37dbac24e358908c6f106786d931fdd9f6fc8f9ecf4303e90c5e293608e6f2c3
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-17-upper-10:
+  sha256: 98619fda26812d7a97ca77967c0b6a25b08812cf516a4f7fcc9e3c74eeb5132e
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-18-upper-11:
+  sha256: 42bb40a0b9f691d984f938ac50d39b918fa0ee825803b36af46a98fe0d80211e
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-19-upper-11:
+  sha256: b4a6fbf9ef2a6802eb93c4fcb6d64a53012fcf3f7f2bfc4faa49c389e10cc614
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-2-upper-1:
+  sha256: 985fbf6fabd1ff22288bb95a81dc7481044eedcc4a3174925c7d963c20b5e128
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-20-upper-11:
+  sha256: 69f87a622887d85138407e5d75748ea38c07b278fa04fd59f5d31d40fd56c675
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-21-upper-12:
+  sha256: d15b506244a6910ad7a54719105b462653111daf14b53cb1742c89d290431540
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-22-upper-12:
+  sha256: 7154d09f4a0380fc1818fba4064f2f12edc3b41e4f97cc69ca1de46c7d80c4ed
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-23-upper-12:
+  sha256: 42145878bd1ec72cb32fb558824a50da3faaf015e00c4ab82285465c9ece09dc
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-24-upper-12:
+  sha256: 822d1ede660eb21634f32e52f0649e98eefca90b2fa20d0d7ce0b81074b52e90
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-25-upper-13:
+  sha256: c6dd358c6567f34c954df81af8dd6096742695aa2f3a0411502d0d266b556e5a
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-26-upper-13:
+  sha256: eeebe3928dd9ba2d3d7eadb5a8fa47f5a2d7025aca399c94b6724fb60349b0da
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-27-upper-13:
+  sha256: b583cbb2d951b513c5f11b5e9356df354e1c74891c644dba48a1cd331aae105a
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-28-upper-13:
+  sha256: c5df94d9f5bb2673ad2ec12dbd86e094a0b0411ca2d700652395be9a02504860
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-29-upper-14:
+  sha256: 6714cd1db407b43063d168a6b72c7a72bc9f0153711493b81510caaa3a5adb43
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-3-upper-3:
+  sha256: 3268d735176ed636dc7fc909ee751115bb932583fed0a4dadddffb3648b4547d
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-30-upper-14:
+  sha256: 9a412fffa80f74317029a06f1e0be8cbe2366371f539855ff15de2c2c8644484
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-31-upper-14:
+  sha256: c6212ce8c20b0c6b71fded7164325b712ed4ed9bbd86bbc5ac44c9140e344bb1
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-32-upper-14:
+  sha256: 9577920e405d9cb803c39feb4de08adc22fe07f7a4a6b54785055d5e1b64a57e
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-4-upper-3:
+  sha256: ee93ac153eb0d2e80fdb405be577dd85b747b9651352a06eee4b43756e0d5341
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-5-upper-5:
+  sha256: 18706d1c482bdb86c9fa51599a61a53449476993401e4335502435eaf47dd2be
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-6-upper-5:
+  sha256: f0acf32c4935df05f5fdd460e612e0a6f33bc8f9d708c69024bd1ecceba7b3e9
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-7-upper-6:
+  sha256: 69925ff9976a98c62d17352ec87d6659d737038588e20e9089868d808f1596b8
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-8-upper-6:
+  sha256: a2b3fa2781ed4d9808e0eee330329eaef33e989f1285ab74662061f20e1276d6
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-depth-9-upper-7:
+  sha256: 81b2a147318e196e72d8449e5f02c4a6930431e5c8d89ac128acf707e9a44f2a
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-1-upper-0:
+  sha256: aa779a009c930d656186f9d3bf34482def4c6347ac9b6bcaa9bc46e7e65dd365
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-10-upper-29:
+  sha256: 521b00cef0107b9480b644d45143b58ef41ae2977300298a9350ff6efac86cb1
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-11-upper-35:
+  sha256: 86948ce8c8acccd8408ab93653987b86042912fdc9678ff5d4072446fd40e9db
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-12-upper-39:
+  sha256: 5943ca8dd0468468b5aef448bd90d59b8d4cb850da797c0fe2dfc23423cea719
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-13-upper-45:
+  sha256: a64eb5ab153276133b3d3a652173a432b933284beca2cd7b60d2819039b4bff0
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-14-upper-51:
+  sha256: 2ff8755c1479da30a9e6da3630ca24bb6dc48ac1c9684dfb9c8dc5f308470580
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-15-upper-56:
+  sha256: 3ee5c31a422c6f7260c660760601a914a9a8a8f3eeefddd7dfd9b1aab21119af
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-16-upper-60:
+  sha256: 46f859e18e4aebefe37b7d25998563164d5085b678cdd9a2d3800c7e75ccde15
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-17-upper-71:
+  sha256: 886b2d8f0f9ef0ecc63f8725ca364a13b883e00c14fad265db31d05b8399df01
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-18-upper-77:
+  sha256: 298f6c0c3286d830c5c99ce45f0561fa512f0393dca60a623cc1004574d63338
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-19-upper-85:
+  sha256: 27fbf6933d065da118cfd369b1bdcc1ef395bb0057c98e41e54c5e2d7477b083
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-2-upper-1:
+  sha256: 9e3c2aa80f7e85ec78f70e38f46b9a35b502f3a364edd652eaf1464cc89a5b33
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-20-upper-91:
+  sha256: a90620ccf28ca2a8e2c44693164d3079a05f46a891478ccd04a1d54e06dc2256
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-21-upper-99:
+  sha256: 0e754a7b56ad367e28c8690357e96a6e225719c2053b7bb526e8f42d7c4422ea
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-22-upper-106:
+  sha256: 65de8f68a8f1925b1060d04f0b39abfd70a713ffb02090053c47511c97a39a94
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-23-upper-114:
+  sha256: 4e392209057ed6f15d5d57e98b267507972571b925a4d02b313643a0cc969398
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-24-upper-120:
+  sha256: c39f149e44392fd5bcfb90e9d0d6cba1a23add72e96443a232cd0c5fa057c372
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-25-upper-130:
+  sha256: 02f52f8dd0eab1414779f13fdc4e02a505365cbe0ece2cb76c6b8cca3cb7c1ac
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-26-upper-138:
+  sha256: 47342cf1c0270b6f661cce603e56735b8874913ef38f10934778c2a2f4f19f64
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-27-upper-147:
+  sha256: dc79baac553c035ab21057e19b07af8361a3ce7c3094426c030519d1cb0d8674
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-28-upper-155:
+  sha256: b143424dda212d031d6a5cbe22aee09f98ea177182319bb10373f28c509576dd
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-29-upper-164:
+  sha256: e0ee64818a3899df9a025e91ec00b2435120a7cd66ee95575b094c56fd0dac28
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-3-upper-3:
+  sha256: 2624c4bf3a4be886dd18550232242534b601da0773514ca3e4b3bd797d6e6041
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-30-upper-172:
+  sha256: bc94a5db3964b98e6cfb7dfc0659bb7c00d833a652b2db06a1465787e72e0af1
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-31-upper-180:
+  sha256: 5c6ca768b6f1af0b7b160e9ed6136d76804b5799e3244b819a50b9ea1969400c
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-32-upper-185:
+  sha256: 0d0fa04d0620cf6e884c79780e874ba816582d9a1d787f1a611a5442d9329e55
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-4-upper-5:
+  sha256: 35697931b5d047b7a19e8b603dbfa75d05c2f062f9f3316bbec9557839a9037d
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-5-upper-9:
+  sha256: 5fff80f4060597d3cd3462c2f41ebe8393db16c7ced88683128b64de81d93005
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-6-upper-12:
+  sha256: d3850d673c53ff6f7a8de7ed911ab7da3971be8caf9ceb4226760da5a7395dd4
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-7-upper-16:
+  sha256: 754d8504654ddbb774aa745d2c965f87fd40db67d5aae622240195d18684a643
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-8-upper-19:
+  sha256: 20cb446b4c920c7874baa8b7f6c97c08fbb0509f09fc86d5c45e9b93d9ebae97
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
+sorting-network-size-9-upper-25:
+  sha256: a1f7cc3274c9a832ab6e2a77c2b17d3880e24d7d032301f7d6860fe75a79c899
+  checker: da0b312def14db3418b66742133243f1e9e3c4ec
+  verified_by: daniel-munro
+  date: '2026-11-11'
 square-packing-in-square-1-lower-1:
   sha256: 253eaa72009e41729f736e9b46a1d3075eec2eba3c67859121917ebfd29fcde3
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746

@@ -36,8 +36,8 @@ from typing import Any, Callable, Iterable, Sequence
 import yaml
 
 from certificates import (Radical, affine_dimension, eccentricity_at_most, girth, has_monochromatic_sum, is_cap,
-                          is_isosceles_set, is_snake, load_certificates, no_three_collinear, orbit_closure, read_graph,
-                          read_grid_points, read_marks, read_points, read_radical_points, read_symmetries,
+                          is_isosceles_set, is_snake, load_certificates, network_depth, no_three_collinear, orbit_closure, read_graph,
+                          read_comparators, read_grid_points, read_marks, read_points, read_radical_points, read_symmetries,
                           read_ternary_points, read_transitions, read_vectors, read_witness_data, transition_vertices)
 from utils import GENERATED_IMAGES_DIR
 
@@ -528,6 +528,58 @@ def render_golomb_ruler(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+####################
+# Sorting networks #
+####################
+
+def render_sorting_network(constant_id: str, n: int, metric: str) -> Svg | None:
+    """The smallest (or shallowest) known sorting network on n inputs, in
+    Knuth's notation: wires run left to right, with the smallest value ending
+    on the top one, and each comparator joins two wires. Comparators that act
+    at the same step are drawn close together, in as few columns as don't
+    overlap, and steps are spaced apart."""
+    cert = witness(constant_id, "upper")
+    if cert is None or n < 2:
+        return None
+    comparators = [(min(i, j), max(i, j)) for i, j in read_comparators(read_witness_data(cert))]
+    measure = len(comparators) if metric == "size" else network_depth(comparators)
+    check(measure <= cert["value"], f"{constant_id}: network exceeds its bound")
+    if exact_value(constant_id) is not None:
+        check(measure == exact_value(constant_id), f"{constant_id}: network isn't optimal")
+    # Group comparators by step, then pack each step's into columns
+    step: dict[int, int] = {}
+    steps: list[list[tuple[int, int]]] = []
+    for i, j in comparators:
+        s = max(step.get(i, 0), step.get(j, 0)) + 1
+        step[i] = step[j] = s
+        if s > len(steps):
+            steps.append([])
+        steps[s - 1].append((i, j))
+    xs: list[tuple[float, tuple[int, int]]] = []
+    x = 0.0
+    for layer in steps:
+        columns: list[list[tuple[int, int]]] = []
+        for i, j in sorted(layer, key=lambda c: (c[1] - c[0], c[0])):
+            for column in columns:
+                if all(j < a or i > b for a, b in column):
+                    column.append((i, j))
+                    break
+            else:
+                columns.append([(i, j)])
+        for column in columns:
+            xs.extend((x, c) for c in column)
+            x += 0.45
+        x += 0.55
+    length = x - 0.55 + 0.45
+    y = lambda wire: n - 1 - wire
+    svg = Svg(-0.5, -0.5, length + 0.05, n - 0.5, size=max(SIZE, min(640, 20 * length)))
+    svg.add(svg.group((svg.line((-0.5, y(k)), (length + 0.05, y(k))) for k in range(n)), stroke=INK, stroke_width=1))
+    svg.add(svg.group((svg.line((cx, y(i)), (cx, y(j))) for cx, (i, j) in xs), stroke=EDGE, stroke_width=2))
+    r = min(0.16, 0.08 * max(1.0, length / n))
+    svg.add(svg.group((svg.circle((cx, y(w)), r) for cx, c in xs for w in c), fill=EDGE))
+    return svg
+
+
 ##############
 # Hypercubes #
 ##############
@@ -901,6 +953,8 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "schur": ("schur-", lambda c: render_schur(c, *ints(c, "schur-"), weak=False)),
     "weak-schur": ("weak-schur-", lambda c: render_schur(c, *ints(c, "weak-schur-"), weak=True)),
     "golomb-ruler": ("golomb-ruler-", lambda c: render_golomb_ruler(c, *ints(c, "golomb-ruler-"))),
+    "sorting-network-size": ("sorting-network-size-", lambda c: render_sorting_network(c, *ints(c, "sorting-network-size-"), metric="size")),
+    "sorting-network-depth": ("sorting-network-depth-", lambda c: render_sorting_network(c, *ints(c, "sorting-network-depth-"), metric="depth")),
     "snake-in-the-box": ("snake-in-the-box-", lambda c: render_snake(c, *ints(c, "snake-in-the-box-"), coil=False)),
     "coil-in-the-box": ("coil-in-the-box-", lambda c: render_snake(c, *ints(c, "coil-in-the-box-"), coil=True)),
     "cap-set": ("cap-set-", lambda c: render_cap_set(c, *ints(c, "cap-set-"))),

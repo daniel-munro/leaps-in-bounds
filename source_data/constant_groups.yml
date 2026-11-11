@@ -435,3 +435,37 @@ isosceles-set:
   parameter_values: [[[1, 12]]]
   research_status: initial
   added_by: daniel-munro
+
+sorting-network-size:
+  name: "Smallest sorting networks"
+  description: "A sorting network on $n$ inputs is a sequence of comparators, each of which joins two of $n$ wires and puts the smaller of their two values on the first wire and the larger on the second, that sorts every input. $S(n)$ is the smallest number of comparators in a sorting network on $n$ inputs."
+  external_ids:
+    msc: 68P10
+    oeis: A003075
+    wikipedia_en: Sorting_network
+  display_type: sequence
+  representative_image: sorting-network-size-8
+  id_template: "sorting-network-size-{n}"
+  name_template: "Smallest sorting network $S({n})$"
+  description_template: "The smallest number of comparators in a sorting network on ${n}$ inputs."
+  parameters: [n]
+  parameter_values: [[[1, 32]]]
+  research_status: initial
+  added_by: daniel-munro
+
+sorting-network-depth:
+  name: "Fastest sorting networks"
+  description: "A sorting network on $n$ inputs is a sequence of comparators, each of which joins two of $n$ wires and puts the smaller of their two values on the first wire and the larger on the second, that sorts every input. Comparators on different wires can act at the same time, so a network acts in steps, or layers, of comparators on disjoint wires. $D(n)$ is the smallest number of steps, or depth, of a sorting network on $n$ inputs."
+  external_ids:
+    msc: 68P10
+    oeis: A067782
+    wikipedia_en: Sorting_network
+  display_type: sequence
+  representative_image: sorting-network-depth-8
+  id_template: "sorting-network-depth-{n}"
+  name_template: "Fastest sorting network $D({n})$"
+  description_template: "The smallest depth, or number of parallel steps, of a sorting network on ${n}$ inputs."
+  parameters: [n]
+  parameter_values: [[[1, 32]]]
+  research_status: initial
+  added_by: daniel-munro
