@@ -1,0 +1,11 @@
+constant: van-der-waerden-3-7
+bound: lower
+value: 48812
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-3-7-lower-48812.txt
+submitted_by: daniel-munro
+date: 2026-11-10
+source: rabung-lotts-2012
+notes: 'Zipped Rabung construction: color each integer x from 0 to 48810 that isn''t a multiple of 1627 by the discrete logarithm of x mod 1627 base 3, plus 1 when x is 4 mod 5, mod 3 (a coloring with period 8135). Color the multiples of 1627 by backtracking search. Found by an AI agent (Claude), reproducing the bound.'
