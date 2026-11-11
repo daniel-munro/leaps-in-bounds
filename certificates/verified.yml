@@ -4122,6 +4122,11 @@ van-der-waerden-2-9-lower-41266:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+van-der-waerden-3-10-lower-4173725:
+  sha256: b9277ca455de65a748a4fc5496c4b3ae7bcb1ed96ca72fe89240b0a06cdb4be1
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
 van-der-waerden-3-3-lower-27:
   sha256: 7145b175a30103aa63fd979b6a65de1d241ce864ca4c78112f444894ef19a9a4
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -4132,11 +4137,31 @@ van-der-waerden-3-4-lower-293:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+van-der-waerden-3-5-lower-2174:
+  sha256: 67335875342975c0e5d2896287e7ef65d9781cec85d2786f361c8627a8c05ee8
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
+van-der-waerden-3-6-lower-11192:
+  sha256: c87b60a5cda94ccc403ac10adc58d14a905cd067e159345e3b4c1edd910b0443
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
+van-der-waerden-3-7-lower-48812:
+  sha256: 9bc6f395a1ff3c9d72325fa0e15ff48bdc7d856ac23a3099891182fe594aa754
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
 van-der-waerden-3-8-lower-238401:
   sha256: 48f456e79e886eed62f5d68bbfa0ecb563265936cf42de42696bc73c1da12917
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+van-der-waerden-3-9-lower-932746:
+  sha256: 3bb7bfb38173c006f35cb4afd0f042a265e3f2ab9b70324ea43a9e03ed7cbac7
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
 van-der-waerden-4-3-lower-76:
   sha256: 69876ab64319b00862c880b2dd22680e6400b1b865c8eba16003aa9446feec69
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -4152,11 +4177,21 @@ van-der-waerden-4-5-lower-17706:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+van-der-waerden-4-7-lower-2284752:
+  sha256: b69829634fd9e667d1e2fe62dbf4e69572b88d6fd2675ca2a4a1f2f59f2db148
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
 van-der-waerden-5-4-lower-2255:
   sha256: a2a2f3e97bc67ced3e72c13834600e16529e50e67092d7d34d25bd1deb219755
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+van-der-waerden-6-3-lower-226:
+  sha256: 29fafd11e817d4d3b2949e7229c09bf28440b72866b7bf7e1a42dff101a97849
+  checker: cb18c1b8792bf81cc534666bf9c61dbfeb529f68
+  verified_by: daniel-munro
+  date: '2026-11-10'
 van-der-waerden-6-4-lower-9779:
   sha256: 15061ed14415d94c7217493b70141ff82212e8cc10845c13cac04fd9b28a62c4
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
