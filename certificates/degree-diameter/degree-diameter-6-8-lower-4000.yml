@@ -1,0 +1,10 @@
+constant: degree-diameter-6-8
+bound: lower
+value: 4000
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-6-8-lower-4000.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{25} \rtimes \mathbb{Z}_{160}$, with product $(a, b)(c, e) = (a + 7^b c, b + e)$, and connection set $\{(16, 43), (13, 117), (14, 17), (23, 143), (5, 155), (15, 5)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

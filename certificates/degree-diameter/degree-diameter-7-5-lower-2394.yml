@@ -1,0 +1,10 @@
+constant: degree-diameter-7-5
+bound: lower
+value: 2394
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-7-5-lower-2394.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{133} \rtimes \mathbb{Z}_{18}$, with product $(a, b)(c, e) = (a + 73^b c, b + e)$, and connection set $\{(16, 7), (46, 11), (67, 17), (30, 1), (104, 8), (46, 10), (0, 9)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

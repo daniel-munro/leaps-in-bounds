@@ -1,0 +1,10 @@
+constant: degree-diameter-17-4
+bound: lower
+value: 4000
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-17-4-lower-4000.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{400} \rtimes \mathbb{Z}_{10}$, with product $(a, b)(c, e) = (a + 191^b c, b + e)$, and connection set $\{(295, 4), (105, 6), (389, 4), (251, 6), (230, 1), (70, 9), (170, 6), (230, 4), (196, 7), (84, 3), (116, 7), (164, 3), (373, 8), (187, 2), (89, 7), (281, 3), (375, 5)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

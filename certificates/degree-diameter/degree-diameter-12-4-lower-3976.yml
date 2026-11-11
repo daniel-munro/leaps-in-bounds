@@ -1,0 +1,10 @@
+constant: degree-diameter-12-4
+bound: lower
+value: 3976
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-12-4-lower-3976.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{71} \rtimes \mathbb{Z}_{56}$, with product $(a, b)(c, e) = (a + 48^b c, b + e)$, and connection set $\{(8, 19), (28, 37), (39, 45), (37, 11), (17, 46), (16, 10), (0, 44), (0, 12), (39, 2), (1, 54), (65, 31), (38, 25)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

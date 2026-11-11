@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-5
+bound: lower
+value: 124
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_5
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 5! permutations occur as distinct windows of length 5, which start at distinct positions, so the length is at least 5! + 5 - 1. Proof written by an AI agent (Claude).

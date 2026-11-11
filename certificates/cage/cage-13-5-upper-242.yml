@@ -1,0 +1,14 @@
+constant: cage-13-5
+bound: upper
+value: 242
+kind: witness
+witness:
+  format: sparse6
+  file: cage-13-5-upper-242.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Amalgam of a biaffine plane over Z_11 with Cayley cycles: points (x,y) with x in 0..10, lines [m,b] with m
+  in 0..10, y and b in Z_11; (x,y) ~ [m,b] if y = mx + b, (x,y) ~ (x,y+-1) and [m,b] ~ [m,b+-2]. This gives a
+  13-regular graph on 2(13-2)q = 242 vertices; 4-cycles would need +-1 = +-2. Construction in the style of
+  Funk and Jorgensen's amalgams of elliptic semiplanes, chosen and checked by an AI agent (Claude).

@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-8
+bound: lower
+value: 40327
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_8
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 8! permutations occur as distinct windows of length 8, which start at distinct positions, so the length is at least 8! + 8 - 1. Proof written by an AI agent (Claude).

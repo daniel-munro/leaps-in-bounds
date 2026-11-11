@@ -1,0 +1,10 @@
+constant: no-three-in-line-75
+bound: upper
+value: 150
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.NoThreeInLineColumns
+  theorem: LeapsInBounds.Proofs.NoThreeInLineColumns.upper_75
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Each of the n columns holds at most two points, since three points with the same x-coordinate are on a line. Lean proof written by an AI agent (Claude).

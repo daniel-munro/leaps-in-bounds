@@ -1,0 +1,14 @@
+constant: cage-12-8
+bound: upper
+value: 2928
+kind: witness
+witness:
+  format: sparse6
+  file: cage-12-8-upper-2928.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: ejc-ds16-cages
+notes: >-
+  Incidence graph of the symplectic generalized quadrangle W(11): points of PG(3,11) and lines totally
+  isotropic for x0y1 - x1y0 + x2y3 - x3y2, a (12,8)-graph on 2(11^3+11^2+11+1) = 2928 vertices. Built from
+  this classical description by an AI agent (Claude).

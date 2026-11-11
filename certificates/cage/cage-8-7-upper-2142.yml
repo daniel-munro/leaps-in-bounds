@@ -1,0 +1,14 @@
+constant: cage-8-7
+bound: upper
+value: 2142
+kind: witness
+witness:
+  format: sparse6
+  file: cage-8-7-upper-2142.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A cyclic voltage lift of the complete graph K_9 over Z_238: vertex (u,a), u in 0..8 and a in Z_238, is
+  vertex u*238 + a, and a base edge uv with voltage x joins (u,a) and (v,a+x mod 238). The voltages were found
+  by a min-conflicts local search that counts closed non-backtracking walks shorter than 7 in the base graph
+  with net voltage 0, written and run by an AI agent (Claude).

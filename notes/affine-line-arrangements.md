@@ -14,6 +14,10 @@ How the realizations were found (Python, exact rational arithmetic, using `arran
 
 Rounding to small integers works for arrangements in general position, but not for degenerate ones, since rounding breaks the concurrencies. Extending by lines through vertices makes coefficients grow quickly (to 20 digits for 6 lines), so the grid search is the better source of degenerate types.
 
+## Initial bounds for 7 to 12 lines
+
+Certified with random arrangements, without trying to reach every type, sized so that the checker takes about 1.5 to 2 minutes of CPU (it measured about 8 ms per arrangement of 7 lines and 12 ms of 8 on a busy machine, rising to roughly 50 ms for 12): 12000 for 7 lines, 8000 for 8, 5500 for 9, 4000 for 10, 2700 for 11 and 2000 for 12. Each arrangement is, with probability 0.7, lines through random pairs of points of a `k x k` grid (`k` from 3 to 6), and otherwise random lines in general position with small coefficients; types were deduplicated by a hash of `arrangement_type`. For 7 lines, 28760 draws gave the 12000 types; for 8 lines and more almost every draw is a new type, so the counts are limited only by the checker's time. Files are 80 to 100 kB with xz, so a faster checker (the canonical form tries `4n` relabelings with exact fractions) would allow much more.
+
 ## Ideas
 
 - 8 lines: Finschi's table (`finschi-2001`, Table 8.1) has 4134939 abstract types not all parallel, so at most 4134940 combinatorial types, minus at least one for each of the 274 non-realizable oriented matroids of rank 3 on 9 elements. A lower bound needs realizations of millions of types, too many for a witness file of reasonable size. A lower bound of 460780 follows from the 460779 realizable arrangements of 9 projective lines (plus all lines parallel) but isn't in the literature as such.

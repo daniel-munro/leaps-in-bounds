@@ -1,0 +1,10 @@
+constant: degree-diameter-5-7
+bound: lower
+value: 3996
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-5-7-lower-3996.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{111} \rtimes \mathbb{Z}_{36}$, with product $(a, b)(c, e) = (a + 17^b c, b + e)$, and connection set $\{(3, 25), (15, 11), (71, 21), (5, 15), (90, 18)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

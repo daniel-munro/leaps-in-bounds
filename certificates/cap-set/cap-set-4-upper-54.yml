@@ -1,0 +1,10 @@
+constant: cap-set-4
+bound: upper
+value: 54
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CapSetLines
+  theorem: LeapsInBounds.Proofs.CapSetLines.upper_4
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Partition the space into the lines {x, x + e0, x + 2e0}; each holds at most two points of a cap set, since their sum is 3x + 3e0 = 0. Lean proof written by an AI agent (Claude).

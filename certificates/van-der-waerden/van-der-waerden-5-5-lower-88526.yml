@@ -1,0 +1,11 @@
+constant: van-der-waerden-5-5
+bound: lower
+value: 88526
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-5-5-lower-88526.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: blankenship-c-t-2018
+notes: 'Blankenship, Cummings and Taranchuk''s construction with p = 5, W(5,5) > 5 (W(4,5) - 1): integer 5q + j (j from 0 to 4) gets color c if c < j and c + 1 otherwise, where c is the color of q in the 4-coloring of van-der-waerden-4-5-lower-17706, so color j is missing from residue class j. A progression of 5 terms with difference not divisible by 5 meets every residue class, so it isn''t monochromatic, and one with difference divisible by 5 is broken by the 4-coloring. Greedy extension at either end found nothing. Built by an AI agent (Claude).'

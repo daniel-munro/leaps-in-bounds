@@ -1,0 +1,14 @@
+constant: cage-20-5
+bound: upper
+value: 684
+kind: witness
+witness:
+  format: sparse6
+  file: cage-20-5-upper-684.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Amalgam of a biaffine plane over Z_19 with Cayley cycles: points (x,y) with x in 0..17, lines [m,b] with m
+  in 0..17, y and b in Z_19; (x,y) ~ [m,b] if y = mx + b, (x,y) ~ (x,y+-1) and [m,b] ~ [m,b+-2]. This gives a
+  20-regular graph on 2(20-2)q = 684 vertices; 4-cycles would need +-1 = +-2. Construction in the style of
+  Funk and Jorgensen's amalgams of elliptic semiplanes, chosen and checked by an AI agent (Claude).

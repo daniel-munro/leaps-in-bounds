@@ -1,0 +1,13 @@
+constant: cage-19-6
+bound: upper
+value: 722
+kind: witness
+witness:
+  format: sparse6
+  file: cage-19-6-upper-722.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Subgraph of the incidence graph of the biaffine plane over GF(19): points (x,y) with x in a fixed set of 19
+  field elements, lines y = mx + b with m in a fixed set of 19 elements, giving a 19-regular bipartite graph
+  of girth 6 on 2*19*19 = 722 vertices. Construction chosen by an AI agent (Claude).

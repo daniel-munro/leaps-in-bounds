@@ -1,0 +1,14 @@
+constant: cage-9-8
+bound: upper
+value: 1170
+kind: witness
+witness:
+  format: sparse6
+  file: cage-9-8-upper-1170.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: ejc-ds16-cages
+notes: >-
+  Incidence graph of the symplectic generalized quadrangle W(8): points of PG(3,8) and lines totally isotropic
+  for x0y1 - x1y0 + x2y3 - x3y2, a (9,8)-graph on 2(8^3+8^2+8+1) = 1170 vertices. Built from this classical
+  description by an AI agent (Claude).

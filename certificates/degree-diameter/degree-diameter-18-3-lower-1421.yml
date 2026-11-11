@@ -1,0 +1,10 @@
+constant: degree-diameter-18-3
+bound: lower
+value: 1421
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-18-3-lower-1421.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{203} \rtimes \mathbb{Z}_{7}$, with product $(a, b)(c, e) = (a + 197^b c, b + e)$, and connection set $\{(162, 0), (41, 0), (105, 1), (119, 6), (183, 3), (139, 4), (43, 5), (76, 2), (186, 6), (101, 1), (117, 1), (121, 6), (126, 1), (21, 6), (36, 6), (13, 1), (87, 4), (116, 3)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

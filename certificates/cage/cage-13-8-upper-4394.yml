@@ -1,0 +1,14 @@
+constant: cage-13-8
+bound: upper
+value: 4394
+kind: witness
+witness:
+  format: sparse6
+  file: cage-13-8-upper-4394.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Subgraph of the incidence graph of the symplectic generalized quadrangle W(13) (points of PG(3,13), lines
+  totally isotropic for x0y1 - x1y0 + x2y3 - x3y2), minus all points collinear with a point P and all lines
+  meeting a line L through P, leaving a 13-regular graph of girth 8 on 2*13^3 = 4394 vertices. Built by an AI
+  agent (Claude).

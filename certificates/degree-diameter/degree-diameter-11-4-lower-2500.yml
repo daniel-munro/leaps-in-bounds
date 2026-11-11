@@ -1,0 +1,10 @@
+constant: degree-diameter-11-4
+bound: lower
+value: 2500
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-11-4-lower-2500.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{25} \rtimes \mathbb{Z}_{100}$, with product $(a, b)(c, e) = (a + 13^b c, b + e)$, and connection set $\{(10, 7), (20, 93), (21, 76), (19, 24), (11, 11), (22, 89), (24, 67), (3, 33), (20, 83), (15, 17), (21, 50)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

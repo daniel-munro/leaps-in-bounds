@@ -1,0 +1,15 @@
+constant: cage-5-12
+bound: upper
+value: 2730
+kind: witness
+witness:
+  format: sparse6
+  file: cage-5-12-upper-2730.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: ejc-ds16-cages
+notes: >-
+  Incidence graph of the split Cayley generalized hexagon H(4): points of the quadric X0X4 + X1X5 + X2X6 =
+  X3^2 in PG(6,4), lines the lines on it whose Grassmann coordinates satisfy p12 = p34, p54 = p32, p20 = p35,
+  p65 = p30, p01 = p36, p46 = p31. A (5,12)-graph on 2(4^6-1)/(4-1) = 2730 vertices. Built from this classical
+  description by an AI agent (Claude).

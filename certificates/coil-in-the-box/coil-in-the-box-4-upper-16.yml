@@ -1,0 +1,10 @@
+constant: coil-in-the-box-4
+bound: upper
+value: 16
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SnakeVertexCount
+  theorem: LeapsInBounds.Proofs.SnakeVertexCount.coil_upper_4
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: A coil's vertices are distinct vertices of the hypercube, of which there are 2^n. Proof written by an AI agent (Claude).

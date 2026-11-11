@@ -1,0 +1,10 @@
+constant: degree-diameter-14-4
+bound: lower
+value: 4000
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-14-4-lower-4000.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{100} \rtimes \mathbb{Z}_{40}$, with product $(a, b)(c, e) = (a + 47^b c, b + e)$, and connection set $\{(36, 1), (12, 39), (85, 32), (15, 8), (16, 22), (76, 18), (84, 0), (16, 0), (98, 33), (26, 7), (15, 29), (55, 11), (70, 27), (10, 13)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

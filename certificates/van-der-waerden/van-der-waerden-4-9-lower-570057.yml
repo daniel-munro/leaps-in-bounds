@@ -1,0 +1,11 @@
+constant: van-der-waerden-4-9
+bound: lower
+value: 570057
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-4-9-lower-570057.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: rabung-1979
+notes: 'Rabung''s construction with p = 71257: integer x from 0 to 570055 gets the discrete logarithm of x mod 71257 base 5, mod 4 (color 0 for multiples of 71257), a coloring of period 71257 repeated 8 times. No 9 cyclically consecutive residues mod 71257 have their nonzero members all the same color, so no progression with difference not divisible by 71257 is monochromatic, and one with difference divisible by 71257 has at most 8 terms. The record is far larger; this is an initial bound. Found by an AI agent (Claude), sized so that the checker runs in about a minute.'

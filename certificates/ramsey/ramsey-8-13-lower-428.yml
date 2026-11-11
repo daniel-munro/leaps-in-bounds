@@ -1,0 +1,15 @@
+constant: ramsey-8-13
+bound: lower
+value: 428
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-8-13-lower-428.g6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A circulant graph on 427 vertices (clique number 7, independence number 11): the complement of the circulant on
+  Z427 with x ~ y when x - y is in the orbit of one of 1, 3, 4, 7, 61 under multiplication by 12 and -1 mod 427.
+  Found by an AI agent (Claude) in a bounded search over Paley and cyclotomic circulants of prime order, circulants
+  whose connection sets are unions of multiplicative orbits, verified circulant witnesses, and their complements and
+  lexicographic products, keeping the largest graph the checker verifies quickly.

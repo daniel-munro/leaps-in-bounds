@@ -1,0 +1,10 @@
+constant: van-der-waerden-5-3
+bound: lower
+value: 121
+kind: witness
+witness:
+  format: coloring
+  data: '021440023211210423233421040031440440013030413232442241212031143023231221423243411040041410430013022433232440220132120433'
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Found by an AI agent (Claude) with a tabu search (min-conflicts with incremental conflict counts) from a random 5-coloring. The same search failed to finish for 125 integers in 15 minutes; the record 171 came from a SAT solver.'

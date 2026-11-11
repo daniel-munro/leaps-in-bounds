@@ -1,0 +1,13 @@
+constant: cage-4-5
+bound: upper
+value: 19
+kind: witness
+witness:
+  format: sparse6
+  data: ':R_`ab`CdbE_FaGdHfI_CJaEKiLcGM`JNeHO_BMP'
+submitted_by: daniel-munro
+date: 2026-11-11
+source: ejc-ds16-cages
+notes: >-
+  The Robertson graph, the unique (4,5)-cage: the 19-cycle i ~ i+1 plus chords i ~ i + c_i (mod 19) with c =
+  [8,4,7,4,8,5,7,4,7,8,4,5,7,8,4,8,4,8,4]. Built from this known description by an AI agent (Claude).

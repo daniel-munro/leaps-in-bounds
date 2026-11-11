@@ -1,0 +1,10 @@
+constant: golomb-ruler-1
+bound: lower
+value: 0
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.GolombCounting
+  theorem: LeapsInBounds.Proofs.GolombCounting.lower_1
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. A ruler with one mark has length at least 0. Proof written by an AI agent (Claude).

@@ -1,0 +1,11 @@
+constant: van-der-waerden-5-11
+bound: lower
+value: 509711
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-5-11-lower-509711.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: rabung-1979
+notes: 'Rabung''s construction with p = 50971: integer x from 0 to 509709 gets the discrete logarithm of x mod 50971 base 2, mod 5 (color 0 for multiples of 50971), a coloring of period 50971 repeated 10 times. No 11 cyclically consecutive residues mod 50971 have their nonzero members all the same color, so no progression with difference not divisible by 50971 is monochromatic, and one with difference divisible by 50971 has at most 10 terms. The record is far larger; this is an initial bound. Found by an AI agent (Claude), sized so that the checker runs in about a minute.'

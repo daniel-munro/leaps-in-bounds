@@ -1,0 +1,10 @@
+constant: weak-schur-2
+bound: upper
+value: 8
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SchurSmallUpper
+  theorem: LeapsInBounds.Proofs.SchurSmallUpper.weakUpper_2_8
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Exhaustive backtracking search over colorings, run in the Lean kernel (decide +kernel) and proved sound. Proof written by an AI agent (Claude).

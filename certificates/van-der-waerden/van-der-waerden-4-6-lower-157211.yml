@@ -1,0 +1,11 @@
+constant: van-der-waerden-4-6
+bound: lower
+value: 157211
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-4-6-lower-157211.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: monroe-2019
+notes: 'Xu''s product construction, W(4,6) > 139 (W(2,6) - 1): integer x from 0 to 157208 gets color a + 2b, where a is the discrete logarithm of x mod 139 base 2 mod 2 (0 for multiples of 139), and b is the color of the integer part of x / 139 in the 2-coloring of van-der-waerden-2-6-lower-1132. A progression whose difference is a multiple of 139 is broken by b, and any other by a, since no 6 cyclically consecutive residues mod 139 have their nonzero members in the same class. Then extended greedily by one integer at the end. Built by an AI agent (Claude).'

@@ -1,0 +1,15 @@
+constant: ramsey-5-9
+bound: lower
+value: 87
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-5-9-lower-87.g6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A circulant graph on 86 vertices (clique number 4, independence number 8): the circulant on Z86 with x ~ y when x -
+  y is in the orbit of one of 3, 14 under multiplication by 11 and -1 mod 86. Found by an AI agent (Claude) in a
+  bounded search over Paley and cyclotomic circulants of prime order, circulants whose connection sets are unions of
+  multiplicative orbits, verified circulant witnesses, and their complements and lexicographic products, keeping the
+  largest graph the checker verifies quickly.

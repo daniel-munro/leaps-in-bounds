@@ -1,0 +1,14 @@
+constant: cage-10-8
+bound: upper
+value: 1640
+kind: witness
+witness:
+  format: sparse6
+  file: cage-10-8-upper-1640.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: ejc-ds16-cages
+notes: >-
+  Incidence graph of the symplectic generalized quadrangle W(9): points of PG(3,9) and lines totally isotropic
+  for x0y1 - x1y0 + x2y3 - x3y2, a (10,8)-graph on 2(9^3+9^2+9+1) = 1640 vertices. Built from this classical
+  description by an AI agent (Claude).

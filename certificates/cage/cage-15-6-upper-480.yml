@@ -1,0 +1,13 @@
+constant: cage-15-6
+bound: upper
+value: 480
+kind: witness
+witness:
+  format: sparse6
+  file: cage-15-6-upper-480.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Subgraph of the incidence graph of the biaffine plane over GF(16): points (x,y) with x in a fixed set of 15
+  field elements, lines y = mx + b with m in a fixed set of 15 elements, giving a 15-regular bipartite graph
+  of girth 6 on 2*15*16 = 480 vertices. Construction chosen by an AI agent (Claude).

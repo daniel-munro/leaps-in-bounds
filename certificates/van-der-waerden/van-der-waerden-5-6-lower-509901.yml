@@ -1,0 +1,11 @@
+constant: van-der-waerden-5-6
+bound: lower
+value: 509901
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-5-6-lower-509901.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: blankenship-c-t-2018
+notes: 'Blankenship, Cummings and Taranchuk''s construction with p = 5, W(5,6) > 5 L for a 4-coloring of L integers with no monochromatic 6-term progression: integer 5q + j gets color c if c < j and c + 1 otherwise, where c is the color of q in the first 101980 integers of the coloring of van-der-waerden-4-6-lower-157211. Every residue class mod 5 misses a different color, so a progression with difference not divisible by 5 isn''t monochromatic. Truncated so that the checker runs in about a minute; the full coloring gives 786051. Built by an AI agent (Claude).'
