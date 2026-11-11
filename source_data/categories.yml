@@ -53,3 +53,9 @@
     - kissing-number
     - no-three-in-line
     - square-packing
+
+- msc: "68P"
+  name: "Theory of data"
+  groups:
+    - sorting-network-depth
+    - sorting-network-size

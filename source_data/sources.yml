@@ -2530,3 +2530,298 @@ ionin-2009:
   doi: "https://doi.org/10.37236/230"
   notes: "Determines the largest isosceles sets in R^n for n <= 8, from the largest two-distance sets and Blokhuis' structure theorem."
   added_by: daniel-munro
+
+dobbelaere-sorting-networks:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, https://bertdobbelaere.github.io/sorting_networks.html (page updated 2026-10-10, retrieved 2026-11-11)."
+  date: "2026-11-11"
+  url: "https://bertdobbelaere.github.io/sorting_networks.html"
+  notes: "List of the smallest and fastest known sorting networks for up to 32 inputs, with their sources, many found by Dobbelaere's SorterHunter program. Earlier versions are in the SorterHunter repository, https://github.com/bertdobbelaere/SorterHunter."
+  added_by: daniel-munro
+
+dobbelaere-2017-12-29:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, first version of sorting_networks.html, 2017-12-29."
+  date: "2017-12-29"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/c2a6f20684db7eaab9b573cf7f743affd8929bc3/sorting_networks.html"
+  notes: "Smaller networks found by SorterHunter for 19, 20, 21, 23, 24 and 28 inputs, a network for 29 inputs with 165 comparators by Batcher's odd-even merge of the smallest networks for 13 and 16 inputs, and networks of depth 14 for 25 to 32 inputs by Batcher's odd-even merge of networks of depth 9."
+  added_by: daniel-munro
+
+dobbelaere-2018-01-02:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2018-01-02."
+  date: "2018-01-02"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/96c663941b118d07af6a3c623867c389ffd2aa1c/sorting_networks.html"
+  notes: "A smaller network for 22 inputs, and a column of lower bounds on size, by S(n+1) >= S(n) + ceil(log2 n) (Van Voorhis)."
+  added_by: daniel-munro
+
+dobbelaere-2018-06-12:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2018-06-12."
+  date: "2018-06-12"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/0963fe55effd3063c232b46849bb056a318997d3/sorting_networks.html"
+  notes: "A smaller network for 21 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2018-07-18:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2018-07-18."
+  date: "2018-07-18"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/b1bf00331945b8ab823c183649b5178bc86a9a31/sorting_networks.html"
+  notes: "Smaller networks for 23, 24, 25 and 26 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2020-05-30:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2020-05-30."
+  date: "2020-05-30"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/ceab1520c97c3ced87d653be84da66564d25e5d2/sorting_networks.html"
+  notes: "Lower bounds on size updated from Harder's S(11) = 35 and S(12) = 39, by Van Voorhis's S(n+1) >= S(n) + ceil(log2 n)."
+  added_by: daniel-munro
+
+dobbelaere-2020-06-07:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2020-06-07."
+  date: "2020-06-07"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/2f566a812bf6759a9afb3adedaa07062f6f1059b/sorting_networks.html"
+  notes: "Corrects the lower bounds on size for 17 to 32 inputs, one higher than before."
+  added_by: daniel-munro
+
+dobbelaere-2020-06-16:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2020-06-16."
+  date: "2020-06-16"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/a6f3ba0e5ed4e5d260ce9864a3ab0636b06b50bd/sorting_networks.html"
+  notes: "Networks of depth 13 for 25 and 26 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2020-07-04:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2020-07-04."
+  date: "2020-07-04"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/af45f1ce95c24707d6f551a51f405cb59229b805/sorting_networks.html"
+  notes: "A smaller network for 18 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2022-01-02:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2022-01-02."
+  date: "2022-01-02"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/ad7d4e6eb7057a764a2a26945e2a530d4101704e/sorting_networks.html"
+  notes: "Smaller networks for 21, 23, 25 and 27 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2022-01-15:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2022-01-15."
+  date: "2022-01-15"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/9cd9c1151313ec98a78a0ee2ef287104ba96ffd0/sorting_networks.html"
+  notes: "A smaller network for 22 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2022-01-23:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2022-01-23."
+  date: "2022-01-23"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/6a93b17d26e2fa11ed61790c4e89aca0aaa462ef/sorting_networks.html"
+  notes: "A smaller network for 29 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2022-07-04:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2022-07-04."
+  date: "2022-07-04"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/117de660634d68e6c15c27a4a611ada04b788137/sorting_networks.html"
+  notes: "A smaller network for 25 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2022-11-27:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2022-11-27."
+  date: "2022-11-27"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/133c9298eef96c6e45ced994ab53b059ad0e58dc/sorting_networks.html"
+  notes: "A smaller network for 27 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2024-10-27:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2024-10-27."
+  date: "2024-10-27"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/09d026dc2e306cc267081a08f4d1c2b2e530951d/sorting_networks.html"
+  notes: "A smaller network for 26 inputs."
+  added_by: daniel-munro
+
+dobbelaere-2025-04-21:
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2025-04-21."
+  date: "2025-04-21"
+  url: "https://github.com/bertdobbelaere/SorterHunter/blob/cac0ebac7c70e59f32168bfa108175a4274e903d/sorting_networks.html"
+  notes: "Tighter lower bounds on size for 13 or more inputs, on a suggestion by Jelmer Firet, from an argument of Van Voorhis (1972) whose proof has since been questioned. Tomar (2026) proved the same bounds for 13 to 32 inputs by computer."
+  added_by: daniel-munro
+
+bose-nelson-1962:
+  string: "R.C. Bose, R.J. Nelson, A sorting problem, Journal of the ACM 9 (1962) 282-296."
+  date: "1962-04"
+  doi: "https://doi.org/10.1145/321119.321126"
+  notes: "Values from Table 1 of Floyd and Knuth (1970)."
+  added_by: daniel-munro
+
+floyd-1964:
+  string: "R.W. Floyd, A minute improvement in the Bose-Nelson sorting procedure, memo, Computer Associates, February 1964."
+  date: "1964-02"
+  notes: "Unpublished; a network for 9 inputs with 25 comparators, cited in Floyd and Knuth (1970)."
+  added_by: daniel-munro
+
+batcher-1964:
+  string: "K.E. Batcher, A new internal sorting method, Goodyear Aerospace report GER-11759, September 1964."
+  date: "1964-09"
+  notes: "The odd-even merge sort; values from Table 1 of Floyd and Knuth (1970). Published as Batcher (1968)."
+  added_by: daniel-munro
+
+batcher-1968:
+  string: "K.E. Batcher, Sorting networks and their applications, AFIPS Spring Joint Computer Conference 32 (1968) 307-314."
+  date: "1968-04-30"
+  doi: "https://doi.org/10.1145/1468075.1468121"
+  url: "https://www.cs.kent.edu/~batcher/sort.pdf"
+  notes: "Sorts 2^p inputs in p(p+1)/2 steps, and so n inputs in that many steps for n <= 2^p, by leaving out wires."
+  added_by: daniel-munro
+
+floyd-knuth-1970:
+  string: "R.W. Floyd, D.E. Knuth, The Bose-Nelson sorting problem, Stanford report STAN-CS-70-177, November 1970. Also in A Survey of Combinatorial Theory, North-Holland (1973) 163-172."
+  date: "1970-11"
+  url: "http://bitsavers.informatik.uni-stuttgart.de/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/PDF/1970/CS-TR-70-177.pdf"
+  doi: "https://doi.org/10.1016/B978-0-7204-2262-7.50020-X"
+  notes: "Proves S(n) for n <= 8 (Theorems 3 and 4; for 7 inputs, a 1966 computer search by R. Grove). Table 1 gives the best upper bounds known in 1969, including unpublished networks by Waksman (10 inputs) and Shapiro and Green (11, 12 and 16 inputs), and the best lower bounds known in 1966."
+  added_by: daniel-munro
+
+kautz-pease-green-1970:
+  string: "W.H. Kautz, M.C. Pease, M.W. Green, Cellular logic-in-memory arrays, Final Report Part 1, SRI Project 5509, Stanford Research Institute, May 1970."
+  date: "1970-05"
+  notes: "Not seen; cited by Van Voorhis (1971), Table 2, for the sizes previously reported for 17 to 32 inputs."
+  added_by: daniel-munro
+
+van-voorhis-1971:
+  string: "D.C. Van Voorhis, A generalization of the divide-sort-merge strategy for sorting networks, Technical Report 16, Digital Systems Laboratory, Stanford University (STAN-CS-71-237), August 1971."
+  date: "1971-08"
+  url: "http://bitsavers.informatik.uni-stuttgart.de/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/PDF/1971/CS-TR-71-237.pdf"
+  notes: "Table 2 (pp. 49-50) gives the smallest known sizes for up to 36 inputs, marking those new in the report: 79 for 18, 141 for 26, 150 for 27 and 156 for 28 inputs."
+  added_by: daniel-munro
+
+van-voorhis-1972:
+  string: "D.C. Van Voorhis, An improved lower bound for sorting networks, IEEE Transactions on Computers C-21 (1972) 612-613."
+  date: "1972-06"
+  doi: "https://doi.org/10.1109/TC.1972.5009021"
+  notes: "Proves S(n) >= S(n-1) + ceil(log2 n), first in Stanford Digital Systems Laboratory Technical Note 7 (February 1971). The resulting lower bounds for 9 to 16 inputs are from Codish et al. (2014)."
+  added_by: daniel-munro
+
+knuth-1973:
+  string: "D.E. Knuth, The Art of Computer Programming, Vol. 3: Sorting and Searching, Addison-Wesley, 1973, Section 5.3.4."
+  date: "1973"
+  notes: "Gives the fastest known networks for up to 16 inputs, by Shapiro and Van Voorhis, and the optimal depths for up to 8 inputs. Values from Table 1 of Parberry (1991)."
+  added_by: daniel-munro
+
+parberry-1989:
+  string: "I. Parberry, A computer assisted optimal depth lower bound for sorting networks with nine inputs, Proceedings of Supercomputing '89 (1989) 152-161."
+  date: "1989-11-13"
+  doi: "https://doi.org/10.1145/76263.76280"
+  notes: "Shows that no network of depth 6 sorts 9 inputs, so D(9) = D(10) = 7."
+  added_by: daniel-munro
+
+parberry-1991:
+  string: "I. Parberry, A computer-assisted optimal depth lower bound for nine-input sorting networks, Mathematical Systems Theory 24 (1991) 101-116."
+  date: "1991"
+  doi: "https://doi.org/10.1007/BF02090393"
+  url: "https://ianparberry.com/pubs/9-input.pdf"
+  notes: "Journal version of Parberry (1989). Table 1 gives the known bounds on depth for up to 16 inputs."
+  added_by: daniel-munro
+
+juille-1995:
+  string: "H. Juillé, Evolution of non-deterministic incremental algorithms as a new approach for search in state spaces, Proceedings of the 6th International Conference on Genetic Algorithms (1995) 351-358."
+  date: "1995-07"
+  notes: "A network for 13 inputs with 45 comparators. Not seen; cited by Valsalam and Miikkulainen (2013) and Baddar (2009)."
+  added_by: daniel-munro
+
+baddar-batcher-2009:
+  string: "S.W. Al-Haj Baddar, K.E. Batcher, An 11-step sorting network for 18 elements, Parallel Processing Letters 19 (2009) 97-103."
+  date: "2009-03"
+  doi: "https://doi.org/10.1142/S0129626409000092"
+  notes: "First as Kent State University technical report TR-KSU-CS-2007-06 (2007). Leaving out a wire gives depth 11 for 17 inputs."
+  added_by: daniel-munro
+
+baddar-2009:
+  string: "S.W. Al-Haj Baddar, Finding Better Sorting Networks, PhD thesis, Kent State University, 2009."
+  date: "2009-04"
+  url: "https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/10?p10_accession_num=kent1239814529"
+  notes: "Table 3.2 (p. 34) gives sizes of 133 and 140 for 25 and 26 inputs. Also a network of depth 12 for 22 inputs (first in technical report TR-KSU-CS-2008-05, 2008), and so for 21 inputs, credited by Dobbelaere's list."
+  added_by: daniel-munro
+
+valsalam-2010:
+  string: "V.K. Valsalam, Utilizing Symmetry in Evolutionary Design, PhD thesis, University of Texas at Austin, Technical Report AI-10-04, August 2010."
+  date: "2010-08"
+  url: "https://nn.cs.utexas.edu/downloads/papers/valsalam.phdtr10.pdf"
+  notes: "Table 7.1 (p. 76): smaller networks for 17 to 20 and 22 inputs."
+  added_by: daniel-munro
+
+valsalam-miikkulainen-2013:
+  string: "V.K. Valsalam, R. Miikkulainen, Using symmetry and evolutionary search to minimize sorting networks, Journal of Machine Learning Research 14 (2013) 303-331."
+  date: "2013-02"
+  url: "https://jmlr.org/papers/v14/valsalam13a.html"
+  notes: "Table 4: a network for 21 inputs with 102 comparators, and the networks of Valsalam (2010)."
+  added_by: daniel-munro
+
+bundala-zavodny-2013:
+  string: "D. Bundala, J. Závodný, Optimal sorting networks, LATA 2014, LNCS 8370 (2014) 236-247, arXiv:1310.6271."
+  date: "2013-10-23"
+  url: "https://arxiv.org/abs/1310.6271"
+  doi: "https://doi.org/10.1007/978-3-319-04921-2_19"
+  notes: "Proves D(11) = D(12) = 8 (Theorem 1) and D(n) = 9 for 13 <= n <= 16 (Theorem 2), with a SAT solver."
+  added_by: daniel-munro
+
+codish-et-al-2014:
+  string: "M. Codish, L. Cruz-Filipe, M. Frank, P. Schneider-Kamp, Twenty-five comparators is optimal when sorting nine inputs (and twenty-nine for ten), ICTAI 2014, arXiv:1405.5754. Also Journal of Computer and System Sciences 82 (2016) 551-563."
+  date: "2014-05-22"
+  url: "https://arxiv.org/abs/1405.5754"
+  doi: "https://doi.org/10.1016/j.jcss.2015.11.014"
+  notes: "Proves S(9) = 25 and S(10) = 29, and so new lower bounds for 11 to 16 inputs (table on p. 3), which also lists the older lower bounds."
+  added_by: daniel-munro
+
+ehlers-muller-2014:
+  string: "T. Ehlers, M. Müller, Faster sorting networks for 17, 19 and 20 inputs, Technical report 1406, Kiel University, 2014, arXiv:1410.2736."
+  date: "2014-10-08"
+  url: "https://arxiv.org/abs/1410.2736"
+  notes: "Networks of depth 10 for 17 inputs and 11 for 19 and 20 inputs (Table 1, Figures 3 and 4). Table 1 also lists the earlier bounds for 17 to 20 inputs."
+  added_by: daniel-munro
+
+ehlers-muller-2015:
+  string: "T. Ehlers, M. Müller, New bounds on optimal sorting networks, CiE 2015, LNCS 9136 (2015) 167-176, arXiv:1501.06946."
+  date: "2015-01-27"
+  url: "https://arxiv.org/abs/1501.06946"
+  doi: "https://doi.org/10.1007/978-3-319-20028-6_17"
+  notes: "Theorem 1: any sorting network on 17 or more inputs has depth at least 10, so D(17) = 10."
+  added_by: daniel-munro
+
+ehlers-2017:
+  string: "T. Ehlers, Merging almost sorted sequences yields a 24-sorter, Information Processing Letters 118 (2017) 17-20."
+  date: "2016-09"
+  doi: "https://doi.org/10.1016/j.ipl.2016.08.005"
+  notes: "A network of depth 12 for 24 inputs, and so for 23. Dated by its online publication. Not seen; credited by Wang (2025), Table 1, and Dobbelaere's list."
+  added_by: daniel-munro
+
+harder-2019:
+  string: "J. Harder, sortnetopt, https://github.com/jix/sortnetopt, 2019-12-07."
+  date: "2019-12-07"
+  url: "https://github.com/jix/sortnetopt"
+  notes: "Computer proof that S(11) = 35 and S(12) = 39. Written up in Harder (2020)."
+  added_by: daniel-munro
+
+harder-2020:
+  string: "J. Harder, An answer to the Bose-Nelson sorting problem for 11 and 12 channels, arXiv:2012.04400."
+  date: "2020-12-08"
+  url: "https://arxiv.org/abs/2012.04400"
+  notes: "Theorem 61 and Corollary 62."
+  added_by: daniel-munro
+
+wang-2025:
+  string: "C. Wang, Depth-13 sorting networks for 28 channels, arXiv:2511.04107."
+  date: "2025-11-06"
+  url: "https://arxiv.org/abs/2511.04107"
+  notes: "A network of depth 13 for 28 inputs, and so for 27. Table 1 gives the earlier bounds on depth for up to 32 inputs."
+  added_by: daniel-munro
+
+tomar-2026:
+  string: "T.S. Tomar, Sorting networks on 13 inputs need at least 44 comparators, Zenodo, 2026, https://doi.org/10.5281/zenodo.23453293."
+  date: "2026-10-18"
+  doi: "https://doi.org/10.5281/zenodo.23453293"
+  notes: "Computer proof of the lower bounds on size for 13 to 27 inputs that Dobbelaere's list gave from 2025-04-21, with a Lean proof of S(13) >= 44. Version 2 (2026-10-19) adds 28 to 32 inputs. Not peer reviewed. A sequel (Zenodo, 2026-10-21, https://doi.org/10.5281/zenodo.23504358) claims S(13) = 45, and so bounds one higher for 14 to 32 inputs."
+  added_by: daniel-munro
+
+tomar-2026-v2:
+  string: "T.S. Tomar, Sorting networks on 13 inputs need at least 44 comparators, version 2, Zenodo, 2026."
+  date: "2026-10-19"
+  doi: "https://doi.org/10.5281/zenodo.23730883"
+  notes: "Adds the lower bounds for 28 to 32 inputs to version 1 (tomar-2026). The DOI is of version 6 (2026-10-28). Not peer reviewed."
+  added_by: daniel-munro

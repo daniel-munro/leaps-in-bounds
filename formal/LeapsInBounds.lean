@@ -13,6 +13,7 @@ public import LeapsInBounds.Statements.Radical
 public import LeapsInBounds.Statements.Ramsey
 public import LeapsInBounds.Statements.Schur
 public import LeapsInBounds.Statements.SnakeInTheBox
+public import LeapsInBounds.Statements.SortingNetwork
 public import LeapsInBounds.Statements.SquarePacking
 public import LeapsInBounds.Statements.Superpermutation
 public import LeapsInBounds.Statements.VanDerWaerden

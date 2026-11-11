@@ -240,6 +240,16 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Golomb.lean`](../form
 
 Witnesses can certify upper bounds only. A witness for `G(n) <= L` uses `format: marks`: `n` distinct integers from `0` to `L`, separated by whitespace or commas, whose pairwise differences are all distinct. For example, `'0 1 4 9 11'` for `G(5) <= 11`.
 
+### Sorting networks: `sorting-network-size-{n}` and `sorting-network-depth-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/SortingNetwork.lean`](../formal/LeapsInBounds/Statements/SortingNetwork.lean). A network is a list of comparators `(i, j)` on wires numbered from `0`, applied in order, each putting the smaller of the two values on wire `min(i, j)` and the larger on the other. It sorts if it leaves every input of `n` values in increasing order on wires `0, …, n - 1`. Its depth is the length of the longest chain of comparators, each sharing a wire with the one before it: the number of steps it takes when comparators on different wires act at the same time.
+
+- `SizeLowerBound n L` means `S(n) >= L`: every sorting network on `n` inputs has at least `L` comparators.
+- `SizeUpperBound n L` means `S(n) <= L`: some sorting network on `n` inputs has at most `L` comparators.
+- `DepthLowerBound n L` and `DepthUpperBound n L` mean `D(n) >= L` and `D(n) <= L`, for the depth.
+
+Witnesses can certify upper bounds only. A witness for `S(n) <= L` or `D(n) <= L` uses `format: comparators`: a sorting network on `n` wires, as its comparators `i,j` in order, separated by whitespace, with at most `L` comparators or depth at most `L`. Writing each step's comparators on one line is clearer, but not needed. For example, `'0,2 1,3 0,1 2,3 1,2'` for `S(4) <= 5` and `D(4) <= 3`. The checker uses the 0-1 principle, and checks only the inputs that the network's first comparators can output, so it's fastest when they make a full layer.
+
 ### Snake-in-the-box and coil-in-the-box: `snake-in-the-box-{n}` and `coil-in-the-box-{n}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/SnakeInTheBox.lean`](../formal/LeapsInBounds/Statements/SnakeInTheBox.lean). The vertices of the hypercube `Q_n` are the binary vectors of length `n`, two of them adjacent if they differ in one coordinate. A snake is an induced path in `Q_n` (its vertices are adjacent only when consecutive), and a coil is an induced cycle. Lengths count edges.

@@ -1,0 +1,9 @@
+constant: sorting-network-depth-1
+bound: upper
+value: 0
+kind: witness
+witness:
+  format: comparators
+  data: ''
+submitted_by: daniel-munro
+date: 2026-11-11

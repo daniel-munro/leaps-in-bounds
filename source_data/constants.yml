@@ -1174,3 +1174,313 @@ isosceles-set-3:
   image:
     generated: isosceles-set-3.svg
     alt_text: "Kelly's isosceles set of 8 points in space: a regular pentagon, its center, and two points on its axis, with segments colored by length"
+
+sorting-network-size-2:
+  image:
+    generated: sorting-network-size-2.svg
+    alt_text: "Sorting network on 2 inputs with 1 comparator in 1 step, drawn as 2 horizontal wires joined by vertical comparators"
+
+sorting-network-size-3:
+  image:
+    generated: sorting-network-size-3.svg
+    alt_text: "Sorting network on 3 inputs with 3 comparators in 3 steps, drawn as 3 horizontal wires joined by vertical comparators"
+
+sorting-network-size-4:
+  image:
+    generated: sorting-network-size-4.svg
+    alt_text: "Sorting network on 4 inputs with 5 comparators in 3 steps, drawn as 4 horizontal wires joined by vertical comparators"
+
+sorting-network-size-5:
+  image:
+    generated: sorting-network-size-5.svg
+    alt_text: "Sorting network on 5 inputs with 9 comparators in 5 steps, drawn as 5 horizontal wires joined by vertical comparators"
+
+sorting-network-size-6:
+  image:
+    generated: sorting-network-size-6.svg
+    alt_text: "Sorting network on 6 inputs with 12 comparators in 5 steps, drawn as 6 horizontal wires joined by vertical comparators"
+
+sorting-network-size-7:
+  image:
+    generated: sorting-network-size-7.svg
+    alt_text: "Sorting network on 7 inputs with 16 comparators in 6 steps, drawn as 7 horizontal wires joined by vertical comparators"
+
+sorting-network-size-8:
+  image:
+    generated: sorting-network-size-8.svg
+    alt_text: "Sorting network on 8 inputs with 19 comparators in 6 steps, drawn as 8 horizontal wires joined by vertical comparators"
+
+sorting-network-size-9:
+  image:
+    generated: sorting-network-size-9.svg
+    alt_text: "Sorting network on 9 inputs with 25 comparators in 7 steps, drawn as 9 horizontal wires joined by vertical comparators"
+
+sorting-network-size-10:
+  image:
+    generated: sorting-network-size-10.svg
+    alt_text: "Sorting network on 10 inputs with 29 comparators in 8 steps, drawn as 10 horizontal wires joined by vertical comparators"
+
+sorting-network-size-11:
+  image:
+    generated: sorting-network-size-11.svg
+    alt_text: "Sorting network on 11 inputs with 35 comparators in 8 steps, drawn as 11 horizontal wires joined by vertical comparators"
+
+sorting-network-size-12:
+  image:
+    generated: sorting-network-size-12.svg
+    alt_text: "Sorting network on 12 inputs with 39 comparators in 9 steps, drawn as 12 horizontal wires joined by vertical comparators"
+
+sorting-network-size-13:
+  image:
+    generated: sorting-network-size-13.svg
+    alt_text: "Sorting network on 13 inputs with 45 comparators in 10 steps, drawn as 13 horizontal wires joined by vertical comparators"
+
+sorting-network-size-14:
+  image:
+    generated: sorting-network-size-14.svg
+    alt_text: "Sorting network on 14 inputs with 51 comparators in 10 steps, drawn as 14 horizontal wires joined by vertical comparators"
+
+sorting-network-size-15:
+  image:
+    generated: sorting-network-size-15.svg
+    alt_text: "Sorting network on 15 inputs with 56 comparators in 10 steps, drawn as 15 horizontal wires joined by vertical comparators"
+
+sorting-network-size-16:
+  image:
+    generated: sorting-network-size-16.svg
+    alt_text: "Sorting network on 16 inputs with 60 comparators in 10 steps, drawn as 16 horizontal wires joined by vertical comparators"
+
+sorting-network-size-17:
+  image:
+    generated: sorting-network-size-17.svg
+    alt_text: "Sorting network on 17 inputs with 71 comparators in 12 steps, drawn as 17 horizontal wires joined by vertical comparators"
+
+sorting-network-size-18:
+  image:
+    generated: sorting-network-size-18.svg
+    alt_text: "Sorting network on 18 inputs with 77 comparators in 12 steps, drawn as 18 horizontal wires joined by vertical comparators"
+
+sorting-network-size-19:
+  image:
+    generated: sorting-network-size-19.svg
+    alt_text: "Sorting network on 19 inputs with 85 comparators in 12 steps, drawn as 19 horizontal wires joined by vertical comparators"
+
+sorting-network-size-20:
+  image:
+    generated: sorting-network-size-20.svg
+    alt_text: "Sorting network on 20 inputs with 91 comparators in 12 steps, drawn as 20 horizontal wires joined by vertical comparators"
+
+sorting-network-size-21:
+  image:
+    generated: sorting-network-size-21.svg
+    alt_text: "Sorting network on 21 inputs with 99 comparators in 15 steps, drawn as 21 horizontal wires joined by vertical comparators"
+
+sorting-network-size-22:
+  image:
+    generated: sorting-network-size-22.svg
+    alt_text: "Sorting network on 22 inputs with 106 comparators in 13 steps, drawn as 22 horizontal wires joined by vertical comparators"
+
+sorting-network-size-23:
+  image:
+    generated: sorting-network-size-23.svg
+    alt_text: "Sorting network on 23 inputs with 114 comparators in 14 steps, drawn as 23 horizontal wires joined by vertical comparators"
+
+sorting-network-size-24:
+  image:
+    generated: sorting-network-size-24.svg
+    alt_text: "Sorting network on 24 inputs with 120 comparators in 13 steps, drawn as 24 horizontal wires joined by vertical comparators"
+
+sorting-network-size-25:
+  image:
+    generated: sorting-network-size-25.svg
+    alt_text: "Sorting network on 25 inputs with 130 comparators in 15 steps, drawn as 25 horizontal wires joined by vertical comparators"
+
+sorting-network-size-26:
+  image:
+    generated: sorting-network-size-26.svg
+    alt_text: "Sorting network on 26 inputs with 138 comparators in 15 steps, drawn as 26 horizontal wires joined by vertical comparators"
+
+sorting-network-size-27:
+  image:
+    generated: sorting-network-size-27.svg
+    alt_text: "Sorting network on 27 inputs with 147 comparators in 16 steps, drawn as 27 horizontal wires joined by vertical comparators"
+
+sorting-network-size-28:
+  image:
+    generated: sorting-network-size-28.svg
+    alt_text: "Sorting network on 28 inputs with 155 comparators in 14 steps, drawn as 28 horizontal wires joined by vertical comparators"
+
+sorting-network-size-29:
+  image:
+    generated: sorting-network-size-29.svg
+    alt_text: "Sorting network on 29 inputs with 164 comparators in 15 steps, drawn as 29 horizontal wires joined by vertical comparators"
+
+sorting-network-size-30:
+  image:
+    generated: sorting-network-size-30.svg
+    alt_text: "Sorting network on 30 inputs with 172 comparators in 14 steps, drawn as 30 horizontal wires joined by vertical comparators"
+
+sorting-network-size-31:
+  image:
+    generated: sorting-network-size-31.svg
+    alt_text: "Sorting network on 31 inputs with 180 comparators in 14 steps, drawn as 31 horizontal wires joined by vertical comparators"
+
+sorting-network-size-32:
+  image:
+    generated: sorting-network-size-32.svg
+    alt_text: "Sorting network on 32 inputs with 185 comparators in 14 steps, drawn as 32 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-2:
+  image:
+    generated: sorting-network-depth-2.svg
+    alt_text: "Sorting network on 2 inputs with 1 comparator in 1 step, drawn as 2 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-3:
+  image:
+    generated: sorting-network-depth-3.svg
+    alt_text: "Sorting network on 3 inputs with 3 comparators in 3 steps, drawn as 3 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-4:
+  image:
+    generated: sorting-network-depth-4.svg
+    alt_text: "Sorting network on 4 inputs with 5 comparators in 3 steps, drawn as 4 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-5:
+  image:
+    generated: sorting-network-depth-5.svg
+    alt_text: "Sorting network on 5 inputs with 9 comparators in 5 steps, drawn as 5 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-6:
+  image:
+    generated: sorting-network-depth-6.svg
+    alt_text: "Sorting network on 6 inputs with 12 comparators in 5 steps, drawn as 6 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-7:
+  image:
+    generated: sorting-network-depth-7.svg
+    alt_text: "Sorting network on 7 inputs with 16 comparators in 6 steps, drawn as 7 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-8:
+  image:
+    generated: sorting-network-depth-8.svg
+    alt_text: "Sorting network on 8 inputs with 19 comparators in 6 steps, drawn as 8 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-9:
+  image:
+    generated: sorting-network-depth-9.svg
+    alt_text: "Sorting network on 9 inputs with 25 comparators in 7 steps, drawn as 9 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-10:
+  image:
+    generated: sorting-network-depth-10.svg
+    alt_text: "Sorting network on 10 inputs with 31 comparators in 7 steps, drawn as 10 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-11:
+  image:
+    generated: sorting-network-depth-11.svg
+    alt_text: "Sorting network on 11 inputs with 35 comparators in 8 steps, drawn as 11 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-12:
+  image:
+    generated: sorting-network-depth-12.svg
+    alt_text: "Sorting network on 12 inputs with 40 comparators in 8 steps, drawn as 12 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-13:
+  image:
+    generated: sorting-network-depth-13.svg
+    alt_text: "Sorting network on 13 inputs with 46 comparators in 9 steps, drawn as 13 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-14:
+  image:
+    generated: sorting-network-depth-14.svg
+    alt_text: "Sorting network on 14 inputs with 52 comparators in 9 steps, drawn as 14 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-15:
+  image:
+    generated: sorting-network-depth-15.svg
+    alt_text: "Sorting network on 15 inputs with 57 comparators in 9 steps, drawn as 15 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-16:
+  image:
+    generated: sorting-network-depth-16.svg
+    alt_text: "Sorting network on 16 inputs with 61 comparators in 9 steps, drawn as 16 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-17:
+  image:
+    generated: sorting-network-depth-17.svg
+    alt_text: "Sorting network on 17 inputs with 74 comparators in 10 steps, drawn as 17 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-18:
+  image:
+    generated: sorting-network-depth-18.svg
+    alt_text: "Sorting network on 18 inputs with 78 comparators in 11 steps, drawn as 18 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-19:
+  image:
+    generated: sorting-network-depth-19.svg
+    alt_text: "Sorting network on 19 inputs with 87 comparators in 11 steps, drawn as 19 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-20:
+  image:
+    generated: sorting-network-depth-20.svg
+    alt_text: "Sorting network on 20 inputs with 93 comparators in 11 steps, drawn as 20 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-21:
+  image:
+    generated: sorting-network-depth-21.svg
+    alt_text: "Sorting network on 21 inputs with 100 comparators in 12 steps, drawn as 21 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-22:
+  image:
+    generated: sorting-network-depth-22.svg
+    alt_text: "Sorting network on 22 inputs with 107 comparators in 12 steps, drawn as 22 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-23:
+  image:
+    generated: sorting-network-depth-23.svg
+    alt_text: "Sorting network on 23 inputs with 116 comparators in 12 steps, drawn as 23 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-24:
+  image:
+    generated: sorting-network-depth-24.svg
+    alt_text: "Sorting network on 24 inputs with 122 comparators in 12 steps, drawn as 24 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-25:
+  image:
+    generated: sorting-network-depth-25.svg
+    alt_text: "Sorting network on 25 inputs with 131 comparators in 13 steps, drawn as 25 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-26:
+  image:
+    generated: sorting-network-depth-26.svg
+    alt_text: "Sorting network on 26 inputs with 141 comparators in 13 steps, drawn as 26 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-27:
+  image:
+    generated: sorting-network-depth-27.svg
+    alt_text: "Sorting network on 27 inputs with 152 comparators in 13 steps, drawn as 27 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-28:
+  image:
+    generated: sorting-network-depth-28.svg
+    alt_text: "Sorting network on 28 inputs with 159 comparators in 13 steps, drawn as 28 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-29:
+  image:
+    generated: sorting-network-depth-29.svg
+    alt_text: "Sorting network on 29 inputs with 166 comparators in 14 steps, drawn as 29 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-30:
+  image:
+    generated: sorting-network-depth-30.svg
+    alt_text: "Sorting network on 30 inputs with 172 comparators in 14 steps, drawn as 30 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-31:
+  image:
+    generated: sorting-network-depth-31.svg
+    alt_text: "Sorting network on 31 inputs with 180 comparators in 14 steps, drawn as 31 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-32:
+  image:
+    generated: sorting-network-depth-32.svg
+    alt_text: "Sorting network on 32 inputs with 185 comparators in 14 steps, drawn as 32 horizontal wires joined by vertical comparators"
