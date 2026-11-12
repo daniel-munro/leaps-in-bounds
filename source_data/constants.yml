@@ -29,10 +29,8 @@ busy-beaver-shift-4:
 
 busy-beaver-shift-5:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Busy_Beaver_5_spacetime.png"
-    credit: "--MULLIGANACEOUS--, via Wikimedia Commons"
-    license: "Public domain"
-    alt_text: "Simplified spacetime diagram of the fifth busy beaver machine"
+    generated: busy-beaver-shift-5.svg
+    alt_text: "Rules and space-time diagram of the 5-state busy beaver that runs longest, shaded by the share of ones along the tape over its 47,176,870 steps"
 
 busy-beaver-ones-1:
   image:
@@ -56,10 +54,8 @@ busy-beaver-ones-4:
 
 busy-beaver-ones-5:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Busy_Beaver_5_spacetime.png"
-    credit: "--MULLIGANACEOUS--, via Wikimedia Commons"
-    license: "Public domain"
-    alt_text: "Simplified spacetime diagram of the fifth busy beaver machine"
+    generated: busy-beaver-ones-5.svg
+    alt_text: "Rules and space-time diagram of the 5-state busy beaver that writes the most ones, shaded by the share of ones along the tape over its 47,176,870 steps"
 
 kissing-number-1:
   image:
@@ -98,30 +94,22 @@ cage-3-8:
 
 cage-3-10:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Balaban_10-cage.svg"
-    credit: "Koko90, via Wikimedia Commons"
-    license: "CC BY-SA 3.0"
-    alt_text: "Balaban 10-cage"
+    generated: cage-3-10.svg
+    alt_text: "Harries graph, one of the three (3,10)-cages"
 
 cage-3-11:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Balaban_11-cage.svg"
-    credit: "Koko90, via Wikimedia Commons"
-    license: "CC BY-SA 3.0"
+    generated: cage-3-11.svg
     alt_text: "Balaban 11-cage"
 
 cage-4-5:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Robertson_graph_hamiltonian.svg"
-    credit: "Koko90, via Wikimedia Commons"
-    license: "CC BY-SA 3.0"
+    generated: cage-4-5.svg
     alt_text: "Robertson graph"
 
 cage-7-5:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Hoffman-Singleton_graph.svg"
-    credit: "Uzyel, via Wikimedia Commons"
-    license: "CC BY-SA 3.0"
+    generated: cage-7-5.svg
     alt_text: "Hoffman-Singleton graph"
 
 stamp-folding-3:
@@ -131,10 +119,8 @@ stamp-folding-3:
 
 map-folding-2-2:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/e/e8/MapFoldings-2x2.png"
-    credit: "Robert Dickau, via Wikimedia Commons"
-    license: "CC BY-SA 3.0"
-    alt_text: "Folding a 2x2 grid"
+    generated: map-folding-2-2.svg
+    alt_text: "The 8 ways to fold a 2x2 map, each square numbered and shaded by its place in the folded stack, 1 on top"
 
 circle-in-equilateral-1:
   image:
@@ -218,17 +204,13 @@ minimal-superpermutation-3:
 
 affine-line-arrangements-6:
   image:
-    source_url: "https://upload.wikimedia.org/wikipedia/commons/6/67/Lines.svg"
-    credit: "Mik, via Wikimedia Commons"
-    license: "CC BY-SA 3.0"
-    alt_text: "Six lines intersecting at one point"
+    generated: affine-line-arrangements-6.svg
+    alt_text: "Six of the ways to arrange six lines: in general position, through one point, in a grid, in three pairs of parallels, three through each of two points, and three parallel with three through one point"
 
 affine-line-arrangements-general-position-5:
   image:
-    source_url: "https://oeis.org/A090338/a090338.gif"
-    credit: "Jon Wild and Laurence Reeves, via OEIS"
-    license: "OEIS terms of use"
-    alt_text: "All arrangements of five lines in general position"
+    generated: affine-line-arrangements-general-position-5.svg
+    alt_text: "All six arrangements of five lines in general position"
 
 busy-beaver-shift-3:
   image:
