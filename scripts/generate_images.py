@@ -26,11 +26,13 @@ strokes and colors from the constants below.
 
 import argparse
 import base64
+import functools
 import html
 import itertools
 import math
 import os
 import pathlib
+from fractions import Fraction
 from typing import Any, Callable, Iterable, Sequence
 
 import yaml
@@ -226,6 +228,53 @@ def petersen() -> tuple[list[tuple[float, float]], list[tuple[int, int]]]:
     return pos, edges
 
 
+def robertson() -> tuple[list[tuple[float, float]], list[tuple[int, int]]]:
+    """The Robertson graph, the (4, 5)-cage: a 19-cycle plus chords."""
+    chords = [(0, 4), (0, 7), (1, 9), (1, 12), (2, 6), (2, 14), (3, 8), (3, 11), (4, 15), (5, 13),
+              (5, 17), (6, 10), (7, 16), (8, 13), (9, 17), (10, 15), (11, 18), (12, 16), (14, 18)]
+    return on_circle(19), [(i, (i + 1) % 19) for i in range(19)] + chords
+
+
+def hoffman_singleton() -> tuple[list[tuple[float, float]], list[tuple[int, int]]]:
+    """The Hoffman–Singleton graph, the (7, 5)-cage: five pentagons P_h and
+    five pentagrams Q_i, with vertex j of P_h joined to vertex hi + j of Q_i.
+    The pentagons and pentagrams alternate around a ring."""
+    centers = on_circle(10, 0.82)
+    pos, edges = [], []
+    for kind, step in ((0, 1), (1, 2)):  # pentagons, then pentagrams
+        for h in range(5):
+            cx, cy = centers[2 * h + kind]
+            pos += [(cx + x, cy + y) for x, y in on_circle(5, 0.15, 90 + 36 * (2 * h + kind))]
+            edges += [(25 * kind + 5 * h + j, 25 * kind + 5 * h + (j + step) % 5) for j in range(5)]
+    edges += [(5 * h + j, 25 + 5 * i + (h * i + j) % 5) for h in range(5) for i in range(5) for j in range(5)]
+    return pos, edges
+
+
+def balaban_11_cage() -> tuple[list[tuple[float, float]], list[tuple[int, int]]]:
+    """The Balaban 11-cage, cut from the Tutte 12-cage (LCF
+    [17, 27, -13, -59, -35, 35, -11, 13, -53, 53, -27, 21, 57, 11, -21, -57, 59, -17]^7):
+    remove an edge and its four neighboring vertices, then smooth away the
+    vertices left with degree 2. The rest keep their order around the circle."""
+    n = 126
+    nbrs: list[set[int]] = [set() for _ in range(n)]
+    for u, v in lcf(n, [17, 27, -13, -59, -35, 35, -11, 13, -53, 53, -27, 21, 57, 11, -21, -57, 59, -17]):
+        nbrs[u].add(v)
+        nbrs[v].add(u)
+    removed = {0, 1} | nbrs[0] | nbrs[1]
+    for v in removed:
+        for u in nbrs[v] - removed:
+            nbrs[u].discard(v)
+    for v in range(n):
+        if v not in removed and len(nbrs[v]) == 2:
+            a, b = nbrs[v]
+            nbrs[a] = nbrs[a] - {v} | {b}
+            nbrs[b] = nbrs[b] - {v} | {a}
+            removed.add(v)
+    keep = [v for v in range(n) if v not in removed]
+    index = {v: i for i, v in enumerate(keep)}
+    return on_circle(len(keep)), sorted({tuple(sorted((index[u], index[v]))) for u in keep for v in nbrs[u]})
+
+
 def cage_graph(k: int, g: int) -> tuple[list[tuple[float, float]], list[tuple[int, int]]] | None:
     """A drawing of the (k, g)-cage, for the cages drawn so far."""
     if g in (3, 4) and k > 7:  # denser drawings are a blur
@@ -238,7 +287,14 @@ def cage_graph(k: int, g: int) -> tuple[list[tuple[float, float]], list[tuple[in
         return pos, [(u, k + v) for u in range(k) for v in range(k)]
     if (k, g) == (3, 5):
         return petersen()
-    lcfs = {6: (14, [5, -5]), 7: (24, [12, 7, -7]), 8: (30, [-13, -9, 7, -7, 9, 13])}
+    if (k, g) == (4, 5):
+        return robertson()
+    if (k, g) == (7, 5):
+        return hoffman_singleton()
+    if (k, g) == (3, 11):
+        return balaban_11_cage()
+    lcfs = {6: (14, [5, -5]), 7: (24, [12, 7, -7]), 8: (30, [-13, -9, 7, -7, 9, 13]),
+            10: (70, [-29, -19, -13, 13, 21, -27, 27, 33, -13, 13, 19, -21, -33, 29])}  # the Harries graph
     if k == 3 and g in lcfs:
         n, jumps = lcfs[g]
         return on_circle(n), lcf(n, jumps)
@@ -254,8 +310,9 @@ def render_cage(constant_id: str, k: int, g: int) -> Svg | None:
     check(all(bin(a).count("1") == k for a in adj), f"{constant_id}: not {k}-regular")
     check(girth(adj) == g, f"{constant_id}: girth is not {g}")
     check(len(pos) == exact_value(constant_id), f"{constant_id}: {len(pos)} vertices is not the cage's order")
-    small = len(pos) <= 10
-    return draw_graph(pos, edges, edge_width=2 if small else 1.5, vertex_radius=5 if small else 3.5)
+    n = len(pos)
+    edge_width, vertex_radius = (2, 5) if n <= 10 else (1.5, 3.5) if n <= 30 else (0.75, 2.5) if n <= 70 else (0.6, 2)
+    return draw_graph(pos, edges, edge_width=edge_width, vertex_radius=vertex_radius)
 
 
 def render_degree_diameter(constant_id: str, d: int, k: int) -> Svg | None:
@@ -690,6 +747,58 @@ def render_stamp_folding(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+def map_foldings(m: int, n: int) -> list[tuple[int, ...]]:
+    """All foldings of an m × n map into a unit square, as the position of
+    each cell (row by row) in the folded stack. As for stamps, the creases
+    between columns c and c + 1 fall on one side of the square or the other
+    by the parity of c, and likewise for rows, and creases on the same side
+    can't cross."""
+    cell = lambda r, c: r * n + c
+    sides: dict[tuple[str, int], list[tuple[int, int]]] = {}
+    for r in range(m):
+        for c in range(n - 1):
+            sides.setdefault(("column", c % 2), []).append((cell(r, c), cell(r, c + 1)))
+    for r in range(m - 1):
+        for c in range(n):
+            sides.setdefault(("row", r % 2), []).append((cell(r, c), cell(r + 1, c)))
+    foldings = []
+    for pos in itertools.permutations(range(m * n)):
+        if all(not (a < c < b < d or c < a < d < b)
+               for creases in sides.values()
+               for (a, b), (c, d) in itertools.combinations([sorted((pos[u], pos[v])) for u, v in creases], 2)):
+            foldings.append(pos)
+    return foldings
+
+
+def render_map_folding(constant_id: str, m: int, n: int) -> Svg | None:
+    """All foldings of a small map, each drawn as the map with its cells
+    numbered and shaded by their place in the folded stack, 1 on top."""
+    if m * n > 4:
+        return None
+    foldings = map_foldings(m, n)
+    check(len(foldings) == exact_value(constant_id), f"{constant_id}: {len(foldings)} foldings")
+    cols = math.ceil(math.sqrt(2 * len(foldings)))
+    rows = math.ceil(len(foldings) / cols)
+    gap = 0.7
+    w, h = cols * (n + gap) - gap, rows * (m + gap) - gap
+    svg = Svg(0, 0, w, h)
+    shades = ["#3a6ea5", "#6f93bd", "#a3b9d4", "#dbe7f5"]  # top of the stack to the bottom
+    cells, labels = [], []
+    for k, pos in enumerate(foldings):
+        x0 = (k % cols) * (n + gap)
+        y0 = (rows - 1 - k // cols) * (m + gap)
+        for r in range(m):
+            for c in range(n):
+                height = m * n - 1 - pos[r * n + c]  # 0 on top
+                x, y = x0 + c, y0 + m - 1 - r
+                cells.append(svg.rect(x, y, 1, 1, fill=shades[height * (len(shades) - 1) // max(1, m * n - 1)]))
+                labels.append(svg.text((x + 0.5, y + 0.5), height + 1, 0.45,
+                                       fill="white" if height < (m * n) / 2 else INK))
+    svg.add(svg.group(cells, stroke="white", stroke_width=2))
+    svg.add(svg.group(labels, font_family=FONT, font_weight="bold"))
+    return svg
+
+
 ###################
 # Turing machines #
 ###################
@@ -697,8 +806,10 @@ def render_stamp_folding(constant_id: str, n: int) -> Svg | None:
 # Champion machines in standard text format: for each state, the actions on
 # reading 0 and 1 (write, move, next state; Z halts)
 BUSY_BEAVERS = {
-    "shift": {1: "1RZ---", 2: "1RB1LB_1LA1RZ", 3: "1RB1RZ_1LB0RC_1LC1LA", 4: "1RB1LB_1LA0LC_1RZ1LD_1RD0RA"},
-    "ones": {1: "1RZ---", 2: "1RB1LB_1LA1RZ", 3: "1RB1RZ_0RC1RB_1LC1LA", 4: "1RB1LB_1LA0LC_1RZ1LD_1RD0RA"},
+    "shift": {1: "1RZ---", 2: "1RB1LB_1LA1RZ", 3: "1RB1RZ_1LB0RC_1LC1LA", 4: "1RB1LB_1LA0LC_1RZ1LD_1RD0RA",
+              5: "1RB1LC_1RC1RB_1RD0LE_1LA1LD_1RZ0LA"},
+    "ones": {1: "1RZ---", 2: "1RB1LB_1LA1RZ", 3: "1RB1RZ_0RC1RB_1LC1LA", 4: "1RB1LB_1LA0LC_1RZ1LD_1RD0RA",
+             5: "1RB1LC_1RC1RB_1RD0LE_1LA1LD_1RZ0LA"},
 }
 
 
@@ -720,6 +831,41 @@ def run_machine(machine: str, limit: int = 10_000) -> list[tuple[dict[int, int],
     raise ValueError(f"{machine} didn't halt in {limit} steps")
 
 
+@functools.cache
+def sample_machine(machine: str, frames: int, tape_size: int = 1 << 16) -> tuple[int, int, int, int, int, list[bytes]]:
+    """Run a machine too long to record every step, keeping between `frames`
+    and twice that many snapshots of the tape, evenly spaced in time. Returns
+    the steps, the 1s left, the leftmost and rightmost cells visited, the
+    head at the halt, and the snapshots (the last at the halt)."""
+    actions = []
+    for rule in machine.split("_"):
+        for symbol in (0, 1):
+            write, move, state = rule[3 * symbol:3 * symbol + 3]
+            actions.append((int(write), 1 if move == "R" else -1, -1 if state == "Z" else ord(state) - ord("A")))
+    tape = bytearray(tape_size)
+    head = lo = hi = tape_size // 2
+    state, steps, every = 0, 0, 1
+    snapshots = [bytes(tape)]
+    while state >= 0:
+        for _ in range(every):
+            write, move, state = actions[2 * state + tape[head]]
+            tape[head] = write
+            head += move
+            steps += 1
+            if head < lo:
+                lo = head
+            elif head > hi:
+                hi = head
+            if state < 0:
+                break
+        check(0 < lo and hi < tape_size - 1, f"{machine} ran off a tape of {tape_size} cells")
+        snapshots.append(bytes(tape))
+        if len(snapshots) > 2 * frames and state >= 0:
+            snapshots = snapshots[::2]
+            every *= 2
+    return steps, tape.count(1), lo, hi, head, snapshots
+
+
 def rule_table(svg: Svg, machine: str, x0: float, y0: float, px: float) -> list[str]:
     """A machine's rules as a table with its top left at (x0, y0): a row per
     state and a column per symbol read, each entry the symbol written, the
@@ -727,7 +873,9 @@ def rule_table(svg: Svg, machine: str, x0: float, y0: float, px: float) -> list[
     drawing units."""
     rules = machine.split("_")
     row, label_w, action_w = 24 * px, 26 * px, 40 * px
-    font = dict(font_size=13, text_anchor="middle", dominant_baseline="central")
+    # A dy shift, not dominant-baseline: Safari doesn't pass dominant-baseline
+    # on to a <tspan>, so the colored next state would sit on its own baseline.
+    font = dict(font_size=13, text_anchor="middle", dy="0.35em")
     elements = []
     for j in range(2):
         elements.append(svg.text((x0 + label_w + (j + 0.5) * action_w, y0 - row / 2), j, 13 * px, fill="#6c757d"))
@@ -757,6 +905,8 @@ def render_busy_beaver(constant_id: str, kind: str, n: int) -> Svg | None:
     machine = BUSY_BEAVERS[kind].get(n)
     if machine is None:
         return None
+    if n >= 5:
+        return render_long_busy_beaver(constant_id, kind, n, machine)
     history = run_machine(machine)
     steps = len(history) - 1
     ones = sum(history[-1][0].values())
@@ -795,6 +945,47 @@ def render_busy_beaver(constant_id: str, kind: str, n: int) -> Svg | None:
         if marks:
             svg.add(svg.group(marks, fill=PALETTE[state] if state >= 0 else "white", stroke=INK if state < 0 else None,
                               stroke_width=0.75 if state < 0 else None))
+    return svg
+
+
+def mix(color1: str, color2: str, t: float) -> str:
+    """The color a fraction t of the way from color1 to color2."""
+    c1, c2 = (int(color1[i:i + 2], 16) for i in (1, 3, 5)), (int(color2[i:i + 2], 16) for i in (1, 3, 5))
+    return "#" + "".join(f"{round(a + (b - a) * t):02x}" for a, b in zip(c1, c2))
+
+
+def render_long_busy_beaver(constant_id: str, kind: str, n: int, machine: str) -> Svg:
+    """For a machine that runs too long to show each step: the rule table and
+    a coarse space-time diagram, each block shaded by the share of its cells
+    holding 1 in a snapshot of the tape, with the head marked at the halt."""
+    columns, rows, levels = 240, 120, 4
+    steps, ones, lo, hi, head, snapshots = sample_machine(machine, columns)
+    check((steps if kind == "shift" else ones) == exact_value(constant_id), f"{constant_id}: {steps} steps, {ones} ones")
+    frames = [snapshots[round(i * (len(snapshots) - 1) / (columns - 1))] for i in range(columns)]
+    edges = [lo + round(r * (hi + 1 - lo) / rows) for r in range(rows + 1)]  # tape cells in each row, left to right
+    px = 1 / min(24, 520 / columns)
+    table_w, table_h, gap = 106 * px, (n + 1) * 24 * px, 20 * px
+    total_h = max(rows, table_h)
+    xmin = -(table_w + gap)
+    svg = Svg(xmin, 0, columns, total_h, size=max(columns - xmin, total_h) / px)
+    oy = (total_h - rows) / 2  # bottom of the diagram
+    svg.add(*rule_table(svg, machine, xmin, (total_h + table_h) / 2, px))
+    svg.add(svg.rect(0, oy, columns, rows, fill="#f1f3f5"))
+    # Blocks shaded by level, merged down each column, with the tape's left
+    # end at the top as in the diagrams of smaller machines
+    blocks: dict[int, list[str]] = {level: [] for level in range(1, levels + 1)}
+    for c, frame in enumerate(frames):
+        shades = [math.ceil(levels * frame.count(1, edges[r], edges[r + 1]) / (edges[r + 1] - edges[r])) for r in range(rows)]
+        start = 0
+        for r in range(1, rows + 1):
+            if r == rows or shades[r] != shades[start]:
+                if shades[start]:
+                    blocks[shades[start]].append(svg.rect(c, oy + rows - r, 1, r - start))
+                start = r
+    for level, rects in blocks.items():
+        svg.add(svg.group(rects, fill=mix("#f1f3f5", "#7f9cbf", level / levels), shape_rendering="crispEdges"))
+    head_row = next(r for r in range(rows) if edges[r] <= head < edges[r + 1])
+    svg.add(svg.circle((columns - 0.5, oy + rows - head_row - 0.5), 2.2, fill="white", stroke=INK, stroke_width=0.75))
     return svg
 
 
@@ -966,6 +1157,148 @@ def render_rectilinear_crossing(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+#####################
+# Line arrangements #
+#####################
+
+Line = tuple[int, int, int]  # (a, b, c) for the line ax + by = c
+
+# Example arrangements, the lines in each with integer coefficients. For 5
+# lines in general position these are all 6 kinds, found by random search
+# and then nudged apart to spread out their intersections.
+LINE_ARRANGEMENTS: dict[tuple[str, int], list[list[Line]]] = {
+    ("general", 5): [
+        [(11, 1, 30), (-9, -7, 28), (3, 11, 21), (4, -10, 36), (-9, 6, 19)],
+        [(14, 7, 24), (-6, -15, -5), (-16, -1, -10), (-10, 12, 2), (5, -15, -18)],
+        [(-13, -1, 24), (7, -11, 31), (-8, -10, 0), (1, -13, 34), (-12, 5, 17)],
+        [(-3, -10, -34), (-6, -8, -6), (-5, 9, -30), (8, -6, -2), (10, 0, -15)],
+        [(-6, -12, 4), (-13, 1, -37), (-8, 10, -29), (10, 8, -16), (-4, 12, -7)],
+        [(0, -9, 8), (6, -7, 3), (9, -1, 6), (-8, -3, 17), (4, 8, 15)],
+    ],
+    ("any", 6): [
+        [(2, 17, -13), (-6, 16, 35), (-17, -2, -13), (12, -12, -47), (-11, -13, -21), (17, -2, 32)],  # general position
+        [(0, 1, 0), (1, 0, 0), (1, 1, 0), (1, -1, 0), (1, 3, 0), (3, -1, 0)],  # all through one point
+        [(1, 0, -1), (1, 0, 0), (1, 0, 1), (0, 1, -1), (0, 1, 0), (0, 1, 1)],  # a grid
+        [(0, 1, 1), (0, 1, -1), (2, -1, 1), (2, -1, -1), (2, 1, 0), (2, 1, 2)],  # three pairs of parallels
+        [(0, 1, 1), (1, 1, 1), (1, -1, -1), (0, 1, -1), (1, 1, -1), (1, -1, 1)],  # three lines through each of two points
+        [(1, 0, -1), (1, 0, 1), (1, 0, 3), (0, 1, 0), (1, 1, 0), (1, -1, 0)],  # three parallels and three concurrent
+    ],
+}
+
+
+def arrangement_type(lines: Sequence[Line]) -> tuple:
+    """A canonical form of a line arrangement's combinatorial type, the same
+    for two arrangements just when one can be deformed into the other or its
+    mirror image without lines passing through intersections or becoming
+    parallel. It records the circular order of the lines' ends at infinity
+    (parallel lines sharing an end) and the order of the intersections along
+    each line, minimized over the ways to label the lines and orient them by
+    a starting end and direction around infinity."""
+    n = len(lines)
+    for (a1, b1, c1), (a2, b2, c2) in itertools.combinations(lines, 2):
+        check(a1 * b2 != a2 * b1 or a1 * c2 != a2 * c1 or b1 * c2 != b2 * c1, f"repeated line in {lines}")
+
+    def same_direction(e: tuple[int, int], f: tuple[int, int]) -> bool:
+        (i, s), (j, t) = e, f
+        (a1, b1, _), (a2, b2, _) = lines[i], lines[j]
+        return a1 * b2 == a2 * b1 and s * t * (a1 * a2 + b1 * b2) > 0
+
+    # Each line's two ends, along (b, -a) for s = 1 and the reverse for s = -1,
+    # grouped by direction in counterclockwise order
+    ends = sorted(((i, s) for i in range(n) for s in (1, -1)),
+                  key=lambda e: math.atan2(-lines[e[0]][0] * e[1], lines[e[0]][1] * e[1]) % (2 * math.pi))
+    groups: list[list[tuple[int, int]]] = []
+    for e in ends:
+        if groups and same_direction(groups[-1][0], e):
+            groups[-1].append(e)
+        else:
+            groups.append([e])
+    if len(groups) > 1 and same_direction(groups[0][0], groups[-1][0]):
+        groups[0] = groups.pop() + groups[0]
+    # The lines through each intersection point, and the points along each line
+    points: dict[tuple[Fraction, Fraction], set[int]] = {}
+    for i, j in itertools.combinations(range(n), 2):
+        (a1, b1, c1), (a2, b2, c2) = lines[i], lines[j]
+        det = a1 * b2 - a2 * b1
+        if det:
+            points.setdefault((Fraction(c1 * b2 - c2 * b1, det), Fraction(a1 * c2 - a2 * c1, det)), set()).update((i, j))
+    along = [[frozenset(on) for p, on in sorted(points.items(), key=lambda t: t[0][0] * b - t[0][1] * a) if i in on]
+             for i, (a, b, _) in enumerate(lines)]
+    best = None
+    for start, step in itertools.product(range(len(groups)), (1, -1)):
+        order = [groups[(start + step * t) % len(groups)] for t in range(len(groups))]
+        first: dict[int, int] = {}  # the end each line is first met at
+        for group in order:
+            for i, s in group:
+                first.setdefault(i, s)
+        ties = [[i for i, s in group if first[i] == s] for group in order]
+        for perms in itertools.product(*(itertools.permutations(t) for t in ties if t)):
+            label = {i: k for k, i in enumerate(i for perm in perms for i in perm)}
+            ends_form = tuple(tuple(sorted(label[i] for i, _ in group)) for group in order)
+            local: list[tuple] = [()] * n
+            for i in range(n):  # the points along each line, from the end it's first met at
+                pts = along[i] if first[i] == -1 else along[i][::-1]
+                local[label[i]] = tuple(tuple(sorted(label[j] for j in on if j != i)) for on in pts)
+            form = (ends_form, tuple(local))
+            if best is None or form < best:
+                best = form
+    return best
+
+
+def in_general_position(lines: Sequence[Line]) -> bool:
+    ends, local = arrangement_type(lines)
+    return len(ends) == 2 * len(lines) and all(len(on) == 1 for pts in local for on in pts)
+
+
+def draw_arrangement(svg: Svg, lines: Sequence[Line], cx: float, cy: float, r: float) -> list[str]:
+    """An arrangement drawn in the disk of radius r about (cx, cy), scaled so
+    its intersections fill the middle of the disk."""
+    unit = [(a / math.hypot(a, b), b / math.hypot(a, b), c / math.hypot(a, b)) for a, b, c in lines]
+    pts = [((c1 * b2 - c2 * b1) / (a1 * b2 - a2 * b1), (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1))
+           for (a1, b1, c1), (a2, b2, c2) in itertools.combinations(unit, 2) if abs(a1 * b2 - a2 * b1) > 1e-9]
+    if pts:
+        mx = (min(x for x, _ in pts) + max(x for x, _ in pts)) / 2
+        my = (min(y for _, y in pts) + max(y for _, y in pts)) / 2
+    else:  # all parallel
+        mx = my = 0
+    extent = max([math.dist(p, (mx, my)) for p in pts] + [abs(a * mx + b * my - c) for a, b, c in unit])
+    scale = 0.78 * r / extent if extent else r
+    segments = []
+    for a, b, c in unit:
+        # The line's closest point to the center, then out along it to the circle
+        d = (c - a * mx - b * my) * scale
+        half = math.sqrt(max(r * r - d * d, 0))
+        px, py = cx + a * d, cy + b * d
+        segments.append(svg.line((px - b * half, py + a * half), (px + b * half, py - a * half)))
+    dots = {(round(x, 9), round(y, 9)) for x, y in pts}
+    return [svg.circle((cx, cy), r, fill="#f1f3f5"),
+            svg.group(segments, stroke=EDGE, stroke_width=1.5, stroke_linecap="round"),
+            svg.group((svg.circle((cx + (x - mx) * scale, cy + (y - my) * scale), 2.5 / svg.scale) for x, y in dots), fill=INK)]
+
+
+def render_line_arrangements(constant_id: str, n: int, general: bool) -> Svg | None:
+    """Arrangements of n lines, each in a disk: all of them when there are
+    few, or a sample of different kinds."""
+    examples = LINE_ARRANGEMENTS.get(("general" if general else "any", n))
+    if examples is None:
+        return None
+    types = set()
+    for lines in examples:
+        check(len(lines) == n, f"{constant_id}: {lines} isn't {n} lines")
+        check(in_general_position(lines) or not general, f"{constant_id}: {lines} isn't in general position")
+        types.add(arrangement_type(lines))
+    check(len(types) == len(examples), f"{constant_id}: arrangements repeat")
+    if general:
+        check(len(examples) == exact_value(constant_id), f"{constant_id}: {len(examples)} arrangements")
+    cols = 3
+    rows = math.ceil(len(examples) / cols)
+    gap = 0.15
+    svg = Svg(0, 0, cols * (2 + gap) - gap, rows * (2 + gap) - gap)
+    for k, lines in enumerate(examples):
+        svg.add(*draw_arrangement(svg, lines, 1 + (k % cols) * (2 + gap), 1 + (rows - 1 - k // cols) * (2 + gap), 1))
+    return svg
+
+
 ############
 # Families #
 ############
@@ -985,6 +1318,9 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "kissing-number": ("kissing-number-", lambda c: render_kissing_number(c, *ints(c, "kissing-number-"))),
     "minimal-superpermutation": ("minimal-superpermutation-", lambda c: render_superpermutation(c, *ints(c, "minimal-superpermutation-"))),
     "stamp-folding": ("stamp-folding-", lambda c: render_stamp_folding(c, *ints(c, "stamp-folding-"))),
+    "affine-line-arrangements": ("affine-line-arrangements-", lambda c: render_line_arrangements(c, *ints(c, "affine-line-arrangements-"), general=False)),
+    "affine-line-arrangements-general-position": ("affine-line-arrangements-general-position-", lambda c: render_line_arrangements(c, *ints(c, "affine-line-arrangements-general-position-"), general=True)),
+    "map-folding": ("map-folding-", lambda c: render_map_folding(c, *ints(c, "map-folding-"))),
     "busy-beaver-shift": ("busy-beaver-shift-", lambda c: render_busy_beaver(c, "shift", *ints(c, "busy-beaver-shift-"))),
     "busy-beaver-ones": ("busy-beaver-ones-", lambda c: render_busy_beaver(c, "ones", *ints(c, "busy-beaver-ones-"))),
     "schur": ("schur-", lambda c: render_schur(c, *ints(c, "schur-"), weak=False)),
@@ -1034,7 +1370,7 @@ def write_sheet(filenames: Sequence[str], output: str) -> None:
     with open("_data/constants.yml") as file:
         constants = yaml.safe_load(file)
     rows = []
-    for filename in sorted(filenames, key=lambda f: [int(x) if x.isdigit() else x for x in f[:-4].split("-")]):
+    for filename in sorted(filenames, key=lambda f: [(0, int(x), "") if x.isdigit() else (1, 0, x) for x in f[:-4].split("-")]):
         constant_id = filename[:-4]
         generated = os.path.join(GENERATED_IMAGES_DIR, filename)
         current = (constants[constant_id].get("image") or {}).get("path", "").lstrip("/")
