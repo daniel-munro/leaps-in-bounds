@@ -6167,6 +6167,11 @@ schur-6-lower-537:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+schur-6-lower-538:
+  sha256: 30bbc69017480305abbf408185757f7ab1385096590d997a2292ee03317fddde
+  checker: f71778114d206f5e37226130250f6db95ad4ca82
+  verified_by: daniel-munro
+  date: '2026-11-12'
 schur-7-lower-1696:
   sha256: 2ff378275919e9bd2d4a25cc9376a7e9fdcaa2150fcea368583c2eb768a5abee
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -6177,11 +6182,21 @@ schur-8-lower-5372:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+schur-8-lower-5382:
+  sha256: 4f6a88d6ca7426b055a8f6aaaba02b7b95013c6d2a7d712a74c9a4f041735b4f
+  checker: f71778114d206f5e37226130250f6db95ad4ca82
+  verified_by: daniel-munro
+  date: '2026-11-12'
 schur-9-lower-17727:
   sha256: 634f9591798a1964bca2f98dc9cad3aec616c20b4584a95b9580aeacd6d0d815
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+schur-9-lower-17760:
+  sha256: cc7c9f884c50663d47498a6809ae2c47a7fed4a9e9f6cec53795f12cdfa08d82
+  checker: f71778114d206f5e37226130250f6db95ad4ca82
+  verified_by: daniel-munro
+  date: '2026-11-12'
 snake-in-the-box-1-lower-1:
   sha256: 3c553de2d6a240e62d0da2858b3fa4d33c25a893baf4884c4aa90316c735ed46
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746

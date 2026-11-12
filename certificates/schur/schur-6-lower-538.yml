@@ -1,0 +1,11 @@
+constant: schur-6
+bound: lower
+value: 538
+kind: witness
+witness:
+  format: coloring
+  file: schur-6-lower-538.txt
+submitted_by: daniel-munro
+date: 2026-11-12
+source: mckenna-2026
+notes: "The colouring schur6-538.word from https://github.com/mysticflounder/schur-538 (commit c330669), with colours re-indexed from 1..6 to 0..5. The same colouring is checked in Lean there (theorem schur_six_538), and on Prove2Me (https://prove2.me/theorems/05b7c0f2-3f34-4ee4-89e4-381a700752d3)."
