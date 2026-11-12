@@ -1,0 +1,28 @@
+constant: rectilinear-crossing-17
+bound: upper
+value: 798
+kind: witness
+witness:
+  format: points
+  data: |
+    3690672,1783356
+    2009769,1242847
+    1639489,1093130
+    3172310,1701160
+    742964,2903743
+    748194,0
+    2303200,2013676
+    1083766,2569323
+    1049061,368342
+    5015108,1929835
+    1240148,2209020
+    1559021,837960
+    3087901,1724636
+    0,3664805
+    1265976,588155
+    4040685,1821922
+    333271,3307902
+submitted_by: daniel-munro
+date: 2026-11-12
+source: aichholzer-krasser-2005
+notes: "Found by simulated annealing, moving one point at a time, from points in three clusters, by an AI agent (Claude)."

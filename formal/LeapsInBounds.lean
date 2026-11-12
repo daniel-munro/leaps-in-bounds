@@ -11,6 +11,7 @@ public import LeapsInBounds.Statements.LineArrangement
 public import LeapsInBounds.Statements.NoThreeInLine
 public import LeapsInBounds.Statements.Radical
 public import LeapsInBounds.Statements.Ramsey
+public import LeapsInBounds.Statements.RectilinearCrossing
 public import LeapsInBounds.Statements.Schur
 public import LeapsInBounds.Statements.SnakeInTheBox
 public import LeapsInBounds.Statements.SortingNetwork
