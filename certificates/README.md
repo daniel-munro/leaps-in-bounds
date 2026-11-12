@@ -307,6 +307,21 @@ witness:
     1 0 0 0 1 0
 ```
 
+### Rectilinear crossing number: `rectilinear-crossing-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/RectilinearCrossing.lean`](../formal/LeapsInBounds/Statements/RectilinearCrossing.lean). A drawing of the complete graph `K_n` places its vertices at `n` points of the plane, no three on a line, and draws its edges as segments. Two edges cross if they share no vertex and their segments meet.
+
+- `LowerBound n c` means `cr(K_n) >= c`: every such drawing has at least `c` crossings.
+- `UpperBound n c` means `cr(K_n) <= c`: some such drawing has at most `c` crossings.
+
+Witnesses can certify upper bounds only. A witness for `cr(K_n) <= c` uses `format: points`: `n` distinct points with integer coordinates, no three on a line, written `x,y` and separated by whitespace. The checker counts the crossings exactly: two edges cross exactly when their four ends are in convex position, so it counts the 4-point subsets with no point inside the triangle of the other three. For example, a triangle with two points inside, for `cr(K_5) <= 1`:
+
+```yaml
+witness:
+  format: points
+  data: '0,0 6,0 3,6 2,2 4,3'
+```
+
 ## Checking locally
 
 To run the checkers on certificates, give their IDs:

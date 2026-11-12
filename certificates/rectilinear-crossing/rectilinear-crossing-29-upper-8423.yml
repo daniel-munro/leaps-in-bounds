@@ -1,0 +1,40 @@
+constant: rectilinear-crossing-29
+bound: upper
+value: 8423
+kind: witness
+witness:
+  format: points
+  data: |
+    5150866,6389835
+    4293971,6680008
+    3983986,5109319
+    5292666,6351603
+    4148936,7037218
+    2758039,3082379
+    4804440,6140923
+    3347419,8815147
+    917310,0
+    6016351,6326323
+    4053816,7267433
+    4241226,5420340
+    7912357,6476287
+    0,15724706
+    3855458,4954350
+    6771194,6379380
+    3781601,7942292
+    3699423,4662409
+    4930263,6200667
+    4552784,6554922
+    4312097,5996857
+    7006649,6399471
+    3056597,9379683
+    4331218,5525455
+    5566009,6271080
+    4516742,6596761
+    4287156,5935703
+    4858677,6155002
+    4200926,6717857
+submitted_by: daniel-munro
+date: 2026-11-12
+source: aichholzer-crossing-page
+notes: "Found by simulated annealing, moving one point at a time, from points in three clusters, by an AI agent (Claude)."

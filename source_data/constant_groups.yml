@@ -469,3 +469,21 @@ sorting-network-depth:
   parameter_values: [[[1, 32]]]
   research_status: initial
   added_by: daniel-munro
+
+rectilinear-crossing:
+  name: "Rectilinear crossing number of the complete graph"
+  description: "The rectilinear crossing number $\\overline{\\mathrm{cr}}(K_n)$ is the fewest crossings in a drawing of the complete graph $K_n$ in the plane with straight edges and no three vertices on a line. Two edges cross exactly when their four ends are in convex position, so it is also the fewest convex quadrilaterals spanned by $n$ points in general position."
+  external_ids:
+    mathworld: RectilinearCrossingNumber
+    msc: 52C10
+    oeis: A014540
+    wikipedia_en: Crossing_number_(graph_theory)
+  display_type: sequence
+  representative_image: rectilinear-crossing-12
+  id_template: "rectilinear-crossing-{n}"
+  name_template: "Rectilinear crossing number $\\overline{{\\mathrm{{cr}}}}(K_{{{n}}})$"
+  description_template: "The fewest crossings in a drawing of the complete graph $K_{{{n}}}$ in the plane with straight edges and no three vertices on a line."
+  parameters: [n]
+  parameter_values: [[[5, 100]]]
+  research_status: initial
+  added_by: daniel-munro

@@ -2825,3 +2825,90 @@ tomar-2026-v2:
   doi: "https://doi.org/10.5281/zenodo.23730883"
   notes: "Adds the lower bounds for 28 to 32 inputs to version 1 (tomar-2026). The DOI is of version 6 (2026-10-28). Not peer reviewed."
   added_by: daniel-munro
+
+# Rectilinear crossing number
+
+guy-1972:
+  string: "R.K. Guy, Crossing numbers of graphs, in Graph Theory and Applications (Proc. Conf., Western Michigan Univ., 1972), Lecture Notes in Math. 303, Springer, Berlin, 1972, pp. 111-124."
+  date: "1972"
+  notes: "Brodsky, Durocher and Gethner (2000, Table 1) give the values for n <= 9 citing this, White and Beineke (1978) and Finch (2000) together, without saying which value appeared where."
+  added_by: daniel-munro
+
+singer-1971:
+  string: "D. Singer, Rectilinear crossing numbers, manuscript, 1971."
+  date: "1971"
+  notes: "Unpublished. Brodsky, Durocher and Gethner (2000) cite it, with Gardner's Knotted Doughnuts (1986), for the rectilinear crossing number of K_10 being 61 or 62, and reproduce its argument that it is more than 60."
+  added_by: daniel-munro
+
+brodsky-durocher-gethner-2000:
+  string: "A. Brodsky, S. Durocher, E. Gethner, The rectilinear crossing number of K_10 is 62, Electron. J. Combin. 8 (2001) #R23, arXiv:cs/0009023."
+  date: "2000-09-22"
+  url: "https://arxiv.org/abs/cs/0009023"
+  doi: "https://doi.org/10.37236/1567"
+  notes: "Table 1 gives the values for n <= 9 and the earlier bounds for n = 10."
+  added_by: daniel-munro
+
+aichholzer-aurenhammer-krasser-2002:
+  string: "O. Aichholzer, F. Aurenhammer, H. Krasser, On the crossing number of complete graphs, Proc. 18th ACM Symposium on Computational Geometry (2002) 19-24; Computing 76 (2006) 165-176."
+  date: "2002-06"
+  notes: "MathWorld credits the value for n = 11 to this paper. The OEIS records the values for n = 11 and 12 as contributed by Aichholzer (2001-08-14) and Krasser (2001-09-17), from the authors' 2001 technical report, Progress on rectilinear crossing numbers."
+  added_by: daniel-munro
+
+aichholzer-krasser-2005:
+  string: "O. Aichholzer, H. Krasser, Abstract order type extension and new results on the rectilinear crossing number, Proc. 21st ACM Symposium on Computational Geometry (2005) 91-98; Comput. Geom. 36 (2007) 2-15."
+  date: "2005-06"
+  notes: "Aichholzer, García, Orden and Ramos (2006) cite it for the values for n <= 17. Cetina et al. (2010) say that it gives implicitly the 30-point set with 9726 crossings."
+  added_by: daniel-munro
+
+aichholzer-garcia-orden-ramos-2006:
+  string: "O. Aichholzer, J. García, D. Orden, P. Ramos, New lower bounds for the number of (<= k)-edges and the rectilinear crossing number of K_n, Discrete Comput. Geom. 38 (2007) 1-14, arXiv:math/0608610."
+  date: "2006-08-24"
+  url: "https://arxiv.org/abs/math/0608610"
+  doi: "https://doi.org/10.1007/s00454-007-1325-8"
+  notes: "Determines the values for n = 19 and 21, and says the values for n <= 17 were known."
+  added_by: daniel-munro
+
+abrego-fernandez-leanos-salazar-2008:
+  string: "B.M. Ábrego, S. Fernández-Merchant, J. Leaños, G. Salazar, The maximum number of halving lines and the rectilinear crossing number of K_n for n <= 27, Electron. Notes Discrete Math. 30 (2008) 261-266."
+  date: "2008-02"
+  doi: "https://doi.org/10.1016/j.endm.2008.01.045"
+  notes: "Determines the values for n = 18, 20 and 22 to 27, matching the upper bounds from point sets of Aichholzer et al. The full version is Ábrego et al. (2011), Table 1."
+  added_by: daniel-munro
+
+abrego-et-al-2011:
+  string: "B.M. Ábrego, M. Cetina, S. Fernández-Merchant, J. Leaños, G. Salazar, On (<= k)-edges, crossings, and halving lines of geometric drawings of K_n, Discrete Comput. Geom. 48 (2012) 192-215, arXiv:1102.5065."
+  date: "2011-02-24"
+  url: "https://arxiv.org/abs/1102.5065"
+  doi: "https://doi.org/10.1007/s00454-012-9403-y"
+  notes: "Table 1 gives the values for n <= 27. Section 6 lists lower bounds for 28 <= n <= 99, for the pseudolinear crossing number, which is at most the rectilinear one."
+  added_by: daniel-munro
+
+cetina-et-al-2010:
+  string: "M. Cetina, C. Hernández-Vélez, J. Leaños, C. Villalobos, Point sets that minimize (<= k)-edges, 3-decomposable drawings, and the rectilinear crossing number of K_30, Discrete Math. 311 (2011) 1646-1657, arXiv:1009.4736."
+  date: "2010-09-23"
+  url: "https://arxiv.org/abs/1009.4736"
+  doi: "https://doi.org/10.1016/j.disc.2011.03.030"
+  notes: "Proves the lower bound 9726 for n = 30, matching the upper bound it credits to Aichholzer and Krasser."
+  added_by: daniel-munro
+
+oeis-a014540:
+  string: "Rectilinear crossing number of complete graph on n nodes. - OEIS"
+  date: "2026-11-12"
+  url: "https://oeis.org/A014540"
+  notes: "Retrieved 2026-11-12. A comment by B.M. Ábrego (2008-05-05) says that the value for n = 28 is 7233 or 7234."
+  added_by: daniel-munro
+
+fabila-monroy-lopez-2014:
+  string: "R. Fabila-Monroy, J. López, Computational search of small point sets with small rectilinear crossing number, J. Graph Algorithms Appl. 18 (2014) 393-399, arXiv:1403.1288."
+  date: "2014-03-05"
+  url: "https://arxiv.org/abs/1403.1288"
+  doi: "https://doi.org/10.7155/jgaa.00328"
+  notes: "Table 1 gives new point sets for 46 <= n <= 99 found by local search, and the previous best for each."
+  added_by: daniel-munro
+
+aichholzer-crossing-page:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2015-05-26."
+  date: "2015-05-26"
+  url: "http://www.ist.tugraz.at/aichholzer/research/rp/triangulations/crossing/"
+  notes: "Lower bounds and best known point sets for n <= 100, read from a Wayback Machine capture of 2022-02-14. Point sets for n = 34, 38, 42, 48 and 51 are credited to H.F. Jensen (2005-2009), and for n = 40 to M. Scheucher."
+  added_by: daniel-munro

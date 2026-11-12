@@ -52,6 +52,7 @@
     - isosceles-set
     - kissing-number
     - no-three-in-line
+    - rectilinear-crossing
     - square-packing
 
 - msc: "68P"

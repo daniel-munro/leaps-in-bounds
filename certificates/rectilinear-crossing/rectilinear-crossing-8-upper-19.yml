@@ -1,0 +1,19 @@
+constant: rectilinear-crossing-8
+bound: upper
+value: 19
+kind: witness
+witness:
+  format: points
+  data: |
+    34,0
+    24,112
+    145,107
+    37,8
+    0,191
+    31,65
+    108,74
+    190,146
+submitted_by: daniel-munro
+date: 2026-11-12
+source: guy-1972
+notes: "Found by simulated annealing on a small grid, moving one point at a time, by an AI agent (Claude), choosing among optimal sets, and moving their points, to keep the vertices and crossings apart when drawn."

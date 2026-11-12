@@ -37,7 +37,7 @@ import yaml
 
 from certificates import (Radical, affine_dimension, eccentricity_at_most, girth, has_monochromatic_sum, is_cap,
                           is_isosceles_set, is_snake, load_certificates, network_depth, no_three_collinear, orbit_closure, read_graph,
-                          read_comparators, read_grid_points, read_marks, read_points, read_radical_points, read_symmetries,
+                          read_comparators, read_grid_points, read_integer_points, orientation, rectilinear_crossings, read_marks, read_points, read_radical_points, read_symmetries,
                           read_ternary_points, read_transitions, read_vectors, read_witness_data, transition_vertices)
 from utils import GENERATED_IMAGES_DIR
 
@@ -929,6 +929,43 @@ def render_isosceles_set(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+################################
+# Rectilinear crossing numbers #
+################################
+
+def render_rectilinear_crossing(constant_id: str, n: int) -> Svg | None:
+    """A straight-line drawing of K_n with the fewest crossings known, with
+    the crossings marked. Drawn only for small n, where the points aren't
+    packed too tightly to see."""
+    cert = witness(constant_id, "upper")
+    if cert is None or n > 12:
+        return None
+    points = read_integer_points(read_witness_data(cert))
+    check(len(points) == n and no_three_collinear(points), f"{constant_id}: not {n} points in general position")
+    crossings = rectilinear_crossings(points)
+    check(crossings <= cert["value"], f"{constant_id}: witness has {crossings} crossings")
+    if exact_value(constant_id) is not None:
+        check(crossings == exact_value(constant_id), f"{constant_id}: witness isn't optimal")
+    xs, ys = [p[0] for p in points], [p[1] for p in points]
+    span = max(max(xs) - min(xs), max(ys) - min(ys))
+    m = 0.05 * span
+    svg = Svg(min(xs) - m, min(ys) - m, max(xs) + m, max(ys) + m)
+    edges = list(itertools.combinations(range(n), 2))
+    svg.add(svg.group((svg.line(points[i], points[j]) for i, j in edges), stroke=EDGE, stroke_width=1.25, stroke_opacity=0.8))
+    marks = []
+    for (a, b), (c, d) in itertools.combinations(edges, 2):
+        if len({a, b, c, d}) < 4:
+            continue
+        p, q, r, s = points[a], points[b], points[c], points[d]
+        if orientation(p, q, r) * orientation(p, q, s) < 0 and orientation(r, s, p) * orientation(r, s, q) < 0:
+            t = orientation(r, s, p) / (orientation(r, s, p) - orientation(r, s, q))
+            marks.append((p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])))
+    check(len(marks) == crossings, f"{constant_id}: counted {len(marks)} crossings, not {crossings}")
+    svg.add(svg.group((svg.circle(x, 2.5 / svg.scale) for x in marks), fill=PALETTE[1]))
+    svg.add(svg.group((svg.circle(p, 4.5 / svg.scale) for p in points), fill=INK, stroke="white", stroke_width=1.5))
+    return svg
+
+
 ############
 # Families #
 ############
@@ -960,6 +997,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "cap-set": ("cap-set-", lambda c: render_cap_set(c, *ints(c, "cap-set-"))),
     "no-three-in-line": ("no-three-in-line-", lambda c: render_no_three_in_line(c, *ints(c, "no-three-in-line-"))),
     "isosceles-set": ("isosceles-set-", lambda c: render_isosceles_set(c, *ints(c, "isosceles-set-"))),
+    "rectilinear-crossing": ("rectilinear-crossing-", lambda c: render_rectilinear_crossing(c, *ints(c, "rectilinear-crossing-"))),
 }
 
 
