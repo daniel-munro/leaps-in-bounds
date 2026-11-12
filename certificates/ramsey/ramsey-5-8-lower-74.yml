@@ -1,0 +1,15 @@
+constant: ramsey-5-8
+bound: lower
+value: 74
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-5-8-lower-74.g6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A circulant graph on 73 vertices (clique number 4, independence number 7): the cyclotomic circulant on Z73 with x ~
+  y when x - y is in 5^0H, 5^1H, 5^3H, where H is the subgroup of the 6th powers mod 73, of index 6 in the
+  multiplicative group. Found by an AI agent (Claude) in a bounded search over Paley and cyclotomic circulants of
+  prime order, circulants whose connection sets are unions of multiplicative orbits, verified circulant witnesses,
+  and their complements and lexicographic products, keeping the largest graph the checker verifies quickly.

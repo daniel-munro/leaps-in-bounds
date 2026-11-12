@@ -1,0 +1,10 @@
+constant: degree-diameter-9-5
+bound: lower
+value: 4000
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-9-5-lower-4000.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{200} \rtimes \mathbb{Z}_{20}$, with product $(a, b)(c, e) = (a + 177^b c, b + e)$, and connection set $\{(179, 3), (37, 17), (125, 9), (75, 11), (59, 16), (181, 4), (78, 6), (98, 14), (64, 10)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

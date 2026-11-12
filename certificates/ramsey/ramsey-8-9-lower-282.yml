@@ -1,0 +1,14 @@
+constant: ramsey-8-9
+bound: lower
+value: 282
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-8-9-lower-282.g6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A circulant graph on 281 vertices (clique number 7, independence number 7): the circulant witness in
+  ramsey-8-8-lower-282. Found by an AI agent (Claude) in a bounded search over Paley and cyclotomic circulants of
+  prime order, circulants whose connection sets are unions of multiplicative orbits, verified circulant witnesses,
+  and their complements and lexicographic products, keeping the largest graph the checker verifies quickly.

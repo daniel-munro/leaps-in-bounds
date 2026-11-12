@@ -1,0 +1,14 @@
+constant: cage-8-5
+bound: upper
+value: 84
+kind: witness
+witness:
+  format: sparse6
+  file: cage-8-5-upper-84.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Amalgam of a biaffine plane over Z_7 with Cayley cycles: points (x,y) with x in 0..5, lines [m,b] with m in
+  0..5, y and b in Z_7; (x,y) ~ [m,b] if y = mx + b, (x,y) ~ (x,y+-1) and [m,b] ~ [m,b+-2]. This gives a
+  8-regular graph on 2(8-2)q = 84 vertices; 4-cycles would need +-1 = +-2. Construction in the style of Funk
+  and Jorgensen's amalgams of elliptic semiplanes, chosen and checked by an AI agent (Claude).

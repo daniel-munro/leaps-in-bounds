@@ -1,0 +1,14 @@
+constant: cage-7-8
+bound: upper
+value: 686
+kind: witness
+witness:
+  format: sparse6
+  file: cage-7-8-upper-686.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Subgraph of the incidence graph of the symplectic generalized quadrangle W(7) (points of PG(3,7), lines
+  totally isotropic for x0y1 - x1y0 + x2y3 - x3y2), minus all points collinear with a point P and all lines
+  meeting a line L through P, leaving a 7-regular graph of girth 8 on 2*7^3 = 686 vertices. Built by an AI
+  agent (Claude).

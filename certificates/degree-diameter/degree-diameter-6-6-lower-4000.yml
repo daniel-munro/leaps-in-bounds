@@ -1,0 +1,10 @@
+constant: degree-diameter-6-6
+bound: lower
+value: 4000
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-6-6-lower-4000.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{200} \rtimes \mathbb{Z}_{20}$, with product $(a, b)(c, e) = (a + 13^b c, b + e)$, and connection set $\{(153, 18), (143, 2), (156, 12), (124, 8), (163, 3), (121, 17)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

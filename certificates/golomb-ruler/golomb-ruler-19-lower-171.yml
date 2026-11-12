@@ -1,0 +1,10 @@
+constant: golomb-ruler-19
+bound: lower
+value: 171
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.GolombCounting
+  theorem: LeapsInBounds.Proofs.GolombCounting.lower_19
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 171 pairs of marks have distinct positive differences, all at most the length of the ruler. Proof written by an AI agent (Claude).

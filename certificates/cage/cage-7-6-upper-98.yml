@@ -1,0 +1,13 @@
+constant: cage-7-6
+bound: upper
+value: 98
+kind: witness
+witness:
+  format: sparse6
+  file: cage-7-6-upper-98.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Subgraph of the incidence graph of the biaffine plane over GF(7): points (x,y) with x in a fixed set of 7
+  field elements, lines y = mx + b with m in a fixed set of 7 elements, giving a 7-regular bipartite graph of
+  girth 6 on 2*7*7 = 98 vertices. Construction chosen by an AI agent (Claude).

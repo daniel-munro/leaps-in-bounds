@@ -1,0 +1,10 @@
+constant: degree-diameter-17-7
+bound: upper
+value: 304226850
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DegreeDiameterMoore
+  theorem: LeapsInBounds.Proofs.DegreeDiameterMoore.upper_17_7
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Moore bound. Around any vertex, each vertex at distance i >= 1 has a neighbor at distance i - 1, so it has at most d - 1 neighbors at distance i + 1. Proof written by an AI agent (Claude).

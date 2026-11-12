@@ -1,0 +1,10 @@
+constant: schur-3
+bound: upper
+value: 13
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SchurSmallUpper
+  theorem: LeapsInBounds.Proofs.SchurSmallUpper.upper_3_13
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Exhaustive backtracking search over colorings, run in the Lean kernel (decide +kernel) and proved sound. Proof written by an AI agent (Claude).

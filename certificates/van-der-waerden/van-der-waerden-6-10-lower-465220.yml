@@ -1,0 +1,11 @@
+constant: van-der-waerden-6-10
+bound: lower
+value: 465220
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-6-10-lower-465220.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: rabung-1979
+notes: 'Rabung''s construction with p = 51691: integer x from 0 to 465218 gets the discrete logarithm of x mod 51691 base 10, mod 6 (color 0 for multiples of 51691), a coloring of period 51691 repeated 9 times. No 10 cyclically consecutive residues mod 51691 have their nonzero members all the same color, so no progression with difference not divisible by 51691 is monochromatic, and one with difference divisible by 51691 has at most 9 terms. The record is far larger; this is an initial bound. Found by an AI agent (Claude), sized so that the checker runs in about a minute.'

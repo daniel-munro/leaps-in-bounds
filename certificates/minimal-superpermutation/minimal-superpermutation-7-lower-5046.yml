@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-7
+bound: lower
+value: 5046
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_7
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 7! permutations occur as distinct windows of length 7, which start at distinct positions, so the length is at least 7! + 7 - 1. Proof written by an AI agent (Claude).

@@ -1,0 +1,14 @@
+constant: cage-10-7
+bound: upper
+value: 7051
+kind: witness
+witness:
+  format: sparse6
+  file: cage-10-7-upper-7051.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A cyclic voltage lift of the complete graph K_11 over Z_641: vertex (u,a), u in 0..10 and a in Z_641, is
+  vertex u*641 + a, and a base edge uv with voltage x joins (u,a) and (v,a+x mod 641). The voltages were found
+  by a min-conflicts local search that counts closed non-backtracking walks shorter than 7 in the base graph
+  with net voltage 0, written and run by an AI agent (Claude).

@@ -1,0 +1,10 @@
+constant: sorting-network-depth-22
+bound: lower
+value: 5
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SortingNetworkLower
+  theorem: LeapsInBounds.Proofs.SortingNetworkLower.depth_22
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: D(n) >= ceil(log2 n). After depth d the value on wire 0 depends on the inputs on at most 2^d wires, but in a sorting network it is the minimum of all n inputs. Proof written by an AI agent (Claude).

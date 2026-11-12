@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-4
+bound: lower
+value: 27
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_4
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 4! permutations occur as distinct windows of length 4, which start at distinct positions, so the length is at least 4! + 4 - 1. Proof written by an AI agent (Claude).

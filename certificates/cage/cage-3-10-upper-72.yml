@@ -1,0 +1,14 @@
+constant: cage-3-10
+bound: upper
+value: 72
+kind: witness
+witness:
+  format: sparse6
+  data: ':~?@Gc_yNcHE?_WIB`GUE`waHagmKbWKQ`@MDDGWT`pYGDwcWa`eJEgoZbPqMFW{]c@}PGG?`_QIAGw?bHGCQHWGRHgKSHwOTIGSUIWWVIg[WIw_XJGcYJWgZJgk[Jwo\KGs]KWw^Kg{_Kx?`LHCaL^'
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A cyclic voltage lift of the complete graph K_4 over Z_18: vertex (u,a), u in 0..3 and a in Z_18, is vertex
+  u*18 + a, and a base edge uv with voltage x joins (u,a) and (v,a+x mod 18). The voltages were found by a
+  min-conflicts local search that counts closed non-backtracking walks shorter than 10 in the base graph with
+  net voltage 0, written and run by an AI agent (Claude).

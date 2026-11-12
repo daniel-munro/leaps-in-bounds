@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-3
+bound: lower
+value: 8
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_3
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 3! permutations occur as distinct windows of length 3, which start at distinct positions, so the length is at least 3! + 3 - 1. Proof written by an AI agent (Claude).

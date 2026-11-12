@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-2
+bound: lower
+value: 3
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_2
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 2! permutations occur as distinct windows of length 2, which start at distinct positions, so the length is at least 2! + 2 - 1. Proof written by an AI agent (Claude).

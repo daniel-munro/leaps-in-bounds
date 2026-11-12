@@ -1,0 +1,11 @@
+constant: schur-9
+bound: lower
+value: 17727
+kind: witness
+witness:
+  format: coloring
+  file: schur-9-lower-17727.txt
+submitted_by: daniel-munro
+date: 2026-11-11
+source: rowley-2019
+notes: 'S(k+3) >= 33 S(k) + 6, applied to the 6-coloring g of 1 to 537 in schur-6-lower-537. For q from 1 to 537, the integers 33q + r get color g(q) for r in R = {0, -1, -10, -11, -12, -14, -15, -16, -25, -26}, so a monochromatic x + y = z among them would need r1 + r2 - r3 to be a nonzero multiple of 33 (which never happens in R) or q1 + q2 = q3. The other residues mod 33 get three new colors, each sum-free mod 33: {1, 6, 9, 13, 16, 20, 24, 27, 31}, {2, 5, 14, 15, 25, 26} and {3, 4, 10, 11, 12, 28, 29, 30}. The length is 33 (537 + 1) - 26 - 1. The residue pattern was found by an AI agent (Claude) with a backtracking search, which also showed that no such pattern exists mod 34 with R in (-34, 0]; the bound S(k+3) >= 33 S(k) + 6 matches the one behind S(8) >= 5286 = 33 S(5) + 6 in rowley-2019.'

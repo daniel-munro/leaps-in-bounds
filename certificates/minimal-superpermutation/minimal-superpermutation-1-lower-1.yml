@@ -1,0 +1,10 @@
+constant: minimal-superpermutation-1
+bound: lower
+value: 1
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SuperpermutationCounting
+  theorem: LeapsInBounds.Proofs.SuperpermutationCounting.lower_1
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Counting bound. The 1! permutations occur as distinct windows of length 1, which start at distinct positions, so the length is at least 1! + 1 - 1. Proof written by an AI agent (Claude).

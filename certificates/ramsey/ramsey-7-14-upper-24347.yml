@@ -1,0 +1,10 @@
+constant: ramsey-7-14
+bound: upper
+value: 24347
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.RamseyRecurrence
+  theorem: LeapsInBounds.Proofs.RamseyRecurrence.upper_7_14
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: Erdős–Szekeres recurrence R(r,s) <= R(r-1,s) + R(r,s-1), less 1 when both are even (by a degree parity argument), starting from R(1,s) = R(r,1) = 1. Proof written by an AI agent (Claude).

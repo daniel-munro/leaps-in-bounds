@@ -1,0 +1,10 @@
+constant: degree-diameter-20-3
+bound: lower
+value: 1771
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-20-3-lower-1771.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{161} \rtimes \mathbb{Z}_{11}$, with product $(a, b)(c, e) = (a + 29^b c, b + e)$, and connection set $\{(89, 9), (16, 2), (57, 3), (55, 8), (75, 1), (114, 10), (16, 1), (5, 10), (98, 5), (112, 6), (12, 4), (79, 7), (52, 2), (88, 9), (153, 7), (64, 4), (159, 5), (93, 6), (123, 7), (143, 4)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

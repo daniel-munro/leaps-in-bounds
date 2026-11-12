@@ -1,0 +1,11 @@
+constant: van-der-waerden-6-6
+bound: lower
+value: 465373
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-6-6-lower-465373.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: monroe-2019
+notes: 'Xu''s product construction, W(6,6) > 139 L for a 3-coloring of L integers with no monochromatic 6-term progression: integer x gets color a + 2b, where a is the discrete logarithm of x mod 139 base 2 mod 2 (0 for multiples of 139), and b is the color of the integer part of x / 139 in the first 3348 integers of the coloring of van-der-waerden-3-6-lower-11192. Truncated so that the checker runs in about a minute; the full coloring gives the record 1555550. Built by an AI agent (Claude).'

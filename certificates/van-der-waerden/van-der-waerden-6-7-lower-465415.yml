@@ -1,0 +1,11 @@
+constant: van-der-waerden-6-7
+bound: lower
+value: 465415
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-6-7-lower-465415.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+source: rabung-1979
+notes: 'Rabung''s construction with p = 77569: integer x from 0 to 465413 gets the discrete logarithm of x mod 77569 base 13, mod 6 (color 0 for multiples of 77569), a coloring of period 77569 repeated 6 times. No 7 cyclically consecutive residues mod 77569 have their nonzero members all the same color, so no progression with difference not divisible by 77569 is monochromatic, and one with difference divisible by 77569 has at most 6 terms. The record is far larger; this is an initial bound. Found by an AI agent (Claude), sized so that the checker runs in about a minute.'

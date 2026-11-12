@@ -1,0 +1,10 @@
+constant: snake-in-the-box-10
+bound: upper
+value: 1023
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SnakeVertexCount
+  theorem: LeapsInBounds.Proofs.SnakeVertexCount.upper_10
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: A snake's vertices are distinct vertices of the hypercube, of which there are 2^n. Proof written by an AI agent (Claude).

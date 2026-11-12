@@ -1,0 +1,10 @@
+constant: degree-diameter-8-5
+bound: lower
+value: 3955
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-8-5-lower-3955.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{565} \rtimes \mathbb{Z}_{7}$, with product $(a, b)(c, e) = (a + 256^b c, b + e)$, and connection set $\{(361, 3), (439, 4), (313, 1), (257, 6), (270, 3), (200, 4), (453, 6), (422, 1)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

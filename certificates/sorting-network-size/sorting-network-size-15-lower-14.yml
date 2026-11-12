@@ -1,0 +1,10 @@
+constant: sorting-network-size-15
+bound: lower
+value: 14
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.SortingNetworkLower
+  theorem: LeapsInBounds.Proofs.SortingNetworkLower.size_15
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: S(n) >= n - 1. If the comparators don't join the n wires into one connected component, putting 1 on one component and 0 on the rest (or the reverse) leaves some input unsorted, and a connected graph on n vertices has at least n - 1 edges. Proof written by an AI agent (Claude).

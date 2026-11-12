@@ -1,0 +1,10 @@
+constant: degree-diameter-6-7
+bound: lower
+value: 4000
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-6-7-lower-4000.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{50} \rtimes \mathbb{Z}_{80}$, with product $(a, b)(c, e) = (a + 19^b c, b + e)$, and connection set $\{(17, 70), (33, 10), (21, 53), (31, 27), (8, 72), (22, 8)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

@@ -1,0 +1,15 @@
+constant: cage-3-12
+bound: upper
+value: 126
+kind: witness
+witness:
+  format: sparse6
+  data: ':~?@}no?NCG?^GG?nKGCFAGC^GWCfIGGVEGG^GgGvMGKFAWKNCWKVEWONCgOfIWOvMWSFAgSnKWSvMgWVEgWfIgWnKg_bJg_dJWcRFgcTFGgrNWgtNGkPFWk`JGkpNgoUEWo`IwouMgsPEwseIGssMgwSEWwcIGwpMx?bLh?cLXGjNXGlMxK_LHKhNhO_KxOmMXSeKHSkMXWdKHWhNH_bNh_eNXgkLXglLHkaNHkmKhoaMxoiLhsdMHsiKxwcMHwjKn'
+submitted_by: daniel-munro
+date: 2026-11-11
+source: ejc-ds16-cages
+notes: >-
+  Incidence graph of the split Cayley generalized hexagon H(2) (the Tutte 12-cage): points of the quadric X0X4
+  + X1X5 + X2X6 = X3^2 in PG(6,2), lines the lines on it whose Grassmann coordinates satisfy p12 = p34, p54 =
+  p32, p20 = p35, p65 = p30, p01 = p36, p46 = p31. A (3,12)-graph on 2(2^6-1)/(2-1) = 126 vertices. Built from
+  this classical description by an AI agent (Claude).

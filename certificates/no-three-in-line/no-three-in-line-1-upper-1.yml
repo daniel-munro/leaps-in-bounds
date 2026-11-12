@@ -1,0 +1,10 @@
+constant: no-three-in-line-1
+bound: upper
+value: 1
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.NoThreeInLineColumns
+  theorem: LeapsInBounds.Proofs.NoThreeInLineColumns.upper_1
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: The 1 × 1 grid has a single point. Lean proof written by an AI agent (Claude).

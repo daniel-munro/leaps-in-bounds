@@ -1,0 +1,10 @@
+constant: degree-diameter-19-3
+bound: lower
+value: 1500
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-19-3-lower-1500.s6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: 'Cayley graph of the metacyclic group $\mathbb{Z}_{75} \rtimes \mathbb{Z}_{20}$, with product $(a, b)(c, e) = (a + 37^b c, b + e)$, and connection set $\{(53, 11), (19, 9), (28, 19), (14, 1), (25, 15), (50, 5), (39, 9), (18, 11), (68, 6), (73, 14), (61, 2), (56, 18), (54, 10), (45, 6), (45, 14), (62, 17), (64, 3), (57, 11), (36, 9)\}$, found by random search over metacyclic groups and connection sets by an AI agent (Claude).'

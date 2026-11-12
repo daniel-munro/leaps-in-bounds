@@ -1,0 +1,14 @@
+constant: ramsey-6-7
+bound: lower
+value: 102
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-6-7-lower-102.g6
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  A circulant graph on 101 vertices (clique number 5, independence number 5): the circulant witness in
+  ramsey-6-6-lower-102. Found by an AI agent (Claude) in a bounded search over Paley and cyclotomic circulants of
+  prime order, circulants whose connection sets are unions of multiplicative orbits, verified circulant witnesses,
+  and their complements and lexicographic products, keeping the largest graph the checker verifies quickly.

@@ -1,0 +1,14 @@
+constant: cage-17-5
+bound: upper
+value: 510
+kind: witness
+witness:
+  format: sparse6
+  file: cage-17-5-upper-510.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-11
+notes: >-
+  Amalgam of a biaffine plane over Z_17 with Cayley cycles: points (x,y) with x in 0..14, lines [m,b] with m
+  in 0..14, y and b in Z_17; (x,y) ~ [m,b] if y = mx + b, (x,y) ~ (x,y+-1) and [m,b] ~ [m,b+-2]. This gives a
+  17-regular graph on 2(17-2)q = 510 vertices; 4-cycles would need +-1 = +-2. Construction in the style of
+  Funk and Jorgensen's amalgams of elliptic semiplanes, chosen and checked by an AI agent (Claude).
