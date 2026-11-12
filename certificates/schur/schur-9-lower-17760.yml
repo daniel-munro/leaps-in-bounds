@@ -1,0 +1,11 @@
+constant: schur-9
+bound: lower
+value: 17760
+kind: witness
+witness:
+  format: coloring
+  file: schur-9-lower-17760.txt
+submitted_by: daniel-munro
+date: 2026-11-12
+source: rowley-2019
+notes: 'S(k+3) >= 33 S(k) + 6, applied to the 6-coloring g of 1 to 538 in schur-6-lower-538, as in schur-9-lower-17727. For q from 1 to 538, the integers 33q + r get color g(q) for r in R = {0, -1, -10, -11, -12, -14, -15, -16, -25, -26}. The other residues mod 33 get three new colors, each sum-free mod 33: {1, 6, 9, 13, 16, 20, 24, 27, 31}, {2, 5, 14, 15, 25, 26} and {3, 4, 10, 11, 12, 28, 29, 30}. The length is 33 (538 + 1) - 26 - 1.'

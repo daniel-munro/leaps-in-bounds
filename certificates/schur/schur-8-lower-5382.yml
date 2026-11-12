@@ -1,0 +1,11 @@
+constant: schur-8
+bound: lower
+value: 5382
+kind: witness
+witness:
+  format: coloring
+  file: schur-8-lower-5382.txt
+submitted_by: daniel-munro
+date: 2026-11-12
+source: mckenna-2026
+notes: 'S(k+2) >= 10 S(k) + 2, applied to the 6-coloring g of 1 to 538 in schur-6-lower-538. For q from 1 to 538, the integers 10q + r get color g(q) for r in R = {-7, -6, -1, 0, 1}. The other residues mod 10 get two new colors: 6 for {2, 5, 8} and 7 for {6, 7}. The integer 1 (q = 0) gets color 6 and the integer 2 gets color 7. The length is 10 * 538 + 2. This is the template of the S(8) >= 5372 coloring, as described in notes/schur.md.'
