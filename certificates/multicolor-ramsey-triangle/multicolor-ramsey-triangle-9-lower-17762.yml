@@ -1,0 +1,11 @@
+constant: multicolor-ramsey-triangle-9
+bound: lower
+value: 17762
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-9-lower-17762.txt
+submitted_by: daniel-munro
+date: 2026-11-13
+source: rowley-2019
+notes: "The partition of 1 to 17760 into 9 sum-free sets from schur-9-lower-17760, built from McKenna's S(6) >= 538 by Rowley's S(k + 3) >= 33 S(k) + 6, as a coloring of the differences between the vertices of K_17761."

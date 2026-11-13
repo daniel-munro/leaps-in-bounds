@@ -231,6 +231,18 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Schur.lean`](../forma
 
 Witnesses can certify lower bounds only. A witness for `S(k) >= n` or `WS(k) >= n` uses `format: coloring`: a string of `n` colors from `0` to `k - 1`, the colors of `1, …, n`, with no monochromatic solution. See [Colorings](#colorings).
 
+### Multicolor Ramsey numbers for triangles: `multicolor-ramsey-triangle-{k}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/MulticolorRamsey.lean`](../formal/LeapsInBounds/Statements/MulticolorRamsey.lean), where an edge coloring of `K_n` is a function `c : Fin n → Fin n → Fin k`, with `c a b` the color of the edge between `a < b`:
+
+- `LowerBound k n` means `R_k(3) >= n`: some coloring of the edges of `K_{n - 1}` with `k` colors has no monochromatic triangle.
+- `UpperBound k n` means `R_k(3) <= n`: every coloring of the edges of `K_n` with `k` colors has one.
+
+Witnesses can certify lower bounds only. A witness for `R_k(3) >= n` is a coloring of the edges of `K_{n - 1}`, with vertices `0` to `n - 2`, in one of two formats, with colors from `0` to `k - 1` (see [Colorings](#colorings)):
+
+- `format: edge-coloring`: a string of `(n - 1)(n - 2) / 2` colors, those of the edges `(0, 1), (0, 2), …, (0, n - 2), (1, 2), …, (n - 3, n - 2)` in that order, with no monochromatic triangle.
+- `format: coloring`: a string of `n - 2` colors, those of the differences `1, …, n - 2`, where the edge between `u` and `v` gets the color of `|u - v|`. A triangle `a < b < d` is monochromatic when `b - a`, `d - b` and their sum `d - a` have the same color, so this is a Schur coloring of `1, …, n - 2`, and a witness for `S(k) >= n - 2` is also one for `R_k(3) >= n`.
+
 ### Optimal Golomb rulers: `golomb-ruler-{n}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/Golomb.lean`](../formal/LeapsInBounds/Statements/Golomb.lean):

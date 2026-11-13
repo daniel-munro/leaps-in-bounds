@@ -4447,6 +4447,41 @@ minimal-superpermutation-9-upper-409113:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+multicolor-ramsey-triangle-3-lower-17:
+  sha256: 730403ebabc68f9f173fe77ba3b8cb7445d95c076945ab18a4d35384f039ac9b
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
+multicolor-ramsey-triangle-4-lower-51:
+  sha256: 916e38b5c539dc71d3eac14c2e84a0ba7306c6abb1927149e7c15c923ee8e290
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
+multicolor-ramsey-triangle-5-lower-162:
+  sha256: 8b25bb1008360071adbbb940aa6d5006b2f69caefe82de9bdb922a6663c11204
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
+multicolor-ramsey-triangle-6-lower-540:
+  sha256: 5a5f73214875d07afee5b0112e879c6fb3b922381c0d40ea8b4c2db2a3e47172
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
+multicolor-ramsey-triangle-7-lower-1698:
+  sha256: 443d77ebf59f30f9b40b9cda9f017db674c0bab15c837fc861a82f8c81e5ec1a
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
+multicolor-ramsey-triangle-8-lower-5384:
+  sha256: e3ab2b77a7242211c55eab187075c051c9ae1d9a6c4311942da076e25d83aaef
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
+multicolor-ramsey-triangle-9-lower-17762:
+  sha256: 543c6b695d593b039beae2fcad5ac995f59d2ff032c399df0c766013dd405141
+  checker: efe20a7f81d71a263d8ee6d23415819964d21de0
+  verified_by: daniel-munro
+  date: '2026-11-13'
 no-three-in-line-1-lower-1:
   sha256: 180ae965255c0043d8c38092e3368272b929adef5e5953c0242c3935da71ed7b
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746

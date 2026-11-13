@@ -1,0 +1,11 @@
+constant: multicolor-ramsey-triangle-4
+bound: lower
+value: 51
+kind: witness
+witness:
+  format: edge-coloring
+  file: multicolor-ramsey-triangle-4-lower-51.txt
+submitted_by: daniel-munro
+date: 2026-11-13
+source: chung-1973
+notes: "Found here by Claude (an AI agent) with a local search over colorings with the structure of Chung's construction: three copies of the coloring of K_16 in multicolor-ramsey-triangle-3-lower-17 and an edge. Vertices 16i + x (i = 0, 1, 2; x = 0 to 15) are copies of vertex x, and 48 and 49 are the edge. With g(x, y) the color of xy in K_16: edges within copy i get color s_i(g), with s_0 = (1, 2, 3), s_1 = (2, 0, 3) and s_2 = (0, 1, 3) mapping colors 0, 1, 2; edges between copies i < j get color t_ij(g(x, y)) when x != y, with t_01 = (1, 0, 3), t_02 = (0, 2, 3) and t_12 = (2, 1, 3), and color 2, 1 and 0 when x = y for (i, j) = (0, 1), (0, 2) and (1, 2); edges from 48 or 49 to copy i get color i; and edge 48-49 gets color 3."

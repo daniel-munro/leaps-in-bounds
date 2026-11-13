@@ -1506,3 +1506,8 @@ rectilinear-crossing-12:
   image:
     generated: rectilinear-crossing-12.svg
     alt_text: "A straight-line drawing of the complete graph on 12 points with 153 crossings, the fewest possible, marked in orange"
+
+multicolor-ramsey-triangle-3:
+  image:
+    generated: multicolor-ramsey-triangle-3.svg
+    alt_text: "Coloring of the edges of the complete graph on 16 vertices with three colors and no monochromatic triangle, drawn one color at a time"

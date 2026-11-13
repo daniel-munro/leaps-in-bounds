@@ -1,0 +1,11 @@
+constant: multicolor-ramsey-triangle-8
+bound: lower
+value: 5384
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-8-lower-5384.txt
+submitted_by: daniel-munro
+date: 2026-11-13
+source: mckenna-2026
+notes: "The partition of 1 to 5382 into 8 sum-free sets from schur-8-lower-5382, built from McKenna's S(6) >= 538 by S(k + 2) >= 10 S(k) + 2, as a coloring of the differences between the vertices of K_5383."

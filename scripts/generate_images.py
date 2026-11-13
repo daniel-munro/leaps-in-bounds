@@ -37,7 +37,7 @@ from typing import Any, Callable, Iterable, Sequence
 
 import yaml
 
-from certificates import (Radical, affine_dimension, eccentricity_at_most, girth, has_monochromatic_sum, is_cap,
+from certificates import (Radical, affine_dimension, eccentricity_at_most, girth, has_monochromatic_sum, has_monochromatic_triangle, is_cap,
                           is_isosceles_set, is_snake, load_certificates, network_depth, no_three_collinear, orbit_closure, read_graph,
                           read_comparators, read_grid_points, read_integer_points, orientation, rectilinear_crossings, read_marks, read_points, read_radical_points, read_symmetries,
                           read_ternary_points, read_transitions, read_vectors, read_witness_data, transition_vertices)
@@ -351,6 +351,33 @@ def render_ramsey(constant_id: str, r: int, s: int) -> Svg | None:
     svg.add(svg.group((svg.line(pos[u], pos[v]) for u, v in first), stroke=PALETTE[0], stroke_width=width))
     radius = 5 if n <= 10 else 3.5 if n <= 20 else 2.5
     svg.add(svg.group((svg.circle(p, radius / svg.scale) for p in pos), fill=INK, stroke="white", stroke_width=1))
+    return svg
+
+
+def render_multicolor_ramsey(constant_id: str, k: int) -> Svg | None:
+    """A coloring of the edges of a complete graph with k colors and no
+    monochromatic triangle, as one drawing per color with the vertices on a
+    circle, since all the colors together are a blur."""
+    cert = witness(constant_id, "lower")
+    if cert is None or cert["witness"].get("format") != "edge-coloring":
+        return None
+    colors = "".join(read_witness_data(cert).split())
+    n = round((1 + math.sqrt(1 + 8 * len(colors))) / 2)
+    check(n * (n - 1) // 2 == len(colors), f"{constant_id}: not the edges of a complete graph")
+    check(not has_monochromatic_triangle(n, colors), f"{constant_id}: coloring has a monochromatic triangle")
+    if n > 20 or k > len(PALETTE):  # denser drawings are a blur
+        return None
+    pairs = [(u, v) for u in range(n) for v in range(u + 1, n)]
+    m, gap = 1.08, 0.3
+    step = 2 * m + gap
+    svg = Svg(-m, -m, -m + k * step - gap, m)
+    width = 2 if n <= 10 else 1.2
+    radius = 5 if n <= 10 else 3.5
+    for i in range(k):
+        pos = [(x + i * step, y) for x, y in on_circle(n)]
+        edges = [pair for pair, c in zip(pairs, colors) if int(c, 36) == i]
+        svg.add(svg.group((svg.line(pos[u], pos[v]) for u, v in edges), stroke=PALETTE[i], stroke_width=width))
+        svg.add(svg.group((svg.circle(p, radius / svg.scale) for p in pos), fill=INK, stroke="white", stroke_width=1))
     return svg
 
 
@@ -1323,6 +1350,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "map-folding": ("map-folding-", lambda c: render_map_folding(c, *ints(c, "map-folding-"))),
     "busy-beaver-shift": ("busy-beaver-shift-", lambda c: render_busy_beaver(c, "shift", *ints(c, "busy-beaver-shift-"))),
     "busy-beaver-ones": ("busy-beaver-ones-", lambda c: render_busy_beaver(c, "ones", *ints(c, "busy-beaver-ones-"))),
+    "multicolor-ramsey-triangle": ("multicolor-ramsey-triangle-", lambda c: render_multicolor_ramsey(c, *ints(c, "multicolor-ramsey-triangle-"))),
     "schur": ("schur-", lambda c: render_schur(c, *ints(c, "schur-"), weak=False)),
     "weak-schur": ("weak-schur-", lambda c: render_schur(c, *ints(c, "weak-schur-"), weak=True)),
     "golomb-ruler": ("golomb-ruler-", lambda c: render_golomb_ruler(c, *ints(c, "golomb-ruler-"))),

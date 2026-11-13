@@ -487,3 +487,20 @@ rectilinear-crossing:
   parameter_values: [[[5, 100]]]
   research_status: initial
   added_by: daniel-munro
+
+multicolor-ramsey-triangle:
+  name: "Multicolor Ramsey numbers for triangles"
+  description: "The multicolor Ramsey number $R_k(3) = R(3,3,\\ldots,3)$ is the smallest number $n$ such that any coloring of the edges of the complete graph $K_n$ with $k$ colors contains a monochromatic triangle. A coloring of $1, \\ldots, m$ with no monochromatic solution to $x + y = z$ colors the edges of $K_{m+1}$ with no monochromatic triangle, by coloring the edge $uv$ with the color of $|u - v|$, so $R_k(3) \\ge S(k) + 2$, where $S(k)$ is the Schur number."
+  external_ids:
+    msc: 05D10
+    oeis: A003323
+    wikipedia_en: Ramsey's_theorem
+  display_type: sequence
+  representative_image: multicolor-ramsey-triangle-3
+  id_template: "multicolor-ramsey-triangle-{k}"
+  name_template: "Multicolor Ramsey number $R_{{{k}}}(3)$"
+  description_template: "The smallest number $n$ such that any coloring of the edges of the complete graph $K_n$ with ${k}$ colors contains a monochromatic triangle."
+  parameters: [k]
+  parameter_values: [[[3, 9]]]
+  research_status: initial
+  added_by: daniel-munro
