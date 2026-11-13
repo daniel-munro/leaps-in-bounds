@@ -1,0 +1,11 @@
+constant: multicolor-ramsey-triangle-6
+bound: lower
+value: 540
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-6-lower-540.txt
+submitted_by: daniel-munro
+date: 2026-11-13
+source: mckenna-2026
+notes: "McKenna's partition of 1 to 538 into 6 sum-free sets, from schur-6-lower-538, as a coloring of the differences between the vertices of K_539."

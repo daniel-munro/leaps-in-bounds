@@ -1,0 +1,13 @@
+constant: multicolor-ramsey-triangle-3
+bound: lower
+value: 17
+kind: witness
+witness:
+  format: edge-coloring
+  data: |
+    011222102010120112212201010020212201022001122210200210011012
+    002011110022010020010102021010200112221112212021221222011110
+submitted_by: daniel-munro
+date: 2026-11-13
+source: greenwood-gleason-1955
+notes: "Greenwood and Gleason's coloring of K_16: the vertices 0 to 15 are the elements of GF(16) = GF(2)[x]/(x^4 + x + 1), with the binary digits of each vertex as the coefficients of its polynomial, and the edge uv gets the coset of u + v in the multiplicative group modulo the cubes, so color i when u + v = x^j with j = i mod 3."

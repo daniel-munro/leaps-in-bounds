@@ -27,6 +27,7 @@
 - msc: "05D"
   name: "Extremal combinatorics"
   groups:
+    - multicolor-ramsey-triangle
     - ramsey
     - schur
     - van-der-waerden

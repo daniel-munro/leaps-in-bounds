@@ -1,0 +1,11 @@
+constant: multicolor-ramsey-triangle-5
+bound: lower
+value: 162
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-5-lower-162.txt
+submitted_by: daniel-munro
+date: 2026-11-13
+source: exoo-1994
+notes: "Exoo's partition of 1 to 160 into 5 sum-free sets, from schur-5-lower-160, as a coloring of the differences between the vertices of K_161."

@@ -1,0 +1,11 @@
+constant: multicolor-ramsey-triangle-7
+bound: lower
+value: 1698
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-7-lower-1698.txt
+submitted_by: daniel-munro
+date: 2026-11-13
+source: rowley-2021
+notes: "Rowley's partition of 1 to 1696 into 7 sum-free sets, from schur-7-lower-1696, as a coloring of the differences between the vertices of K_1697."
