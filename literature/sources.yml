@@ -685,12 +685,12 @@ bbchallenge-2024:
 
 kropitz-2022:
   string: "Pavel Kropitz in May 2022"
-  date: "2022-05"
+  date: "2022-05-30"
   added_by: daniel-munro
 
 mxdys-2025:
   string: "mxdys in June 2025"
-  date: "2025-06"
+  date: "2025-06-25"
   added_by: daniel-munro
 
 kropitz-2025:
@@ -3096,4 +3096,195 @@ feria-puron-miller-pineda-2010:
   url: "https://arxiv.org/abs/1010.5658"
   doi: "https://doi.org/10.1016/j.dam.2011.04.018"
   notes: "Section 7.1 (arXiv v1 and v2): Proposition 7.1, N(d,k) <= M(d,k) - 3 for even d >= 4 and k >= 4, and N(4,k) <= M(4,k) - 3 for k >= 3 (using Theorem 6.1, no (4,3,-2)-graph); Proposition 7.2, N(d,k) <= M(d,k) - 4 for odd d >= 5 and k >= 4 when M(d,k) - 2 is not divisible by k (Theorem 5.3; Corollary 7.1 is the case d = 0, 2 mod k). Section 1 notes that the earlier claimed proof of the case d = 4 by Miller and Simanjuntak (Discrete Math. 308 (2008)) contained a mistake."
+  added_by: daniel-munro
+
+boroczky-1978:
+  string: "K. Böröczky, Packing of spheres in spaces of constant curvature, Acta Mathematica Academiae Scientiarum Hungaricae 32 (1978) 243-261."
+  date: "1978-09"
+  doi: "https://doi.org/10.1007/BF01902361"
+  notes: "Proves the simplex-bound conjecture of H.S.M. Coxeter (Proc. Symp. Pure Math. 7 (1963) 53-71), which gives Coxeter's upper bounds on kissing numbers (the Coxeter-Böröczky bound). The values are those tabulated as Coxeter's conjectured bound by Leech and Sloane (1971), Table I."
+  added_by: daniel-munro
+
+boyvalenkov-1994:
+  string: "P.G. Boyvalenkov, Small improvements of the upper bounds of the kissing numbers in dimensions 19, 21 and 23, Atti del Seminario Matematico e Fisico dell'Università di Modena 42 (1994) 159-163."
+  date: "1994"
+  added_by: daniel-munro
+
+vsemirnov-rzhevskii-2002:
+  string: "M.A. Vsemirnov and M.G. Rzhevskii, An upper bound for the contact number in dimension 9, Russian Mathematical Surveys 57 (2002) 1015-1016."
+  date: "2002"
+  doi: "https://doi.org/10.1070/RM2002v057n05ABEH000559"
+  added_by: daniel-munro
+
+pfender-2005:
+  string: "F. Pfender, Improved Delsarte bounds for spherical codes in small dimensions, Journal of Combinatorial Theory, Series A 114 (2007) 1133-1147, arXiv:math/0501493."
+  date: "2005-01-27"
+  doi: "https://doi.org/10.1016/j.jcta.2006.12.001"
+  url: "https://arxiv.org/abs/math/0501493"
+  added_by: daniel-munro
+
+tomar-2026-kissing:
+  string: "T.S. Tomar, The kissing number in dimension five is at most 43, preprint (Zenodo, version 1), 2026."
+  date: "2026-10-27"
+  doi: "https://doi.org/10.5281/zenodo.23638109"
+  notes: "Later versions of the same record extend the result to dimensions 7 (version 2) and 6 (version 3)."
+  added_by: daniel-munro
+
+tomar-2026-kissing-b:
+  string: "T.S. Tomar, The kissing numbers in dimensions five and seven are at most 43 and 132, preprint (Zenodo, version 2), 2026."
+  date: "2026-11-06"
+  doi: "https://doi.org/10.5281/zenodo.23992400"
+  added_by: daniel-munro
+
+tomar-2026-kissing-c:
+  string: "T.S. Tomar, The kissing numbers in dimensions five, six and seven are at most 43, 76 and 132, preprint (Zenodo, version 3), 2026."
+  date: "2026-11-12"
+  doi: "https://doi.org/10.5281/zenodo.24093811"
+  added_by: daniel-munro
+
+nyam-osor-2026:
+  string: "U. Nyam-Osor, The kissing number in dimension ten is at most 552, preprint (Zenodo), 2026."
+  date: "2026-11-13"
+  doi: "https://doi.org/10.5281/zenodo.24187437"
+  added_by: daniel-munro
+
+nyam-osor-2026-b:
+  string: "U. Nyam-Osor, The kissing number in dimension sixteen is at most 7319, preprint (Zenodo), 2026."
+  date: "2026-11-14"
+  doi: "https://doi.org/10.5281/zenodo.24215730"
+  added_by: daniel-munro
+
+green-1964:
+  string: "M.W. Green, A lower bound on Rado's sigma function for binary Turing machines, Proceedings of the 5th IEEE Annual Symposium on Switching Circuit Theory and Logical Design (1964) 91-94."
+  date: "1964-11"
+  doi: "https://doi.org/10.1109/SWCT.1964.3"
+  notes: "Not seen directly; values and citation as given in Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+lynn-1972:
+  string: "D.S. Lynn, New results for Rado's sigma function for binary Turing machines, IEEE Transactions on Computers C-21(8) (1972) 894-896."
+  date: "1972-08"
+  doi: "https://doi.org/10.1109/TC.1972.5009047"
+  notes: "Not seen directly; values and citation as given in Michel's historical survey (michel-busy-beaver). The 5-state step and ones records are held by different machines."
+  added_by: daniel-munro
+
+weimann-1973:
+  string: "B. Weimann, Untersuchungen über Rado's Sigma-Funktion und eingeschränkte Halteprobleme bei Turingmaschinen, Dissertation, Rheinische Friedrich-Wilhelms-Universität Bonn, 1973 (in German)."
+  date: "1973"
+  notes: "Not seen directly; values and citation as given in Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+lynn-1974:
+  string: "D.S. Lynn, 5-state machines found in 1974, cited in A.H. Brady, The determination of the value of Rado's noncomputable function Σ(k) for four-state Turing machines, Mathematics of Computation 40 (1983) 647-665."
+  date: "1974"
+  notes: "Unpublished result known only through Brady (1983), as stated in Michel's historical survey (michel-busy-beaver). The step and ones records are held by different machines."
+  added_by: daniel-munro
+
+ludewig-schult-wankmuller-1983:
+  string: "J. Ludewig, U. Schult and F. Wankmüller, Chasing the busy beaver: notes and observations on a competition to find the 5-state busy beaver, Forschungsberichte des Fachbereichs Informatik Nr. 159, Universität Dortmund, 1983."
+  date: "1983"
+  notes: "Not seen directly. Reports U. Schult's 5-state machine (found August 1982) and 6-state machine (found December 1982), according to Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+dewdney-1985a:
+  string: "A.K. Dewdney, Computer recreations, Scientific American 252(3) (March 1985) 19."
+  date: "1985-03"
+  notes: "Not seen directly. Reports George Uhing's 5-state machine found in December 1984, according to Michel's historical survey (michel-busy-beaver), which cites Dewdney 1985a and 1985b (April 1985) for it."
+  added_by: daniel-munro
+
+brady-1988:
+  string: "A.H. Brady, The busy beaver game and the meaning of life, in R. Herken (ed.), The Universal Turing Machine: A Half-Century Survey, Oxford University Press (1988) 259-277."
+  date: "1988"
+  notes: "Not seen directly. Reports George Uhing's 5-state machine found in February 1986, according to Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+marxen-buntrock-1997:
+  string: "H. Marxen and J. Buntrock, 6-state busy beaver candidate, posted on the web on 1997-09-03."
+  date: "1997-09-03"
+  url: "https://turbotm.de/~heiner/BB/"
+  notes: "Date of posting as given in Michel's historical survey (michel-busy-beaver); the machine was found in January 1990."
+  added_by: daniel-munro
+
+marxen-buntrock-2000a:
+  string: "H. Marxen and J. Buntrock, 6-state busy beaver candidate (found July 2000), posted to Google Groups on 2000-08-05."
+  date: "2000-08-05"
+  url: "https://turbotm.de/~heiner/BB/"
+  notes: "Date and values as given in Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+marxen-buntrock-2000b:
+  string: "H. Marxen and J. Buntrock, 6-state busy beaver candidates (machines o and q, found August 2000), posted to Google Groups on 2000-10-23."
+  date: "2000-10-23"
+  url: "https://web.archive.org/web/2023/http://turbotm.de/~heiner/BB/bb-6list"
+  notes: "Date and values as given in Michel's historical survey (michel-busy-beaver). Machine q gives the bounds."
+  added_by: daniel-munro
+
+marxen-buntrock-2001:
+  string: "H. Marxen and J. Buntrock, 6-state busy beaver candidate (machine r, found February 2001), posted on 2001-03-05."
+  date: "2001-03-05"
+  url: "https://web.archive.org/web/2023/http://turbotm.de/~heiner/BB/bb-6list"
+  notes: "Marxen's list says the TM named r, the new champion, was added at 05-Mar-2001. Values as given in Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+ligocki-2007a:
+  string: "T. Ligocki and S. Ligocki, 6-state busy beaver candidate found in November 2007."
+  date: "2007-11"
+  notes: "Known from Michel's historical survey (michel-busy-beaver) and H. Marxen's busy beaver pages."
+  added_by: daniel-munro
+
+ligocki-2007b:
+  string: "T. Ligocki and S. Ligocki, 6-state busy beaver candidate found in December 2007."
+  date: "2007-12"
+  notes: "Known from Michel's historical survey (michel-busy-beaver) and H. Marxen's busy beaver pages."
+  added_by: daniel-munro
+
+kropitz-2010:
+  string: "P. Kropitz, 6-state busy beaver candidate found in May 2010."
+  date: "2010-05"
+  notes: "Known from Michel's historical survey (michel-busy-beaver), which analyzes it in P. Michel, Problems in number theory from busy beaver competition, Logical Methods in Computer Science 11 (2015), arXiv:1311.1029, Section 7. Superseded by Kropitz's June 2010 machine (kropitz-2011)."
+  added_by: daniel-munro
+
+ligocki-2022-05-13:
+  string: "S. Ligocki, BB(6, 2) > 10^78913, blog post, 2022-05-13."
+  date: "2022-05-13"
+  url: "https://www.sligocki.com/2022/05/13/bb-6-2-e78913.html"
+  added_by: daniel-munro
+
+kropitz-2022-05-15:
+  string: "P. Kropitz, 6-state busy beaver candidate announced 2022-05-15 (machine 1RB1RZ_1RC1RA_1RD0RB_1LE0RC_0LF0LD_0LB1LA)."
+  date: "2022-05-15"
+  url: "https://www.sligocki.com/2022/06/21/bb-6-2-t15.html"
+  notes: "Date from the table of 2022 champions in S. Ligocki's post BB(6, 2) > 10↑↑15 (2022-06-21); values from Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+kropitz-2022-05-22:
+  string: "P. Kropitz, 6-state busy beaver candidate announced 2022-05-22 (machine 1RB1RZ_0LC0LD_1LD1LC_1RE1LB_1RF1RD_0LD0RA)."
+  date: "2022-05-22"
+  url: "https://www.sligocki.com/2022/06/21/bb-6-2-t15.html"
+  notes: "Date from the table of 2022 champions in S. Ligocki's post BB(6, 2) > 10↑↑15 (2022-06-21); values from Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+ligocki-2022-05-27:
+  string: "S. Ligocki, 6-state busy beaver candidate announced 2022-05-27 (machine 1RB0LA_1LC1LF_0LD0LC_0LE0LB_1RE0RA_1RZ1LD)."
+  date: "2022-05-27"
+  url: "https://www.sligocki.com/2022/06/21/bb-6-2-t15.html"
+  notes: "Date from the table of 2022 champions in S. Ligocki's post BB(6, 2) > 10↑↑15 (2022-06-21), which gives > 10↑↑5; the value 10^(10^(10^(10^20823))) is from Michel's historical survey (michel-busy-beaver)."
+  added_by: daniel-munro
+
+mxdys-2025-06-16:
+  string: "mxdys, 6-state busy beaver candidate 1RB1LC_1LA1RE_0RD0LA_1RZ1LB_1LD0RF_0RD1RB, discovered 2025-06-16."
+  date: "2025-06-16"
+  url: "https://wiki.bbchallenge.org/wiki/1RB1LC_1LA1RE_0RD0LA_1RZ1LB_1LD0RF_0RD1RB"
+  notes: "The bbchallenge wiki says it was discovered by mxdys on 16 June 2025, with halting time and sigma score between 10↑↑11010000 and 10↑↑11011000. Superseded on 2025-06-25 (mxdys-2025)."
+  added_by: daniel-munro
+
+brady-1966:
+  string: "A.H. Brady, The conjectured highest scoring machines for Rado's Σ(k) for the value k = 4, IEEE Transactions on Electronic Computers EC-15 (October 1966) 802-803."
+  date: "1966-10"
+  added_by: daniel-munro
+
+wythagoras-2014:
+  string: "Wythagoras, 7-state busy beaver candidate posted on the Googology Wiki, March 2014."
+  date: "2014-03"
+  notes: "Cited in P. Michel's historical survey, which gives the bound as 10^(10^(10^(10^18,705,352)))."
   added_by: daniel-munro

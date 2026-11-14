@@ -3,24 +3,24 @@ busy-beaver-shift-1,1,,,oeis-A060843
 busy-beaver-shift-1,,1,,oeis-A060843
 busy-beaver-shift-2,6,,,oeis-A060843
 busy-beaver-shift-2,,6,,oeis-A060843
-busy-beaver-shift-3,21,,,oeis-A060843
+busy-beaver-shift-3,21,,lin-1965,oeis-A060843
 busy-beaver-shift-3,,21,lin-1965,oeis-A060843
-busy-beaver-shift-4,107,,,oeis-A060843
+busy-beaver-shift-4,107,,brady-1966,michel-busy-beaver
 busy-beaver-shift-4,,107,brady-1983,oeis-A060843
 busy-beaver-shift-5,47176870,,marxen-1990,oeis-A060843
 busy-beaver-shift-5,,47176870,bbchallenge-2024,oeis-A060843
 busy-beaver-shift-6,7.4\times10^{36534},,kropitz-2011,aaronson-2020
-busy-beaver-shift-7,10^{2\times10^{10^{10^{18705353}}}},,,aaronson-2020
+busy-beaver-shift-7,10^{2\times10^{10^{10^{18705353}}}},,wythagoras-2014,aaronson-2020
 busy-beaver-ones-5,4098,,marxen-1990,aaronson-2020
 busy-beaver-ones-6,3.5\times10^{18267},,kropitz-2011,aaronson-2020
-busy-beaver-ones-7,10^{10^{10^{10^{18705353}}}},,,aaronson-2020
+busy-beaver-ones-7,10^{10^{10^{10^{18705353}}}},,wythagoras-2014,aaronson-2020
 busy-beaver-ones-1,1,,,oeis-A028444
 busy-beaver-ones-1,,1,,oeis-A028444
 busy-beaver-ones-2,4,,,oeis-A028444
 busy-beaver-ones-2,,4,,oeis-A028444
-busy-beaver-ones-3,6,,,oeis-A028444
+busy-beaver-ones-3,6,,lin-1965,oeis-A028444
 busy-beaver-ones-3,,6,lin-1965,oeis-A028444
-busy-beaver-ones-4,13,,,oeis-A028444
+busy-beaver-ones-4,13,,brady-1966,michel-busy-beaver
 busy-beaver-ones-4,,13,brady-1983,oeis-A028444
 busy-beaver-ones-5,,4098,bbchallenge-2024,oeis-A028444
 busy-beaver-shift-6,10\uparrow\uparrow 15,,kropitz-2022,michel-busy-beaver
@@ -29,3 +29,47 @@ busy-beaver-shift-6,2\uparrow\uparrow 2\uparrow\uparrow 2\uparrow\uparrow 10,,mx
 busy-beaver-ones-6,2\uparrow\uparrow 2\uparrow\uparrow 2\uparrow\uparrow 10,,mxdys-2025,michel-busy-beaver
 busy-beaver-shift-7,2\uparrow^{11} 2\uparrow^{11} 3,,kropitz-2025,michel-busy-beaver
 busy-beaver-ones-7,2\uparrow^{11} 2\uparrow^{11} 3,,kropitz-2025,michel-busy-beaver
+busy-beaver-ones-5,17,,green-1964,michel-busy-beaver
+busy-beaver-ones-5,22,,lynn-1972,michel-busy-beaver
+busy-beaver-shift-5,435,,lynn-1972,michel-busy-beaver
+busy-beaver-ones-5,40,,weimann-1973,michel-busy-beaver
+busy-beaver-shift-5,556,,weimann-1973,michel-busy-beaver
+busy-beaver-ones-5,112,,lynn-1974,michel-busy-beaver
+busy-beaver-shift-5,7707,,lynn-1974,michel-busy-beaver
+busy-beaver-ones-5,501,,ludewig-schult-wankmuller-1983,michel-busy-beaver
+busy-beaver-shift-5,134467,,ludewig-schult-wankmuller-1983,michel-busy-beaver
+busy-beaver-ones-5,1915,,dewdney-1985a,michel-busy-beaver
+busy-beaver-shift-5,2133492,,dewdney-1985a,michel-busy-beaver
+busy-beaver-shift-5,2358064,,brady-1988,michel-busy-beaver
+busy-beaver-ones-6,35,,green-1964,michel-busy-beaver
+busy-beaver-ones-6,42,,lynn-1972,michel-busy-beaver
+busy-beaver-shift-6,522,,lynn-1972,michel-busy-beaver
+busy-beaver-ones-6,2075,,ludewig-schult-wankmuller-1983,michel-busy-beaver
+busy-beaver-shift-6,4208824,,ludewig-schult-wankmuller-1983,michel-busy-beaver
+busy-beaver-ones-6,136612,,marxen-1990,michel-busy-beaver
+busy-beaver-shift-6,13122572797,,marxen-1990,michel-busy-beaver
+busy-beaver-ones-6,95524079,,marxen-buntrock-1997,michel-busy-beaver
+busy-beaver-shift-6,8690333381690951,,marxen-buntrock-1997,michel-busy-beaver
+busy-beaver-ones-6,2.5\times10^{21},,marxen-buntrock-2000a,michel-busy-beaver
+busy-beaver-shift-6,5.3\times10^{42},,marxen-buntrock-2000a,michel-busy-beaver
+busy-beaver-ones-6,6.4\times10^{462},,marxen-buntrock-2000b,michel-busy-beaver
+busy-beaver-shift-6,6.1\times10^{925},,marxen-buntrock-2000b,michel-busy-beaver
+busy-beaver-ones-6,1.2\times10^{865},,marxen-buntrock-2001,michel-busy-beaver
+busy-beaver-shift-6,3.0\times10^{1730},,marxen-buntrock-2001,michel-busy-beaver
+busy-beaver-ones-6,2.5\times10^{881},,ligocki-2007a,michel-busy-beaver
+busy-beaver-shift-6,8.9\times10^{1762},,ligocki-2007a,michel-busy-beaver
+busy-beaver-ones-6,4.6\times10^{1439},,ligocki-2007b,michel-busy-beaver
+busy-beaver-shift-6,2.5\times10^{2879},,ligocki-2007b,michel-busy-beaver
+busy-beaver-ones-6,3.1\times10^{10566},,kropitz-2010,michel-busy-beaver
+busy-beaver-shift-6,3.8\times10^{21132},,kropitz-2010,michel-busy-beaver
+busy-beaver-ones-6,6.0\times10^{39456},,ligocki-2022-05-13,michel-busy-beaver
+busy-beaver-shift-6,9.6\times10^{78913},,ligocki-2022-05-13,michel-busy-beaver
+busy-beaver-ones-6,2.0\times10^{98641},,kropitz-2022-05-15,michel-busy-beaver
+busy-beaver-shift-6,5.4\times10^{197282},,kropitz-2022-05-15,michel-busy-beaver
+busy-beaver-ones-6,1.7\times10^{646456993},,kropitz-2022-05-22,michel-busy-beaver
+busy-beaver-shift-6,8.2\times10^{1292913985},,kropitz-2022-05-22,michel-busy-beaver
+busy-beaver-ones-6,10^{10^{10^{10^{20823}}}},,ligocki-2022-05-27,michel-busy-beaver
+busy-beaver-shift-6,10^{10^{10^{10^{20823}}}},,ligocki-2022-05-27,michel-busy-beaver
+busy-beaver-ones-6,10\uparrow\uparrow 11010000,,mxdys-2025-06-16,michel-busy-beaver
+busy-beaver-shift-6,10\uparrow\uparrow 11010000,,mxdys-2025-06-16,michel-busy-beaver
+busy-beaver-ones-7,22961,,green-1964,michel-busy-beaver
