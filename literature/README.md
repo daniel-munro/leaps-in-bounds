@@ -4,7 +4,7 @@ This directory holds the bounds on each constant that come from the literature, 
 
 To add constants or families of constants for these bounds to be on, see [constants/README.md](../constants/README.md). To submit a bound that you've found yourself, or a construction or proof checked here, see [certificates/README.md](../certificates/README.md). Sources and certificates are both records of a bound, and the site matches them by the bound they give: the earlier record is its discovery, and a certificate checked here is its best evidence. So a published bound goes here even if a certificate already has it, and a certificate for it can follow.
 
-Contributions are credited on the [contributors page](https://leapsinbounds.org/contributors/) to the GitHub account given in `added_by` (see [Credit](#credit)).
+Contributions are credited on the [contributions page](https://leapsinbounds.org/contributions/#contributors) to the GitHub account given in `added_by` (see [Credit](#credit)).
 
 ## Layout
 
@@ -66,7 +66,7 @@ A bound found by computer and posted only in a repository or on Zenodo, rather t
 
 ## Credit
 
-Contributions to the literature data are credited on the [contributors page](https://leapsinbounds.org/contributors/) by the `added_by` field on sources and families (see [constants/README.md](../constants/README.md)): the GitHub account that added them, which is usually whoever opens the pull request. When a maintainer adds sources that a contributor pointed to, such as the sources for the earlier bounds behind a certificate, they're credited to the contributor. It credits the work of finding and recording the data, not the mathematics, which is credited to the sources themselves. When adding many bounds from one survey, the sources you add are what's credited, so it's worth adding the original sources rather than citing only the survey.
+Contributions to the literature data are credited on the [contributions page](https://leapsinbounds.org/contributions/#contributors) by the `added_by` field on sources and families (see [constants/README.md](../constants/README.md)): the GitHub account that added them, which is usually whoever opens the pull request. When a maintainer adds sources that a contributor pointed to, such as the sources for the earlier bounds behind a certificate, they're credited to the contributor. It credits the work of finding and recording the data, not the mathematics, which is credited to the sources themselves. When adding many bounds from one survey, the sources you add are what's credited, so it's worth adding the original sources rather than citing only the survey.
 
 ## Checking
 

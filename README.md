@@ -18,7 +18,7 @@ The hand-edited data is in three directories, one for what is tracked and two fo
 
 The build turns these into two generated layers, neither of which is committed:
 
-- `_data/`: The processed, Jekyll-consumable dataset. `scripts/build.sh` copies `literature/sources.yml` and `constants/categories.yml` here, then `scripts/process_data.py` generates `_data/constants.yml`, `_data/families.yml`, `_data/updates.yml`, and `_data/history.yml` by expanding families into constants, assigning dates, merging bounds from the literature and certificates into each constant's history, computing stats, and attaching images/metadata. Jekyll reads `_data/` directly for rendering.
+- `_data/`: The processed, Jekyll-consumable dataset. `scripts/build.sh` copies `literature/sources.yml` and `constants/categories.yml` here, then `scripts/process_data.py` generates `_data/constants.yml`, `_data/families.yml`, `_data/updates.yml`, `_data/history.yml`, `_data/discoveries.yml`, and `_data/contributors.yml` by expanding families into constants, assigning dates, merging bounds from the literature and certificates into each constant's history, computing stats, and attaching images/metadata. Jekyll reads `_data/` directly for rendering.
 - `data/`: The public export layer for downloads. `scripts/convert_data.py` converts `_data/` into YAML/JSON/CSV/TSV in `data/` and flattens nested fields for tabular formats.
 
 In short: edit `constants/`, `literature/` or `certificates/` → run the build/test scripts → `_data/` powers the site → `data/` powers downloads.
@@ -90,7 +90,7 @@ Contributions are welcome, from people and AI agents alike. Pull requests are th
 
 For more open-ended contributions, such as asking whether a family of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
 
-Contributions are credited to the GitHub account that made them on the [contributors page](https://leapsinbounds.org/contributors/).
+Contributions are credited to the GitHub account that made them on the [contributions page](https://leapsinbounds.org/contributions/#contributors).
 
 To have an AI agent contribute, give it one of these prompts:
 

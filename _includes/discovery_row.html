@@ -1,0 +1,28 @@
+{% comment %}
+Table row for a discovery (include.row, a row of site.data.discoveries): its
+date, constant, the bound it improved on and the new one, its discovery, and
+its best evidence.
+{% endcomment %}
+{% assign row = include.row %}
+{% assign constant = site.data.constants[row.constant] %}
+{% if row.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
+<tr>
+  <td class="text-nowrap">{{ row.date }}</td>
+  <td><a href="{{ site.baseurl }}/constants/{{ row.constant }}">{{ constant.name }}</a></td>
+  <td class="text-nowrap">
+    {% if row.previous %}${{ relation }} {{ row.previous.latex }} \to {{ row.value.latex }}${% else %}${{ relation }} {{ row.value.latex }}$ <span class="text-muted">(first recorded)</span>{% endif %}
+    {% unless row.current %}<br><span class="text-muted">since improved</span>{% endunless %}
+  </td>
+  <td>
+    {% if row.discovery_kind == "certificate" %}
+      {% assign cert = site.data.certificates | where: "id", row.discovery | first %}
+      <span class="badge bg-verified-new">New bound</span>
+      <a href="{{ site.repository }}/blob/main/{{ cert.path }}">Certificate</a> by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>
+    {% elsif row.discovery %}
+      {% include record_link.html source=row.discovery %}
+    {% else %}
+      <em>Reference unknown</em>
+    {% endif %}
+  </td>
+  <td>{% include evidence_badge.html evidence=row.evidence %}</td>
+</tr>

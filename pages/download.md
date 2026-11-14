@@ -55,7 +55,7 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/sources.tsv">sources.tsv</a></td>
     </tr>
     <tr>
-      <td><strong>Certificates</strong><br>Checked evidence for bounds, who submitted it, and the role each plays in its constant's history (<a href="{{ site.baseurl }}/certificates/">browse</a>)</td>
+      <td><strong>Certificates</strong><br>Checked evidence for bounds, who submitted it, and the role each plays in its constant's history (<a href="{{ site.baseurl }}/contributions/#recent-certificates">browse recent</a>)</td>
       <td><a href="{{ site.baseurl }}/data/certificates.yml">certificates.yml</a></td>
       <td><a href="{{ site.baseurl }}/data/certificates.json">certificates.json</a></td>
       <td><a href="{{ site.baseurl }}/data/certificates.csv">certificates.csv</a></td>
