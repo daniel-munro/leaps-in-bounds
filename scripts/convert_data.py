@@ -32,6 +32,9 @@ with open("_data/unverified_bounds.yml", "r") as file:
 with open("_data/certificates.yml", "r") as file:
     certificates = yaml.safe_load(file)
 
+with open("_data/history.yml", "r") as file:
+    history = yaml.safe_load(file)
+
 # Remove extraneous fields
 for constant in constants.values():
     if 'image' in constant:
@@ -65,6 +68,9 @@ with open("data/unverified_bounds.yml", "w") as f:
 with open("data/certificates.yml", "w") as f:
     yaml.dump(certificates, f, sort_keys=False)
 
+with open("data/history.yml", "w") as f:
+    yaml.dump(history, f, sort_keys=False)
+
 # Export nested data structures to JSON
 with open("data/constants.json", "w") as f:
     json.dump(constants, f, indent=2)
@@ -84,25 +90,23 @@ with open("data/unverified_bounds.json", "w") as f:
 with open("data/certificates.json", "w") as f:
     json.dump(certificates, f, indent=2)
 
+with open("data/history.json", "w") as f:
+    json.dump(history, f, indent=2)
+
 # Convert constants to CSV and TSV
 constants_list = []
 for constant_id, constant_data in constants.items():
     constant_dict = {'id': constant_id}
     for k, v in constant_data.items():
-        if k not in ['updates', 'description', 'certificates']:
+        if k not in ['updates', 'history', 'description', 'certificates']:
             constant_dict[k] = v
     
     # Flatten nested value dictionaries
     flatten_value_dict(constant_dict, 'exact_value')
     flatten_value_dict(constant_dict, 'lower_bound')
     flatten_value_dict(constant_dict, 'upper_bound')
-    flatten_value_dict(constant_dict, 'literature_exact_value')
-    flatten_value_dict(constant_dict, 'literature_lower_bound')
-    flatten_value_dict(constant_dict, 'literature_upper_bound')
     flatten_value_dict(constant_dict, 'verified_lower_bound')
     flatten_value_dict(constant_dict, 'verified_upper_bound')
-    flatten_value_dict(constant_dict, 'attested_lower_bound')
-    flatten_value_dict(constant_dict, 'attested_upper_bound')
             
     constants_list.append(constant_dict)
 
@@ -153,8 +157,7 @@ updates_df.to_csv("data/updates.tsv", sep="\t", index=False)
 unverified_list = []
 for row in unverified:
     row_dict = row.copy()
-    flatten_value_dict(row_dict, 'literature')
-    flatten_value_dict(row_dict, 'attested')
+    flatten_value_dict(row_dict, 'value')
     flatten_value_dict(row_dict, 'verified')
     unverified_list.append(row_dict)
 
@@ -167,9 +170,19 @@ certificates_list = []
 for row in certificates:
     row_dict = row.copy()
     flatten_value_dict(row_dict, 'value')
-    flatten_value_dict(row_dict, 'literature')
     certificates_list.append(row_dict)
 
 certificates_df = pd.DataFrame(certificates_list)
 certificates_df.to_csv("data/certificates.csv", index=False)
 certificates_df.to_csv("data/certificates.tsv", sep="\t", index=False)
+
+# Convert the history of bounds to CSV and TSV
+history_list = []
+for row in history:
+    row_dict = row.copy()
+    flatten_value_dict(row_dict, 'value')
+    history_list.append(row_dict)
+
+history_df = pd.DataFrame(history_list)
+history_df.to_csv("data/history.csv", index=False)
+history_df.to_csv("data/history.tsv", sep="\t", index=False)

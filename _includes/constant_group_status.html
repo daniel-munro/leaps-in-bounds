@@ -11,7 +11,7 @@
           <th>Sources <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" 
             title="Percent of bounds updates that have been assigned a source"></i></th>
           <th>Verified <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
-            title="Number of lower and upper bounds backed by an automatically checked certificate"></i></th>
+            title="Number of current lower and upper bounds whose best evidence is a certificate checked here"></i></th>
         </tr>
       </thead>
       <tbody>
@@ -51,7 +51,7 @@
               {% endif %}
             </td>
             <td>
-              {% assign verified = group.stats.verified_lower_bounds | plus: group.stats.verified_upper_bounds %}
+              {% assign verified = group.stats.verified_bounds %}
               {% if verified > 0 %}
                 <span class="badge bg-success">{{ verified }}</span>
               {% else %}

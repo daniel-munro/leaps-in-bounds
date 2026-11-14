@@ -1,0 +1,10 @@
+{% comment %}
+Badge for the role a certificate (include.cert, a row of site.data.certificates)
+plays in its constant's history, which may be incomplete.
+{% endcomment %}
+{% case include.cert.role %}
+  {% when "discovery" %}<span class="badge bg-verified-new">New bound</span>
+  {% when "evidence" %}<span class="badge bg-success">Evidence for a bound from {% if include.cert.event_date %}{{ include.cert.event_date | slice: 0, 4 }}{% else %}the literature{% endif %}</span>
+  {% when "superseded" %}<span class="badge bg-secondary">Superseded</span>
+  {% else %}<span class="badge bg-secondary">Weaker than recorded</span>
+{% endcase %}

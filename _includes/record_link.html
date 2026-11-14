@@ -1,0 +1,11 @@
+{%- comment -%}
+Link to a record: a source (include.source, an ID in site.data.sources) or a
+certificate (include.certificate, a row of a constant's certificates).
+{%- endcomment -%}
+{%- if include.certificate -%}
+  Certificate <a href="{{ site.repository }}/blob/main/{{ include.certificate.path }}">{{ include.certificate.id }}</a>,
+  submitted by <a href="https://github.com/{{ include.certificate.submitted_by }}">{{ include.certificate.submitted_by }}</a>
+{%- elsif include.source -%}
+  {%- assign source = site.data.sources[include.source] -%}
+  {%- if source.doi -%}<a href="{{ source.doi }}">{{ source.string }}</a>{%- elsif source.url -%}<a href="{{ source.url }}">{{ source.string }}</a>{%- else -%}{{ source.string }}{%- endif -%}
+{%- endif -%}

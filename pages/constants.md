@@ -7,13 +7,13 @@ permalink: /constants/
 # Constants
 
 <p class="text-muted small">
-  Brackets in a cell's corner mark bounds backed by a certificate:
+  Brackets in a cell's corner mark bounds whose best evidence is a certificate:
   <b>[</b> lower, <b>]</b> upper.
-  <b class="verified-equal">Green</b> matches the best bound in the literature,
-  <b class="verified-new">purple</b> is stronger than (or absent from) it,
-  and <b class="verified-weaker">gray</b> is weaker.
-  <b class="attested">Yellow</b> marks an attested bound, stronger than any verified one, which someone else checked with a published checker but hasn't been checked here.
-  See the <a href="{{ site.baseurl }}/unverified/">bounds that no certificate matches yet</a>.
+  <b class="verified-equal">Green</b> is a verified bound discovered in the literature,
+  and <b class="verified-new">purple</b> one discovered by a certificate.
+  <b class="attested">Yellow</b> is an attested bound, which someone else checked with a published checker but hasn't been checked here.
+  <b class="verified-weaker">Gray</b> means only a weaker bound is verified.
+  See the <a href="{{ site.baseurl }}/unverified/">bounds that aren't verified yet</a>.
 </p>
 
 <div class="dropdown mb-4">

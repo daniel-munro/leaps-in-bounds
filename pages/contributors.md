@@ -42,7 +42,7 @@ Contributors who added constant groups or sources for bounds from the literature
 
 ## Certificates
 
-Contributors who submitted certificates for [verified bounds]({{ site.baseurl }}/verified/). See [how to submit one]({{ site.repository }}/blob/main/certificates/README.md).
+Contributors who submitted [certificates]({{ site.baseurl }}/certificates/). New bounds counts those that were the discovery of a bound, and Evidence those that are the best evidence for a bound discovered earlier. See [how to submit one]({{ site.repository }}/blob/main/certificates/README.md).
 
 {% assign contributors = site.data.certificates | group_by: "submitted_by" | sort: "size" | reverse %}
 <table class="table table-sm w-auto">
@@ -50,6 +50,8 @@ Contributors who submitted certificates for [verified bounds]({{ site.baseurl }}
     <tr>
       <th>Contributor</th>
       <th class="text-end">Certificates</th>
+      <th class="text-end">New bounds</th>
+      <th class="text-end">Evidence</th>
       <th>Latest</th>
     </tr>
   </thead>
@@ -58,6 +60,8 @@ Contributors who submitted certificates for [verified bounds]({{ site.baseurl }}
       <tr>
         <td><a href="https://github.com/{{ contributor.name }}">{{ contributor.name }}</a></td>
         <td class="text-end">{{ contributor.size }}</td>
+        <td class="text-end">{{ contributor.items | where: "role", "discovery" | size }}</td>
+        <td class="text-end">{{ contributor.items | where: "role", "evidence" | size }}</td>
         <td>{{ contributor.items.first.date }}</td>
       </tr>
     {% endfor %}

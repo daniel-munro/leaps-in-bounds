@@ -19,6 +19,11 @@ layout: default
 
 <p>{{ constant.description }}</p>
 
+{% assign lower_events = constant.history | where: "type", "lower_bound" %}
+{% assign upper_events = constant.history | where: "type", "upper_bound" %}
+{% assign lower_event = lower_events | last %}
+{% assign upper_event = upper_events | last %}
+
 <div class="mt-4">
   {% if constant.exact_value != null %}
     <p>
@@ -26,29 +31,33 @@ layout: default
       {% if constant.exact_value.alt_display != null %}
         ({{ constant.exact_value.alt_display }})
       {% endif %}
-      {% include bound_source.html side="lower" label="Verified lower bound" %}
-      {% include bound_source.html side="upper" label="Verified upper bound" %}
+      {% if lower_event.evidence.tier == upper_event.evidence.tier and lower_event.evidence.kind == upper_event.evidence.kind %}
+        {% include evidence_badge.html evidence=lower_event.evidence %}
+      {% else %}
+        <span class="text-muted small">lower bound</span> {% include evidence_badge.html evidence=lower_event.evidence %}
+        <span class="text-muted small">upper bound</span> {% include evidence_badge.html evidence=upper_event.evidence %}
+      {% endif %}
     </p>
   {% else %}
     <p>
-      <strong>Lower bound:</strong> 
+      <strong>Lower bound:</strong>
       {% if constant.lower_bound != null %}
         ${{ constant.lower_bound.latex }}$
         {% if constant.lower_bound.alt_display != null %}
           ({{ constant.lower_bound.alt_display }})
         {% endif %}
-        {% include bound_source.html side="lower" label="Verified" %}
+        {% include evidence_badge.html evidence=lower_event.evidence %}
       {% else %}
         Unknown
       {% endif %}
       <br>
-      <strong>Upper bound:</strong> 
+      <strong>Upper bound:</strong>
       {% if constant.upper_bound != null %}
         ${{ constant.upper_bound.latex }}$
         {% if constant.upper_bound.alt_display != null %}
           ({{ constant.upper_bound.alt_display }})
         {% endif %}
-        {% include bound_source.html side="upper" label="Verified" %}
+        {% include evidence_badge.html evidence=upper_event.evidence %}
       {% else %}
         Unknown
       {% endif %}
@@ -56,117 +65,96 @@ layout: default
   {% endif %}
 </div>
 
-{% if constant.certifiable %}
-<h2>Verified bounds</h2>
+<h2>History</h2>
 
 <p class="text-muted small">
-  Verified bounds come with a certificate whose evidence has been checked here: a formal proof in Lean, or an explicit construction checked by a program.
-  An <span class="badge bg-attested">Attested</span> bound comes with evidence that someone else checked with a published checker, but that hasn't been checked here yet.
-  <a href="{{ site.repository }}/blob/main/certificates/README.md">Submit a certificate</a>.
+  Each bound that improved on the earlier ones, with the record of its discovery and its best evidence.
+  A bound is discovered in the literature, or by a certificate submitted here.
+  Its best evidence is a certificate checked here, if there is one at least as strong: a formal proof in Lean (<span class="badge bg-success">Lean proof</span>) or an explicit construction checked by a program (<span class="badge bg-success">Checked construction</span>).
+  Otherwise it's an <span class="badge bg-attested">Attested</span> certificate, which someone else checked with a published checker, or the <span class="badge text-bg-light border">Literature</span>.
+  {% if constant.certifiable %}
+    <a href="{{ site.repository }}/blob/main/certificates/README.md">Submit a certificate</a>.
+  {% endif %}
 </p>
 
-{% assign verified_sides = "lower,upper" | split: "," %}
-<ul>
-  {% for side in verified_sides %}
-  {% if side == "lower" %}
-    {% assign verified_value = constant.verified_lower_bound %}
-    {% assign verified_id = constant.verified_lower_certificate %}
-    {% assign attested_value = constant.attested_lower_bound %}
-    {% assign attested_id = constant.attested_lower_certificate %}
-  {% else %}
-    {% assign verified_value = constant.verified_upper_bound %}
-    {% assign verified_id = constant.verified_upper_certificate %}
-    {% assign attested_value = constant.attested_upper_bound %}
-    {% assign attested_id = constant.attested_upper_certificate %}
-  {% endif %}
-  <li>
-    <strong>{{ side | capitalize }} bound:</strong>
-    {% if attested_value != null %}
-      {% assign cert = constant.certificates | where: "id", attested_id | first %}
-      ${{ attested_value.latex }}$
-      {% if attested_value.alt_display != null %}
-        ({{ attested_value.alt_display }})
-      {% endif %}
-      <span class="badge bg-attested">Attested</span>
-      <br><a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
-      submitted by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>, {{ cert.date }}
-      <br>[checked by {{ cert.attestation.by }} with <a href="{{ cert.attestation.checker }}">their checker</a>, not yet here]
-      {% if cert.source %}
-        {% assign source = site.data.sources[cert.source] %}
-        <br>[construction from {{ source.string }}]
-      {% endif %}
-      {% if verified_value != null %}<br>{% endif %}
-    {% endif %}
-    {% if verified_value != null %}
-      ${{ verified_value.latex }}$
-      {% if verified_value.alt_display != null %}
-        ({{ verified_value.alt_display }})
-      {% endif %}
-      {% assign cert = constant.certificates | where: "id", verified_id | first %}
-      {% if cert.kind == "lean" %}
-        <span class="badge bg-success">Lean proof</span>
-      {% else %}
-        <span class="badge bg-success">Checked construction</span>
-      {% endif %}
-      <br><a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
-      submitted by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>, {{ cert.date }}
-      {% if cert.source %}
-        {% assign source = site.data.sources[cert.source] %}
-        <br>[construction from {{ source.string }}]
-      {% endif %}
-    {% elsif attested_value == null %}
-      <em>None yet</em>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
+{% if constant.history.size > 0 %}
+<div class="table-responsive">
+<table class="table table-sm history-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Bound</th>
+      <th>Discovery</th>
+      <th>Best evidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for event in constant.history %}
+      {% if event.type == "lower_bound" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
+      <tr>
+        <td class="text-nowrap">{% if event.date %}{{ event.date }}{% else %}<span class="text-muted">undated</span>{% endif %}</td>
+        <td class="text-nowrap">
+          ${{ relation }} {{ event.value.latex }}$
+          {% if event.value.alt_display != null %}
+            <span class="text-muted">({{ event.value.alt_display }})</span>
+          {% endif %}
+        </td>
+        <td>
+          {% if event.discovery.kind == "certificate" %}
+            {% assign cert = constant.certificates | where: "id", event.discovery.id | first %}
+            {% include record_link.html certificate=cert %}
+          {% elsif event.discovery.id %}
+            {% include record_link.html source=event.discovery.id %}
+          {% else %}
+            <em>Reference unknown</em>
+          {% endif %}
+          {% if event.discovery.via %}
+            <br><span class="text-muted">[via {% include record_link.html source=event.discovery.via %}]</span>
+          {% endif %}
+        </td>
+        <td>
+          {% include evidence_badge.html evidence=event.evidence %}
+          {% if event.evidence.certificate %}
+            {% assign cert = constant.certificates | where: "id", event.evidence.certificate | first %}
+            {% if event.evidence.value %}
+              <br><span class="text-muted">via ${{ relation }} {{ event.evidence.value.latex }}$, <a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a></span>
+            {% else %}
+              {% if event.evidence.certificate != event.discovery.id %}
+                <br>{% include record_link.html certificate=cert %}, {{ cert.date }}
+              {% endif %}
+              {% if cert.attestation %}
+                <br><span class="text-muted">[checked by {{ cert.attestation.by }} with <a href="{{ cert.attestation.checker }}">their checker</a>, not yet here]</span>
+              {% endif %}
+              {% if cert.source %}
+                <br><span class="text-muted">[construction from {% include record_link.html source=cert.source %}]</span>
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% else %}
+  <p><em>No bounds recorded.</em></p>
 {% endif %}
 
-<h2>Updates from the literature</h2>
-
-<ul>
-  {% for update in constant.updates %}
-  <li>
-      {% if update.date != null %}
-        <strong>{{ update.date }}</strong>
-      {% endif %}
-      {% if update.type == 'lower_bound' %}
-        Lower bound: ${{ update.value.latex }}$
-        {% if update.value.alt_display != null %}
-          ({{ update.value.alt_display }})
-        {% endif %}
-      {% else %}
-        Upper bound: ${{ update.value.latex }}$
-        {% if update.value.alt_display != null %}
-          ({{ update.value.alt_display }})
-        {% endif %}
-      {% endif %}
-      {% if update.primary_source %}
-        {% assign primary = site.data.sources[update.primary_source] %}
-        <br>{% if primary.doi %}
-          <a href="{{ primary.doi }}">{{ primary.string }}</a>
-        {% elsif primary.url %}
-          <a href="{{ primary.url }}">{{ primary.string }}</a>
-        {% else %}
-          {{ primary.string }}
-        {% endif %}
-      {% else %}
-        <br><em>Reference unknown</em>
-      {% endif %}
-      {% if update.secondary_source %}
-        {% assign secondary = site.data.sources[update.secondary_source] %}
-        {% if secondary.doi %}
-          <br>[via <a href="{{ secondary.doi }}">{{ secondary.string }}</a>]
-        {% elsif secondary.url %}
-          <br>[via <a href="{{ secondary.url }}">{{ secondary.string }}</a>]
-        {% else %}
-          <br>[via {{ secondary.string }}]
-        {% endif %}
-      {% endif %}
+{% assign superseded = constant.certificates | where: "role", "superseded" %}
+{% assign weaker = constant.certificates | where: "role", "weaker" %}
+{% assign other_certificates = superseded | concat: weaker %}
+{% if other_certificates.size > 0 %}
+<h3 class="h5 mt-4">Other certificates</h3>
+<p class="text-muted small">Certificates that aren't the best evidence for any bound above: other certificates are stronger evidence for the same bounds, or they prove only bounds weaker than any recorded.</p>
+<ul class="small">
+  {% for cert in other_certificates %}
+    {% if cert.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
+    <li>
+      ${{ relation }} {{ cert.value }}$:
+      <a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
+      submitted by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>, {{ cert.date }}
+      {% include certificate_role.html cert=cert %}
     </li>
   {% endfor %}
 </ul>
-
-{% if constant.updates.size == 0 %}
-  <p><em>No updates recorded.</em></p>
 {% endif %}

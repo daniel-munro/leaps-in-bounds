@@ -15,7 +15,7 @@ This site provides browsing, visualizations, and access to the structured data f
 
 {% include constant_group_status.html %}
 
-## Recently verified
+## Recent certificates
 
 {% assign batches = site.data.certificates | group_by_exp: "cert", "cert.date | append: ' ' | append: cert.submitted_by" %}
 <ul>
@@ -27,7 +27,7 @@ This site provides browsing, visualizations, and access to the structured data f
         {% assign constant = site.data.constants[first.constant] %}
         {% if first.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
         <a href="{{ site.baseurl }}/constants/{{ first.constant }}">{{ constant.name }}</a> ${{ relation }} {{ first.value.latex }}$
-        {% include certificate_comparison.html cert=first %}
+        {% include certificate_role.html cert=first %}
       {% else %}
         {% assign group_ids = batch.items | map: "group" | uniq %}
         {{ batch.size }} certificates, in
@@ -38,14 +38,14 @@ This site provides browsing, visualizations, and access to the structured data f
   {% endfor %}
 </ul>
 
-See [all verified bounds]({{ site.baseurl }}/verified/) and [contributors]({{ site.baseurl }}/contributors/).
+See [all certificates]({{ site.baseurl }}/certificates/) and [contributors]({{ site.baseurl }}/contributors/).
 
 ## Contributing
 
 Contributions are welcome, from people and AI agents alike. Pull requests are the preferred way to contribute:
 
 - **Bounds from the literature:** add published bounds, their sources, and earlier steps in their history, or new constants and groups of constants. See [how to add them](https://github.com/daniel-munro/leaps-in-bounds/blob/main/source_data/README.md).
-- **Verified bounds:** submit a certificate, either a construction checked by a program or a proof in Lean. See [how to submit one](https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md), and the [unverified bounds]({{ site.baseurl }}/unverified/) for bounds from the literature that don't have one yet.
+- **Certificates:** submit evidence that a program can check, either a construction or a proof in Lean, for a new bound or one discovered earlier. See [how to submit one](https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md), and the [unverified bounds]({{ site.baseurl }}/unverified/) for current bounds that don't have a verified one yet.
 
 For more open-ended contributions, such as asking whether a group of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
 

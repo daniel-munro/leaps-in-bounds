@@ -34,7 +34,14 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/constant_groups.tsv">constant_groups.tsv</a></td>
     </tr>
     <tr>
-      <td><strong>Updates</strong><br>Bounds updates for constants</td>
+      <td><strong>History</strong><br>Each bound that improved on the earlier ones, with its discovery (a source or a certificate) and its best evidence</td>
+      <td><a href="{{ site.baseurl }}/data/history.yml">history.yml</a></td>
+      <td><a href="{{ site.baseurl }}/data/history.json">history.json</a></td>
+      <td><a href="{{ site.baseurl }}/data/history.csv">history.csv</a></td>
+      <td><a href="{{ site.baseurl }}/data/history.tsv">history.tsv</a></td>
+    </tr>
+    <tr>
+      <td><strong>Updates</strong><br>Bounds from the literature, each citing the source that first gave it</td>
       <td><a href="{{ site.baseurl }}/data/updates.yml">updates.yml</a></td>
       <td><a href="{{ site.baseurl }}/data/updates.json">updates.json</a></td>
       <td><a href="{{ site.baseurl }}/data/updates.csv">updates.csv</a></td>
@@ -48,14 +55,14 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/sources.tsv">sources.tsv</a></td>
     </tr>
     <tr>
-      <td><strong>Certificates</strong><br>Verified bounds, who submitted them, and how they compare with the literature (<a href="{{ site.baseurl }}/verified/">browse</a>)</td>
+      <td><strong>Certificates</strong><br>Checked evidence for bounds, who submitted it, and the role each plays in its constant's history (<a href="{{ site.baseurl }}/certificates/">browse</a>)</td>
       <td><a href="{{ site.baseurl }}/data/certificates.yml">certificates.yml</a></td>
       <td><a href="{{ site.baseurl }}/data/certificates.json">certificates.json</a></td>
       <td><a href="{{ site.baseurl }}/data/certificates.csv">certificates.csv</a></td>
       <td><a href="{{ site.baseurl }}/data/certificates.tsv">certificates.tsv</a></td>
     </tr>
     <tr>
-      <td><strong>Unverified bounds</strong><br>Bounds from the literature that no certificate matches yet (<a href="{{ site.baseurl }}/unverified/">browse</a>)</td>
+      <td><strong>Unverified bounds</strong><br>Current bounds whose best evidence isn't a verified certificate yet (<a href="{{ site.baseurl }}/unverified/">browse</a>)</td>
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.yml">unverified_bounds.yml</a></td>
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.json">unverified_bounds.json</a></td>
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.csv">unverified_bounds.csv</a></td>

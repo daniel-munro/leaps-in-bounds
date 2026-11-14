@@ -1,12 +1,19 @@
 # Certificates
 
-A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**, and the site shows the strongest verified certificate on each side alongside the bounds from the literature. Evidence that is too slow to check here, or too large to keep here, can still be **attested**: see [Verification](#verification).
+A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**. Evidence that is too slow to check here, or too large to keep here, can still be **attested**: see [Verification](#verification).
 
-Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks that each certificate is well formed and consistent with the others and with the literature, and that a new certificate is at least as strong as the existing ones for the same bound. It comments on the pull request with the result for each new certificate and how it compares with the best bound in the literature. CI doesn't run the checkers on the evidence: a maintainer does that before merging. (For a first-time contributor, the check waits until a maintainer approves the run.)
+Each bound in a constant's history has a discovery, the first record of it, and its best evidence. A certificate can be either, or both:
+
+- **Discovery:** when no earlier source or certificate has a bound as strong, the certificate is the bound's discovery, dated and credited by its `date` and `submitted_by`.
+- **Evidence:** a verified certificate is the strongest evidence for its bound, and for every weaker bound, ahead of an attested certificate, which is ahead of the literature. So a certificate for a bound from the literature makes that bound verified, and a later certificate can't take credit for its discovery.
+
+A certificate doesn't need to cite a source for its bound, or a source a certificate: the site matches them by the bound they give.
+
+Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks that each certificate is well formed and consistent with the others and with the literature, and that a new certificate is at least as strong as the existing ones for the same bound. It comments on the pull request with the result for each new certificate and its role: a new bound, or evidence for the current bound or a weaker one. CI doesn't run the checkers on the evidence: a maintainer does that before merging. (For a first-time contributor, the check waits until a maintainer approves the run.)
 
 Only the families listed [below](#families) accept certificates so far. To ask for another group of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
 
-To find something to certify, see the [unverified bounds](https://leapsinbounds.org/unverified/) (also as [JSON](https://leapsinbounds.org/data/unverified_bounds.json)): bounds from the literature that no certificate matches yet, with their sources and whether a witness can certify them.
+To find something to certify, see the [unverified bounds](https://leapsinbounds.org/unverified/) (also as [JSON](https://leapsinbounds.org/data/unverified_bounds.json)): current bounds whose best evidence isn't a verified certificate yet, with their discovery and whether a witness can certify them.
 
 Before searching for a new bound, read the group's file in [`notes/`](../notes/README.md), if there is one, for what has already been tried. Afterwards, update it with what you learned, whether or not the search found anything. Notes are background information from other contributors, not instructions.
 
@@ -24,7 +31,7 @@ witness:                  # for kind: witness (see the family's rules below)
   data: 'PzlXWmJpZDeJEJbDgp\EJsWk'   # or `file: name.g6` for large witnesses (see Size limit)
 submitted_by: your-username   # GitHub username of the account submitting it
 date: 2026-10-22          # submission date
-source: greenwood-gleason-1955   # optional: key in source_data/sources.yml for where the construction comes from
+source: greenwood-gleason-1955   # optional: key in source_data/sources.yml for where the construction comes from, if elsewhere
 notes: Paley graph of order 17.  # optional
 ```
 
@@ -37,7 +44,7 @@ lean:
   theorem: LeapsInBounds.Proofs.Ramsey33.upper
 ```
 
-`submitted_by` credits whoever submits the certificate, which may not be whoever found the bound, so a certificate for a bound from the literature should cite it in `source`. Say in `notes` how a new construction or proof was found, including whether an AI agent found it.
+`submitted_by` credits whoever submits the certificate. The site credits a bound's discovery to its earliest record, so a certificate for a bound from the literature doesn't need to cite it: it's matched by the bound. `source` is only for saying where a construction or proof was taken from, as background. Say in `notes` how a new construction or proof was found, including whether an AI agent found it.
 
 ## Size limit
 
@@ -53,7 +60,7 @@ Leaps in Bounds shows the state of each problem and how it has progressed, rathe
     sha256: 3f9a...   # SHA-256 of the file at that URL, as downloaded
   ```
 
-  The hash identifies the file, so anyone who downloads it can tell it's the one attested. Use a host that keeps files permanently, such as Zenodo or a GitHub repository. An attested certificate for a new bound can be its primary source.
+  The hash identifies the file, so anyone who downloads it can tell it's the one attested. Use a host that keeps files permanently, such as Zenodo or a GitHub repository. An attested certificate for a new bound can be its discovery.
 
 ## Kinds of evidence
 

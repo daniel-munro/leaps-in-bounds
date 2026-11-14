@@ -73,18 +73,37 @@ def check_structure(cert: dict[str, Any], constants: dict[str, Any], sources: di
         )
 
 
-def literature_comparison(cert: dict[str, Any], constant: dict[str, Any]) -> str:
-    """Describe how a certificate's bound compares with the best in the literature."""
-    literature = constant[f"{cert['bound']}_bound"]
-    if literature is None or literature.decimal_approx is None:
-        return "no bound from the literature recorded on the site"
+def role_in_history(
+    cert: dict[str, Any],
+    constant: dict[str, Any],
+    previous: dict[str, Any] | None,
+) -> str:
+    """Describe the role a certificate would play in its constant's history:
+    the discovery of a new bound, or evidence for one discovered earlier, in
+    the literature or by another certificate."""
+    side = cert["bound"]
     # Literature values are rounded to 7 significant digits
     approx = float(f"{cert['approx']:.7g}")
-    if is_better(cert["bound"], approx, literature.decimal_approx):
-        return f"stronger than the best recorded, `{literature.latex}`"
-    if approx == literature.decimal_approx:
-        return "matches the best recorded"
-    return f"weaker than the best recorded, `{literature.latex}`"
+    literature = constant[f"{side}_bound"]
+    if literature is not None and literature.decimal_approx is None:
+        literature = None
+    current, record = None, None
+    if literature is not None:
+        current = literature.decimal_approx, f"`{literature.latex}`"
+        update = [u for u in constant["updates"] if u["type"] == f"{side}_bound"][-1]
+        source = update["primary_source"] or update["secondary_source"]
+        record = f"from `{source}`" if source else "from the literature"
+    if previous is not None:
+        prev_approx = float(f"{previous['approx']:.7g}")
+        if current is None or is_better(side, prev_approx, current[0]):
+            current, record = (prev_approx, f"`{previous['value']}`"), f"by certificate `{previous['id']}`"
+    if current is None:
+        return "new bound: none recorded before"
+    if is_better(side, approx, current[0]):
+        return f"new bound: stronger than {current[1]}, {record}"
+    if approx == current[0]:
+        return f"evidence for the current bound {current[1]}, {record}"
+    return f"weaker than the current bound {current[1]}, {record}"
 
 
 STATUS_TEXT = {
@@ -111,7 +130,7 @@ def format_summary(
     lines = [SUMMARY_MARKER, f"## {heading}", ""]
     if report:
         lines += [
-            "| Certificate | Bound | Evidence | Status | Previous certificate | Literature |",
+            "| Certificate | Bound | Evidence | Status | Previous certificate | Role |",
             "| --- | --- | --- | --- | --- | --- |",
         ]
         for row in report:
@@ -123,11 +142,11 @@ def format_summary(
             bound = f"`{cert['constant']}` {relation} `{cert['value']}`"
             kind = "Lean proof" if cert["kind"] == "lean" else "witness"
             status = f"❌ {row['error']}" if row["error"] else STATUS_TEXT[row["status"]]
+            constant = constants.get(cert["constant"])
+            role = role_in_history(cert, constant, row["previous"]) if constant else ""
             previous = row["previous"]
             previous = f"`{previous['value']}` ({previous['id']})" if previous else "none"
-            constant = constants.get(cert["constant"])
-            literature = literature_comparison(cert, constant) if constant else ""
-            lines.append(f"| `{row['id']}` | {bound} | {kind} | {status} | {previous} | {literature} |")
+            lines.append(f"| `{row['id']}` | {bound} | {kind} | {status} | {previous} | {role} |")
         lines.append("")
     other_errors = [e for e in errors if not any(e.startswith(f"{row['id']} ") for row in report)]
     if other_errors:
@@ -144,9 +163,8 @@ def format_summary(
                 "evidence and add it to `certificates/verified.yml`."
             )
         lines.append(
-            "A maintainer will also review the source and the description before merging. "
-            "A certificate for a bound from the literature should cite it in `source`, and one for a "
-            "new bound should say in `notes` how it was found."
+            "A maintainer will also review the description before merging. A certificate for a new bound "
+            "should say in `notes` how it was found."
         )
     return "\n".join(lines) + "\n"
 

@@ -31,6 +31,7 @@ repository: https://github.com/daniel-munro/leaps-in-bounds
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default.
