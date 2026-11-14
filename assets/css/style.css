@@ -176,17 +176,17 @@ h1 {
     text-align: center;
 }
 
-/* Verified value equal to the best in the literature */
+/* Verified bound discovered in the literature */
 .verified-equal {
     color: #198754;
 }
 
-/* Verified value that is stronger than, or absent from, the literature */
+/* Verified bound discovered by a certificate */
 .verified-new {
     color: #6f42c1;
 }
 
-/* Verified value that is weaker than the literature */
+/* Verified bound weaker than the current one */
 .verified-weaker {
     color: #8a9199;
 }

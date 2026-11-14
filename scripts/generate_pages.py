@@ -13,37 +13,39 @@ def html_for_value(value: Mapping[str, Any] | None) -> str:
         return '$?$'
     return f'${value["latex"]}$'
 
+def last_event(const: Mapping[str, Any], side: str) -> Mapping[str, Any] | None:
+    """The latest bound on one side of a constant's history, if any."""
+    events = [e for e in const['history'] if e['type'] == f'{side}_bound']
+    return events[-1] if events else None
+
 def verified_bracket(const: Mapping[str, Any], side: str) -> str:
-    """Generate a bracket noting that a constant has a verified lower ([) or
-    upper (]) bound: green if it matches the best literature bound, purple if
-    it's stronger than (or absent from) the literature, and gray if it's
-    weaker. An attested bound, stronger than any verified one, gets a yellow
-    bracket instead."""
+    """Generate a bracket for the evidence of a constant's lower ([) or upper
+    (]) bound: green if it's verified and was discovered in the literature,
+    purple if it's verified and was discovered by a certificate, yellow if
+    it's attested, and gray if only a weaker bound is verified."""
     bracket = '[' if side == 'lower' else ']'
-    attested = const[f'attested_{side}_bound']
-    if attested is not None:
-        label = (f"Attested {side} bound {attested['latex']} by certificate "
-                 f"{const[f'attested_{side}_certificate']}, checked elsewhere but not here")
-        literature = const[f'literature_{side}_bound']
-        label += '; none in the literature' if literature is None else f"; the literature has {literature['latex']}"
+    event = last_event(const, side)
+    tier = event['evidence']['tier'] if event else None
+    if tier == 'attested':
+        label = (f"{side.capitalize()} bound {event['value']['latex']} attested by certificate "
+                 f"{event['evidence']['certificate']}, checked elsewhere but not here")
         return f'<span class="attested" aria-label="{label}">{bracket}</span>'
+    if tier == 'verified':
+        new = event['discovery']['kind'] == 'certificate'
+        label = f"{side.capitalize()} bound {event['value']['latex']} verified by certificate {event['evidence']['certificate']}"
+        label += '; discovered by that certificate' if new else '; discovered in the literature'
+        return f'<span class="{"verified-new" if new else "verified-equal"}" aria-label="{label}">{bracket}</span>'
     verified = const[f'verified_{side}_bound']
     if verified is None:
         return '<span></span>'  # Keep the other bracket in its slot
-    source = const[f'{side}_bound_source']
-    css_class = {'both': 'verified-equal', 'verified': 'verified-new', 'literature': 'verified-weaker'}[source]
-    label = f"Verified {side} bound {verified['latex']} by certificate {const[f'verified_{side}_certificate']}"
-    if source != 'both':
-        literature = const[f'literature_{side}_bound']
-        if literature is None:
-            label += '; none in the literature'
-        else:
-            label += f"; the literature has {literature['latex']}"
-    return f'<span class="{css_class}" aria-label="{label}">{bracket}</span>'
+    label = (f"Weaker {side} bound {verified['latex']} verified by certificate "
+             f"{const[f'verified_{side}_certificate']}; the current bound isn't verified")
+    return f'<span class="verified-weaker" aria-label="{label}">{bracket}</span>'
 
 def verified_brackets(const: Mapping[str, Any]) -> str:
     """Generate the brackets in a cell's corner for its verified bounds."""
-    if all(const[f'{tier}_{side}_bound'] is None for tier in ['verified', 'attested'] for side in ['lower', 'upper']):
+    if all(const[f'{side}_bound_evidence'] in (None, 'literature') and const[f'verified_{side}_bound'] is None
+           for side in ['lower', 'upper']):
         return ''
     return (
         f'<span class="verified-brackets">{verified_bracket(const, "lower")}'
@@ -178,46 +180,46 @@ def card_reference(
     side: str,
     sources: Mapping[str, Mapping[str, Any]],
 ) -> str:
-    """Generate card HTML for where a constant's literature lower or upper
-    bound was published, noting its value if a verified bound beats it."""
-    literature = const[f'literature_{side}_bound']
-    if literature is None:
+    """Generate card HTML for where a constant's lower or upper bound was
+    discovered: a source, or a certificate."""
+    event = last_event(const, side)
+    if event is None:
         return ''
-    # The latest update of a side is its literature bound
-    update = [u for u in const['updates'] if u['type'] == f'{side}_bound'][-1]
-    if update.get('primary_source'):
-        reference = sources[update['primary_source']]['string']
-    elif update.get('secondary_source'):
-        reference = f"via {sources[update['secondary_source']]['string']}"
+    discovery = event['discovery']
+    if discovery['kind'] == 'certificate':
+        reference = f"Certificate submitted by {discovery['submitted_by']}"
+    elif discovery['id']:
+        reference = sources[discovery['id']]['string']
+    elif discovery['via']:
+        reference = f"via {sources[discovery['via']]['string']}"
     else:
         reference = 'Reference unknown'
-    prefix = f'Literature has {card_value(literature)}: ' if const[f'{side}_bound_source'] in ('verified', 'attested') else ''
-    date = f'{update["date"]}, ' if update.get('date') else ''
-    return f'<div class="constant-card-source">{prefix}{escape(date)}{escape(reference)}</div>'
+    date = f'{event["date"]}, ' if event.get('date') else ''
+    return f'<div class="constant-card-source">{escape(date)}{escape(reference)}</div>'
 
 def card_verification(const: Mapping[str, Any], side: str) -> str:
-    """Generate card HTML for how a constant's lower or upper bound is
-    verified or attested, if it is, colored like its bracket."""
-    html = ''
-    attested = const[f'attested_{side}_bound']
-    if attested is not None:
-        certificate = next(c for c in const['certificates'] if c['id'] == const[f'attested_{side}_certificate'])
-        value = card_value(attested) + ' ' if const[f'{side}_bound_source'] != 'attested' else ''
-        note = '; not in the literature' if const[f'literature_{side}_bound'] is None else ''
-        html += (f'<div><span class="attested">✓</span> Attested {value}by {escape(certificate["attestation"]["by"])}, '
-                 f'checked elsewhere{note}</div>')
+    """Generate card HTML for the best evidence for a constant's lower or
+    upper bound, if it's a certificate, colored like its bracket, or for the
+    strongest verified bound if it's weaker."""
+    event = last_event(const, side)
+    if event is None:
+        return ''
+    evidence = event['evidence']
+    kind = 'Lean proof' if evidence['kind'] == 'lean' else 'checked construction'
+    implied = (f" (via {card_value(evidence['value'])})" if evidence['value'] is not None else '')
+    if evidence['tier'] == 'attested':
+        certificate = next(c for c in const['certificates'] if c['id'] == evidence['certificate'])
+        return (f'<div><span class="attested">✓</span> Attested{implied} by '
+                f'{escape(certificate["attestation"]["by"])}, checked elsewhere</div>')
+    if evidence['tier'] == 'verified':
+        css_class = 'verified-new' if event['discovery']['kind'] == 'certificate' else 'verified-equal'
+        return f'<div><span class="{css_class}">✓</span> Verified by {kind}{implied}</div>'
     verified = const[f'verified_{side}_bound']
     if verified is None:
-        return html
+        return ''
     certificate = next(c for c in const['certificates'] if c['id'] == const[f'verified_{side}_certificate'])
     kind = 'Lean proof' if certificate['kind'] == 'lean' else 'checked construction'
-    source = const[f'{side}_bound_source']
-    if source in ('literature', 'attested'):
-        # Weaker than the best bound, so give the verified value too
-        return html + f'<div><span class="verified-weaker">✓</span> Verified {card_value(verified)} by {kind}</div>'
-    css_class = 'verified-new' if source == 'verified' else 'verified-equal'
-    note = '; not in the literature' if const[f'literature_{side}_bound'] is None else ''
-    return html + f'<div><span class="{css_class}">✓</span> Verified by {kind}{note}</div>'
+    return f'<div><span class="verified-weaker">✓</span> Verified {card_value(verified)} by {kind}</div>'
 
 def generate_card_html(
     const: Mapping[str, Any],

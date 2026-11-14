@@ -1,6 +1,7 @@
 // Shared data loading for the visualizations page.
 // Loads the public export in /data and builds, per constant, its numeric
-// updates in order with the running lower/upper bounds after each.
+// history of bounds (discovered in the literature or by a certificate) in
+// order with the running lower/upper bounds after each.
 
 const LOWER = 'lower_bound';
 const UPPER = 'upper_bound';
@@ -33,7 +34,7 @@ function texToHtml(s) {
 
 async function loadData() {
   const [updates, constants, groups, sources] = await Promise.all(
-    ['updates', 'constants', 'constant_groups', 'sources'].map(n => fetch(`${window.SITE_BASEURL || ""}/data/${n}.json`).then(r => r.json()))
+    ['history', 'constants', 'constant_groups', 'sources'].map(n => fetch(`${window.SITE_BASEURL || ""}/data/${n}.json`).then(r => r.json()))
   );
   const sourceById = new Map(Object.entries(sources));
   const byConst = d3.group(updates, u => u.constant);
@@ -51,8 +52,12 @@ async function loadData() {
       u.lo = lo; u.hi = hi;
       u.solves = !solved && Number.isFinite(hi - lo) && hi - lo <= 1e-9 * Math.max(1, Math.abs(hi));
       if (u.solves) solved = true;
-      const src = sourceById.get(u.primary_source) || sourceById.get(u.secondary_source);
-      u.sourceName = src ? src.string : (u.primary_source || u.secondary_source || '');
+      if (u.discovery_kind === 'certificate') {
+        u.sourceName = `Certificate ${u.discovery}`;
+      } else {
+        const src = sourceById.get(u.discovery) || sourceById.get(u.via);
+        u.sourceName = src ? src.string : (u.discovery || u.via || '');
+      }
     }
     const dated = ups.filter(u => u.t != null);
     list.push({ id, name: c.name, group: c.group, groupName: groups[c.group]?.name ?? c.group, updates: ups, dated });

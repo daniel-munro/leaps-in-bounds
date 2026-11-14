@@ -1,0 +1,10 @@
+{% comment %}
+Badge for a bound's best evidence (include.evidence, an event's evidence):
+a certificate checked here (a Lean proof or a checked construction), an
+attested certificate, or the literature.
+{% endcomment %}
+{% case include.evidence.tier %}
+  {% when "verified" %}<span class="badge bg-success">{% if include.evidence.kind == "lean" %}Lean proof{% else %}Checked construction{% endif %}</span>
+  {% when "attested" %}<span class="badge bg-attested">Attested</span>
+  {% else %}<span class="badge text-bg-light border">Literature</span>
+{% endcase %}

@@ -5,7 +5,7 @@ This directory holds the hand-edited data behind the site: constant groups, sour
 - **Bounds from the literature:** a published improvement to a bound, or earlier steps in a constant's history that are missing.
 - **New constants:** extending a group to more parameters, or adding a new group of constants.
 
-To submit a bound that you've found yourself, or a construction or proof checked here, see [certificates/README.md](../certificates/README.md) instead. A bound can be both: a published bound goes here, and a certificate for it can follow.
+To submit a bound that you've found yourself, or a construction or proof checked here, see [certificates/README.md](../certificates/README.md) instead. Sources and certificates are both records of a bound, and the site matches them by the bound they give: the earlier record is its discovery, and a certificate checked here is its best evidence. So a published bound goes here even if a certificate already has it, and a certificate for it can follow.
 
 Contributions are credited on the [contributors page](https://leapsinbounds.org/contributors/) to the GitHub account given in `added_by` (see [Credit](#credit)).
 
@@ -35,7 +35,7 @@ weak-schur-7,2146,,rowley-2020,ageron-et-al-2021
 - `primary_source`: the source where the bound first appeared, which dates it. Use `trivial` for bounds that a secondary source calls trivial or easy, and leave it empty only if the original really can't be found.
 - `secondary_source`: optional, a survey, table, or database where the bound is collected, such as Radziszowski's survey for Ramsey numbers or an OEIS entry. Cite one if that's where you learned of the bound.
 
-Rows are sorted by the date of their primary source when processed, so their order in the file doesn't matter. But each bound must be an improvement on the earlier ones for the same side, and the lower bound can never exceed the upper bound: the build fails otherwise. This is a useful check that the dates are right.
+Rows are sorted by the date of their primary source when processed, so their order in the file doesn't matter. But each bound must be an improvement on the earlier ones from the literature for the same side, and the lower bound can never exceed the upper bound: the build fails otherwise. This is a useful check that the dates are right. A bound that a certificate gave first is fine to add too: the site counts the certificate as its discovery, and the source as a later record.
 
 **Add the whole history you can find, not just the current record.** The site is about progress over time, so each step that improved a bound is worth a row: who first proved $R(4,6) \ge 35$, and who raised it to 36. Steps that only matched an earlier bound don't need a row.
 
@@ -68,7 +68,7 @@ rowley-2020:
 
 Check whether a source is already there before adding it, by its arXiv number or DOI.
 
-A bound found by computer and posted only in a repository or on Zenodo, rather than in a paper, is still a source if it's public and dated. If it comes with a witness that can be checked here, also consider submitting it as a [certificate](../certificates/README.md), which the site then shows as verified.
+A bound found by computer and posted only in a repository or on Zenodo, rather than in a paper, is still a source if it's public and dated. If it comes with a witness that can be checked here, also consider submitting it as a [certificate](../certificates/README.md), which the site then shows as its verified evidence.
 
 ## Adding constants
 
