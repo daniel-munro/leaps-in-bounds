@@ -20,7 +20,7 @@ A [certificate]({{ site.repository }}/blob/main/certificates/README.md) is evide
 
 A certificate can be the discovery of a bound or its best evidence. It's the discovery of a <span class="badge bg-verified-new">New bound</span> when no earlier source or certificate has a bound as strong. Otherwise it's evidence for a bound discovered earlier, usually in the literature, and stronger evidence than a paper's proof. See the [unverified bounds]({{ site.baseurl }}/unverified/) for current bounds that don't have a verified certificate yet.
 
-Some certificates are <span class="badge bg-attested">Attested</span> instead: their evidence is too slow to check here so far, or too large to keep here, and someone else says they checked it with a checker they published. Anyone can run that checker on the evidence, but until it's checked here, an attested bound isn't verified.
+Some certificates are <span class="badge bg-attested">Attested</span> instead: their evidence is too slow to check here so far, or too large to keep here, such as a Lean proof built on its own large library, and someone else says they checked it with a checker they published. Anyone can run that checker on the evidence, but until it's checked here, an attested bound isn't verified.
 
 See the [latest discoveries, contributors and recent certificates]({{ site.baseurl }}/contributions/), and download all certificates as [YAML]({{ site.baseurl }}/data/certificates.yml), [JSON]({{ site.baseurl }}/data/certificates.json), [CSV]({{ site.baseurl }}/data/certificates.csv) or [TSV]({{ site.baseurl }}/data/certificates.tsv).
 

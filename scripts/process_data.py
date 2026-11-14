@@ -245,6 +245,8 @@ def attach_certificates(
         summary["approx"] = cert["approx"]
         if cert["kind"] == "lean":
             summary["theorem"] = cert["lean"]["theorem"]
+            if "url" in cert["lean"]:
+                summary["lean_url"] = cert["lean"]["url"]
         constants[cert["constant"]]["certificates"].append(summary)
 
     if left_out:
