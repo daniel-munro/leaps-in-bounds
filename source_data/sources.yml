@@ -479,7 +479,7 @@ calkin-erdos-tovey-1997:
 kuznetsov-2016:
   string: "E. Kuznetsov, Computational Lower Limits on Small Ramsey Numbers, preprint, arXiv, http://arxiv.org/abs/1505.07186 (2016)."
   date: "2016"
-  notes: "[Kuz] in https://doi.org/10.37236/21"
+  notes: "[Kuz] in https://doi.org/10.37236/21. Section 6 states R(9,12) >= 729, R(9,13) >= 809, R(9,14) >= 929 and R(9,15) >= 1065, as consequences of Theorem 9 of Xu, Xie, Exoo and Radziszowski (2004) and the new bounds on R(5,11..14); first in arXiv v4 (2015-11-30)."
   added_by: daniel-munro
 
 huang-w-s-y-z-h-2007:
@@ -515,6 +515,7 @@ xiaodong-s-r-2011:
 xu-xie-radziszowski-2004:
   string: "Xu Xiaodong, Xie Zheng and S.P. Radziszowski, A Constructive Approach for the Lower Bounds on the Ramsey Numbers R(s, t), Journal of Graph Theory, 47 (2004) 231-239."
   date: "2004"
+  url: "https://www.cs.rit.edu/~spr/PUBL/paper45.pdf"
   notes: "[XuXR] in https://doi.org/10.37236/21"
   added_by: daniel-munro
 
@@ -1353,7 +1354,8 @@ blankenship-c-t-2018:
 
 exoo-et-al-2026:
   string: "Exoo, G., Goedgebeur, J., Jooken, J., Stubbe, T., & Van den Eede, G. (2026). New Small Regular Graphs of Given Girth: the Cage Problem and Beyond. The Electronic Journal of Combinatorics, 33(3), P3.48."
-  date: "2026-08-28"
+  date: "2025-11-10"
+  url: "https://arxiv.org/abs/2511.07247"
   doi: "https://doi.org/10.37236/14834"
   added_by: daniel-munro
 
@@ -2941,4 +2943,157 @@ fettes-kramer-radziszowski-2004:
   date: "2004"
   url: "https://www.cs.rit.edu/~spr/PUBL/paper43.pdf"
   notes: "[FeKR] in https://doi.org/10.37236/21. The bounds R_5(3) <= 307, R_6(3) <= 1838 and R_7(3) <= 12861 follow from R_4(3) <= 62 by the Greenwood-Gleason inequality R_{k+1}(3) <= (k+1)(R_k(3) - 1) + 2, as stated in https://doi.org/10.37236/21 (section 6.1.1)."
+  added_by: daniel-munro
+
+erdos-sachs-1963:
+  string: "P. Erdős and H. Sachs, Reguläre Graphen gegebener Taillenweite mit minimaler Knotenzahl, Wiss. Z. Martin-Luther-Univ. Halle-Wittenberg Math.-Natur. Reihe 12 (1963) 251-258."
+  date: "1963-03"
+  url: "https://cs.umd.edu/users/gasarch/COURSES/752/S25/slides/ErdosSachsOrig.pdf"
+  notes: "Satz 1, eq. (1) (p. 251): n(k,g) >= 1 + k sum_{i=0}^{[(g-3)/2]} (k-1)^i (the Moore bound for odd g); Bemerkung 2, eq. (7) (p. 253): n(k,2q) >= 2((k-1)^q - 1)/(k-2) (Moore bound for even g, by a method of Kárteszi). Section I.3 (pp. 253-254): f(k,3) = k+1 among the 'trivial cases'; f(k,4) = 2k (K_{k,k}), credited to an oral communication of L. Pósa; f(k,7) > Moore bound for k > 2, citing Hoffman and Singleton (1960). The issue is dated March 1963 (manuscript received 1963-01-29)."
+  added_by: daniel-munro
+
+hoffman-singleton-1960:
+  string: "A. J. Hoffman and R. R. Singleton, On Moore graphs with diameters 2 and 3, IBM Journal of Research and Development 4 (1960) 497-504."
+  date: "1960-11"
+  doi: "https://doi.org/10.1147/rd.45.0497"
+  notes: "Section 1, eqs. (1)-(2) (p. 497): a graph of degree d and diameter k has n <= 1 + d sum_{i=1}^{k} (d-1)^{i-1} nodes (the Moore bound, which they attribute to E. F. Moore); equality forces every node to have degree d (Section 2), so the bound holds for maximum degree d. Abstract and Section 4: Moore graphs of diameter 2 exist only for d = 2, 3, 7 and possibly 57, so n(d,2) <= M(d,2) - 1 otherwise; Section 6 (p. 504): the only Moore graph of diameter 3 is the 7-gon, so n(d,3) <= M(d,3) - 1 for d >= 3. For cages, no Moore graph of diameter 3 and degree k > 2 gives n(k,7) > M(k,7), as stated by Erdős and Sachs (1963), p. 254, item g). Received 1960-04-12."
+  added_by: daniel-munro
+
+damerell-1973:
+  string: "R. M. Damerell, On Moore graphs, Mathematical Proceedings of the Cambridge Philosophical Society 74 (1973) 227-236."
+  date: "1973-09"
+  doi: "https://doi.org/10.1017/S0305004100048015"
+  notes: "Not read directly. Proves there are no Moore graphs of diameter >= 3 (odd girth >= 7) other than cycles; found independently by Bannai and Ito, On finite Moore graphs, J. Fac. Sci. Univ. Tokyo Sect. IA 20 (1973) 191-208. Cited as [41] and [14] for Theorem 1 of the Exoo-Jajcay dynamic cage survey, which notes (p. 7) that n(k,g) > M(k,g) unless a Moore graph exists. For degree/diameter: there are no Moore graphs (other than polygons) of diameter >= 3, so n(d,k) <= M(d,k) - 1 for d >= 3, k >= 3 (abstract; Miller-Širáň survey, p. 9)."
+  added_by: daniel-munro
+
+biggs-ito-1980:
+  string: "N. L. Biggs and T. Ito, Graphs with even girth and small excess, Mathematical Proceedings of the Cambridge Philosophical Society 88 (1980) 1-10."
+  date: "1980-07"
+  doi: "https://doi.org/10.1017/S0305004100057303"
+  notes: "Not read directly. Bounds taken from the Exoo-Jajcay dynamic cage survey (2013), Section 3, p. 15, Theorems 11-12: a (k,2m)-cage with excess at most k-2 is bipartite, an excess of 2 occurs only for girth 6, and so n(k,g) >= M(k,g)+3 for even g >= 8 with no Moore graph."
+  added_by: daniel-munro
+
+bannai-ito-1981:
+  string: "E. Bannai and T. Ito, Regular graphs with excess one, Discrete Mathematics 37 (1981) 147-158."
+  date: "1981"
+  doi: "https://doi.org/10.1016/0012-365X(81)90215-6"
+  notes: "Not read directly. The Exoo-Jajcay dynamic cage survey (2013), Section 3, p. 15, states that this paper shows there are no k-regular graphs of odd girth g >= 5 and order M(k,g)+1 for k >= 3. With the nonexistence of Moore graphs of odd girth >= 7, this gives n(k,g) >= M(k,g)+2. For degree/diameter: the Miller-Širáň survey (p. 13) and Feria-Purón et al. (2011, Section 1) cite this paper, with Kurosawa and Tsujii, Considerations on diameter of communication networks, Electronics and Communications in Japan 64A(4) (1981) 37-45, for the nonexistence of graphs of defect 1 (order M(d,k) - 1) for d >= 3 and k >= 3, giving n(d,k) <= M(d,k) - 2."
+  added_by: daniel-munro
+
+sauer-1967:
+  string: "N. Sauer, Extremaleigenschaften regulärer Graphen gegebener Taillenweite, I and II, Sitzungsberichte Österreich. Akad. Wiss. Math. Natur. Kl., S-B II, 176 (1967) 9-25 and 27-43."
+  date: "1967"
+  notes: "Not read directly. de Ruiter and Biggs (2015), Table 1, credit Sauer with the previous records n(8,7) <= 799, n(10,7) <= 1639, n(12,7) <= 2927 and n(14,7) <= 4759. Each is one less than the order of the (k,8)-cage for k-1 a prime power, so these are probably applications of a general result of Sauer to those cages rather than values stated in the paper."
+  added_by: daniel-munro
+
+deruiter-biggs-2015:
+  string: "F. de Ruiter and N. Biggs, Applications of integer programming methods to cages, Electronic Journal of Combinatorics 22(4) (2015) #P4.35."
+  date: "2015-11-27"
+  doi: "https://doi.org/10.37236/4854"
+  notes: "Table 1 (p. 2) lists new girth-7 records and the previous ones; Tables 2-3 (pp. 5, 7) give the excisions. Submitted 2014-11-26, published 2015-11-27; no preprint found."
+  added_by: daniel-munro
+
+su-li-luo-li-2002:
+  string: "W. Su, Q. Li, H. Luo and G. Li, Lower bounds of Ramsey numbers based on cubic residues, Discrete Mathematics 250 (2002) 197-209."
+  date: "2002"
+  doi: "https://doi.org/10.1016/S0012-365X(01)00283-7"
+  notes: "[SLLL] in https://doi.org/10.37236/21. The abstract lists R(6,14) >= 284 among 16 new lower bounds. Xu, Xie and Radziszowski (Journal of Graph Theory 47 (2004), Table I) credit R(6,14) >= 284 to Su Wenlong, Luo Haipeng and Li Qiao, A Method for Obtaining Lower Bounds for Some Ramsey Numbers (in Chinese), Journal of Guangxi Academy of Sciences 15(4) (1999) 145-147, which wasn't found."
+  added_by: daniel-munro
+
+solovjeva-1987:
+  string: "F.I. Solov'jeva, An upper bound for the length of a cycle in an n-dimensional unit cube, Metody Diskretnogo Analiza 45 (1987) 71-76 (in Russian)."
+  date: "1987"
+  notes: "Not seen directly. Proves c(n) <= (1 - 2/(n^2-n+2)) 2^(n-1) for n >= 7, as stated in Lukito's thesis (eq. 3.1, p. 27), whose Table 2 (p. 8) takes the values 249 and 500 for n = 9, 10 from it. Values for n = 11-13 computed from the formula (floor)."
+  added_by: daniel-munro
+
+lukito-1998:
+  string: "A. Lukito, Upper and lower bounds for the length of snake-in-the-box codes, Report 98-07, Faculty of Information Technology and Systems, Delft University of Technology, 1998."
+  date: "1998"
+  notes: "Not seen directly. Proves c(n) <= (1 - 1/(4n-9)) 2^(n-1) for n >= 11 (snake = induced cycle), as stated in Lukito's thesis (eq. 3.4, p. 27), whose Table 2 (p. 8) gives 994, 1995 and 4000 for n = 11-13 from it."
+  added_by: daniel-munro
+
+lukito-2000:
+  string: "A. Lukito, Bounds for the Length of Certain Types of Distance-Preserving Codes, PhD thesis, Delft University of Technology, 2000."
+  date: "2000-10-02"
+  url: "https://theses.eurasip.org/theses/122/bounds-for-the-length-of-certain-types-of/"
+  notes: "Section 1.3 and Table 2 (p. 8) list the best known upper bounds on the length of a snake-in-the-box code (an induced cycle) for 8 <= n <= 20, and Section 3.1 (p. 27) states the bounds of Solov'jeva, Snevily, Emelyanov and Lukito. Date of the defense."
+  added_by: daniel-munro
+
+weisenberg-2025:
+  string: "D. Weisenberg, comment on Erdős Problem #503, Erdős Problems forum, 2025-08-09."
+  date: "2025-08-09"
+  url: "https://www.erdosproblems.com/forum/thread/503"
+  notes: "Adds the point with all coordinates 2/(n+1) to Alweiss' set {e_i + e_j} (the midpoints of the edges of a regular simplex), giving an isosceles set of C(n+1,2)+1 points in R^n."
+  added_by: daniel-munro
+
+erdosproblems-503:
+  string: "T. F. Bloom, Erdős Problem #503, https://www.erdosproblems.com/503, retrieved 2026-11-14."
+  date: "2026-11-14"
+  url: "https://www.erdosproblems.com/503"
+  notes: "Records the lower bound C(d+1,2)+1 (Alweiss and Weisenberg) and Blokhuis' upper bound C(d+2,2). Page last edited 2025-10-28."
+  added_by: daniel-munro
+
+yi-2026:
+  string: "H. Yi, Isosceles sets in Euclidean spaces of dimension nine to twenty-two, arXiv:2611.05421."
+  date: "2026-11-02"
+  url: "https://arxiv.org/abs/2611.05421"
+  notes: "Theorem 1.1: the largest isosceles set in R^d has C(d+1,2)+1 points for 9 <= d <= 21 (unique: J(d+1,2) with its centroid), and 276 points for d = 22."
+  added_by: daniel-munro
+
+
+ejc-ds14-degree-diameter:
+  string: "M. Miller and J. Širáň, Moore graphs and beyond: A survey of the degree/diameter problem, Electronic Journal of Combinatorics (2013) #DS14v2 (second edition, 2013-05-16)."
+  date: "2013-05-16"
+  doi: "https://doi.org/10.37236/35"
+  notes: "Section 3.1 (pp. 8-12): Moore graphs, the Moore bound and their nonexistence (Hoffman-Singleton 1960, Bosák 1970, Friedman 1971, Damerell 1973, Bannai-Ito 1973). Section 3.2 (pp. 12-16): graphs of defect 1 and 2 (Erdős-Fajtlowicz-Hoffman 1980, Bannai-Ito 1981 and Kurosawa-Tsujii 1981 giving n(d,k) <= M(d,k) - 2 for d >= 3; Jørgensen 1992; Conde-Gimbert 2009; Feria-Purón-Miller-Pineda-Villavicencio 2011; Miller-Pineda-Villavicencio 2009)."
+  added_by: daniel-munro
+
+bosak-1970:
+  string: "J. Bosák, Cubic Moore graphs, Matematický časopis 20 (1970) 72-80."
+  date: "1970"
+  url: "https://dml.cz/dmlcz/126958"
+  notes: "Theorem (p. 79): there is no Moore graph of type (3,k) for 3 <= k <= 8, so n(3,k) <= M(3,k) - 1 for these k (a graph attaining the Moore bound is regular, Hoffman-Singleton 1960, Section 2). Received 1968-07-04; a footnote on p. 72 says the result was presented at the Colloquium on Graph Theory in Manebach in May 1967."
+  added_by: daniel-munro
+
+erdos-fajtlowicz-hoffman-1980:
+  string: "P. Erdős, S. Fajtlowicz and A. J. Hoffman, Maximum degree in graphs of diameter 2, Networks 10 (1980) 87-90."
+  date: "1980-03"
+  doi: "https://doi.org/10.1002/net.3230100109"
+  notes: "Abstract: with the exception of C_4 there are no graphs of diameter 2, maximum degree d and d^2 vertices, so n(d,2) <= d^2 - 1 = M(d,2) - 2 for d >= 3 with d not 3, 7 or 57 (no Moore graph, Hoffman-Singleton 1960). Only the abstract was read."
+  added_by: daniel-munro
+
+jorgensen-1992:
+  string: "L. K. Jørgensen, Diameters of cubic graphs, Discrete Applied Mathematics 37/38 (1992) 347-351."
+  date: "1992-07"
+  doi: "https://doi.org/10.1016/0166-218X(92)90144-Y"
+  notes: "Not read directly. Shows that a graph of maximum degree 3 and diameter k >= 4 cannot have defect 2 (zbMATH review 0768.05035; Miller-Širáň survey, p. 13). Miller (An overview of the degree/diameter problem for directed, undirected and mixed graphs, IWONT 2010 invited talk, p. 4) states the consequence n(3,k) <= M(3,k) - 4 for k >= 4: defect 1 is excluded by Bannai-Ito and Kurosawa-Tsujii (1981), and an odd defect is impossible by the handshaking lemma, since a graph of maximum degree 3 and defect 3 must be cubic (Feria-Purón et al. 2011, Proposition 4.1)."
+  added_by: daniel-munro
+
+conde-gimbert-2008:
+  string: "J. Conde and J. Gimbert, On the existence of graphs of diameter two and defect two, Discrete Mathematics 309 (2009) 3166-3172."
+  date: "2008-10"
+  doi: "https://doi.org/10.1016/j.disc.2008.09.017"
+  notes: "Not read directly. Shows there are no graphs of maximum degree d, diameter 2 and order d^2 - 1 (defect 2) for 5 < d < 50 (Miller-Širáň survey, p. 13; zbMATH review 1189.05053: verified for d = 6, ..., 50 using PARI), so n(d,2) <= M(d,2) - 3 for these d. Dated by its online appearance (Crossref record created 2008-10-15); print issue May 2009."
+  added_by: daniel-munro
+
+miller-nguyen-pineda-2009:
+  string: "M. Miller, M. H. Nguyen and G. Pineda-Villavicencio, On the nonexistence of graphs of diameter 2 and defect 2, Journal of Combinatorial Mathematics and Combinatorial Computing 71 (2009) 5-20."
+  date: "2009"
+  url: "https://guillermo.com.au/pdfs/BothDegrees.pdf"
+  notes: "Read in the authors' version at the URL. Theorem 6: no (d,2,-2)-graph for odd d >= 7 with d not of the form l^2+l+3 or l^2+l-1; Theorem 7: none for odd d >= 7 when (d^2-1)(d^3-2d^2+3d-8)/10 is not an integer. The text after Theorem 7 states n(d,2) <= d^2 - 3 = M(d,2) - 4 for every odd d so ruled out (d = 13, 15, 17 in the range 8-20; defect 3 is impossible for odd d since such a graph is regular of odd order). The same claim of d^2 - 3 after Theorems 3-4 for even d seems to need more than is proved (only defect 2 is ruled out), so only odd d are used. Earlier conference versions: IWOCA 2007 (odd degree) and CATS 2008 (even degree), not read."
+  added_by: daniel-munro
+
+miller-pineda-2009:
+  string: "M. Miller and G. Pineda-Villavicencio, Complete catalogue of graphs of maximum degree 3 and defect at most 4, Discrete Applied Mathematics 157 (2009) 2983-2996."
+  date: "2009-05"
+  doi: "https://doi.org/10.1016/j.dam.2009.04.021"
+  notes: "Not read directly. Completes the catalogue of graphs of maximum degree 3 and defect at most 4 (Miller-Širáň survey, p. 16); Miller (IWONT 2010 invited talk, p. 4) states the consequence n(3,k) <= M(3,k) - 6 for k >= 5, attributing it to 2008. Dated by its online appearance (Crossref record created 2009-05-16)."
+  added_by: daniel-munro
+
+feria-puron-miller-pineda-2010:
+  string: "R. Feria-Purón, M. Miller and G. Pineda-Villavicencio, On graphs of defect at most 2, Discrete Applied Mathematics 159 (2011) 1331-1344, arXiv:1010.5658."
+  date: "2010-10-27"
+  url: "https://arxiv.org/abs/1010.5658"
+  doi: "https://doi.org/10.1016/j.dam.2011.04.018"
+  notes: "Section 7.1 (arXiv v1 and v2): Proposition 7.1, N(d,k) <= M(d,k) - 3 for even d >= 4 and k >= 4, and N(4,k) <= M(4,k) - 3 for k >= 3 (using Theorem 6.1, no (4,3,-2)-graph); Proposition 7.2, N(d,k) <= M(d,k) - 4 for odd d >= 5 and k >= 4 when M(d,k) - 2 is not divisible by k (Theorem 5.3; Corollary 7.1 is the case d = 0, 2 mod k). Section 1 notes that the earlier claimed proof of the case d = 4 by Miller and Simanjuntak (Discrete Math. 308 (2008)) contained a mistake."
   added_by: daniel-munro
