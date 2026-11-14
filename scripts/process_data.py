@@ -590,42 +590,84 @@ def calculate_family_stats(
     return stats
 
 
-def list_literature_contributors(
+def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 50) -> dict[str, list[dict[str, Any]]]:
+    """List discoveries for the contributions page: the `latest` dated ones,
+    newest first, and all those made by certificates. Each gives the bound it
+    improved on, if any. Call after build_histories, before the values are
+    written out.
+    """
+    rows = []
+    for constant_id, constant in constants.items():
+        for side in ["lower", "upper"]:
+            events = [e for e in constant["history"] if e["type"] == f"{side}_bound"]
+            for i, event in enumerate(events):
+                discovery = event["discovery"]
+                previous = events[i - 1]["value"] if i > 0 else None
+                rows.append({
+                    "constant": constant_id,
+                    "bound": side,
+                    "value": event["value"].to_dict(),
+                    "previous": previous.to_dict() if previous is not None else None,
+                    "date": event["date"],
+                    "discovery_kind": discovery["kind"],
+                    "discovery": discovery["id"],
+                    "via": discovery["via"],
+                    "submitted_by": discovery.get("submitted_by"),
+                    "evidence": {"tier": event["evidence"]["tier"], "kind": event["evidence"]["kind"]},
+                    "current": i == len(events) - 1,
+                })
+    rows.sort(key=lambda row: (row["constant"], row["bound"]))
+    rows.sort(key=lambda row: row["date"] or "", reverse=True)
+    return {
+        "latest": [row for row in rows if row["date"] is not None][:latest],
+        "certificate": [row for row in rows if row["discovery_kind"] == "certificate"],
+    }
+
+
+def list_contributors(
     families: Mapping[str, Mapping[str, Any]],
     sources: Mapping[str, Mapping[str, Any]],
     updates: list[Mapping[str, Any]],
+    certificates: list[Mapping[str, Any]],
 ) -> list[dict[str, Any]]:
-    """List the GitHub accounts credited with `added_by` on sources and
-    families, with the families and sources each added and the number
-    of bounds citing their sources. Most first.
+    """List the GitHub accounts credited with sources (by `added_by`) or
+    certificates (by `submitted_by`): the sources each added, the bounds from
+    the literature citing them, and the certificates that are the best
+    evidence for a bound discovered earlier or the discovery of a new one.
+    Families are credited too but not counted here. Most new bounds first.
     """
     contributors: dict[str, dict[str, Any]] = {}
 
-    def credit(kind: str, item_id: str, item: Mapping[str, Any]) -> dict[str, Any] | None:
-        username = item.get("added_by")
-        if username is None:
-            return None
+    def credit(username: str) -> dict[str, Any]:
+        return contributors.setdefault(username, {
+            "contributor": username, "sources": 0, "bounds_sourced": 0,
+            "bounds_verified": 0, "new_bounds": 0,
+        })
+
+    def check(kind: str, item_id: str, username: Any) -> None:
         if not isinstance(username, str) or not GITHUB_USERNAME.fullmatch(username):
             raise ValueError(f"{kind} {item_id}: added_by must be a GitHub username")
-        return contributors.setdefault(
-            username, {"contributor": username, "families": [], "sources": [], "updates": 0}
-        )
 
     for family_id, family in families.items():
-        contributor = credit("Family", family_id, family)
-        if contributor is not None:
-            contributor["families"].append(family_id)
+        if family.get("added_by") is not None:
+            check("Family", family_id, family["added_by"])
     for source_id, source in sources.items():
-        contributor = credit("Source", source_id, source)
-        if contributor is not None:
-            contributor["sources"].append(source_id)
+        if source.get("added_by") is not None:
+            check("Source", source_id, source["added_by"])
+            credit(source["added_by"])["sources"] += 1
     for update in updates:
         source = sources.get(update["source"]) if update["source"] else None
-        if source is not None and source.get("added_by") in contributors:
-            contributors[source["added_by"]]["updates"] += 1
+        if source is not None and source.get("added_by") is not None:
+            credit(source["added_by"])["bounds_sourced"] += 1
+    for cert in certificates:
+        if cert["role"] == "discovery":
+            credit(cert["submitted_by"])["new_bounds"] += 1
+        elif cert["role"] == "evidence":
+            credit(cert["submitted_by"])["bounds_verified"] += 1
     return sorted(
         contributors.values(),
-        key=lambda c: (-len(c["families"]), -c["updates"], -len(c["sources"]), c["contributor"].lower()),
+        key=lambda c: (-c["new_bounds"], -(c["bounds_sourced"] + c["bounds_verified"]),
+                       -c["sources"], c["contributor"].lower()),
     )
 
 
@@ -688,13 +730,16 @@ def main() -> None:
     build_histories(constants)
     with open("_data/unverified_bounds.yml", "w") as file:
         yaml.dump(find_unverified_bounds(constants), file, sort_keys=False)
+    certificate_rows = list_certificates(constants)
     with open("_data/certificates.yml", "w") as file:
-        yaml.dump(list_certificates(constants), file, sort_keys=False)
+        yaml.dump(certificate_rows, file, sort_keys=False)
     with open("_data/history.yml", "w") as file:
         yaml.dump(list_history(constants), file, sort_keys=False)
+    with open("_data/discoveries.yml", "w") as file:
+        yaml.dump(list_discoveries(constants), file, sort_keys=False)
 
-    with open("_data/literature_contributors.yml", "w") as file:
-        yaml.dump(list_literature_contributors(families, sources, updates), file, sort_keys=False)
+    with open("_data/contributors.yml", "w") as file:
+        yaml.dump(list_contributors(families, sources, updates, certificate_rows), file, sort_keys=False)
 
     # Save combined updates for download
     for update in updates:

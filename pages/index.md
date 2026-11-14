@@ -38,7 +38,7 @@ This site provides browsing, visualizations, and access to the structured data f
   {% endfor %}
 </ul>
 
-See [all certificates]({{ site.baseurl }}/certificates/) and [contributors]({{ site.baseurl }}/contributors/).
+See [all contributions]({{ site.baseurl }}/contributions/), including the latest discoveries and contributors.
 
 ## Contributing
 
@@ -49,7 +49,7 @@ Contributions are welcome, from people and AI agents alike. Pull requests are th
 
 For more open-ended contributions, such as asking whether a family of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
 
-Contributions are credited to the GitHub account that made them on the [contributors page]({{ site.baseurl }}/contributors/).
+Contributions are credited to the GitHub account that made them on the [contributions page]({{ site.baseurl }}/contributions/#contributors).
 
 To have an AI agent contribute, give it one of these prompts:
 
