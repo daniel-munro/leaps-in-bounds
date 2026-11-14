@@ -27,11 +27,11 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/constants.tsv">constants.tsv</a></td>
     </tr>
     <tr>
-      <td><strong>Constant groups</strong><br>Metadata about groups of related constants</td>
-      <td><a href="{{ site.baseurl }}/data/constant_groups.yml">constant_groups.yml</a></td>
-      <td><a href="{{ site.baseurl }}/data/constant_groups.json">constant_groups.json</a></td>
-      <td><a href="{{ site.baseurl }}/data/constant_groups.csv">constant_groups.csv</a></td>
-      <td><a href="{{ site.baseurl }}/data/constant_groups.tsv">constant_groups.tsv</a></td>
+      <td><strong>Families</strong><br>Metadata about families of related constants</td>
+      <td><a href="{{ site.baseurl }}/data/families.yml">families.yml</a></td>
+      <td><a href="{{ site.baseurl }}/data/families.json">families.json</a></td>
+      <td><a href="{{ site.baseurl }}/data/families.csv">families.csv</a></td>
+      <td><a href="{{ site.baseurl }}/data/families.tsv">families.tsv</a></td>
     </tr>
     <tr>
       <td><strong>History</strong><br>Each bound that improved on the earlier ones, with its discovery (a source or a certificate) and its best evidence</td>
@@ -48,7 +48,7 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/updates.tsv">updates.tsv</a></td>
     </tr>
     <tr>
-      <td><strong>Sources</strong><br>Metadata for the primary and secondary sources for bounds updates</td>
+      <td><strong>Sources</strong><br>Metadata for the sources cited for bounds from the literature</td>
       <td><a href="{{ site.baseurl }}/data/sources.yml">sources.yml</a></td>
       <td><a href="{{ site.baseurl }}/data/sources.json">sources.json</a></td>
       <td><a href="{{ site.baseurl }}/data/sources.csv">sources.csv</a></td>

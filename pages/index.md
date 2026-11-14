@@ -13,7 +13,7 @@ This is a collaborative effort to compile data on historical progress on solved 
 
 This site provides browsing, visualizations, and access to the structured data for other uses.
 
-{% include constant_group_status.html %}
+{% include family_status.html %}
 
 ## Recent certificates
 
@@ -29,10 +29,10 @@ This site provides browsing, visualizations, and access to the structured data f
         <a href="{{ site.baseurl }}/constants/{{ first.constant }}">{{ constant.name }}</a> ${{ relation }} {{ first.value.latex }}$
         {% include certificate_role.html cert=first %}
       {% else %}
-        {% assign group_ids = batch.items | map: "group" | uniq %}
+        {% assign family_ids = batch.items | map: "family" | uniq %}
         {{ batch.size }} certificates, in
-        {% if group_ids.size > 4 %}{% assign shown = 3 %}{% else %}{% assign shown = 4 %}{% endif %}
-        {% for group_id in group_ids limit: shown %}{{ site.data.constant_groups[group_id].name }}{% unless forloop.last %}; {% endunless %}{% endfor %}{% if group_ids.size > shown %}; and {{ group_ids.size | minus: shown }} more groups{% endif %}
+        {% if family_ids.size > 4 %}{% assign shown = 3 %}{% else %}{% assign shown = 4 %}{% endif %}
+        {% for family_id in family_ids limit: shown %}{{ site.data.families[family_id].name }}{% unless forloop.last %}; {% endunless %}{% endfor %}{% if family_ids.size > shown %}; and {{ family_ids.size | minus: shown }} more families{% endif %}
       {% endif %}
     </li>
   {% endfor %}
@@ -44,10 +44,10 @@ See [all certificates]({{ site.baseurl }}/certificates/) and [contributors]({{ s
 
 Contributions are welcome, from people and AI agents alike. Pull requests are the preferred way to contribute:
 
-- **Bounds from the literature:** add published bounds, their sources, and earlier steps in their history, or new constants and groups of constants. See [how to add them](https://github.com/daniel-munro/leaps-in-bounds/blob/main/source_data/README.md).
+- **Bounds from the literature:** add published bounds, their sources, and earlier steps in their history, or new constants and families of constants. See how to add [bounds](https://github.com/daniel-munro/leaps-in-bounds/blob/main/literature/README.md) and [constants](https://github.com/daniel-munro/leaps-in-bounds/blob/main/constants/README.md).
 - **Certificates:** submit evidence that a program can check, either a construction or a proof in Lean, for a new bound or one discovered earlier. See [how to submit one](https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md), and the [unverified bounds]({{ site.baseurl }}/unverified/) for current bounds that don't have a verified one yet.
 
-For more open-ended contributions, such as asking whether a group of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
+For more open-ended contributions, such as asking whether a family of constants fits or sharing data you're not sure how to add, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). For technical problems and suggestions, [open an issue](https://github.com/daniel-munro/leaps-in-bounds/issues).
 
 Contributions are credited to the GitHub account that made them on the [contributors page]({{ site.baseurl }}/contributors/).
 
@@ -55,7 +55,7 @@ To have an AI agent contribute, give it one of these prompts:
 
 <pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md and follow it to submit a verified bound to Leaps in Bounds.</code></pre>
 
-<pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/source_data/README.md and follow it to add missing bounds from the literature to Leaps in Bounds, for &lt;group or topic&gt;.</code></pre>
+<pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/literature/README.md and follow it to add missing bounds from the literature to Leaps in Bounds, for &lt;family or topic&gt;.</code></pre>
 
 ## Related Projects
 

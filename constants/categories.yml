@@ -1,0 +1,63 @@
+- msc: "03D"
+  name: "Computability and recursion theory"
+  families:
+    - busy-beaver-ones
+    - busy-beaver-shift
+
+- msc: "05A"
+  name: "Enumerative combinatorics"
+  families:
+    - map-folding
+    - minimal-superpermutation
+    - stamp-folding
+
+- msc: "05B"
+  name: "Designs and configurations"
+  families:
+    - golomb-ruler
+
+- msc: "05C"
+  name: "Graph theory"
+  families:
+    - cage
+    - coil-in-the-box
+    - degree-diameter
+    - snake-in-the-box
+
+- msc: "05D"
+  name: "Extremal combinatorics"
+  families:
+    - multicolor-ramsey-triangle
+    - ramsey
+    - schur
+    - van-der-waerden
+    - weak-schur
+
+- msc: "11M"
+  name: "Zeta and L-functions: analytic theory"
+  families:
+    - debruijn-newman
+
+- msc: "51E"
+  name: "Finite geometry and special incidence structures"
+  families:
+    - cap-set
+
+- msc: "52C"
+  name: "Discrete geometry"
+  families:
+    - affine-line-arrangements
+    - affine-line-arrangements-general-position
+    - circle-in-equilateral
+    - disk-covering
+    - isosceles-set
+    - kissing-number
+    - no-three-in-line
+    - rectilinear-crossing
+    - square-packing
+
+- msc: "68P"
+  name: "Theory of data"
+  families:
+    - sorting-network-depth
+    - sorting-network-size

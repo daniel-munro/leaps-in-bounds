@@ -8,7 +8,7 @@ reviewed before they're used:
     python scripts/generate_images.py --sheet review.html
 
 Images are written to assets/images/generated/, named by constant ID. To show
-one on the site, point the constant's image to it in source_data/constants.yml:
+one on the site, point the constant's image to it in constants/constants.yml:
 
     ramsey-4-4:
       image:

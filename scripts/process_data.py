@@ -1,6 +1,6 @@
 """Read source data and use templates to generate the data files.
 
-1. Generate list of constants from constant groups.
+1. Generate list of constants from families.
 2. Use sources to assign dates to updates.
 3. Check each constant's updates from the literature for consistency.
 4. Attach certificates, then merge them with the updates into each
@@ -11,8 +11,8 @@
    verified yet, all certificates with their role in the history, and the
    whole history.
 6. Process images for constants.
-7. Add statistics to each constant group.
-8. List who added sources and constant groups, to credit them.
+7. Add statistics to each family.
+8. List who added sources and families, to credit them.
 """
 
 import itertools
@@ -83,9 +83,9 @@ def load_updates(
                 del update['lower_bound']
                 del update['upper_bound']
                 
-                if update.get('primary_source'):
-                    primary_source = sources[update["primary_source"]]
-                    update["date"] = primary_source.get("date")
+                if update.get('source'):
+                    source = sources[update["source"]]
+                    update["date"] = source.get("date")
                 else:
                     update["date"] = None
                     
@@ -94,8 +94,8 @@ def load_updates(
                     "type",
                     "value",
                     "date",
-                    "primary_source",
-                    "secondary_source"
+                    "source",
+                    "via"
                 ]
                 update = {k: update.get(k) for k in field_order}
                 updates.append(update)
@@ -106,29 +106,29 @@ def load_updates(
     return updates
 
 
-def get_constants(groups: Mapping[str, Mapping[str, Any]]) -> dict[str, dict[str, Any]]:
-    """Generate constants from constant groups.
+def get_constants(families: Mapping[str, Mapping[str, Any]]) -> dict[str, dict[str, Any]]:
+    """Generate constants from families.
 
     Args:
-        groups: Dictionary of constant groups.
+        families: Dictionary of families.
 
     Returns:
         Dictionary of constants.
     """
     constants = {}
-    for group_id, group in groups.items():
-        # Handle single-constant groups (empty parameters list)
-        if not group.get("parameters"):
+    for family_id, family in families.items():
+        # Handle single-constant families (empty parameters list)
+        if not family.get("parameters"):
             constant = {
-                "name": group["name"],
-                "description": group["description"],
-                "group": group_id,
+                "name": family["name"],
+                "description": family["description"],
+                "family": family_id,
             }
-            constants[group_id] = constant
+            constants[family_id] = constant
             continue
 
         param_values = []
-        for values in group["parameter_values"]:
+        for values in family["parameter_values"]:
             # Some items in values list are numbers, others are length-2 lists
             # giving inclusive ranges. Iterate through all combinations.
             if any(isinstance(v, list) for v in values):
@@ -143,12 +143,12 @@ def get_constants(groups: Mapping[str, Mapping[str, Any]]) -> dict[str, dict[str
             else:
                 param_values.append(values)
         for values in param_values:
-            params = {p: v for p, v in zip(group["parameters"], values)}
+            params = {p: v for p, v in zip(family["parameters"], values)}
             constant = {}
-            id = group["id_template"].format(**params)
-            constant["name"] = group["name_template"].format(**params)
-            constant["description"] = group["description_template"].format(**params)
-            constant["group"] = group_id
+            id = family["id_template"].format(**params)
+            constant["name"] = family["name_template"].format(**params)
+            constant["description"] = family["description_template"].format(**params)
+            constant["family"] = family_id
             constants[id] = constant
     return constants
 
@@ -228,7 +228,7 @@ def attach_certificates(
         manifest: Manifest of verified certificates.
     """
     for constant in constants.values():
-        constant["certifiable"] = constant["group"] in FAMILIES
+        constant["certifiable"] = constant["family"] in FAMILIES
         constant["certificates"] = []
 
     left_out = 0
@@ -313,8 +313,8 @@ def bound_events(
             value = record["value"]
             discovery = {
                 "kind": "source",
-                "id": record["primary_source"],
-                "via": record["secondary_source"],
+                "id": record["source"],
+                "via": record["via"],
                 "date": date,
             }
         else:
@@ -414,7 +414,7 @@ def find_unverified_bounds(constants: Mapping[str, Mapping[str, Any]]) -> list[d
     for constant_id, constant in constants.items():
         if not constant["certifiable"]:
             continue
-        family = FAMILIES[constant["group"]]
+        family = FAMILIES[constant["family"]]
         for side in ["lower", "upper"]:
             events = [e for e in constant["history"] if e["type"] == f"{side}_bound"]
             if not events or events[-1]["evidence"]["tier"] == "verified":
@@ -425,7 +425,7 @@ def find_unverified_bounds(constants: Mapping[str, Mapping[str, Any]]) -> list[d
             verified = constant[f"verified_{side}_bound"]
             unverified.append({
                 "constant": constant_id,
-                "group": constant["group"],
+                "family": constant["family"],
                 "bound": side,
                 "value": event["value"].to_dict(),
                 "date": event["date"],
@@ -470,7 +470,7 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
             rows.append({
                 "id": cert["id"],
                 "constant": constant_id,
-                "group": constant["group"],
+                "family": constant["family"],
                 "bound": side,
                 "value": Value(str(cert["value"])).to_dict(),
                 "kind": cert["kind"],
@@ -516,18 +516,18 @@ def list_history(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, A
     return rows
 
 
-def calculate_group_stats(
-    group_id: str,
+def calculate_family_stats(
+    family_id: str,
     constants: Mapping[str, Mapping[str, Any]],
 ) -> dict[str, Any]:
-    """Calculate statistics for a constant group.
+    """Calculate statistics for a family.
 
     Args:
-        group_id: ID of the constant group.
+        family_id: ID of the family.
         constants: Dictionary of all constants.
 
     Returns:
-        Dictionary containing group statistics.
+        Dictionary containing family statistics.
     """
     stats = {
         "total_constants": 0,
@@ -542,16 +542,16 @@ def calculate_group_stats(
         "literature_bounds": 0,
     }
     
-    # Find constants belonging to this group
-    group_constants = {
+    # Find constants belonging to this family
+    family_constants = {
         id: const for id, const in constants.items()
-        if const["group"] == group_id
+        if const["family"] == family_id
     }
     
-    stats["total_constants"] = len(group_constants)
+    stats["total_constants"] = len(family_constants)
     
     # Analyze constant values
-    for const in group_constants.values():
+    for const in family_constants.values():
         if const["exact_value"] is not None:
             stats["exact_values"] += 1
         elif const["lower_bound"] is not None and const["upper_bound"] is not None:
@@ -565,7 +565,7 @@ def calculate_group_stats(
         stats["total_updates"] += len(const["updates"])
         stats["updates_with_sources"] += sum(
             1 for update in const["updates"] 
-            if update.get("primary_source") is not None
+            if update.get("source") is not None
         )
         # Count current bounds by their best evidence
         for side in ["lower", "upper"]:
@@ -585,13 +585,13 @@ def calculate_group_stats(
 
 
 def list_literature_contributors(
-    groups: Mapping[str, Mapping[str, Any]],
+    families: Mapping[str, Mapping[str, Any]],
     sources: Mapping[str, Mapping[str, Any]],
     updates: list[Mapping[str, Any]],
 ) -> list[dict[str, Any]]:
     """List the GitHub accounts credited with `added_by` on sources and
-    constant groups, with the groups and sources each added and the number
-    of updates citing their sources as the primary source. Most first.
+    families, with the families and sources each added and the number
+    of bounds citing their sources. Most first.
     """
     contributors: dict[str, dict[str, Any]] = {}
 
@@ -602,24 +602,24 @@ def list_literature_contributors(
         if not isinstance(username, str) or not GITHUB_USERNAME.fullmatch(username):
             raise ValueError(f"{kind} {item_id}: added_by must be a GitHub username")
         return contributors.setdefault(
-            username, {"contributor": username, "groups": [], "sources": [], "updates": 0}
+            username, {"contributor": username, "families": [], "sources": [], "updates": 0}
         )
 
-    for group_id, group in groups.items():
-        contributor = credit("Constant group", group_id, group)
+    for family_id, family in families.items():
+        contributor = credit("Family", family_id, family)
         if contributor is not None:
-            contributor["groups"].append(group_id)
+            contributor["families"].append(family_id)
     for source_id, source in sources.items():
         contributor = credit("Source", source_id, source)
         if contributor is not None:
             contributor["sources"].append(source_id)
     for update in updates:
-        source = sources.get(update["primary_source"]) if update["primary_source"] else None
+        source = sources.get(update["source"]) if update["source"] else None
         if source is not None and source.get("added_by") in contributors:
             contributors[source["added_by"]]["updates"] += 1
     return sorted(
         contributors.values(),
-        key=lambda c: (-len(c["groups"]), -c["updates"], -len(c["sources"]), c["contributor"].lower()),
+        key=lambda c: (-len(c["families"]), -c["updates"], -len(c["sources"]), c["contributor"].lower()),
     )
 
 
@@ -640,34 +640,34 @@ def write_constants(constants: dict[str, dict[str, Any]], filename: str) -> None
         yaml.dump(constants, file, sort_keys=False)
 
 
-def write_groups(groups: dict[str, dict[str, Any]], filename: str) -> None:
-    """Write processed constant groups info to a YAML file, with compact lists."""
+def write_families(families: dict[str, dict[str, Any]], filename: str) -> None:
+    """Write processed families info to a YAML file, with compact lists."""
     # Set compact list representer
     def compact_lists_representer(dumper, data):
         return dumper.represent_sequence('tag:yaml.org,2002:seq', data, flow_style=True)
     yaml.add_representer(list, compact_lists_representer)
-    # Write groups with compact lists
+    # Write families with compact lists
     with open(filename, "w") as file:
-        yaml.dump(groups, file, sort_keys=False)
+        yaml.dump(families, file, sort_keys=False)
     # Restore default list representer
     default_representer = yaml.representer.SafeRepresenter.represent_list
     yaml.add_representer(list, default_representer)
 
 
 def main() -> None:
-    with open("source_data/constant_groups.yml", "r") as file:
-        groups = yaml.safe_load(file)
+    with open("constants/families.yml", "r") as file:
+        families = yaml.safe_load(file)
 
     with open("_data/sources.yml", "r") as file:
         sources = yaml.safe_load(file)
 
     # Load source data for constants (for image metadata)
-    with open('source_data/constants.yml', 'r') as file:
+    with open('constants/constants.yml', 'r') as file:
         constants_metadata = yaml.safe_load(file) or {}
 
-    updates = load_updates("source_data/updates", sources)
+    updates = load_updates("literature/bounds", sources)
 
-    constants = get_constants(groups)
+    constants = get_constants(families)
     assign_updates_and_values(constants, updates)
 
     # Cache images and update constants with image metadata
@@ -688,7 +688,7 @@ def main() -> None:
         yaml.dump(list_history(constants), file, sort_keys=False)
 
     with open("_data/literature_contributors.yml", "w") as file:
-        yaml.dump(list_literature_contributors(groups, sources, updates), file, sort_keys=False)
+        yaml.dump(list_literature_contributors(families, sources, updates), file, sort_keys=False)
 
     # Save combined updates for download
     for update in updates:
@@ -699,18 +699,18 @@ def main() -> None:
     # Save constants for download
     write_constants(constants, "_data/constants.yml")
 
-    # Add category to each group
-    with open("source_data/categories.yml", "r") as file:
+    # Add category to each family
+    with open("constants/categories.yml", "r") as file:
         categories = yaml.safe_load(file)
     for category in categories:
-        for group_id in category["groups"]:
-            groups[group_id]["category"] = f"{category['msc']} {category['name']}"
+        for family_id in category["families"]:
+            families[family_id]["category"] = f"{category['msc']} {category['name']}"
 
-    # Add statistics to each group
-    for group_id, group in groups.items():
-        group["stats"] = calculate_group_stats(group_id, constants)
+    # Add statistics to each family
+    for family_id, family in families.items():
+        family["stats"] = calculate_family_stats(family_id, constants)
 
-    write_groups(groups, "_data/constant_groups.yml")
+    write_families(families, "_data/families.yml")
 
 
 if __name__ == "__main__":

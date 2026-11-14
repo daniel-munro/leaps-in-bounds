@@ -33,10 +33,10 @@ function drawRanges(root, controls, data, opts = {}) {
     }
     const fin = states[states.length - 1];
     const progress = solved ? 2 : Number.isFinite(fin.hi - fin.lo) ? 1 - (fin.hi - fin.lo) : Number.isFinite(fin.lo) ? fin.lo - 1 : -1 - (1 - fin.hi);
-    cols.push({ c, states, progress, group: c.group });
+    cols.push({ c, states, progress, family: c.family });
   }
-  const byGroup = d3.group(cols, d => d.group);
-  const groupOrder = data.groupOrder.filter(g => byGroup.has(g));
+  const byFamily = d3.group(cols, d => d.family);
+  const familyOrder = data.familyOrder.filter(g => byFamily.has(g));
 
   const stateAt = (col, T) => {
     const i = d3.bisector(s => s.t).right(col.states, T) - 1;
@@ -49,18 +49,18 @@ function drawRanges(root, controls, data, opts = {}) {
   const plotH = 380;
   const height = margin.top + plotH + margin.bottom;
   const gap = 5;
-  const colW = (width - margin.left - margin.right - gap * (groupOrder.length - 1)) / cols.length;
+  const colW = (width - margin.left - margin.right - gap * (familyOrder.length - 1)) / cols.length;
   const y = d3.scaleLinear().domain([-0.2, 1.2]).range([margin.top + plotH, margin.top]);
   const clampY = v => y(Math.max(-0.2, Math.min(1.2, v)));
 
-  let sortMode = opts.sort || 'group';
+  let sortMode = opts.sort || 'family';
   function layout() {
     let x0 = margin.left;
-    for (const g of groupOrder) {
-      const cs = byGroup.get(g).slice();
+    for (const g of familyOrder) {
+      const cs = byFamily.get(g).slice();
       if (sortMode === 'progress') cs.sort((p, q) => d3.descending(p.progress, q.progress));
       cs.forEach((col, i) => { col.x = x0 + i * colW; });
-      byGroup.get(g).x0 = x0; byGroup.get(g).x1 = x0 + cs.length * colW;
+      byFamily.get(g).x0 = x0; byFamily.get(g).x1 = x0 + cs.length * colW;
       x0 += cs.length * colW + gap;
     }
   }
@@ -93,21 +93,21 @@ function drawRanges(root, controls, data, opts = {}) {
   svg.append('rect').attr('x', margin.left).attr('width', width - margin.left - margin.right)
     .attr('y', y(-0.06)).attr('height', y(-0.2) - y(-0.06)).attr('fill', 'url(#fade-bottom)').style('pointer-events', 'none');
 
-  // Group labels
+  // Family labels
   const labelG = svg.append('g');
   function drawLabels(animate) {
-    const sel = labelG.selectAll('g').data(groupOrder).join(enter => {
+    const sel = labelG.selectAll('g').data(familyOrder).join(enter => {
       const g = enter.append('g');
       g.append('line').attr('stroke', '#adb5bd');
       g.append('text').attr('class', 'viz-tick').attr('text-anchor', 'end').attr('transform', 'rotate(-40)').attr('dy', '0.35em');
       return g;
     });
-    sel.attr('transform', g => `translate(${(byGroup.get(g).x0 + byGroup.get(g).x1) / 2},${margin.top + plotH + 8})`);
-    sel.select('line').attr('x1', g => byGroup.get(g).x0 - (byGroup.get(g).x0 + byGroup.get(g).x1) / 2)
-      .attr('x2', g => byGroup.get(g).x1 - (byGroup.get(g).x0 + byGroup.get(g).x1) / 2).attr('y1', -4).attr('y2', -4);
+    sel.attr('transform', g => `translate(${(byFamily.get(g).x0 + byFamily.get(g).x1) / 2},${margin.top + plotH + 8})`);
+    sel.select('line').attr('x1', g => byFamily.get(g).x0 - (byFamily.get(g).x0 + byFamily.get(g).x1) / 2)
+      .attr('x2', g => byFamily.get(g).x1 - (byFamily.get(g).x0 + byFamily.get(g).x1) / 2).attr('y1', -4).attr('y2', -4);
     let lastX = -Infinity;
-    sel.select('text').attr('x', -2).attr('y', 6).text(g => byGroup.get(g)[0].c.groupName)
-      .attr('display', g => { const cx = (byGroup.get(g).x0 + byGroup.get(g).x1) / 2; if (cx - lastX < 15) return 'none'; lastX = cx; return null; });
+    sel.select('text').attr('x', -2).attr('y', 6).text(g => byFamily.get(g)[0].c.familyName)
+      .attr('display', g => { const cx = (byFamily.get(g).x0 + byFamily.get(g).x1) / 2; if (cx - lastX < 15) return 'none'; lastX = cx; return null; });
   }
   drawLabels();
 
@@ -201,7 +201,7 @@ function drawRanges(root, controls, data, opts = {}) {
     const T = frames[frame].T;
     const history = col.c.updates.filter(u => u.improves).map(u => `<div class="${(u.t ?? -Infinity) > T ? 'viz-muted' : ''}">${u.date ? formatDate(u.date) : 'undated'}: ${u.solves ? '=' : boundSymbol(u)} $${u.value.latex}$</div>`).join('');
     tooltip.show(`<div class="fw-semibold">${texToHtml(col.c.name)}</div>
-      <div class="viz-muted">${col.c.groupName}</div>
+      <div class="viz-muted">${col.c.familyName}</div>
       <div>${frames[frame].label}: ${bounds}</div>
       <div class="viz-tt-hist mt-1">${texToHtml(history)}</div>`, event);
   }).on('pointerleave', () => tooltip.hide());

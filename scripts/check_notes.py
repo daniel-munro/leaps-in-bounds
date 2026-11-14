@@ -97,9 +97,9 @@ def check_file(path: Path, errors: list[str], warnings: list[str]) -> None:
 def main() -> int:
     if not NOTES.exists():
         return 0
-    with open(ROOT / 'source_data' / 'constant_groups.yml') as f:
-        groups = set(yaml.safe_load(f))
-    allowed = {'README.md', 'general.md'} | {f'{g}.md' for g in groups}
+    with open(ROOT / 'constants' / 'families.yml') as f:
+        families = set(yaml.safe_load(f))
+    allowed = {'README.md', 'general.md'} | {f'{g}.md' for g in families}
 
     errors: list[str] = []
     warnings: list[str] = []
@@ -110,8 +110,8 @@ def main() -> int:
         elif path.is_dir():
             errors.append(f'{name}: subdirectories are not allowed')
         elif path.parent != NOTES or path.name not in allowed:
-            errors.append(f'{name}: notes must be notes/<group>.md for a group in '
-                          'source_data/constant_groups.yml, or notes/general.md')
+            errors.append(f'{name}: notes must be notes/<family>.md for a family in '
+                          'constants/families.yml, or notes/general.md')
         else:
             check_file(path, errors, warnings)
 

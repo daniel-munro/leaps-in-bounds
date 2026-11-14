@@ -53,7 +53,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - scripts/
-  - source_data/
+  - constants/
+  - literature/
   - certificates/
   - formal/
   - notes/
