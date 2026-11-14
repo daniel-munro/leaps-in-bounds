@@ -59,7 +59,7 @@ def check_structure(cert: dict[str, Any], constants: dict[str, Any], sources: di
         if cert["bound"] != family.witness_bound:
             raise CertificateError(f"Witnesses for {cert['constant']} can only certify {family.witness_bound} bounds")
     else:
-        if not cert["lean"]["module"].startswith("LeapsInBounds.Proofs."):
+        if "module" in cert["lean"] and not cert["lean"]["module"].startswith("LeapsInBounds.Proofs."):
             raise CertificateError("Lean proofs must live under LeapsInBounds.Proofs")
     size = pathlib.Path(cert["path"]).stat().st_size
     for path in evidence_files(cert):

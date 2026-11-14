@@ -1,6 +1,6 @@
 # Certificates
 
-A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**. Evidence that is too slow to check here, or too large to keep here, can still be **attested**: see [Verification](#verification).
+A certificate claims a lower or upper bound on one constant and comes with evidence that a program can check, so the bound doesn't depend on trusting a paper or a secondary source. Once the evidence has been checked here, the certificate is **verified**. Evidence that is too slow to check here, or too large to keep here, such as a witness of many megabytes or a Lean proof built on its own large library, can still be **attested**, checked by someone else: see [Verification](#verification).
 
 Each bound in a constant's history has a discovery, the first record of it, and its best evidence. A certificate can be either, or both:
 
@@ -81,6 +81,17 @@ Compiling a proof runs code from the submission, such as `#eval` or custom elabo
 
 The statement files are trusted: they define what every certificate means. Submissions should only add files under `formal/LeapsInBounds/Proofs/`. CI flags any pull request that changes the statements or the checking scripts.
 
+A Lean proof too large to keep here, or built on its own library or another version of Lean or Mathlib, can be [attested](#attestations) instead, with a link to it in place of a module here:
+
+```yaml
+kind: lean
+lean:
+  url: https://github.com/owner/repo/blob/<commit>/Proofs/Main.lean   # the file with the theorem, at a full commit hash
+  theorem: Main.no_proper_coloring
+```
+
+Its theorem should state the family's statement in a form that's the same by definition, using only Mathlib's definitions (not ones from the proof's own library), so that the match can be checked by `Iff.rfl` against the statement here. Say in `notes` how it matches, and if the theorem only implies the statement, give the argument. This is the part of an attested Lean proof that takes judgment, so the closer the match, the easier it is to accept.
+
 ## Verification
 
 A certificate's status is one of:
@@ -93,7 +104,7 @@ Anyone can check any certificate themselves, with the evidence in this repositor
 
 ### Attestations
 
-To submit a certificate whose evidence takes too long to check here (more than an hour or so), or is over the [size limit](#size-limit), add an `attestation` section:
+To submit a certificate whose evidence takes too long to check here (more than an hour or so), is over the [size limit](#size-limit), or is a Lean proof that can't be built here, add an `attestation` section:
 
 ```yaml
 attestation:
@@ -104,7 +115,7 @@ attestation:
   notes: graph.txt is the adjacency matrix of the graph6 witness here.  # optional
 ```
 
-The certificate still needs its evidence in the format its family accepts: here if it's within the [size limit](#size-limit), and otherwise as a link with its hash. If the checker ran on another file, give it as `evidence` and say in `notes` how it corresponds to the witness here, so a maintainer can confirm that they're the same object, which is usually quick. The `checker` and `evidence` links must point to a fixed commit, not a branch, so they can't change later.
+The certificate still needs its evidence in the format its family accepts: here if it's within the [size limit](#size-limit), and otherwise as a link, with its hash for a witness or pinned to a commit for a Lean proof. For a Lean proof, the checker is whatever checked the proof against its statement, such as a [Comparator](https://github.com/leanprover/comparator) configuration with the axioms allowed, and the command builds and checks it; a check by someone other than the proof's authors, with a statement written independently of their code, counts for more. If the checker ran on another file, give it as `evidence` and say in `notes` how it corresponds to the witness here, so a maintainer can confirm that they're the same object, which is usually quick. The `checker` and `evidence` links must point to a fixed commit, not a branch, so they can't change later.
 
 Running someone else's checker again doesn't make an attested bound verified, since that's one more attestation. To upgrade one, make it checkable here: a faster checker for its family, a smaller witness for the same bound (within the size limit), or a Lean proof. A new certificate equal to an attested one is accepted for this.
 
@@ -340,6 +351,15 @@ witness:
   format: points
   data: '0,0 6,0 3,6 2,2 4,3'
 ```
+
+### Chromatic number of Euclidean space: `chromatic-number-space-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/ChromaticNumberSpace.lean`](../formal/LeapsInBounds/Statements/ChromaticNumberSpace.lean). A coloring of `ℝⁿ` (`EuclideanSpace ℝ (Fin n)`) with `k` colors is any function to `Fin k`, with no assumption such as measurability, and it's proper if no two points at distance 1 have the same color.
+
+- `LowerBound n k` means `χ(ℝⁿ) >= k`: no coloring with `k - 1` colors is proper.
+- `UpperBound n k` means `χ(ℝⁿ) <= k`: some coloring with `k` colors is proper.
+
+The same file proves that a lower bound never exceeds an upper bound. Only Lean proofs are accepted so far, here or attested.
 
 ## Checking locally
 

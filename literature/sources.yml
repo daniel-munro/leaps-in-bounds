@@ -3097,3 +3097,213 @@ feria-puron-miller-pineda-2010:
   doi: "https://doi.org/10.1016/j.dam.2011.04.018"
   notes: "Section 7.1 (arXiv v1 and v2): Proposition 7.1, N(d,k) <= M(d,k) - 3 for even d >= 4 and k >= 4, and N(4,k) <= M(4,k) - 3 for k >= 3 (using Theorem 6.1, no (4,3,-2)-graph); Proposition 7.2, N(d,k) <= M(d,k) - 4 for odd d >= 5 and k >= 4 when M(d,k) - 2 is not divisible by k (Theorem 5.3; Corollary 7.1 is the case d = 0, 2 mod k). Section 1 notes that the earlier claimed proof of the case d = 4 by Miller and Simanjuntak (Discrete Math. 308 (2008)) contained a mistake."
   added_by: daniel-munro
+
+isbell-1950:
+  string: "J. R. Isbell, unpublished (1950), a 7-coloring of the plane by regular hexagons, reported in A. Soifer, The Mathematical Coloring Book, Springer (2009)."
+  date: "1950-11"
+  url: "https://www.cs.umd.edu/~gasarch/BLOGPAPERS/soifer.pdf"
+  notes: "Not published at the time. Soifer's essay at the URL says Nelson posed the problem in November 1950, finding the lower bound 4, and that his friend John Isbell found the upper bound 7 then. MathWorld also dates it to 1950."
+  added_by: daniel-munro
+
+soifer-2009:
+  string: "A. Soifer, The Mathematical Coloring Book: Mathematics of Coloring and the Colorful Life of its Creators, Springer (2009)."
+  date: "2009"
+  doi: "https://doi.org/10.1007/978-0-387-74642-5"
+  added_by: daniel-munro
+
+moser-moser-1961:
+  string: "L. Moser and W. Moser, Solution to Problem 10, Canadian Mathematical Bulletin 4 (1961) 187-189."
+  date: "1961-05"
+  doi: "https://doi.org/10.1017/S0008439500025765"
+  notes: "The Moser spindle, a 7-vertex unit-distance graph with chromatic number 4. The DOI is for the issue's Solutions section, pp. 187-194. Not read directly; attributed by Exoo and Ismailescu (arXiv:1408.2002, Table 1) and de Grey (2018)."
+  added_by: daniel-munro
+
+degrey-2018:
+  string: "A. D. N. J. de Grey, The chromatic number of the plane is at least 5, Geombinatorics 28 (2018), arXiv:1804.02385."
+  date: "2018-04-08"
+  url: "https://arxiv.org/abs/1804.02385"
+  notes: "A 1581-vertex unit-distance graph that can't be 4-colored, checked by computer. Smaller examples followed from the Polymath16 project, down to 509 vertices by 2021."
+  added_by: daniel-munro
+
+openai-2026-plane:
+  string: "OpenAI, The Euclidean plane is not five-colorable, preprint dated September 23, 2026, in the openai/math repository on GitHub."
+  date: "2026-10-06"
+  url: "https://github.com/openai/math/tree/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026"
+  notes: "Proves in ZFC that every 5-coloring of the plane has a monochromatic unit-distance pair, with no assumption on the color classes, so 6 <= chi(R^2) <= 7. Not by a finite graph: it transfers proper colorings to weak measurable ones (a 'Haar rigidity' theorem) and rules out weak measurable 5-colorings. Written by an unnamed OpenAI model and posted, unrefereed, in a bulk release on 2026-10-06 (the repository's first commit), with a Lean proof of the theorem; an independent audit (github.com/punk01-shaka/hadwiger-nelson-audit) rechecked the Lean proof against a statement written from scratch. Read through others' reports of the abstract, theorem and Lean statement, not directly."
+  added_by: daniel-munro
+
+raiskii-1968:
+  string: "D. E. Raiskii, Realization of all distances in a decomposition of the space R^n into n+1 parts, Matematicheskie Zametki 7 (1970) 319-323; Mathematical Notes 7 (1970) 194-196."
+  date: "1968-12-10"
+  doi: "https://doi.org/10.1007/BF01093113"
+  notes: "Dated by its receipt (Math-Net.ru). In any cover of R^n (n > 1) by n+1 sets, one set realizes every distance, so chi(R^n) >= n + 2. Cited for chi(R^3) >= 5 by Radoičić and Tóth (2003) and for chi(R^4) >= 6 by Coulson and Payne (2007). Not read directly."
+  added_by: daniel-munro
+
+larman-rogers-1972:
+  string: "D. G. Larman and C. A. Rogers, The realization of distances within sets in Euclidean space, Mathematika 19 (1972) 1-24."
+  date: "1972-06"
+  doi: "https://doi.org/10.1112/S0025579300004903"
+  notes: "Not read directly. Credited with chi(R^8) >= 16 by Cherkashin, Kulikov and Raigorodskii (2015) and Kahle and Taha (2014), and chi(R^12) >= 24 by Exoo and Ismailescu (2014). Also proves chi(R^n) <= (3+o(1))^n."
+  added_by: daniel-munro
+
+szekely-wormald-1989:
+  string: "L. A. Székely and N. C. Wormald, Bounds on the measurable chromatic number of R^n, Discrete Mathematics 75 (1989) 343-372."
+  date: "1989-05"
+  doi: "https://doi.org/10.1016/0012-365X(89)90099-X"
+  notes: "Not read directly. Credited with chi(R^3) <= 21 by Radoičić and Tóth (2003). Coulson (1997) instead credits 21 to Soifer, from a coloring based on the face-centered cubic lattice."
+  added_by: daniel-munro
+
+cantwell-1996:
+  string: "K. Cantwell, Finite Euclidean Ramsey theory, Journal of Combinatorial Theory, Series A 73 (1996) 273-285."
+  date: "1996-02"
+  doi: "https://doi.org/10.1006/jcta.1996.0022"
+  notes: "Not read directly. Credited with chi(R^4) >= 7, by a graph of more than 2000 vertices, by Exoo, Ismailescu and Lim (2014), who note the later independent proofs by Ivanov (2006) and Cibulka (2008), and with chi(R^5) >= 9 by Exoo and Ismailescu (2014)."
+  added_by: daniel-munro
+
+coulson-1997:
+  string: "D. Coulson, An 18-colouring of 3-space omitting distance one, Discrete Mathematics 170 (1997) 241-247."
+  date: "1997-06"
+  doi: "https://doi.org/10.1016/S0012-365X(96)00309-3"
+  notes: "Received 1995-04-24. A coloring by cells of the body-centered cubic lattice."
+  added_by: daniel-munro
+
+raigorodskii-2001:
+  string: "A. M. Raigorodskii, Borsuk's problem and the chromatic numbers of some metric spaces, Russian Mathematical Surveys 56 (2001) 103-139."
+  date: "2001"
+  doi: "https://doi.org/10.1070/RM2001v056n01ABEH000358"
+  notes: "Not read directly. Credited with chi(R^7) >= 15 by Exoo and Ismailescu (2014) and Cherkashin, Kulikov and Raigorodskii (2015)."
+  added_by: daniel-munro
+
+coulson-2002:
+  string: "D. Coulson, A 15-colouring of 3-space omitting distance one, Discrete Mathematics 256 (2002) 83-90."
+  date: "2002-09"
+  doi: "https://doi.org/10.1016/S0012-365X(01)00183-2"
+  notes: "Received 1998-12-09. Radoičić and Tóth (2003) found a very similar 15-coloring independently. Also shows that colorings of R^n by a lattice and sublattice need at least 2^(n+1) - 1 colors."
+  added_by: daniel-munro
+
+nechushtan-2002:
+  string: "O. Nechushtan, On the space chromatic number, Discrete Mathematics 256 (2002) 499-507."
+  date: "2002-09"
+  doi: "https://doi.org/10.1016/S0012-365X(00)00406-4"
+  notes: "Received 2000-01-29."
+  added_by: daniel-munro
+
+radoicic-toth-2003:
+  string: "R. Radoičić and G. Tóth, Note on the chromatic number of the space, in: Discrete and Computational Geometry: The Goodman-Pollack Festschrift, Algorithms and Combinatorics 25, Springer (2003) 695-698."
+  date: "2003"
+  url: "https://www.cs.bme.hu/~geza/chromatic.pdf"
+  doi: "https://doi.org/10.1007/978-3-642-55566-4_32"
+  notes: "Proves chi(R^3) <= 15 by tiling with permutahedra, found independently of Coulson (2002). Remark 3 states, without proof, that the method gives a 54-coloring of R^4."
+  added_by: daniel-munro
+
+coulson-payne-2007:
+  string: "M. S. Payne and D. Coulson, A dense distance 1 excluding set in R^3, Gazette of the Australian Mathematical Society 34 (2007) 97-102."
+  date: "2007-05"
+  url: "https://oldsite.austms.org.au/Gazette/2007/May07/097TechCoulson.pdf"
+  notes: "Table 1 lists chi(R^4) <= 49, 'demonstrated by a lattice/sublattice colouring', without proof. Arman, Bondarenko, Prymak and Radchenko (2021) prove it. The same table cites Raiskii for chi(R^4) >= 6."
+  added_by: daniel-munro
+
+cibulka-2008:
+  string: "J. Cibulka, On the chromatic number of real and rational spaces, Geombinatorics 18 (2008) 53-65."
+  date: "2008"
+  url: "https://iuuk.mff.cuni.cz/~cibulka/chromspace"
+  notes: "Not read directly. Credited with chi(R^6) >= 11 by Exoo and Ismailescu (2014); also gives new proofs of chi(R^4) >= 7 and chi(R^5) >= 9."
+  added_by: daniel-munro
+
+kupavskii-raigorodskii-2009:
+  string: "A. B. Kupavskii and A. M. Raigorodskii, On the chromatic number of R^9, Fundamentalnaya i Prikladnaya Matematika 14 (2008) 139-154; Journal of Mathematical Sciences 163 (2009) 720-731."
+  date: "2008"
+  doi: "https://doi.org/10.1007/s10958-009-9708-4"
+  notes: "Not read directly. Proves chi(R^9) >= 21 (Cherkashin, Kulikov and Raigorodskii 2015; Kahle and Taha 2014)."
+  added_by: daniel-munro
+
+kupavskii-raigorodskii-2009-endm:
+  string: "A. B. Kupavskii and A. M. Raigorodskii, On the chromatic numbers of small-dimensional Euclidean spaces, Electronic Notes in Discrete Mathematics 34 (2009) 435-439 (EuroComb 2009)."
+  date: "2009-09"
+  doi: "https://doi.org/10.1016/j.endm.2009.07.072"
+  notes: "Not read directly. Credited with chi(R^10) >= 23, chi(R^11) >= 23 and chi(R^12) >= 25 by Kahle and Taha (2014). Exoo and Ismailescu (2014) instead give chi(R^11) >= 24, citing the J. Math. Sci. paper on R^9."
+  added_by: daniel-munro
+
+exoo-ismailescu-lim-2014:
+  string: "G. Exoo, D. Ismailescu and M. Lim, On the chromatic number of R^4, Discrete & Computational Geometry 52 (2014) 416-423."
+  date: "2014-08-09"
+  doi: "https://doi.org/10.1007/s00454-014-9612-7"
+  notes: "A 65-vertex unit-distance graph in R^4 with chromatic number 9. Received 2013-10-19, online 2014-08-09."
+  added_by: daniel-munro
+
+exoo-ismailescu-2014:
+  string: "G. Exoo and D. Ismailescu, On the chromatic number of R^n for small values of n, arXiv:1408.2002 (2014)."
+  date: "2014-08-09"
+  url: "https://arxiv.org/abs/1408.2002"
+  notes: "Improves the lower bounds for n = 6, 7, 10, 11, 12, 13, 14 (Table 1). The bound chi(R^12) >= 36 comes from a graph on 1716 vertices whose independence number is stated as 46, which would give 38; 36 would follow from 48."
+  added_by: daniel-munro
+
+kahle-taha-2014:
+  string: "M. Kahle and B. Taha, New lower bounds on chi(R^d), d = 8, ..., 12, arXiv:1409.1278 (2014)."
+  date: "2014-09-03"
+  url: "https://arxiv.org/abs/1409.1278"
+  notes: "Theorem 1.1: chi(R^8) >= 19, chi(R^9) >= 21, chi(R^10) >= 26, chi(R^11) >= 32, chi(R^12) >= 32."
+  added_by: daniel-munro
+
+cherkashin-kulikov-raigorodskii-2015:
+  string: "D. Cherkashin, A. Kulikov and A. Raigorodskii, On the chromatic numbers of small-dimensional Euclidean spaces, Discrete Applied Mathematics 243 (2018) 125-131, arXiv:1512.03472."
+  date: "2015-12-10"
+  url: "https://arxiv.org/abs/1512.03472"
+  notes: "Theorem 2 gives chi(R^10) >= 30, chi(R^11) >= 35, chi(R^12) >= 37, and Proposition 1 gives chi(R^9) >= 22."
+  added_by: daniel-munro
+
+polymath16-2018-05:
+  string: "D. G. Mixon, Polymath16, fifth thread: Human-verifiable proofs (blog post and comments, 2018)."
+  date: "2018-05-10"
+  url: "https://dustingmixon.wordpress.com/2018/05/10/polymath16-fifth-thread-human-verifiable-proofs/"
+  notes: "Colorings of R^5 with 156 colors and of R^6 with 448 colors announced in the discussion by Aubrey de Grey and Philip Gibbs, as reported by Arman, Bondarenko, Prymak and Radchenko (2021). Not read directly."
+  added_by: daniel-munro
+
+arman-bondarenko-prymak-radchenko-2021:
+  string: "A. Arman, A. Bondarenko, A. Prymak and D. Radchenko, Upper bounds on chromatic number of E^n in low dimensions, Electronic Journal of Combinatorics 31(2) (2024) #P2.35, arXiv:2112.13438."
+  date: "2021-12-26"
+  url: "https://arxiv.org/abs/2112.13438"
+  doi: "https://doi.org/10.37236/11794"
+  notes: "Colorings by cosets of sublattices: chi(R^5) <= 140, chi(R^7) <= 1372 and chi(R^9) <= 17253 (computer-assisted); chi(R^n) <= 7^(n/2) for n = 4, 6, 8, 24 (a proof of Coulson's 49 for n = 4); and chi(R^n) <= 3^n for n <= 38 and n = 48, 49."
+  added_by: daniel-munro
+
+parts-2026-03:
+  string: "J. Parts, The chromatic number of R^8 is at least 25, arXiv:2603.14581 (2026)."
+  date: "2026-03-15"
+  url: "https://arxiv.org/abs/2603.14581"
+  added_by: daniel-munro
+
+parts-2026-05:
+  string: "J. Parts, comment of 2026-05-20 on D. G. Mixon, Polymath16, eighteenth thread: Back with a new conjecture! (blog post, 2026)."
+  date: "2026-05-20"
+  url: "https://dustingmixon.wordpress.com/2026/01/17/polymath16-eighteenth-thread-back-with-a-new-conjecture/"
+  notes: "chi(R^6) >= 14, from a 940-vertex unit-distance graph on the E6 lattice with independence number 72. Cited in Table 1 of Davies (2026)."
+  added_by: daniel-munro
+
+parts-2026-07:
+  string: "J. Parts, comment of 2026-07-06 on D. G. Mixon, Polymath16, eighteenth thread: Back with a new conjecture! (blog post, 2026)."
+  date: "2026-07-06"
+  url: "https://dustingmixon.wordpress.com/2026/01/17/polymath16-eighteenth-thread-back-with-a-new-conjecture/"
+  notes: "chi(R^7) >= 18, from a 952-vertex unit-distance graph on the E7 lattice with independence number 57 (after 17 on 2026-05-26), and preliminary bounds chi(R^9) >= 30 and chi(R^10) >= 33. Cited in Table 1 of Davies (2026)."
+  added_by: daniel-munro
+
+ivanov-glushkova-2026:
+  string: "L. L. Ivanov and N. V. Glushkova, New upper bounds for the chromatic numbers of Euclidean spaces, arXiv:2609.20436 (2026)."
+  date: "2026-09-17"
+  url: "https://arxiv.org/abs/2609.20436"
+  notes: "Colorings by cosets of sublattices with exact rational certificates: chi(R^4) <= 43, chi(R^5) <= 132, chi(R^7) <= 1029, chi(R^9) <= 7203, and chi(R^10) <= 45619 by a product construction. Code and certificates at https://github.com/ivaleo/Chromatic."
+  added_by: daniel-munro
+
+davies-2026:
+  string: "J. Davies, Measurable obstructions for unmeasurable colourings, arXiv:2610.12301 (2026)."
+  date: "2026-10-08"
+  url: "https://arxiv.org/abs/2610.12301"
+  notes: "Proves that the chromatic number of R^d equals its measurable chromatic number for d >= 4 (and for d >= 5 equals that of Q^d), so lower bounds on the measurable chromatic number from density certificates hold for all colorings. Table 1 and Theorem 9.1 give chi(R^4) >= 11 (from the measurable bound of DeCorte, de Oliveira Filho and Vallentin) and new bounds for 5 <= d <= 24. Unrefereed preprint; its certificates come as a computational supplement."
+  added_by: daniel-munro
+
+koshelev-kupavskii-voronov-2026:
+  string: "M. Koshelev, A. Kupavskii and V. Voronov, Ordinary and measurable colorings of Euclidean three-space, arXiv:2610.18907 (2026)."
+  date: "2026-10-11"
+  url: "https://arxiv.org/abs/2610.18907"
+  notes: "Every finite proper coloring of R^3 can be replaced by a measurable one with the same number of colors, so chi(R^3) is at least the measurable bound 7 of de Oliveira Filho and Vallentin (Corollary 1.2). Assumes the Haar rigidity theorem (Theorem 2.3) of OpenAI's preprint 'The Euclidean plane is not five-colorable', which has a Lean proof."
+  added_by: daniel-munro

@@ -8,7 +8,7 @@ permalink: /unverified/
 
 These are the current bounds whose best evidence isn't a verified [certificate]({{ site.repository }}/blob/main/certificates/README.md) yet, for the families of constants that accept them. Most come from the literature, and each is a chance to give a published bound evidence checked here.
 
-Some bounds are <span class="badge bg-attested">Attested</span>: a certificate has the evidence, and someone else says they checked it with a published checker, but checking it here has been too slow so far. Running their checker yourself doesn't make it verified, since that's one more attestation. What helps is making the check fast enough to run here: a faster checker for the family, a smaller witness for the same bound, or a Lean proof.
+Some bounds are <span class="badge bg-attested">Attested</span>: a certificate has the evidence, and someone else says they checked it with a published checker, but it's too slow to check here, or too large to keep here, as with a Lean proof built on its own large library. Running their checker yourself doesn't make it verified, since that's one more attestation. What helps is making the check fast enough to run here: a faster checker for the family, a smaller witness for the same bound, or a Lean proof that can be built here.
 
 A <span class="badge bg-success">Witness</span> bound can be certified by giving the construction itself, which is often in the cited source or its ancillary files. A <span class="badge bg-secondary">Lean proof</span> bound needs a formal proof that no better construction exists, which is usually much harder.
 
