@@ -1,17 +1,30 @@
+{% assign total_constants = 0 %}{% assign total_exact = 0 %}{% assign total_bounds = 0 %}{% assign total_verified = 0 %}
+{% for family_entry in site.data.families %}{% assign s = family_entry[1].stats %}
+  {% assign total_constants = total_constants | plus: s.total_constants %}{% assign total_exact = total_exact | plus: s.exact_values %}
+  {% assign total_bounds = total_bounds | plus: s.current_bounds %}{% assign total_verified = total_verified | plus: s.verified_bounds %}
+{% endfor %}
 <div class="families-overview">
   <h2>Families of Constants</h2>
+  <p>{{ total_constants }} constants, {{ total_exact }} with known exact values. {{ total_verified }} of their {{ total_bounds }} current lower and upper bounds are <a href="{{ site.baseurl }}/certificates/">verified</a> here.</p>
+  <p class="evidence-legend small text-muted">
+    Evidence for current bounds:
+    <span><span class="evidence-swatch evidence-verified"></span>Verified certificate</span>
+    <span><span class="evidence-swatch evidence-attested"></span>Attested certificate</span>
+    <span><span class="evidence-swatch evidence-source"></span>Original source</span>
+    <span><span class="evidence-swatch evidence-via"></span>Survey or database only</span>
+  </p>
   <div class="table-responsive">
     <table class="table">
       <thead>
         <tr>
           <th>Family</th>
-          <th>Constants Tracked</th>
-          <th>Compilation Status <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
-            title="<b>Initial:</b> Basic, incomplete information gathered<br><b>Sourced:</b> All current values and bounds are present and sourced<br><b>Thorough:</b> Comprehensive research, all historical bounds updates that could be found are present and sourced"></i></th>
-          <th>Sources <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" 
-            title="Percent of bounds updates that have been assigned a source"></i></th>
-          <th>Verified <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
-            title="Number of current lower and upper bounds whose best evidence is a certificate checked here"></i></th>
+          <th class="text-end">Constants</th>
+          <th class="text-end">Exact <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Constants whose lower and upper bounds meet"></i></th>
+          <th>Evidence <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="The best evidence for each current lower and upper bound, from the strongest: a certificate verified here, an attested certificate, the original source in the literature, or only a survey or database that collects it"></i></th>
+          <th>Last improved <i class="fas fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="When a bound in the family was last improved, in the literature or by a certificate"></i></th>
         </tr>
       </thead>
       <tbody>
@@ -21,43 +34,28 @@
         </tr>
         {% for family_id in category.families %}
           {% assign family = site.data.families[family_id] %}
+          {% assign s = family.stats %}
           <tr>
             <td><a href="/constants/#{{ family_id }}">{{ family.name }}</a></td>
-            <td>{{ family.stats.total_constants }}</td>
+            <td class="text-end">{{ s.total_constants }}</td>
+            <td class="text-end">{{ s.exact_values }}</td>
             <td>
-              {% case family.research_status %}
-                {% when 'initial' %}
-                  <span class="badge bg-warning" data-bs-toggle="tooltip" data-bs-placement="top" 
-                    title="Basic, incomplete information gathered">Initial</span>
-                {% when 'sourced' %}
-                  <span class="badge bg-info" data-bs-toggle="tooltip" data-bs-placement="top" 
-                    title="All current values and bounds are present and sourced">Sourced</span>
-                {% when 'thorough' %}
-                  <span class="badge bg-success" data-bs-toggle="tooltip" data-bs-placement="top" 
-                    title="Comprehensive research, all historical bounds updates that could be found are present and sourced">Thorough</span>
-                {% else %}
-                  <span class="badge bg-secondary" data-bs-toggle="tooltip" data-bs-placement="top" 
-                    title="Compilation status not specified">Unknown</span>
-              {% endcase %}
+              {% capture evidence_title %}{{ s.verified_bounds }} verified, {% if s.attested_bounds > 0 %}{{ s.attested_bounds }} attested, {% endif %}{{ s.source_bounds }} from the original source, {{ s.via_bounds }} from a survey or database only{% if s.unsourced_bounds > 0 %}, {{ s.unsourced_bounds }} unsourced{% endif %}, of {{ s.current_bounds }} bounds.{% unless family.certifiable %} This family doesn't accept certificates yet.{% endunless %}{% endcapture %}
+              <div class="evidence-cell" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ evidence_title | strip }}">
+                <div class="evidence-bar">
+                  {% if s.current_bounds > 0 %}
+                    {% assign levels = "verified,attested,source,via,unsourced" | split: "," %}
+                    {% for level in levels %}
+                      {% assign key = level | append: "_bounds" %}
+                      {% assign n = s[key] %}
+                      {% if n > 0 %}<span class="evidence-{{ level }}" style="width: {{ n | times: 100.0 | divided_by: s.current_bounds }}%"></span>{% endif %}
+                    {% endfor %}
+                  {% endif %}
+                </div>
+                <span class="evidence-count">{% if family.certifiable %}{{ s.verified_bounds }} / {{ s.current_bounds }}{% else %}<span class="text-muted">no certificates</span>{% endif %}</span>
+              </div>
             </td>
-            <td>
-              {% assign coverage = family.stats.source_coverage %}
-              {% if coverage == 100 %}
-                <span class="badge bg-success">{{ coverage }}%</span>
-              {% elsif coverage > 0 %}
-                <span class="badge bg-warning">{{ coverage }}%</span>
-              {% else %}
-                <span class="badge bg-danger">0%</span>
-              {% endif %}
-            </td>
-            <td>
-              {% assign verified = family.stats.verified_bounds %}
-              {% if verified > 0 %}
-                <span class="badge bg-success">{{ verified }}</span>
-              {% else %}
-                <span class="text-muted">&ndash;</span>
-              {% endif %}
-            </td>
+            <td>{% if s.last_improvement %}{{ s.last_improvement }}{% else %}<span class="text-muted">&ndash;</span>{% endif %}</td>
           </tr>
         {% endfor %}
       {% endfor %}

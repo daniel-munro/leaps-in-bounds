@@ -113,10 +113,51 @@ h1 {
     margin: 2rem 0;
 }
 
-.families-overview .badge {
-    font-size: 0.9em;
-    padding: 0.4em 0.6em;
+.families-overview td:not(:first-child), .families-overview th {
+    white-space: nowrap;
 }
+
+/* Bar of the best evidence for a family's current bounds */
+.evidence-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.evidence-bar {
+    display: flex;
+    width: 8em;
+    height: 0.8em;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: #f1f3f5;
+    flex-shrink: 0;
+}
+
+.evidence-count {
+    font-size: 0.85em;
+    color: #52514e;
+}
+
+.evidence-legend > span {
+    margin-left: 0.8em;
+    white-space: nowrap;
+}
+
+.evidence-swatch {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 2px;
+    margin-right: 0.3em;
+    vertical-align: -0.05em;
+}
+
+.evidence-verified { background-color: #198754; }
+.evidence-attested { background-color: #f0b400; }
+.evidence-source { background-color: #8fb3d9; }
+.evidence-via { background-color: #ced4da; }
+.evidence-unsourced { background-color: #e9ecef; }
 
 /* Styling for constant images */
 .constant-image {

@@ -44,14 +44,12 @@ If you're not sure a family fits, start a [GitHub Discussion](https://github.com
      description_template: "The largest number $n$ such that the integers $1$ to $n$ can be colored with ${k}$ colors ..."
      parameters: [k]
      parameter_values: [[[1, 9]]]
-     research_status: initial
      added_by: octocat
    ```
 
    - `description`: defines the constants precisely, in LaTeX between `$`s. The templates fill in `{k}` and so on for each constant; write a literal brace as `{{` or `}}`.
    - `external_ids`: any of `wikipedia_en`, `wikidata`, `mathworld`, `metamath`, `msc`, `planetmath`, and `oeis`.
    - `display_type`: `sequence` for one parameter, `grid` for two, with `display_rows` and `display_columns` listing the values to show, or `single` for a family of one constant with no parameters, which then has no templates or `parameter_values`.
-   - `research_status`: `initial` if the data is incomplete, `sourced` if every current bound has a source, or `thorough` if the history of every bound has been searched for as far as it goes.
    - `representative_image`: optional, the ID of a constant whose image represents the family.
    - `added_by`: optional, the GitHub username to credit for adding the family (see [Credit](../literature/README.md#credit)).
 
