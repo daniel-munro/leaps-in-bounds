@@ -516,15 +516,31 @@ def list_history(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, A
     return rows
 
 
+def evidence_level(event: Mapping[str, Any]) -> str:
+    """How a bound is supported, from strongest to weakest: "verified" or
+    "attested" (a certificate), "source" (the literature, citing where the
+    bound first appeared), "via" (the literature, citing only a survey or
+    database that collects it), or "unsourced"."""
+    tier = event["evidence"]["tier"]
+    if tier != "literature":
+        return tier
+    discovery = event["discovery"]
+    if discovery["id"]:
+        return "source"
+    return "via" if discovery["via"] else "unsourced"
+
+
 def calculate_family_stats(
     family_id: str,
     constants: Mapping[str, Mapping[str, Any]],
 ) -> dict[str, Any]:
-    """Calculate statistics for a family.
+    """Calculate statistics for a family: how many of its constants have
+    exact values, how its current bounds are supported (see evidence_level),
+    and the date of the latest improvement to any of its bounds.
 
     Args:
         family_id: ID of the family.
-        constants: Dictionary of all constants.
+        constants: Dictionary of all constants, after build_histories.
 
     Returns:
         Dictionary containing family statistics.
@@ -535,23 +551,19 @@ def calculate_family_stats(
         "bounded": 0,
         "half_bounded": 0,
         "unbounded": 0,
-        "total_updates": 0,
-        "updates_with_sources": 0,
+        "current_bounds": 0,
         "verified_bounds": 0,
         "attested_bounds": 0,
-        "literature_bounds": 0,
+        "source_bounds": 0,
+        "via_bounds": 0,
+        "unsourced_bounds": 0,
+        "last_improvement": None,
     }
-    
-    # Find constants belonging to this family
-    family_constants = {
-        id: const for id, const in constants.items()
-        if const["family"] == family_id
-    }
-    
+
+    family_constants = [const for const in constants.values() if const["family"] == family_id]
     stats["total_constants"] = len(family_constants)
-    
-    # Analyze constant values
-    for const in family_constants.values():
+
+    for const in family_constants:
         if const["exact_value"] is not None:
             stats["exact_values"] += 1
         elif const["lower_bound"] is not None and const["upper_bound"] is not None:
@@ -560,27 +572,21 @@ def calculate_family_stats(
             stats["half_bounded"] += 1
         else:
             stats["unbounded"] += 1
-            
-        # Count updates and their sources
-        stats["total_updates"] += len(const["updates"])
-        stats["updates_with_sources"] += sum(
-            1 for update in const["updates"] 
-            if update.get("source") is not None
-        )
-        # Count current bounds by their best evidence
+
+        # Count current bounds by how they're supported
         for side in ["lower", "upper"]:
-            tier = const[f"{side}_bound_evidence"]
-            if tier is not None:
-                stats[f"{tier}_bounds"] += 1
-    
-    # Calculate percentages
-    if stats["total_updates"] > 0:
-        stats["source_coverage"] = round(
-            stats["updates_with_sources"] / stats["total_updates"] * 100, 2
-        )
-    else:
-        stats["source_coverage"] = 0.00
-        
+            events = [e for e in const["history"] if e["type"] == f"{side}_bound"]
+            if events:
+                stats["current_bounds"] += 1
+                stats[f"{evidence_level(events[-1])}_bounds"] += 1
+
+        # Dates can be YYYY, YYYY-MM or YYYY-MM-DD, which sort as strings
+        for event in const["history"]:
+            if event["date"] is not None:
+                date = str(event["date"])
+                if stats["last_improvement"] is None or date > stats["last_improvement"]:
+                    stats["last_improvement"] = date
+
     return stats
 
 
@@ -706,8 +712,9 @@ def main() -> None:
         for family_id in category["families"]:
             families[family_id]["category"] = f"{category['msc']} {category['name']}"
 
-    # Add statistics to each family
+    # Add statistics to each family, and whether it accepts certificates
     for family_id, family in families.items():
+        family["certifiable"] = family_id in FAMILIES
         family["stats"] = calculate_family_stats(family_id, constants)
 
     write_families(families, "_data/families.yml")

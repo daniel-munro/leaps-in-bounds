@@ -25,7 +25,6 @@ ramsey:
   - [8, [8, 15]]
   - [9, [9, 15]]
   - [10, [10, 15]]
-  research_status: sourced
   added_by: daniel-munro
 
 square-packing:
@@ -43,7 +42,6 @@ square-packing:
   description_template: "The side of the smallest square into which ${n}$ unit squares can be packed."
   parameters: [n]
   parameter_values: [[[1, 100]]]
-  research_status: initial
   added_by: daniel-munro
 
 busy-beaver-shift:
@@ -62,7 +60,6 @@ busy-beaver-shift:
   description_template: "The maximum number of steps made by a ${n}$-state, 2-symbol Turing machine that halts when started on a blank tape."
   parameters: [n]
   parameter_values: [[[1, 7]]]
-  research_status: initial
   added_by: daniel-munro
 
 busy-beaver-ones:
@@ -81,7 +78,6 @@ busy-beaver-ones:
   description_template: "The maximum number of 1s left on the tape by a ${n}$-state, 2-symbol Turing machine that halts when started on a blank tape."
   parameters: [n]
   parameter_values: [[[1, 7]]]
-  research_status: initial
   added_by: daniel-munro
 
 kissing-number:
@@ -99,7 +95,6 @@ kissing-number:
   description_template: "The maximum number of non-overlapping unit spheres that can touch a central unit sphere in $\\mathbb{{R}}^{{{n}}}$."
   parameters: [n]
   parameter_values: [[[1, 24]]]
-  research_status: initial
   added_by: daniel-munro
 
 degree-diameter:
@@ -119,7 +114,6 @@ degree-diameter:
   description_template: "The largest possible number of vertices in a graph of maximum degree ${d}$ and diameter at most ${k}$."
   parameters: [d, k]
   parameter_values: [[[3, 20], [2, 10]]]
-  research_status: initial
   added_by: daniel-munro
 
 cage:
@@ -138,7 +132,6 @@ cage:
   description_template: "The order of a $({k},{g})$-cage, a ${k}$-regular graph of girth ${g}$ with the fewest possible vertices."
   parameters: [k, g]
   parameter_values: [[[3, 20], [3, 16]]]
-  research_status: initial
   added_by: daniel-munro
 
 debruijn-newman:
@@ -151,7 +144,6 @@ debruijn-newman:
     wikipedia_en: De_Bruijn–Newman_constant
   display_type: single
   parameters: []
-  research_status: sourced
   added_by: daniel-munro
 
 van-der-waerden:
@@ -171,7 +163,6 @@ van-der-waerden:
   description_template: "The smallest number $n$ such that if the integers $1$ to $n$ are colored with ${r}$ colors, there must be a monochromatic arithmetic progression of length ${k}$."
   parameters: [r, k]
   parameter_values: [[[2, 6], [3, 11]]]
-  research_status: initial
   added_by: daniel-munro
 
 stamp-folding:
@@ -189,7 +180,6 @@ stamp-folding:
   description_template: "The number of distinct ways to fold a strip of ${n}$ labeled stamps."
   parameters: [n]
   parameter_values: [[[1, 29]]]
-  research_status: initial
   added_by: daniel-munro
 
 map-folding:
@@ -215,7 +205,6 @@ map-folding:
   - [5, [5, 18]]
   - [6, [6, 18]]
   - [7, [7, 18]]
-  research_status: initial
   added_by: daniel-munro
 
 disk-covering:
@@ -231,7 +220,6 @@ disk-covering:
   description_template: "The smallest value $r({n})$ such that ${n}$ disks of radius $r({n})$ can be arranged to cover the unit disk."
   parameters: [n]
   parameter_values: [[[1, 25]]]
-  research_status: initial
   added_by: daniel-munro
 
 circle-in-equilateral:
@@ -247,7 +235,6 @@ circle-in-equilateral:
   description_template: "The side length of the smallest equilateral triangle into which ${n}$ unit circles (of radius 1) can be packed."
   parameters: [n]
   parameter_values: [[[1, 15]]]
-  research_status: initial
   added_by: daniel-munro
 
 minimal-superpermutation:
@@ -265,7 +252,6 @@ minimal-superpermutation:
   description_template: "The length of the shortest string that contains each permutation of ${n}$ symbols as a contiguous substring."
   parameters: [n]
   parameter_values: [[[1, 9]]]
-  research_status: initial
   added_by: daniel-munro
 
 affine-line-arrangements:
@@ -280,7 +266,6 @@ affine-line-arrangements:
   description_template: "The number of ways of arranging ${n}$ lines in the (affine) plane."
   parameters: [n]
   parameter_values: [[[1, 12]]]
-  research_status: initial
   added_by: daniel-munro
 
 affine-line-arrangements-general-position:
@@ -295,7 +280,6 @@ affine-line-arrangements-general-position:
   description_template: "The number of ways of arranging ${n}$ straight lines in general position in the (affine) plane."
   parameters: [n]
   parameter_values: [[[1, 12]]]
-  research_status: initial
   added_by: daniel-munro
 
 golomb-ruler:
@@ -313,7 +297,6 @@ golomb-ruler:
   description_template: "The shortest length of a Golomb ruler with ${n}$ marks: a set of ${n}$ integers such that no two pairs of them are the same distance apart."
   parameters: [n]
   parameter_values: [[[1, 30]]]
-  research_status: initial
   added_by: daniel-munro
 
 schur:
@@ -331,7 +314,6 @@ schur:
   description_template: "The largest number $n$ such that the integers $1$ to $n$ can be colored with ${k}$ colors with no monochromatic solution to $x + y = z$."
   parameters: [k]
   parameter_values: [[[1, 9]]]
-  research_status: initial
   added_by: daniel-munro
 
 weak-schur:
@@ -346,7 +328,6 @@ weak-schur:
   description_template: "The largest number $n$ such that the integers $1$ to $n$ can be colored with ${k}$ colors with no monochromatic solution to $x + y = z$ with $x \\neq y$."
   parameters: [k]
   parameter_values: [[[1, 9]]]
-  research_status: initial
   added_by: daniel-munro
 
 snake-in-the-box:
@@ -363,7 +344,6 @@ snake-in-the-box:
   description_template: "The length, in edges, of the longest induced path in the ${n}$-dimensional hypercube."
   parameters: [n]
   parameter_values: [[[1, 13]]]
-  research_status: initial
   added_by: daniel-munro
 
 coil-in-the-box:
@@ -379,7 +359,6 @@ coil-in-the-box:
   description_template: "The length, in edges, of the longest induced cycle in the ${n}$-dimensional hypercube."
   parameters: [n]
   parameter_values: [[[2, 13]]]
-  research_status: initial
   added_by: daniel-munro
 
 cap-set:
@@ -397,7 +376,6 @@ cap-set:
   description_template: "The size of the largest set of points in $\\mathbb{{F}}_3^{{{n}}}$ with no three on a line."
   parameters: [n]
   parameter_values: [[[1, 8]]]
-  research_status: initial
   added_by: daniel-munro
 
 no-three-in-line:
@@ -416,7 +394,6 @@ no-three-in-line:
   description_template: "The largest number of points of the ${n} \\times {n}$ grid with no three on a line."
   parameters: [n]
   parameter_values: [[[1, 78]]]
-  research_status: initial
   added_by: daniel-munro
 
 isosceles-set:
@@ -433,7 +410,6 @@ isosceles-set:
   description_template: "The size of the largest set of points in $\\mathbb{{R}}^{{{n}}}$ in which every three points form an isosceles triangle."
   parameters: [n]
   parameter_values: [[[1, 12]]]
-  research_status: initial
   added_by: daniel-munro
 
 sorting-network-size:
@@ -450,7 +426,6 @@ sorting-network-size:
   description_template: "The smallest number of comparators in a sorting network on ${n}$ inputs."
   parameters: [n]
   parameter_values: [[[1, 32]]]
-  research_status: initial
   added_by: daniel-munro
 
 sorting-network-depth:
@@ -467,7 +442,6 @@ sorting-network-depth:
   description_template: "The smallest depth, or number of parallel steps, of a sorting network on ${n}$ inputs."
   parameters: [n]
   parameter_values: [[[1, 32]]]
-  research_status: initial
   added_by: daniel-munro
 
 rectilinear-crossing:
@@ -485,7 +459,6 @@ rectilinear-crossing:
   description_template: "The fewest crossings in a drawing of the complete graph $K_{{{n}}}$ in the plane with straight edges and no three vertices on a line."
   parameters: [n]
   parameter_values: [[[5, 100]]]
-  research_status: initial
   added_by: daniel-munro
 
 multicolor-ramsey-triangle:
@@ -502,5 +475,4 @@ multicolor-ramsey-triangle:
   description_template: "The smallest number $n$ such that any coloring of the edges of the complete graph $K_n$ with ${k}$ colors contains a monochromatic triangle."
   parameters: [k]
   parameter_values: [[[3, 9]]]
-  research_status: initial
   added_by: daniel-munro
