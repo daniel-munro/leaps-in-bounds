@@ -2,20 +2,20 @@
 
 function drawTimeline(root, data) {
   const constants = data.constants.filter(c => c.dated.length);
-  const byGroup = d3.group(constants, c => c.group);
-  const groupOrder = data.groupOrder.filter(g => byGroup.has(g));
+  const byFamily = d3.group(constants, c => c.family);
+  const familyOrder = data.familyOrder.filter(g => byFamily.has(g));
 
   const width = root.node().clientWidth;
   const margin = { top: 8, right: 16, bottom: 28, left: 210 };
   const histH = 64, histGap = 14;
   const rowH = 1.7, minBand = 18, bandGap = 7;
 
-  // Group bands, each constant a row inside its band.
+  // Family bands, each constant a row inside its band.
   let y0 = margin.top + histH + histGap;
-  const bands = groupOrder.map(g => {
-    const cs = byGroup.get(g);
+  const bands = familyOrder.map(g => {
+    const cs = byFamily.get(g);
     const h = Math.max(minBand, cs.length * rowH);
-    const band = { group: g, name: cs[0].groupName, y: y0, h, cs };
+    const band = { family: g, name: cs[0].familyName, y: y0, h, cs };
     cs.forEach((c, i) => { c.rowY = y0 + (cs.length === 1 ? h / 2 : (i + 0.5) * h / cs.length); });
     y0 += h + bandGap;
     return band;

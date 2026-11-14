@@ -109,11 +109,11 @@ h1 {
     margin: 0.5em 0;
 }
 
-.constant-groups-overview {
+.families-overview {
     margin: 2rem 0;
 }
 
-.constant-groups-overview .badge {
+.families-overview .badge {
     font-size: 0.9em;
     padding: 0.4em 0.6em;
 }
@@ -133,14 +133,14 @@ h1 {
     object-fit: contain;
 }
 
-.constant-group-image {
+.family-image {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 1rem 0;
 }
 
-.constant-group-image img {
+.family-image img {
     max-height: 200px;
     max-width: 100%;
     width: auto;

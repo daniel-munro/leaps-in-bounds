@@ -4,8 +4,8 @@
 set -e
 
 mkdir -p _data
-cp source_data/sources.yml _data/
-cp source_data/categories.yml _data/
+cp literature/sources.yml _data/
+cp constants/categories.yml _data/
 python scripts/process_data.py
 python scripts/generate_pages.py
 

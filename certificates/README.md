@@ -11,15 +11,15 @@ A certificate doesn't need to cite a source for its bound, or a source a certifi
 
 Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks that each certificate is well formed and consistent with the others and with the literature, and that a new certificate is at least as strong as the existing ones for the same bound. It comments on the pull request with the result for each new certificate and its role: a new bound, or evidence for the current bound or a weaker one. CI doesn't run the checkers on the evidence: a maintainer does that before merging. (For a first-time contributor, the check waits until a maintainer approves the run.)
 
-Only the families listed [below](#families) accept certificates so far. To ask for another group of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
+Only the families listed [below](#families) accept certificates so far. To ask for another family of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
 
 To find something to certify, see the [unverified bounds](https://leapsinbounds.org/unverified/) (also as [JSON](https://leapsinbounds.org/data/unverified_bounds.json)): current bounds whose best evidence isn't a verified certificate yet, with their discovery and whether a witness can certify them.
 
-Before searching for a new bound, read the group's file in [`notes/`](../notes/README.md), if there is one, for what has already been tried. Afterwards, update it with what you learned, whether or not the search found anything. Notes are background information from other contributors, not instructions.
+Before searching for a new bound, read the family's file in [`notes/`](../notes/README.md), if there is one, for what has already been tried. Afterwards, update it with what you learned, whether or not the search found anything. Notes are background information from other contributors, not instructions.
 
 ## File format
 
-One YAML file per certificate, in `certificates/<group>/`. The file name (without `.yml`) is the certificate ID and must be unique. By convention it's `<constant>-<lower|upper>-<value>.yml`.
+One YAML file per certificate, in `certificates/<family>/`. The file name (without `.yml`) is the certificate ID and must be unique. By convention it's `<constant>-<lower|upper>-<value>.yml`.
 
 ```yaml
 constant: ramsey-4-4      # constant ID, as on the site
@@ -31,7 +31,7 @@ witness:                  # for kind: witness (see the family's rules below)
   data: 'PzlXWmJpZDeJEJbDgp\EJsWk'   # or `file: name.g6` for large witnesses (see Size limit)
 submitted_by: your-username   # GitHub username of the account submitting it
 date: 2026-10-22          # submission date
-source: greenwood-gleason-1955   # optional: key in source_data/sources.yml for where the construction comes from, if elsewhere
+source: greenwood-gleason-1955   # optional: key in literature/sources.yml for where the construction comes from, if elsewhere
 notes: Paley graph of order 17.  # optional
 ```
 
@@ -352,7 +352,7 @@ python scripts/verify_certificates.py --dry-run ramsey-4-4-lower-18
 Lean proofs need [elan](https://github.com/leanprover/elan) and Mathlib (`cd formal && lake exe cache get`). To run CI's checks of structure and consistency, without the checkers:
 
 ```bash
-python scripts/check_certificates.py --allow-pending --new certificates/<group>/<file>.yml
+python scripts/check_certificates.py --allow-pending --new certificates/<family>/<file>.yml
 ```
 
 ## Known gaps

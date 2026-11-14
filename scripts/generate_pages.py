@@ -70,13 +70,13 @@ def cell_content(const: Mapping[str, Any]) -> tuple[str, str]:
     return f"{lb}<br>{ub}{brackets}", css_class
 
 def generate_grid_html(
-    group: Mapping[str, Any],
+    family: Mapping[str, Any],
     constants: Mapping[str, Mapping[str, Any]],
 ) -> str:
-    """Generate HTML table for a constant group with two parameters."""
-    param1, param2 = group['parameters']
-    rows = group['display_rows']
-    cols = group['display_columns']
+    """Generate HTML table for a family with two parameters."""
+    param1, param2 = family['parameters']
+    rows = family['display_rows']
+    cols = family['display_columns']
     
     html = [
         '<div class="table-responsive">',
@@ -96,7 +96,7 @@ def generate_grid_html(
     for r in rows:
         html.append(f'      <tr><th scope="row">{r}</th>')
         for c in cols:
-            const_id = group['id_template'].format(**{param1: r, param2: c})
+            const_id = family['id_template'].format(**{param1: r, param2: c})
             
             if const_id not in constants:
                 html.append('        <td class="table-secondary"></td>')
@@ -119,13 +119,13 @@ def generate_grid_html(
     return '\n'.join(html) + '\n'
 
 def generate_sequence_html(
-    group: Mapping[str, Any],
+    family: Mapping[str, Any],
     constants: Mapping[str, Mapping[str, Any]],
 ) -> str:
-    """Generate HTML for a constant group with one parameter."""
-    param = group['parameters'][0]
+    """Generate HTML for a family with one parameter."""
+    param = family['parameters'][0]
     values = []
-    value_specs = group['parameter_values']
+    value_specs = family['parameter_values']
     for spec in value_specs:
         assert isinstance(spec, list) and len(spec) == 1 # Only one parameter
         spec = spec[0]
@@ -138,7 +138,7 @@ def generate_sequence_html(
     html = ['<div class="constant-sequence">']
 
     for v in values:
-        const_id = group['id_template'].format(**{param: v})
+        const_id = family['id_template'].format(**{param: v})
         
         if const_id not in constants:
             continue
@@ -153,15 +153,15 @@ def generate_sequence_html(
     return '\n'.join(html) + '\n'
 
 def generate_single_html(
-    group: Mapping[str, Any],
+    family: Mapping[str, Any],
     constants: Mapping[str, Mapping[str, Any]],
 ) -> str:
-    """Generate HTML for a constant group with no parameters."""
+    """Generate HTML for a family with no parameters."""
     html = ['<div class="constant-sequence">']
     
-    content, box_class = cell_content(constants[group['id']])
+    content, box_class = cell_content(constants[family['id']])
     html.append(
-        f'  <a href="/constants/{group["id"]}" class="constant-box {box_class}">'
+        f'  <a href="/constants/{family["id"]}" class="constant-box {box_class}">'
         f'<div class="constant-box-values">{content}</div></a>'
     )
 
@@ -279,20 +279,20 @@ for id, constant in constants.items():
         file.write(f"id: {id}\n")
         file.write("---\n")
 
-with open("_data/constant_groups.yml", "r") as file:
-    constant_groups = yaml.safe_load(file)
+with open("_data/families.yml", "r") as file:
+    families = yaml.safe_load(file)
 
 os.makedirs("_includes/constant_tables", exist_ok=True)
 
-for id, group in constant_groups.items():
-    if group['display_type'] == 'grid':
-        html = generate_grid_html(group, constants)
-    elif group['display_type'] == 'sequence':
-        html = generate_sequence_html(group, constants)
-    elif group['display_type'] == 'single':
-        group['id'] = id
-        html = generate_single_html(group, constants)
+for id, family in families.items():
+    if family['display_type'] == 'grid':
+        html = generate_grid_html(family, constants)
+    elif family['display_type'] == 'sequence':
+        html = generate_sequence_html(family, constants)
+    elif family['display_type'] == 'single':
+        family['id'] = id
+        html = generate_single_html(family, constants)
     else:
-        raise ValueError(f"Unknown display type: {group['display_type']}")
+        raise ValueError(f"Unknown display type: {family['display_type']}")
     with open(f"_includes/constant_tables/{id}.html", "w") as file:
         file.write(html)

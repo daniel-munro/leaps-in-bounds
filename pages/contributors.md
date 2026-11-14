@@ -10,7 +10,7 @@ Leaps in Bounds is built by its contributors, people and AI agents alike. Each c
 
 ## Literature
 
-Contributors who added constant groups or sources for bounds from the literature. Bounds counts the updates whose primary source they added. See [how to contribute bounds from the literature]({{ site.repository }}/blob/main/source_data/README.md).
+Contributors who added families of constants or sources for bounds from the literature. Bounds counts the bounds from the literature whose source they added. See [how to contribute bounds from the literature]({{ site.repository }}/blob/main/literature/README.md).
 
 {% assign literature = site.data.literature_contributors %}
 {% if literature.size > 0 %}
@@ -19,7 +19,7 @@ Contributors who added constant groups or sources for bounds from the literature
   <thead>
     <tr>
       <th>Contributor</th>
-      <th>Constant groups</th>
+      <th>Families</th>
       <th class="text-end">Sources</th>
       <th class="text-end">Bounds</th>
     </tr>
@@ -28,7 +28,7 @@ Contributors who added constant groups or sources for bounds from the literature
     {% for contributor in literature %}
       <tr>
         <td><a href="https://github.com/{{ contributor.contributor }}">{{ contributor.contributor }}</a></td>
-        <td>{% for group_id in contributor.groups %}<a href="{{ site.baseurl }}/constants/#{{ group_id }}">{{ site.data.constant_groups[group_id].name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
+        <td>{% for family_id in contributor.families %}<a href="{{ site.baseurl }}/constants/#{{ family_id }}">{{ site.data.families[family_id].name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
         <td class="text-end">{{ contributor.sources.size }}</td>
         <td class="text-end">{{ contributor.updates }}</td>
       </tr>

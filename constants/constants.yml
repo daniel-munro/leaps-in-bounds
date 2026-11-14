@@ -1,0 +1,1513 @@
+# Not all constants need to be included here, only those with special metadata
+# such as an image. The full set will be generated from the families
+# in families.yml.
+
+ramsey-3-3:
+  image:
+    generated: ramsey-3-3.svg
+    alt_text: "Coloring of the edges of the complete graph on 5 vertices with no monochromatic triangle"
+
+square-packing-in-square-5:
+  image:
+    generated: square-packing-in-square-5.svg
+    alt_text: "Optimal packing of 5 unit squares in a square"
+
+busy-beaver-shift-1:
+  image:
+    generated: busy-beaver-shift-1.svg
+    alt_text: "Rules and space-time diagram of the 1-state busy beaver that runs longest"
+
+busy-beaver-shift-2:
+  image:
+    generated: busy-beaver-shift-2.svg
+    alt_text: "Rules and space-time diagram of the 2-state busy beaver that runs longest"
+
+busy-beaver-shift-4:
+  image:
+    generated: busy-beaver-shift-4.svg
+    alt_text: "Rules and space-time diagram of the 4-state busy beaver that runs longest"
+
+busy-beaver-shift-5:
+  image:
+    generated: busy-beaver-shift-5.svg
+    alt_text: "Rules and space-time diagram of the 5-state busy beaver that runs longest, shaded by the share of ones along the tape over its 47,176,870 steps"
+
+busy-beaver-ones-1:
+  image:
+    generated: busy-beaver-ones-1.svg
+    alt_text: "Rules and space-time diagram of the 1-state busy beaver that writes the most ones"
+
+busy-beaver-ones-2:
+  image:
+    generated: busy-beaver-ones-2.svg
+    alt_text: "Rules and space-time diagram of the 2-state busy beaver that writes the most ones"
+
+busy-beaver-ones-3:
+  image:
+    generated: busy-beaver-ones-3.svg
+    alt_text: "Rules and space-time diagram of the 3-state busy beaver that writes the most ones"
+
+busy-beaver-ones-4:
+  image:
+    generated: busy-beaver-ones-4.svg
+    alt_text: "Rules and space-time diagram of the 4-state busy beaver that writes the most ones"
+
+busy-beaver-ones-5:
+  image:
+    generated: busy-beaver-ones-5.svg
+    alt_text: "Rules and space-time diagram of the 5-state busy beaver that writes the most ones, shaded by the share of ones along the tape over its 47,176,870 steps"
+
+kissing-number-1:
+  image:
+    generated: kissing-number-1.svg
+    alt_text: "Two unit circles touching a central one along a line"
+
+kissing-number-2:
+  image:
+    generated: kissing-number-2.svg
+    alt_text: "Six unit circles touching a central one"
+
+kissing-number-3:
+  image:
+    generated: kissing-number-3.svg
+    alt_text: "Twelve unit spheres touching a central one"
+
+cage-3-5:
+  image:
+    generated: cage-3-5.svg
+    alt_text: "Petersen graph"
+
+cage-3-6:
+  image:
+    generated: cage-3-6.svg
+    alt_text: "Heawood graph"
+
+cage-3-7:
+  image:
+    generated: cage-3-7.svg
+    alt_text: "McGee graph"
+
+cage-3-8:
+  image:
+    generated: cage-3-8.svg
+    alt_text: "Tutte-Coxeter graph"
+
+cage-3-10:
+  image:
+    generated: cage-3-10.svg
+    alt_text: "Harries graph, one of the three (3,10)-cages"
+
+cage-3-11:
+  image:
+    generated: cage-3-11.svg
+    alt_text: "Balaban 11-cage"
+
+cage-4-5:
+  image:
+    generated: cage-4-5.svg
+    alt_text: "Robertson graph"
+
+cage-7-5:
+  image:
+    generated: cage-7-5.svg
+    alt_text: "Hoffman-Singleton graph"
+
+stamp-folding-3:
+  image:
+    generated: stamp-folding-3.svg
+    alt_text: "All foldings of a strip of 3 stamps"
+
+map-folding-2-2:
+  image:
+    generated: map-folding-2-2.svg
+    alt_text: "The 8 ways to fold a 2x2 map, each square numbered and shaded by its place in the folded stack, 1 on top"
+
+circle-in-equilateral-1:
+  image:
+    generated: circle-in-equilateral-1.svg
+    alt_text: "Packing one unit circle in an equilateral triangle"
+
+circle-in-equilateral-2:
+  image:
+    generated: circle-in-equilateral-2.svg
+    alt_text: "Packing two unit circles in an equilateral triangle"
+
+circle-in-equilateral-3:
+  image:
+    generated: circle-in-equilateral-3.svg
+    alt_text: "Packing three unit circles in an equilateral triangle"
+
+circle-in-equilateral-4:
+  image:
+    generated: circle-in-equilateral-4.svg
+    alt_text: "Packing four unit circles in an equilateral triangle"
+
+circle-in-equilateral-5:
+  image:
+    generated: circle-in-equilateral-5.svg
+    alt_text: "Packing five unit circles in an equilateral triangle"
+
+circle-in-equilateral-6:
+  image:
+    generated: circle-in-equilateral-6.svg
+    alt_text: "Packing six unit circles in an equilateral triangle"
+
+circle-in-equilateral-7:
+  image:
+    generated: circle-in-equilateral-7.svg
+    alt_text: "Packing seven unit circles in an equilateral triangle"
+
+circle-in-equilateral-8:
+  image:
+    generated: circle-in-equilateral-8.svg
+    alt_text: "Packing eight unit circles in an equilateral triangle"
+
+circle-in-equilateral-9:
+  image:
+    generated: circle-in-equilateral-9.svg
+    alt_text: "Packing nine unit circles in an equilateral triangle"
+
+circle-in-equilateral-10:
+  image:
+    generated: circle-in-equilateral-10.svg
+    alt_text: "Packing ten unit circles in an equilateral triangle"
+
+circle-in-equilateral-11:
+  image:
+    generated: circle-in-equilateral-11.svg
+    alt_text: "Packing 11 unit circles in an equilateral triangle"
+
+circle-in-equilateral-12:
+  image:
+    generated: circle-in-equilateral-12.svg
+    alt_text: "Packing 12 unit circles in an equilateral triangle"
+
+circle-in-equilateral-13:
+  image:
+    generated: circle-in-equilateral-13.svg
+    alt_text: "Packing 13 unit circles in an equilateral triangle"
+
+circle-in-equilateral-14:
+  image:
+    generated: circle-in-equilateral-14.svg
+    alt_text: "Packing 14 unit circles in an equilateral triangle"
+
+circle-in-equilateral-15:
+  image:
+    generated: circle-in-equilateral-15.svg
+    alt_text: "Packing 15 unit circles in an equilateral triangle"
+
+minimal-superpermutation-3:
+  image:
+    generated: minimal-superpermutation-3.svg
+    alt_text: "Shortest superpermutation on 3 symbols, with each permutation it contains marked below"
+
+affine-line-arrangements-6:
+  image:
+    generated: affine-line-arrangements-6.svg
+    alt_text: "Six of the ways to arrange six lines: in general position, through one point, in a grid, in three pairs of parallels, three through each of two points, and three parallel with three through one point"
+
+affine-line-arrangements-general-position-5:
+  image:
+    generated: affine-line-arrangements-general-position-5.svg
+    alt_text: "All six arrangements of five lines in general position"
+
+busy-beaver-shift-3:
+  image:
+    generated: busy-beaver-shift-3.svg
+    alt_text: "Rules and space-time diagram of the 3-state busy beaver that runs longest"
+
+cage-3-3:
+  image:
+    generated: cage-3-3.svg
+    alt_text: "Complete graph on 4 vertices"
+
+cage-3-4:
+  image:
+    generated: cage-3-4.svg
+    alt_text: "Complete bipartite graph with 3 vertices on each side"
+
+cage-4-3:
+  image:
+    generated: cage-4-3.svg
+    alt_text: "Complete graph on 5 vertices"
+
+cage-4-4:
+  image:
+    generated: cage-4-4.svg
+    alt_text: "Complete bipartite graph with 4 vertices on each side"
+
+cage-5-3:
+  image:
+    generated: cage-5-3.svg
+    alt_text: "Complete graph on 6 vertices"
+
+cage-5-4:
+  image:
+    generated: cage-5-4.svg
+    alt_text: "Complete bipartite graph with 5 vertices on each side"
+
+cage-6-3:
+  image:
+    generated: cage-6-3.svg
+    alt_text: "Complete graph on 7 vertices"
+
+cage-6-4:
+  image:
+    generated: cage-6-4.svg
+    alt_text: "Complete bipartite graph with 6 vertices on each side"
+
+cage-7-3:
+  image:
+    generated: cage-7-3.svg
+    alt_text: "Complete graph on 8 vertices"
+
+cage-7-4:
+  image:
+    generated: cage-7-4.svg
+    alt_text: "Complete bipartite graph with 7 vertices on each side"
+
+degree-diameter-3-2:
+  image:
+    generated: degree-diameter-3-2.svg
+    alt_text: "Petersen graph"
+
+minimal-superpermutation-2:
+  image:
+    generated: minimal-superpermutation-2.svg
+    alt_text: "Shortest superpermutation on 2 symbols, with each permutation it contains marked below"
+
+minimal-superpermutation-4:
+  image:
+    generated: minimal-superpermutation-4.svg
+    alt_text: "Shortest superpermutation on 4 symbols, with each permutation it contains marked below"
+
+ramsey-3-4:
+  image:
+    generated: ramsey-3-4.svg
+    alt_text: "Coloring of the edges of the complete graph on 8 vertices with no blue complete subgraph on 3 vertices and no orange one on 4"
+
+ramsey-3-5:
+  image:
+    generated: ramsey-3-5.svg
+    alt_text: "Coloring of the edges of the complete graph on 13 vertices with no blue complete subgraph on 3 vertices and no orange one on 5"
+
+ramsey-4-4:
+  image:
+    generated: ramsey-4-4.svg
+    alt_text: "Coloring of the edges of the complete graph on 17 vertices with no blue complete subgraph on 4 vertices and no orange one on 4"
+
+square-packing-in-square-1:
+  image:
+    generated: square-packing-in-square-1.svg
+    alt_text: "Optimal packing of 1 unit square in a square"
+
+square-packing-in-square-2:
+  image:
+    generated: square-packing-in-square-2.svg
+    alt_text: "Optimal packing of 2 unit squares in a square"
+
+square-packing-in-square-3:
+  image:
+    generated: square-packing-in-square-3.svg
+    alt_text: "Optimal packing of 3 unit squares in a square"
+
+square-packing-in-square-4:
+  image:
+    generated: square-packing-in-square-4.svg
+    alt_text: "Optimal packing of 4 unit squares in a square"
+
+square-packing-in-square-6:
+  image:
+    generated: square-packing-in-square-6.svg
+    alt_text: "Optimal packing of 6 unit squares in a square"
+
+square-packing-in-square-7:
+  image:
+    generated: square-packing-in-square-7.svg
+    alt_text: "Optimal packing of 7 unit squares in a square"
+
+square-packing-in-square-8:
+  image:
+    generated: square-packing-in-square-8.svg
+    alt_text: "Optimal packing of 8 unit squares in a square"
+
+square-packing-in-square-9:
+  image:
+    generated: square-packing-in-square-9.svg
+    alt_text: "Optimal packing of 9 unit squares in a square"
+
+square-packing-in-square-14:
+  image:
+    generated: square-packing-in-square-14.svg
+    alt_text: "Optimal packing of 14 unit squares in a square"
+
+square-packing-in-square-15:
+  image:
+    generated: square-packing-in-square-15.svg
+    alt_text: "Optimal packing of 15 unit squares in a square"
+
+square-packing-in-square-16:
+  image:
+    generated: square-packing-in-square-16.svg
+    alt_text: "Optimal packing of 16 unit squares in a square"
+
+square-packing-in-square-23:
+  image:
+    generated: square-packing-in-square-23.svg
+    alt_text: "Optimal packing of 23 unit squares in a square"
+
+square-packing-in-square-24:
+  image:
+    generated: square-packing-in-square-24.svg
+    alt_text: "Optimal packing of 24 unit squares in a square"
+
+square-packing-in-square-25:
+  image:
+    generated: square-packing-in-square-25.svg
+    alt_text: "Optimal packing of 25 unit squares in a square"
+
+square-packing-in-square-34:
+  image:
+    generated: square-packing-in-square-34.svg
+    alt_text: "Optimal packing of 34 unit squares in a square"
+
+square-packing-in-square-35:
+  image:
+    generated: square-packing-in-square-35.svg
+    alt_text: "Optimal packing of 35 unit squares in a square"
+
+square-packing-in-square-36:
+  image:
+    generated: square-packing-in-square-36.svg
+    alt_text: "Optimal packing of 36 unit squares in a square"
+
+square-packing-in-square-47:
+  image:
+    generated: square-packing-in-square-47.svg
+    alt_text: "Optimal packing of 47 unit squares in a square"
+
+square-packing-in-square-48:
+  image:
+    generated: square-packing-in-square-48.svg
+    alt_text: "Optimal packing of 48 unit squares in a square"
+
+square-packing-in-square-49:
+  image:
+    generated: square-packing-in-square-49.svg
+    alt_text: "Optimal packing of 49 unit squares in a square"
+
+square-packing-in-square-62:
+  image:
+    generated: square-packing-in-square-62.svg
+    alt_text: "Optimal packing of 62 unit squares in a square"
+
+square-packing-in-square-63:
+  image:
+    generated: square-packing-in-square-63.svg
+    alt_text: "Optimal packing of 63 unit squares in a square"
+
+square-packing-in-square-64:
+  image:
+    generated: square-packing-in-square-64.svg
+    alt_text: "Optimal packing of 64 unit squares in a square"
+
+square-packing-in-square-79:
+  image:
+    generated: square-packing-in-square-79.svg
+    alt_text: "Optimal packing of 79 unit squares in a square"
+
+square-packing-in-square-80:
+  image:
+    generated: square-packing-in-square-80.svg
+    alt_text: "Optimal packing of 80 unit squares in a square"
+
+square-packing-in-square-81:
+  image:
+    generated: square-packing-in-square-81.svg
+    alt_text: "Optimal packing of 81 unit squares in a square"
+
+square-packing-in-square-98:
+  image:
+    generated: square-packing-in-square-98.svg
+    alt_text: "Optimal packing of 98 unit squares in a square"
+
+square-packing-in-square-99:
+  image:
+    generated: square-packing-in-square-99.svg
+    alt_text: "Optimal packing of 99 unit squares in a square"
+
+square-packing-in-square-100:
+  image:
+    generated: square-packing-in-square-100.svg
+    alt_text: "Optimal packing of 100 unit squares in a square"
+
+stamp-folding-1:
+  image:
+    generated: stamp-folding-1.svg
+    alt_text: "All foldings of a strip of 1 stamp"
+
+stamp-folding-2:
+  image:
+    generated: stamp-folding-2.svg
+    alt_text: "All foldings of a strip of 2 stamps"
+
+stamp-folding-4:
+  image:
+    generated: stamp-folding-4.svg
+    alt_text: "All foldings of a strip of 4 stamps"
+
+stamp-folding-5:
+  image:
+    generated: stamp-folding-5.svg
+    alt_text: "One way to fold a strip of 5 stamps"
+
+stamp-folding-6:
+  image:
+    generated: stamp-folding-6.svg
+    alt_text: "One way to fold a strip of 6 stamps"
+
+stamp-folding-7:
+  image:
+    generated: stamp-folding-7.svg
+    alt_text: "One way to fold a strip of 7 stamps"
+
+stamp-folding-8:
+  image:
+    generated: stamp-folding-8.svg
+    alt_text: "One way to fold a strip of 8 stamps"
+
+van-der-waerden-2-3:
+  image:
+    generated: van-der-waerden-2-3.svg
+    alt_text: "Coloring of 1 to 8 with 2 colors and no monochromatic arithmetic progression of length 3"
+
+van-der-waerden-2-4:
+  image:
+    generated: van-der-waerden-2-4.svg
+    alt_text: "Coloring of 1 to 34 with 2 colors and no monochromatic arithmetic progression of length 4"
+
+van-der-waerden-3-3:
+  image:
+    generated: van-der-waerden-3-3.svg
+    alt_text: "Coloring of 1 to 26 with 3 colors and no monochromatic arithmetic progression of length 3"
+
+van-der-waerden-3-4:
+  image:
+    generated: van-der-waerden-3-4.svg
+    alt_text: "Coloring of 1 to 292 with 3 colors and no monochromatic arithmetic progression of length 4"
+
+van-der-waerden-4-3:
+  image:
+    generated: van-der-waerden-4-3.svg
+    alt_text: "Coloring of 1 to 75 with 4 colors and no monochromatic arithmetic progression of length 3"
+
+schur-2:
+  image:
+    generated: schur-2.svg
+    alt_text: "Coloring of 1 to 4 with two colors and no monochromatic solution to x + y = z"
+
+schur-3:
+  image:
+    generated: schur-3.svg
+    alt_text: "Coloring of 1 to 13 with three colors and no monochromatic solution to x + y = z"
+
+schur-4:
+  image:
+    generated: schur-4.svg
+    alt_text: "Coloring of 1 to 44 with four colors and no monochromatic solution to x + y = z"
+
+schur-5:
+  image:
+    generated: schur-5.svg
+    alt_text: "Coloring of 1 to 160 with five colors and no monochromatic solution to x + y = z"
+
+weak-schur-2:
+  image:
+    generated: weak-schur-2.svg
+    alt_text: "Coloring of 1 to 8 with two colors and no monochromatic solution to x + y = z with x and y different"
+
+weak-schur-3:
+  image:
+    generated: weak-schur-3.svg
+    alt_text: "Coloring of 1 to 23 with three colors and no monochromatic solution to x + y = z with x and y different"
+
+weak-schur-4:
+  image:
+    generated: weak-schur-4.svg
+    alt_text: "Coloring of 1 to 66 with four colors and no monochromatic solution to x + y = z with x and y different"
+
+weak-schur-5:
+  image:
+    generated: weak-schur-5.svg
+    alt_text: "Coloring of 1 to 207 with five colors and no monochromatic solution to x + y = z with x and y different"
+
+golomb-ruler-2:
+  image:
+    generated: golomb-ruler-2.svg
+    alt_text: "Optimal Golomb ruler with 2 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-3:
+  image:
+    generated: golomb-ruler-3.svg
+    alt_text: "Optimal Golomb ruler with 3 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-4:
+  image:
+    generated: golomb-ruler-4.svg
+    alt_text: "Optimal Golomb ruler with 4 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-5:
+  image:
+    generated: golomb-ruler-5.svg
+    alt_text: "Optimal Golomb ruler with 5 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-6:
+  image:
+    generated: golomb-ruler-6.svg
+    alt_text: "Optimal Golomb ruler with 6 marks, with the distance between each pair of marks drawn below it"
+
+golomb-ruler-7:
+  image:
+    generated: golomb-ruler-7.svg
+    alt_text: "Optimal Golomb ruler with 7 marks"
+
+golomb-ruler-8:
+  image:
+    generated: golomb-ruler-8.svg
+    alt_text: "Optimal Golomb ruler with 8 marks"
+
+golomb-ruler-9:
+  image:
+    generated: golomb-ruler-9.svg
+    alt_text: "Optimal Golomb ruler with 9 marks"
+
+golomb-ruler-10:
+  image:
+    generated: golomb-ruler-10.svg
+    alt_text: "Optimal Golomb ruler with 10 marks"
+
+golomb-ruler-11:
+  image:
+    generated: golomb-ruler-11.svg
+    alt_text: "Optimal Golomb ruler with 11 marks"
+
+golomb-ruler-12:
+  image:
+    generated: golomb-ruler-12.svg
+    alt_text: "Optimal Golomb ruler with 12 marks"
+
+golomb-ruler-13:
+  image:
+    generated: golomb-ruler-13.svg
+    alt_text: "Optimal Golomb ruler with 13 marks"
+
+golomb-ruler-14:
+  image:
+    generated: golomb-ruler-14.svg
+    alt_text: "Optimal Golomb ruler with 14 marks"
+
+golomb-ruler-15:
+  image:
+    generated: golomb-ruler-15.svg
+    alt_text: "Optimal Golomb ruler with 15 marks"
+
+golomb-ruler-16:
+  image:
+    generated: golomb-ruler-16.svg
+    alt_text: "Optimal Golomb ruler with 16 marks"
+
+golomb-ruler-17:
+  image:
+    generated: golomb-ruler-17.svg
+    alt_text: "Optimal Golomb ruler with 17 marks"
+
+golomb-ruler-18:
+  image:
+    generated: golomb-ruler-18.svg
+    alt_text: "Optimal Golomb ruler with 18 marks"
+
+golomb-ruler-19:
+  image:
+    generated: golomb-ruler-19.svg
+    alt_text: "Optimal Golomb ruler with 19 marks"
+
+golomb-ruler-20:
+  image:
+    generated: golomb-ruler-20.svg
+    alt_text: "Optimal Golomb ruler with 20 marks"
+
+golomb-ruler-21:
+  image:
+    generated: golomb-ruler-21.svg
+    alt_text: "Optimal Golomb ruler with 21 marks"
+
+golomb-ruler-22:
+  image:
+    generated: golomb-ruler-22.svg
+    alt_text: "Optimal Golomb ruler with 22 marks"
+
+golomb-ruler-23:
+  image:
+    generated: golomb-ruler-23.svg
+    alt_text: "Optimal Golomb ruler with 23 marks"
+
+golomb-ruler-24:
+  image:
+    generated: golomb-ruler-24.svg
+    alt_text: "Optimal Golomb ruler with 24 marks"
+
+golomb-ruler-25:
+  image:
+    generated: golomb-ruler-25.svg
+    alt_text: "Optimal Golomb ruler with 25 marks"
+
+golomb-ruler-26:
+  image:
+    generated: golomb-ruler-26.svg
+    alt_text: "Optimal Golomb ruler with 26 marks"
+
+golomb-ruler-27:
+  image:
+    generated: golomb-ruler-27.svg
+    alt_text: "Optimal Golomb ruler with 27 marks"
+
+golomb-ruler-28:
+  image:
+    generated: golomb-ruler-28.svg
+    alt_text: "Optimal Golomb ruler with 28 marks"
+
+golomb-ruler-29:
+  image:
+    generated: golomb-ruler-29.svg
+    alt_text: "Shortest known Golomb ruler with 29 marks"
+
+golomb-ruler-30:
+  image:
+    generated: golomb-ruler-30.svg
+    alt_text: "Shortest known Golomb ruler with 30 marks"
+
+snake-in-the-box-2:
+  image:
+    generated: snake-in-the-box-2.svg
+    alt_text: "Snake of length 2 in the square, an induced path drawn over its edges, with its ends marked"
+
+snake-in-the-box-3:
+  image:
+    generated: snake-in-the-box-3.svg
+    alt_text: "Snake of length 4 in the cube, an induced path drawn over its edges, with its ends marked"
+
+snake-in-the-box-4:
+  image:
+    generated: snake-in-the-box-4.svg
+    alt_text: "Snake of length 7 in the 4-dimensional hypercube, an induced path drawn over its edges, with its ends marked"
+
+snake-in-the-box-5:
+  image:
+    generated: snake-in-the-box-5.svg
+    alt_text: "Snake of length 13 in the 5-dimensional hypercube, an induced path drawn over its edges, with its ends marked"
+
+coil-in-the-box-2:
+  image:
+    generated: coil-in-the-box-2.svg
+    alt_text: "Coil of length 4 in the square, an induced cycle drawn over its edges"
+
+coil-in-the-box-3:
+  image:
+    generated: coil-in-the-box-3.svg
+    alt_text: "Coil of length 6 in the cube, an induced cycle drawn over its edges"
+
+coil-in-the-box-4:
+  image:
+    generated: coil-in-the-box-4.svg
+    alt_text: "Coil of length 8 in the 4-dimensional hypercube, an induced cycle drawn over its edges"
+
+coil-in-the-box-5:
+  image:
+    generated: coil-in-the-box-5.svg
+    alt_text: "Coil of length 14 in the 5-dimensional hypercube, an induced cycle drawn over its edges"
+
+cap-set-1:
+  image:
+    generated: cap-set-1.svg
+    alt_text: "Cap set of 2 points, no three on a line, in the line of 3 points"
+
+cap-set-2:
+  image:
+    generated: cap-set-2.svg
+    alt_text: "Cap set of 4 points, no three on a line, in the 3 by 3 grid of points of the plane over the field with 3 elements"
+
+cap-set-3:
+  image:
+    generated: cap-set-3.svg
+    alt_text: "Cap set of 9 points, no three on a line, in 3-dimensional space over the field with 3 elements, drawn as three 3 by 3 grids side by side"
+
+cap-set-4:
+  image:
+    generated: cap-set-4.svg
+    alt_text: "Cap set of 20 points, no three on a line, in 4-dimensional space over the field with 3 elements, drawn as a 3 by 3 grid of 3 by 3 grids, like the cards of the game SET"
+
+cap-set-5:
+  image:
+    generated: cap-set-5.svg
+    alt_text: "Cap set of 45 points, no three on a line, in 5-dimensional space over the field with 3 elements, drawn as nested 3 by 3 grids"
+
+cap-set-6:
+  image:
+    generated: cap-set-6.svg
+    alt_text: "Cap set of 112 points, no three on a line, in 6-dimensional space over the field with 3 elements, drawn as nested 3 by 3 grids"
+
+no-three-in-line-2:
+  image:
+    generated: no-three-in-line-2.svg
+    alt_text: "4 points of the 2 by 2 grid with no three on a line"
+
+no-three-in-line-3:
+  image:
+    generated: no-three-in-line-3.svg
+    alt_text: "6 points of the 3 by 3 grid with no three on a line"
+
+no-three-in-line-4:
+  image:
+    generated: no-three-in-line-4.svg
+    alt_text: "8 points of the 4 by 4 grid with no three on a line"
+
+no-three-in-line-5:
+  image:
+    generated: no-three-in-line-5.svg
+    alt_text: "10 points of the 5 by 5 grid with no three on a line"
+
+no-three-in-line-6:
+  image:
+    generated: no-three-in-line-6.svg
+    alt_text: "12 points of the 6 by 6 grid with no three on a line"
+
+no-three-in-line-7:
+  image:
+    generated: no-three-in-line-7.svg
+    alt_text: "14 points of the 7 by 7 grid with no three on a line"
+
+no-three-in-line-8:
+  image:
+    generated: no-three-in-line-8.svg
+    alt_text: "16 points of the 8 by 8 grid with no three on a line"
+
+no-three-in-line-9:
+  image:
+    generated: no-three-in-line-9.svg
+    alt_text: "18 points of the 9 by 9 grid with no three on a line"
+
+no-three-in-line-10:
+  image:
+    generated: no-three-in-line-10.svg
+    alt_text: "20 points of the 10 by 10 grid with no three on a line"
+
+no-three-in-line-11:
+  image:
+    generated: no-three-in-line-11.svg
+    alt_text: "22 points of the 11 by 11 grid with no three on a line"
+
+no-three-in-line-12:
+  image:
+    generated: no-three-in-line-12.svg
+    alt_text: "24 points of the 12 by 12 grid with no three on a line"
+
+no-three-in-line-13:
+  image:
+    generated: no-three-in-line-13.svg
+    alt_text: "26 points of the 13 by 13 grid with no three on a line"
+
+no-three-in-line-14:
+  image:
+    generated: no-three-in-line-14.svg
+    alt_text: "28 points of the 14 by 14 grid with no three on a line"
+
+no-three-in-line-15:
+  image:
+    generated: no-three-in-line-15.svg
+    alt_text: "30 points of the 15 by 15 grid with no three on a line"
+
+no-three-in-line-16:
+  image:
+    generated: no-three-in-line-16.svg
+    alt_text: "32 points of the 16 by 16 grid with no three on a line"
+
+no-three-in-line-17:
+  image:
+    generated: no-three-in-line-17.svg
+    alt_text: "34 points of the 17 by 17 grid with no three on a line"
+
+no-three-in-line-18:
+  image:
+    generated: no-three-in-line-18.svg
+    alt_text: "36 points of the 18 by 18 grid with no three on a line"
+
+no-three-in-line-19:
+  image:
+    generated: no-three-in-line-19.svg
+    alt_text: "38 points of the 19 by 19 grid with no three on a line"
+
+no-three-in-line-20:
+  image:
+    generated: no-three-in-line-20.svg
+    alt_text: "40 points of the 20 by 20 grid with no three on a line"
+
+no-three-in-line-21:
+  image:
+    generated: no-three-in-line-21.svg
+    alt_text: "42 points of the 21 by 21 grid with no three on a line"
+
+no-three-in-line-22:
+  image:
+    generated: no-three-in-line-22.svg
+    alt_text: "44 points of the 22 by 22 grid with no three on a line"
+
+no-three-in-line-23:
+  image:
+    generated: no-three-in-line-23.svg
+    alt_text: "46 points of the 23 by 23 grid with no three on a line"
+
+no-three-in-line-24:
+  image:
+    generated: no-three-in-line-24.svg
+    alt_text: "48 points of the 24 by 24 grid with no three on a line"
+
+no-three-in-line-25:
+  image:
+    generated: no-three-in-line-25.svg
+    alt_text: "50 points of the 25 by 25 grid with no three on a line"
+
+no-three-in-line-26:
+  image:
+    generated: no-three-in-line-26.svg
+    alt_text: "52 points of the 26 by 26 grid with no three on a line"
+
+no-three-in-line-27:
+  image:
+    generated: no-three-in-line-27.svg
+    alt_text: "54 points of the 27 by 27 grid with no three on a line"
+
+no-three-in-line-28:
+  image:
+    generated: no-three-in-line-28.svg
+    alt_text: "56 points of the 28 by 28 grid with no three on a line"
+
+no-three-in-line-29:
+  image:
+    generated: no-three-in-line-29.svg
+    alt_text: "58 points of the 29 by 29 grid with no three on a line"
+
+no-three-in-line-30:
+  image:
+    generated: no-three-in-line-30.svg
+    alt_text: "60 points of the 30 by 30 grid with no three on a line"
+
+no-three-in-line-31:
+  image:
+    generated: no-three-in-line-31.svg
+    alt_text: "62 points of the 31 by 31 grid with no three on a line"
+
+no-three-in-line-32:
+  image:
+    generated: no-three-in-line-32.svg
+    alt_text: "64 points of the 32 by 32 grid with no three on a line"
+
+no-three-in-line-33:
+  image:
+    generated: no-three-in-line-33.svg
+    alt_text: "66 points of the 33 by 33 grid with no three on a line"
+
+no-three-in-line-34:
+  image:
+    generated: no-three-in-line-34.svg
+    alt_text: "68 points of the 34 by 34 grid with no three on a line"
+
+no-three-in-line-35:
+  image:
+    generated: no-three-in-line-35.svg
+    alt_text: "70 points of the 35 by 35 grid with no three on a line"
+
+no-three-in-line-36:
+  image:
+    generated: no-three-in-line-36.svg
+    alt_text: "72 points of the 36 by 36 grid with no three on a line"
+
+no-three-in-line-37:
+  image:
+    generated: no-three-in-line-37.svg
+    alt_text: "74 points of the 37 by 37 grid with no three on a line"
+
+no-three-in-line-38:
+  image:
+    generated: no-three-in-line-38.svg
+    alt_text: "76 points of the 38 by 38 grid with no three on a line"
+
+no-three-in-line-39:
+  image:
+    generated: no-three-in-line-39.svg
+    alt_text: "78 points of the 39 by 39 grid with no three on a line"
+
+no-three-in-line-40:
+  image:
+    generated: no-three-in-line-40.svg
+    alt_text: "80 points of the 40 by 40 grid with no three on a line"
+
+no-three-in-line-41:
+  image:
+    generated: no-three-in-line-41.svg
+    alt_text: "82 points of the 41 by 41 grid with no three on a line"
+
+no-three-in-line-42:
+  image:
+    generated: no-three-in-line-42.svg
+    alt_text: "84 points of the 42 by 42 grid with no three on a line"
+
+no-three-in-line-43:
+  image:
+    generated: no-three-in-line-43.svg
+    alt_text: "86 points of the 43 by 43 grid with no three on a line"
+
+no-three-in-line-44:
+  image:
+    generated: no-three-in-line-44.svg
+    alt_text: "88 points of the 44 by 44 grid with no three on a line"
+
+no-three-in-line-45:
+  image:
+    generated: no-three-in-line-45.svg
+    alt_text: "90 points of the 45 by 45 grid with no three on a line"
+
+no-three-in-line-46:
+  image:
+    generated: no-three-in-line-46.svg
+    alt_text: "92 points of the 46 by 46 grid with no three on a line"
+
+no-three-in-line-47:
+  image:
+    generated: no-three-in-line-47.svg
+    alt_text: "94 points of the 47 by 47 grid with no three on a line"
+
+no-three-in-line-48:
+  image:
+    generated: no-three-in-line-48.svg
+    alt_text: "96 points of the 48 by 48 grid with no three on a line"
+
+no-three-in-line-49:
+  image:
+    generated: no-three-in-line-49.svg
+    alt_text: "98 points of the 49 by 49 grid with no three on a line"
+
+no-three-in-line-50:
+  image:
+    generated: no-three-in-line-50.svg
+    alt_text: "100 points of the 50 by 50 grid with no three on a line"
+
+no-three-in-line-51:
+  image:
+    generated: no-three-in-line-51.svg
+    alt_text: "102 points of the 51 by 51 grid with no three on a line"
+
+no-three-in-line-52:
+  image:
+    generated: no-three-in-line-52.svg
+    alt_text: "104 points of the 52 by 52 grid with no three on a line"
+
+no-three-in-line-53:
+  image:
+    generated: no-three-in-line-53.svg
+    alt_text: "106 points of the 53 by 53 grid with no three on a line"
+
+no-three-in-line-54:
+  image:
+    generated: no-three-in-line-54.svg
+    alt_text: "108 points of the 54 by 54 grid with no three on a line"
+
+no-three-in-line-55:
+  image:
+    generated: no-three-in-line-55.svg
+    alt_text: "110 points of the 55 by 55 grid with no three on a line"
+
+no-three-in-line-56:
+  image:
+    generated: no-three-in-line-56.svg
+    alt_text: "112 points of the 56 by 56 grid with no three on a line"
+
+no-three-in-line-57:
+  image:
+    generated: no-three-in-line-57.svg
+    alt_text: "114 points of the 57 by 57 grid with no three on a line"
+
+no-three-in-line-58:
+  image:
+    generated: no-three-in-line-58.svg
+    alt_text: "116 points of the 58 by 58 grid with no three on a line"
+
+no-three-in-line-59:
+  image:
+    generated: no-three-in-line-59.svg
+    alt_text: "118 points of the 59 by 59 grid with no three on a line"
+
+no-three-in-line-60:
+  image:
+    generated: no-three-in-line-60.svg
+    alt_text: "120 points of the 60 by 60 grid with no three on a line"
+
+no-three-in-line-61:
+  image:
+    generated: no-three-in-line-61.svg
+    alt_text: "122 points of the 61 by 61 grid with no three on a line"
+
+no-three-in-line-62:
+  image:
+    generated: no-three-in-line-62.svg
+    alt_text: "124 points of the 62 by 62 grid with no three on a line"
+
+no-three-in-line-63:
+  image:
+    generated: no-three-in-line-63.svg
+    alt_text: "126 points of the 63 by 63 grid with no three on a line"
+
+no-three-in-line-64:
+  image:
+    generated: no-three-in-line-64.svg
+    alt_text: "128 points of the 64 by 64 grid with no three on a line"
+
+no-three-in-line-65:
+  image:
+    generated: no-three-in-line-65.svg
+    alt_text: "130 points of the 65 by 65 grid with no three on a line"
+
+no-three-in-line-66:
+  image:
+    generated: no-three-in-line-66.svg
+    alt_text: "132 points of the 66 by 66 grid with no three on a line"
+
+no-three-in-line-67:
+  image:
+    generated: no-three-in-line-67.svg
+    alt_text: "134 points of the 67 by 67 grid with no three on a line"
+
+no-three-in-line-68:
+  image:
+    generated: no-three-in-line-68.svg
+    alt_text: "136 points of the 68 by 68 grid with no three on a line"
+
+no-three-in-line-69:
+  image:
+    generated: no-three-in-line-69.svg
+    alt_text: "138 points of the 69 by 69 grid with no three on a line"
+
+no-three-in-line-70:
+  image:
+    generated: no-three-in-line-70.svg
+    alt_text: "140 points of the 70 by 70 grid with no three on a line"
+
+no-three-in-line-71:
+  image:
+    generated: no-three-in-line-71.svg
+    alt_text: "142 points of the 71 by 71 grid with no three on a line"
+
+no-three-in-line-72:
+  image:
+    generated: no-three-in-line-72.svg
+    alt_text: "144 points of the 72 by 72 grid with no three on a line"
+
+no-three-in-line-73:
+  image:
+    generated: no-three-in-line-73.svg
+    alt_text: "146 points of the 73 by 73 grid with no three on a line"
+
+no-three-in-line-74:
+  image:
+    generated: no-three-in-line-74.svg
+    alt_text: "148 points of the 74 by 74 grid with no three on a line"
+
+no-three-in-line-75:
+  image:
+    generated: no-three-in-line-75.svg
+    alt_text: "148 points of the 75 by 75 grid with no three on a line"
+
+no-three-in-line-76:
+  image:
+    generated: no-three-in-line-76.svg
+    alt_text: "152 points of the 76 by 76 grid with no three on a line"
+
+no-three-in-line-77:
+  image:
+    generated: no-three-in-line-77.svg
+    alt_text: "152 points of the 77 by 77 grid with no three on a line"
+
+no-three-in-line-78:
+  image:
+    generated: no-three-in-line-78.svg
+    alt_text: "156 points of the 78 by 78 grid with no three on a line"
+
+isosceles-set-1:
+  image:
+    generated: isosceles-set-1.svg
+    alt_text: "The ends and midpoint of a segment, an isosceles set of 3 points on a line"
+
+isosceles-set-2:
+  image:
+    generated: isosceles-set-2.svg
+    alt_text: "The vertices and center of a regular pentagon, an isosceles set of 6 points in the plane, with segments colored by length"
+
+isosceles-set-3:
+  image:
+    generated: isosceles-set-3.svg
+    alt_text: "Kelly's isosceles set of 8 points in space: a regular pentagon, its center, and two points on its axis, with segments colored by length"
+
+sorting-network-size-2:
+  image:
+    generated: sorting-network-size-2.svg
+    alt_text: "Sorting network on 2 inputs with 1 comparator in 1 step, drawn as 2 horizontal wires joined by vertical comparators"
+
+sorting-network-size-3:
+  image:
+    generated: sorting-network-size-3.svg
+    alt_text: "Sorting network on 3 inputs with 3 comparators in 3 steps, drawn as 3 horizontal wires joined by vertical comparators"
+
+sorting-network-size-4:
+  image:
+    generated: sorting-network-size-4.svg
+    alt_text: "Sorting network on 4 inputs with 5 comparators in 3 steps, drawn as 4 horizontal wires joined by vertical comparators"
+
+sorting-network-size-5:
+  image:
+    generated: sorting-network-size-5.svg
+    alt_text: "Sorting network on 5 inputs with 9 comparators in 5 steps, drawn as 5 horizontal wires joined by vertical comparators"
+
+sorting-network-size-6:
+  image:
+    generated: sorting-network-size-6.svg
+    alt_text: "Sorting network on 6 inputs with 12 comparators in 5 steps, drawn as 6 horizontal wires joined by vertical comparators"
+
+sorting-network-size-7:
+  image:
+    generated: sorting-network-size-7.svg
+    alt_text: "Sorting network on 7 inputs with 16 comparators in 6 steps, drawn as 7 horizontal wires joined by vertical comparators"
+
+sorting-network-size-8:
+  image:
+    generated: sorting-network-size-8.svg
+    alt_text: "Sorting network on 8 inputs with 19 comparators in 6 steps, drawn as 8 horizontal wires joined by vertical comparators"
+
+sorting-network-size-9:
+  image:
+    generated: sorting-network-size-9.svg
+    alt_text: "Sorting network on 9 inputs with 25 comparators in 7 steps, drawn as 9 horizontal wires joined by vertical comparators"
+
+sorting-network-size-10:
+  image:
+    generated: sorting-network-size-10.svg
+    alt_text: "Sorting network on 10 inputs with 29 comparators in 8 steps, drawn as 10 horizontal wires joined by vertical comparators"
+
+sorting-network-size-11:
+  image:
+    generated: sorting-network-size-11.svg
+    alt_text: "Sorting network on 11 inputs with 35 comparators in 8 steps, drawn as 11 horizontal wires joined by vertical comparators"
+
+sorting-network-size-12:
+  image:
+    generated: sorting-network-size-12.svg
+    alt_text: "Sorting network on 12 inputs with 39 comparators in 9 steps, drawn as 12 horizontal wires joined by vertical comparators"
+
+sorting-network-size-13:
+  image:
+    generated: sorting-network-size-13.svg
+    alt_text: "Sorting network on 13 inputs with 45 comparators in 10 steps, drawn as 13 horizontal wires joined by vertical comparators"
+
+sorting-network-size-14:
+  image:
+    generated: sorting-network-size-14.svg
+    alt_text: "Sorting network on 14 inputs with 51 comparators in 10 steps, drawn as 14 horizontal wires joined by vertical comparators"
+
+sorting-network-size-15:
+  image:
+    generated: sorting-network-size-15.svg
+    alt_text: "Sorting network on 15 inputs with 56 comparators in 10 steps, drawn as 15 horizontal wires joined by vertical comparators"
+
+sorting-network-size-16:
+  image:
+    generated: sorting-network-size-16.svg
+    alt_text: "Sorting network on 16 inputs with 60 comparators in 10 steps, drawn as 16 horizontal wires joined by vertical comparators"
+
+sorting-network-size-17:
+  image:
+    generated: sorting-network-size-17.svg
+    alt_text: "Sorting network on 17 inputs with 71 comparators in 12 steps, drawn as 17 horizontal wires joined by vertical comparators"
+
+sorting-network-size-18:
+  image:
+    generated: sorting-network-size-18.svg
+    alt_text: "Sorting network on 18 inputs with 77 comparators in 12 steps, drawn as 18 horizontal wires joined by vertical comparators"
+
+sorting-network-size-19:
+  image:
+    generated: sorting-network-size-19.svg
+    alt_text: "Sorting network on 19 inputs with 85 comparators in 12 steps, drawn as 19 horizontal wires joined by vertical comparators"
+
+sorting-network-size-20:
+  image:
+    generated: sorting-network-size-20.svg
+    alt_text: "Sorting network on 20 inputs with 91 comparators in 12 steps, drawn as 20 horizontal wires joined by vertical comparators"
+
+sorting-network-size-21:
+  image:
+    generated: sorting-network-size-21.svg
+    alt_text: "Sorting network on 21 inputs with 99 comparators in 15 steps, drawn as 21 horizontal wires joined by vertical comparators"
+
+sorting-network-size-22:
+  image:
+    generated: sorting-network-size-22.svg
+    alt_text: "Sorting network on 22 inputs with 106 comparators in 13 steps, drawn as 22 horizontal wires joined by vertical comparators"
+
+sorting-network-size-23:
+  image:
+    generated: sorting-network-size-23.svg
+    alt_text: "Sorting network on 23 inputs with 114 comparators in 14 steps, drawn as 23 horizontal wires joined by vertical comparators"
+
+sorting-network-size-24:
+  image:
+    generated: sorting-network-size-24.svg
+    alt_text: "Sorting network on 24 inputs with 120 comparators in 13 steps, drawn as 24 horizontal wires joined by vertical comparators"
+
+sorting-network-size-25:
+  image:
+    generated: sorting-network-size-25.svg
+    alt_text: "Sorting network on 25 inputs with 130 comparators in 15 steps, drawn as 25 horizontal wires joined by vertical comparators"
+
+sorting-network-size-26:
+  image:
+    generated: sorting-network-size-26.svg
+    alt_text: "Sorting network on 26 inputs with 138 comparators in 15 steps, drawn as 26 horizontal wires joined by vertical comparators"
+
+sorting-network-size-27:
+  image:
+    generated: sorting-network-size-27.svg
+    alt_text: "Sorting network on 27 inputs with 147 comparators in 16 steps, drawn as 27 horizontal wires joined by vertical comparators"
+
+sorting-network-size-28:
+  image:
+    generated: sorting-network-size-28.svg
+    alt_text: "Sorting network on 28 inputs with 155 comparators in 14 steps, drawn as 28 horizontal wires joined by vertical comparators"
+
+sorting-network-size-29:
+  image:
+    generated: sorting-network-size-29.svg
+    alt_text: "Sorting network on 29 inputs with 164 comparators in 15 steps, drawn as 29 horizontal wires joined by vertical comparators"
+
+sorting-network-size-30:
+  image:
+    generated: sorting-network-size-30.svg
+    alt_text: "Sorting network on 30 inputs with 172 comparators in 14 steps, drawn as 30 horizontal wires joined by vertical comparators"
+
+sorting-network-size-31:
+  image:
+    generated: sorting-network-size-31.svg
+    alt_text: "Sorting network on 31 inputs with 180 comparators in 14 steps, drawn as 31 horizontal wires joined by vertical comparators"
+
+sorting-network-size-32:
+  image:
+    generated: sorting-network-size-32.svg
+    alt_text: "Sorting network on 32 inputs with 185 comparators in 14 steps, drawn as 32 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-2:
+  image:
+    generated: sorting-network-depth-2.svg
+    alt_text: "Sorting network on 2 inputs with 1 comparator in 1 step, drawn as 2 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-3:
+  image:
+    generated: sorting-network-depth-3.svg
+    alt_text: "Sorting network on 3 inputs with 3 comparators in 3 steps, drawn as 3 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-4:
+  image:
+    generated: sorting-network-depth-4.svg
+    alt_text: "Sorting network on 4 inputs with 5 comparators in 3 steps, drawn as 4 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-5:
+  image:
+    generated: sorting-network-depth-5.svg
+    alt_text: "Sorting network on 5 inputs with 9 comparators in 5 steps, drawn as 5 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-6:
+  image:
+    generated: sorting-network-depth-6.svg
+    alt_text: "Sorting network on 6 inputs with 12 comparators in 5 steps, drawn as 6 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-7:
+  image:
+    generated: sorting-network-depth-7.svg
+    alt_text: "Sorting network on 7 inputs with 16 comparators in 6 steps, drawn as 7 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-8:
+  image:
+    generated: sorting-network-depth-8.svg
+    alt_text: "Sorting network on 8 inputs with 19 comparators in 6 steps, drawn as 8 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-9:
+  image:
+    generated: sorting-network-depth-9.svg
+    alt_text: "Sorting network on 9 inputs with 25 comparators in 7 steps, drawn as 9 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-10:
+  image:
+    generated: sorting-network-depth-10.svg
+    alt_text: "Sorting network on 10 inputs with 31 comparators in 7 steps, drawn as 10 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-11:
+  image:
+    generated: sorting-network-depth-11.svg
+    alt_text: "Sorting network on 11 inputs with 35 comparators in 8 steps, drawn as 11 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-12:
+  image:
+    generated: sorting-network-depth-12.svg
+    alt_text: "Sorting network on 12 inputs with 40 comparators in 8 steps, drawn as 12 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-13:
+  image:
+    generated: sorting-network-depth-13.svg
+    alt_text: "Sorting network on 13 inputs with 46 comparators in 9 steps, drawn as 13 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-14:
+  image:
+    generated: sorting-network-depth-14.svg
+    alt_text: "Sorting network on 14 inputs with 52 comparators in 9 steps, drawn as 14 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-15:
+  image:
+    generated: sorting-network-depth-15.svg
+    alt_text: "Sorting network on 15 inputs with 57 comparators in 9 steps, drawn as 15 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-16:
+  image:
+    generated: sorting-network-depth-16.svg
+    alt_text: "Sorting network on 16 inputs with 61 comparators in 9 steps, drawn as 16 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-17:
+  image:
+    generated: sorting-network-depth-17.svg
+    alt_text: "Sorting network on 17 inputs with 74 comparators in 10 steps, drawn as 17 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-18:
+  image:
+    generated: sorting-network-depth-18.svg
+    alt_text: "Sorting network on 18 inputs with 78 comparators in 11 steps, drawn as 18 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-19:
+  image:
+    generated: sorting-network-depth-19.svg
+    alt_text: "Sorting network on 19 inputs with 87 comparators in 11 steps, drawn as 19 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-20:
+  image:
+    generated: sorting-network-depth-20.svg
+    alt_text: "Sorting network on 20 inputs with 93 comparators in 11 steps, drawn as 20 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-21:
+  image:
+    generated: sorting-network-depth-21.svg
+    alt_text: "Sorting network on 21 inputs with 100 comparators in 12 steps, drawn as 21 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-22:
+  image:
+    generated: sorting-network-depth-22.svg
+    alt_text: "Sorting network on 22 inputs with 107 comparators in 12 steps, drawn as 22 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-23:
+  image:
+    generated: sorting-network-depth-23.svg
+    alt_text: "Sorting network on 23 inputs with 116 comparators in 12 steps, drawn as 23 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-24:
+  image:
+    generated: sorting-network-depth-24.svg
+    alt_text: "Sorting network on 24 inputs with 122 comparators in 12 steps, drawn as 24 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-25:
+  image:
+    generated: sorting-network-depth-25.svg
+    alt_text: "Sorting network on 25 inputs with 131 comparators in 13 steps, drawn as 25 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-26:
+  image:
+    generated: sorting-network-depth-26.svg
+    alt_text: "Sorting network on 26 inputs with 141 comparators in 13 steps, drawn as 26 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-27:
+  image:
+    generated: sorting-network-depth-27.svg
+    alt_text: "Sorting network on 27 inputs with 152 comparators in 13 steps, drawn as 27 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-28:
+  image:
+    generated: sorting-network-depth-28.svg
+    alt_text: "Sorting network on 28 inputs with 159 comparators in 13 steps, drawn as 28 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-29:
+  image:
+    generated: sorting-network-depth-29.svg
+    alt_text: "Sorting network on 29 inputs with 166 comparators in 14 steps, drawn as 29 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-30:
+  image:
+    generated: sorting-network-depth-30.svg
+    alt_text: "Sorting network on 30 inputs with 172 comparators in 14 steps, drawn as 30 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-31:
+  image:
+    generated: sorting-network-depth-31.svg
+    alt_text: "Sorting network on 31 inputs with 180 comparators in 14 steps, drawn as 31 horizontal wires joined by vertical comparators"
+
+sorting-network-depth-32:
+  image:
+    generated: sorting-network-depth-32.svg
+    alt_text: "Sorting network on 32 inputs with 185 comparators in 14 steps, drawn as 32 horizontal wires joined by vertical comparators"
+
+rectilinear-crossing-5:
+  image:
+    generated: rectilinear-crossing-5.svg
+    alt_text: "A straight-line drawing of the complete graph on 5 points with 1 crossing, the fewest possible, marked in orange"
+
+rectilinear-crossing-6:
+  image:
+    generated: rectilinear-crossing-6.svg
+    alt_text: "A straight-line drawing of the complete graph on 6 points with 3 crossings, the fewest possible, marked in orange"
+
+rectilinear-crossing-7:
+  image:
+    generated: rectilinear-crossing-7.svg
+    alt_text: "A straight-line drawing of the complete graph on 7 points with 9 crossings, the fewest possible, marked in orange"
+
+rectilinear-crossing-8:
+  image:
+    generated: rectilinear-crossing-8.svg
+    alt_text: "A straight-line drawing of the complete graph on 8 points with 19 crossings, the fewest possible, marked in orange"
+
+rectilinear-crossing-9:
+  image:
+    generated: rectilinear-crossing-9.svg
+    alt_text: "A straight-line drawing of the complete graph on 9 points with 36 crossings, the fewest possible, marked in orange"
+
+rectilinear-crossing-10:
+  image:
+    generated: rectilinear-crossing-10.svg
+    alt_text: "A straight-line drawing of the complete graph on 10 points with 62 crossings, the fewest possible, marked in orange"
+
+rectilinear-crossing-11:
+  image:
+    generated: rectilinear-crossing-11.svg
+    alt_text: "A straight-line drawing of the complete graph on 11 points with 102 crossings, the fewest possible, marked in orange"
+
+rectilinear-crossing-12:
+  image:
+    generated: rectilinear-crossing-12.svg
+    alt_text: "A straight-line drawing of the complete graph on 12 points with 153 crossings, the fewest possible, marked in orange"
+
+multicolor-ramsey-triangle-3:
+  image:
+    generated: multicolor-ramsey-triangle-3.svg
+    alt_text: "Coloring of the edges of the complete graph on 16 vertices with three colors and no monochromatic triangle, drawn one color at a time"

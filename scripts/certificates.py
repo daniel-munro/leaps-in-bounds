@@ -752,7 +752,7 @@ def read_coloring(cert: Mapping[str, Any], colors: int) -> str:
 
 @dataclass
 class Family:
-    """How to check certificates for one group of constants."""
+    """How to check certificates for one family of constants."""
     # Matches constant IDs, capturing the parameters as named groups.
     id_pattern: re.Pattern[str]
     # Lean module containing the formal statements.
@@ -1789,7 +1789,7 @@ def general_line_arrangement_check_witness(params: Mapping[str, int], bound: str
     line_arrangement_witness(params, bound, value, cert, general=True)
 
 
-# Keyed by constant group ID.
+# Keyed by family ID.
 FAMILIES = {
     "ramsey": Family(
         id_pattern=re.compile(r"ramsey-(?P<r>\d+)-(?P<s>\d+)"),

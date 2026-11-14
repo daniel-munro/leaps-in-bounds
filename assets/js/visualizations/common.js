@@ -33,8 +33,8 @@ function texToHtml(s) {
 }
 
 async function loadData() {
-  const [updates, constants, groups, sources] = await Promise.all(
-    ['history', 'constants', 'constant_groups', 'sources'].map(n => fetch(`${window.SITE_BASEURL || ""}/data/${n}.json`).then(r => r.json()))
+  const [updates, constants, families, sources] = await Promise.all(
+    ['history', 'constants', 'families', 'sources'].map(n => fetch(`${window.SITE_BASEURL || ""}/data/${n}.json`).then(r => r.json()))
   );
   const sourceById = new Map(Object.entries(sources));
   const byConst = d3.group(updates, u => u.constant);
@@ -60,12 +60,12 @@ async function loadData() {
       }
     }
     const dated = ups.filter(u => u.t != null);
-    list.push({ id, name: c.name, group: c.group, groupName: groups[c.group]?.name ?? c.group, updates: ups, dated });
+    list.push({ id, name: c.name, family: c.family, familyName: families[c.family]?.name ?? c.family, updates: ups, dated });
     for (const u of ups) u.constant = list[list.length - 1];
   }
-  // Groups in order of first appearance among constants.
-  const groupOrder = [...new Set(list.map(c => c.group))];
-  return { constants: list, groupOrder, groups };
+  // Families in order of first appearance among constants.
+  const familyOrder = [...new Set(list.map(c => c.family))];
+  return { constants: list, familyOrder, families };
 }
 
 const tooltip = (() => {

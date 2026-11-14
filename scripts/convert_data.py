@@ -17,8 +17,8 @@ def flatten_value_dict(data_dict: MutableMapping[str, Any], field_name: str) -> 
 with open("_data/constants.yml", "r") as file:
     constants = yaml.safe_load(file)
 
-with open("_data/constant_groups.yml", "r") as file:
-    groups = yaml.safe_load(file)
+with open("_data/families.yml", "r") as file:
+    families = yaml.safe_load(file)
 
 with open("_data/sources.yml", "r") as file:
     sources = yaml.safe_load(file)
@@ -39,22 +39,22 @@ with open("_data/history.yml", "r") as file:
 for constant in constants.values():
     if 'image' in constant:
         del constant['image']
-for group in groups.values():
-    if 'display_rows' in group:
-        del group['display_rows']
-    if 'display_columns' in group:
-        del group['display_columns']
-    if 'parameter_values' in group:
-        del group['parameter_values']
-    if 'representative_image' in group:
-        del group['representative_image']
+for family in families.values():
+    if 'display_rows' in family:
+        del family['display_rows']
+    if 'display_columns' in family:
+        del family['display_columns']
+    if 'parameter_values' in family:
+        del family['parameter_values']
+    if 'representative_image' in family:
+        del family['representative_image']
 
 # Export nested data structures to YAML
 with open("data/constants.yml", "w") as f:
     yaml.dump(constants, f, sort_keys=False)
 
-with open("data/constant_groups.yml", "w") as f:
-    yaml.dump(groups, f, sort_keys=False)
+with open("data/families.yml", "w") as f:
+    yaml.dump(families, f, sort_keys=False)
 
 with open("data/sources.yml", "w") as f:
     yaml.dump(sources, f, sort_keys=False)
@@ -75,8 +75,8 @@ with open("data/history.yml", "w") as f:
 with open("data/constants.json", "w") as f:
     json.dump(constants, f, indent=2)
 
-with open("data/constant_groups.json", "w") as f:
-    json.dump(groups, f, indent=2)
+with open("data/families.json", "w") as f:
+    json.dump(families, f, indent=2)
 
 with open("data/sources.json", "w") as f:
     json.dump(sources, f, indent=2)
@@ -114,23 +114,23 @@ constants_df = pd.DataFrame(constants_list)
 constants_df.to_csv("data/constants.csv", index=False)
 constants_df.to_csv("data/constants.tsv", sep="\t", index=False)
 
-# Convert constant groups to CSV and TSV
-groups_list = []
-for group_id, group_data in groups.items():
-    group_dict = {'id': group_id}
-    for k, v in group_data.items():
+# Convert families to CSV and TSV
+families_list = []
+for family_id, family_data in families.items():
+    family_dict = {'id': family_id}
+    for k, v in family_data.items():
         if k == 'stats':
             for stat_k, stat_v in v.items():
-                group_dict[f'stats_{stat_k}'] = stat_v
+                family_dict[f'stats_{stat_k}'] = stat_v
         elif k == 'external_ids':
             for id_k, id_v in v.items():
-                group_dict[f'id_{id_k}'] = id_v
+                family_dict[f'id_{id_k}'] = id_v
         else:
-            group_dict[k] = v
-    groups_list.append(group_dict)
-groups_df = pd.DataFrame(groups_list)
-groups_df.to_csv("data/constant_groups.csv", index=False)
-groups_df.to_csv("data/constant_groups.tsv", sep="\t", index=False)
+            family_dict[k] = v
+    families_list.append(family_dict)
+families_df = pd.DataFrame(families_list)
+families_df.to_csv("data/families.csv", index=False)
+families_df.to_csv("data/families.tsv", sep="\t", index=False)
 
 # Convert sources to CSV and TSV
 sources_list = []

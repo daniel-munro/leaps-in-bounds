@@ -19,20 +19,20 @@ This list is also available as [YAML]({{ site.baseurl }}/data/unverified_bounds.
 <table class="table table-sm table-bordered w-auto">
   <thead>
     <tr>
-      <th>Group</th>
+      <th>Family</th>
       <th class="text-end">Witness</th>
       <th class="text-end">Lean proof</th>
     </tr>
   </thead>
   <tbody>
     {% for category in site.data.categories %}
-      {% for group_id in category.groups %}
-        {% assign rows = all_rows | where: "group", group_id %}
+      {% for family_id in category.families %}
+        {% assign rows = all_rows | where: "family", family_id %}
         {% if rows.size > 0 %}
           {% assign witness_rows = rows | where: "certify_with", "witness" %}
           {% assign lean_rows = rows | where: "certify_with", "lean" %}
           <tr>
-            <td><a href="#{{ group_id }}">{{ site.data.constant_groups[group_id].name }}</a></td>
+            <td><a href="#{{ family_id }}">{{ site.data.families[family_id].name }}</a></td>
             <td class="text-end">{{ witness_rows.size }}</td>
             <td class="text-end">{{ lean_rows.size }}</td>
           </tr>
@@ -43,14 +43,14 @@ This list is also available as [YAML]({{ site.baseurl }}/data/unverified_bounds.
 </table>
 
 {% for category in site.data.categories %}
-{% for group_id in category.groups %}
-{% assign rows = all_rows | where: "group", group_id %}
+{% for family_id in category.families %}
+{% assign rows = all_rows | where: "family", family_id %}
 {% if rows.size > 0 %}
 {% assign witness_rows = rows | where: "certify_with", "witness" %}
 {% assign lean_rows = rows | where: "certify_with", "lean" %}
 {% assign ordered_rows = witness_rows | concat: lean_rows %}
 
-<h2 id="{{ group_id }}" class="h4 mt-5">{{ site.data.constant_groups[group_id].name }}</h2>
+<h2 id="{{ family_id }}" class="h4 mt-5">{{ site.data.families[family_id].name }}</h2>
 
 <div class="table-responsive">
 <table class="table table-sm small">

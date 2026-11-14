@@ -91,7 +91,7 @@ def role_in_history(
     if literature is not None:
         current = literature.decimal_approx, f"`{literature.latex}`"
         update = [u for u in constant["updates"] if u["type"] == f"{side}_bound"][-1]
-        source = update["primary_source"] or update["secondary_source"]
+        source = update["source"] or update["via"]
         record = f"from `{source}`" if source else "from the literature"
     if previous is not None:
         prev_approx = float(f"{previous['approx']:.7g}")
@@ -179,12 +179,12 @@ def main() -> None:
     parser.add_argument("-v", "--verbose", action="store_true", help="list every certificate, not just problems")
     args = parser.parse_args()
 
-    with open("source_data/constant_groups.yml") as file:
-        groups = yaml.safe_load(file)
-    with open("source_data/sources.yml") as file:
+    with open("constants/families.yml") as file:
+        families = yaml.safe_load(file)
+    with open("literature/sources.yml") as file:
         sources = yaml.safe_load(file)
-    constants = get_constants(groups)
-    assign_updates_and_values(constants, load_updates("source_data/updates", sources))
+    constants = get_constants(families)
+    assign_updates_and_values(constants, load_updates("literature/bounds", sources))
 
     errors = []
     try:
