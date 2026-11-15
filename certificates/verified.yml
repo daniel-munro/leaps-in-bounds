@@ -184,7 +184,7 @@ cage-10-5-lower-101:
   date: '2026-11-08'
 cage-10-5-upper-126:
   sha256: 71fa409250c5ce5616cc38e50bab55c9549334cd444fe88763f32a70b6d0c9e8
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-10-5-upper-176:
@@ -389,7 +389,7 @@ cage-12-5-lower-145:
   date: '2026-11-08'
 cage-12-5-upper-203:
   sha256: f10a2540438b9290d7a12858f129266ced319745eaa959d26fd301220a45e170
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-12-5-upper-220:
@@ -494,7 +494,7 @@ cage-13-5-lower-170:
   date: '2026-11-08'
 cage-13-5-upper-240:
   sha256: 962acfc892a001ea42a846c128df89f01b05e19d36ee6cc2be9219b9abec1f15
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-13-5-upper-242:
@@ -1219,7 +1219,7 @@ cage-3-14-lower-254:
   date: '2026-11-08'
 cage-3-14-upper-384:
   sha256: 9287821d713376966d6eef6187b9c8c92fb9e5d98ba86d6b16371e210fbf0033
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-3-14-upper-616:
@@ -1249,7 +1249,7 @@ cage-3-16-upper-1540:
   date: '2026-11-11'
 cage-3-16-upper-960:
   sha256: c9abbda53eede5d9fa3e74d22bb3ccc70fbd35998c0c642ed356ff1664ef8458
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-3-3-lower-4:
@@ -1329,7 +1329,7 @@ cage-4-10-lower-242:
   date: '2026-11-08'
 cage-4-10-upper-384:
   sha256: 7f8fa93cfa10a3852cc923657507376a9c1a6f5ad3f51713f2e2eb9753cb8414
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-4-10-upper-450:
@@ -1429,7 +1429,7 @@ cage-4-7-upper-120:
   date: '2026-11-11'
 cage-4-7-upper-67:
   sha256: ee41806041988db6a0ebcba121eb36d802fb710f167dba11c757d1449da42a23
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-4-8-lower-80:
@@ -1449,7 +1449,7 @@ cage-4-9-lower-161:
   date: '2026-11-08'
 cage-4-9-upper-275:
   sha256: 7e55b1a7de22c1875c66d8172f178e4c9907188779df43cdc7e42257437ea5ea
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-4-9-upper-325:
@@ -1464,7 +1464,7 @@ cage-5-10-lower-682:
   date: '2026-11-08'
 cage-5-10-upper-1458:
   sha256: dfe928bc8c2e2aaeccb63ac9a50fc2ef3bcc4a83ecceeb358639ae028639c542
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-5-10-upper-2484:
@@ -1774,7 +1774,7 @@ cage-7-7-upper-1096:
   date: '2026-11-11'
 cage-7-7-upper-640:
   sha256: 90db5b8dbcbbb2ac56899d402af5d24c416e6a836339e343420bf56091888977
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-7-8-lower-518:
@@ -1784,7 +1784,7 @@ cage-7-8-lower-518:
   date: '2026-11-08'
 cage-7-8-upper-672:
   sha256: e1a9a607b23b7ecd8057273e36c92176060e9c2d9eab75044925cb53f736eabf
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 cage-7-8-upper-686:
@@ -2339,7 +2339,7 @@ degree-diameter-10-3-lower-366:
   date: '2026-11-08'
 degree-diameter-10-3-lower-650:
   sha256: 8c17266331b25af4c8b28d0e31e61a5eabe05bc2f36e28821f05127f07b7210d
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-10-3-upper-911:
@@ -2354,7 +2354,7 @@ degree-diameter-10-4-lower-2041:
   date: '2026-11-11'
 degree-diameter-10-4-lower-2556:
   sha256: 09d5ed0ac4e376a00657e54f8190d103e0934b8dfba8553b4f115d109c960c66
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-10-4-upper-8201:
@@ -2424,7 +2424,7 @@ degree-diameter-11-10-upper-12222222222:
   date: '2026-11-11'
 degree-diameter-11-2-lower-106:
   sha256: cacf1d7fa239ee79227782824455dce23888d43f7794216c5da10778eae40569
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-11-2-lower-98:
@@ -2444,7 +2444,7 @@ degree-diameter-11-3-lower-420:
   date: '2026-11-08'
 degree-diameter-11-3-lower-715:
   sha256: 551190377c43b9f76ca868366ee7fb45455be034ca1b0e3adce3ec6548c2776c
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-11-3-upper-1222:
@@ -2459,7 +2459,7 @@ degree-diameter-11-4-lower-2500:
   date: '2026-11-11'
 degree-diameter-11-4-lower-3645:
   sha256: c8eda4cc6ae77539805917ef790ae1bcae40ec916fc418f276cb8c4d87bd7916
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-11-4-upper-12222:
@@ -2544,7 +2544,7 @@ degree-diameter-12-3-lower-558:
   date: '2026-11-08'
 degree-diameter-12-3-lower-810:
   sha256: b53c33b0446550ab420e49858b860ae880038087bf4d41e5df74494802f61147
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-12-3-upper-1597:
@@ -2559,7 +2559,7 @@ degree-diameter-12-4-lower-3976:
   date: '2026-11-11'
 degree-diameter-12-4-lower-6156:
   sha256: 2c12c263704841be5e7a75d33ca40074052710b007b09c7552c11a3f1b93f517
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-12-4-upper-17569:
@@ -2644,7 +2644,7 @@ degree-diameter-13-3-lower-630:
   date: '2026-11-08'
 degree-diameter-13-3-lower-972:
   sha256: 16fde9c9ed4465b5343300be0ccb82bcb0ffc71f69dd31494baa8bd91eb4145c
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-13-3-upper-2042:
@@ -2659,7 +2659,7 @@ degree-diameter-13-4-lower-4000:
   date: '2026-11-11'
 degree-diameter-13-4-lower-6804:
   sha256: e797d8bdb409515b56e864dbabad8e8a5b3a9a85b7b2d9e6400b78a3284187b7
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-13-4-upper-24506:
@@ -2739,7 +2739,7 @@ degree-diameter-14-2-upper-197:
   date: '2026-11-11'
 degree-diameter-14-3-lower-1201:
   sha256: 20e297fa4bb90ef6faf76a66e0063f21245a845cc835980ee1c1be6bbf3ca4f7
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-14-3-lower-791:
@@ -2829,7 +2829,7 @@ degree-diameter-15-2-lower-183:
   date: '2026-11-08'
 degree-diameter-15-2-lower-190:
   sha256: 1776d04daba59dfa7e32ec39ab6faa1d6af3bc765a92a37a64896322add07994
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-15-2-upper-226:
@@ -2839,7 +2839,7 @@ degree-diameter-15-2-upper-226:
   date: '2026-11-11'
 degree-diameter-15-3-lower-1620:
   sha256: 1959a9bbca1b982faf41f6a080ee6d602e5b21a8eba467a23184549943604349
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-15-3-lower-812:
@@ -2929,7 +2929,7 @@ degree-diameter-16-2-lower-183:
   date: '2026-11-08'
 degree-diameter-16-2-lower-216:
   sha256: 3eb4ae4a030533de0411e57734d5acd5b8fecc4f2c80d8c8dba26fb7c1a6d0b3
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-16-2-upper-257:
@@ -2944,7 +2944,7 @@ degree-diameter-16-3-lower-1055:
   date: '2026-11-08'
 degree-diameter-16-3-lower-1920:
   sha256: ddfe347bab82556c1d120a1f6cf694715f969cbf4e690d22e77966e03dc78ecd
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-16-3-upper-3857:
@@ -3374,7 +3374,7 @@ degree-diameter-20-9-upper-358541886421:
   date: '2026-11-11'
 degree-diameter-3-10-lower-1250:
   sha256: 3c183df71cfeaf6388496228cbb2253eb799b151b4008350524657839e8af5f9
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-3-10-lower-820:
@@ -3424,7 +3424,7 @@ degree-diameter-3-5-lower-64:
   date: '2026-11-08'
 degree-diameter-3-5-lower-70:
   sha256: 779651edc1b7b6d0bdabf4c6c55fb0d3d987cdd5bf12bef02a197aa179210d89
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-3-5-upper-94:
@@ -3434,7 +3434,7 @@ degree-diameter-3-5-upper-94:
   date: '2026-11-11'
 degree-diameter-3-6-lower-132:
   sha256: c235285b4df97c33e7e2dd612b7c49c3e95af249010ba5a84dee013baba5c2f8
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-3-6-lower-64:
@@ -3454,7 +3454,7 @@ degree-diameter-3-7-lower-162:
   date: '2026-11-08'
 degree-diameter-3-7-lower-200:
   sha256: b24f1e6827da4985c44194d131780896de71e87377f3a53ec87fbcd632f8eaef
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-3-7-upper-382:
@@ -3469,7 +3469,7 @@ degree-diameter-3-8-lower-272:
   date: '2026-11-08'
 degree-diameter-3-8-lower-360:
   sha256: 57d20bac608346a4efa950ad8b5be926c10a0f146b16174b9d92d885093b3166
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-3-8-upper-766:
@@ -3484,7 +3484,7 @@ degree-diameter-3-9-lower-506:
   date: '2026-11-08'
 degree-diameter-3-9-lower-600:
   sha256: 8e0f52a0cf0d39fe1b00606bdf6cefe3b09be7e82feeb0b4f4af9b38e272352a
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-3-9-upper-1534:
@@ -3524,7 +3524,7 @@ degree-diameter-4-3-upper-53:
   date: '2026-11-11'
 degree-diameter-4-4-lower-104:
   sha256: 7b5b3bed657bc8f6894f2c7cf56f301a50f0fae042c3f455bbb4b1fa79da82c9
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-4-4-lower-84:
@@ -3544,7 +3544,7 @@ degree-diameter-4-5-lower-205:
   date: '2026-11-08'
 degree-diameter-4-5-lower-364:
   sha256: 07b57aa569c354bc3f86dae9f50eab71a3324218e2a3bb5c47ff4cef21f8cea3
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-4-5-upper-485:
@@ -3559,7 +3559,7 @@ degree-diameter-4-6-lower-513:
   date: '2026-11-08'
 degree-diameter-4-6-lower-760:
   sha256: d417866718bf27b19068b07ac686879d3022fca3a35c1704f17495fe562722d4
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-4-6-upper-1457:
@@ -3574,7 +3574,7 @@ degree-diameter-4-7-lower-1155:
   date: '2026-11-08'
 degree-diameter-4-7-lower-1344:
   sha256: 7b761c7c2296b4a2c3ac103af3a1f5bead9b4768737cb79489784978f852e7e7
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-4-7-upper-4373:
@@ -3589,7 +3589,7 @@ degree-diameter-4-8-lower-2943:
   date: '2026-11-11'
 degree-diameter-4-8-lower-3243:
   sha256: 9dfb667576130fd90c19d56fd211451e0fe52a5dcb83e5292e00b02613076253
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-4-8-upper-13121:
@@ -3634,7 +3634,7 @@ degree-diameter-5-3-lower-54:
   date: '2026-11-08'
 degree-diameter-5-3-lower-72:
   sha256: 8263b0f837dc203d69ed08ef97728bc7da6492a933cae05b1cc43c578956d351
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-5-3-upper-106:
@@ -3649,7 +3649,7 @@ degree-diameter-5-4-lower-210:
   date: '2026-11-08'
 degree-diameter-5-4-lower-252:
   sha256: 34d650e5095e0eb367e599a2c00f7f490161f6192decc5ece7ee9c7601afbf19
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-5-4-upper-426:
@@ -3664,7 +3664,7 @@ degree-diameter-5-5-lower-506:
   date: '2026-11-08'
 degree-diameter-5-5-lower-650:
   sha256: f3857641041ce1cdf6c45e5598fa827d70b9216cf849c4de6ffcb5505624d53d
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-5-5-upper-1706:
@@ -3679,7 +3679,7 @@ degree-diameter-5-6-lower-1554:
   date: '2026-11-11'
 degree-diameter-5-6-lower-2836:
   sha256: d92bd3d0a85699ea88f6a452d280807627f4240d721dc35b5259cf39ae5f4341
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-5-6-upper-6826:
@@ -3694,7 +3694,7 @@ degree-diameter-5-7-lower-3996:
   date: '2026-11-11'
 degree-diameter-5-7-lower-6000:
   sha256: 6081072f1aa71d15dcde0cea5133daed2a7a5de1779a9f0b9e9f912d396a19a6
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-5-7-upper-27306:
@@ -3744,7 +3744,7 @@ degree-diameter-6-2-upper-37:
   date: '2026-11-11'
 degree-diameter-6-3-lower-120:
   sha256: 373a4bf7d72f0f374405ee1848570759e41f8a9aee3ce2beda614081f30ed4b2
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-6-3-lower-90:
@@ -3764,7 +3764,7 @@ degree-diameter-6-4-lower-355:
   date: '2026-11-08'
 degree-diameter-6-4-lower-441:
   sha256: b6efa2929a5b154a82efc10ac9af6cbe2d6da5a1ef3f87190a3d0416ab982b5d
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-6-4-upper-937:
@@ -3779,7 +3779,7 @@ degree-diameter-6-5-lower-1395:
   date: '2026-11-08'
 degree-diameter-6-5-lower-1518:
   sha256: f7d23440c4f362496807cb23f057f1407adb74338b678ba0ae086d0fc0694dcc
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-6-5-upper-4687:
@@ -3874,7 +3874,7 @@ degree-diameter-7-5-lower-2394:
   date: '2026-11-11'
 degree-diameter-7-5-lower-2810:
   sha256: a8c2ab86fac554d57f1e8334a60e74b8d9b890f021e4df975259f3e54cc75df3
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-7-5-upper-10886:
@@ -3959,7 +3959,7 @@ degree-diameter-8-4-lower-1029:
   date: '2026-11-08'
 degree-diameter-8-4-lower-1100:
   sha256: 8aaa2e41f9448e9b41401e7bb2d35d5cad1118f350edc055898a382eba12c0fa
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-8-4-upper-3201:
@@ -3974,7 +3974,7 @@ degree-diameter-8-5-lower-3955:
   date: '2026-11-11'
 degree-diameter-8-5-lower-5334:
   sha256: a07c0393c15add4efaffda4b4ec314e2c5187e58ab7cf793b0ba0d22ed11aac7
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-8-5-upper-22409:
@@ -4049,7 +4049,7 @@ degree-diameter-9-3-lower-256:
   date: '2026-11-08'
 degree-diameter-9-3-lower-585:
   sha256: c7178da7d153388163d79abae38d878dd9d07486050967878adebaf6a31c0e0b
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 degree-diameter-9-3-upper-658:
@@ -4489,7 +4489,7 @@ kissing-number-10-lower-336:
   date: '2026-11-08'
 kissing-number-10-lower-510:
   sha256: 8b5090347fc712144ada33bb809fa7e53de8439eb1bffec63d7ea7aea40d75ea
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 kissing-number-11-lower-438:
@@ -4604,7 +4604,7 @@ kissing-number-9-lower-272:
   date: '2026-11-08'
 kissing-number-9-lower-306:
   sha256: 920b77c21dad07e5a89bae650c4884a110685838569cba5a51f058ca25168a52
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 minimal-superpermutation-1-lower-1:
@@ -4662,6 +4662,11 @@ minimal-superpermutation-6-lower-725:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+minimal-superpermutation-6-upper-872:
+  sha256: 57c7dee5223e74a929337c35c33db8670590e0f7bc6b66e2836880763a080b52
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
+  verified_by: daniel-munro
+  date: '2026-11-14'
 minimal-superpermutation-6-upper-873:
   sha256: 4c56f1ac77e4954bad09b706587e16bdc5ec78bdbe9cf380eeba01b4c0ec90d5
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -4672,6 +4677,11 @@ minimal-superpermutation-7-lower-5046:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+minimal-superpermutation-7-upper-5906:
+  sha256: cd1e7df22b0ca75dc8c38d2f1102efdb5a44f106e6c9b5e980ba94c23006e717
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
+  verified_by: daniel-munro
+  date: '2026-11-14'
 minimal-superpermutation-7-upper-5913:
   sha256: 01389b9039e51b682443a945e882f5593e7c6cde0eafe1c4640b3358bd0b2f5d
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -4682,6 +4692,11 @@ minimal-superpermutation-8-lower-40327:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+minimal-superpermutation-8-upper-46173:
+  sha256: 1dcf29268c28f168ba26852c41f038c0f72d45b9bf64651908d5e5ab97e2fa39
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
+  verified_by: daniel-munro
+  date: '2026-11-14'
 minimal-superpermutation-8-upper-46233:
   sha256: d379de59de224017ebca4ec29dce305d2d8b55cd27c7076a034473404b8b58f7
   checker: 5af057d28c18484643637ed3cb84d61047407389
@@ -4692,6 +4707,11 @@ minimal-superpermutation-9-lower-362888:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+minimal-superpermutation-9-upper-408966:
+  sha256: 0b3732c83ce755921b10a4588e51f60dc6bc589f75c5fce4953d9f15c817b23c
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
+  verified_by: daniel-munro
+  date: '2026-11-14'
 minimal-superpermutation-9-upper-409113:
   sha256: 868564a0cf4a0b585df60512647ce44ecf707949100d42003351f0b741ec1eb0
   checker: 5af057d28c18484643637ed3cb84d61047407389
@@ -5579,7 +5599,7 @@ ramsey-3-10-lower-39:
   date: '2026-11-08'
 ramsey-3-10-lower-40:
   sha256: 9e592102006f687a2ba31e7f27ecd6ec6b5121d281cf2f57f4ca5bebb63b82e5
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-3-10-upper-51:
@@ -5594,7 +5614,7 @@ ramsey-3-11-lower-46:
   date: '2026-11-08'
 ramsey-3-11-lower-47:
   sha256: 778f02811448eba2deb5f714b1a8a8001943b3f21935f3e1dfc421f6cb731759
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-3-11-upper-62:
@@ -5609,7 +5629,7 @@ ramsey-3-12-lower-49:
   date: '2026-11-08'
 ramsey-3-12-lower-53:
   sha256: cb565d27548b209260563d90f44edd7771771ff67ac9b236f245d6d071b8287b
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-3-12-upper-73:
@@ -5624,7 +5644,7 @@ ramsey-3-13-lower-58:
   date: '2026-11-08'
 ramsey-3-13-lower-61:
   sha256: b62b15cf3a9efc6f879b3a8fcd260189930e47f64c60300d071760e06057e269
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-3-13-upper-86:
@@ -5649,7 +5669,7 @@ ramsey-3-15-lower-72:
   date: '2026-11-08'
 ramsey-3-15-lower-74:
   sha256: c0152c4f61e8baf687200aaae1db49fcba8c9a5f3e7a20a90569250821b4e0c2
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-3-15-upper-114:
@@ -5739,7 +5759,7 @@ ramsey-4-10-upper-200:
   date: '2026-11-11'
 ramsey-4-11-lower-102:
   sha256: 9ab4ea2d45ea04e22785a82b86be572b7709bccd4db0414f45e2baae187b3653
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-11-lower-94:
@@ -5769,7 +5789,7 @@ ramsey-4-13-lower-128:
   date: '2026-11-11'
 ramsey-4-13-lower-139:
   sha256: 57f196cd58c2973932114625aecb063c568da1799844eb713f52b7f4ebae609d
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-13-upper-419:
@@ -5784,7 +5804,7 @@ ramsey-4-14-lower-128:
   date: '2026-11-11'
 ramsey-4-14-lower-148:
   sha256: 9c93c54304e563da264e90c81162c018d218b128e24bb6b200333d8d772a3ac9
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-14-upper-518:
@@ -5799,7 +5819,7 @@ ramsey-4-15-lower-128:
   date: '2026-11-11'
 ramsey-4-15-lower-163:
   sha256: 83ca2708672baa72d3dfc13f1689eff82219ee7bc30ea7080518e565af10b9dc
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-15-upper-631:
@@ -5834,7 +5854,7 @@ ramsey-4-6-lower-34:
   date: '2026-11-08'
 ramsey-4-6-lower-36:
   sha256: 628b9ff06c996bfe8fb4520c4cfcb7cf1a009b0e4e8a434d7b3fc7c13637ad90
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-6-upper-50:
@@ -5849,7 +5869,7 @@ ramsey-4-7-lower-47:
   date: '2026-11-08'
 ramsey-4-7-lower-49:
   sha256: 06cb029c842fda39a1d9bffc048dd124813e0f48a5eeb2bed934872471cef0f8
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-7-upper-75:
@@ -5864,7 +5884,7 @@ ramsey-4-8-lower-52:
   date: '2026-11-08'
 ramsey-4-8-lower-59:
   sha256: 288e1c241505f10554a452f5d6c0958580942078ef802e5d38678c53008b06b0
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-4-8-upper-108:
@@ -5884,7 +5904,7 @@ ramsey-4-9-upper-149:
   date: '2026-11-11'
 ramsey-5-10-lower-149:
   sha256: 3f2729f0410be7b672e4796c7173d88a450be8fce82ed2c8d114cd7cf99bbdb4
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-10-lower-98:
@@ -5904,7 +5924,7 @@ ramsey-5-11-lower-140:
   date: '2026-11-11'
 ramsey-5-11-lower-183:
   sha256: b4497ce825059c1adbcaa70e02236fefc21f2cdccc0b4970782a12bbad44f28f
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-11-upper-902:
@@ -5919,7 +5939,7 @@ ramsey-5-12-lower-140:
   date: '2026-11-11'
 ramsey-5-12-lower-203:
   sha256: 6590ec09e236bf10dda5e5bf1e5a58f18e2ffe8f750cb9ee610a3795c2fab656
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-12-upper-1235:
@@ -5934,7 +5954,7 @@ ramsey-5-13-lower-158:
   date: '2026-11-11'
 ramsey-5-13-lower-233:
   sha256: 85d0d0b306f5d98787857027e6f156a716723684c122afd960c1024b7ac0bac2
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-13-upper-1654:
@@ -5949,7 +5969,7 @@ ramsey-5-14-lower-202:
   date: '2026-11-11'
 ramsey-5-14-lower-267:
   sha256: 119fc1094379f69b8c4f5e1eef72fb34d551888ed39044e3754f9eab19903c6a
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-14-upper-2171:
@@ -5979,7 +5999,7 @@ ramsey-5-5-lower-42:
   date: '2026-11-08'
 ramsey-5-5-lower-43:
   sha256: 8b24b824a28c186787192e6517c6e978ad9f897b088dde072c4b9c251cd4d00c
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-5-upper-62:
@@ -5994,7 +6014,7 @@ ramsey-5-6-lower-54:
   date: '2026-11-08'
 ramsey-5-6-lower-58:
   sha256: 30369453bfd37a3f6da2f7ee5b22f7290493c8fa5b4fed00b3756d87703250a0
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-6-upper-111:
@@ -6024,7 +6044,7 @@ ramsey-5-8-upper-293:
   date: '2026-11-11'
 ramsey-5-9-lower-133:
   sha256: 259a7b743a55d596ca1db5a5c616093dc8bd7e7e783cc7c5729c59bddb6bbb3d
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-5-9-lower-87:
@@ -6044,7 +6064,7 @@ ramsey-6-10-lower-149:
   date: '2026-11-11'
 ramsey-6-10-lower-204:
   sha256: fb44954c3533924aba6e8e394103b84ffd97dd2b53c709d165e9a7568f7a2058
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-6-10-upper-1782:
@@ -6069,7 +6089,7 @@ ramsey-6-12-lower-230:
   date: '2026-11-11'
 ramsey-6-12-lower-294:
   sha256: 23ed984f76b8bce7da71c0cc1ae798b75a703bd25d60debee5ad65cfacbdc947
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-6-12-upper-3918:
@@ -6084,7 +6104,7 @@ ramsey-6-13-lower-262:
   date: '2026-11-11'
 ramsey-6-13-lower-334:
   sha256: 4dc99435f6d59e152ba9d462dea6d261c691d3ae1027402e365bbf4c58ac9ccf
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-6-13-upper-5571:
@@ -6129,7 +6149,7 @@ ramsey-6-7-lower-102:
   date: '2026-11-11'
 ramsey-6-7-lower-115:
   sha256: 0773fa3a960423fef8790861fd4199281cec5d14de31691cfc8dca1ce16a67d5
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-6-7-upper-407:
@@ -6144,7 +6164,7 @@ ramsey-6-8-lower-117:
   date: '2026-11-11'
 ramsey-6-8-lower-134:
   sha256: 7c7f3df86adf13c321f7a30b5b4b6387185987f7a53904a9488c739d47921db0
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-6-8-upper-700:
@@ -6159,7 +6179,7 @@ ramsey-6-9-lower-149:
   date: '2026-11-11'
 ramsey-6-9-lower-183:
   sha256: 58f63c9ad24611d6282f42b06fd841024f5fefb32f8697b6bb489fbce28cc98f
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-6-9-upper-1141:
@@ -6174,7 +6194,7 @@ ramsey-7-10-lower-203:
   date: '2026-11-11'
 ramsey-7-10-lower-292:
   sha256: 66ffaa301a6f67710eb54e212427076fa7abe52c0afecfcfe0a3234faf60d5c2
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-7-10-upper-4435:
@@ -6249,7 +6269,7 @@ ramsey-7-8-lower-203:
   date: '2026-11-11'
 ramsey-7-8-lower-219:
   sha256: 9be01b647c5f229063b4b64a8c5a9e62839889d43a6936f0eabe86ad28d5780d
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-7-8-upper-1513:
@@ -6264,7 +6284,7 @@ ramsey-7-9-lower-203:
   date: '2026-11-11'
 ramsey-7-9-lower-252:
   sha256: 6090265862578ec0dadc672879d59faa3cd937ed9f914392b3481e8124ec09e7
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-7-9-upper-2654:
@@ -6279,7 +6299,7 @@ ramsey-8-10-lower-306:
   date: '2026-11-11'
 ramsey-8-10-lower-343:
   sha256: 5d1449f15617a8d10a4fd904331c1bb8767f151e4ef32d7e3aee6fc9d48ac0f8
-  checker: 676666ea0a08a46fa4a675951bb919da2f6dfb73
+  checker: 87539d40b795e76fec6ade609f9ca099b926dac9
   verified_by: daniel-munro
   date: '2026-11-14'
 ramsey-8-10-upper-10114:

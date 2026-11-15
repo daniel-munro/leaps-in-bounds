@@ -1,0 +1,11 @@
+constant: minimal-superpermutation-7
+bound: upper
+value: 5906
+kind: witness
+witness:
+  format: string
+  file: minimal-superpermutation-7-upper-5906.txt
+submitted_by: daniel-munro
+date: 2026-11-14
+source: houston-egan-2019
+notes: https://github.com/superpermutators/superperm/blob/1922a3486a1a06040230b3e69f365a46e79ab2f2/superpermutations/7/7_5906/7_5906_nsk666646664466646666_2SYMM_FS.txt, from the superpermutators repository (also on Greg Egan's site). Imported by an AI agent (Claude).

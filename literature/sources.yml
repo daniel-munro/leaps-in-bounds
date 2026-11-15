@@ -3818,3 +3818,22 @@ tedeschi-2021:
   date: "2021-09"
   doi: "https://doi.org/10.33697/ajur.2021.042"
   added_by: daniel-munro
+
+superperm-repo-2026-07-26:
+  string: "n=8 superpermutation of length 46204 from Uku Raudvere, added to the superpermutators/superperm GitHub repository (superpermutations/8/46204-raudvere.txt) on 2026-07-26."
+  date: "2026-07-26"
+  url: "https://github.com/superpermutators/superperm/commit/1d7420c7a3f41d4d7e13f581124a948d85a12145"
+  added_by: daniel-munro
+
+superperm-repo-2026-09-29:
+  string: "n=8 superpermutation of length 46188, added by GitHub user rumstd to the superpermutators/superperm GitHub repository (superpermutations/8/superperm8_46188.txt) on 2026-09-29."
+  date: "2026-09-29"
+  url: "https://github.com/superpermutators/superperm/commit/5f2a1d744dff88a09dbe0fb675f0d8774e1ce5e4"
+  added_by: daniel-munro
+
+superperm-repo-2026-10-22:
+  string: "n=8 superpermutations of length 46173 and 46174, added by J. Halfar (GitHub jhalfar) to the superpermutators/superperm GitHub repository (superpermutations/8/46173-theo.txt) on 2026-10-22."
+  date: "2026-10-22"
+  url: "https://github.com/superpermutators/superperm/commit/db1afd3b70f1f8c3bccd5cb996aa5c6c855d0256"
+  notes: "The commit doesn't say who found the length-46173 superpermutation; its file name credits \"theo\"."
+  added_by: daniel-munro

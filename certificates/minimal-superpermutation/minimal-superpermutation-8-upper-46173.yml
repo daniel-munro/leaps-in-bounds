@@ -1,0 +1,11 @@
+constant: minimal-superpermutation-8
+bound: upper
+value: 46173
+kind: witness
+witness:
+  format: string
+  file: minimal-superpermutation-8-upper-46173.txt
+submitted_by: daniel-munro
+date: 2026-11-14
+source: superperm-repo-2026-10-22
+notes: https://github.com/superpermutators/superperm/blob/1922a3486a1a06040230b3e69f365a46e79ab2f2/superpermutations/8/46173-theo.txt, from the superpermutators repository. Imported by an AI agent (Claude).
