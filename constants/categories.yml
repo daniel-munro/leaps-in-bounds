@@ -48,6 +48,7 @@
   families:
     - affine-line-arrangements
     - affine-line-arrangements-general-position
+    - chromatic-number-space
     - circle-in-equilateral
     - disk-covering
     - isosceles-set

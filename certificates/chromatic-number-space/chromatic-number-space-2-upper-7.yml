@@ -1,0 +1,26 @@
+constant: chromatic-number-space-2
+bound: upper
+value: 7
+kind: lean
+lean:
+  url: https://github.com/openai/math/blob/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean/OAI/Geometry/PlaneColoring/Seven.lean
+  theorem: OAI.Problem160.properColoring_seven
+submitted_by: daniel-munro
+date: 2026-11-14
+source: isbell-1950
+notes: >-
+  OpenAI's Lean proof of Isbell's 7-coloring of the plane, by the index-7 sublattice of the triangular lattice,
+  with boundary points included. Its statement, in ComparatorChallenges/PlaneColoring.lean, is
+  ∃ c : Plane → Fin 7, ∀ x y : Plane, dist x y = 1 → c x ≠ c y with Plane := EuclideanSpace ℝ (Fin 2), which is
+  UpperBound 2 7 here by definition (checked with Iff.rfl against LeapsInBounds.Statements.ChromaticNumberSpace
+  when this was added). Built on another Lean and Mathlib version (v4.34.1) than the proofs here.
+attestation:
+  by: punk01-shaka (independent audit of OpenAI's proofs)
+  checker: https://github.com/punk01-shaka/hadwiger-nelson-audit/blob/3b57feb116e84228598e5217751d2b0d7f965536/comparator-audit.json
+  evidence: https://github.com/punk01-shaka/hadwiger-nelson-audit/blob/3b57feb116e84228598e5217751d2b0d7f965536/Solution.lean
+  command: lake exe cache get && lake env comparator comparator-audit.json
+  notes: >-
+    The audit's plane_seven_colorable, a Mathlib-only statement on the complex plane, is proved in Solution.lean
+    from OAI.Problem160.properColoring_seven, so Comparator and the nanoda kernel checked this theorem along
+    with it, using only propext, Quot.sound and Classical.choice. OpenAI's own Comparator config for it
+    (ComparatorChallenges/PlaneColoring.json) checks the statement with no definitions left open.

@@ -101,6 +101,8 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
             check_attestation(cert["attestation"], path)
         if cert["kind"] == "witness":
             check_witness_source(cert, path)
+        else:
+            check_lean_source(cert, path)
         cert["approx"] = value_approx(cert["value"], path)
         cert["id"] = cert_id
         cert["path"] = str(path)
@@ -149,6 +151,34 @@ def check_witness_source(cert: Mapping[str, Any], path: Any) -> None:
         raise CertificateError(f"{path}: witness sha256 is only for a witness given by url")
 
 
+def check_lean_source(cert: Mapping[str, Any], path: Any) -> None:
+    """Check that a Lean proof names its theorem and gives exactly one of a
+    module here (under formal/) or, for an attested certificate only, a link
+    to the proof elsewhere, pinned to a commit: one too large to keep here,
+    checked by someone else."""
+    lean = cert["lean"]
+    if not isinstance(lean, dict):
+        raise CertificateError(f"{path}: lean must be a mapping")
+    if not lean.get("theorem"):
+        raise CertificateError(f"{path}: lean needs a theorem")
+    sources = [key for key in ["module", "url"] if key in lean]
+    if len(sources) != 1:
+        raise CertificateError(f"{path}: lean needs exactly one of 'module' or 'url'")
+    if "url" in lean:
+        if "attestation" not in cert:
+            raise CertificateError(
+                f"{path}: a Lean proof given by url can't be checked here, so the certificate needs an attestation"
+            )
+        if not PINNED_URL.search(str(lean["url"])):
+            raise CertificateError(f"{path}: lean url must be a URL pinned to a commit (a full 40-character hash)")
+
+
+def is_external(cert: Mapping[str, Any]) -> bool:
+    """Whether a certificate's evidence is only linked, not kept here: a
+    witness or Lean proof given by url. These can only be attested."""
+    return "url" in cert[cert["kind"]]
+
+
 ############
 # Manifest #
 ############
@@ -164,6 +194,8 @@ def evidence_files(cert: Mapping[str, Any]) -> list[pathlib.Path]:
     if cert["kind"] == "witness":
         file = cert["witness"].get("file")
         return [pathlib.Path(cert["path"]).parent / file] if file else []
+    if "url" in cert["lean"]:
+        return []
     files = []
     pending = [cert["lean"]["module"]]
     seen = set()
@@ -1790,6 +1822,15 @@ def general_line_arrangement_check_witness(params: Mapping[str, int], bound: str
 
 
 # Keyed by family ID.
+def chromatic_number_space_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "LowerBound" if bound == "lower" else "UpperBound"
+    return f"LeapsInBounds.ChromaticNumberSpace.{name}", [params['n'], value]
+
+
+def chromatic_number_space_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    raise CertificateError("Bounds on the chromatic number of Euclidean space can only be certified by Lean proofs so far")
+
+
 FAMILIES = {
     "ramsey": Family(
         id_pattern=re.compile(r"ramsey-(?P<r>\d+)-(?P<s>\d+)"),
@@ -1947,6 +1988,13 @@ FAMILIES = {
         check_witness=rectilinear_crossing_check_witness,
         witness_bound="upper",
     ),
+    "chromatic-number-space": Family(
+        id_pattern=re.compile(r"chromatic-number-space-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.ChromaticNumberSpace",
+        lean_statement=chromatic_number_space_lean_statement,
+        check_witness=chromatic_number_space_check_witness,
+        witness_bound=None,
+    ),
 }
 
 
@@ -1978,6 +2026,9 @@ def check_lean(certs: list[Mapping[str, Any]], build: bool = True) -> dict[str, 
     errors = {}
     entries = []
     for cert in certs:
+        if "url" in cert["lean"]:
+            errors[cert["id"]] = "the Lean proof is linked from elsewhere, so it can't be checked here"
+            continue
         module = cert["lean"]["module"]
         if not module.startswith("LeapsInBounds.Proofs."):
             errors[cert["id"]] = "Lean proofs must live under LeapsInBounds.Proofs"

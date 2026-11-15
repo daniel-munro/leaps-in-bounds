@@ -1326,6 +1326,122 @@ def render_line_arrangements(constant_id: str, n: int, general: bool) -> Svg | N
     return svg
 
 
+#######################################
+# Chromatic number of Euclidean space #
+#######################################
+
+HEX_R = 0.45  # circumradius of the hexagons in Isbell's coloring, so diameter 0.9 < 1
+SEVEN = PALETTE + ["#7e6bb0"]  # seven colors for the hexagons
+
+
+def hex_center(q: int, s: int) -> tuple[float, float]:
+    """The center of the pointy-top hexagon at axial coordinates (q, s)."""
+    return (HEX_R * math.sqrt(3) * (q + s / 2), HEX_R * 1.5 * s)
+
+
+def hex_corners(q: int, s: int) -> list[tuple[float, float]]:
+    cx, cy = hex_center(q, s)
+    return [(cx + HEX_R * math.cos(math.radians(90 + 60 * k)), cy + HEX_R * math.sin(math.radians(90 + 60 * k))) for k in range(6)]
+
+
+def hex_color(q: int, s: int) -> int:
+    """The color of a hexagon: the same-colored ones form the sublattice
+    spanned by (1, 2) and (-3, 1), centers sqrt(21) circumradii apart."""
+    return (q + 3 * s) % 7
+
+
+def hex_at(p: Sequence[float]) -> tuple[int, int]:
+    """The hexagon containing a point (by cube rounding)."""
+    fq = (math.sqrt(3) / 3 * p[0] - p[1] / 3) / HEX_R
+    fs = (2 / 3 * p[1]) / HEX_R
+    fz = -fq - fs
+    q, s, z = round(fq), round(fs), round(fz)
+    dq, ds, dz = abs(q - fq), abs(s - fs), abs(z - fz)
+    if dq > ds and dq > dz:
+        q = -s - z
+    elif ds > dz:
+        s = -q - z
+    return q, s
+
+
+def segment_distance(p: Sequence[float], a: Sequence[float], b: Sequence[float]) -> float:
+    ax, ay, bx, by = a[0], a[1], b[0], b[1]
+    t = max(0.0, min(1.0, ((p[0] - ax) * (bx - ax) + (p[1] - ay) * (by - ay)) / ((bx - ax) ** 2 + (by - ay) ** 2)))
+    return math.dist(p, (ax + t * (bx - ax), ay + t * (by - ay)))
+
+
+def polygon_distance(a: Sequence[Sequence[float]], b: Sequence[Sequence[float]]) -> float:
+    """The distance between two disjoint convex polygons: the least distance
+    from a vertex of one to an edge of the other."""
+    return min(segment_distance(p, *edge)
+               for poly, other in ((a, b), (b, a)) for p in poly
+               for edge in zip(other, list(other[1:]) + [other[0]]))
+
+
+def moser_spindle(angle: float = 0.0) -> tuple[list[tuple[float, float]], list[tuple[int, int]]]:
+    """The Moser spindle: two rhombi of two unit equilateral triangles sharing
+    a vertex, turned so that their far tips are a unit apart."""
+    turn = 2 * math.asin(1 / (2 * math.sqrt(3)))
+    pos = [(0.0, 0.0)]
+    edges = []
+    for k, phi in enumerate((angle, angle + turn)):
+        b, c, d = 1 + 3 * k, 2 + 3 * k, 3 + 3 * k
+        pos += [(math.cos(phi - math.pi / 6), math.sin(phi - math.pi / 6)),
+                (math.cos(phi + math.pi / 6), math.sin(phi + math.pi / 6)),
+                (math.sqrt(3) * math.cos(phi), math.sqrt(3) * math.sin(phi))]
+        edges += [(0, b), (0, c), (b, c), (b, d), (c, d)]
+    edges.append((3, 6))
+    return pos, edges
+
+
+def chromatic_number(n: int, edges: Sequence[tuple[int, int]]) -> int:
+    """The chromatic number of a small graph, by brute force."""
+    for k in itertools.count(1):
+        if any(all(colors[i] != colors[j] for i, j in edges) for colors in itertools.product(range(k), repeat=n)):
+            return k
+    raise AssertionError
+
+
+def render_chromatic_space(constant_id: str, n: int) -> Svg | None:
+    """For the plane: Isbell's coloring by hexagons of diameter just under
+    1 in seven colors, so no two points a unit apart share a color, with a
+    Moser spindle laid on it, a unit-distance graph that needs four colors."""
+    if n != 2:
+        return None
+    # Hexagons have diameter under 1, and same-colored ones are over 1 apart
+    check(2 * HEX_R < 1, f"{constant_id}: hexagons too wide")
+    same = [(q, s) for q in range(-4, 5) for s in range(-4, 5) if (q, s) != (0, 0) and hex_color(q, s) == hex_color(0, 0)]
+    gap = min(polygon_distance(hex_corners(0, 0), hex_corners(q, s)) for q, s in same)
+    check(gap > 1, f"{constant_id}: same-colored hexagons {gap:.3f} apart")
+    pos, edges = moser_spindle(math.radians(-4))
+    check(all(abs(math.dist(pos[i], pos[j]) - 1) < 1e-12 for i, j in edges), f"{constant_id}: spindle edges aren't unit")
+    check(chromatic_number(len(pos), edges) == 4, f"{constant_id}: spindle isn't 4-chromatic")
+    # Place the spindle in the middle of the drawing, away from hexagon edges
+    xs, ys = [p[0] for p in pos], [p[1] for p in pos]
+    shift = (-(min(xs) + max(xs)) / 2 - 0.1, -(min(ys) + max(ys)) / 2 - 0.02)
+    pos = [(x + shift[0], y + shift[1]) for x, y in pos]
+    cells = [hex_at(p) for p in pos]
+    for p, (q, s) in zip(pos, cells):
+        inner = HEX_R * math.sqrt(3) / 2  # inradius
+        corners = hex_corners(q, s)
+        margin = min(segment_distance(p, a, b) for a, b in zip(corners, corners[1:] + corners[:1]))
+        check(margin > 0.25 * inner, f"{constant_id}: spindle vertex too near a hexagon's edge")
+    check(all(hex_color(*cells[i]) != hex_color(*cells[j]) for i, j in edges), f"{constant_id}: coloring isn't proper on the spindle")
+    w, h = 1.45, 1.2
+    svg = Svg(-w, -h, w, h)
+    svg.defs.append(f'<clipPath id="plane"><rect{attrs(x=svg.x(-w), y=svg.y(h), width=2 * w * svg.scale, height=2 * h * svg.scale, rx=6)}/></clipPath>')
+    tiles = []
+    for q in range(-6, 7):
+        for s in range(-5, 6):
+            cx, cy = hex_center(q, s)
+            if abs(cx) < w + HEX_R and abs(cy) < h + HEX_R:
+                tiles.append(svg.polygon(hex_corners(q, s), fill=SEVEN[hex_color(q, s)]))
+    svg.add(svg.group(tiles, clip_path="url(#plane)", fill_opacity=0.45, stroke="white", stroke_width=1.5))
+    svg.add(svg.group((svg.line(pos[i], pos[j]) for i, j in edges), stroke=INK, stroke_width=2, stroke_linecap="round"))
+    svg.add(svg.group((svg.circle(p, 6 / svg.scale, fill=SEVEN[hex_color(*c)]) for p, c in zip(pos, cells)), stroke="white", stroke_width=2))
+    return svg
+
+
 ############
 # Families #
 ############
@@ -1362,6 +1478,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "no-three-in-line": ("no-three-in-line-", lambda c: render_no_three_in_line(c, *ints(c, "no-three-in-line-"))),
     "isosceles-set": ("isosceles-set-", lambda c: render_isosceles_set(c, *ints(c, "isosceles-set-"))),
     "rectilinear-crossing": ("rectilinear-crossing-", lambda c: render_rectilinear_crossing(c, *ints(c, "rectilinear-crossing-"))),
+    "chromatic-number-space": ("chromatic-number-space-", lambda c: render_chromatic_space(c, *ints(c, "chromatic-number-space-"))),
 }
 
 

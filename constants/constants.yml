@@ -1511,3 +1511,8 @@ multicolor-ramsey-triangle-3:
   image:
     generated: multicolor-ramsey-triangle-3.svg
     alt_text: "Coloring of the edges of the complete graph on 16 vertices with three colors and no monochromatic triangle, drawn one color at a time"
+
+chromatic-number-space-2:
+  image:
+    generated: chromatic-number-space-2.svg
+    alt_text: "Isbell's coloring of the plane by hexagons of diameter just under 1 in seven colors, so no two points a unit apart share a color, with a Moser spindle on it, a graph of unit edges that needs four colors"

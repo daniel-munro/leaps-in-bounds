@@ -476,3 +476,20 @@ multicolor-ramsey-triangle:
   parameters: [k]
   parameter_values: [[[3, 9]]]
   added_by: daniel-munro
+
+chromatic-number-space:
+  name: "Chromatic number of Euclidean space"
+  description: "The chromatic number $\\chi(\\mathbb{R}^n)$ of $n$-dimensional Euclidean space is the fewest colors needed to color the points of $\\mathbb{R}^n$ so that no two points at distance exactly 1 have the same color. For the plane, finding it is the Hadwiger–Nelson problem. By the de Bruijn–Erdős theorem, it is the largest chromatic number of a finite unit-distance graph in $\\mathbb{R}^n$ (assuming the axiom of choice), so lower bounds come from such graphs that can't be colored with fewer colors, and upper bounds from colorings of the whole space, often by tiling it with cells of diameter just under 1."
+  external_ids:
+    mathworld: Hadwiger-NelsonProblem
+    msc: 52C10
+    wikidata: Q1383936
+    wikipedia_en: Hadwiger–Nelson_problem
+  display_type: sequence
+  representative_image: chromatic-number-space-2
+  id_template: "chromatic-number-space-{n}"
+  name_template: "Chromatic number $\\chi(\\mathbb{{R}}^{{{n}}})$"
+  description_template: "The fewest colors needed to color the points of $\\mathbb{{R}}^{{{n}}}$ so that no two points at distance exactly 1 have the same color."
+  parameters: [n]
+  parameter_values: [[[2, 12]]]
+  added_by: daniel-munro

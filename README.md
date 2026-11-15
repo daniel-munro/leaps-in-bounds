@@ -28,7 +28,7 @@ In short: edit `constants/`, `literature/` or `certificates/` → run the build/
 Each constant has a history of bounds, each improving on the ones before. Two things are recorded for each bound:
 
 - **Discovery:** the first record of it, with its date and who it's credited to. That's a source from the literature (a row in `literature/bounds/` citing it), or a certificate submitted here when no earlier record has a bound as strong.
-- **Best evidence:** the strongest support for it, which can improve over time. A certificate whose evidence has been checked here is **verified**: an explicit construction checked by a program, or a formal proof in Lean. Evidence too slow to check here, or too large to keep here, can be **attested** instead, by someone who checked it with a checker they published. Without a certificate, the evidence is the literature. A certificate for a stronger bound is evidence for the weaker ones too.
+- **Best evidence:** the strongest support for it, which can improve over time. A certificate whose evidence has been checked here is **verified**: an explicit construction checked by a program, or a formal proof in Lean. Evidence too slow to check here, or too large to keep here, can be **attested** instead, by someone who checked it with a checker they published: a large witness linked from elsewhere, say, or a Lean proof built on its own library. Without a certificate, the evidence is the literature. A certificate for a stronger bound is evidence for the weaker ones too.
 
 Sources and certificates are independent records, matched by the bound they give: `scripts/process_data.py` uses the earlier record as the discovery and the strongest as the evidence.
 
@@ -41,7 +41,7 @@ The certificates and the tools around them:
 - `scripts/verify_certificates.py`: Runs the checkers on certificates' evidence and records those that pass in the manifest. A maintainer runs it before merging new certificates.
 - `scripts/check_certificates.py`: Checks that every certificate is well formed, consistent with the others and the literature, and verified or attested. CI runs it on pull requests, without running the checkers.
 
-So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle, Schur and weak Schur numbers, multicolor Ramsey numbers for triangles, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, cap sets, the no-three-in-line problem, isosceles sets, the size and depth of sorting networks, and the rectilinear crossing number of complete graphs.
+So far, certificates are accepted for Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle, Schur and weak Schur numbers, multicolor Ramsey numbers for triangles, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, cap sets, the no-three-in-line problem, isosceles sets, the size and depth of sorting networks, the rectilinear crossing number of complete graphs, and the chromatic number of Euclidean space.
 
 ## Images
 

@@ -40,6 +40,7 @@ from certificates import (
     check_lean,
     check_witness,
     evidence_hash,
+    is_external,
     load_certificates,
     load_manifest,
     write_manifest,
@@ -111,6 +112,9 @@ def main() -> None:
         unknown = [i for i in args.ids if i not in certificates]
         if unknown:
             sys.exit(f"Unknown certificates: {', '.join(unknown)}")
+        external = [i for i in args.ids if is_external(certificates[i])]
+        if external:
+            sys.exit(f"Their evidence is only linked from elsewhere, so they can only be attested: {', '.join(external)}")
         targets = args.ids
     else:
         targets = []

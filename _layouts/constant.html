@@ -123,10 +123,14 @@ layout: default
                 <br>{% include record_link.html certificate=cert %}, {{ cert.date }}
               {% endif %}
               {% if cert.attestation %}
-                <br><span class="text-muted">[checked by {{ cert.attestation.by }} with <a href="{{ cert.attestation.checker }}">their checker</a>, not yet here]</span>
+                {% if cert.lean_url %}
+                  <br><span class="text-muted">[<a href="{{ cert.lean_url }}">Lean proof</a> checked by {{ cert.attestation.by }} with <a href="{{ cert.attestation.checker }}">their checker</a>, not here]</span>
+                {% else %}
+                  <br><span class="text-muted">[checked by {{ cert.attestation.by }} with <a href="{{ cert.attestation.checker }}">their checker</a>, not yet here]</span>
+                {% endif %}
               {% endif %}
               {% if cert.source %}
-                <br><span class="text-muted">[construction from {% include record_link.html source=cert.source %}]</span>
+                <br><span class="text-muted">[{% if cert.kind == "lean" %}proof{% else %}construction{% endif %} from {% include record_link.html source=cert.source %}]</span>
               {% endif %}
             {% endif %}
           {% endif %}

@@ -1,0 +1,30 @@
+constant: chromatic-number-space-2
+bound: lower
+value: 6
+kind: lean
+lean:
+  url: https://github.com/punk01-shaka/hadwiger-nelson-audit/blob/3b57feb116e84228598e5217751d2b0d7f965536/Solution.lean
+  theorem: euclidean_plane_not_five_colorable
+submitted_by: daniel-munro
+date: 2026-11-14
+source: openai-2026-plane
+notes: >-
+  OpenAI's Lean proof (OAI.EuclideanFiveColor.no_proper_five_coloring in OAI/Geometry/PlaneColoring/Five.lean of
+  openai/math at fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb, with its 70-file import closure) that no coloring of the plane with five colors is proper,
+  with no assumption on the color classes. It is too large to keep here and built on another Lean and Mathlib
+  version (v4.34.1). The cited theorem is the audit's transport of it from the complex plane to
+  EuclideanSpace ℝ (Fin 2), stated in a file importing only Mathlib, as
+  ¬ ∃ c : EuclideanSpace ℝ (Fin 2) → Fin 5, ∀ x y, dist x y = 1 → c x ≠ c y, which is LowerBound 2 6 here by
+  definition (checked with Iff.rfl against LeapsInBounds.Statements.ChromaticNumberSpace when this was added).
+attestation:
+  by: punk01-shaka (independent audit of OpenAI's proof)
+  checker: https://github.com/punk01-shaka/hadwiger-nelson-audit/blob/3b57feb116e84228598e5217751d2b0d7f965536/comparator-audit.json
+  evidence: https://github.com/punk01-shaka/hadwiger-nelson-audit/blob/3b57feb116e84228598e5217751d2b0d7f965536/Challenge.lean
+  command: lake exe cache get && lake build Audit && lake env comparator comparator-audit.json
+  notes: >-
+    Checked three ways in AUDIT.md: lake build with #print axioms; Lean FRO's Comparator, which checks that
+    Solution.lean proves exactly the Mathlib-only statements in Challenge.lean and replays the export in the Lean
+    kernel; and the independent nanoda kernel (82,323 declarations). Only propext, Quot.sound and
+    Classical.choice are used. The 78 OpenAI files are byte-identical to openai/math at fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb. The audit also
+    found that OpenAI's own Comparator config for this result leaves the definition of a proper coloring
+    unchecked, which its Mathlib-only restatement avoids.
