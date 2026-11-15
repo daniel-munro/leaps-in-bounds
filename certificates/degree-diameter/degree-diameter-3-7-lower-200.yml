@@ -1,0 +1,14 @@
+constant: degree-diameter-3-7
+bound: lower
+value: 200
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-3-7-lower-200.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-10
+notes: >-
+  A graph on 200 vertices with maximum degree 3 and diameter 7, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD7/deg3-dia7-n200.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

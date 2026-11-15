@@ -1,0 +1,14 @@
+constant: degree-diameter-12-4
+bound: lower
+value: 6156
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-12-4-lower-6156.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-10
+notes: >-
+  A graph on 6156 vertices with maximum degree 12 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/deg12-dia4-n6156.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

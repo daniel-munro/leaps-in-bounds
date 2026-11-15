@@ -1,0 +1,14 @@
+constant: degree-diameter-10-4
+bound: lower
+value: 2556
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-10-4-lower-2556.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: rajiv-2026-10
+notes: >-
+  A graph on 2556 vertices with maximum degree 10 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/graph_d10_k4_n2556.edges from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

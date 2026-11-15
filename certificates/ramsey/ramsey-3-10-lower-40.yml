@@ -1,0 +1,14 @@
+constant: ramsey-3-10
+bound: lower
+value: 40
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-3-10-lower-40.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-1989c
+notes: >-
+  Downloaded from Geoffrey Exoo's Ramsey constructions page (https://isu.indstate.edu/ge/RAMSEY/g310.39, linked
+  from r.3.10.html): a 0-1 adjacency matrix of a 2-coloring of K39, whose color-0 graph (the complement of the
+  matrix's 1-entries) is given here. It has no triangle and no independent set of size 10.

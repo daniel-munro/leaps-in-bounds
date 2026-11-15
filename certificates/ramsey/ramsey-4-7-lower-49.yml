@@ -1,0 +1,14 @@
+constant: ramsey-4-7
+bound: lower
+value: 49
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-4-7-lower-49.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-1989a
+notes: >-
+  Downloaded from Geoffrey Exoo's Ramsey constructions page (https://isu.indstate.edu/ge/RAMSEY/g47.48, linked
+  from r.4.7.html): a 0-1 adjacency matrix of a 2-coloring of K48, whose color-0 graph (the complement of the
+  matrix's 1-entries) is given here. It has no 4-clique and no independent set of size 7.

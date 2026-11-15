@@ -1,0 +1,15 @@
+constant: ramsey-5-11
+bound: lower
+value: 183
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-5-11-lower-183.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_182 with connection set {4, 5, 7, 13, 21, 22, 29, 30, 31, 36, 39, 40, 43, 48, 50, 54, 61,
+  63, 64, 65, 66, 68, 70, 74, 75, 77, 80, 81, 82, 83, 84, 87, 88, 91}, from Kuznetsov's arXiv preprint
+  1505.07186 (Table 2 of the LaTeX source and the graph list in the accompanying review.py, downloaded from
+  arXiv). It has no 5-clique and no independent set of size 11.

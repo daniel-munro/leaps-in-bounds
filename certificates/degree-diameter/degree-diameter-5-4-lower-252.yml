@@ -1,0 +1,14 @@
+constant: degree-diameter-5-4
+bound: lower
+value: 252
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-5-4-lower-252.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: rajiv-2026-09b
+notes: >-
+  A graph on 252 vertices with maximum degree 5 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/graph_d5_k4_n252.edges from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

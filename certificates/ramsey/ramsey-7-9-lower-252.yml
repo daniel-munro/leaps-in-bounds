@@ -1,0 +1,16 @@
+constant: ramsey-7-9
+bound: lower
+value: 252
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-7-9-lower-252.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_251 with connection set {4, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 19, 23, 24, 25, 26, 27,
+  28, 29, 32, 33, 37, 39, 40, 42, 46, 47, 50, 51, 52, 53, 54, 55, 56, 60, 62, 63, 64, 65, 66, 67, 68, 70, 72,
+  73, 75, 83, 85, 86, 87, 88, 90, 91, 93, 95, 96, 98}, from Kuznetsov's arXiv preprint 1505.07186 (Table 2 of
+  the LaTeX source and the graph list in the accompanying review.py, downloaded from arXiv). It has no 7-clique
+  and no independent set of size 9.

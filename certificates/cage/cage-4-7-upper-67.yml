@@ -1,0 +1,13 @@
+constant: cage-4-7
+bound: upper
+value: 67
+kind: witness
+witness:
+  format: sparse6
+  file: cage-4-7-upper-67.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 4-regular graph of girth 7 on 67 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g4.7.67), given there as an adjacency list and converted to sparse6.

@@ -1,0 +1,13 @@
+constant: cage-12-5
+bound: upper
+value: 203
+kind: witness
+witness:
+  format: sparse6
+  file: cage-12-5-upper-203.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 12-regular graph of girth 5 on 203 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g12.5.203), given there as an adjacency list and converted to sparse6.

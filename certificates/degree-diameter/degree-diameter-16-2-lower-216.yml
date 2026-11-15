@@ -1,0 +1,14 @@
+constant: degree-diameter-16-2
+bound: lower
+value: 216
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-16-2-lower-216.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: rajiv-2026-09b
+notes: >-
+  A graph on 216 vertices with maximum degree 16 and diameter 2, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD2/graph_d16_k2_n216.edges from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

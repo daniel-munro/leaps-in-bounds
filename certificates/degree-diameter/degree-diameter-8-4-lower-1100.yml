@@ -1,0 +1,14 @@
+constant: degree-diameter-8-4
+bound: lower
+value: 1100
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-8-4-lower-1100.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: loz-siran-2008
+notes: >-
+  A graph on 1100 vertices with maximum degree 8 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/Loz_1100.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

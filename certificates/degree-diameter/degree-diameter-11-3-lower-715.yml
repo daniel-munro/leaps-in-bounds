@@ -1,0 +1,14 @@
+constant: degree-diameter-11-3
+bound: lower
+value: 715
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-11-3-lower-715.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: delorme85agraphs
+notes: >-
+  A graph on 715 vertices with maximum degree 11 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/n715d11k3_adjlist.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

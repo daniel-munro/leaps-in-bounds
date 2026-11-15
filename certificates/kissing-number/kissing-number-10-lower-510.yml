@@ -1,0 +1,18 @@
+constant: kissing-number-10
+bound: lower
+value: 510
+kind: witness
+witness:
+  format: vectors
+  file: kissing-number-10-lower-510.txt
+submitted_by: daniel-munro
+date: 2026-11-14
+source: ganzhinov-2022
+notes: >-
+  The 510-point kissing configuration in 10 dimensions from Henry Cohn's table of spherical codes
+  (https://spherical-codes.org/data/10/510), given there in floating point. Its first five coordinates are
+  rational and the other five are rational multiples of √3, so each of those is replaced by three copies of the
+  coordinate divided by √3 (this keeps every inner product and the dimension of the span), after an exact
+  LDL^T and four-square decomposition of the Gram matrix of a basis, and the result is scaled to integers. The
+  vectors have 28 coordinates, span a 10-dimensional space, and have squared norm 129600 and inner products at
+  most 64800.

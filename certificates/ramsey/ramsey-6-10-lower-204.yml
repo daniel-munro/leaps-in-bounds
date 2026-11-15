@@ -1,0 +1,15 @@
+constant: ramsey-6-10
+bound: lower
+value: 204
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-6-10-lower-204.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_203 with connection set {3, 5, 6, 7, 9, 10, 11, 12, 14, 17, 19, 20, 21, 22, 24, 25, 26,
+  28, 34, 36, 38, 41, 42, 43, 45, 51, 53, 55, 59, 75, 79, 81, 83, 89, 91, 92, 93, 96, 97, 98, 100}, from
+  Kuznetsov's arXiv preprint 1505.07186 (Table 2 of the LaTeX source and the graph list in the accompanying
+  review.py, downloaded from arXiv). It has no 6-clique and no independent set of size 10.

@@ -1,0 +1,14 @@
+constant: cage-4-10
+bound: upper
+value: 384
+kind: witness
+witness:
+  format: sparse6
+  file: cage-4-10-upper-384.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 4-regular graph of girth 10 on 384 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g4.10.384), given there as an adjacency list and converted to sparse6. The
+  current record, 320, is from exoo-et-al-2026.

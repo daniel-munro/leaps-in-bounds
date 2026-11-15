@@ -1,0 +1,14 @@
+constant: degree-diameter-6-3
+bound: lower
+value: 120
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-6-3-lower-120.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: de-messieres-2026-10
+notes: >-
+  A graph on 120 vertices with maximum degree 6 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/graph_6_3_n120.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

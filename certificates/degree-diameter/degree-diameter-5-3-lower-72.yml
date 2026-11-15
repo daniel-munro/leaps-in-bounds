@@ -1,0 +1,14 @@
+constant: degree-diameter-5-3
+bound: lower
+value: 72
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-5-3-lower-72.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-2001
+notes: >-
+  A graph on 72 vertices with maximum degree 5 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/Exoo_deg5D3_72_.adjlist.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

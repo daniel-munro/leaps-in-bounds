@@ -1,0 +1,14 @@
+constant: cage-10-5
+bound: upper
+value: 126
+kind: witness
+witness:
+  format: sparse6
+  file: cage-10-5-upper-126.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 10-regular graph of girth 5 on 126 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g10.5.126), given there as an adjacency list and converted to sparse6. The
+  current record is 124.

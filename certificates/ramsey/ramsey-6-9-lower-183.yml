@@ -1,0 +1,15 @@
+constant: ramsey-6-9
+bound: lower
+value: 183
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-6-9-lower-183.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_182 with connection set {3, 4, 6, 7, 10, 12, 15, 17, 20, 25, 26, 28, 29, 32, 38, 39, 40,
+  41, 42, 43, 45, 46, 51, 52, 53, 55, 56, 59, 60, 65, 66, 69, 71, 73, 79, 84, 85}, from Kuznetsov's arXiv
+  preprint 1505.07186 (Table 2 of the LaTeX source and the graph list in the accompanying review.py, downloaded
+  from arXiv). It has no 6-clique and no independent set of size 9.

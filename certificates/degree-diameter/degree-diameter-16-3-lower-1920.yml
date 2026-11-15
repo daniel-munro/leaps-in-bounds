@@ -1,0 +1,14 @@
+constant: degree-diameter-16-3
+bound: lower
+value: 1920
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-16-3-lower-1920.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: mizuno-2026-09
+notes: >-
+  A graph on 1920 vertices with maximum degree 16 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/graph_d16_D3_n1920.edges from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

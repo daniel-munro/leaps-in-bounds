@@ -1,0 +1,14 @@
+constant: degree-diameter-10-3
+bound: lower
+value: 650
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-10-3-lower-650.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: delorme85agraphs
+notes: >-
+  A graph on 650 vertices with maximum degree 10 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/n650d10k3_adjlist.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

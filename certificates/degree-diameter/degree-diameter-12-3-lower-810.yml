@@ -1,0 +1,14 @@
+constant: degree-diameter-12-3
+bound: lower
+value: 810
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-12-3-lower-810.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: yugeswardeenoo-2026-10
+notes: >-
+  A graph on 810 vertices with maximum degree 12 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/deg12_diam3_n810_adjlist.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

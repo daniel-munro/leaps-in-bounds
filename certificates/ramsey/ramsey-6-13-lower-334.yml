@@ -1,0 +1,16 @@
+constant: ramsey-6-13
+bound: lower
+value: 334
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-6-13-lower-334.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_333 with connection set {2, 4, 9, 16, 18, 19, 21, 23, 25, 26, 30, 32, 33, 34, 35, 38, 40,
+  42, 47, 48, 49, 51, 52, 53, 58, 59, 60, 62, 65, 66, 67, 68, 70, 74, 75, 77, 79, 81, 82, 84, 87, 91, 94, 96,
+  98, 101, 102, 104, 109, 115, 116, 119, 125, 126, 130, 133, 147, 153}, from Kuznetsov's arXiv preprint
+  1505.07186 (Table 2 of the LaTeX source and the graph list in the accompanying review.py, downloaded from
+  arXiv). It has no 6-clique and no independent set of size 13.

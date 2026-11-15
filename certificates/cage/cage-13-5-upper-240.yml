@@ -1,0 +1,14 @@
+constant: cage-13-5
+bound: upper
+value: 240
+kind: witness
+witness:
+  format: sparse6
+  file: cage-13-5-upper-240.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 13-regular graph of girth 5 on 240 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g13.5.240), given there as an adjacency list and converted to sparse6. The
+  current record is 230.

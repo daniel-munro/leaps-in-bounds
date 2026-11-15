@@ -1,0 +1,13 @@
+constant: cage-7-8
+bound: upper
+value: 672
+kind: witness
+witness:
+  format: sparse6
+  file: cage-7-8-upper-672.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 7-regular graph of girth 8 on 672 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g7.8.672), given there as an adjacency list and converted to sparse6.

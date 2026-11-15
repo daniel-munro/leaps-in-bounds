@@ -1,0 +1,14 @@
+constant: ramsey-7-8
+bound: lower
+value: 219
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-7-8-lower-219.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: tatarevic-2020
+notes: >-
+  From Milos Tatarevic's ramsey-numbers GitHub repository (graphs/g78.218 at commit
+  f3e9b7009f78ce24ddbc140df5141725bb85a7fa): a 0-1 matrix of a 2-coloring of K218 with no K7 in color 0 and no
+  K8 in color 1. The graph here is the color-0 graph.

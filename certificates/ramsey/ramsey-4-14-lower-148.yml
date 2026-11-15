@@ -1,0 +1,15 @@
+constant: ramsey-4-14
+bound: lower
+value: 148
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-4-14-lower-148.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: google-research-2026b
+notes: >-
+  File 'R(4, 14) >= 148.txt'. Downloaded from the google-research GitHub repository
+  (ramsey_number_bounds/improved_bounds, commit 0d94f8c4d92678ce5f7a0eacae725f79174cfb03), converted from the
+  adjacency matrix to graph6. It is a circulant graph on Z_147, with no 4-clique and no independent set of size
+  14.

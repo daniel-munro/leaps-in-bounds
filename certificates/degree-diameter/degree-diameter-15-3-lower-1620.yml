@@ -1,0 +1,14 @@
+constant: degree-diameter-15-3
+bound: lower
+value: 1620
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-15-3-lower-1620.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: mccormick-2026-10
+notes: >-
+  A graph on 1620 vertices with maximum degree 15 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/G_15_3_n1620.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

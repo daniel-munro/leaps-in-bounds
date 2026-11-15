@@ -1,0 +1,14 @@
+constant: degree-diameter-14-3
+bound: lower
+value: 1201
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-14-3-lower-1201.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: rajiv-2026-10
+notes: >-
+  A graph on 1201 vertices with maximum degree 14 and diameter 3, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD3/graph_d14_k3_n1201.edges from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

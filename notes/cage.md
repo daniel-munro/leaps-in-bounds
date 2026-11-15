@@ -65,3 +65,7 @@ The m needed grows roughly like `W^0.64`, where W is the number of closed non-ba
   - lifts of a good (k,g-1) or (k,g-2) graph instead of K_{k+1};
   - known algebraic families, such as excisions from generalized polygons for (k,10) and (k,11), or Lazebnik-Ustimenko-Woldar graphs for large even g.
 - **Matching the literature for small cases** (for example (4,7) = 67, (3,13) = 272, (3,14) = 384, (4,9) = 270, (4,10) = 320) needs the published constructions. These are mostly Exoo's voltage graphs over non-cyclic groups, or tailored base graphs.
+
+## Exoo's published cages imported (2026-11-14)
+
+An AI agent (Claude) converted the adjacency lists on Geoffrey Exoo's cage page (https://isu.indstate.edu/ge/CAGES/) to sparse6: (3,14) 384, (3,16) 960, (4,7) 67, (4,9) 275, (4,10) 384, (5,10) 1458, (7,7) 640, (7,8) 672, (10,5) 126, (12,5) 203, (13,5) 240. Each checked in under 10 s. The newer records from exoo-et-al-2026 (such as (3,16) 936, (4,9) 270, (4,10) 320) and House of Graphs weren't tried.

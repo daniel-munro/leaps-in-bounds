@@ -1,0 +1,14 @@
+constant: degree-diameter-3-9
+bound: lower
+value: 600
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-3-9-lower-600.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-2008-01
+notes: >-
+  A graph on 600 vertices with maximum degree 3 and diameter 9, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD9/Exoo_600.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

@@ -1,0 +1,14 @@
+constant: degree-diameter-5-5
+bound: lower
+value: 650
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-5-5-lower-650.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: gupta-2026-09
+notes: >-
+  A graph on 650 vertices with maximum degree 5 and diameter 5: the sparse6 string of the graph rithwik650 in
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD5/650-648Cayley_SageMath.txt, from
+  Francesc Comellas's table of large (degree, diameter)-graphs (read as text, not run).

@@ -1,0 +1,14 @@
+constant: degree-diameter-8-5
+bound: lower
+value: 5334
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-8-5-lower-5334.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: rajiv-2026-09b
+notes: >-
+  A graph on 5334 vertices with maximum degree 8 and diameter 5, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD5/graph_d8_k5_n5334.adj from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

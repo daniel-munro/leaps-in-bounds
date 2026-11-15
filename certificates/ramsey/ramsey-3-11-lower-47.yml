@@ -1,0 +1,14 @@
+constant: ramsey-3-11
+bound: lower
+value: 47
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-3-11-lower-47.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-2013
+notes: >-
+  Downloaded from Geoffrey Exoo's Ramsey constructions page, as archived at
+  https://web.archive.org/web/2021/http://ginger.indstate.edu/ge/RAMSEY/g.3.11.46: an adjacency list of a
+  triangle-free graph on 46 vertices with no independent set of size 11, converted to graph6.

@@ -1,0 +1,14 @@
+constant: degree-diameter-4-7
+bound: lower
+value: 1344
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-4-7-lower-1344.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: yugeswardeenoo-2026-10
+notes: >-
+  A graph on 1344 vertices with maximum degree 4 and diameter 7, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD7/deg4_diam7_n1344_adjlist.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

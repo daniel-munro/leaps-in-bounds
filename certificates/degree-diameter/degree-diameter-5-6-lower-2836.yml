@@ -1,0 +1,14 @@
+constant: degree-diameter-5-6
+bound: lower
+value: 2836
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-5-6-lower-2836.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-10
+notes: >-
+  A graph on 2836 vertices with maximum degree 5 and diameter 6, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD6/deg5-dia6-n2836.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

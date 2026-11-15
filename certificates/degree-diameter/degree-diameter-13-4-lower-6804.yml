@@ -1,0 +1,14 @@
+constant: degree-diameter-13-4
+bound: lower
+value: 6804
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-13-4-lower-6804.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-10
+notes: >-
+  A graph on 6804 vertices with maximum degree 13 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/deg13-dia4-n6804.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

@@ -1,0 +1,14 @@
+constant: degree-diameter-11-4
+bound: lower
+value: 3645
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-11-4-lower-3645.s6.xz
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-10
+notes: >-
+  A graph on 3645 vertices with maximum degree 11 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/deg11-dia4-n3645.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

@@ -1,0 +1,15 @@
+constant: ramsey-6-12
+bound: lower
+value: 294
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-6-12-lower-294.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_293 with connection set {2, 3, 7, 8, 10, 11, 12, 15, 18, 26, 27, 28, 29, 32, 34, 35, 38,
+  39, 40, 41, 42, 44, 46, 48, 50, 51, 53, 55, 57, 59, 60, 61, 62, 63, 66, 67, 69, 72, 73, 74, 75, 83, 86, 89,
+  90, 91, 94, 98, 99, 103, 104, 108, 112, 113, 128}, from Table 2 of Kuznetsov's arXiv preprint 1505.07186
+  (LaTeX source downloaded from arXiv). It has no 6-clique and no independent set of size 12.

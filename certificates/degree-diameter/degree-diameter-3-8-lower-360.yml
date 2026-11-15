@@ -1,0 +1,14 @@
+constant: degree-diameter-3-8
+bound: lower
+value: 360
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-3-8-lower-360.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: jianxiang-chen-2018
+notes: >-
+  A graph on 360 vertices with maximum degree 3 and diameter 8, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD8/360-deg3-D8_adjlist.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

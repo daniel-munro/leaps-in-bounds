@@ -1,0 +1,14 @@
+constant: degree-diameter-3-5
+bound: lower
+value: 70
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-3-5-lower-70.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: afygraph
+notes: >-
+  A graph on 70 vertices with maximum degree 3 and diameter 5, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD5/AlFiYe70_Z_adjlist.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

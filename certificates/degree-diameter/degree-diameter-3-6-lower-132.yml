@@ -1,0 +1,14 @@
+constant: degree-diameter-3-6
+bound: lower
+value: 132
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-3-6-lower-132.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-1998-05
+notes: >-
+  A graph on 132 vertices with maximum degree 3 and diameter 6, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD6/Exoo_132.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

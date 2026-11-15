@@ -1,0 +1,14 @@
+constant: degree-diameter-4-8
+bound: lower
+value: 3243
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-4-8-lower-3243.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: loz-siran-2008
+notes: >-
+  A graph on 3243 vertices with maximum degree 4 and diameter 8, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD8/Loz_3243.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

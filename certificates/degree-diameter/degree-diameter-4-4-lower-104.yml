@@ -1,0 +1,14 @@
+constant: degree-diameter-4-4
+bound: lower
+value: 104
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-4-4-lower-104.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-08
+notes: >-
+  A graph on 104 vertices with maximum degree 4 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/104b_d4D4.txt from Francesc
+  Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

@@ -1,0 +1,14 @@
+constant: ramsey-3-13
+bound: lower
+value: 61
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-3-13-lower-61.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: google-research-2026a
+notes: >-
+  File 'R(3, 13) >= 61.txt'. Downloaded from the google-research GitHub repository
+  (ramsey_number_bounds/improved_bounds, commit 0d94f8c4d92678ce5f7a0eacae725f79174cfb03), converted from the
+  adjacency matrix to graph6. It is a triangle-free graph on 60 vertices with no independent set of size 13.

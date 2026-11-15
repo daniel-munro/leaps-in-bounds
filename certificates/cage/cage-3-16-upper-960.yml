@@ -1,0 +1,14 @@
+constant: cage-3-16
+bound: upper
+value: 960
+kind: witness
+witness:
+  format: sparse6
+  file: cage-3-16-upper-960.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 3-regular graph of girth 16 on 960 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g3.16.960), given there as an adjacency list and converted to sparse6. The
+  current record, 936, is from exoo-et-al-2026.

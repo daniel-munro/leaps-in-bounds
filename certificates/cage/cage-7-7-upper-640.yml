@@ -1,0 +1,14 @@
+constant: cage-7-7
+bound: upper
+value: 640
+kind: witness
+witness:
+  format: sparse6
+  file: cage-7-7-upper-640.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 7-regular graph of girth 7 on 640 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g7.7.640), given there as an adjacency list and converted to sparse6. The
+  current record, 632, is from deruiter-biggs-2015.

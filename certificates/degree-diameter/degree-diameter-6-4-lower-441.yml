@@ -1,0 +1,14 @@
+constant: degree-diameter-6-4
+bound: lower
+value: 441
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-6-4-lower-441.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: rajiv-2026-09b
+notes: >-
+  A graph on 441 vertices with maximum degree 6 and diameter 4, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD4/graph_d6_k4_n441.edges from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.

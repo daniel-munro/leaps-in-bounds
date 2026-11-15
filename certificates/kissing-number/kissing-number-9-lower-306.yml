@@ -1,0 +1,14 @@
+constant: kissing-number-9
+bound: lower
+value: 306
+kind: witness
+witness:
+  format: vectors
+  file: kissing-number-9-lower-306.txt
+submitted_by: daniel-munro
+date: 2026-11-14
+source: leech-sloane-1971
+notes: >-
+  The 306-point kissing configuration in 9 dimensions from Henry Cohn's table of spherical codes
+  (https://spherical-codes.org/data/9/306), whose coordinates are 0 and ±1: the 18 vectors ±e_i, scaled by 2 here,
+  and 288 vectors with four entries ±1, all of squared norm 4.

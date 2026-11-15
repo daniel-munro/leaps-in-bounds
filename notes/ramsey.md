@@ -23,3 +23,15 @@ Highlights: R(4,12) >= 128 (cubes mod 127) and R(9,9) >= 563 (a circulant on Z_5
 - Bigger witnesses are limited by the checker, not the search: checking even the Z_641 cyclotomic graph with ω = 9 and α = 14 for R(10,15) needs about 1.8e8 work, around 10 minutes, and the literature witnesses for r, s >= 8 have 300 to 1300 vertices. A larger time budget, or attestations, would allow much stronger circulants.
 - Tabu or simulated-annealing search over circulant connection sets (as in the literature for R(5,15) and others), seeded from the graphs here, should improve most of these, as long as the results stay small enough to check.
 - Many literature bounds come from non-circulant constructions (such as Xu-Xie-Radziszowski's R(r, s+t-1) constructions, or 2-cyclic and block-circulant graphs), which this checker handles slowly. A checker that exploits other symmetry (for example, a declared automorphism group) would open those up.
+
+## Published witnesses imported (2026-11-14)
+
+An AI agent (Claude) downloaded published graphs, converted them to graph6 and added certificates for 31 lower bounds (most at the literature record). Non-circulant graphs up to about 220 vertices checked in seconds, much faster than feared above; the slowest were R(6,13) >= 334 (Z_333 circulant, 94 s) and R(4,15) >= 163 (40 s).
+
+- Google Research `ramsey_number_bounds` (GitHub, adjacency matrices): R(3,12) >= 53, R(3,13) >= 61, R(3,15) >= 74, R(4,13) >= 139, R(4,14) >= 148, R(4,15) >= 163. Their R(7,13) >= 513, R(9,11) >= 617 and R(10,12) >= 856 are non-circulant with 500 to 850 vertices and weren't tried.
+- Exoo's Ramsey page (https://isu.indstate.edu/ge/RAMSEY/, older files via the Wayback Machine at ginger.indstate.edu/ge/RAMSEY/): R(3,10) >= 40, R(3,11) >= 47, R(4,7) >= 49, R(5,5) >= 43, R(5,6) >= 58 (record 59 has no published graph found).
+- Exoo-Tatarevic files (cs.indstate.edu/ge/RAMSEY/ExTa/, via the Wayback Machine): R(4,8) >= 59, R(4,11) >= 102, R(5,10) >= 149, R(6,7) >= 115, R(6,8) >= 134.
+- McKay's r46_35some.g6: R(4,6) >= 36. Tatarevic's GitHub (milostatarevic/ramsey-numbers): R(7,8) >= 219. His R(6,11) >= 262 graph (261 vertices, non-circulant) took 37 s in a C clique search, so it wasn't tried with the Python checker.
+- Kuznetsov, arXiv:1505.07186 (circulant connection sets in Table 2 and review.py of the LaTeX source): R(5,9) >= 133, R(5,11) >= 183, R(5,12) >= 203, R(5,13) >= 233, R(5,14) >= 267, R(6,9) >= 183, R(6,10) >= 204, R(6,12) >= 294, R(6,13) >= 334, R(7,9) >= 252, R(7,10) >= 292, R(8,10) >= 343.
+
+Not found: Kolodyazhny's graphs (aluarium.net returns 403, also in the archive), R(4,9) >= 73, R(4,10) >= 92, R(5,7) >= 80, R(5,8) >= 101.

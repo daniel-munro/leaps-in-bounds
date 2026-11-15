@@ -1,0 +1,14 @@
+constant: ramsey-5-5
+bound: lower
+value: 43
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-5-5-lower-43.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-1989b
+notes: >-
+  Downloaded from Geoffrey Exoo's Ramsey constructions page (https://isu.indstate.edu/ge/RAMSEY/g55.42, linked
+  from r.5.5.html): a 0-1 adjacency matrix of a graph on 42 vertices with no 5-clique and no independent set of
+  size 5.

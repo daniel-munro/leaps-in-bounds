@@ -1,0 +1,14 @@
+constant: cage-5-10
+bound: upper
+value: 1458
+kind: witness
+witness:
+  format: sparse6
+  file: cage-5-10-upper-1458.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: exoo-circa-2012
+notes: >-
+  A 5-regular graph of girth 10 on 1458 vertices from Geoffrey Exoo's cage page
+  (https://isu.indstate.edu/ge/CAGES/g5.10.1458), given there as an adjacency list and converted to sparse6.
+  Exoo and Jajcay found it as a lift of a theta graph with voltages in SL(2,q). The current record is 1296.

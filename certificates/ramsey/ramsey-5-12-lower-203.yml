@@ -1,0 +1,15 @@
+constant: ramsey-5-12
+bound: lower
+value: 203
+kind: witness
+witness:
+  format: graph6
+  file: ramsey-5-12-lower-203.g6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: kuznetsov-2016
+notes: >-
+  Circulant graph on Z_202 with connection set {1, 2, 7, 9, 10, 15, 16, 19, 22, 23, 27, 28, 33, 35, 36, 41, 45,
+  48, 49, 51, 52, 59, 60, 62, 66, 71, 73, 76, 78, 79, 85, 86, 88, 91, 92, 97, 99, 101}, from Kuznetsov's arXiv
+  preprint 1505.07186 (Table 2 of the LaTeX source and the graph list in the accompanying review.py, downloaded
+  from arXiv). It has no 5-clique and no independent set of size 12.

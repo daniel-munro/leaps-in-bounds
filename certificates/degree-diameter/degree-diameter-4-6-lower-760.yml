@@ -1,0 +1,14 @@
+constant: degree-diameter-4-6
+bound: lower
+value: 760
+kind: witness
+witness:
+  format: sparse6
+  file: degree-diameter-4-6-lower-760.s6
+submitted_by: daniel-munro
+date: 2026-11-14
+source: bhakar-2026-10
+notes: >-
+  A graph on 760 vertices with maximum degree 4 and diameter 6, downloaded as
+  https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/adjacencies/adjD6/deg4-dia6-n760.edges.txt from
+  Francesc Comellas's table of large (degree, diameter)-graphs and converted to sparse6.
