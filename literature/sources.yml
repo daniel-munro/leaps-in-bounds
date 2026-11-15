@@ -3288,3 +3288,266 @@ wythagoras-2014:
   date: "2014-03"
   notes: "Cited in P. Michel's historical survey, which gives the bound as 10^(10^(10^(10^18,705,352)))."
   added_by: daniel-munro
+
+ejc-ds1-r0-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, original version, 1994-08-01"
+  date: "1994-08-01"
+  url: "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/versions/10829"
+  added_by: daniel-munro
+
+ejc-ds1-r1-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #1, 1994-11-09"
+  date: "1994-11-09"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v1-1994.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r2-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #2, 1995-08-28"
+  date: "1995-08-28"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v2-1995.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r3-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #3, 1996-03-25"
+  date: "1996-03-25"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v3-1996.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r4-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #4, 1997-07-16"
+  date: "1997-07-16"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v4-1997.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r5-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #5, 1998-07-09"
+  date: "1998-07-09"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v5-1998.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r6-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #6, 1999-07-05"
+  date: "1999-07-05"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v6-1999.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r7-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #7, 2000-07-25"
+  date: "2000-07-25"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v7-2000.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r8-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #8, 2001-07-12"
+  date: "2001-07-12"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v8-2001.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r9-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #9, 2002-07-15"
+  date: "2002-07-15"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v9-2002.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r10-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #10, 2004-07-04"
+  date: "2004-07-04"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v10-2004.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r11-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #11, 2006-08-01"
+  date: "2006-08-01"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v11-2006.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r13-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #13, 2011-08-22"
+  date: "2011-08-22"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v13-2011.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r14-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #14, 2014-01-12"
+  date: "2014-01-12"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v14-2014.pdf"
+  added_by: daniel-munro
+
+ejc-ds1-r15-small-ramsey-numbers:
+  string: "Small Ramsey Numbers, Stanisław Radziszowski, Electronic Journal of Combinatorics Dynamic Survey DS1, revision #15, 2017-03-03"
+  date: "2017-03-03"
+  url: "https://www.combinatorics.org/files/Surveys/ds1/ds1v15-2017.pdf"
+  added_by: daniel-munro
+
+radziszowski-2025-slides:
+  string: "S. Radziszowski, Recent Progress on Small and Large Ramsey Numbers, slides, 56th Southeastern International Conference on Combinatorics, Graph Theory and Computing, Boca Raton, March 4, 2025."
+  date: "2025-03-04"
+  url: "https://www.cs.rit.edu/~spr/COURSES/CCOMP/boca25b.pdf"
+  notes: "Slide 11 is a table of the history of bounds on R(5,5), giving year, author and bound."
+  added_by: daniel-munro
+
+abbott-1965:
+  string: "H.L. Abbott, Some Problems in Combinatorial Analysis, Ph.D. thesis, Department of Mathematical and Statistical Sciences, University of Alberta, Edmonton, 1965."
+  date: "1965"
+  notes: "Radziszowski's history of R(5,5) credits R(5,5) >= 38 (quadratic residues in Z_37) to Abbott, 1965, without a full citation; this thesis is the only 1965 work by Abbott in the reference list of https://doi.org/10.37236/21."
+  added_by: daniel-munro
+
+irving-1973:
+  string: "R.W. Irving, R(5,5) >= 42 from sum-free sets (1973), as credited in S. Radziszowski's history of bounds on R(5,5)."
+  date: "1973"
+  notes: "Only the author, year and method are given by the secondary source; the original publication was not identified."
+  added_by: daniel-munro
+
+giraud-1967:
+  string: "G. Giraud, R(5,5) <= 58 by linear programming (1967), as credited in S. Radziszowski's history of bounds on R(5,5)."
+  date: "1967"
+  notes: "Only the author, year and method are given by the secondary source. Possibly G. Giraud, Une majoration des nombres de Ramsey binaires-bicolores, C.R. Acad. Sci. Paris 266 (1968), but this wasn't checked."
+  added_by: daniel-munro
+
+walker-1968:
+  string: "K. Walker, Dichromatic Graphs and Ramsey Numbers, Journal of Combinatorial Theory, 5 (1968) 238-243."
+  date: "1968"
+  doi: "https://doi.org/10.1016/S0021-9800(68)80070-5"
+  added_by: daniel-munro
+
+walker-1971:
+  string: "K. Walker, An Upper Bound for the Ramsey Number M(5,4), Journal of Combinatorial Theory, Series A, 11 (1971) 1-10."
+  date: "1971"
+  doi: "https://doi.org/10.1016/0097-3165(71)90002-1"
+  added_by: daniel-munro
+
+giraud-1973:
+  string: "G. Giraud, Une minoration du nombre de quadrangles unicolores et son application à la majoration des nombres de Ramsey binaires-bicolores, C.R. Acad. Sci. Paris, Séries A-B, 276 (1973) A1173-A1175."
+  date: "1973"
+  added_by: daniel-munro
+
+radziszowski-kreher-1988a:
+  string: "S.P. Radziszowski and D.L. Kreher, Search Algorithm for Ramsey Graphs by Union of Group Orbits, Journal of Graph Theory, 12 (1988) 59-72."
+  date: "1988"
+  url: "https://www.cs.rit.edu/~spr/PUBL/paper13.pdf"
+  added_by: daniel-munro
+
+radziszowski-kreher-1988b:
+  string: "S.P. Radziszowski and D.L. Kreher, Upper Bounds for Some Ramsey Numbers R(3, k), Journal of Combinatorial Mathematics and Combinatorial Computing, 4 (1988) 207-212."
+  date: "1988"
+  url: "https://www.cs.rit.edu/~spr/PUBL/paper15.pdf"
+  added_by: daniel-munro
+
+radziszowski-1988:
+  string: "S.P. Radziszowski, using the same method as in Radziszowski and Kreher, Upper Bounds for Some Ramsey Numbers R(3, k), unpublished (1988)."
+  date: "1988"
+  added_by: daniel-munro
+
+wang-wang-1989:
+  string: "Wang Qingxian and Wang Gongben, New Lower Bounds of Ramsey Numbers r(3, q) (in Chinese), Acta Scientiarum Naturalium, Universitatis Pekinensis, 25 (1989) 117-121."
+  date: "1989"
+  added_by: daniel-munro
+
+mckay-radziszowski-1992:
+  string: "B.D. McKay and S.P. Radziszowski, A New Upper Bound for the Ramsey Number R(5,5), Australasian Journal of Combinatorics, 5 (1992) 13-20."
+  date: "1992"
+  url: "https://ajc-new.maths.uq.edu.au/pdf/5/ocr-ajc-v5-p13.pdf"
+  added_by: daniel-munro
+
+exoo-1992:
+  string: "G. Exoo, Indiana State University, personal communication (1992)."
+  date: "1992"
+  added_by: daniel-munro
+
+exoo-1993:
+  string: "G. Exoo, Announcement: On the Ramsey Numbers R(4,6), R(5,6) and R(3,12), Ars Combinatoria, 35 (1993) 85."
+  date: "1993"
+  notes: "McKay and Radziszowski (Linear Programming in Some Ramsey Problems, JCTB 1994) cite a (4,6)-good graph on 34 vertices by Exoo as a personal communication from 1991."
+  added_by: daniel-munro
+
+piwakowski-1993:
+  string: "K. Piwakowski, paper presented at the conference \"System-Modeling-Control\", Zakopane, Poland (1993)."
+  date: "1993"
+  added_by: daniel-munro
+
+mckay-radziszowski-1994:
+  string: "B.D. McKay and S.P. Radziszowski, Linear Programming in Some Ramsey Problems, Journal of Combinatorial Theory, Series B, 61 (1994) 125-132."
+  date: "1994"
+  doi: "https://doi.org/10.1006/jctb.1994.1038"
+  url: "https://www.cs.rit.edu/~spr/PUBL/paper29.pdf"
+  notes: "The abstract gives R(4,5) <= 27, R(5,5) <= 52 and R(4,6) <= 43, improving 28, 53 and 44. The introduction says the bound R(4,5) <= 28 stood until January 1991."
+  added_by: daniel-munro
+
+wang-1994:
+  string: "Wang Qingxian, personal communication (1994)."
+  date: "1994"
+  added_by: daniel-munro
+
+piwakowski-1996:
+  string: "K. Piwakowski, Applying Tabu Search to Determine New Ramsey Graphs, Electronic Journal of Combinatorics, 3 (1996) #R6."
+  date: "1996-01-24"
+  doi: "https://doi.org/10.37236/1230"
+  added_by: daniel-munro
+
+piwakowski-1996-thesis:
+  string: "K. Piwakowski, Applying Algorithmic Techniques in Finding Lower and Upper Bounds for Ramsey Numbers (in Polish), Ph.D. Thesis, Technical University of Gdańsk, ETI 5/96, 1996."
+  date: "1996"
+  added_by: daniel-munro
+
+su-luo-wu-1997:
+  string: "Su Wenlong, Luo Haipeng and Wu Kang, New Lower Bounds for Some Ramsey Numbers, in preparation (1997)."
+  date: "1997"
+  added_by: daniel-munro
+
+exoo-1998:
+  string: "G. Exoo, Some New Ramsey Colorings, Electronic Journal of Combinatorics, 5 (1998) #R29."
+  date: "1998-05-14"
+  doi: "https://doi.org/10.37236/1367"
+  added_by: daniel-munro
+
+luo-su-li-1998:
+  string: "Luo Haipeng, Su Wenlong and Li Qiao, New Lower Bounds of Classical Ramsey Numbers R(6,12), R(6,14) and R(6,15), Chinese Science Bulletin, 43, 10 (1998) 817-818."
+  date: "1998"
+  added_by: daniel-munro
+
+su-luo-zhang-1998:
+  string: "Su Wenlong, Luo Haipeng and Zhang Zhengyou, Five New Prime Order Cyclic Graphs (in Chinese), Guangxi Sciences, 5, 1 (1998) 4-5."
+  date: "1998"
+  added_by: daniel-munro
+
+su-luo-li-1999:
+  string: "Su Wenlong, Luo Haipeng and Li Qiao, A Method for Obtaining Lower Bounds for Some Ramsey Numbers (in Chinese), Journal of Guangxi Academy of Sciences, 15, 4 (1999) 145-147."
+  date: "1999"
+  added_by: daniel-munro
+
+su-luo-li-2000:
+  string: "Su Wenlong, Luo Haipeng and Li Qiao, New Lower Bounds for Seven Classical Ramsey Numbers R(k, l) (in Chinese), Journal of Systems Science and Mathematical Sciences, 20, 1 (2000) 55-57."
+  date: "2000"
+  added_by: daniel-munro
+
+haanpaa-2000:
+  string: "H. Haanpää, A Lower Bound for a Ramsey Number, Congressus Numerantium, 144 (2000) 189-191."
+  date: "2000"
+  added_by: daniel-munro
+
+exoo-2002:
+  string: "G. Exoo, Some Applications of pq-groups in Graph Theory, preprint (2002), constructions available at http://isu.indstate.edu/ge/RAMSEY."
+  date: "2002"
+  added_by: daniel-munro
+
+xu-xie-2002:
+  string: "Xu Xiaodong and Xie Zheng, A Constructive Approach for the Lower Bounds on the Ramsey Numbers r(k, l), manuscript (2002)."
+  date: "2002"
+  notes: "Bounds from the construction R(k, p+q-1) >= R(k, p) + R(k, q) + k - 3 and its refinements, listed as [XX1] in revision #9 (2002) of https://doi.org/10.37236/21. Later published with Radziszowski as xu-xie-radziszowski-2004."
+  added_by: daniel-munro
+
+yang-2005:
+  string: "Yang Jian Sheng, results which can be obtained by the methods in [HWSYZH], personal communication (2005)."
+  date: "2005"
+  added_by: daniel-munro
+
+gerbicz-2010:
+  string: "R. Gerbicz, New Lower Bounds for Two Color and Multicolor Ramsey Numbers, arXiv:1004.4374 (2010)."
+  date: "2010-04-25"
+  url: "https://arxiv.org/abs/1004.4374"
+  added_by: daniel-munro
+
+exoo-2011:
+  string: "G. Exoo, Indiana State University, personal communication (2011)."
+  date: "2011"
+  added_by: daniel-munro
