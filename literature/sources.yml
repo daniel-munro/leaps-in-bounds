@@ -3620,3 +3620,201 @@ komkov-2020:
   url: "https://arxiv.org/abs/1701.05603v5"
   notes: "Not peer reviewed. Certificates for W(6,5) and W(5,6) at http://komkov.org/VanDerWaerden/."
   added_by: daniel-munro
+
+# Square packing (squares in squares)
+
+ejc-ds7-1998:
+  string: "E. Friedman, Packing Unit Squares in Squares: A Survey and New Results, Electron. J. Combin. 5 (1998), DS7 (original version, archived)."
+  date: "1998-03-06"
+  url: "https://web.archive.org/web/19980703224158/http://www2.combinatorics.org/Surveys/ds7.tex"
+  notes: "Original 1998 version of the dynamic survey later revised in 2000, 2005 and 2009 (doi:10.37236/28). Table 1 lists the best known upper bounds in 1998; Section 4 proves s(n) for n = 2, 3, 5, 8, 15, 24, 35."
+  added_by: daniel-munro
+
+ejc-ds7-2000:
+  string: "E. Friedman, Packing Unit Squares in Squares: A Survey and New Results, Electron. J. Combin. 7 (2000), DS7 (2000 revision, archived)."
+  date: "2000"
+  url: "https://web.archive.org/web/20000925174841/http://www.combinatorics.org/Surveys/ds7.html"
+  notes: "2000 revision of the dynamic survey (doi:10.37236/28), archived 2000-09-25. Adds Table 2 of lower bounds, including proofs of s(7) = 3 and s(14) = 4 and bounds communicated by Trevor Green."
+  added_by: daniel-munro
+
+ellsworth-squares-in-squares-compared:
+  string: "Squares in Squares: Older / Alternative Packings, David Ellsworth (based on the original by Erich Friedman), retrieved 2026-11-14"
+  date: "2026-11-14"
+  url: "https://kingbird.myphotos.cc/packing/squares_in_squares__compared.html"
+  added_by: daniel-munro
+
+cottingham-1979:
+  string: "Charles F. Cottingham in early 1979 (reported by Martin Gardner, Mathematical Games, Scientific American, October 1979)"
+  date: "1979"
+  added_by: daniel-munro
+
+trump-1979:
+  string: "Walter Trump in 1979"
+  date: "1979"
+  added_by: daniel-munro
+
+wainwright-1979:
+  string: "Robert Wainwright in late 1979 (reported by Martin Gardner, Mathematical Games, Scientific American)"
+  date: "1979"
+  added_by: daniel-munro
+
+hamalainen-1980:
+  string: "Pertti Hämäläinen in 1980"
+  date: "1980"
+  added_by: daniel-munro
+
+stenlund-1980:
+  string: "Evert Stenlund in early 1980"
+  date: "1980"
+  added_by: daniel-munro
+
+stromquist-1984:
+  string: "W. Stromquist, Packing Unit Squares Inside Squares III, unpublished manuscript, 1984."
+  date: "1984"
+  notes: "[13] in https://doi.org/10.37236/28"
+  added_by: daniel-munro
+
+friedman-1997:
+  string: "Erich Friedman in 1997 (published in E. Friedman, Packing Unit Squares in Squares: A Survey and New Results, Electron. J. Combin. DS7, 1998)"
+  date: "1997"
+  added_by: daniel-munro
+
+bidwell-1998:
+  string: "John Bidwell in 1998 (private communication to E. Friedman)"
+  date: "1998"
+  notes: "[1] in https://doi.org/10.37236/28"
+  added_by: daniel-munro
+
+el-moumni-1999:
+  string: "S. El Moumni, Optimal packings of unit squares in a square, Studia Sci. Math. Hungar. 35 (1999), no. 3-4, 281-290."
+  date: "1999"
+  notes: "[12] in https://doi.org/10.37236/28"
+  added_by: daniel-munro
+
+green-2000:
+  string: "Trevor Green in 2000 (private communication to E. Friedman)"
+  date: "2000"
+  notes: "[8] in https://doi.org/10.37236/28"
+  added_by: daniel-munro
+
+cantrell-2002-08:
+  string: "David W. Cantrell in August 2002"
+  date: "2002-08"
+  added_by: daniel-munro
+
+cantrell-2002-09:
+  string: "David W. Cantrell in September 2002"
+  date: "2002-09"
+  added_by: daniel-munro
+
+gensane-ryckelynck-2004:
+  string: "T. Gensane and P. Ryckelynck, Improved dense packings of congruent squares in a square, Discrete Comput. Geom. 34 (2005) 97-109."
+  date: "2004-10-20"
+  doi: "https://doi.org/10.1007/s00454-004-1129-z"
+  notes: "Date is the online publication date. Ellsworth's page says the s(29) packing was found in April 2004."
+  added_by: daniel-munro
+
+cantrell-2005-10:
+  string: "David W. Cantrell in October 2005"
+  date: "2005-10"
+  added_by: daniel-munro
+
+hajba-2009:
+  string: "Károly Hajba in July 2009"
+  date: "2009-07"
+  added_by: daniel-munro
+
+morandi-2010:
+  string: "Maurizio Morandi in June 2010"
+  date: "2010-06"
+  added_by: daniel-munro
+
+brendberg-2023:
+  string: "Sigvart Brendberg in June 2023"
+  date: "2023-06"
+  added_by: daniel-munro
+
+ellsworth-2023-06:
+  string: "David Ellsworth in June 2023"
+  date: "2023-06"
+  added_by: daniel-munro
+
+cantrell-2023-08:
+  string: "David W. Cantrell in August 2023"
+  date: "2023-08"
+  added_by: daniel-munro
+
+hajba-2024:
+  string: "Károly Hajba in September 2024"
+  date: "2024-09"
+  added_by: daniel-munro
+
+cantrell-2024-11:
+  string: "David W. Cantrell in November 2024"
+  date: "2024-11"
+  added_by: daniel-munro
+
+ellsworth-2024-11:
+  string: "David Ellsworth in November 2024"
+  date: "2024-11"
+  added_by: daniel-munro
+
+cantrell-2024-12:
+  string: "David W. Cantrell in December 2024"
+  date: "2024-12"
+  added_by: daniel-munro
+
+ellsworth-2024-12:
+  string: "David Ellsworth in December 2024"
+  date: "2024-12"
+  added_by: daniel-munro
+
+cantrell-2025-01:
+  string: "David W. Cantrell in January 2025"
+  date: "2025-01"
+  added_by: daniel-munro
+
+de-winter-2026:
+  string: "Joost de Winter in August 2026 (working with unspecified AI)"
+  date: "2026-08"
+  added_by: daniel-munro
+
+# Disk covering
+
+neville-1915:
+  string: "E. H. Neville, On the solution of numerical functional equations, illustrated by an account of a popular puzzle and of its solution, Proc. London Math. Soc. (2) 14 (1915) 308-326."
+  date: "1915"
+  notes: "Gives the five-disk covering and conjectures it is optimal (proved by Bezdek)."
+  added_by: daniel-munro
+
+nagy-1975:
+  string: "D. Nagy, Coverings and their applications, Thesis, Budapest, 1975 (in Hungarian)."
+  date: "1975"
+  notes: "Claimed without proof that r(8) and r(9) are given by the (n-1)-fold symmetric arrangement and conjectured the same for n = 10 (G. Fejes Tóth 2005). Friedman's page (2006) credits the n = 10 covering to D. Nagy in 1974."
+  added_by: daniel-munro
+
+friedman-circles-covering-circles-2006:
+  string: "Circles Covering Circles, Erich Friedman (archived 2006-02-21)"
+  date: "2006-02-21"
+  url: "https://web.archive.org/web/20060221205328/http://www.stetson.edu/~efriedma/circovcir/"
+  added_by: daniel-munro
+
+voxequinox-2026:
+  string: "VoxEquinox in 2026"
+  date: "2026"
+  notes: "Credited on Erich Friedman's Circles Covering Circles page (retrieved 2026-11-14) with proving optimality for n = 11 to 20. Not on the page as archived in May 2026."
+  added_by: daniel-munro
+
+# Circle in equilateral triangle
+
+joos-2020:
+  string: "A. Joós, Packing 13 circles in an equilateral triangle, Aequationes Math. 95 (2021) 35-65."
+  date: "2020-09-02"
+  doi: "https://doi.org/10.1007/s00010-020-00753-y"
+  added_by: daniel-munro
+
+tedeschi-2021:
+  string: "N. Tedeschi, On Packing Thirteen Points in an Equilateral Triangle, American Journal of Undergraduate Research 18(2) (2021)."
+  date: "2021-09"
+  doi: "https://doi.org/10.33697/ajur.2021.042"
+  added_by: daniel-munro
