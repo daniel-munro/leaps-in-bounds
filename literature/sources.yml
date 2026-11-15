@@ -1346,7 +1346,8 @@ heule-2017:
 
 blankenship-c-t-2018:
   string: "Blankenship, T., Cummings, J., & Taranchuk, V. (2018). A new lower bound for van der Waerden numbers. European Journal of Combinatorics, 69, 163-168."
-  date: "2018-03"
+  date: "2017-05-26"
+  url: "https://arxiv.org/abs/1705.09673"
   doi: "https://doi.org/10.1016/j.ejc.2017.10.007"
   added_by: daniel-munro
 
@@ -3550,4 +3551,72 @@ gerbicz-2010:
 exoo-2011:
   string: "G. Exoo, Indiana State University, personal communication (2011)."
   date: "2011"
+  added_by: daniel-munro
+
+berlekamp-1968:
+  string: "E.R. Berlekamp, A construction for partitions which avoid long arithmetic progressions, Canadian Mathematical Bulletin 11 (1968) 409-414."
+  date: "1968"
+  doi: "https://doi.org/10.4153/CMB-1968-047-7"
+  notes: "Uses W(k, t) for progressions of t + 1 terms. Reports J. Folkman's 1967 construction (private communication) showing W(2,4) > 34. Theorem 2 gives W(2, p+1) > p 2^p for odd primes p, so W(2,6) > 160 and W(2,8) > 896, as stated in https://doi.org/10.37236/1794."
+  added_by: daniel-munro
+
+herwig-et-al-2007:
+  string: "P.R. Herwig, M.J.H. Heule, P.M. van Lambalgen and H. van Maaren, A New Method to Construct Lower Bounds for Van der Waerden Numbers, Electronic Journal of Combinatorics 14 (2007) #R6."
+  date: "2007-01-03"
+  doi: "https://doi.org/10.37236/925"
+  notes: "Submitted 2005-11-01. Table 1 lists W(3,8) > 238400, W(4,7) > 387967, W(5,6) > 246956, W(6,5) > 56693 and W(6,6) > 600486 as previously unpublished bounds obtainable by Rabung's method; Tables 3 and 4 give the cyclic zipper improvements."
+  added_by: daniel-munro
+
+dransfield-et-al-2004:
+  string: "M.R. Dransfield, L. Liu, V.W. Marek and M. Truszczyński, Satisfiability and Computing van der Waerden Numbers, Electronic Journal of Combinatorics 11 (2004) #R41."
+  date: "2004-06-16"
+  doi: "https://doi.org/10.37236/1794"
+  added_by: daniel-munro
+
+kouril-franco-2005:
+  string: "M. Kouril and J. Franco, Resolution Tunnels for Improved SAT Solver Performance, Theory and Applications of Satisfiability Testing (SAT 2005), Lecture Notes in Computer Science 3569 (2005) 143-157."
+  date: "2005-06"
+  doi: "https://doi.org/10.1007/11499107_11"
+  notes: "Credited with W(2,6) > 1131 in Table 1 of https://doi.org/10.37236/925."
+  added_by: daniel-munro
+
+heule-2009:
+  string: "M.J.H. Heule, Improving the odds: New lower bounds for Van der Waerden numbers, slides, May 14, 2009."
+  date: "2009-05-14"
+  url: "https://web.archive.org/web/20151001080214/http://www.st.ewi.tudelft.nl/sat/slides/waerden.pdf"
+  notes: "Bounds credited to M.J.H. Heule, D.G. Mitchell and N. Nguyen (W(3,5), W(3,6)) and to M.J.H. Heule and H. van Maaren (W(5,3), W(5,5), W(5,6), W(6,5)), unpublished. Cited as [7] in https://doi.org/10.37236/2363."
+  added_by: daniel-munro
+
+sat-delft-waerden-2011:
+  string: "SAT@Delft, Van der Waerden numbers web page, http://www.st.ewi.tudelft.nl/sat/waerden.php (last modified 2011-03-14, archived 2011-06-05)."
+  date: "2011-03-14"
+  url: "https://web.archive.org/web/20110605062615/http://www.st.ewi.tudelft.nl/sat/waerden.php"
+  notes: "Table 2 (improved best known lower bounds). Cited as [8] in https://doi.org/10.37236/2363."
+  added_by: daniel-munro
+
+monroe-2016:
+  string: "D. Monroe, New Lower Bounds for van der Waerden Numbers Using Distributed Computing, arXiv:1603.03301v1."
+  date: "2016-03-09"
+  url: "https://arxiv.org/abs/1603.03301v1"
+  added_by: daniel-munro
+
+monroe-2017:
+  string: "D. Monroe, New Lower Bounds for van der Waerden Numbers Using Distributed Computing, arXiv:1603.03301v4."
+  date: "2017-11-06"
+  url: "https://arxiv.org/abs/1603.03301v4"
+  notes: "First version with bounds from the recursions of Xu and of Blankenship, Cummings and Taranchuk. Its W(4,6) > 157348 was given as W(4,6) > 157209 in v6 (2019) and restored in v7 (2022)."
+  added_by: daniel-munro
+
+komkov-2018:
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers Using Genetic Algorithm, viXra:1611.0385v2."
+  date: "2018-10-30"
+  url: "https://vixra.org/abs/1611.0385"
+  notes: "Not peer reviewed."
+  added_by: daniel-munro
+
+komkov-2020:
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers, arXiv:1701.05603v5."
+  date: "2020-10-27"
+  url: "https://arxiv.org/abs/1701.05603v5"
+  notes: "Not peer reviewed. Certificates for W(6,5) and W(5,6) at http://komkov.org/VanDerWaerden/."
   added_by: daniel-munro
