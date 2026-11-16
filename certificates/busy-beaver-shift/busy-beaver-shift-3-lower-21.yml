@@ -1,0 +1,11 @@
+constant: busy-beaver-shift-3
+bound: lower
+value: 21
+kind: witness
+witness:
+  format: turing-machine
+  data: 1RB1RZ_1LB0RC_1LC1LA
+submitted_by: daniel-munro
+date: 2026-11-15
+source: lin-1965
+notes: 'Started in state A on a blank tape, it halts after 21 steps with 5 1s on the tape. Assembled by an AI agent (Claude) from the known champions, checked by simulation.'

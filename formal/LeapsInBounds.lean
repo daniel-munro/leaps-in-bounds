@@ -1,12 +1,16 @@
 module
 
+public import LeapsInBounds.Statements.BusyBeaver
 public import LeapsInBounds.Statements.Cage
 public import LeapsInBounds.Statements.CapSet
 public import LeapsInBounds.Statements.ChromaticNumberSpace
 public import LeapsInBounds.Statements.CircleInTriangle
+public import LeapsInBounds.Statements.DeBruijnNewman
 public import LeapsInBounds.Statements.DegreeDiameter
-public import LeapsInBounds.Statements.IsoscelesSet
+public import LeapsInBounds.Statements.DiskCovering
+public import LeapsInBounds.Statements.Folding
 public import LeapsInBounds.Statements.Golomb
+public import LeapsInBounds.Statements.IsoscelesSet
 public import LeapsInBounds.Statements.KissingNumber
 public import LeapsInBounds.Statements.LineArrangement
 public import LeapsInBounds.Statements.MulticolorRamsey

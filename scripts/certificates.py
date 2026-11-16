@@ -270,10 +270,10 @@ def certificate_status(cert: Mapping[str, Any], manifest: Mapping[str, Mapping[s
 
 # Bounds are integers, or for some families square roots `\sqrt{m}` or sums of
 # rational multiples of square roots, such as `4+2\sqrt{3}+\frac{4\sqrt{6}}{3}`
-# (see Family.values).
+# or `0.6094` (see Family.values).
 
 SQRT_PATTERN = re.compile(r"\\sqrt\{(\d+)\}")
-RADICAL_TERM = re.compile(r"([+-]?)(?:\\frac\{(\d*)(?:\\sqrt\{(\d+)\})?\}\{(\d+)\}|(\d*)(?:\\sqrt\{(\d+)\})?)")
+RADICAL_TERM = re.compile(r"([+-]?)(?:\\frac\{(\d*)(?:\\sqrt\{(\d+)\})?\}\{(\d+)\}|(\d*(?:\.\d+)?)(?:\\sqrt\{(\d+)\})?)")
 MAX_RADICAND = 10**9
 
 
@@ -405,7 +405,7 @@ def to_radical(x: "Radical | Fraction | int") -> Radical:
 def parse_radical(text: Any) -> Radical:
     """Parse an integer, or a string summing terms `a`, `a\\sqrt{m}` or
     `\\frac{a\\sqrt{m}}{b}`, each with an optional sign, where a can be
-    omitted before a square root."""
+    omitted before a square root, and can be a decimal outside a fraction."""
     if isinstance(text, int) and not isinstance(text, bool):
         return to_radical(text)
     error = CertificateError(f"Can't read {text!r} as a sum of rational multiples of square roots")
@@ -424,7 +424,7 @@ def parse_radical(text: Any) -> Radical:
             coef, root = frac_coef, frac_root
         if not coef and not root:
             raise error
-        c, m, d = int(coef or 1), int(root or 1), int(den or 1)
+        c, m, d = Fraction(coef or 1), int(root or 1), int(den or 1)
         if d == 0 or m > MAX_RADICAND:
             raise error
         total += Radical.sqrt(m, Fraction(-c if sign == "-" else c, d))
@@ -1821,7 +1821,6 @@ def general_line_arrangement_check_witness(params: Mapping[str, int], bound: str
     line_arrangement_witness(params, bound, value, cert, general=True)
 
 
-# Keyed by family ID.
 def chromatic_number_space_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
     name = "LowerBound" if bound == "lower" else "UpperBound"
     return f"LeapsInBounds.ChromaticNumberSpace.{name}", [params['n'], value]
@@ -1831,6 +1830,264 @@ def chromatic_number_space_check_witness(params: Mapping[str, int], bound: str, 
     raise CertificateError("Bounds on the chromatic number of Euclidean space can only be certified by Lean proofs so far")
 
 
+def busy_beaver_shift_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "ShiftLowerBound" if bound == "lower" else "ShiftUpperBound"
+    return f"LeapsInBounds.BusyBeaver.{name}", [params['n'], value]
+
+
+def busy_beaver_ones_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "OnesLowerBound" if bound == "lower" else "OnesUpperBound"
+    return f"LeapsInBounds.BusyBeaver.{name}", [params['n'], value]
+
+
+TURING_TRANSITION = re.compile(r"([01])([LR])([A-Z])|---")
+# Simulating 10⁹ steps takes a minute or two.
+MAX_TURING_STEPS = 10**9
+
+
+def read_turing_machine(data: str, n: int) -> list[tuple[int, int, int]]:
+    """Parse an n-state, 2-symbol Turing machine in the standard text format,
+    such as `1RB1LB_1LA1RZ`: for each state A, B, … in turn, separated by `_`,
+    its transitions on reading 0 and 1, each written as the symbol to write,
+    the direction to move (L or R) and the next state. A next state after the
+    first n letters, conventionally Z or H, halts, and an undefined transition
+    `---` halts the same as `1RZ`. Returns (write, move, next) for state q
+    reading s at index 2q + s, with move ±1 and next -1 for halting."""
+    rows = "".join(data.split()).upper().split("_")
+    if len(rows) != n:
+        raise CertificateError(f"Machine has {len(rows)} states, not {n}")
+    table = []
+    for q, row in enumerate(rows):
+        if len(row) != 6:
+            raise CertificateError(f"State {chr(65 + q)} must have two transitions of 3 characters, not {row!r}")
+        for transition in (row[:3], row[3:]):
+            if not TURING_TRANSITION.fullmatch(transition):
+                raise CertificateError(f"Can't read transition {transition!r}")
+            if transition == "---":
+                transition = "1RZ"
+            target = ord(transition[2]) - ord("A")
+            table.append((int(transition[0]), 1 if transition[1] == "R" else -1, target if target < n else -1))
+    return table
+
+
+def run_turing_machine(table: list[tuple[int, int, int]], limit: int) -> tuple[int, int] | None:
+    """Run a machine from state A on a blank tape. Returns the number of steps
+    it takes to halt, counting the halting transition, and the number of 1s
+    then on the tape, or None if it doesn't halt within `limit` steps."""
+    write = [w for w, _, _ in table]
+    move = [m for _, m, _ in table]
+    target = [t for _, _, t in table]
+    size = 1 << 16
+    tape = bytearray(size)
+    head, state, steps = size // 2, 0, 0
+    while steps < limit:
+        i = 2 * state + tape[head]
+        tape[head] = write[i]
+        head += move[i]
+        state = target[i]
+        steps += 1
+        if state < 0:
+            return steps, tape.count(1)
+        if not 0 <= head < size:
+            if head < 0:
+                tape = bytearray(size) + tape
+                head += size
+            else:
+                tape += bytearray(size)
+            size *= 2
+    return None
+
+
+def busy_beaver_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], ones: bool) -> None:
+    """BB(n) >= value is witnessed by an n-state, 2-symbol machine that halts
+    after at least value steps from a blank tape, and Σ(n) >= value by one
+    that halts with at least value 1s on the tape."""
+    if cert["witness"].get("format") != "turing-machine":
+        raise CertificateError("Busy beaver witnesses must use format: turing-machine")
+    table = read_turing_machine(read_witness_data(cert), params["n"])
+    result = run_turing_machine(table, MAX_TURING_STEPS)
+    if result is None:
+        raise CertificateError(f"Machine doesn't halt within {MAX_TURING_STEPS} steps, the most the checker runs")
+    steps, count = result
+    if ones and count < value:
+        raise CertificateError(f"Machine halts with {count} 1s, fewer than {value}")
+    if not ones and steps < value:
+        raise CertificateError(f"Machine halts after {steps} steps, fewer than {value}")
+
+
+def busy_beaver_shift_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    busy_beaver_witness(params, bound, value, cert, ones=False)
+
+
+def busy_beaver_ones_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    busy_beaver_witness(params, bound, value, cert, ones=True)
+
+
+def stamp_folding_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "StampLowerBound" if bound == "lower" else "StampUpperBound"
+    return f"LeapsInBounds.Folding.{name}", [params['n'], value]
+
+
+def map_folding_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
+    name = "LowerBound" if bound == "lower" else "UpperBound"
+    return f"LeapsInBounds.Folding.{name}", [params['m'], params['n'], value]
+
+
+def map_creases(m: int, n: int) -> dict[tuple[int, int], list[tuple[int, int]]]:
+    """The creases of an m × n map, with its cells numbered 0 to mn - 1 row by
+    row, grouped by the edge of the folded stack they end up on: the creases
+    between rows i and i + 1, or columns j and j + 1, are on one of two
+    opposite edges, depending on the parity of i or j."""
+    creases: dict[tuple[int, int], list[tuple[int, int]]] = {}
+    for i in range(m):
+        for j in range(n):
+            cell = i * n + j
+            if i + 1 < m:
+                creases.setdefault((0, i % 2), []).append((cell, cell + n))
+            if j + 1 < n:
+                creases.setdefault((1, j % 2), []).append((cell, cell + 1))
+    return creases
+
+
+def is_folding(stack: str, creases: Mapping[tuple[int, int], list[tuple[int, int]]]) -> bool:
+    """Whether a stack of cells (each one character, from the bottom up) is a
+    folding: no two creases on the same edge of the stack interleave. Each
+    crease joins the levels of its two cells, so on each edge they must be
+    nested or disjoint, like brackets."""
+    level = {int(c, 36): k for k, c in enumerate(stack)}
+    for group in creases.values():
+        # Nested or disjoint intervals are balanced brackets: scan the levels,
+        # opening an interval at its lower end and closing it at its upper end.
+        ends = [0] * len(stack)
+        for k, (a, b) in enumerate(group, 1):
+            lo, hi = sorted((level[a], level[b]))
+            ends[lo], ends[hi] = k, -k
+        open_intervals = []
+        for e in ends:
+            if e > 0:
+                open_intervals.append(e)
+            elif e < 0 and open_intervals.pop() != -e:
+                return False
+    return True
+
+
+def folding_witness(m: int, n: int, value: int, cert: Mapping[str, Any]) -> None:
+    """There are at least `value` foldings of an m × n map when `value`
+    distinct stacks of its cells are foldings."""
+    if cert["witness"].get("format") != "stacks":
+        raise CertificateError("Folding witnesses must use format: stacks")
+    cells = m * n
+    if cells > len(BASE36):
+        raise CertificateError(f"Stacks can have at most {len(BASE36)} cells")
+    stacks = read_witness_data(cert).lower().split()
+    if len(stacks) != value:
+        raise CertificateError(f"Witness has {len(stacks)} stacks, not {value}")
+    if len(set(stacks)) != len(stacks):
+        raise CertificateError("Stacks aren't distinct")
+    creases = map_creases(m, n)
+    cell_symbols = sorted(BASE36[:cells])
+    for k, stack in enumerate(stacks, 1):
+        if sorted(stack) != cell_symbols:
+            raise CertificateError(f"Stack {k} ({stack[:40]!r}) doesn't list each of the {cells} cells once")
+        if not is_folding(stack, creases):
+            raise CertificateError(f"Stack {k} ({stack!r}) isn't a folding: two creases on the same edge cross")
+
+
+def stamp_folding_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    folding_witness(1, params["n"], value, cert)
+
+
+def map_folding_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:
+    folding_witness(params["m"], params["n"], value, cert)
+
+
+def disk_covering_lean_statement(params: Mapping[str, int], bound: str, value: int | str) -> tuple[str, list[Any]]:
+    name = "RadicalLowerBound" if bound == "lower" else "RadicalUpperBound"
+    terms, d = parse_radical(value).lean_args()
+    return f"LeapsInBounds.DiskCovering.{name}", [params['n'], terms, d]
+
+
+# Bounds the work of checking a covering, which grows with the precision needed
+# near the points it covers most tightly.
+MAX_COVERING_SQUARES = 2_000_000
+MAX_COVERING_DEPTH = 60
+
+
+def disk_covering_check_witness(params: Mapping[str, int], bound: str, value: int | str, cert: Mapping[str, Any]) -> None:
+    """r(n) <= value is witnessed by n centers such that the closed disks of
+    radius value around them cover the closed unit disk.
+
+    The checker covers the square [-1, 1]² with squares, splitting each one
+    into four until it misses the unit disk or lies in one of the disks, all
+    with exact rational arithmetic. This always finishes when the disks cover
+    the unit disk with a little room to spare, but not when they cover it only
+    just, as at the points where an optimal covering is tight: for those, the
+    radius has to be rounded up.
+    """
+    if cert["witness"].get("format") != "points":
+        raise CertificateError("Disk covering witnesses must use format: points")
+    r_squared = parse_radical(value) * parse_radical(value)
+    if set(r_squared.terms) - {1} or parse_radical(value).sign() <= 0:
+        raise CertificateError("The radius must be positive with a rational square")
+    r2 = r_squared.terms.get(1, Fraction(0))
+    centers = []
+    for x, y in read_points(read_witness_data(cert)):
+        if set(x.terms) - {1} or set(y.terms) - {1}:
+            raise CertificateError("Centers must have rational coordinates")
+        centers.append((x.terms.get(1, Fraction(0)), y.terms.get(1, Fraction(0))))
+    if len(centers) != params["n"]:
+        raise CertificateError(f"Witness has {len(centers)} centers, not {params['n']}")
+    # Scale by the common denominator so the arithmetic is on integers: a square
+    # at depth k has side 2^(D - k + 1) and the unit disk has radius 2^D, so
+    # centers and the radius are scaled by 2^D too.
+    D = MAX_COVERING_DEPTH
+    scale = 1 << D
+    denominator = math.lcm(*(c.denominator for x, y in centers for c in (x, y)), r2.denominator)
+    # Exact comparisons of squared distances, with everything multiplied by
+    # denominator² (and the radius² by denominator): a center (x, y) becomes
+    # (x · denominator · 2^D), while square corners are multiplied by denominator.
+    big = [(int(x * denominator) * scale, int(y * denominator) * scale) for x, y in centers]
+    big_r2 = int(r2 * denominator) * denominator * scale * scale
+    unit2 = denominator * denominator * scale * scale
+
+    def dist2_range(cx: int, cy: int, x0: int, y0: int, side: int) -> tuple[int, int]:
+        # Least and greatest squared distance from (cx, cy) to the square
+        dx_near = max(x0 - cx, 0, cx - x0 - side)
+        dy_near = max(y0 - cy, 0, cy - y0 - side)
+        dx_far = max(abs(cx - x0), abs(cx - x0 - side))
+        dy_far = max(abs(cy - y0), abs(cy - y0 - side))
+        return dx_near * dx_near + dy_near * dy_near, dx_far * dx_far + dy_far * dy_far
+
+    stack = [(-scale * denominator, -scale * denominator, 2 * scale * denominator, 0)]
+    squares = 0
+    while stack:
+        x0, y0, side, depth = stack.pop()
+        squares += 1
+        if squares > MAX_COVERING_SQUARES:
+            raise CertificateError(f"Checking the covering needs more than {MAX_COVERING_SQUARES} squares: the disks don't cover the unit disk, or only just (try rounding the radius up)")
+        if dist2_range(0, 0, x0, y0, side)[0] > unit2:
+            continue
+        if any(dist2_range(cx, cy, x0, y0, side)[1] <= big_r2 for cx, cy in big):
+            continue
+        if depth == D:
+            raise CertificateError(f"The disks don't cover the unit disk near ({x0 / (scale * denominator):.6f}, {y0 / (scale * denominator):.6f}), or only just (try rounding the radius up)")
+        half = side // 2
+        for dx in (0, half):
+            for dy in (0, half):
+                stack.append((x0 + dx, y0 + dy, half, depth + 1))
+
+
+def debruijn_newman_lean_statement(params: Mapping[str, int], bound: str, value: int | str) -> tuple[str, list[Any]]:
+    name = "RadicalLowerBound" if bound == "lower" else "RadicalUpperBound"
+    terms, d = parse_radical(value).lean_args()
+    return f"LeapsInBounds.DeBruijnNewman.{name}", [terms, d]
+
+
+def debruijn_newman_check_witness(params: Mapping[str, int], bound: str, value: int | str, cert: Mapping[str, Any]) -> None:
+    raise CertificateError("Bounds on the de Bruijn–Newman constant can only be certified by Lean proofs")
+
+
+# Keyed by family ID.
 FAMILIES = {
     "ramsey": Family(
         id_pattern=re.compile(r"ramsey-(?P<r>\d+)-(?P<s>\d+)"),
@@ -1994,6 +2251,50 @@ FAMILIES = {
         lean_statement=chromatic_number_space_lean_statement,
         check_witness=chromatic_number_space_check_witness,
         witness_bound=None,
+    ),
+    "busy-beaver-shift": Family(
+        id_pattern=re.compile(r"busy-beaver-shift-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.BusyBeaver",
+        lean_statement=busy_beaver_shift_lean_statement,
+        check_witness=busy_beaver_shift_check_witness,
+        witness_bound="lower",
+    ),
+    "busy-beaver-ones": Family(
+        id_pattern=re.compile(r"busy-beaver-ones-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.BusyBeaver",
+        lean_statement=busy_beaver_ones_lean_statement,
+        check_witness=busy_beaver_ones_check_witness,
+        witness_bound="lower",
+    ),
+    "stamp-folding": Family(
+        id_pattern=re.compile(r"stamp-folding-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.Folding",
+        lean_statement=stamp_folding_lean_statement,
+        check_witness=stamp_folding_check_witness,
+        witness_bound="lower",
+    ),
+    "map-folding": Family(
+        id_pattern=re.compile(r"map-folding-(?P<m>\d+)-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.Folding",
+        lean_statement=map_folding_lean_statement,
+        check_witness=map_folding_check_witness,
+        witness_bound="lower",
+    ),
+    "disk-covering": Family(
+        id_pattern=re.compile(r"disk-covering-(?P<n>\d+)"),
+        lean_module="LeapsInBounds.Statements.DiskCovering",
+        lean_statement=disk_covering_lean_statement,
+        check_witness=disk_covering_check_witness,
+        witness_bound="upper",
+        values="radical",
+    ),
+    "debruijn-newman": Family(
+        id_pattern=re.compile(r"debruijn-newman"),
+        lean_module="LeapsInBounds.Statements.DeBruijnNewman",
+        lean_statement=debruijn_newman_lean_statement,
+        check_witness=debruijn_newman_check_witness,
+        witness_bound=None,
+        values="radical",
     ),
 }
 

@@ -11,7 +11,7 @@ A certificate doesn't need to cite a source for its bound, or a source a certifi
 
 Anyone, including an AI agent, can submit a certificate by opening a pull request that adds a file here. CI checks that each certificate is well formed and consistent with the others and with the literature, and that a new certificate is at least as strong as the existing ones for the same bound. It comments on the pull request with the result for each new certificate and its role: a new bound, or evidence for the current bound or a weaker one. CI doesn't run the checkers on the evidence: a maintainer does that before merging. (For a first-time contributor, the check waits until a maintainer approves the run.)
 
-Only the families listed [below](#families) accept certificates so far. To ask for another family of constants to accept them, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
+Every family of constants accepts certificates, in the forms listed [below](#families). For questions about a family's statements or checkers, start a [GitHub Discussion](https://github.com/daniel-munro/leaps-in-bounds/discussions). Leaps in Bounds tracks specific mathematical constants: bounds on the running time of algorithms, or on asymptotic exponents and coefficients, such as for 3SUM or matrix multiplication, belong at [Big O Speedrun](https://bigospeedrun.com) instead.
 
 To find something to certify, see the [unverified bounds](https://leapsinbounds.org/unverified/) (also as [JSON](https://leapsinbounds.org/data/unverified_bounds.json)): current bounds whose best evidence isn't a verified certificate yet, with their discovery and whether a witness can certify them.
 
@@ -361,6 +361,46 @@ Formal statements are in [`formal/LeapsInBounds/Statements/ChromaticNumberSpace.
 
 The same file proves that a lower bound never exceeds an upper bound. Only Lean proofs are accepted so far, here or attested.
 
+### Busy beaver functions: `busy-beaver-shift-{n}` and `busy-beaver-ones-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/BusyBeaver.lean`](../formal/LeapsInBounds/Statements/BusyBeaver.lean). An `n`-state, 2-symbol Turing machine starts on a blank tape, infinite in both directions, and in each state, for each symbol read, writes a symbol, moves left or right, and goes to a state or halts. The halting transition also writes and moves, and counts as a step.
+
+- `ShiftLowerBound n N` means `BB(n) >= N`: some `n`-state machine halts after at least `N` steps.
+- `ShiftUpperBound n N` means `BB(n) <= N`: every `n`-state machine that halts does so within `N` steps.
+- `OnesLowerBound n N` and `OnesUpperBound n N` are the same for `Σ(n)`, the number of 1s on the tape when the machine halts.
+
+Witnesses can certify lower bounds only. A witness uses `format: turing-machine`: the machine in the [standard text format](https://wiki.bbchallenge.org/wiki/Standard_TM_Text_Format), such as `1RB1LB_1LA1RZ` for `BB(2) >= 6` and `Σ(2) >= 4`. For each state `A`, `B`, … in turn, separated by `_`, it gives the transitions on reading 0 and 1, each as the symbol to write, the direction (`L` or `R`) and the next state. A next state after the first `n` letters, conventionally `Z` or `H`, halts, and an undefined transition `---` halts as `1RZ` does. The machine starts in state `A`. The checker simulates it, for at most 10⁹ steps, so it can check the 5-state champion (47,176,870 steps) but not the 6- and 7-state ones, which run for far too long to simulate: those need a proof of the machine's behavior, in Lean here or [attested](#attestations).
+
+### Stamp folding and map folding: `stamp-folding-{n}` and `map-folding-{m}-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Folding.lean`](../formal/LeapsInBounds/Statements/Folding.lean). A folding of an `m × n` map, with its cells labeled, is counted by its final stack: the order of the cells from the bottom up. The creases between rows `i` and `i + 1` all end up on one edge of the stack, and those for the next `i` on the opposite edge, and the same for columns. Each crease joins the levels of its two cells, and a stack is a folding exactly when no two creases on the same edge cross: their intervals of levels are nested or disjoint. A strip of `n` stamps is the `1 × n` map.
+
+- `LowerBound m n N` means there are at least `N` foldings of the `m × n` map.
+- `UpperBound m n N` means there are at most `N`.
+- `StampLowerBound n N` and `StampUpperBound n N` are the same for the strip of `n` stamps.
+
+Witnesses can certify lower bounds only. A witness uses `format: stacks`: `N` distinct stacks, separated by whitespace, each a folding written as its cells from the bottom up, one character each in base 36 (so `m n <= 36`), with the cells numbered from `0` row by row. For example, `'012 021 102 120 201 210'` for the 6 foldings of 3 stamps. Since the witness lists the foldings, the [size limit](#size-limit) allows counts up to a few hundred thousand: with the stacks sorted, xz compresses them to under a byte each.
+
+### Covering a disk with disks: `disk-covering-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/DiskCovering.lean`](../formal/LeapsInBounds/Statements/DiskCovering.lean):
+
+- `RadicalLowerBound n terms d` means `r(n) >= radical terms d`: no `n` closed disks of smaller radius cover the closed unit disk.
+- `RadicalUpperBound n terms d` means `r(n) <= radical terms d`: some `n` closed disks of that radius cover it.
+
+Values are written as for [circle packing](#packing-unit-circles-in-an-equilateral-triangle-circle-in-equilateral-n), and can also be decimals, such as `'0.6094'` (quoted, so that it's read as text).
+
+Witnesses can certify upper bounds only. A witness for `r(n) <= v` uses `format: points`: the `n` centers, one per line as `x, y`, with rational coordinates written as integers, decimals or `\frac{a}{b}`. The radius must have a rational square. The checker covers the square `[-1, 1]²` with smaller and smaller squares, until each one misses the unit disk or lies in one of the disks, all with exact rational arithmetic. This finishes when the disks cover the unit disk with some room to spare, but not when they cover it only just, as optimal coverings do at the points where three boundaries meet. So a witness can only certify a radius slightly above the optimum of its configuration: round the radius up, in the sixth or seventh decimal place.
+
+### The de Bruijn–Newman constant: `debruijn-newman`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/DeBruijnNewman.lean`](../formal/LeapsInBounds/Statements/DeBruijnNewman.lean), in terms of the zeros of `H(t, z)`:
+
+- `RadicalLowerBound terms d` means `Λ >= radical terms d`: for every `t` below it, `H(t, ·)` has a zero that isn't real.
+- `RadicalUpperBound terms d` means `Λ <= radical terms d`: for every `t` at least it, every zero of `H(t, ·)` is real.
+
+Values are written as for disk covering, such as `'0.2'` or `-50`. Only Lean proofs are accepted, here or attested.
+
 ## Checking locally
 
 To run the checkers on certificates, give their IDs:
@@ -377,5 +417,5 @@ python scripts/check_certificates.py --allow-pending --new certificates/<family>
 
 ## Known gaps
 
-- Values are integers or sums of rational multiples of square roots for now. Other real values, such as most known square packings and disk coverings, will need more general exact arithmetic (such as nested square roots or roots of polynomials), or interval arithmetic for bounds that aren't tight.
+- Values are integers, decimals or sums of rational multiples of square roots for now. Other real values, such as most known square packings and disk coverings, will need more general exact arithmetic (such as nested square roots or roots of polynomials). Disk covering witnesses are checked with rational arithmetic, so they can only certify radii slightly above an optimal covering's, not the optimum itself.
 - Kissing number witnesses must have integer coordinates (up to scaling). Some record configurations, such as those in dimensions 17 to 21, need irrational coordinates, so they can't be submitted yet.

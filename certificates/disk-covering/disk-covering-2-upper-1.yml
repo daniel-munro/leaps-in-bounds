@@ -1,0 +1,10 @@
+constant: disk-covering-2
+bound: upper
+value: 1
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringOne
+  theorem: LeapsInBounds.Proofs.DiskCoveringOne.upper_two
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: Proof written by an AI agent (Claude).

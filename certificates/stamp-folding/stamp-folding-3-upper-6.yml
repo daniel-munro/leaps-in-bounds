@@ -1,0 +1,10 @@
+constant: stamp-folding-3
+bound: upper
+value: 6
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.StampFoldingSmall
+  theorem: LeapsInBounds.Proofs.StampFoldingSmall.upper_three
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: 'The trivial bound n!: a stack is an order of the stamps. Proof written by an AI agent (Claude).'

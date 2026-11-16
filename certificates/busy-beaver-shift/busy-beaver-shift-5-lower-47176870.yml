@@ -1,0 +1,11 @@
+constant: busy-beaver-shift-5
+bound: lower
+value: 47176870
+kind: witness
+witness:
+  format: turing-machine
+  data: 1RB1LC_1RC1RB_1RD0LE_1LA1LD_1RZ0LA
+submitted_by: daniel-munro
+date: 2026-11-15
+source: marxen-1990
+notes: 'Started in state A on a blank tape, it halts after 47176870 steps with 4098 1s on the tape. It is the 5-state champion found by Marxen and Buntrock, and the checker simulates all 47,176,870 steps (a few seconds). Assembled by an AI agent (Claude) from the known champions, checked by simulation.'

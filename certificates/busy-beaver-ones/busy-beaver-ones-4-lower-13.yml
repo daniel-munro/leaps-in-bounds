@@ -1,0 +1,11 @@
+constant: busy-beaver-ones-4
+bound: lower
+value: 13
+kind: witness
+witness:
+  format: turing-machine
+  data: 1RB1LB_1LA0LC_1RZ1LD_1RD0RA
+submitted_by: daniel-munro
+date: 2026-11-15
+source: brady-1966
+notes: 'Started in state A on a blank tape, it halts after 107 steps with 13 1s on the tape. Assembled by an AI agent (Claude) from the known champions, checked by simulation.'
