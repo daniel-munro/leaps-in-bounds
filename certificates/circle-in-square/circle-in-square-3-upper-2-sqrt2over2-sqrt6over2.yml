@@ -1,0 +1,12 @@
+constant: circle-in-square-3
+bound: upper
+value: '2+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1-\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1-\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+submitted_by: daniel-munro
+date: 2026-11-15

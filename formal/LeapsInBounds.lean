@@ -4,6 +4,7 @@ public import LeapsInBounds.Statements.BusyBeaver
 public import LeapsInBounds.Statements.Cage
 public import LeapsInBounds.Statements.CapSet
 public import LeapsInBounds.Statements.ChromaticNumberSpace
+public import LeapsInBounds.Statements.CircleInSquare
 public import LeapsInBounds.Statements.CircleInTriangle
 public import LeapsInBounds.Statements.DeBruijnNewman
 public import LeapsInBounds.Statements.DegreeDiameter

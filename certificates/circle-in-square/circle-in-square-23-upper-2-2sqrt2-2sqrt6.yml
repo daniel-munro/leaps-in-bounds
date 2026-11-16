@@ -1,0 +1,32 @@
+constant: circle-in-square-23
+bound: upper
+value: '2+2\sqrt{2}+2\sqrt{6}'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    1+\sqrt{2}+\sqrt{6}, 1
+    1+2\sqrt{2}+2\sqrt{6}, 1
+    1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1-\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1+\frac{3\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}, 1-\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1-\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1+\frac{3\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1+\frac{5\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}, 1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1+2\sqrt{2}+\sqrt{6}, 1+\sqrt{6}
+    1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1+\frac{3\sqrt{2}}{2}+\frac{\sqrt{6}}{2}
+    1, 1+\sqrt{2}+\sqrt{6}
+    1+\sqrt{2}+\sqrt{6}, 1+\sqrt{2}+\sqrt{6}
+    1+2\sqrt{2}+2\sqrt{6}, 1+\sqrt{2}+\sqrt{6}
+    1+\frac{3\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}, 1+\frac{\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}
+    1+\sqrt{6}, 1+2\sqrt{2}+\sqrt{6}
+    1-\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1+\frac{3\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}
+    1+\frac{\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}, 1+\frac{3\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}
+    1+\frac{5\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}, 1+\frac{3\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}
+    1+\frac{\sqrt{2}}{2}+\frac{\sqrt{6}}{2}, 1+\frac{5\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}
+    1+\frac{3\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}, 1+\frac{5\sqrt{2}}{2}+\frac{3\sqrt{6}}{2}
+    1, 1+2\sqrt{2}+2\sqrt{6}
+    1+\sqrt{2}+\sqrt{6}, 1+2\sqrt{2}+2\sqrt{6}
+    1+2\sqrt{2}+2\sqrt{6}, 1+2\sqrt{2}+2\sqrt{6}
+submitted_by: daniel-munro
+date: 2026-11-15

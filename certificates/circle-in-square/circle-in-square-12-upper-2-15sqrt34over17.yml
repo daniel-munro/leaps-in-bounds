@@ -1,0 +1,21 @@
+constant: circle-in-square-12
+bound: upper
+value: '2+\frac{15\sqrt{34}}{17}'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    1+\frac{10\sqrt{34}}{17}, 1
+    1+\frac{5\sqrt{34}}{17}, 1+\frac{3\sqrt{34}}{17}
+    1+\frac{15\sqrt{34}}{17}, 1+\frac{3\sqrt{34}}{17}
+    1, 1+\frac{6\sqrt{34}}{17}
+    1+\frac{10\sqrt{34}}{17}, 1+\frac{6\sqrt{34}}{17}
+    1+\frac{5\sqrt{34}}{17}, 1+\frac{9\sqrt{34}}{17}
+    1+\frac{15\sqrt{34}}{17}, 1+\frac{9\sqrt{34}}{17}
+    1, 1+\frac{12\sqrt{34}}{17}
+    1+\frac{10\sqrt{34}}{17}, 1+\frac{12\sqrt{34}}{17}
+    1+\frac{5\sqrt{34}}{17}, 1+\frac{15\sqrt{34}}{17}
+    1+\frac{15\sqrt{34}}{17}, 1+\frac{15\sqrt{34}}{17}
+submitted_by: daniel-munro
+date: 2026-11-15

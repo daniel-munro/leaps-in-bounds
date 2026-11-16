@@ -1,0 +1,10 @@
+constant: circle-in-square-1
+bound: upper
+value: 2
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+submitted_by: daniel-munro
+date: 2026-11-15

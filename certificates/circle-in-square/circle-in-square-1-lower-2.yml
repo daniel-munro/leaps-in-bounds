@@ -1,0 +1,10 @@
+constant: circle-in-square-1
+bound: lower
+value: 2
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CircleInSquareBasic
+  theorem: LeapsInBounds.Proofs.CircleInSquareBasic.lower_one
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: The centers lie in a square of side s - 2.

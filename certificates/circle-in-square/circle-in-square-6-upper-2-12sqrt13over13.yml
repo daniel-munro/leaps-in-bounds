@@ -1,0 +1,15 @@
+constant: circle-in-square-6
+bound: upper
+value: '2+\frac{12\sqrt{13}}{13}'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    1+\frac{12\sqrt{13}}{13}, 1
+    1+\frac{6\sqrt{13}}{13}, 1+\frac{4\sqrt{13}}{13}
+    1, 1+\frac{8\sqrt{13}}{13}
+    1+\frac{12\sqrt{13}}{13}, 1+\frac{8\sqrt{13}}{13}
+    1+\frac{6\sqrt{13}}{13}, 1+\frac{12\sqrt{13}}{13}
+submitted_by: daniel-munro
+date: 2026-11-15

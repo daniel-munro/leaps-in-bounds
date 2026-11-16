@@ -1,0 +1,11 @@
+constant: circle-in-square-2
+bound: upper
+value: '2+\sqrt{2}'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    1+\sqrt{2}, 1+\sqrt{2}
+submitted_by: daniel-munro
+date: 2026-11-15

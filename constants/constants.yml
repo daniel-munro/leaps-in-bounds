@@ -122,6 +122,186 @@ map-folding-2-2:
     generated: map-folding-2-2.svg
     alt_text: "The 8 ways to fold a 2x2 map, each square numbered and shaded by its place in the folded stack, 1 on top"
 
+circle-in-square-1:
+  image:
+    generated: circle-in-square-1.svg
+    alt_text: "Packing one unit circle in a square"
+
+circle-in-square-2:
+  image:
+    generated: circle-in-square-2.svg
+    alt_text: "Packing two unit circles in a square"
+
+circle-in-square-3:
+  image:
+    generated: circle-in-square-3.svg
+    alt_text: "Packing three unit circles in a square"
+
+circle-in-square-4:
+  image:
+    generated: circle-in-square-4.svg
+    alt_text: "Packing four unit circles in a square"
+
+circle-in-square-5:
+  image:
+    generated: circle-in-square-5.svg
+    alt_text: "Packing five unit circles in a square"
+
+circle-in-square-6:
+  image:
+    generated: circle-in-square-6.svg
+    alt_text: "Packing six unit circles in a square"
+
+circle-in-square-7:
+  image:
+    generated: circle-in-square-7.svg
+    alt_text: "Packing seven unit circles in a square"
+
+circle-in-square-8:
+  image:
+    generated: circle-in-square-8.svg
+    alt_text: "Packing eight unit circles in a square"
+
+circle-in-square-9:
+  image:
+    generated: circle-in-square-9.svg
+    alt_text: "Packing nine unit circles in a square"
+
+circle-in-square-10:
+  image:
+    generated: circle-in-square-10.svg
+    alt_text: "Packing ten unit circles in a square"
+
+circle-in-square-11:
+  image:
+    generated: circle-in-square-11.svg
+    alt_text: "Packing eleven unit circles in a square"
+
+circle-in-square-12:
+  image:
+    generated: circle-in-square-12.svg
+    alt_text: "Packing twelve unit circles in a square"
+
+circle-in-square-13:
+  image:
+    generated: circle-in-square-13.svg
+    alt_text: "Packing 13 unit circles in a square"
+
+circle-in-square-14:
+  image:
+    generated: circle-in-square-14.svg
+    alt_text: "Packing 14 unit circles in a square"
+
+circle-in-square-15:
+  image:
+    generated: circle-in-square-15.svg
+    alt_text: "Packing 15 unit circles in a square"
+
+circle-in-square-16:
+  image:
+    generated: circle-in-square-16.svg
+    alt_text: "Packing 16 unit circles in a square"
+
+circle-in-square-17:
+  image:
+    generated: circle-in-square-17.svg
+    alt_text: "Packing 17 unit circles in a square"
+
+circle-in-square-18:
+  image:
+    generated: circle-in-square-18.svg
+    alt_text: "Packing 18 unit circles in a square"
+
+circle-in-square-19:
+  image:
+    generated: circle-in-square-19.svg
+    alt_text: "Packing 19 unit circles in a square"
+
+circle-in-square-20:
+  image:
+    generated: circle-in-square-20.svg
+    alt_text: "Packing 20 unit circles in a square"
+
+circle-in-square-21:
+  image:
+    generated: circle-in-square-21.svg
+    alt_text: "Packing 21 unit circles in a square"
+
+circle-in-square-22:
+  image:
+    generated: circle-in-square-22.svg
+    alt_text: "Packing 22 unit circles in a square"
+
+circle-in-square-23:
+  image:
+    generated: circle-in-square-23.svg
+    alt_text: "Packing 23 unit circles in a square"
+
+circle-in-square-24:
+  image:
+    generated: circle-in-square-24.svg
+    alt_text: "Packing 24 unit circles in a square"
+
+circle-in-square-25:
+  image:
+    generated: circle-in-square-25.svg
+    alt_text: "Packing 25 unit circles in a square"
+
+circle-in-square-26:
+  image:
+    generated: circle-in-square-26.svg
+    alt_text: "Packing 26 unit circles in a square"
+
+circle-in-square-27:
+  image:
+    generated: circle-in-square-27.svg
+    alt_text: "Packing 27 unit circles in a square"
+
+circle-in-square-28:
+  image:
+    generated: circle-in-square-28.svg
+    alt_text: "Packing 28 unit circles in a square"
+
+circle-in-square-29:
+  image:
+    generated: circle-in-square-29.svg
+    alt_text: "Packing 29 unit circles in a square"
+
+circle-in-square-30:
+  image:
+    generated: circle-in-square-30.svg
+    alt_text: "Packing 30 unit circles in a square"
+
+circle-in-square-31:
+  image:
+    generated: circle-in-square-31.svg
+    alt_text: "Packing 31 unit circles in a square"
+
+circle-in-square-32:
+  image:
+    generated: circle-in-square-32.svg
+    alt_text: "Packing 32 unit circles in a square"
+
+circle-in-square-33:
+  image:
+    generated: circle-in-square-33.svg
+    alt_text: "Packing 33 unit circles in a square"
+
+circle-in-square-34:
+  image:
+    generated: circle-in-square-34.svg
+    alt_text: "Packing 34 unit circles in a square"
+
+circle-in-square-35:
+  image:
+    generated: circle-in-square-35.svg
+    alt_text: "Packing 35 unit circles in a square"
+
+circle-in-square-36:
+  image:
+    generated: circle-in-square-36.svg
+    alt_text: "Packing 36 unit circles in a square"
+
 circle-in-equilateral-1:
   image:
     generated: circle-in-equilateral-1.svg

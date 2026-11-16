@@ -1,0 +1,10 @@
+constant: circle-in-square-2
+bound: lower
+value: '2+\sqrt{2}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CircleInSquareBasic
+  theorem: LeapsInBounds.Proofs.CircleInSquareBasic.lower_two
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: The centers lie in a square of side s - 2, at distance at least 2 from each other, so 2 ≤ √2 (s - 2).

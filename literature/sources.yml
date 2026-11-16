@@ -4046,3 +4046,128 @@ koshelev-kupavskii-voronov-2026:
   url: "https://arxiv.org/abs/2610.18907"
   notes: "Every finite proper coloring of R^3 can be replaced by a measurable one with the same number of colors, so chi(R^3) is at least the measurable bound 7 of de Oliveira Filho and Vallentin (Corollary 1.2). Assumes the Haar rigidity theorem (Theorem 2.3) of OpenAI's preprint 'The Euclidean plane is not five-colorable', which has a Lean proof."
   added_by: daniel-munro
+
+schaer-meir-1965:
+  string: "J. Schaer, A. Meir, On a geometric extremum problem, Canadian Mathematical Bulletin 8(1) (1965) 21-27."
+  date: "1965-02"
+  doi: "https://doi.org/10.4153/CMB-1965-004-x"
+  notes: "Proves the optimal packing of 8 circles in a square, and reports that R. L. Graham had found the optimal packing of 6, whose proof he never published."
+  added_by: daniel-munro
+
+schaer-1965:
+  string: "J. Schaer, The densest packing of 9 circles in a square, Canadian Mathematical Bulletin 8(3) (1965) 273-277."
+  date: "1965-04"
+  doi: "https://doi.org/10.4153/CMB-1965-018-9"
+  notes: "Proves the optimal packing of 9 circles, and lists the optimal packings for up to 9 circles, including that of 7, whose proof by Schaer was not published."
+  added_by: daniel-munro
+
+schwartz-1970:
+  string: "B. L. Schwartz, Separating points in a square, Journal of Recreational Mathematics 3 (1970) 195-204."
+  date: "1970"
+  notes: "The first published proof for 6 circles, according to Melissen (1994)."
+  added_by: daniel-munro
+
+schluter-1979:
+  string: "K. Schlüter, Kreispackung in Quadraten, Elemente der Mathematik 34 (1979) 12-14."
+  date: "1979"
+  notes: "Credited by Peikert (1994) with the optimal packing of 10 circles, where the text says 'bereits 1971' but cites this 1979 paper."
+  added_by: daniel-munro
+
+de-groot-peikert-wurtz-1990:
+  string: "C. de Groot, R. Peikert, D. Würtz, The optimal packing of ten equal circles in a square, IPS Research Report No. 90-12, ETH Zürich, 1990."
+  date: "1990-08"
+  added_by: daniel-munro
+
+peikert-et-al-1992:
+  string: "R. Peikert, D. Würtz, M. Monagan, C. de Groot, Packing circles in a square: a review and new results, in P. Kall (ed.), System Modelling and Optimization (Proc. 15th IFIP Conference, Zürich, 1991), Lecture Notes in Control and Information Sciences 180, Springer (1992) 45-54."
+  date: "1991-09"
+  notes: "Computer-assisted proofs of the optimal packings of 11 to 20 circles, other than 14 and 16, presented at the conference in 1991. The packings of 17 and 19 were new; the others had been found earlier, by Goldberg (1970), Schlüter (1979) or Mollard and Payan (1990) according to Peikert (1994), which doesn't say which."
+  added_by: daniel-munro
+
+wengerodt-1983:
+  string: "G. Wengerodt, Die dichteste Packung von 16 Kreisen in einem Quadrat, Beiträge zur Algebra und Geometrie 16 (1983) 173-190."
+  date: "1983"
+  added_by: daniel-munro
+
+wengerodt-1987-14:
+  string: "G. Wengerodt, Die dichteste Packung von 14 Kreisen in einem Quadrat, Beiträge zur Algebra und Geometrie 25 (1987) 25-46."
+  date: "1987"
+  added_by: daniel-munro
+
+wengerodt-1987-25:
+  string: "G. Wengerodt, Die dichteste Packung von 25 Kreisen in einem Quadrat, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 30 (1987) 3-15."
+  date: "1987"
+  notes: "Szabó and Specht (2007) report gaps in this proof, according to the review MR1453444. Nurmela and Östergård (1999) later proved the case of 25 circles by computer."
+  added_by: daniel-munro
+
+kirchner-wengerodt-1987:
+  string: "K. Kirchner, G. Wengerodt, Die dichteste Packung von 36 Kreisen in einem Quadrat, Beiträge zur Algebra und Geometrie 25 (1987) 147-159."
+  date: "1987"
+  notes: "Szabó and Specht (2007) report gaps in this proof, according to the review MR1453444."
+  added_by: daniel-munro
+
+melissen-1994:
+  string: "J. B. M. Melissen, Densest packing of six equal circles in a square, Elemente der Mathematik 49 (1994) 27-31."
+  date: "1994"
+  doi: "https://doi.org/10.5169/seals-45417"
+  added_by: daniel-munro
+
+peikert-1994:
+  string: "R. Peikert, Dichteste Packungen von gleichen Kreisen in einem Quadrat, Elemente der Mathematik 49 (1994) 16-26."
+  date: "1994"
+  doi: "https://doi.org/10.5169/seals-45416"
+  added_by: daniel-munro
+
+graham-lubachevsky-1996:
+  string: "R. L. Graham, B. D. Lubachevsky, Repeated patterns of dense packings of equal disks in a square, Electronic Journal of Combinatorics 3 (1996) #R16, arXiv:math/0406394."
+  date: "1996-04"
+  url: "https://arxiv.org/abs/math/0406394"
+  doi: "https://doi.org/10.37236/1240"
+  notes: "Lists the best packings known for up to 36 circles, with improvements on those of Nurmela and Östergård (then submitted, published 1997) for 21, 28 and 34. Some of the others may have been found first by Nurmela and Östergård."
+  added_by: daniel-munro
+
+nurmela-ostergard-1999:
+  string: "K. J. Nurmela, P. R. J. Östergård, More optimal packings of equal circles in a square, Discrete & Computational Geometry 22 (1999) 439-457."
+  date: "1999-10"
+  doi: "https://doi.org/10.1007/PL00009472"
+  notes: "Computer-assisted proofs of the optimal packings of up to 27 circles, new for 21 to 27."
+  added_by: daniel-munro
+
+boll-et-al-2000:
+  string: "D. W. Boll, J. Donovan, R. L. Graham, B. D. Lubachevsky, Improving dense packings of equal disks in a square, Electronic Journal of Combinatorics 7 (2000) #R46."
+  date: "2000-08"
+  doi: "https://doi.org/10.37236/1524"
+  added_by: daniel-munro
+
+markot-2004:
+  string: "M. Cs. Markót, Optimal packing of 28 equal circles in a unit square – the first reliable solution, Numerical Algorithms 37 (2004) 253-261."
+  date: "2004-11-26"
+  doi: "https://doi.org/10.1023/B:NUMA.0000049472.75023.0a"
+  added_by: daniel-munro
+
+markot-csendes-2005:
+  string: "M. Cs. Markót, T. Csendes, A new verified optimization technique for the \"packing circles in a unit square\" problems, SIAM Journal on Optimization 16(1) (2005) 193-219."
+  date: "2005"
+  doi: "https://doi.org/10.1137/S1052623403425617"
+  added_by: daniel-munro
+
+szabo-specht-2007:
+  string: "P. G. Szabó, E. Specht, Packing up to 200 equal circles in a square, in A. Törn, J. Žilinskas (eds.), Models and Algorithms for Global Optimization, Springer (2007) 141-156."
+  date: "2007"
+  url: "https://www.inf.szte.hu/~pszabo/Pub/56pack200.pdf"
+  doi: "https://doi.org/10.1007/978-0-387-36721-7_9"
+  added_by: daniel-munro
+
+markot-2021:
+  string: "M. Cs. Markót, Improved interval methods for solving circle packing problems in the unit square, Journal of Global Optimization 81 (2021) 773-803."
+  date: "2021-09-29"
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8550790/"
+  doi: "https://doi.org/10.1007/s10898-021-01086-z"
+  notes: "Computer-assisted proofs of the optimal packings of 31, 32 and 33 circles, with interval arithmetic. Packomania doesn't mark these as proven as of November 2026."
+  added_by: daniel-munro
+
+packomania-csq:
+  string: "E. Specht, The best known packings of equal circles in a square, Packomania (retrieved 2026-11-15)."
+  date: "2026-11-15"
+  url: "http://www.packomania.com/csq/csq.html"
+  added_by: daniel-munro

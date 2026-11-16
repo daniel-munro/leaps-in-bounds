@@ -237,6 +237,21 @@ circle-in-equilateral:
   parameter_values: [[[1, 15]]]
   added_by: daniel-munro
 
+circle-in-square:
+  name: "Circle packing in a square"
+  description: "$s(n)$ is the side of the smallest square into which $n$ unit circles (of radius 1) can be packed. Equivalently, $s(n) = 2 + 2/d_n$, where $d_n$ is the largest possible minimum distance between $n$ points in a unit square."
+  external_ids:
+    msc: 52C15
+    wikipedia_en: Circle_packing_in_a_square
+  display_type: sequence
+  representative_image: circle-in-square-15
+  id_template: "circle-in-square-{n}"
+  name_template: "Packing ${n}$ unit circles in a square"
+  description_template: "The side of the smallest square into which ${n}$ unit circles (of radius 1) can be packed."
+  parameters: [n]
+  parameter_values: [[[1, 36]]]
+  added_by: daniel-munro
+
 minimal-superpermutation:
   name: "Minimal superpermutation problem"
   description: "$L(n)$ is the length of the shortest string that contains each permutation of $n$ symbols as a contiguous substring."

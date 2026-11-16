@@ -1,0 +1,10 @@
+constant: circle-in-square-5
+bound: lower
+value: '2+2\sqrt{2}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CircleInSquareBasic
+  theorem: LeapsInBounds.Proofs.CircleInSquareBasic.lower_five
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: Cutting the square of centers, of side s - 2, into four squares, two of the five centers lie in the same one, so 2 ≤ √2 (s - 2) / 2.

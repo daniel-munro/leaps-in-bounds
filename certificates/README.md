@@ -239,6 +239,17 @@ witness:
     2\sqrt{3}, 4
 ```
 
+### Packing unit circles in a square: `circle-in-square-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/CircleInSquare.lean`](../formal/LeapsInBounds/Statements/CircleInSquare.lean). A packing of `n` unit circles in the square `[0, s]²` places `n` closed unit disks inside it with pairwise disjoint interiors.
+
+- `RadicalLowerBound n terms d` means `s(n) >= radical terms d`: no packing of `n` unit circles fits in a square of smaller side.
+- `RadicalUpperBound n terms d` means `s(n) <= radical terms d`: `n` unit circles can be packed in a square of that side.
+
+Values are written as for [circle packing in a triangle](#packing-unit-circles-in-an-equilateral-triangle-circle-in-equilateral-n), and can also be decimals, such as `'6.747443'` (quoted, so that it's read as text).
+
+Witnesses can certify upper bounds only. A witness for `s(n) <= v` uses `format: points`: the `n` centers, one per line as `x, y`, with coordinates in the same form as values. The checker decides exactly, without rounding, that each center lies in `[1, v - 1]²` and is at distance at least 2 from the other centers. Most optimal packings have sides that aren't sums of square roots; for these, a witness can round the centers to decimals and the side up, certifying a value just above the optimum.
+
 ### Schur numbers: `schur-{k}` and `weak-schur-{k}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/Schur.lean`](../formal/LeapsInBounds/Statements/Schur.lean):

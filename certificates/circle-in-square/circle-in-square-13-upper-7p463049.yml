@@ -1,0 +1,23 @@
+constant: circle-in-square-13
+bound: upper
+value: '7.463049'
+kind: witness
+witness:
+  format: points
+  data: |
+    2.999158188, 1
+    6.463049, 1
+    1, 1.05803665
+    4.731103594, 2.000183396
+    6.463049, 3.000366793
+    2.999169348, 3.000386117
+    1, 3.058037079
+    4.469036115, 4.469036115
+    2.049511872, 4.760543039
+    6.463049, 5.000367221
+    1, 6.463049
+    3.099023744, 6.463049
+    5.099024173, 6.463049
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: The best known packing, from Packomania (retrieved 2026-11-15), with its centers rounded to 9 decimal places and the side rounded up to 7.463049, just above its exact side of about 7.463047829.

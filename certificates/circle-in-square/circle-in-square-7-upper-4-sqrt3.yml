@@ -1,0 +1,17 @@
+constant: circle-in-square-7
+bound: upper
+value: '4+\sqrt{3}'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    3, 1
+    3+\sqrt{3}, 2
+    1, 3
+    3, 3
+    \frac{23}{5}, \frac{23}{5}
+    2, 3+\sqrt{3}
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: The circle near the top right corner is free to move (a rattler).

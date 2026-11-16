@@ -1,0 +1,31 @@
+constant: circle-in-square-21
+bound: upper
+value: '9.358021'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 1
+    3.000000283, 1
+    6.62159737, 1
+    4.810798826, 1.84912294
+    8.358021, 1.992388084
+    1.170037235, 2.99275901
+    3.170037518, 2.99275901
+    6.630375894, 2.999981017
+    4.898112854, 3.999613897
+    8.358021, 4.007573951
+    1, 4.985518019
+    3.162113276, 4.992743594
+    6.62575796, 5.00720683
+    8.358021, 6.007574234
+    4.6790105, 6.37135533
+    2.075433421, 6.67176951
+    6.62575796, 7.007207113
+    8.28444079, 8.28444079
+    1, 8.358021
+    3.150866842, 8.358021
+    5.150867125, 8.358021
+submitted_by: daniel-munro
+date: 2026-11-15
+notes: The best known packing, from Packomania (retrieved 2026-11-15), with its centers rounded to 9 decimal places and the side rounded up to 9.358021, just above its exact side of about 9.358019959.

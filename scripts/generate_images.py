@@ -445,6 +445,19 @@ def render_circle_in_equilateral(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+def render_circle_in_square(constant_id: str, n: int) -> Svg | None:
+    """The witness packing of n unit circles in a square."""
+    cert = witness(constant_id, "upper")
+    if cert is None:
+        return None
+    s = cert["approx"]
+    centers = [(float(x), float(y)) for x, y in read_points(read_witness_data(cert))]
+    svg = Svg(0, 0, s, s)
+    svg.add(svg.group((svg.circle(c, 1) for c in centers), fill=FILL, stroke=EDGE, stroke_width=1.5))
+    svg.add(svg.polygon([(0, 0), (s, 0), (s, s), (0, s)], fill="none", stroke=INK, stroke_width=2, stroke_linejoin="round"))
+    return svg
+
+
 Square = tuple[float, float, float]  # center x, center y, angle in degrees
 
 
@@ -1457,6 +1470,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "cage": ("cage-", lambda c: render_cage(c, *ints(c, "cage-"))),
     "degree-diameter": ("degree-diameter-", lambda c: render_degree_diameter(c, *ints(c, "degree-diameter-"))),
     "circle-in-equilateral": ("circle-in-equilateral-", lambda c: render_circle_in_equilateral(c, *ints(c, "circle-in-equilateral-"))),
+    "circle-in-square": ("circle-in-square-", lambda c: render_circle_in_square(c, *ints(c, "circle-in-square-"))),
     "square-packing": ("square-packing-in-square-", lambda c: render_square_packing(c, *ints(c, "square-packing-in-square-"))),
     "kissing-number": ("kissing-number-", lambda c: render_kissing_number(c, *ints(c, "kissing-number-"))),
     "minimal-superpermutation": ("minimal-superpermutation-", lambda c: render_superpermutation(c, *ints(c, "minimal-superpermutation-"))),
