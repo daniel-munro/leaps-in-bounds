@@ -1711,3 +1711,8 @@ disk-covering-7:
   image:
     generated: disk-covering-7.svg
     alt_text: "The unit disk covered by 7 disks of radius 1/2, one at the center and six around it"
+
+debruijn-newman:
+  image:
+    generated: debruijn-newman.svg
+    alt_text: "The real zeros of H_λ(x) for x from 40 to 104 as λ goes from -10 to 1. At λ = 0 they're twice the heights of the zeros of the Riemann zeta function; going down, pairs of them meet and leave the real line. A band marks the current bounds 0 ≤ Λ ≤ 0.2."

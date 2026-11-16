@@ -91,6 +91,7 @@ layout: default
   <tbody>
     {% for event in constant.history %}
       {% if event.type == "lower_bound" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
+      {% assign strict = event.value.latex | slice: 0, 3 %}{% if strict == "\lt" or strict == "\gt" %}{% assign relation = "" %}{% endif %}
       <tr>
         <td class="text-nowrap">{% if event.date %}{{ event.date }}{% else %}<span class="text-muted">undated</span>{% endif %}</td>
         <td class="text-nowrap">

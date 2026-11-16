@@ -6,6 +6,7 @@ its best evidence.
 {% assign row = include.row %}
 {% assign constant = site.data.constants[row.constant] %}
 {% if row.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}
+{% assign strict = row.value.latex | slice: 0, 3 %}{% if strict == "\lt" or strict == "\gt" %}{% assign relation = "" %}{% endif %}
 <tr>
   <td class="text-nowrap">{{ row.date }}</td>
   <td><a href="{{ site.baseurl }}/constants/{{ row.constant }}">{{ constant.name }}</a></td>

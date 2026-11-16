@@ -1490,6 +1490,108 @@ def render_chromatic_space(constant_id: str, n: int) -> Svg | None:
 
 ############
 # Families #
+#####################
+# Analytic functions #
+#####################
+
+def debruijn_newman_h(lams: Sequence[float], xs: Sequence[float]) -> list[list[float]]:
+    """H_λ(x) = ∫₀^∞ e^{λu²} Φ(u) cos(xu) du for real x, by the trapezoid rule:
+    Φ(u) is below 10⁻²⁰⁰ for u > 1.2, and the values keep their sign and a
+    few digits for x up to about 105 in double precision."""
+    import numpy as np
+    u = np.linspace(0, 1.2, 4001)
+    k = np.arange(1, 12)[:, None]
+    phi = ((2 * np.pi ** 2 * k ** 4 * np.exp(9 * u) - 3 * np.pi * k ** 2 * np.exp(5 * u))
+           * np.exp(-np.pi * k ** 2 * np.exp(4 * u))).sum(axis=0)
+    weights = np.full(len(u), u[1] - u[0])
+    weights[[0, -1]] /= 2
+    cosines = np.cos(np.outer(xs, u))
+    return [list(cosines @ (np.exp(lam * u ** 2) * phi * weights)) for lam in lams]
+
+
+def zero_curves(xs: Sequence[float], ys: Sequence[float], values: Sequence[Sequence[float]]) -> list[list[tuple[float, float]]]:
+    """The curves where values[i][j], sampled at (xs[j], ys[i]), is zero, by
+    marching squares, joined into polylines."""
+    def crossing(p: tuple[float, float, float], q: tuple[float, float, float]) -> tuple[float, float]:
+        t = p[2] / (p[2] - q[2])
+        return (p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1]))
+    segments = []
+    for i in range(len(ys) - 1):
+        for j in range(len(xs) - 1):
+            corners = [(xs[j], ys[i], values[i][j]), (xs[j + 1], ys[i], values[i][j + 1]),
+                       (xs[j + 1], ys[i + 1], values[i + 1][j + 1]), (xs[j], ys[i + 1], values[i + 1][j])]
+            points = [crossing(corners[e], corners[(e + 1) % 4]) for e in range(4)
+                      if (corners[e][2] > 0) != (corners[(e + 1) % 4][2] > 0)]
+            if len(points) == 2:
+                segments.append(points)
+            elif len(points) == 4:  # A saddle: pair the crossings around the corners whose sign the center has
+                center = sum(c[2] for c in corners) > 0
+                if (corners[0][2] > 0) == center:
+                    segments += [[points[0], points[1]], [points[2], points[3]]]
+                else:
+                    segments += [[points[3], points[0]], [points[1], points[2]]]
+    # Join segments that share endpoints
+    key = lambda p: (round(p[0], 9), round(p[1], 9))
+    ends: dict[tuple[float, float], list[int]] = {}
+    for n, (p, q) in enumerate(segments):
+        ends.setdefault(key(p), []).append(n)
+        ends.setdefault(key(q), []).append(n)
+    used = [False] * len(segments)
+    curves = []
+    for n in range(len(segments)):
+        if used[n]:
+            continue
+        used[n] = True
+        curve = list(segments[n])
+        for forward in (True, False):
+            while True:
+                end = curve[-1] if forward else curve[0]
+                nexts = [m for m in ends[key(end)] if not used[m]]
+                if not nexts:
+                    break
+                used[nexts[0]] = True
+                p, q = segments[nexts[0]]
+                point = q if key(p) == key(end) else p
+                if forward:
+                    curve.append(point)
+                else:
+                    curve.insert(0, point)
+        curves.append(curve)
+    return curves
+
+
+def render_debruijn_newman(constant_id: str) -> Svg | None:
+    """The real zeros of H_λ(x) as λ varies. At λ = 0 they're twice the
+    heights of the zeros of the Riemann zeta function on the critical line.
+    Going down, neighboring zeros meet and leave the real line; Λ is the
+    least λ above which all the zeros are real, and the band shows its
+    current bounds."""
+    import mpmath
+    with open("_data/constants.yml") as file:
+        constant = yaml.safe_load(file)[constant_id]
+    low, high = constant["lower_bound"]["decimal_approx"], constant["upper_bound"]["decimal_approx"]
+    xmin, xmax, lmin, lmax, stretch = 40.0, 104.0, -10.0, 1.0, 4.0  # λ is drawn `stretch` times larger than x
+    xs = [xmin + (xmax - xmin) * j / 640 for j in range(641)]
+    lams = [lmin + (lmax - lmin) * i / 220 for i in range(221)]
+    values = debruijn_newman_h(lams, xs)
+    # The zeros at λ = 0 are twice those of zeta
+    row = values[lams.index(0.0)]
+    zeros = [xs[j] - row[j] * (xs[j + 1] - xs[j]) / (row[j + 1] - row[j])
+             for j in range(len(xs) - 1) if (row[j] > 0) != (row[j + 1] > 0)]
+    expected = [2 * float(mpmath.zetazero(n).imag) for n in range(1, 30)]
+    expected = [z for z in expected if xmin < z < xmax]
+    check(len(zeros) == len(expected) and all(abs(a - b) < 0.05 for a, b in zip(zeros, expected)),
+          f"{constant_id}: the zeros of H_0 aren't twice those of zeta")
+    svg = Svg(xmin, lmin * stretch, xmax, lmax * stretch)
+    svg.add(svg.rect(xmin, low * stretch, xmax - xmin, (high - low) * stretch, fill=PALETTE[1], fill_opacity=0.35))
+    svg.add(svg.line((xmin, 0), (xmax, 0), stroke=INK, stroke_width=1, stroke_dasharray="4 3"))
+    curves = zero_curves(xs, [lam * stretch for lam in lams], values)
+    svg.add(svg.group((svg.polyline(c) for c in curves), fill="none", stroke=EDGE, stroke_width=2,
+                      stroke_linejoin="round", stroke_linecap="round"))
+    svg.add(svg.group((svg.circle((z, 0), 3 / svg.scale) for z in zeros), fill=INK, stroke="white", stroke_width=1))
+    return svg
+
+
 ############
 
 def ints(constant_id: str, prefix: str) -> list[int]:
@@ -1527,6 +1629,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "isosceles-set": ("isosceles-set-", lambda c: render_isosceles_set(c, *ints(c, "isosceles-set-"))),
     "rectilinear-crossing": ("rectilinear-crossing-", lambda c: render_rectilinear_crossing(c, *ints(c, "rectilinear-crossing-"))),
     "chromatic-number-space": ("chromatic-number-space-", lambda c: render_chromatic_space(c, *ints(c, "chromatic-number-space-"))),
+    "debruijn-newman": ("debruijn-newman", render_debruijn_newman),
 }
 
 
@@ -1539,7 +1642,8 @@ def generate(families: Sequence[str]) -> list[str]:
     for family in families:
         prefix, render = FAMILIES[family]
         for constant_id in constant_ids:
-            if not constant_id.startswith(prefix) or not constant_id[len(prefix):].replace("-", "").isdigit():
+            # A family's constants, or the constant itself for a family of one
+            if constant_id != prefix and not (constant_id.startswith(prefix) and constant_id[len(prefix):].replace("-", "").isdigit()):
                 continue
             svg = render(constant_id)
             if svg is None:
