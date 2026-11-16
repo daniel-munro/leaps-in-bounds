@@ -1,0 +1,10 @@
+constant: disk-covering-7
+bound: upper
+value: '\frac{1}{2}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringSmall
+  theorem: LeapsInBounds.Proofs.DiskCoveringSmall.upper_seven
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: One disk at the center and six centered at distance √3/2 at multiples of 60°. Proof written by an AI agent (Claude).

@@ -3,6 +3,7 @@ shown for constants in the tables."""
 
 import json
 import os
+import re
 import yaml
 from html import escape
 from typing import Any, Mapping
@@ -12,6 +13,22 @@ def html_for_value(value: Mapping[str, Any] | None) -> str:
     if value is None:
         return '$?$'
     return f'${value["latex"]}$'
+
+SUPERSCRIPTS = str.maketrans("0123456789", "⁰¹²³⁴⁵⁶⁷⁸⁹")
+SUBSCRIPTS = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
+SYMBOLS = {r"\mathbb{R}": "ℝ", r"\mathbb{F}": "𝔽", r"\overline{\mathrm{cr}}": "cr", r"\Sigma": "Σ",
+           r"\chi": "χ", r"\Lambda": "Λ", r"\times": "×"}
+
+def plain_text(latex: str) -> str:
+    """A name with LaTeX in it as plain text, for page titles: R_{3}(3) as
+    R₃(3), and \\mathbb{R}^{2} as ℝ²."""
+    text = latex.replace("$", "")
+    for macro, symbol in SYMBOLS.items():
+        text = text.replace(macro, symbol)
+    text = re.sub(r"\^\{(\d+)\}", lambda m: m.group(1).translate(SUPERSCRIPTS), text)
+    text = re.sub(r"_\{(\d+)\}", lambda m: m.group(1).translate(SUBSCRIPTS), text)
+    text = re.sub(r"\s+", " ", text.replace("{", "").replace("}", ""))
+    return text.strip()
 
 def last_event(const: Mapping[str, Any], side: str) -> Mapping[str, Any] | None:
     """The latest bound on one side of a constant's history, if any."""
@@ -275,6 +292,7 @@ for id, constant in constants.items():
         file.write("---\n")
         file.write("layout: constant\n")
         file.write(f"title: {constant['name']}\n")
+        file.write(f"plain_title: {json.dumps(plain_text(constant['name']), ensure_ascii=False)}\n")
         file.write(f"permalink: /constants/{id}/\n")
         file.write(f"id: {id}\n")
         file.write("---\n")

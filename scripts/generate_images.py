@@ -458,6 +458,39 @@ def render_circle_in_square(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+def disk_covering(n: int) -> tuple[float, list[tuple[float, float]]] | None:
+    """The known optimal coverings of the unit disk by n equal disks with
+    simple coordinates: the radius and the centers."""
+    if n == 3:
+        return math.sqrt(3) / 2, on_circle(3, 1 / 2, start=0)
+    if n == 4:
+        return math.sqrt(2) / 2, [(x / 2, y / 2) for x, y in [(1, 1), (-1, 1), (-1, -1), (1, -1)]]
+    if n == 7:
+        return 1 / 2, [(0, 0)] + on_circle(6, math.sqrt(3) / 2, start=0)
+    return None
+
+
+def render_disk_covering(constant_id: str, n: int) -> Svg | None:
+    """A covering of the unit disk by n disks of the optimal radius."""
+    covering = disk_covering(n)
+    value = exact_value(constant_id)
+    if covering is None or value is None:
+        return None
+    r, centers = covering
+    check(len(centers) == n and math.isclose(r, value, rel_tol=1e-6), f"{constant_id}: the covering doesn't match the value")
+    # Every point of a fine grid in the unit disk, and of its boundary, is covered
+    samples = [(i / 200, j / 200) for i in range(-200, 201) for j in range(-200, 201) if i * i + j * j <= 200 * 200]
+    samples += on_circle(3600)
+    check(all(min(math.dist(p, c) for c in centers) <= r + 1e-9 for p in samples), f"{constant_id}: the disks don't cover the unit disk")
+    m = max(math.hypot(*c) + r for c in centers)
+    svg = Svg(-m, -m, m, m)
+    svg.add(svg.circle((0, 0), 1, fill=MUTED, fill_opacity=0.5))
+    svg.add(svg.group((svg.circle(c, r) for c in centers), fill=FILL, fill_opacity=0.55, stroke=EDGE, stroke_width=1.5))
+    svg.add(svg.circle((0, 0), 1, fill="none", stroke=INK, stroke_width=2))
+    svg.add(svg.group((svg.circle(c, 2.5 / svg.scale) for c in centers), fill=EDGE))
+    return svg
+
+
 Square = tuple[float, float, float]  # center x, center y, angle in degrees
 
 
@@ -1471,6 +1504,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "degree-diameter": ("degree-diameter-", lambda c: render_degree_diameter(c, *ints(c, "degree-diameter-"))),
     "circle-in-equilateral": ("circle-in-equilateral-", lambda c: render_circle_in_equilateral(c, *ints(c, "circle-in-equilateral-"))),
     "circle-in-square": ("circle-in-square-", lambda c: render_circle_in_square(c, *ints(c, "circle-in-square-"))),
+    "disk-covering": ("disk-covering-", lambda c: render_disk_covering(c, *ints(c, "disk-covering-"))),
     "square-packing": ("square-packing-in-square-", lambda c: render_square_packing(c, *ints(c, "square-packing-in-square-"))),
     "kissing-number": ("kissing-number-", lambda c: render_kissing_number(c, *ints(c, "kissing-number-"))),
     "minimal-superpermutation": ("minimal-superpermutation-", lambda c: render_superpermutation(c, *ints(c, "minimal-superpermutation-"))),

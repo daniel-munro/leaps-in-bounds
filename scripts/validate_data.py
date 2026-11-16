@@ -30,3 +30,12 @@ if missing_dates:
     print(f"Warning: {len(missing_dates)} sources are missing dates: {', '.join(missing_dates)}")
 if missing_strings:
     print(f"Warning: {len(missing_strings)} sources are missing string representations: {', '.join(missing_strings)}")
+
+# A "|" in a description is read as a Markdown table cell and breaks the page,
+# even inside math, so absolute values need \lvert and \rvert instead.
+with open('constants/families.yml') as f:
+    families = yaml.safe_load(f)
+for id, family in families.items():
+    for field in ('description', 'description_template'):
+        if '|' in family.get(field, ''):
+            raise ValueError(f"Family {id} has '|' in its {field}; use \\lvert and \\rvert instead")

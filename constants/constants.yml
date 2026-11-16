@@ -1696,3 +1696,18 @@ chromatic-number-space-2:
   image:
     generated: chromatic-number-space-2.svg
     alt_text: "Isbell's coloring of the plane by hexagons of diameter just under 1 in seven colors, so no two points a unit apart share a color, with a Moser spindle on it, a graph of unit edges that needs four colors"
+
+disk-covering-3:
+  image:
+    generated: disk-covering-3.svg
+    alt_text: "The unit disk covered by 3 disks of radius √3/2, centered at the midpoints of three radii 120° apart"
+
+disk-covering-4:
+  image:
+    generated: disk-covering-4.svg
+    alt_text: "The unit disk covered by 4 disks of radius √2/2, centered at (±1/2, ±1/2)"
+
+disk-covering-7:
+  image:
+    generated: disk-covering-7.svg
+    alt_text: "The unit disk covered by 7 disks of radius 1/2, one at the center and six around it"

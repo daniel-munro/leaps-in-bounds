@@ -104,5 +104,21 @@ Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/literature/README
 
 ## Related Projects
 
+Other collections of open problems and records:
+
 - [Big O Speedrun](https://bigospeedrun.com) - Leaderboards of recent progress on bounds for algorithm running times and other constants, with Lean-verified submissions.
 - [Optimization Constants in Mathematics](https://github.com/teorth/optimizationproblems) - A curated collection of optimization constants in mathematics, often arising from solving a variational problem, or finding the best constant in a functional inequality.
+- [Erdős Problems](https://www.erdosproblems.com) - A database of the problems posed by Paul Erdős, with their status, references and discussion.
+- [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) - Open conjectures stated formally in Lean.
+- [OEIS](https://oeis.org) - The On-Line Encyclopedia of Integer Sequences, which many of the families here are entries in.
+
+Records and surveys for particular families, kept up to date by others:
+
+- [Small Ramsey Numbers](https://doi.org/10.37236/21) - Stanisław Radziszowski's dynamic survey of Ramsey numbers, including the multicolor ones.
+- [Dynamic Cage Survey](https://doi.org/10.37236/37) - Geoffrey Exoo and Robert Jajcay's survey of cages.
+- [The Degree Diameter Problem for General Graphs](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html) - Francesc Comellas's table of the largest known graphs of given degree and diameter.
+- [Packomania](http://www.packomania.com) - Eckard Specht's records for packing circles and spheres in many containers.
+- [Erich Friedman's Packing Center](https://erich-friedman.github.io/packing/) - Best known packings and coverings of many shapes in many others, with pictures.
+- [The Busy Beaver Challenge](https://bbchallenge.org) - The collaborative project that proved BB(5) = 47,176,870, and works on larger busy beavers.
+- [The No-Three-in-Line Problem](http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html) - Achim Flammenkamp's records and database of configurations.
+- [Snake-in-the-Box](https://www.minortriad.com/snake/) - Tom Ace's records for snakes and coils in the hypercube, with their witnesses.

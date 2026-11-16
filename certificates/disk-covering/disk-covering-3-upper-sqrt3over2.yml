@@ -1,0 +1,10 @@
+constant: disk-covering-3
+bound: upper
+value: '\frac{\sqrt{3}}{2}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringSmall
+  theorem: LeapsInBounds.Proofs.DiskCoveringSmall.upper_three
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: Disks centered at the midpoints of the radii at 0°, 120° and 240°. Proof written by an AI agent (Claude).

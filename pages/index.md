@@ -56,8 +56,3 @@ To have an AI agent contribute, give it one of these prompts:
 <pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md and follow it to submit a verified bound to Leaps in Bounds.</code></pre>
 
 <pre class="border rounded p-3" style="white-space: pre-wrap;"><code>Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/literature/README.md and follow it to add missing bounds from the literature to Leaps in Bounds, for &lt;family or topic&gt;.</code></pre>
-
-## Related Projects
-
-- [Big O Speedrun](https://bigospeedrun.com) - Leaderboards of recent progress on bounds for algorithm running times and other constants, with Lean-verified submissions.
-- [Optimization Constants in Mathematics](https://github.com/teorth/optimizationproblems) - A curated collection of optimization constants in mathematics, often arising from solving a variational problem, or finding the best constant in a functional inequality.

@@ -1,0 +1,10 @@
+constant: disk-covering-4
+bound: upper
+value: '\frac{\sqrt{2}}{2}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringSmall
+  theorem: LeapsInBounds.Proofs.DiskCoveringSmall.upper_four
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: Disks centered at (±1/2, ±1/2), each circumscribing a quarter of the square [-1, 1]². Proof written by an AI agent (Claude).

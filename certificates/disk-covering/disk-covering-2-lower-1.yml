@@ -1,0 +1,10 @@
+constant: disk-covering-2
+bound: lower
+value: 1
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringSmall
+  theorem: LeapsInBounds.Proofs.DiskCoveringSmall.lower_two
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: The points of the unit circle perpendicular to the first center are at distance at least 1 from it, so both lie in the second disk. Proof written by an AI agent (Claude).
