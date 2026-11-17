@@ -32,6 +32,21 @@ function texToHtml(s) {
   });
 }
 
+// For updates already in order, sets the running bounds after each (lo, hi),
+// whether it tightens its side (improves), and whether it first pins the value (solves).
+function runningBounds(ups) {
+  let lo = -Infinity, hi = Infinity, solved = false;
+  for (const u of ups) {
+    const before = u.isLower ? lo : hi;
+    if (u.isLower) lo = Math.max(lo, u.v); else hi = Math.min(hi, u.v);
+    u.improves = (u.isLower ? lo : hi) !== before;
+    u.lo = lo; u.hi = hi;
+    u.solves = !solved && Number.isFinite(hi - lo) && hi - lo <= 1e-9 * Math.max(1, Math.abs(hi));
+    if (u.solves) solved = true;
+  }
+  return ups;
+}
+
 async function loadData() {
   const [updates, constants, families, sources] = await Promise.all(
     ['history', 'constants', 'families', 'sources'].map(n => fetch(`${window.SITE_BASEURL || ""}/data/${n}.json`).then(r => r.json()))
@@ -44,14 +59,10 @@ async function loadData() {
     // Undated updates come first in the data; keep file order within equal dates.
     const ups = raw.map((u, i) => ({ ...u, i, t: parseDate(u.date), v: u.value.decimal_approx, isLower: u.type === LOWER }))
       .sort((a, b) => ((a.t ?? -Infinity) - (b.t ?? -Infinity)) || a.i - b.i);
-    let lo = -Infinity, hi = Infinity, solved = false;
+    runningBounds(ups);
     for (const u of ups) {
-      const before = u.isLower ? lo : hi;
-      if (u.isLower) lo = Math.max(lo, u.v); else hi = Math.min(hi, u.v);
-      u.improves = (u.isLower ? lo : hi) !== before;
-      u.lo = lo; u.hi = hi;
-      u.solves = !solved && Number.isFinite(hi - lo) && hi - lo <= 1e-9 * Math.max(1, Math.abs(hi));
-      if (u.solves) solved = true;
+      u.trivial = u.discovery === 'trivial';
+      u.viaDate = sourceById.get(u.via)?.date ?? null;
       if (u.discovery_kind === 'certificate') {
         u.sourceName = `Certificate ${u.discovery}`;
       } else {

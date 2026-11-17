@@ -1,19 +1,49 @@
 // Ranges: one column per constant, its possible values as a bar that shrinks
 // as bounds improve. Positions count improvements, not their size: on each
-// side, a constant's bounds are evenly spaced from the edge (its first bound)
-// toward the center, which stands for the true value. If the true value is
-// known (in hindsight), the bound equal to it sits at the center; if not, the
-// unknown value is one more step past the last bound. A missing bound runs off
-// the edge.
+// side, a constant's improvements are evenly spaced from the edge (its first
+// bound) toward the center, which stands for the true value, so the two sides
+// can take different-sized steps. A bound equal to the true value (known in
+// hindsight) sits at the center; until the true value is known, the last bound
+// stops one step short of it. A missing bound runs off the edge.
+
+// This chart's dates for undated bounds, so every constant starts unbounded.
+// A non-trivial bound with no date of its own takes the date of the survey or
+// table that cites it, the latest it could have been known. A trivial bound
+// takes the date of its constant's first non-trivial bound or, if it has none,
+// its family's. Returns per constant a re-ordered copy of its updates, with
+// running bounds recomputed, and t set to the chart date (unplaceable ones dropped).
+function chartUpdates(constants) {
+  const copies = new Map(constants.map(c => [c, c.updates.map(u => ({
+    ...u, chartDated: u.t == null, t: u.t ?? (u.trivial ? null : parseDate(u.viaDate)),
+  }))]));
+  const firstReal = ups => d3.min(ups.filter(u => !u.trivial && u.t != null), u => u.t);
+  const familyFirst = d3.rollup(constants, cs => d3.min(cs, c => firstReal(copies.get(c))), c => c.family);
+  const out = new Map();
+  for (const c of constants) {
+    const ups = copies.get(c);
+    const fallback = firstReal(ups) ?? familyFirst.get(c.family) ?? null;
+    for (const u of ups) u.t ??= fallback;
+    // At a shared date, trivial bounds come first so real ones can improve on them.
+    const placed = ups.filter(u => u.t != null).sort((a, b) => (a.t - b.t) || (b.trivial - a.trivial) || a.i - b.i);
+    out.set(c, runningBounds(placed));
+  }
+  return out;
+}
+
+// How a bound's date reads in the tooltip.
+const chartDateLabel = u => !u.chartDated ? formatDate(u.date)
+  : u.trivial ? 'trivial' : u.viaDate ? `undated, cited ${formatDate(u.viaDate)}` : 'undated';
 
 function drawRanges(root, controls, data, opts = {}) {
   root.selectAll('*').remove();
   const cols = [];
+  const updatesOf = chartUpdates(data.constants);
   for (const c of data.constants) {
-    if (!c.dated.length) continue;
-    const improving = c.updates.filter(u => u.improves);
+    const updates = updatesOf.get(c);
+    if (!updates.length) continue;
+    const improving = updates.filter(u => u.improves);
     const lows = improving.filter(u => u.isLower), highs = improving.filter(u => !u.isLower);
-    const last = c.updates[c.updates.length - 1];
+    const last = updates[updates.length - 1];
     const solved = Number.isFinite(last.hi - last.lo) && last.hi - last.lo <= 1e-9 * Math.max(1, Math.abs(last.hi));
     // Position of the i-th improvement on a side with n of them, as distance from the edge.
     const step = (i, n) => solved ? (i === n - 1 ? 0.5 : i * 0.5 / (n - 1)) : i * 0.5 / n;
@@ -23,9 +53,9 @@ function drawRanges(root, controls, data, opts = {}) {
     // States over time, t = -Infinity for undated. lo/hi are positions, vlo/vhi values.
     const states = [{ t: -Infinity, lo: -Infinity, hi: Infinity, vlo: -Infinity, vhi: Infinity }];
     let lo = -Infinity, hi = Infinity;
-    for (const u of c.updates) {
+    for (const u of updates) {
       if (pos.has(u)) { if (u.isLower) lo = pos.get(u); else hi = pos.get(u); }
-      const t = u.t ?? -Infinity;
+      const t = u.t;
       const s = { t, lo, hi, vlo: u.lo, vhi: u.hi };
       const prev = states[states.length - 1];
       if (prev.t === t) states[states.length - 1] = { ...s, u: [prev.u, u].flat().filter(Boolean) };
@@ -33,7 +63,7 @@ function drawRanges(root, controls, data, opts = {}) {
     }
     const fin = states[states.length - 1];
     const progress = solved ? 2 : Number.isFinite(fin.hi - fin.lo) ? 1 - (fin.hi - fin.lo) : Number.isFinite(fin.lo) ? fin.lo - 1 : -1 - (1 - fin.hi);
-    cols.push({ c, states, progress, family: c.family });
+    cols.push({ c, updates, states, progress, family: c.family });
   }
   const byFamily = d3.group(cols, d => d.family);
   const familyOrder = data.familyOrder.filter(g => byFamily.has(g));
@@ -45,7 +75,11 @@ function drawRanges(root, controls, data, opts = {}) {
 
   // Layout
   const width = root.node().clientWidth;
-  const margin = { top: 14, right: 16, bottom: 120, left: 110 };
+  // Bottom margin fits the longest family label, rotated 40° below the axis.
+  const probe = root.append('svg').append('text').attr('class', 'viz-tick');
+  const labelW = d3.max(familyOrder, g => probe.text(byFamily.get(g)[0].c.familyName).node().getComputedTextLength());
+  probe.node().parentNode.remove();
+  const margin = { top: 14, right: 16, bottom: Math.ceil(labelW * Math.sin(Math.PI * 40 / 180)) + 30, left: 110 };
   const plotH = 380;
   const height = margin.top + plotH + margin.bottom;
   const gap = 5;
@@ -115,12 +149,12 @@ function drawRanges(root, controls, data, opts = {}) {
   const allT = [...new Set(cols.flatMap(col => col.states.map(s => s.t)).filter(Number.isFinite))].sort((p, q) => p - q);
   const firstYear = Math.floor(allT[0]), lastYear = Math.floor(allT[allT.length - 1]);
   const paces = {
-    update: [-Infinity, ...allT].map(t => ({ T: t, label: t === -Infinity ? 'Before dated records' : null })),
-    year: [{ T: -Infinity, label: 'Before dated records' }, ...d3.range(firstYear, lastYear + 1).map(yr => ({ T: yr + 1 - 1e-9, label: String(yr) }))],
+    update: [-Infinity, ...allT].map(t => ({ T: t, label: t === -Infinity ? 'Before any bounds' : null })),
+    year: [{ T: -Infinity, label: 'Before any bounds' }, ...d3.range(firstYear, lastYear + 1).map(yr => ({ T: yr + 1 - 1e-9, label: String(yr) }))],
   };
   // Label update frames with the date of their updates.
   const dateAt = new Map();
-  for (const col of cols) for (const s of col.states) if (s.u && Number.isFinite(s.t)) for (const u of s.u) dateAt.set(s.t, formatDate(u.date));
+  for (const col of cols) for (const s of col.states) if (s.u && Number.isFinite(s.t)) for (const u of s.u) if (u.date ?? u.viaDate) dateAt.set(s.t, formatDate(u.date ?? u.viaDate));
   for (const f of paces.update) f.label ??= dateAt.get(f.T);
 
   let pace = opts.pace || 'year', frames = paces[pace], frame = 0, timer = null, speed = 1;
@@ -199,7 +233,7 @@ function drawRanges(root, controls, data, opts = {}) {
     const fmt = (v, inf) => Number.isFinite(v) ? d3.format(',.6~g')(v) : inf;
     const bounds = solved(s) ? `= ${fmt(s.vlo)}` : `${fmt(s.vlo, '−∞')} … ${fmt(s.vhi, '+∞')}`;
     const T = frames[frame].T;
-    const history = col.c.updates.filter(u => u.improves).map(u => `<div class="${(u.t ?? -Infinity) > T ? 'viz-muted' : ''}">${u.date ? formatDate(u.date) : 'undated'}: ${u.solves ? '=' : boundSymbol(u)} $${u.value.latex}$</div>`).join('');
+    const history = col.updates.filter(u => u.improves).map(u => `<div class="${u.t > T ? 'viz-muted' : ''}">${chartDateLabel(u)}: ${u.solves ? '=' : boundSymbol(u)} $${u.value.latex}$</div>`).join('');
     tooltip.show(`<div class="fw-semibold">${texToHtml(col.c.name)}</div>
       <div class="viz-muted">${col.c.familyName}</div>
       <div>${frames[frame].label}: ${bounds}</div>

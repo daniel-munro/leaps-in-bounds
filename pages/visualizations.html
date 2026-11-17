@@ -24,7 +24,7 @@ permalink: /visualizations/
 <div id="timeline"></div>
 
 <h2 class="h4 mt-5">Closing the gap</h2>
-<p>Each column is a constant, and its bar spans the values still possible. The bottom and top lines are its first lower and upper bounds, and the middle line is its true value. Each later improvement moves a bound one step toward the middle, so the spacing counts improvements, not their size. Steps are even on each side: once the true value is known, the last bound lands on the middle; until then, the true value counts as one more step. A bar running off the edge has no bound on that side yet.</p>
+<p>Each column is a constant, and its bar spans the values still possible. The bottom and top lines are its first lower and upper bounds, and the middle line is its true value. Each later improvement moves a bound one step toward the middle, so the spacing counts improvements, not their size, and the two sides can take different-sized steps. A bound equal to the true value sits on the middle line; for constants without a known true value, all lower bounds stay below it and all upper bounds above. A bar running off the edge has no bound on that side yet. Trivial bounds appear alongside a constant's first real bound (or its family's, if it has none), and a bound with no known date appears at the date of the survey or table that cites it.</p>
 <div class="viz-controls">
   <button id="ranges-play" class="btn btn-sm btn-dark" style="min-width:4.5rem">Play</button>
   <span id="ranges-date" class="viz-date"></span>

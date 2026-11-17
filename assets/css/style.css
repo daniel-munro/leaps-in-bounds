@@ -316,5 +316,7 @@ h1 {
 .viz-legend svg { vertical-align: -2px; margin-right: 3px; }
 .viz-date { font-size: 1.6rem; font-weight: 600; min-width: 11rem; }
 .viz-stats { display: flex; gap: 1rem; color: #52514e; font-size: 0.9rem; }
-.viz-ticker { min-height: 4.6em; font-size: 0.9rem; color: #212529; }
+/* Fixed height for three updates plus "and N more", so the chart below never shifts. */
+.viz-ticker { height: 6em; line-height: 1.5; overflow: hidden; font-size: 0.9rem; color: #212529; }
+.viz-ticker > div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 1.5em; }
 #ranges-slider { flex: 1; min-width: 200px; }
