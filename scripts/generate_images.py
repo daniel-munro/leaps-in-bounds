@@ -37,10 +37,21 @@ from typing import Any, Callable, Iterable, Sequence
 
 import yaml
 
-from certificates import (Radical, affine_dimension, eccentricity_at_most, girth, has_monochromatic_sum, has_monochromatic_triangle, is_cap,
-                          is_isosceles_set, is_snake, load_certificates, network_depth, no_three_collinear, orbit_closure, read_graph,
-                          read_comparators, read_grid_points, read_integer_points, orientation, rectilinear_crossings, read_marks, read_points, read_radical_points, read_symmetries,
-                          read_ternary_points, read_transitions, read_vectors, read_witness_data, transition_vertices)
+from certificates.families.cap_set import is_cap, read_ternary_points
+from certificates.families.golomb import read_marks
+from certificates.families.isosceles_set import affine_dimension, is_isosceles_set, read_radical_points
+from certificates.families.kissing_number import orbit_closure, read_symmetries, read_vectors
+from certificates.families.multicolor_ramsey import has_monochromatic_triangle
+from certificates.families.no_three_in_line import read_grid_points
+from certificates.families.rectilinear_crossing import orientation, read_integer_points, rectilinear_crossings
+from certificates.families.schur import has_monochromatic_sum
+from certificates.families.snake_in_the_box import is_snake, read_transitions, transition_vertices
+from certificates.families.sorting_network import network_depth, read_comparators
+from certificates.geometry import no_three_collinear, read_points
+from certificates.graphs import diameter_at_most, edge_arrays, girth, read_graph
+from certificates.loading import load_certificates
+from certificates.values import Radical
+from certificates.witness import read_witness_data
 from utils import GENERATED_IMAGES_DIR
 
 #########
@@ -175,7 +186,7 @@ def check(condition: bool, message: str) -> None:
 
 
 def adjacency(n: int, edges: Iterable[tuple[int, int]]) -> list[int]:
-    """Bitmask adjacency lists, as used by scripts/certificates.py."""
+    """Bitmask adjacency lists, as used by scripts/certificates/graphs.py."""
     adj = [0] * n
     for u, v in edges:
         adj[u] |= 1 << v
@@ -321,7 +332,7 @@ def render_degree_diameter(constant_id: str, d: int, k: int) -> Svg | None:
     pos, edges = petersen()
     adj = adjacency(len(pos), edges)
     check(max(bin(a).count("1") for a in adj) <= d, f"{constant_id}: degree above {d}")
-    check(all(eccentricity_at_most(adj, v, k) for v in range(len(adj))), f"{constant_id}: diameter above {k}")
+    check(diameter_at_most(len(adj), *edge_arrays(adj), k), f"{constant_id}: diameter above {k}")
     check(len(pos) == exact_value(constant_id), f"{constant_id}: {len(pos)} vertices is not the value")
     return draw_graph(pos, edges, edge_width=2, vertex_radius=5)
 

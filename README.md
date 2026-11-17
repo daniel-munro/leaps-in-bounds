@@ -38,6 +38,7 @@ The certificates and the tools around them:
 - `formal/`: Lean project with the trusted formal statements of each bound (`LeapsInBounds/Statements/`) and submitted proofs (`LeapsInBounds/Proofs/`).
 - `notes/`: Working notes on searches for certificates, one scratchpad per family, so people and agents can build on earlier attempts instead of repeating them. See [notes/README.md](notes/README.md).
 - `certificates/verified.yml`: The manifest of verified certificates, recording a hash of the evidence that was checked, the commit of the checkers, who ran them and when.
+- `scripts/certificates/`: The checkers, with one module per family in `scripts/certificates/families/` (matching the formal statements in `formal/LeapsInBounds/Statements/`) and shared code for loading certificates, the manifest, and checking Lean proofs.
 - `scripts/verify_certificates.py`: Runs the checkers on certificates' evidence and records those that pass in the manifest. A maintainer runs it before merging new certificates.
 - `scripts/check_certificates.py`: Checks that every certificate is well formed, consistent with the others and the literature, and verified or attested. CI runs it on pull requests, without running the checkers.
 

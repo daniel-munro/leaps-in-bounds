@@ -18,7 +18,7 @@ The bounds of `rabung-lotts-2012` all come out of this with `value - 2 = (k - 1)
 | W(3,9) >= 932746 | 116593 | 10 | 1 | 0 |
 | W(3,10) >= 4173725 | 463747 | 3 | 1 | 0 |
 
-The first matching `s` worked each time, and the multiples of `p` always had a valid coloring. `W(3,11) >= 18603732` is `m = 1` with `p = 1860373` too. Its witness would compress to roughly 500 kB with xz (judging by 124 kB for `W(3,10)`), at the size limit, and the checker in `scripts/certificates.py` would take hours on it.
+The first matching `s` worked each time, and the multiples of `p` always had a valid coloring. `W(3,11) >= 18603732` is `m = 1` with `p = 1860373` too. Its witness would compress to roughly 500 kB with xz (judging by 124 kB for `W(3,10)`), at the size limit, and the checker in `scripts/certificates/families/van_der_waerden.py` would take hours on it.
 
 No plain Rabung prime (`m = 1`) gets close for 3 colors: the best for `W(3,5)` is `p = 241` (964 integers), and for `W(3,7)` it's `p = 7309` (43854).
 
@@ -29,7 +29,7 @@ No plain Rabung prime (`m = 1`) gets close for 3 colors: the best for `W(3,5)` i
 
 ## Checker budget and initial bounds
 
-The checker in `scripts/certificates.py` does `k - 1` shifts and ANDs of an `n`-bit integer for each color and each difference, so its time grows like `r n^2` and doesn't depend on `k`: about 80 s of CPU for `r n^2 = 1.3 * 10^12` (`n` about 658k for 3 colors, 570k for 4, 510k for 5, 465k for 6). Witnesses of that size compress to 20 to 30 kB with xz, so time, not the size limit, is what binds. Every constant whose record is beyond this budget got an initial bound at the budget:
+The checker in `scripts/certificates/families/van_der_waerden.py` does `k - 1` shifts and ANDs of an `n`-bit integer for each color and each difference, so its time grows like `r n^2` and doesn't depend on `k`: about 80 s of CPU for `r n^2 = 1.3 * 10^12` (`n` about 658k for 3 colors, 570k for 4, 510k for 5, 465k for 6). Witnesses of that size compress to 20 to 30 kB with xz, so time, not the size limit, is what binds. Every constant whose record is beyond this budget got an initial bound at the budget:
 
 - Plain Rabung (`m = 1`), with the largest prime `p = 1 mod r` below `budget / (k - 1)` that passes the window filter (a few seconds each to find): W(3,11) p = 65809, W(4,8) 81401, W(4,9) 71257, W(4,10) 63337, W(4,11) 56993, W(5,7) 84751, W(5,8) 72661, W(5,9) 63691, W(5,10) 56611, W(5,11) 50971, W(6,7) 77569, W(6,8) 66463, W(6,9) 58171, W(6,10) 51691, W(6,11) 46507. The multiples of `p` can get any color, since the filter already breaks every progression with difference not divisible by `p`.
 - Truncated products: W(5,6) >= 509901 is `blankenship-c-t-2018` with `p = 5` on the first 101980 integers of the W(4,6) witness (the whole witness would give 786051 but take about 3 minutes to check); W(6,6) >= 465373 is Xu's recursion with `p = 139` on the first 3348 integers of the W(3,6) witness (all of it gives the record 1555550).

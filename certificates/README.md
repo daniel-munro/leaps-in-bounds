@@ -66,7 +66,7 @@ Leaps in Bounds shows the state of each problem and how it has progressed, rathe
 
 ### witness
 
-An explicit construction, checked by a verifier for the constant's family in [`scripts/certificates.py`](../scripts/certificates.py). Witnesses suit bounds that come from a construction, which is how most new lower bounds on extremal quantities are found.
+An explicit construction, checked by a verifier for the constant's family in [`scripts/certificates/families/`](../scripts/certificates/families/), one module per family. Witnesses suit bounds that come from a construction, which is how most new lower bounds on extremal quantities are found.
 
 ### lean
 
@@ -96,7 +96,7 @@ Its theorem should state the family's statement in a form that's the same by def
 
 A certificate's status is one of:
 
-- **Verified:** a trusted verifier (a maintainer, listed in `TRUSTED_VERIFIERS` in [`scripts/certificates.py`](../scripts/certificates.py)) ran the checkers here on its evidence. [`verified.yml`](verified.yml) records this for each verified certificate: a hash of what it claims and its evidence files, the commit of the checkers used, who ran them and when. If the certificate's claim or evidence changes later, the hash no longer matches and the certificate needs verifying again. Other fields, such as `notes`, can change freely.
+- **Verified:** a trusted verifier (a maintainer, listed in `TRUSTED_VERIFIERS` in [`scripts/certificates/manifest.py`](../scripts/certificates/manifest.py)) ran the checkers here on its evidence. [`verified.yml`](verified.yml) records this for each verified certificate: a hash of what it claims and its evidence files, the commit of the checkers used, who ran them and when. If the certificate's claim or evidence changes later, the hash no longer matches and the certificate needs verifying again. Other fields, such as `notes`, can change freely.
 - **Attested:** checking the evidence here has been too slow so far, or it's too large to keep here, and someone else says they checked it with a checker they published. The site shows an attested bound in yellow, separately from verified ones, and lists it among the [unverified bounds](https://leapsinbounds.org/unverified/).
 - **Awaiting verification:** neither yet, as for a new submission. CI fails until a maintainer verifies it, and the site leaves it out.
 

@@ -3,7 +3,7 @@
 Usage:
     python scripts/verify_certificates.py [ID ...] [--all] [--base REF] [--jobs N] [--dry-run]
 
-Run by a trusted verifier (see TRUSTED_VERIFIERS in certificates.py), usually
+Run by a trusted verifier (see TRUSTED_VERIFIERS in certificates/manifest.py), usually
 on a pull request's branch before merging it. With no IDs, checks every
 certificate awaiting verification: those with no manifest entry or a stale
 one, and those whose entry differs from the base branch's manifest, so that

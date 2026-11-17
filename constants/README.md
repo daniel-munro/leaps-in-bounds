@@ -57,7 +57,7 @@ If you're not sure a family fits, start a [GitHub Discussion](https://github.com
 
 3. Its bounds in [`literature/bounds/<family>.csv`](../literature/README.md), and their sources in `literature/sources.yml`.
 
-Images and support for certificates can come later. A new family's certificates need a checker in `scripts/certificates.py` and a formal statement in `formal/`, which a maintainer will usually add, though proposals are welcome.
+Images and support for certificates can come later. A new family's certificates need a checker module in `scripts/certificates/families/` and a formal statement in `formal/`, which a maintainer will usually add, though proposals are welcome.
 
 ## Images
 

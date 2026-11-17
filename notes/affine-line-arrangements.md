@@ -7,7 +7,7 @@ A lower bound of `N` is certified by `N` integer arrangements of pairwise differ
 - 1 to 6 lines: matched (1, 2, 4, 9, 47, 791), with coefficients of at most 16.
 - 7 lines: not yet. The grid search found 34594 of the 37830 types in about 5 rounds of 96000 random arrangements each, while the machine was busy, and was still finding a few hundred new types per round when stopped. Continuing it, then extending the 6-line types by special lines to fill in the rest, looks feasible. The checker takes about 3 ms per arrangement of 7 lines, so a certificate would take about 2 minutes to check.
 
-How the realizations were found (Python, exact rational arithmetic, using `arrangement_type` from `scripts/certificates.py` to tell types apart):
+How the realizations were found (Python, exact rational arithmetic, using `arrangement_type` from `scripts/certificates/families/line_arrangement.py` to tell types apart):
 
 1. Random subsets of the lines through two points of a `k x k` grid, `k` from 3 to 6. Small grids have lots of concurrencies and parallels, so this finds almost every degenerate type with tiny coefficients: 790 of the 791 types of 6 lines in under a minute on 8 cores. The one it missed was 6 parallel lines.
 2. Extending arrangements of `n - 1` lines by one line: through two vertices, through a vertex parallel to a line or in a direction between two critical directions there, parallel to a line between two vertex offsets, or through two random points near vertices.

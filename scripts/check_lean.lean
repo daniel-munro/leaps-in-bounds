@@ -1,6 +1,6 @@
 /-
 Check Lean certificates against their formal statements. Called by
-scripts/certificates.py, from formal/, as
+scripts/certificates/lean.py, from formal/, as
 
     lake env lean --run ../scripts/check_lean.lean <input.json>
 
