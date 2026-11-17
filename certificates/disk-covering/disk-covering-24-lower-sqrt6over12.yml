@@ -1,0 +1,10 @@
+constant: disk-covering-24
+bound: lower
+value: '\frac{\sqrt{6}}{12}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringArea
+  theorem: LeapsInBounds.Proofs.DiskCoveringArea.lower_24
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: 'The area bound: 24 disks of radius r covering the unit disk have total area 24 pi r^2 >= pi, so r >= 1/sqrt(24). Proof written by an AI agent (Claude).'

@@ -1,0 +1,10 @@
+constant: map-folding-5-17
+bound: upper
+value: 281710411438055027694947944226061159480056634330574206405101912752560026159795933451040286452340924018275123200000000000000000000
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.MapFoldingFactorial
+  theorem: LeapsInBounds.Proofs.MapFoldingFactorial.upper_5_17
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: 'The trivial bound (85)!: a folding is counted by its stack, an order of the 85 cells. Proof written by an AI agent (Claude).'

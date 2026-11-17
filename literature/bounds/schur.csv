@@ -30,3 +30,15 @@ schur-7,1093,,schur-1916,
 schur-8,3280,,schur-1916,
 schur-9,9841,,schur-1916,
 schur-9,17694,,rowley-2019,ageron-et-al-2021
+schur-6,,1957,schur-1916,heule-2017-schur
+schur-6,,1927,irving-1973-schur,heule-2017-schur
+schur-6,,1836,fettes-kramer-radziszowski-2004,eliahou-revuelta-2020
+schur-7,,13700,schur-1916,heule-2017-schur
+schur-7,,13490,irving-1973-schur,heule-2017-schur
+schur-7,,12859,fettes-kramer-radziszowski-2004,ejc-ds1-small-ramsey-numbers
+schur-8,,109601,schur-1916,heule-2017-schur
+schur-8,,107921,irving-1973-schur,heule-2017-schur
+schur-8,,102880,fettes-kramer-radziszowski-2004,ejc-ds1-small-ramsey-numbers
+schur-9,,986410,schur-1916,heule-2017-schur
+schur-9,,971290,irving-1973-schur,heule-2017-schur
+schur-9,,925929,fettes-kramer-radziszowski-2004,ejc-ds1-small-ramsey-numbers

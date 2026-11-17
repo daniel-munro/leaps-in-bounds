@@ -1,0 +1,10 @@
+constant: disk-covering-23
+bound: lower
+value: '\frac{\sqrt{23}}{23}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringArea
+  theorem: LeapsInBounds.Proofs.DiskCoveringArea.lower_23
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: 'The area bound: 23 disks of radius r covering the unit disk have total area 23 pi r^2 >= pi, so r >= 1/sqrt(23). Proof written by an AI agent (Claude).'

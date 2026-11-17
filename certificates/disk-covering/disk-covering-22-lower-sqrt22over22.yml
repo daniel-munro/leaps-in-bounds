@@ -1,0 +1,10 @@
+constant: disk-covering-22
+bound: lower
+value: '\frac{\sqrt{22}}{22}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringArea
+  theorem: LeapsInBounds.Proofs.DiskCoveringArea.lower_22
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: 'The area bound: 22 disks of radius r covering the unit disk have total area 22 pi r^2 >= pi, so r >= 1/sqrt(22). Proof written by an AI agent (Claude).'

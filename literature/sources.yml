@@ -1434,6 +1434,7 @@ oler-groemer-1961:
   string: "Groemer, H. (1960). Über die Einlagerung von Kreisen in einen konvexen Bereich. Math. Z., 73, 285-294; Oler, N. (1961). A finite packing problem. Canad. Math. Bull., 4, 153-155."
   date: "1961-05"
   doi: "https://doi.org/10.4153/CMB-1961-018-7"
+  notes: "Oler's inequality: a compact convex set X holds at most (2/sqrt(3)) A(X) + P(X)/2 + 1 points at mutual distance at least 1. Applied to the centers of n unit circles in a square of side s, which lie in a square of side s - 2 at mutual distance at least 2, it gives n <= (2/sqrt(3)) t^2 + 2t + 1 for t = (s - 2)/2, so s(34) >= 11.0991 and s(35) >= 11.2579 (not stated as such)."
   added_by: daniel-munro
 
 melissen-1993:
@@ -2957,14 +2958,14 @@ fettes-kramer-radziszowski-2004:
   string: "S. Fettes, R.L. Kramer and S.P. Radziszowski, An Upper Bound of 62 on the Classical Ramsey Number R(3,3,3,3), Ars Combinatoria 72 (2004) 41-63."
   date: "2004"
   url: "https://www.cs.rit.edu/~spr/PUBL/paper43.pdf"
-  notes: "[FeKR] in https://doi.org/10.37236/21. The bounds R_5(3) <= 307, R_6(3) <= 1838 and R_7(3) <= 12861 follow from R_4(3) <= 62 by the Greenwood-Gleason inequality R_{k+1}(3) <= (k+1)(R_k(3) - 1) + 2, as stated in https://doi.org/10.37236/21 (section 6.1.1). Continuing the same inequality gives R_8(3) <= 102882 and R_9(3) <= 925931, which the survey doesn't print but which match its item 6.2.d, R_k(3) <= k!(e - 1/6) + 1 for k >= 4 [XuXC]."
+  notes: "[FeKR] in https://doi.org/10.37236/21. The bounds R_5(3) <= 307, R_6(3) <= 1838 and R_7(3) <= 12861 follow from R_4(3) <= 62 by the Greenwood-Gleason inequality R_{k+1}(3) <= (k+1)(R_k(3) - 1) + 2, as stated in https://doi.org/10.37236/21 (section 6.1.1). Continuing the same inequality gives R_8(3) <= 102882 and R_9(3) <= 925931, which the survey doesn't print but which match its item 6.2.d, R_k(3) <= k!(e - 1/6) + 1 for k >= 4 [XuXC]. With Schur's S(k) <= R_k(3) - 2, these give S(6) <= 1836 (stated in arXiv:2006.01502), S(7) <= 12859, S(8) <= 102880 and S(9) <= 925929 (not stated as such)."
   added_by: daniel-munro
 
 erdos-sachs-1963:
   string: "P. Erdős and H. Sachs, Reguläre Graphen gegebener Taillenweite mit minimaler Knotenzahl, Wiss. Z. Martin-Luther-Univ. Halle-Wittenberg Math.-Natur. Reihe 12 (1963) 251-258."
   date: "1963-03"
   url: "https://cs.umd.edu/users/gasarch/COURSES/752/S25/slides/ErdosSachsOrig.pdf"
-  notes: "Satz 1, eq. (1) (p. 251): n(k,g) >= 1 + k sum_{i=0}^{[(g-3)/2]} (k-1)^i (the Moore bound for odd g); Bemerkung 2, eq. (7) (p. 253): n(k,2q) >= 2((k-1)^q - 1)/(k-2) (Moore bound for even g, by a method of Kárteszi). Section I.3 (pp. 253-254): f(k,3) = k+1 among the 'trivial cases'; f(k,4) = 2k (K_{k,k}), credited to an oral communication of L. Pósa; f(k,7) > Moore bound for k > 2, citing Hoffman and Singleton (1960). The issue is dated March 1963 (manuscript received 1963-01-29)."
+  notes: "Satz 1 (p. 251) also gives the upper bound f(k,g) <= 4 sum_{t=1}^{g-2} (k-1)^t, for the smallest k-regular graph of girth at least g, which has girth exactly g (Theorem 4 of https://doi.org/10.37236/37). Satz 1, eq. (1) (p. 251): n(k,g) >= 1 + k sum_{i=0}^{[(g-3)/2]} (k-1)^i (the Moore bound for odd g); Bemerkung 2, eq. (7) (p. 253): n(k,2q) >= 2((k-1)^q - 1)/(k-2) (Moore bound for even g, by a method of Kárteszi). Section I.3 (pp. 253-254): f(k,3) = k+1 among the 'trivial cases'; f(k,4) = 2k (K_{k,k}), credited to an oral communication of L. Pósa; f(k,7) > Moore bound for k > 2, citing Hoffman and Singleton (1960). The issue is dated March 1963 (manuscript received 1963-01-29)."
   added_by: daniel-munro
 
 hoffman-singleton-1960:
@@ -2998,7 +2999,7 @@ bannai-ito-1981:
 sauer-1967:
   string: "N. Sauer, Extremaleigenschaften regulärer Graphen gegebener Taillenweite, I and II, Sitzungsberichte Österreich. Akad. Wiss. Math. Natur. Kl., S-B II, 176 (1967) 9-25 and 27-43."
   date: "1967"
-  notes: "Not read directly. de Ruiter and Biggs (2015), Table 1, credit Sauer with the previous records n(8,7) <= 799, n(10,7) <= 1639, n(12,7) <= 2927 and n(14,7) <= 4759. Each is one less than the order of the (k,8)-cage for k-1 a prime power, so these are probably applications of a general result of Sauer to those cages rather than values stated in the paper."
+  notes: "Not read directly. The general bound n(k,g) <= 2(k-1)^(g-2) for odd g and 4(k-1)^(g-3) for even g (k >= 4) is as stated in Lazebnik, Ustimenko and Woldar (1997), eq. (1); the dynamic cage survey (https://doi.org/10.37236/37, Theorem 7) prints (k-2) for odd g, which can't be right for k = 3. de Ruiter and Biggs (2015), Table 1, credit Sauer with the previous records n(8,7) <= 799, n(10,7) <= 1639, n(12,7) <= 2927 and n(14,7) <= 4759. Each is one less than the order of the (k,8)-cage for k-1 a prime power, so these are probably applications of a general result of Sauer to those cages rather than values stated in the paper."
   added_by: daniel-munro
 
 deruiter-biggs-2015:
@@ -4177,7 +4178,7 @@ markot-2021:
   date: "2021-09-29"
   url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8550790/"
   doi: "https://doi.org/10.1007/s10898-021-01086-z"
-  notes: "Computer-assisted proofs of the optimal packings of 31, 32 and 33 circles, with interval arithmetic. Packomania doesn't mark these as proven as of November 2026."
+  notes: "Computer-assisted proofs of the optimal packings of 31, 32 and 33 circles, with interval arithmetic. Since s(n) never decreases with n (removing a circle from a packing of n + 1 leaves a packing of n), s(33) is also a lower bound on s(34) and s(35), which the paper leaves open (not stated as such). Packomania doesn't mark these as proven as of November 2026."
   added_by: daniel-munro
 
 packomania-csq:
@@ -4185,3 +4186,126 @@ packomania-csq:
   date: "2026-11-15"
   url: "http://www.packomania.com/csq/csq.html"
   added_by: daniel-munro
+
+abreu-et-al-2012:
+  string: "M. Abreu, G. Araujo-Pardo, C. Balbuena, D. Labbate and J. Salas, Small regular graphs of girth 7, Electronic Journal of Combinatorics 22(3) (2015) #P3.5, arXiv:1211.2672."
+  date: "2012-11-12"
+  url: "https://arxiv.org/abs/1211.2672"
+  doi: "https://doi.org/10.37236/4205"
+  notes: "Theorem 7: a (q+1,7)-graph of order 2q^3 + q^2 + 2q for an even prime power q > 4, giving n(17,7) <= 8480. Theorem 15, as corrected in the corrigendum of 2016-06-21: a (q+1,7)-graph of order 2q^3 + 2q^2 - q for an odd prime power q > 5, giving n(18,7) <= 10387 and n(20,7) <= 14421 (the uncorrected formula is one more)."
+  added_by: daniel-munro
+
+kiss-2023:
+  string: "Gy. Kiss, Geometric constructions of small regular graphs with girth 7, The Art of Discrete and Applied Mathematics 8 (2025) #P3.04, arXiv:2312.05620."
+  date: "2023-12-09"
+  url: "https://arxiv.org/abs/2312.05620"
+  doi: "https://doi.org/10.26493/2590-9770.1732.6ac"
+  notes: "Theorem 8: for a prime power q >= 7, n(k,7) <= 2k^3 - 4k^2 + 2k for k = q + 1 and 2k^3 - 2k for k = q, giving n(16,7) <= 8160 and n(19,7) <= 13680."
+  added_by: daniel-munro
+
+oeis-a001416-map-folding-3-n:
+  string: "Number of ways of folding a 3 X n strip of stamps. - OEIS (retrieved 2026-11-16)"
+  date: "2026-11-16"
+  url: "https://oeis.org/A001416"
+  added_by: daniel-munro
+
+lunnon-1971:
+  string: "W.F. Lunnon, Multi-dimensional map-folding, The Computer Journal 14(1) (1971) 75-80."
+  date: "1971"
+  doi: "https://doi.org/10.1093/comjnl/14.1.75"
+  notes: "Not read directly. OEIS A001416 attributes its terms up to 3 X 7 (in the entry, and in Sloane's 1973 Handbook, before 2017) to this paper."
+  added_by: daniel-munro
+
+lunnon-irvine-2017:
+  string: "F. Lunnon and S.A. Irvine, terms a(8)-a(14) of OEIS A001416, the foldings of 3 X 8 to 3 X 14 maps (2017)."
+  date: "2017-12-26"
+  url: "https://oeis.org/A001416"
+  added_by: daniel-munro
+
+codegolf-276709:
+  string: "Count the possible folds of an n² grid, Code Golf Stack Exchange question 276709, revision 4 (table of m X n values)."
+  date: "2024-11-20"
+  url: "https://codegolf.stackexchange.com/questions/276709"
+  notes: "The m X n table (rows 4 X n and up added 2024-11-20) doesn't say how it was computed; it links Lunnon-algorithm implementations from jOEIS. An independent implementation of Lunnon's algorithm (by an AI agent, Claude, November 2026) reproduced 4 X 5, 4 X 6, 4 X 7 and 5 X 6. The table's 4 X 9 entry (276086428128) conflicts with its 9 X 4 entry (3488202663200, the same as its 4 X 10), so neither was added."
+  added_by: daniel-munro
+
+irving-1973-schur:
+  string: "R.W. Irving, An extension of Schur's theorem on sum-free partitions, Acta Arithmetica 25 (1973) 55-64."
+  date: "1973"
+  doi: "https://doi.org/10.4064/aa-25-1-55-64"
+  notes: "Not read directly. Credited with S(k) <= floor(k!(e - 1/24)) in arXiv:1711.08076 (Heule) and arXiv:2507.21656."
+  added_by: daniel-munro
+
+eliahou-revuelta-2020:
+  string: "S. Eliahou and M.P. Revuelta, The Schur degree of additive sets, Discrete Mathematics 344 (2021) 112332, arXiv:2006.01502."
+  date: "2020-06-02"
+  url: "https://arxiv.org/abs/2006.01502"
+  doi: "https://doi.org/10.1016/j.disc.2021.112332"
+  notes: "States 536 <= S(6) <= 1836, the upper bound from S(n) <= R_n(3) - 2."
+  added_by: daniel-munro
+
+bornsztein-2002:
+  string: "P. Bornsztein, On an extension of a theorem of Schur, Acta Arithmetica 101 (2002) 395-399."
+  date: "2002"
+  doi: "https://doi.org/10.4064/aa101-4-6"
+  notes: "Theorem: for n >= 2, every partition of {1, ..., [n! n e] + 1} into n classes has a class containing two different numbers and their sum, so WS(n) <= floor(n! n e)."
+  added_by: daniel-munro
+
+gowers-2001:
+  string: "W.T. Gowers, A new proof of Szemerédi's theorem, Geometric and Functional Analysis 11 (2001) 465-588."
+  date: "2001"
+  doi: "https://doi.org/10.1007/s00039-001-0332-9"
+  url: "https://www.dpmms.cam.ac.uk/~wtg10/sz898.dvi"
+  notes: "Theorem 18.6: a subset of {1, ..., N} of density delta has an arithmetic progression of length k when N >= 2^2^(1/delta)^2^2^(k+9). With delta = 1/r (the largest color class), as the introduction notes, this gives W(r,k) <= 2^{2^{r^{2^{2^{k+9}}}}}; Corollary 18.7 states the case r = 2. Read in the author's preprint dated 2000-03-27."
+  added_by: daniel-munro
+
+finschi-catalog:
+  string: "L. Finschi, Catalog of Isomorphism Classes of Oriented Matroids (retrieved 2026-11-16)."
+  date: "2026-11-16"
+  url: "https://www.finschi.com/math/om/?p=catom"
+  notes: "Counts 95052532 isomorphism classes (up to relabeling and reorientation) of simple rank-3 oriented matroids on 10 elements. An arrangement of 9 affine lines, not all parallel, with the line at infinity added, is one of these with a marked element, and its combinatorial type is determined by it, so there are at most 10 * 95052532 + 1 = 950525321 combinatorial types of 9 lines, counting all lines parallel (not stated as such). The bound counts types, not the rigid isotopy classes of A241600, which can be more numerous where realization spaces are disconnected."
+  added_by: daniel-munro
+
+bjorner-et-al-1993:
+  string: "A. Björner, M. Las Vergnas, B. Sturmfels, N. White and G.M. Ziegler, Oriented Matroids, Encyclopedia of Mathematics and its Applications 46, Cambridge University Press, 1993."
+  date: "1993"
+  doi: "https://doi.org/10.1017/CBO9780511586507"
+  notes: "The combinatorial type of an arrangement of lines (its covectors) is determined by its oriented matroid, given by a chirotope on the lines and the line at infinity. A chirotope of rank 3 on m labeled elements assigns a sign in {-, 0, +} to each of the C(m, 3) triples, so there are at most 3^C(n+1, 3) combinatorial types of n affine lines. This trivial count is not stated as such."
+  added_by: daniel-munro
+
+oeis-a006248-pseudolines:
+  string: "Number of simple arrangements of n pseudolines in the projective plane. - OEIS (retrieved 2026-11-16)"
+  date: "2026-11-16"
+  url: "https://oeis.org/A006248"
+  notes: "An arrangement of n affine lines in general position, with the line at infinity added, is a simple arrangement of n + 1 projective (pseudo)lines with one of them marked, and its combinatorial type (with mirror images identified) is determined by it. So A090338(n) <= (n + 1) A006248(n + 1) (not stated as such)."
+  added_by: daniel-munro
+
+oeis-a006245-sorting-networks:
+  string: "Number of primitive sorting networks on n elements; also number of rhombic tilings of a 2n-gon. - OEIS (retrieved 2026-11-16)"
+  date: "2026-11-16"
+  url: "https://oeis.org/A006245"
+  notes: "Counts wiring diagrams: simple arrangements of n pseudolines in the plane with labeled lines and a marked unbounded cell. Every simple arrangement of n lines is isomorphic to one (Goodman), so A090338(n) <= A006245(n) (not stated as such)."
+  added_by: daniel-munro
+
+aurenhammer-2002:
+  string: "F. Aurenhammer, a(11) = 41848591 of OEIS A006248, the simple arrangements of 11 pseudolines in the projective plane (2002); published in O. Aichholzer and H. Krasser, Abstract order type extension and new results on the rectilinear crossing number, Computational Geometry 36 (2007) 2-15."
+  date: "2002-02-05"
+  url: "https://oeis.org/A006248"
+  notes: "With A090338(10) <= 11 A006248(11) (see oeis-a006248-pseudolines), at most 460334501 arrangements of 10 lines in general position."
+  added_by: daniel-munro
+
+scheucher-rote-2019:
+  string: "M. Scheucher and G. Rote, a(12) = 10320613331 of OEIS A006248, the simple arrangements of 12 pseudolines in the projective plane (2019)."
+  date: "2019-09-07"
+  url: "https://oeis.org/A006248"
+  notes: "With A090338(11) <= 12 A006248(12) (see oeis-a006248-pseudolines), at most 123847359972 arrangements of 11 lines in general position."
+  added_by: daniel-munro
+
+samuel-2011:
+  string: "M.J. Samuel, Word posets, with applications to Coxeter groups, WORDS 2011, EPTCS 63 (2011) 226-230, arXiv:1108.3638."
+  date: "2011-08-18"
+  url: "https://arxiv.org/abs/1108.3638"
+  doi: "https://doi.org/10.4204/EPTCS.63.28"
+  notes: "Computes A006245(12) = 2894710651370536, the number of primitive sorting networks on 12 elements, which bounds the arrangements of 12 lines in general position (see oeis-a006245-sorting-networks)."
+  added_by: daniel-munro
+

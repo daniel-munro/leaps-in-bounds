@@ -15,11 +15,20 @@ from typing import Any, MutableMapping
 class Value:
     """Class representing a mathematical value with multiple representations."""
 
+    MAX_DIGITS = 24
+
     def __init__(self, latex_expr: str) -> None:
         self.latex = latex_expr
+        self.key = latex_expr  # The value as given, for telling values apart
         self.decimal_approx = self._parse_latex_value(latex_expr)
         patterns = [r'\sqrt', r'\frac', r'\over', r'\pi', r'^{', r'_{']
-        if any(pattern in latex_expr for pattern in patterns) and self.decimal_approx is not None:
+        if latex_expr.isdigit() and len(latex_expr) > self.MAX_DIGITS:
+            # Integers too long to show, such as (mn)! for map folding, are
+            # shown rounded, with the exact value kept in decimal_approx
+            digits = latex_expr.lstrip('0') or '0'
+            self.latex = rf"{{\approx}}{digits[0]}.{digits[1:4]} \times 10^{{{len(digits) - 1}}}"
+            self.alt_display = None
+        elif any(pattern in latex_expr for pattern in patterns) and self.decimal_approx is not None:
             # Show decimal approximation for expressions that need it
             self.alt_display = f"≈{self.decimal_approx}"
         elif latex_expr.isdigit() and len(latex_expr) > 4:

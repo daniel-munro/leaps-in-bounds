@@ -27,7 +27,7 @@ import tempfile
 import zlib
 from dataclasses import dataclass
 from fractions import Fraction
-from typing import Any, Callable, Iterable, Iterator, Mapping
+from typing import Any, Callable, Iterable, Iterator, Mapping, Sequence
 
 import numpy as np
 import sympy
@@ -1984,12 +1984,12 @@ def map_creases(m: int, n: int) -> dict[tuple[int, int], list[tuple[int, int]]]:
     return creases
 
 
-def is_folding(stack: str, creases: Mapping[tuple[int, int], list[tuple[int, int]]]) -> bool:
-    """Whether a stack of cells (each one character, from the bottom up) is a
-    folding: no two creases on the same edge of the stack interleave. Each
-    crease joins the levels of its two cells, so on each edge they must be
-    nested or disjoint, like brackets."""
-    level = {int(c, 36): k for k, c in enumerate(stack)}
+def is_folding(stack: Sequence[int], creases: Mapping[tuple[int, int], list[tuple[int, int]]]) -> bool:
+    """Whether a stack of cells (from the bottom up) is a folding: no two
+    creases on the same edge of the stack interleave. Each crease joins the
+    levels of its two cells, so on each edge they must be nested or disjoint,
+    like brackets."""
+    level = {c: k for k, c in enumerate(stack)}
     for group in creases.values():
         # Nested or disjoint intervals are balanced brackets: scan the levels,
         # opening an interval at its lower end and closing it at its upper end.
@@ -2012,20 +2012,26 @@ def folding_witness(m: int, n: int, value: int, cert: Mapping[str, Any]) -> None
     if cert["witness"].get("format") != "stacks":
         raise CertificateError("Folding witnesses must use format: stacks")
     cells = m * n
-    if cells > len(BASE36):
-        raise CertificateError(f"Stacks can have at most {len(BASE36)} cells")
-    stacks = read_witness_data(cert).lower().split()
-    if len(stacks) != value:
-        raise CertificateError(f"Witness has {len(stacks)} stacks, not {value}")
+    tokens = read_witness_data(cert).lower().split()
+    if len(tokens) != value:
+        raise CertificateError(f"Witness has {len(tokens)} stacks, not {value}")
+    stacks = []
+    for k, token in enumerate(tokens, 1):
+        # One base-36 character per cell, or decimal cells separated by commas
+        # for maps of more than 36 cells.
+        try:
+            stack = tuple(int(c) for c in token.split(",")) if "," in token else tuple(int(c, 36) for c in token)
+        except ValueError:
+            raise CertificateError(f"Stack {k} ({token[:40]!r}) isn't base-36 digits or comma-separated integers")
+        if sorted(stack) != list(range(cells)):
+            raise CertificateError(f"Stack {k} ({token[:40]!r}) doesn't list each of the {cells} cells once")
+        stacks.append(stack)
     if len(set(stacks)) != len(stacks):
         raise CertificateError("Stacks aren't distinct")
     creases = map_creases(m, n)
-    cell_symbols = sorted(BASE36[:cells])
     for k, stack in enumerate(stacks, 1):
-        if sorted(stack) != cell_symbols:
-            raise CertificateError(f"Stack {k} ({stack[:40]!r}) doesn't list each of the {cells} cells once")
         if not is_folding(stack, creases):
-            raise CertificateError(f"Stack {k} ({stack!r}) isn't a folding: two creases on the same edge cross")
+            raise CertificateError(f"Stack {k} ({tokens[k - 1][:40]!r}) isn't a folding: two creases on the same edge cross")
 
 
 def stamp_folding_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:

@@ -1,0 +1,10 @@
+constant: disk-covering-25
+bound: lower
+value: '\frac{1}{5}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringArea
+  theorem: LeapsInBounds.Proofs.DiskCoveringArea.lower_25
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: 'The area bound: 25 disks of radius r covering the unit disk have total area 25 pi r^2 >= pi, so r >= 1/sqrt(25). Proof written by an AI agent (Claude).'

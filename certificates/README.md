@@ -390,7 +390,7 @@ Formal statements are in [`formal/LeapsInBounds/Statements/Folding.lean`](../for
 - `UpperBound m n N` means there are at most `N`.
 - `StampLowerBound n N` and `StampUpperBound n N` are the same for the strip of `n` stamps.
 
-Witnesses can certify lower bounds only. A witness uses `format: stacks`: `N` distinct stacks, separated by whitespace, each a folding written as its cells from the bottom up, one character each in base 36 (so `m n <= 36`), with the cells numbered from `0` row by row. For example, `'012 021 102 120 201 210'` for the 6 foldings of 3 stamps. Since the witness lists the foldings, the [size limit](#size-limit) allows counts up to a few hundred thousand: with the stacks sorted, xz compresses them to under a byte each.
+Witnesses can certify lower bounds only. A witness uses `format: stacks`: `N` distinct stacks, separated by whitespace, each a folding written as its cells from the bottom up, with the cells numbered from `0` row by row: one character each in base 36, or, for maps of more than 36 cells, decimal numbers separated by commas (such as `0,1,2,...,44`). For example, `'012 021 102 120 201 210'` for the 6 foldings of 3 stamps. Since the witness lists the foldings, the [size limit](#size-limit) allows counts up to a few hundred thousand: with the stacks sorted, xz compresses them to under a byte each.
 
 ### Covering a disk with disks: `disk-covering-{n}`
 

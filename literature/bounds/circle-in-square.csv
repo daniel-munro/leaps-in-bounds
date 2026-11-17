@@ -70,3 +70,7 @@ circle-in-square-34,,4+2\sqrt{2}+2\sqrt{6},graham-lubachevsky-1996,
 circle-in-square-35,,8+\sqrt{2}+\sqrt{6},graham-lubachevsky-1996,
 circle-in-square-36,,12,trivial,graham-lubachevsky-1996
 circle-in-square-36,12,,kirchner-wengerodt-1987,szabo-specht-2007
+circle-in-square-34,{\approx}11.0991,,oler-groemer-1961,
+circle-in-square-34,{\approx}11.4639440325,,markot-2021,
+circle-in-square-35,{\approx}11.2579,,oler-groemer-1961,
+circle-in-square-35,{\approx}11.4639440325,,markot-2021,

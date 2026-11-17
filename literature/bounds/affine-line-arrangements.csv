@@ -32,3 +32,10 @@ affine-line-arrangements-general-position-8,38609,,,oeis-a090338-lines-on-plane-
 affine-line-arrangements-general-position-8,,38609,,oeis-a090338-lines-on-plane-general
 affine-line-arrangements-general-position-9,3111341,,christ-2011,oeis-a090338-lines-on-plane-general
 affine-line-arrangements-general-position-9,,3111341,christ-2011,oeis-a090338-lines-on-plane-general
+affine-line-arrangements-9,,950525321,finschi-catalog,
+affine-line-arrangements-10,,3^{165},bjorner-et-al-1993,
+affine-line-arrangements-11,,3^{220},bjorner-et-al-1993,
+affine-line-arrangements-12,,3^{286},bjorner-et-al-1993,
+affine-line-arrangements-general-position-10,,460334501,aurenhammer-2002,oeis-a006248-pseudolines
+affine-line-arrangements-general-position-11,,123847359972,scheucher-rote-2019,oeis-a006248-pseudolines
+affine-line-arrangements-general-position-12,,2894710651370536,samuel-2011,oeis-a006245-sorting-networks

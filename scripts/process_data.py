@@ -201,7 +201,7 @@ def assign_updates_and_values(
         
         # Check if bounds are now equal, indicating an exact value
         if (constant["lower_bound"] and constant["upper_bound"] and 
-            constant["lower_bound"].latex == constant["upper_bound"].latex):
+            constant["lower_bound"].key == constant["upper_bound"].key):
             constant["exact_value"] = constant["lower_bound"]
             
         # Check if bounds are inconsistent
@@ -339,7 +339,7 @@ def bound_events(
         ]
         candidates.sort(key=lambda c: (
             -EVIDENCE_RANK[c["status"]],
-            Value(str(c["value"])).latex != event["value"].latex,
+            str(c["value"]) != event["value"].key,
             c["date"],
             c["id"],
         ))
@@ -350,7 +350,7 @@ def bound_events(
                 "kind": cert["kind"],
                 "certificate": cert["id"],
                 "source": None,
-                "value": Value(str(cert["value"])) if str(cert["value"]) != event["value"].latex else None,
+                "value": Value(str(cert["value"])) if str(cert["value"]) != event["value"].key else None,
                 "date": cert["date"],
             }
         else:
@@ -397,7 +397,7 @@ def build_histories(constants: dict[str, dict[str, Any]]) -> None:
         constant["history"] = history
         lower, upper = constant["lower_bound"], constant["upper_bound"]
         constant["exact_value"] = lower if lower is not None and upper is not None and (
-            lower.latex == upper.latex
+            lower.key == upper.key
             or lower.decimal_approx is not None and lower.decimal_approx == upper.decimal_approx
         ) else None
         del constant["update_records"]

@@ -1,0 +1,10 @@
+constant: disk-covering-21
+bound: lower
+value: '\frac{\sqrt{21}}{21}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.DiskCoveringArea
+  theorem: LeapsInBounds.Proofs.DiskCoveringArea.lower_21
+submitted_by: daniel-munro
+date: 2026-11-16
+notes: 'The area bound: 21 disks of radius r covering the unit disk have total area 21 pi r^2 >= pi, so r >= 1/sqrt(21). Proof written by an AI agent (Claude).'
