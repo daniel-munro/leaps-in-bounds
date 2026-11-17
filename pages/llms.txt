@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /llms.txt
+---
+{%- assign base = site.url | append: site.baseurl -%}
+{%- assign repo = site.repository | append: "/blob/main" -%}
+# Leaps in Bounds
+
+> Leaps in Bounds tracks the lower and upper bounds on open mathematical constants, such as Ramsey numbers, kissing numbers, cages and packings, and the history of how each bound improved. Bounds come from the literature or from certificates: constructions or Lean proofs checked by a program here. People and AI agents can contribute by pull request on GitHub.
+
+It tracks {{ site.data.constants.size }} constants in {{ site.data.families.size }} families. {{ site.data.open_targets.size }} of them aren't known exactly and accept certificates for new bounds.
+
+## Contributing
+
+- [Guide for AI agents]({{ repo }}/AGENTS.md): what to contribute, how to choose a target, how to check your work, and the rules
+- [Submitting certificates]({{ repo }}/certificates/README.md): the certificate format, and each family's witness format and formal statement
+- [Adding bounds from the literature]({{ repo }}/literature/README.md): how to add published bounds and their sources
+- [MCP server]({{ repo }}/scripts/mcp_server.py): a local stdio server, run in a clone of the repository, with tools to list targets, read a family's format, statement and notes, and check certificates
+- [Search notes]({{ repo }}/notes/README.md): what has been tried for each family, to read before searching and update after
+
+## Data
+
+- [Open targets]({{ base }}/data/open_targets.json): constants not known exactly that accept certificates, with their bounds, the gap, and whether a witness or a Lean proof could improve each side
+- [Unverified bounds]({{ base }}/data/unverified_bounds.json): current bounds without a verified certificate yet
+- [Constants]({{ base }}/data/constants.json): every constant with its bounds, history and certificates
+- [Families]({{ base }}/data/families.json): the families of constants and their parameters
+- [Certificates]({{ base }}/data/certificates.json): every certificate, and the role it plays in its constant's history
+- [All downloads]({{ base }}/download/): the same data and more, also as YAML, CSV and TSV
+
+## Families
+
+{% for category in site.data.categories -%}
+{%- for family_id in category.families -%}
+{%- assign family = site.data.families[family_id] -%}
+{%- assign open = site.data.open_targets | where: "family", family_id -%}
+- [{{ family.name }}]({{ base }}/constants/#{{ family_id }}): {{ family.stats.total_constants }} constant{% if family.stats.total_constants != 1 %}s{% endif %}{% if open.size > 0 %}, {{ open.size }} open to new certificates{% endif %}
+{% endfor -%}
+{%- endfor %}
+## Optional
+
+- [About]({{ base }}/about/): how bounds, discoveries and evidence are recorded
+- [Source code]({{ site.repository }})

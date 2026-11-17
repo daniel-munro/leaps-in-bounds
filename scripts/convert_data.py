@@ -32,6 +32,9 @@ with open("_data/unverified_bounds.yml", "r") as file:
 with open("_data/certificates.yml", "r") as file:
     certificates = yaml.safe_load(file)
 
+with open("_data/open_targets.yml", "r") as file:
+    targets = yaml.safe_load(file)
+
 with open("_data/history.yml", "r") as file:
     history = yaml.safe_load(file)
 
@@ -68,6 +71,9 @@ with open("data/unverified_bounds.yml", "w") as f:
 with open("data/certificates.yml", "w") as f:
     yaml.dump(certificates, f, sort_keys=False)
 
+with open("data/open_targets.yml", "w") as f:
+    yaml.dump(targets, f, sort_keys=False)
+
 with open("data/history.yml", "w") as f:
     yaml.dump(history, f, sort_keys=False)
 
@@ -89,6 +95,9 @@ with open("data/unverified_bounds.json", "w") as f:
 
 with open("data/certificates.json", "w") as f:
     json.dump(certificates, f, indent=2)
+
+with open("data/open_targets.json", "w") as f:
+    json.dump(targets, f, indent=2)
 
 with open("data/history.json", "w") as f:
     json.dump(history, f, indent=2)
@@ -164,6 +173,18 @@ for row in unverified:
 unverified_df = pd.DataFrame(unverified_list)
 unverified_df.to_csv("data/unverified_bounds.csv", index=False)
 unverified_df.to_csv("data/unverified_bounds.tsv", sep="\t", index=False)
+
+# Convert open targets to CSV and TSV
+targets_list = []
+for row in targets:
+    row_dict = row.copy()
+    flatten_value_dict(row_dict, 'lower_bound')
+    flatten_value_dict(row_dict, 'upper_bound')
+    targets_list.append(row_dict)
+
+targets_df = pd.DataFrame(targets_list)
+targets_df.to_csv("data/open_targets.csv", index=False)
+targets_df.to_csv("data/open_targets.tsv", sep="\t", index=False)
 
 # Convert certificates to CSV and TSV
 certificates_list = []

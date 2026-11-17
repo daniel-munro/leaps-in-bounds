@@ -68,5 +68,12 @@ The data on bounds and value updates is available for download in several format
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.csv">unverified_bounds.csv</a></td>
       <td><a href="{{ site.baseurl }}/data/unverified_bounds.tsv">unverified_bounds.tsv</a></td>
     </tr>
+    <tr>
+      <td><strong>Open targets</strong><br>Constants not yet known exactly, in families that accept certificates, with the gap between their bounds and what kind of certificate could improve each one</td>
+      <td><a href="{{ site.baseurl }}/data/open_targets.yml">open_targets.yml</a></td>
+      <td><a href="{{ site.baseurl }}/data/open_targets.json">open_targets.json</a></td>
+      <td><a href="{{ site.baseurl }}/data/open_targets.csv">open_targets.csv</a></td>
+      <td><a href="{{ site.baseurl }}/data/open_targets.tsv">open_targets.tsv</a></td>
+    </tr>
   </tbody>
 </table>

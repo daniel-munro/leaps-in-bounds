@@ -443,6 +443,49 @@ def find_unverified_bounds(constants: Mapping[str, Mapping[str, Any]]) -> list[d
     return unverified
 
 
+def find_open_targets(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, Any]]:
+    """List the constants whose value isn't known exactly, in families that
+    accept certificates: the places where a new bound can be submitted.
+
+    Each entry gives the current bounds and their best evidence, the gap
+    between them, what kind of certificate could improve each side, and
+    where to find the family's formal statement and search notes. Call after
+    build_histories, before the values are written out.
+    """
+    targets = []
+    for constant_id, constant in constants.items():
+        if not constant["certifiable"] or constant["exact_value"] is not None:
+            continue
+        family = FAMILIES[constant["family"]]
+        lower, upper = constant["lower_bound"], constant["upper_bound"]
+        gap = relative_gap = None
+        if lower is not None and upper is not None \
+                and lower.decimal_approx is not None and upper.decimal_approx is not None:
+            gap = upper.decimal_approx - lower.decimal_approx
+            if lower.decimal_approx > 0:
+                relative_gap = round(gap / lower.decimal_approx, 6)
+        dates = [e["date"] for e in constant["history"] if e["date"] is not None]
+        notes = pathlib.Path("notes") / f"{constant['family']}.md"
+        targets.append({
+            "constant": constant_id,
+            "family": constant["family"],
+            "name": constant["name"],
+            "lower_bound": lower.to_dict() if lower is not None else None,
+            "lower_evidence": constant["lower_bound_evidence"],
+            "upper_bound": upper.to_dict() if upper is not None else None,
+            "upper_evidence": constant["upper_bound_evidence"],
+            "gap": gap,
+            "relative_gap": relative_gap,
+            "last_improvement": max(dates) if dates else None,
+            "improve_lower_with": "witness" if family.witness_bound == "lower" else "lean",
+            "improve_upper_with": "witness" if family.witness_bound == "upper" else "lean",
+            "statement": "formal/" + family.lean_module.replace(".", "/") + ".lean",
+            "notes": str(notes) if notes.exists() else None,
+            "page": f"/constants/{constant_id}/",
+        })
+    return targets
+
+
 def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, Any]]:
     """List all certificates, newest first, with the role each plays in its
     constant's history: "discovery" when it established a new bound,
@@ -732,6 +775,8 @@ def main() -> None:
     build_histories(constants)
     with open("_data/unverified_bounds.yml", "w") as file:
         yaml.dump(find_unverified_bounds(constants), file, sort_keys=False)
+    with open("_data/open_targets.yml", "w") as file:
+        yaml.dump(find_open_targets(constants), file, sort_keys=False)
     certificate_rows = list_certificates(constants)
     with open("_data/certificates.yml", "w") as file:
         yaml.dump(certificate_rows, file, sort_keys=False)

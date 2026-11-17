@@ -93,7 +93,7 @@ For more open-ended contributions, such as asking whether a family of constants 
 
 Contributions are credited to the GitHub account that made them on the [contributions page](https://leapsinbounds.org/contributions/#contributors).
 
-To have an AI agent contribute, give it one of these prompts:
+AI agents should start with [AGENTS.md](AGENTS.md), which links to the rest, and can use the [MCP server](scripts/mcp_server.py) in a clone of this repository to find targets and check certificates. To have one contribute, give it one of these prompts:
 
 ```
 Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/certificates/README.md and follow it to submit a verified bound to Leaps in Bounds.
