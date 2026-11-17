@@ -56,7 +56,7 @@ function drawRanges(root, controls, data, opts = {}) {
     for (const u of updates) {
       if (pos.has(u)) { if (u.isLower) lo = pos.get(u); else hi = pos.get(u); }
       const t = u.t;
-      const s = { t, lo, hi, vlo: u.lo, vhi: u.hi };
+      const s = { t, lo, hi, vlo: u.lo, vhi: u.hi, tlo: u.loTex, thi: u.hiTex };
       const prev = states[states.length - 1];
       if (prev.t === t) states[states.length - 1] = { ...s, u: [prev.u, u].flat().filter(Boolean) };
       else states.push({ ...s, u: [u] });
@@ -230,8 +230,8 @@ function drawRanges(root, controls, data, opts = {}) {
     const col = cols.find(d => mx >= d.x && mx < d.x + colW);
     if (!col || my < margin.top || my > margin.top + plotH) { tooltip.hide(); return; }
     const s = col.s;
-    const fmt = (v, inf) => Number.isFinite(v) ? d3.format(',.6~g')(v) : inf;
-    const bounds = solved(s) ? `= ${fmt(s.vlo)}` : `${fmt(s.vlo, '−∞')} … ${fmt(s.vhi, '+∞')}`;
+    const fmt = (v, tex, inf) => v === HUGE ? texToHtml(`$${tex}$`) : Number.isFinite(v) ? d3.format(',.6~g')(v) : inf;
+    const bounds = solved(s) ? `= ${fmt(s.vlo, s.tlo)}` : `${fmt(s.vlo, s.tlo, '−∞')} … ${fmt(s.vhi, s.thi, '+∞')}`;
     const T = frames[frame].T;
     const history = col.updates.filter(u => u.improves).map(u => `<div class="${u.t > T ? 'viz-muted' : ''}">${chartDateLabel(u)}: ${u.solves ? '=' : boundSymbol(u)} $${u.value.latex}$</div>`).join('');
     tooltip.show(`<div class="fw-semibold">${texToHtml(col.c.name)}</div>

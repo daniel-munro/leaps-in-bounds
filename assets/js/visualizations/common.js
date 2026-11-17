@@ -32,15 +32,25 @@ function texToHtml(s) {
   });
 }
 
+// Bounds too large to compare numerically, such as towers of powers or Knuth's
+// up-arrows, have no decimal value. They stand in as this, larger than any
+// number, and each counts as an improvement on the one before, as in the data.
+const HUGE = Number.MAX_VALUE;
+
 // For updates already in order, sets the running bounds after each (lo, hi),
-// whether it tightens its side (improves), and whether it first pins the value (solves).
+// with the LaTeX of the bound that set each (loTex, hiTex), whether it tightens
+// its side (improves), and whether it first pins the value (solves).
 function runningBounds(ups) {
-  let lo = -Infinity, hi = Infinity, solved = false;
+  let lo = -Infinity, hi = Infinity, loTex = null, hiTex = null, solved = false;
   for (const u of ups) {
     const before = u.isLower ? lo : hi;
-    if (u.isLower) lo = Math.max(lo, u.v); else hi = Math.min(hi, u.v);
-    u.improves = (u.isLower ? lo : hi) !== before;
-    u.lo = lo; u.hi = hi;
+    const huge = u.v == null;
+    const v = huge ? HUGE : u.v;
+    if (u.isLower) lo = Math.max(lo, v); else hi = Math.min(hi, v);
+    const after = u.isLower ? lo : hi;
+    u.improves = after !== before || (huge && after === HUGE);
+    if (u.improves) { if (u.isLower) loTex = u.value.latex; else hiTex = u.value.latex; }
+    u.lo = lo; u.hi = hi; u.loTex = loTex; u.hiTex = hiTex;
     u.solves = !solved && Number.isFinite(hi - lo) && hi - lo <= 1e-9 * Math.max(1, Math.abs(hi));
     if (u.solves) solved = true;
   }
@@ -55,7 +65,7 @@ async function loadData() {
   const byConst = d3.group(updates, u => u.constant);
   const list = [];
   for (const [id, c] of Object.entries(constants)) {
-    const raw = (byConst.get(id) || []).filter(u => u.value && u.value.decimal_approx != null);
+    const raw = (byConst.get(id) || []).filter(u => u.value);
     // Undated updates come first in the data; keep file order within equal dates.
     const ups = raw.map((u, i) => ({ ...u, i, t: parseDate(u.date), v: u.value.decimal_approx, isLower: u.type === LOWER }))
       .sort((a, b) => ((a.t ?? -Infinity) - (b.t ?? -Infinity)) || a.i - b.i);
