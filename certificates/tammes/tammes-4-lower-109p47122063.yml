@@ -1,0 +1,15 @@
+constant: tammes-4
+bound: lower
+value: '109.47122063'
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1, 1, 1
+    1, -1, -1
+    -1, 1, -1
+    -1, -1, 1
+submitted_by: daniel-munro
+date: 2026-11-17
+source: fejes-toth-1943
+notes: "The regular tetrahedron, whose points are arccos(-1/3) ≈ 109.4712206° apart; the angle is rounded down so that it can be decided exactly."

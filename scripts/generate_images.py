@@ -47,6 +47,7 @@ from certificates.families.rectilinear_crossing import orientation, read_integer
 from certificates.families.schur import has_monochromatic_sum
 from certificates.families.snake_in_the_box import is_snake, read_transitions, transition_vertices
 from certificates.families.sorting_network import network_depth, read_comparators
+from certificates.families.tammes import read_rational_vectors
 from certificates.geometry import no_three_collinear, read_points
 from certificates.graphs import diameter_at_most, edge_arrays, girth, read_graph
 from certificates.loading import load_certificates
@@ -1603,6 +1604,174 @@ def render_debruijn_newman(constant_id: str) -> Svg | None:
     return svg
 
 
+#########
+# Sphere #
+#########
+
+def render_tammes(constant_id: str, n: int) -> Svg | None:
+    """The witness points on the sphere, each two at least the bound apart,
+    with the great-circle arcs between the closest pairs. Points and arcs on
+    the far side are faint."""
+    cert = witness(constant_id, "lower")
+    if cert is None:
+        return None
+    vectors = [[float(c) for c in v] for v in read_rational_vectors(read_witness_data(cert))]
+    points = [[c / math.sqrt(sum(x * x for x in v)) for c in v] for v in vectors]
+    if n <= 3:
+        # Turn the line or plane of the points toward the viewer, so that they
+        # aren't drawn on the rim: the axis through them (n = 2) or the normal
+        # to their plane (n = 3) goes to the z axis
+        p, q = points[0], points[-1]
+        axis = p if n == 2 else [p[1] * q[2] - p[2] * q[1], p[2] * q[0] - p[0] * q[2], p[0] * q[1] - p[1] * q[0]]
+        axis = [c / math.sqrt(sum(x * x for x in axis)) for c in axis]
+        # Rotate about k = axis × z by the angle between them (Rodrigues)
+        k = [axis[1], -axis[0], 0.0]
+        sin_t, cos_t = math.sqrt(sum(x * x for x in k)), axis[2]
+        if sin_t > 1e-12:
+            k = [c / sin_t for c in k]
+
+            def turn(v: list[float]) -> list[float]:
+                kv = sum(a * b for a, b in zip(k, v))
+                cross = [k[1] * v[2] - k[2] * v[1], k[2] * v[0] - k[0] * v[2], k[0] * v[1] - k[1] * v[0]]
+                return [v[i] * cos_t + cross[i] * sin_t + k[i] * kv * (1 - cos_t) for i in range(3)]
+            points = [turn(v) for v in points]
+    cosines = {(i, j): sum(a * b for a, b in zip(points[i], points[j])) for i, j in itertools.combinations(range(n), 2)}
+    least = math.degrees(math.acos(max(-1.0, min(1.0, max(cosines.values())))))
+    check(least >= cert["approx"] - 1e-9, f"{constant_id}: points are closer than the bound")
+    # Pairs within a hair of the least angle, the contacts of the configuration
+    # (none for antipodal points, which have no one arc between them)
+    contacts = [pair for pair, c in cosines.items()
+                if math.degrees(math.acos(max(-1.0, min(1.0, c)))) < min(least + 1e-3, 179.9)]
+
+    def view(p: Sequence[float]) -> list[float]:
+        # Turn the sphere a little so that few points are exactly on the rim
+        a, b = math.radians(20), math.radians(-25)
+        x, y, z = p
+        x, y = x * math.cos(a) - y * math.sin(a), x * math.sin(a) + y * math.cos(a)
+        y, z = y * math.cos(b) - z * math.sin(b), y * math.sin(b) + z * math.cos(b)
+        return [x, y, z]  # y is depth: negative is in front
+
+    m = 1.08
+    svg = Svg(-m, -m, m, m)
+    svg.defs.append('<radialGradient id="ball" cx="0.38" cy="0.32" r="0.8">'
+                    f'<stop offset="0" stop-color="white"/><stop offset="0.5" stop-color="{FILL}"/>'
+                    '<stop offset="1" stop-color="#9fb8d8"/></radialGradient>')
+    svg.add(svg.circle((0, 0), 1, fill="url(#ball)", stroke=INK, stroke_width=1.5))
+    back, front = [], []
+    for i, j in contacts:
+        p, q = points[i], points[j]
+        theta = math.acos(max(-1.0, min(1.0, cosines[i, j])))
+        arc = []
+        for k in range(25):
+            s = k / 24
+            w1, w2 = math.sin((1 - s) * theta) / math.sin(theta), math.sin(s * theta) / math.sin(theta)
+            arc.append(view([w1 * a + w2 * b for a, b in zip(p, q)]))
+        # Split the arc where it crosses the rim, so each part is all front or back
+        part = [arc[0]]
+        for a, b in zip(arc, arc[1:]):
+            if (a[1] < 0) != (b[1] < 0):
+                (front if a[1] < 0 else back).append(part)
+                part = [a]
+            part.append(b)
+        (front if part[-1][1] < 0 else back).append(part)
+    svg.add(svg.group((svg.polyline([(p[0], p[2]) for p in part]) for part in back),
+                      fill="none", stroke=EDGE, stroke_width=1, stroke_opacity=0.3, stroke_linecap="round"))
+    dots = [view(p) for p in points]
+    svg.add(svg.group((svg.circle((p[0], p[2]), 0.035) for p in dots if p[1] >= 0), fill=EDGE, fill_opacity=0.3))
+    svg.add(svg.group((svg.polyline([(p[0], p[2]) for p in part]) for part in front),
+                      fill="none", stroke=EDGE, stroke_width=1.75, stroke_linecap="round"))
+    svg.add(svg.group((svg.circle((p[0], p[2]), 0.045) for p in dots if p[1] < 0), fill=PALETTE[1], stroke="white", stroke_width=1))
+    return svg
+
+
+##############
+# Moving sofa #
+##############
+
+# Gerver's sofa, from Romik's explicit solution (arXiv:1606.08111, Table 1):
+# the hallway's rotation path x(t) for 0 <= t <= π/2, in five pieces
+GERVER_PHI = 0.039177364790083641
+GERVER_THETA = 0.681301509382724894
+GERVER_PIECES = {
+    "a": (1.210322422072688751, -0.25), "b": (-0.527624598026784624, 0.920258385160637622),
+    "c": (0.626045522848465867, -0.944750803946430751), "d": (1.313022761424232933, -0.525382670414554437),
+    "e": (1.210322422072688751, 0.25),
+}
+GERVER_KAPPA = [(-0.210322422072688751, 0.25), (-0.919179292771593322, 0.472406619750805465),
+                (-0.613763229430251668, 0.889626479003221860), (-0.308347166088910014, 0.472406619750805465),
+                (-1.017204036787814585, 0.25)]
+
+
+def gerver_path(t: float) -> tuple[float, float]:
+    """Romik's rotation path x(t) for Gerver's sofa."""
+    phi, theta, half = GERVER_PHI, GERVER_THETA, math.pi / 2
+    c, s = math.cos(t), math.sin(t)
+    (a1, a2), (b1, b2), (c1, c2), (d1, d2), (e1, e2) = GERVER_PIECES.values()
+    if t < phi:
+        v, k = (a1 * c + a2 * s - 1, -a2 * c + a1 * s - 0.5), GERVER_KAPPA[0]
+    elif t < theta:
+        v, k = (-t * t / 4 + b1 * t + b2, t / 2 - b1 - 1), GERVER_KAPPA[1]
+    elif t <= half - theta:
+        v, k = (c1 - t, c2 + t), GERVER_KAPPA[2]
+    elif t <= half - phi:
+        v, k = (-t / 2 + d1 - 1, -t * t / 4 + d1 * t + d2), GERVER_KAPPA[3]
+    else:
+        v, k = (e1 * c + e2 * s - 0.5, -e2 * c + e1 * s - 1), GERVER_KAPPA[4]
+    return c * v[0] - s * v[1] + k[0], s * v[0] + c * v[1] + k[1]
+
+
+def gerver_sofa(columns: int = 1200, times: int = 4000) -> list[tuple[float, float]]:
+    """The boundary of Gerver's sofa, as the shape that stays in the hallway
+    x(t) + R_t(L) for every t (Romik, eq. (6)), where L is the hallway
+    {x <= 1, 0 <= y <= 1} ∪ {0 <= x <= 1, y <= 1}. Each vertical line meets
+    it in an interval, below the outer walls and above the notch carved by the
+    inner corner, computed for sampled t. Returns the polygon, top then
+    bottom."""
+    import numpy as np
+    ts = np.linspace(0, math.pi / 2, times + 1)
+    path = np.array([gerver_path(t) for t in ts])
+    X = np.linspace(-2.25, 1, columns + 1)[:, None]
+    c, s = np.cos(ts)[None, :], np.sin(ts)[None, :]
+    dx, x1 = X - path[:, 0][None, :], path[:, 1][None, :]
+    with np.errstate(divide="ignore", invalid="ignore"):
+        # In the hallway's frame, a point is at (c dx + s dy, -s dx + c dy)
+        # with dy = y - x1: that's at most 1 in both, and not negative in both
+        upper = np.minimum(np.where(s > 1e-12, (1 - c * dx) / s + x1, np.where(1 - c * dx >= 0, np.inf, -np.inf)).min(1),
+                           np.where(c > 1e-12, (1 + s * dx) / c + x1, np.where(1 + s * dx >= 0, np.inf, -np.inf)).min(1))
+        notch = np.minimum(np.where(s > 1e-12, -c * dx / s + x1, np.where(-c * dx > 0, np.inf, -np.inf)),
+                           np.where(c > 1e-12, s * dx / c + x1, np.where(s * dx > 0, np.inf, -np.inf))).max(1)
+    upper, lower = np.minimum(upper, 1), np.maximum(notch, 0)
+    keep = upper > lower
+    xs = X[:, 0][keep]
+    return list(zip(xs, upper[keep])) + list(zip(xs[::-1], lower[keep][::-1]))
+
+
+def render_moving_sofa(constant_id: str) -> Svg | None:
+    """Gerver's sofa going around the corner of the hallway: where it starts,
+    halfway round, and where it ends."""
+    polygon = gerver_sofa(columns=400)
+    area = abs(sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(polygon, polygon[1:] + polygon[:1])) / 2)
+    value = exact_value(constant_id)
+    check(value is not None and abs(area - value) < 2e-3, f"{constant_id}: the sofa's area isn't the value")
+    half = math.pi / 2
+
+    def pose(t: float, shift: tuple[float, float]) -> list[tuple[float, float]]:
+        # The sofa in the hallway's frame at time t: R_{-t}(p - x(t)), moved along the arm
+        x0, y0 = gerver_path(t)
+        c, s = math.cos(t), math.sin(t)
+        return [(c * (x - x0) + s * (y - y0) + shift[0], -s * (x - x0) + c * (y - y0) + shift[1]) for x, y in polygon]
+
+    xmin, ymin = -4.6, -4.6
+    svg = Svg(xmin, ymin, 1.15, 1.15)
+    svg.add(svg.polygon([(xmin, 0), (0, 0), (0, ymin), (1, ymin), (1, 1), (xmin, 1)], fill=MUTED, fill_opacity=0.35))
+    svg.add(svg.group([svg.polygon(pose(0, (-1.3, 0))), svg.polygon(pose(half, (0, -1.3)))],
+                      fill=FILL, fill_opacity=0.6, stroke=EDGE, stroke_width=1, stroke_dasharray="4 3"))
+    svg.add(svg.polygon(pose(math.pi / 4, (0, 0)), fill=FILL, stroke=EDGE, stroke_width=2, stroke_linejoin="round"))
+    svg.add(svg.polyline([(xmin, 1), (1, 1), (1, ymin)], fill="none", stroke=INK, stroke_width=2.5, stroke_linejoin="round"))
+    svg.add(svg.polyline([(xmin, 0), (0, 0), (0, ymin)], fill="none", stroke=INK, stroke_width=2.5, stroke_linejoin="round"))
+    return svg
+
+
 ############
 
 def ints(constant_id: str, prefix: str) -> list[int]:
@@ -1641,6 +1810,8 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "rectilinear-crossing": ("rectilinear-crossing-", lambda c: render_rectilinear_crossing(c, *ints(c, "rectilinear-crossing-"))),
     "chromatic-number-space": ("chromatic-number-space-", lambda c: render_chromatic_space(c, *ints(c, "chromatic-number-space-"))),
     "debruijn-newman": ("debruijn-newman", render_debruijn_newman),
+    "tammes": ("tammes-", lambda c: render_tammes(c, *ints(c, "tammes-"))),
+    "moving-sofa": ("moving-sofa", render_moving_sofa),
 }
 
 

@@ -25,6 +25,7 @@ from . import (
     isosceles_set,
     kissing_number,
     line_arrangement,
+    moving_sofa,
     multicolor_ramsey,
     no_three_in_line,
     ramsey,
@@ -34,6 +35,7 @@ from . import (
     sorting_network,
     square_packing,
     superpermutation,
+    tammes,
     van_der_waerden,
 )
 
@@ -63,6 +65,8 @@ FAMILIES: dict[str, Family] = {
     **folding.FAMILIES,
     **disk_covering.FAMILIES,
     **debruijn_newman.FAMILIES,
+    **tammes.FAMILIES,
+    **moving_sofa.FAMILIES,
 }
 
 

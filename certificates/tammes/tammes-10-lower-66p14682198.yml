@@ -1,0 +1,21 @@
+constant: tammes-10
+bound: lower
+value: '66.14682198'
+kind: witness
+witness:
+  format: vectors
+  data: |
+    0.127201713533, -0.828261362634, -0.545713147397
+    0.127201729558, 0.828261362734, 0.54571314351
+    -0.792443203223, -0.609945710425, 1.2288E-8
+    0.83797204526, 1.64E-10, -0.545713158503
+    0.127201730205, -0.828261362307, 0.545713144007
+    0.837972061932, 4.91E-10, 0.545713132901
+    -0.510313337108, -4.57E-10, -0.859988545255
+    -0.7924432037, 0.609945709806, 1.1923E-8
+    0.127201712885, 0.828261362406, -0.545713147893
+    -0.510313310833, 5.8E-11, 0.859988560846
+submitted_by: daniel-munro
+date: 2026-11-17
+source: schutte-van-der-waerden-1951
+notes: "The best known configuration, from Sloane's tables of spherical codes (neilsloane.com/packings/dim3, retrieved 2026-11-17), polished by local optimization, with its coordinates rounded to 12 decimal places and the angle rounded down to 66.14682198, just below its least angle of about 66.1468219879°."

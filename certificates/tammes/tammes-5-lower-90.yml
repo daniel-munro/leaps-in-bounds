@@ -1,0 +1,16 @@
+constant: tammes-5
+bound: lower
+value: 90
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1, 0, 0
+    -1, 0, 0
+    0, 1, 0
+    0, -1, 0
+    0, 0, 1
+submitted_by: daniel-munro
+date: 2026-11-17
+source: schutte-van-der-waerden-1951
+notes: "Five vertices of the octahedron."

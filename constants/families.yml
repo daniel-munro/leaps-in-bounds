@@ -510,3 +510,31 @@ chromatic-number-space:
   parameters: [n]
   parameter_values: [[[2, 12]]]
   added_by: daniel-munro
+
+moving-sofa:
+  name: "Moving sofa constant"
+  description: "The moving sofa constant is the largest area of a connected shape in the plane that can be moved, by rotations and translations, around a right-angled corner in a hallway of unit width. Baek (2024) proved that it is the area of Gerver's sofa, $2.21953166\\ldots$, which has no known closed form."
+  external_ids:
+    mathworld: MovingSofaProblem
+    msc: 49Q10
+    oeis: A128463
+    wikipedia_en: Moving_sofa_problem
+  display_type: single
+  representative_image: moving-sofa
+  parameters: []
+  added_by: daniel-munro
+
+tammes:
+  name: "Tammes problem"
+  description: "$T(n)$ is the largest possible least angle, in degrees, between two of $n$ points on a sphere: equivalently, the largest angular diameter of $n$ equal circles that can be packed on the sphere without overlapping."
+  external_ids:
+    msc: 52C17
+    wikipedia_en: Tammes_problem
+  display_type: sequence
+  representative_image: tammes-13
+  id_template: "tammes-{n}"
+  name_template: "Tammes problem $T({n})$"
+  description_template: "The largest possible least angle, in degrees, between two of ${n}$ points on a sphere."
+  parameters: [n]
+  parameter_values: [[[2, 30]]]
+  added_by: daniel-munro

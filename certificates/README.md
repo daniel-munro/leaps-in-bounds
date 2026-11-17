@@ -420,6 +420,26 @@ Formal statements are in [`formal/LeapsInBounds/Statements/DeBruijnNewman.lean`]
 
 Values are written as for disk covering, such as `'0.2'` or `-50`. Only Lean proofs are accepted, here or attested.
 
+### The Tammes problem: `tammes-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Tammes.lean`](../formal/LeapsInBounds/Statements/Tammes.lean), with angles in degrees:
+
+- `RadicalLowerBound n terms d` means `T(n) >= radical terms d`: some `n` points on the unit sphere are each at least that many degrees apart.
+- `RadicalUpperBound n terms d` means `T(n) <= radical terms d`: no `n` points on the unit sphere are each further apart.
+
+Values are written as for disk covering, such as `'57.13670307'` or `90`.
+
+Witnesses can certify lower bounds only, at a rational number of degrees. A witness for `T(n) >= a` uses `format: vectors`: `n` nonzero vectors in `ℝ³`, one per line as `x, y, z`, with rational coordinates written as integers, decimals or fractions `a/b`. They needn't have unit length: the points are the vectors scaled to it. The checker compares the cosine of the angle between each two vectors, exactly, with rational bounds on `cos(a°)` from interval arithmetic. That decides every pair unless the angle is exactly `a` and `cos(a°)` is irrational, which happens for an optimal configuration whose angle is the bound. So, except at `60`, `90`, `120` and `180` degrees, where `cos(a°)` is rational, round the angle down a little, in the eighth decimal place, say.
+
+### The moving sofa constant: `moving-sofa`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/MovingSofa.lean`](../formal/LeapsInBounds/Statements/MovingSofa.lean):
+
+- `RadicalLowerBound terms d` means the constant is at least `radical terms d`: some connected shape of at least that area moves around the corner of the hallway of width 1, by a continuous family of rotations and translations.
+- `RadicalUpperBound terms d` means it's at most `radical terms d`: every such shape has at most that area.
+
+Values are written as for disk covering, such as `'2.37'`. Only Lean proofs are accepted, here or attested.
+
 ## Checking locally
 
 To run the checkers on certificates, give their IDs:

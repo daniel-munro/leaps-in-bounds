@@ -4314,3 +4314,151 @@ samuel-2011:
   notes: "Computes A006245(12) = 2894710651370536, the number of primitive sorting networks on 12 elements, which bounds the arrangements of 12 lines in general position (see oeis-a006245-sorting-networks)."
   added_by: daniel-munro
 
+
+hammersley-1968:
+  string: "J.M. Hammersley, On the enfeeblement of mathematical skills by \"Modern Mathematics\" and by similar soft intellectual trash in schools and universities, Bulletin of the Institute of Mathematics and its Applications 4 (1968) 66-85."
+  date: "1968"
+  notes: "The sofa of area π/2 + 2/π and the upper bound 2√2, as reported by Romik (2016), Section 1.1, and Kallus and Romik (2017), Section 1. Not read directly."
+  added_by: daniel-munro
+
+gerver-1992:
+  string: "J.L. Gerver, On moving a sofa around a corner, Geometriae Dedicata 42 (1992) 267-283."
+  date: "1992-06"
+  doi: "https://doi.org/10.1007/BF02414066"
+  notes: "Gerver's sofa, of area 2.21953166..., as reported by Romik (2016), Section 1.1. Not read directly. Its area has no known closed form (OEIS A128463)."
+  added_by: daniel-munro
+
+romik-2016:
+  string: "D. Romik, Differential equations and exact solutions in the moving sofa problem, Experimental Mathematics 27 (2018) 316-330, arXiv:1606.08111."
+  date: "2016-06-27"
+  url: "https://arxiv.org/abs/1606.08111"
+  doi: "https://doi.org/10.1080/10586458.2016.1270858"
+  added_by: daniel-munro
+
+kallus-romik-2017:
+  string: "Y. Kallus and D. Romik, Improved upper bounds in the moving sofa problem, Advances in Mathematics 340 (2018) 960-982, arXiv:1706.06630."
+  date: "2017-06-21"
+  url: "https://arxiv.org/abs/1706.06630"
+  doi: "https://doi.org/10.1016/j.aim.2018.10.022"
+  notes: "Theorem 1: the moving sofa constant is at most 2.37, by a computer-assisted proof in exact rational arithmetic."
+  added_by: daniel-munro
+
+baek-2024:
+  string: "J. Baek, Optimality of Gerver's sofa, arXiv:2411.19826 (2024)."
+  date: "2024-11-29"
+  url: "https://arxiv.org/abs/2411.19826"
+  notes: "Main theorem: Gerver's sofa attains the maximum area of a moving sofa. Not yet published in a journal as of 2026-11; independent Lean formalizations of the proof appeared in 2026."
+  added_by: daniel-munro
+
+cohn-spherical-codes:
+  string: "H. Cohn, Table of spherical codes, https://spherical-codes.org (retrieved 2026-11-17); archived as MIT DSpace hdl:1721.1/153543 (2024)."
+  date: "2026-11-17"
+  url: "https://spherical-codes.org/"
+  notes: "Best known codes in three dimensions, with the cosine of their least angle, the source credited for each, and which are proved optimal."
+  added_by: daniel-munro
+
+fejes-toth-1943:
+  string: "L. Fejes Tóth, Über die Abschätzung des kürzesten Abstandes zweier Punkte eines auf einer Kugelfläche liegenden Punktsystems, Jahresbericht der Deutschen Mathematiker-Vereinigung 53 (1943) 66-68."
+  date: "1943"
+  notes: "The bound T(N) <= arccos((cot²ω - 1)/2) with ω = πN/(6N - 12), attained for N = 3, 4, 6 and 12, as stated by Musin and Tarasov (musin-tarasov-2014-steklov). The values for each N are computed from this formula. Not read directly."
+  added_by: daniel-munro
+
+schutte-van-der-waerden-1951:
+  string: "K. Schütte and B.L. van der Waerden, Auf welcher Kugel haben 5, 6, 7, 8 oder 9 Punkte mit Mindestabstand Eins Platz?, Mathematische Annalen 123 (1951) 96-124."
+  date: "1951"
+  doi: "https://doi.org/10.1007/BF02054944"
+  notes: "Solves N = 5, 7, 8 and 9, as reported by Musin and Tarasov (2012), Section 1.2, and gives the configurations for N up to 16 credited by Cohn's table of spherical codes. Not read directly."
+  added_by: daniel-munro
+
+van-der-waerden-1952:
+  string: "B.L. van der Waerden, Punkte auf der Kugel. Drei Zusätze, Mathematische Annalen 125 (1952) 213-222."
+  date: "1952"
+  doi: "https://doi.org/10.1007/BF01343118"
+  notes: "The configuration of 20 points credited by Cohn's table of spherical codes. Not read directly."
+  added_by: daniel-munro
+
+robinson-1961:
+  string: "R.M. Robinson, Arrangement of 24 points on a sphere, Mathematische Annalen 144 (1961) 17-48."
+  date: "1961"
+  doi: "https://doi.org/10.1007/BF01396539"
+  notes: "Solves N = 24, as reported by Musin and Tarasov (2012), Section 1.2. Not read directly."
+  added_by: daniel-munro
+
+tarnai-gaspar-1983:
+  string: "T. Tarnai and Zs. Gáspár, Improved packing of equal circles on a sphere and rigidity of its graph, Mathematical Proceedings of the Cambridge Philosophical Society 93 (1983) 191-218."
+  date: "1983-03"
+  doi: "https://doi.org/10.1017/S0305004100060485"
+  notes: "The configurations of 18 and 27 points credited by Cohn's table of spherical codes."
+  added_by: daniel-munro
+
+boroczky-1983:
+  string: "K. Böröczky, The problem of Tammes for n = 11, Studia Scientiarum Mathematicarum Hungarica 18 (1983) 165-171."
+  date: "1983"
+  notes: "Solves N = 11, as reported by Musin and Tarasov (2012), Section 1.2. Not read directly."
+  added_by: daniel-munro
+
+clare-kepert-1986:
+  string: "B.W. Clare and D.L. Kepert, The closest packing of equal circles on a sphere, Proceedings of the Royal Society of London A 405 (1986) 329-344."
+  date: "1986-06-09"
+  doi: "https://doi.org/10.1098/rspa.1986.0056"
+  notes: "The configuration of 30 points credited by Cohn's table of spherical codes."
+  added_by: daniel-munro
+
+danzer-1986:
+  string: "L. Danzer, Finite point-sets on S² with minimum distance as large as possible, Discrete Mathematics 60 (1986) 3-66."
+  date: "1986"
+  doi: "https://doi.org/10.1016/0012-365X(86)90002-6"
+  notes: "Solves N = 10 and 11, from Danzer's Habilitationsschrift (1963), as reported by Musin and Tarasov (2012, 2015); gives the configuration of 17 points credited by Cohn's table of spherical codes. Not read directly."
+  added_by: daniel-munro
+
+kottwitz-1991:
+  string: "D.A. Kottwitz, The densest packing of equal circles on a sphere, Acta Crystallographica A47 (1991) 158-165."
+  date: "1991-05-01"
+  doi: "https://doi.org/10.1107/S0108767390011370"
+  notes: "The configurations of 21, 22, 25, 26, 28 and 29 points credited by Cohn's table of spherical codes. Not read directly."
+  added_by: daniel-munro
+
+tarnai-gaspar-1991:
+  string: "T. Tarnai and Zs. Gáspár, Arrangement of 23 points on a sphere (on a conjecture of R. M. Robinson), Proceedings of the Royal Society of London A 433 (1991) 257-267."
+  date: "1991-05-08"
+  doi: "https://doi.org/10.1098/rspa.1991.0046"
+  notes: "Abstract: a packing of 23 points with least angle 43.709964°."
+  added_by: daniel-munro
+
+boroczky-szabo-2003:
+  string: "K. Böröczky and L. Szabó, Arrangements of 13 points on a sphere, in A. Bezdek (ed.), Discrete Geometry, Marcel Dekker (2003) 111-184; and Arrangements of 14, 15, 16 and 17 points on a sphere, Studia Scientiarum Mathematicarum Hungarica 40 (2003) 407-421."
+  date: "2003"
+  doi: "https://doi.org/10.1556/SScMath.40.2003.4.3"
+  notes: "Upper bounds as tabulated by Bachoc and Vallentin, Table 5.3 (58.8691870° for N = 13 in their text; Musin and Tarasov quote it as 58.7°). Not read directly."
+  added_by: daniel-munro
+
+musin-tarasov-2010:
+  string: "O.R. Musin and A.S. Tarasov, The strong thirteen spheres problem, Discrete & Computational Geometry 48 (2012) 128-141, arXiv:1002.1439."
+  date: "2010-02-07"
+  url: "https://arxiv.org/abs/1002.1439"
+  doi: "https://doi.org/10.1007/s00454-011-9392-2"
+  notes: "Theorem 1: T(13) ≈ 57.1367°, with a unique optimal arrangement. Section 1.2 lists the earlier solved cases and upper bounds for N = 13."
+  added_by: daniel-munro
+
+musin-tarasov-2014:
+  string: "O.R. Musin and A.S. Tarasov, The Tammes problem for N = 14, Experimental Mathematics 24 (2015) 460-468, arXiv:1410.2536."
+  date: "2014-10-09"
+  url: "https://arxiv.org/abs/1410.2536"
+  doi: "https://doi.org/10.1080/10586458.2015.1022842"
+  notes: "Theorem 1: T(14) ≈ 55.67057°, with a unique optimal arrangement. Lists the earlier upper bounds for N = 14."
+  added_by: daniel-munro
+
+musin-tarasov-2014-steklov:
+  string: "O.R. Musin and A.S. Tarasov, Extremal problems of circle packings on a sphere and irreducible contact graphs, Proceedings of the Steklov Institute of Mathematics 288 (2015) 117-131, arXiv:1410.0744."
+  date: "2014-10-03"
+  url: "https://arxiv.org/abs/1410.0744"
+  notes: "States the Fejes Tóth bound (p. 6)."
+  added_by: daniel-munro
+
+tammes-15-2026:
+  string: "mt0-svg, The Tammes problem for fifteen points, Zenodo (2026), doi:10.5281/zenodo.23058956, https://github.com/mt0-svg/tammes-15."
+  date: "2026-09-30"
+  url: "https://github.com/mt0-svg/tammes-15"
+  doi: "https://doi.org/10.5281/zenodo.23058956"
+  notes: "Theorem 1.1: T(15) ≈ 53.65785°, attained by exactly two configurations. A computer-assisted proof (plantri enumeration and interval arithmetic, partly checked in Lean), which says it is AI-generated; not peer reviewed. Cohn's table of spherical codes lists N = 15 as optimal on its strength."
+  added_by: daniel-munro

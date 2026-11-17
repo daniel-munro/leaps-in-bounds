@@ -42,7 +42,7 @@ The certificates and the tools around them:
 - `scripts/verify_certificates.py`: Runs the checkers on certificates' evidence and records those that pass in the manifest. A maintainer runs it before merging new certificates.
 - `scripts/check_certificates.py`: Checks that every certificate is well formed, consistent with the others and the literature, and verified or attested. CI runs it on pull requests, without running the checkers.
 
-Certificates are accepted for every family: Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle and in a square, Schur and weak Schur numbers, multicolor Ramsey numbers for triangles, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, cap sets, the no-three-in-line problem, isosceles sets, the size and depth of sorting networks, the rectilinear crossing number of complete graphs, the chromatic number of Euclidean space, the busy beaver functions, stamp and map folding, covering a disk with disks, and the de Bruijn–Newman constant.
+Certificates are accepted for every family: Ramsey numbers, van der Waerden numbers, cages, the degree-diameter problem, minimal superpermutations, kissing numbers, packing unit squares in a square, packing unit circles in an equilateral triangle and in a square, Schur and weak Schur numbers, multicolor Ramsey numbers for triangles, optimal Golomb rulers, arrangements of lines in the plane, snakes and coils in the hypercube, cap sets, the no-three-in-line problem, isosceles sets, the size and depth of sorting networks, the rectilinear crossing number of complete graphs, the chromatic number of Euclidean space, the busy beaver functions, stamp and map folding, covering a disk with disks, the de Bruijn–Newman constant, the Tammes problem, and the moving sofa constant.
 
 ## Images
 
@@ -119,6 +119,7 @@ Records and surveys for particular families, kept up to date by others:
 - [Dynamic Cage Survey](https://doi.org/10.37236/37) - Geoffrey Exoo and Robert Jajcay's survey of cages.
 - [The Degree Diameter Problem for General Graphs](https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html) - Francesc Comellas's table of the largest known graphs of given degree and diameter.
 - [Packomania](http://www.packomania.com) - Eckard Specht's records for packing circles and spheres in many containers.
+- [Table of Spherical Codes](https://spherical-codes.org) - Henry Cohn's table of the best known spherical codes, including the Tammes problem, with which are proved optimal.
 - [Erich Friedman's Packing Center](https://erich-friedman.github.io/packing/) - Best known packings and coverings of many shapes in many others, with pictures.
 - [The Busy Beaver Challenge](https://bbchallenge.org) - The collaborative project that proved BB(5) = 47,176,870, and works on larger busy beavers.
 - [The No-Three-in-Line Problem](http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html) - Achim Flammenkamp's records and database of configurations.

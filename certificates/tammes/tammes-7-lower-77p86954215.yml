@@ -1,0 +1,18 @@
+constant: tammes-7
+bound: lower
+value: '77.86954215'
+kind: witness
+witness:
+  format: vectors
+  data: |
+    0.196018250595, -0.979217707974, 0.05205310581
+    0.284280349699, 0.913621181464, -0.290656187883
+    -0.764945235282, 0.565888943229, 0.307617442534
+    0.002579284656, -0.161623057865, 0.986849195398
+    -0.769092537575, -0.395253280431, -0.502266376493
+    0.977860258186, -0.00773548232, 0.209115943375
+    0.405104443049, -0.18114218801, -0.89614613649
+submitted_by: daniel-munro
+date: 2026-11-17
+source: schutte-van-der-waerden-1951
+notes: "The best known configuration, found again by a numerical search run by an AI agent (Claude) and polished by local optimization, with its coordinates rounded to 12 decimal places and the angle rounded down to 77.86954215, just below its least angle of about 77.8695421554°."

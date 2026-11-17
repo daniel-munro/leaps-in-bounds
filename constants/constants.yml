@@ -1716,3 +1716,153 @@ debruijn-newman:
   image:
     generated: debruijn-newman.svg
     alt_text: "The real zeros of H_λ(x) for x from 40 to 104 as λ goes from -10 to 1. At λ = 0 they're twice the heights of the zeros of the Riemann zeta function; going down, pairs of them meet and leave the real line. A band marks the current bounds 0 ≤ Λ ≤ 0.2."
+
+moving-sofa:
+  image:
+    generated: moving-sofa.svg
+    alt_text: "Gerver's sofa halfway around the corner of a hallway of width 1, with dashed outlines where it starts in one arm and ends in the other"
+
+tammes-2:
+  image:
+    generated: tammes-2.svg
+    alt_text: "2 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-3:
+  image:
+    generated: tammes-3.svg
+    alt_text: "3 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-4:
+  image:
+    generated: tammes-4.svg
+    alt_text: "4 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-5:
+  image:
+    generated: tammes-5.svg
+    alt_text: "5 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-6:
+  image:
+    generated: tammes-6.svg
+    alt_text: "6 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-7:
+  image:
+    generated: tammes-7.svg
+    alt_text: "7 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-8:
+  image:
+    generated: tammes-8.svg
+    alt_text: "8 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-9:
+  image:
+    generated: tammes-9.svg
+    alt_text: "9 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-10:
+  image:
+    generated: tammes-10.svg
+    alt_text: "10 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-11:
+  image:
+    generated: tammes-11.svg
+    alt_text: "11 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-12:
+  image:
+    generated: tammes-12.svg
+    alt_text: "12 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-13:
+  image:
+    generated: tammes-13.svg
+    alt_text: "13 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-14:
+  image:
+    generated: tammes-14.svg
+    alt_text: "14 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-15:
+  image:
+    generated: tammes-15.svg
+    alt_text: "15 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-16:
+  image:
+    generated: tammes-16.svg
+    alt_text: "16 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-17:
+  image:
+    generated: tammes-17.svg
+    alt_text: "17 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-18:
+  image:
+    generated: tammes-18.svg
+    alt_text: "18 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-19:
+  image:
+    generated: tammes-19.svg
+    alt_text: "19 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-20:
+  image:
+    generated: tammes-20.svg
+    alt_text: "20 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-21:
+  image:
+    generated: tammes-21.svg
+    alt_text: "21 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-22:
+  image:
+    generated: tammes-22.svg
+    alt_text: "22 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-23:
+  image:
+    generated: tammes-23.svg
+    alt_text: "23 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-24:
+  image:
+    generated: tammes-24.svg
+    alt_text: "24 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-25:
+  image:
+    generated: tammes-25.svg
+    alt_text: "25 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-26:
+  image:
+    generated: tammes-26.svg
+    alt_text: "26 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-27:
+  image:
+    generated: tammes-27.svg
+    alt_text: "27 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-28:
+  image:
+    generated: tammes-28.svg
+    alt_text: "28 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-29:
+  image:
+    generated: tammes-29.svg
+    alt_text: "29 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"
+
+tammes-30:
+  image:
+    generated: tammes-30.svg
+    alt_text: "30 points on a sphere with the largest least angle known, and arcs joining the pairs at the least angle; points on the far side are faint"

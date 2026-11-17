@@ -38,6 +38,11 @@
   families:
     - debruijn-newman
 
+- msc: "49Q"
+  name: "Manifolds and measure-geometric topics"
+  families:
+    - moving-sofa
+
 - msc: "51E"
   name: "Finite geometry and special incidence structures"
   families:
@@ -57,6 +62,7 @@
     - no-three-in-line
     - rectilinear-crossing
     - square-packing
+    - tammes
 
 - msc: "68P"
   name: "Theory of data"

@@ -1,0 +1,6 @@
+constant,lower_bound,upper_bound,source,via
+moving-sofa,\frac{\pi}{2}+\frac{2}{\pi},,hammersley-1968,romik-2016
+moving-sofa,,2\sqrt{2},hammersley-1968,romik-2016
+moving-sofa,{\approx}2.21953166887,,gerver-1992,romik-2016
+moving-sofa,,2.37,kallus-romik-2017,
+moving-sofa,,{\approx}2.21953166887,baek-2024,

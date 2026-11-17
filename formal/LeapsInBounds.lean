@@ -14,6 +14,7 @@ public import LeapsInBounds.Statements.Golomb
 public import LeapsInBounds.Statements.IsoscelesSet
 public import LeapsInBounds.Statements.KissingNumber
 public import LeapsInBounds.Statements.LineArrangement
+public import LeapsInBounds.Statements.MovingSofa
 public import LeapsInBounds.Statements.MulticolorRamsey
 public import LeapsInBounds.Statements.NoThreeInLine
 public import LeapsInBounds.Statements.Radical
@@ -24,4 +25,5 @@ public import LeapsInBounds.Statements.SnakeInTheBox
 public import LeapsInBounds.Statements.SortingNetwork
 public import LeapsInBounds.Statements.SquarePacking
 public import LeapsInBounds.Statements.Superpermutation
+public import LeapsInBounds.Statements.Tammes
 public import LeapsInBounds.Statements.VanDerWaerden

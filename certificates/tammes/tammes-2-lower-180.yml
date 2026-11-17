@@ -1,0 +1,12 @@
+constant: tammes-2
+bound: lower
+value: 180
+kind: witness
+witness:
+  format: vectors
+  data: |
+    1, 0, 0
+    -1, 0, 0
+submitted_by: daniel-munro
+date: 2026-11-17
+notes: "Two antipodal points."

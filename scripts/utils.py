@@ -8,7 +8,7 @@ import truststore
 from PIL import Image
 import io
 from sympy.parsing.latex import parse_latex
-from sympy import N
+from sympy import N, Symbol, pi
 from typing import Any, MutableMapping
 
 
@@ -62,7 +62,7 @@ class Value:
                 while latex_str.startswith(symbol):
                     latex_str = latex_str[len(symbol):]
             
-            expr = parse_latex(latex_str)
+            expr = parse_latex(latex_str).subs(Symbol('pi'), pi)  # \pi is read as a symbol
             decimal_approx = float(f"{float(N(expr)):.7g}")  # Keep 7 significant digits
             if decimal_approx == float('inf') or decimal_approx == float('-inf'):
                 return None
