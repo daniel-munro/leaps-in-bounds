@@ -9317,6 +9317,151 @@ stamp-folding-9-lower-4536:
   checker: 188e206ae293886f7c74ee34337f1fae091bed37
   verified_by: daniel-munro
   date: '2026-11-15'
+tammes-10-lower-66p14682198:
+  sha256: b16703d23332046cdb3f2c579d77a60924cbb070e5850827809685d22ee84708
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-11-lower-63p43494882:
+  sha256: a55ad8049fea2f49a00762e04b4100c925ffacc1a429ecaedadefa26ca1b94d3
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-12-lower-63p43494882:
+  sha256: f434dfe409754c5407faa30ba2425460adaaac4cb112ea78d98b90d4129019e0
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-13-lower-57p13670307:
+  sha256: e21f0bb013ff327700e53927ba2aa2f7b22a8e6e13de8ca17d827b0836e7fae0
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-14-lower-55p67056999:
+  sha256: cf6dde9b26c2fca61c0a9479aa074f935f9cce0664fe42bc15a70b07645075da
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-15-lower-53p65785012:
+  sha256: f9940bc5026874107daeaa2f15562d52a604a6c1f359fe38dcbc1c904b1e3997
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-16-lower-52p24439575:
+  sha256: 1a690675fd9bf2198aa76b84cb8f32924c6d0bf0512e465c696ff2cebe1fd337
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-17-lower-51p09032855:
+  sha256: 6b1b6fed9bc1c3dfaff3dc63ca0c3c582448de5fef82685023899615f5d28906
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-18-lower-49p55665476:
+  sha256: 154a9e5eb74670a5b1d6fbe37ce7d5c4b197d8754a07e739d774b5790349d818
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-19-lower-47p69191410:
+  sha256: f9ead32ef9144e7e2af90844fd43079ba4dfdeed86b5164cca818fd0fbe12dd3
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-2-lower-180:
+  sha256: 6afbcabfe38e32e50e74658584dc4ca57a42bea1790f32a000c632aa26a1cd6c
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-20-lower-47p43103622:
+  sha256: 72354d31f375342beeda5a0a9765a11f194be7ff91dbba3ea4403b22eb822782
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-21-lower-45p61322310:
+  sha256: 0a62b526c240859b2f45986d7aaebe1304317fccf4e4fec06479af41e07322fb
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-22-lower-44p74016116:
+  sha256: 05688e46732422749b3487a11c5a8476a1cf0d4b0399a61bea48660378f0f9b6
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-23-lower-43p70996420:
+  sha256: cad627951271edf9f21b271df3dbcc116c48d5dc349e0f0b10850cb1c5952412
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-24-lower-43p69076710:
+  sha256: 0ae86638e7c42e3f4f257558b254ef46a481a644064ec14fb39fa6a4cc8e7d65
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-25-lower-41p63446125:
+  sha256: 3d950ffb871fcc4e236c775f08218478805020c9e5e705ce157600d21a3b4f1d
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-26-lower-41p03766160:
+  sha256: d22ed16c0de6b38ab59b54cf1f304005429cf4a4cb8fd7fcfd3d353ee75c8b5a
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-27-lower-40p67760068:
+  sha256: 2b5808ebe6f9005ed2069ccb76f9194ec41a03606a6f93c0c605765eb0580f47
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-28-lower-39p35514356:
+  sha256: 518863aa593446af9850164f9ce1b25772614714ac558e154bfdb018101cc21e
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-29-lower-38p71365119:
+  sha256: 39a108b2b6d321dfcffcb901e8123e02f7a9f47171a65d9f05a54a2dacaabbde
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-3-lower-120:
+  sha256: 36da57218b79480c70bb1b5433e4757e66f482fcbdf395ffd03d03ace47857bc
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-30-lower-38p59711595:
+  sha256: f3c987f50013a0becf78f1591de1ae196d00112d7d28d15cdb7ec504198b6b68
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-4-lower-109p47122063:
+  sha256: f35721bb75feffb8874c81be51e470d7cca3916daeb30ca76d9b05be163d1eba
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-5-lower-90:
+  sha256: 5f1d3f962f2c891e9747a6b8711d70a4267e3191947657801ea4652b2fe3dbf6
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-6-lower-90:
+  sha256: 84909e4d8b3c0c58625fa099aaf142cd2df89b30d398d761c741569a1ef5acbd
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-7-lower-77p86954215:
+  sha256: fad7e77983d040dd08994a74438529141e0444a8b62257df91a7609733159d38
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-8-lower-74p85849218:
+  sha256: 46deb61f6efd44ddc4507fa91efc5e634250d54f8c56c2c3e681072c5793123a
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
+tammes-9-lower-70p52877936:
+  sha256: c3f0f9b7fcbd267778f8bf93db3d032c1f97f0a488e292643d668e95d66a8413
+  checker: 710f80125d550773b29dfc1c62cf1bd7cfaea49d
+  verified_by: daniel-munro
+  date: '2026-11-17'
 van-der-waerden-2-10-lower-103475:
   sha256: c373b212df21bd6a96c12d23a092d995cbc5a3fc690360cc7bfb3333e2ee0387
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
