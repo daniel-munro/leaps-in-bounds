@@ -4382,6 +4382,31 @@ disk-covering-2-upper-1:
   checker: 188e206ae293886f7c74ee34337f1fae091bed37
   verified_by: daniel-munro
   date: '2026-11-15'
+disk-covering-21-lower-sqrt21over21:
+  sha256: cd6e66075ada7faf5bc3364b4c5e943a407dfbae79168ec19e1a699b417f6d9f
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+disk-covering-22-lower-sqrt22over22:
+  sha256: 3ef178aad5bdbd7c9605c74fa03b080a0da922732c2e037324ce0153cac900a0
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+disk-covering-23-lower-sqrt23over23:
+  sha256: 159c32549fcb0913efec6b778fee093c7956340a75aab18eb8d98494ff164f5e
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+disk-covering-24-lower-sqrt6over12:
+  sha256: f4e273c162571373f2284ad04175f717bb408616126d4dfb60cf7522f1b3b0bc
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+disk-covering-25-lower-1over5:
+  sha256: 7cc980518ddd2d9c09a9bb85b4d3c3934f13002443e9d896b0f0e087c752181f
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
 disk-covering-3-upper-sqrt3over2:
   sha256: 0ca4842c33f171c9fceb6202ddc19a7af919df7e0bc4337fef525d89efa5de05
   checker: f560f07b3b6b4e7ca6699ff8e1b4a20a1804e383
@@ -4932,16 +4957,466 @@ map-folding-2-8-lower-320896:
   checker: 188e206ae293886f7c74ee34337f1fae091bed37
   verified_by: daniel-munro
   date: '2026-11-15'
+map-folding-3-15-lower-100000:
+  sha256: 9dc4afa540c7260641d388346830bfdf630f380a5f53403c12811aef07ff4c5d
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-15-upper-45factorial:
+  sha256: c319ce2dba9128dd8392aae41c343d40d7b0fb336fee3d71a9fc668b9ba66a28
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-16-lower-100000:
+  sha256: a3a7a4ba65f10fc5d6d414245b0bb91d9f362dd1b75998c22f2ff4cebb82a679
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-16-upper-48factorial:
+  sha256: 54f892f99d06c5556340922a0f897327706c24a6d51a518185c018534eee7e9d
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-17-lower-100000:
+  sha256: 963015697cf627f51467354b269d1498fee9a99f5d262fc77ddd942e74e26be4
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-17-upper-51factorial:
+  sha256: 81bf787412f9020299af2043bface02282a616a675eb2ff3588728d6dd8f978a
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-18-lower-100000:
+  sha256: 13b23b5c9d77d597b435c1a73b552704d21ae6be51de6ba7c68620cd688fb610
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-3-18-upper-54factorial:
+  sha256: b64cce35a34f398cf4c250d22d986897e50190d844a0abc849058099196eea62
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
 map-folding-3-3-lower-1368:
   sha256: c40b30de265feb123e15f37ecf657c2a4d44c10a1e9d36c7bc13d73d549fa7ab
   checker: 188e206ae293886f7c74ee34337f1fae091bed37
   verified_by: daniel-munro
   date: '2026-11-15'
+map-folding-4-11-lower-80000:
+  sha256: 38dbd45752646a859e56502ab49fa707a17d9e6b715e577c59697f2a2bcf7615
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-11-upper-44factorial:
+  sha256: a9514ec5386d2b10fd29edef9002c45970ad217cb78bfdfedfa4ca3183a143bb
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-12-lower-80000:
+  sha256: 6f6e4cce601c6f0d703ca944a6380cf60fa35ebb65d724f8096d92a037b161e1
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-12-upper-48factorial:
+  sha256: 32f3852c694ec50119eee8f0c120be93c656ba3836749a4ef31904680fb6e711
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-13-lower-80000:
+  sha256: 8bed5bbe8ad6814ebbd810e41f368907e58e284c8528c57f7cd5f670f4460cb7
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-13-upper-52factorial:
+  sha256: c52afb5274a4001450b9ec1f6d5d1cf1a2429c467edb0c814085f691b6143109
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-14-lower-80000:
+  sha256: 81577862ef85d6384a1231d3c8f02d66529c97701b0b00e64a7a320ce780ec42
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-14-upper-56factorial:
+  sha256: 26d4b3181585937e40e535ccb5ecd41ae1a93872562bef665ce3a4f3241f3474
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-15-lower-60000:
+  sha256: 474135ff19672e0faf76dbaa644965b860aa4eed71124549890461353a812320
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-15-upper-60factorial:
+  sha256: 7c31bdccba261edcaabade4484f7c16c60413cfd26c6285c77b4d6398f2170ee
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-16-lower-60000:
+  sha256: a417c74a90bf95462be7d68e5b05c3905238031606ccf23057398e4ed6f6cd99
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-16-upper-64factorial:
+  sha256: 757ccf07e55411fc698d0c4cccf4e6e629366665144569072fed61b08c0da635
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-17-lower-60000:
+  sha256: 069ffd10441d4b9328c0bd32589b5dcc74e1d7656a69ca8cdab9c47cb08c9c84
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-17-upper-68factorial:
+  sha256: 908b6e97751c3389a515674fd52dcb6cb535b22f7a129de0f3e5714e0f5cc5c3
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-18-lower-60000:
+  sha256: a87e91e7a58116147252389158abc925f2f04a160e4c1e6ffab6df6811c8b089
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-18-upper-72factorial:
+  sha256: 0cd93afa8b9b6c0fff5be2c49940de935b893034e4a7b02f89847233d6409726
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
 map-folding-4-4-lower-300608:
   sha256: dc70b6e803858c22e9e30793f82f0a7bda4dd63a57f60fcdaa5f58ef3372f5dd
   checker: 188e206ae293886f7c74ee34337f1fae091bed37
   verified_by: daniel-munro
   date: '2026-11-15'
+map-folding-4-9-lower-120000:
+  sha256: e0c81a040973fad91c43e774d4a1c1d4c03b0748e29657f166b7f8ff5a6bc4ab
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-4-9-upper-36factorial:
+  sha256: 1573acbf5e6f21d9905e8a44c2090fc239552d7ad53f20dd17494e43443968b5
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-10-lower-100000:
+  sha256: 47db7479eb8f9bcb388dbfd8952d49381de1c21bf7685706fc7ac153b27fda8a
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-10-upper-50factorial:
+  sha256: a7fb5d361625f0d211d3ad29ff8b6c3ab8fab5a1177b9f9c0dea31c27b4eb13d
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-11-lower-80000:
+  sha256: 1a98557aeebc9a722779e81a12b03bcafcccee386dbf7bb98fda3b6e266fa15c
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-11-upper-55factorial:
+  sha256: b6a950974ea99931a10ad999b64f8877235bfeb044bc8f3faa4eed729c7adf42
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-12-lower-80000:
+  sha256: fc2f2862e46a000af984b5dc1114f589d7c2874f129bc0cb597acdb69a32acac
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-12-upper-60factorial:
+  sha256: 128e3b66d233f63ed2e0d2e0e9442c1a220b2ab1fea5c908a2d2822eeb1b5546
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-13-lower-80000:
+  sha256: ad0eaeb35035c8b0ca038b4d7cb816058844fe19cc9120a0e4ba7d667dfca437
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-13-upper-65factorial:
+  sha256: a07320cac435e937690d91f04f54aaa1c8a8054df9de5bb0ce4f8fa0a10836ca
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-14-lower-80000:
+  sha256: b96c7f82d09938483ff5682e751c19ab5df5ab0689688bb34df56f3eac8f6ed7
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-14-upper-70factorial:
+  sha256: fd23c53045d155dbc9d4c477a02490acc9536b69e45d1494c21750c0e5e0b581
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-15-lower-80000:
+  sha256: ae1adc5481e16b52a27acb18836f9c3d5cf281275fe8e4b0bc177cb1e829f837
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-15-upper-75factorial:
+  sha256: c4e07ebf17bd0666c10f010f53a9af096cd5dc4348e21ae48cb128c770c68d0a
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-16-lower-80000:
+  sha256: b71f360ff1c0f203e6c3048fbe47a202c9923eefdf3fff91a7654be6ca67ac26
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-16-upper-80factorial:
+  sha256: 511db9579fe762d57329ff0169d5f84912d89357c33c6e453e92300b5f07489d
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-17-lower-60000:
+  sha256: aa14964cbc84c0fb69bb253212c03960126b8b73ca5afb4456c9732407e4f76c
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-17-upper-85factorial:
+  sha256: cddeef15fbbcc25855978984e9a3ffecfc241b10a6482b42e856da966260b0b2
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-18-lower-60000:
+  sha256: 060f33aa31459090a4eb16a15ebfe1bcace065e1dbebdad5677c77c56e062ef7
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-18-upper-90factorial:
+  sha256: e4b4b20339daa64644551c82d9d550de3bcd18aa6dd903e051ca19dd7b8e254a
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-9-lower-100000:
+  sha256: 56cbbf26afe1db8052de2cf09d91e7793b1e4c9688afdf4390b877e8976d0b52
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-5-9-upper-45factorial:
+  sha256: ebbfd201c58037a7b2c60f52308b9ffcb4888c4f6320fc46d188cdccea36e4c0
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-10-lower-100000:
+  sha256: 41c7a0faae4eeda8bcbbb7d930b9c51d4d00c1108b0cf619033b9cda948cc0cf
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-10-upper-60factorial:
+  sha256: a7cba5ccfee34b341cc1b45ae1ae443d3c18449e1a00dcf124716e21ddd154a9
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-11-lower-100000:
+  sha256: 7e991a2e51eac75f7d80b85ee3c996f70a60fe930f96ff923165080ec11af20c
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-11-upper-66factorial:
+  sha256: 9f2f04dd1f3b3572164e34e33f46a603df2a5672d06690f74b969eb6137cfee8
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-12-lower-100000:
+  sha256: 8d61314e002124e50d8a084b2c14cda026bc41fca4efecd3bc084c6cc3e88ef2
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-12-upper-72factorial:
+  sha256: 1e6f0db303e770886767de9ed2e9aab3529884536f3bc7bdd83c8cc923ae9281
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-13-lower-100000:
+  sha256: 9fa57fa3100c6d1bcb171702eabfa2a94eceaf67c4b5a23610fa75f495da7e7e
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-13-upper-78factorial:
+  sha256: 374c4550095ca8a6d9eac2359bdcf5ded2c3c35a5d4e282d8c0ebfef747ef911
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-14-lower-80000:
+  sha256: bd2796dad9336e97c8b8d3fe895d72f4d4cc4bdb2a7d236fba617beefe752f53
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-14-upper-84factorial:
+  sha256: 291961afe1e7b06175233a98d9437f083fc984c0f815150e9640f371947d9dbf
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-15-lower-80000:
+  sha256: ecdbfce00bd3114933f3604797041fcb5223e639e4fcd009b468c14be83b34de
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-15-upper-90factorial:
+  sha256: 5529cf749c2aeccc2e6a7640f6fddfa694edb6ec2ba6587520d863b5cbd3e5b7
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-16-lower-80000:
+  sha256: a405cd61c3f714d7fdd10e686edfd06bcc5091eceb918f870de5edeae0291203
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-16-upper-96factorial:
+  sha256: 113dd790715cf722a4aaba0af570531d97d026da3529b379905fae18906b3579
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-17-lower-80000:
+  sha256: c822fb8ef6bd2119aa64cc3c7f8a8b164319ed8b9a429f71b0efa8c3741102ba
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-17-upper-102factorial:
+  sha256: 2707c82a449e8057f30630ac97522fb2c421210e66aa1dacf5216bbc6b7bdf24
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-18-lower-80000:
+  sha256: 949a8c804660557acafa9d44a475d7defab3c27f0522284adc66aea547ccfd59
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-18-upper-108factorial:
+  sha256: 124a54229dc407fe479a6f0c554bf009660d9143f20dab369524d6ba45888a20
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-8-lower-100000:
+  sha256: ea3dd7d64bf5d3e5c59abf6eb5547e0df8d0cff56d28ebb897e85cc170f511cd
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-8-upper-48factorial:
+  sha256: 0550a54b58559c9818d28495b2b8eae2d9415c4d8b62899d74ddc9cfcfe85918
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-9-lower-100000:
+  sha256: 46ae0778f9de932a4c22d243f182623fdea7f1ed547bd276193ed4794fed2137
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-6-9-upper-54factorial:
+  sha256: fa8b748ba827e2abe9cda31476162ad8b86b1318180f0344152c003672e75659
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-10-lower-100000:
+  sha256: 53c8c215af4ff52c98a46fc547a056ef018c23ce3cf738c49e4e362bff5333d2
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-10-upper-70factorial:
+  sha256: 96361f5671b02bdce2835d25997c985904819831fb79b183ffeb7df0c034d742
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-11-lower-80000:
+  sha256: 6cda22516cf6f30586e9d1cd6381c9dd109a28208205e6b852c2a0ea1683c429
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-11-upper-77factorial:
+  sha256: 8a56a0bdad2c9624246935535d30649fdef47931cf86584af74304f48da85d4e
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-12-lower-100000:
+  sha256: f442e46186b36e087ab2e52cd4ce0ff1eb9a376b4515b3f79fcf13fecf18f057
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-12-upper-84factorial:
+  sha256: 74b17cc869ca05182667649d6640a4aece9e9e5b2b73f8ac536ec0771bb89035
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-13-lower-100000:
+  sha256: a9b32f11f96119cf9dbd4d7ad274a994a77f6aee71cedd96f574050c7923d4de
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-13-upper-91factorial:
+  sha256: 0f06498888a5fdc4f5816d328c816731c463c36181ac75550459f3922fdb6278
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-14-lower-100000:
+  sha256: 9e15353e6d10f2be2eda845825215882d209ea648ccb91a430f916ceb0bd4a45
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-14-upper-98factorial:
+  sha256: 9d1bcdf61a5a949fb699188e699f1a25c414f8e50f230c7b26189d4d07dda9b5
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-15-lower-80000:
+  sha256: 47d8c1226722fba47ebe64c56f60114182a5302f533782cef0a009b7b217b447
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-15-upper-105factorial:
+  sha256: a70bf6d3bac4b3d7c9776b103aa05096d548243e14dfea32496e1fee5b063eed
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-16-lower-80000:
+  sha256: 1b04a94dab2f28a801bc5ca8de1b87259ac06c3b7907f0a20f1b9a2e2f8c08d8
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-16-upper-112factorial:
+  sha256: f2b76318ee74ac5b0893eaba2350eba55f95ca71a4b9ce8a3a77d03c64b3bbe5
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-17-lower-60000:
+  sha256: 512b6984678c0d6c2a24683365d012dc014d2da65e774fdbf5cf2364a2e5c216
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-17-upper-119factorial:
+  sha256: 1cdeeca42d4b3a32dfd3b0df9ae1c4ad2c9ed3563b5888173cc03944e81ea917
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-18-lower-60000:
+  sha256: 2ae59d023f6d54f110b69db8a175d1e85c6c68bef443fae05a7dfab8aea83bd6
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-18-upper-126factorial:
+  sha256: 887ea12b46bd16166e85262beb758319f499728fc3ae736f84cc2d1c48ded635
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-8-lower-100000:
+  sha256: fe0202726970b8acd5e95f6f1fb6f1015a3ed58cf4a07920808a319b83da7e67
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-8-upper-56factorial:
+  sha256: 9c2dbd55b6e9f169232401edab7ae48473082067a812c655d5b318b8c65c3316
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-9-lower-100000:
+  sha256: f42d7476e67dcd4fb37796c46814731b703e46f45affec918c0f358abefc42c6
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
+map-folding-7-9-upper-63factorial:
+  sha256: dabcc0ce40ee50c8a8d8afcf10974e3d2d18c09d1199b4c996b782bdc345f061
+  checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1
+  verified_by: daniel-munro
+  date: '2026-11-16'
 minimal-superpermutation-1-lower-1:
   sha256: 12f551ea3dd1753b29807474de181f73d2dfe618603269980f13ec51a82c98d0
   checker: 5af057d28c18484643637ed3cb84d61047407389
