@@ -1,0 +1,53 @@
+constant: rectilinear-crossing-42
+bound: upper
+value: 40590
+kind: witness
+witness:
+  format: points
+  data: |
+    3944,5040
+    4522,4555
+    5353,4765
+    4526,4562
+    4795,4911
+    4975,4891
+    4552,4595
+    5559,4700
+    5630,4708
+    6323,4793
+    6518,4783
+    6916,4817
+    7844,4858
+    8461,4889
+    3244,5156
+    3153,5706
+    1802,6781
+    3142,5711
+    2392,6083
+    2134,6359
+    3094,5735
+    1487,7176
+    1328,7318
+    631,7938
+    497,8076
+    127,8413
+    48,8486
+    0,8530
+    3878,4454
+    3372,4372
+    3672,2889
+    3380,4359
+    3766,3288
+    3760,3188
+    3410,4271
+    3594,2603
+    3608,2480
+    3715,1569
+    3713,1387
+    3760,903
+    3832,36
+    3835,0
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best042.asc from Oswin Aichholzer's rectilinear crossing number page, where the page credits it to Henning F. Jensen. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

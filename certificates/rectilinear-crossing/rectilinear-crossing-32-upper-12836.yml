@@ -1,0 +1,43 @@
+constant: rectilinear-crossing-32
+bound: upper
+value: 12836
+kind: witness
+witness:
+  format: points
+  data: |
+    1109,948
+    1156,882
+    1221,923
+    554,430
+    1130,863
+    1546,910
+    1110,940
+    1087,834
+    1182,929
+    1108,970
+    1215,924
+    1286,900
+    813,1161
+    1050,819
+    1325,906
+    1116,966
+    988,767
+    1668,911
+    635,1291
+    1044,816
+    1311,903
+    1108,942
+    881,677
+    1379,917
+    1084,986
+    107,83
+    1666,911
+    90,1667
+    304,235
+    1616,912
+    227,1572
+    0,0
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best032.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

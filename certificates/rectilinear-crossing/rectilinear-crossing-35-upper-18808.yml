@@ -1,0 +1,46 @@
+constant: rectilinear-crossing-35
+bound: upper
+value: 18808
+kind: witness
+witness:
+  format: points
+  data: |
+    808,1846
+    863,1687
+    956,1815
+    813,1845
+    867,1689
+    949,1823
+    838,1954
+    746,1507
+    999,1765
+    836,1946
+    774,1652
+    1120,1780
+    761,2012
+    673,1428
+    1054,1807
+    658,2191
+    341,708
+    1202,1794
+    751,2057
+    491,993
+    1393,1775
+    745,2065
+    645,1354
+    2173,1733
+    703,2119
+    764,1535
+    1561,1768
+    699,2128
+    0,0
+    1873,1751
+    695,2134
+    17,35
+    1133,1777
+    665,2180
+    236,482
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best035.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

@@ -1,0 +1,45 @@
+constant: rectilinear-crossing-34
+bound: upper
+value: 16620
+kind: witness
+witness:
+  format: points
+  data: |
+    838,1527
+    862,1320
+    981,1382
+    845,1290
+    59,88
+    976,1377
+    918,1436
+    837,1198
+    971,1375
+    928,1426
+    884,1357
+    1009,1417
+    926,1429
+    842,1234
+    1037,1414
+    842,1507
+    387,581
+    1024,1415
+    847,1492
+    650,954
+    1082,1410
+    826,1580
+    580,854
+    1182,1404
+    789,1637
+    27,40
+    1610,1414
+    786,1644
+    253,373
+    1215,1408
+    776,1661
+    0,0
+    1392,1410
+    761,1687
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best034.asc from Oswin Aichholzer's rectilinear crossing number page, where the page credits it to Henning F. Jensen. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

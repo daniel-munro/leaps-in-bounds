@@ -1,0 +1,57 @@
+constant: rectilinear-crossing-46
+bound: upper
+value: 59463
+kind: witness
+witness:
+  format: points
+  data: |
+    945935,272429
+    939185,0
+    963762,831774
+    966261,830105
+    964020,831666
+    967566,830266
+    967758,830321
+    967426,830167
+    968971,830626
+    970183,830282
+    968692,830632
+    976178,830471
+    1108289,827630
+    992547,830119
+    2621174,795097
+    1698694,814934
+    955884,834533
+    959561,833340
+    955912,834499
+    954896,837601
+    955728,834774
+    951526,840531
+    951385,840651
+    952326,839961
+    949456,842336
+    948122,843951
+    949981,841702
+    925533,866626
+    897039,895557
+    663602,1132574
+    862874,930246
+    0,1806353
+    962015,826313
+    959504,829605
+    962028,826392
+    959414,824251
+    961968,826240
+    959370,819957
+    959351,818362
+    939446,10485
+    959556,811352
+    959125,808714
+    959824,813002
+    957440,728713
+    956345,687653
+    963359,829908
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best046.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

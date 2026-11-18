@@ -1,0 +1,37 @@
+constant: rectilinear-crossing-26
+bound: upper
+value: 5250
+kind: witness
+witness:
+  format: points
+  data: |
+    202,197
+    182,174
+    228,178
+    177,201
+    190,152
+    246,189
+    181,213
+    147,132
+    269,182
+    174,216
+    189,155
+    301,187
+    165,220
+    84,73
+    333,185
+    162,228
+    26,22
+    352,186
+    155,234
+    130,108
+    404,188
+    35,379
+    62,52
+    356,186
+    140,253
+    0,0
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best026.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

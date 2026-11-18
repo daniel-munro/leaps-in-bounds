@@ -1,0 +1,47 @@
+constant: rectilinear-crossing-36
+bound: upper
+value: 21174
+kind: witness
+witness:
+  format: points
+  data: |
+    4374,3272
+    4300,5727
+    4294,6047
+    4278,6616
+    4273,6806
+    4101,2521
+    4087,2512
+    4075,2503
+    4033,2401
+    3767,2244
+    3739,2238
+    3526,2121
+    2908,1786
+    360,219
+    245,150
+    64,39
+    0,0
+    4407,2383
+    4424,2375
+    4576,2382
+    4742,2282
+    4772,2244
+    4823,2206
+    4961,2093
+    6284,1395
+    6849,1080
+    7055,969
+    7090,950
+    4391,2719
+    4390,2743
+    4389,2754
+    4307,2867
+    4320,3118
+    4339,3169
+    4349,3200
+    4446,2366
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best036.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

@@ -1,0 +1,51 @@
+constant: rectilinear-crossing-40
+bound: upper
+value: 33070
+kind: witness
+witness:
+  format: points
+  data: |
+    3397,12580
+    12562,6645
+    0,0
+    3755,10971
+    3408,12542
+    4358,4532
+    4002,10677
+    12303,6648
+    12502,6643
+    2515,3282
+    1067,1299
+    567,691
+    116,142
+    3437,12427
+    3418,12509
+    252,309
+    3666,11723
+    7667,6371
+    10416,6541
+    12249,6649
+    12088,6654
+    1800,2021
+    1166,1434
+    3716,11276
+    9341,6739
+    3734,11104
+    7715,6385
+    9297,6741
+    2384,2944
+    4319,4508
+    7169,6813
+    7232,6864
+    5556,7495
+    4134,8088
+    4018,10653
+    4055,7805
+    6251,6070
+    4259,5644
+    4256,5689
+    6211,6037
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best040.asc from Oswin Aichholzer's rectilinear crossing number page, where the page credits it to Manfred Scheucher. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

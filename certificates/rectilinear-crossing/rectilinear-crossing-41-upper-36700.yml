@@ -1,0 +1,52 @@
+constant: rectilinear-crossing-41
+bound: upper
+value: 36700
+kind: witness
+witness:
+  format: points
+  data: |
+    1068,997
+    958,866
+    1226,893
+    1081,995
+    1005,779
+    1333,963
+    896,1020
+    959,863
+    1357,956
+    895,1016
+    996,774
+    1499,924
+    905,1103
+    822,708
+    1476,918
+    903,1121
+    686,524
+    1621,942
+    772,1186
+    787,668
+    1596,944
+    779,1175
+    717,551
+    1859,928
+    485,1450
+    591,442
+    1795,926
+    723,1258
+    315,209
+    1929,929
+    711,1268
+    191,90
+    2158,919
+    76,1813
+    90,0
+    2315,913
+    39,1845
+    234,128
+    2389,910
+    0,1879
+    128,34
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best041.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

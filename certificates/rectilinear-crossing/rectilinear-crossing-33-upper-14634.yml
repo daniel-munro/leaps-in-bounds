@@ -1,0 +1,44 @@
+constant: rectilinear-crossing-33
+bound: upper
+value: 14634
+kind: witness
+witness:
+  format: points
+  data: |
+    938,1322
+    1598,1261
+    1050,1236
+    1354,1247
+    277,351
+    1013,1201
+    975,1255
+    927,1118
+    1115,1215
+    916,1271
+    767,975
+    869,1397
+    932,1330
+    75,93
+    1094,1210
+    837,1489
+    788,1010
+    1047,1238
+    796,1610
+    925,1190
+    940,1127
+    912,1260
+    0,0
+    1496,1252
+    607,2017
+    529,644
+    1543,1256
+    674,1868
+    109,135
+    1205,1242
+    625,1976
+    39,49
+    1956,1286
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best033.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

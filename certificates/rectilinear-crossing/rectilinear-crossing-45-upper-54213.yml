@@ -1,0 +1,56 @@
+constant: rectilinear-crossing-45
+bound: upper
+value: 54213
+kind: witness
+witness:
+  format: points
+  data: |
+    1812,2984
+    1932,2830
+    1929,2827
+    1959,2842
+    2446,2880
+    2193,2945
+    2182,2948
+    2326,2910
+    2413,2877
+    2737,2904
+    3601,2900
+    3248,2899
+    2694,2905
+    3459,2900
+    2968,2895
+    1610,3011
+    1674,3165
+    1679,3163
+    1659,3172
+    1439,3487
+    1512,3263
+    1520,3236
+    1465,3410
+    1455,3465
+    1328,3643
+    1265,3743
+    1285,3712
+    1339,3623
+    1283,3715
+    1318,3663
+    1692,2794
+    1499,2762
+    1499,2767
+    1496,2736
+    753,1356
+    1457,2422
+    1467,2437
+    1218,2062
+    796,1437
+    308,528
+    0,0
+    108,187
+    364,622
+    57,98
+    189,330
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best045.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

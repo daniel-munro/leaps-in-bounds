@@ -1,0 +1,39 @@
+constant: rectilinear-crossing-28
+bound: upper
+value: 7234
+kind: witness
+witness:
+  format: points
+  data: |
+    724,2830
+    729,2793
+    738,2827
+    728,2847
+    707,2713
+    750,2804
+    727,2848
+    712,2728
+    747,2801
+    720,2857
+    718,2788
+    765,2815
+    720,2864
+    63,243
+    832,2819
+    717,2893
+    607,2356
+    778,2809
+    707,2937
+    334,1282
+    922,2826
+    702,2967
+    31,119
+    855,2819
+    693,3015
+    0,0
+    2707,2969
+    697,2993
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best028.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

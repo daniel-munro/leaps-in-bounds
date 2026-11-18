@@ -1,0 +1,55 @@
+constant: rectilinear-crossing-44
+bound: upper
+value: 49370
+kind: witness
+witness:
+  format: points
+  data: |
+    82151,139524
+    83123,162119
+    77457,5961
+    77248,0
+    83186,163408
+    83616,162257
+    83199,163377
+    83718,162326
+    83741,162383
+    84578,163339
+    93021,162383
+    84059,163341
+    160328,163013
+    491425,162379
+    488941,162384
+    494672,162376
+    492928,162378
+    81368,166728
+    82224,165200
+    81375,166694
+    81271,168469
+    81359,166813
+    80795,170015
+    80767,170102
+    82131,138964
+    82156,140341
+    80217,172311
+    80506,170918
+    77456,183240
+    71054,209092
+    1266,490144
+    63788,238433
+    0,495242
+    82894,158310
+    82235,161858
+    82897,158383
+    82241,154902
+    82885,158188
+    82292,148753
+    82298,148019
+    77360,3189
+    82329,144561
+    82391,146076
+    81076,169163
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best044.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

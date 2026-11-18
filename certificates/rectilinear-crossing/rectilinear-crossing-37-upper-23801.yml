@@ -1,0 +1,48 @@
+constant: rectilinear-crossing-37
+bound: upper
+value: 23801
+kind: witness
+witness:
+  format: points
+  data: |
+    3217,5509
+    3261,5598
+    3134,5775
+    3158,5661
+    3143,5742
+    3617,5403
+    3143,5744
+    3140,5767
+    3052,5889
+    2995,5981
+    3039,5915
+    3277,5343
+    3101,5305
+    3091,5283
+    2819,6251
+    2789,4636
+    3054,5005
+    2562,4321
+    2454,4168
+    2046,3453
+    0,0
+    1631,2754
+    205,346
+    1924,3251
+    3363,5471
+    3438,5377
+    3436,5375
+    3444,5380
+    2867,6177
+    3542,5433
+    3582,5413
+    3695,5410
+    3664,5410
+    3791,5417
+    3896,5423
+    3682,5409
+    3265,5594
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best037.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

@@ -1,0 +1,50 @@
+constant: rectilinear-crossing-39
+bound: upper
+value: 29715
+kind: witness
+witness:
+  format: points
+  data: |
+    808,3144
+    766,2791
+    1024,2963
+    846,3414
+    872,2862
+    960,3124
+    837,3422
+    764,2816
+    1156,3097
+    720,3554
+    760,2512
+    1116,3105
+    666,3802
+    763,2554
+    1560,3083
+    655,3905
+    869,2860
+    1324,3040
+    691,3686
+    579,2075
+    1504,3085
+    593,4065
+    532,1892
+    1235,3095
+    629,3972
+    283,967
+    1027,2968
+    571,4144
+    0,0
+    1994,3099
+    585,4096
+    379,1287
+    1342,3045
+    579,4119
+    152,540
+    1671,3089
+    566,4161
+    6,21
+    2083,3102
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best039.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

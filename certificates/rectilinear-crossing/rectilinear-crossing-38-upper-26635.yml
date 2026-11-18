@@ -1,0 +1,49 @@
+constant: rectilinear-crossing-38
+bound: upper
+value: 26635
+kind: witness
+witness:
+  format: points
+  data: |
+    843,1539
+    763,1361
+    976,1381
+    999,1386
+    749,1329
+    1009,1389
+    683,1621
+    755,1345
+    1055,1429
+    830,1551
+    744,1303
+    1068,1440
+    827,1553
+    680,1093
+    1115,1419
+    669,1679
+    701,1114
+    1143,1415
+    653,1719
+    645,1060
+    1166,1409
+    521,1974
+    560,979
+    1212,1399
+    609,1853
+    335,559
+    1421,1395
+    464,2074
+    236,395
+    1286,1403
+    496,2022
+    40,68
+    2015,1376
+    646,1739
+    87,149
+    1578,1391
+    457,2086
+    0,0
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best038.asc from Oswin Aichholzer's rectilinear crossing number page, where the page credits it to Henning F. Jensen. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."

@@ -2933,7 +2933,7 @@ aichholzer-crossing-page:
   string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2015-05-26."
   date: "2015-05-26"
   url: "http://www.ist.tugraz.at/aichholzer/research/rp/triangulations/crossing/"
-  notes: "Lower bounds and best known point sets for n <= 100, read from a Wayback Machine capture of 2022-02-14. Point sets for n = 34, 38, 42, 48 and 51 are credited to H.F. Jensen (2005-2009), and for n = 40 to M. Scheucher."
+  notes: "Lower bounds and best known point sets for n <= 100, read from a Wayback Machine capture of 2022-02-14, and the point set files (data/bestNNN.asc) from its captures of the data directory. Point sets for n = 34, 38, 42, 48 and 51 are credited to H.F. Jensen (2005-2009), and for n = 40 to M. Scheucher."
   added_by: daniel-munro
 
 # Multicolor Ramsey numbers for triangles

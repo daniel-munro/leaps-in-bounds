@@ -1,0 +1,54 @@
+constant: rectilinear-crossing-43
+bound: upper
+value: 44826
+kind: witness
+witness:
+  format: points
+  data: |
+    369,642
+    29,51
+    1540,2586
+    1606,2494
+    1614,2499
+    1863,2522
+    1754,2555
+    1808,2536
+    1843,2520
+    2082,2543
+    3046,2597
+    2169,2547
+    2030,2542
+    2217,2550
+    2113,2543
+    1403,2607
+    1450,2714
+    1452,2713
+    1436,2727
+    1152,3160
+    1254,2921
+    1271,2877
+    1207,3037
+    1187,3107
+    1018,3363
+    949,3472
+    974,3433
+    103,184
+    963,3450
+    1011,3376
+    1466,2471
+    1331,2447
+    1330,2453
+    1332,2437
+    883,1610
+    1306,2223
+    1349,2282
+    1149,1996
+    995,1818
+    195,341
+    0,0
+    43,76
+    1686,2561
+submitted_by: daniel-munro
+date: 2026-11-17
+source: aichholzer-crossing-page
+notes: "The point set best043.asc from Oswin Aichholzer's rectilinear crossing number page. An AI agent (Claude Opus 5.5) downloaded it from the Wayback Machine's capture of the page's data directory and copied its points unchanged."
