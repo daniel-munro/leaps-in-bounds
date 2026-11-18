@@ -87,11 +87,11 @@ van-der-waerden:
 
 stamp-folding:
   status: partial
-  reviewed: 2026-11-02
-  sources: [oeis-a000136-stamp-folding]
+  reviewed: 2026-11-17
+  sources: [oeis-a000136-stamp-folding, sainte-lague-1926, touchard-1950, lunnon-1968, koehler-1968, di-francesco-golinelli-guitter-1996]
   gaps:
-  - "Only n up to 29; the OEIS entry extends to n = 45 (#33)."
-  - "No dated primary sources: every row cites the OEIS entry."
+  - "A. Sade, Sur les chevauchements des permutations (Marseille, 1949, published by the author) not found. Touchard 1950 credits it with n = 11 and 12, so it may be the first source for n = 11, and H.W. Becker may have published n up to 10 before 1950."
+  - "n = 25 to 29 are credited to Di Francesco, Golinelli and Guitter 1996, which gives semi-meanders rather than stamp foldings; an earlier source stating them directly may exist."
 
 map-folding:
   status: partial

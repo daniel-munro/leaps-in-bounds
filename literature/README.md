@@ -115,3 +115,12 @@ Read https://github.com/daniel-munro/leaps-in-bounds/blob/main/literature/README
 ```
 
 Agents should cite only sources they have read, at least in the part that states the bound, and give each bound's source, page or theorem in the pull request so that it can be checked. Don't infer a bound that no source states, as a corollary of others, without saying so in the source's `notes`.
+
+### Sources you can't reach
+
+Some publishers serve bot checks, CAPTCHAs or paywalls to automated clients. Don't try to get around them. Ask the person running you for a copy instead:
+
+- In an interactive session, give them the URL and what you need from it, such as "Table 1 of Lunnon 1968: stamp-folding counts and the date received". They can attach the PDF or page.
+- In an unattended run, add a line to `sources-inbox/requests.md` in your clone: the URL, the source's key or citation, and what you need. This folder is ignored by git. The person drops the files they download into the same folder, and the next session reads them from there.
+
+Until the source is read, leave out the bounds that would cite it, and list it as a gap in [`coverage.yml`](coverage.yml), so that the review isn't marked complete without it.

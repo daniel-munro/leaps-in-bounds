@@ -4462,3 +4462,38 @@ tammes-15-2026:
   doi: "https://doi.org/10.5281/zenodo.23058956"
   notes: "Theorem 1.1: T(15) ≈ 53.65785°, attained by exactly two configurations. A computer-assisted proof (plantri enumeration and interval arithmetic, partly checked in Lean), which says it is AI-generated; not peer reviewed. Cohn's table of spherical codes lists N = 15 as optimal on its strength."
   added_by: daniel-munro
+
+sainte-lague-1926:
+  string: "M.A. Sainte-Laguë, Les Réseaux (ou Graphes), Mémorial des Sciences Mathématiques, Fascicule 18, Gauthier-Villars, Paris, 1926, §63, p. 41."
+  date: "1926"
+  url: "https://eudml.org/doc/192551"
+  notes: "Gives the number of foldings of n stamps for n = 1 to 10, of which n = 1 to 6 are correct; its values for n = 7 to 10 (448, 7472, 17676, 41600) are wrong. OEIS A000136 dates it 1923, but the title page of the scan linked from OEIS A002560 says 1926."
+  added_by: daniel-munro
+
+touchard-1950:
+  string: "J. Touchard, Contribution à l'étude du problème des timbres poste, Canadian Journal of Mathematics 2 (1950) 385-398."
+  date: "1950"
+  doi: "https://doi.org/10.4153/CJM-1950-035-6"
+  notes: "Received 1949-06-07. The table on p. 397 gives P_n, the foldings with stamp 1 in the first place, for n = 1 to 12, and p. 385 states that the number of foldings is n P_n. P_n up to n = 10 are credited to H.W. Becker and Touchard, and P_11 and P_12 to A. Sade (Sur les chevauchements des permutations, 1949, published by the author). P_12 = 12196 is wrong: Lunnon 1968 notes that it should be 12198."
+  added_by: daniel-munro
+
+lunnon-1968:
+  string: "W.F. Lunnon, A map-folding problem, Mathematics of Computation 22(101) (1968) 193-199."
+  date: "1968-01"
+  doi: "https://doi.org/10.1090/S0025-5718-1968-0221957-8"
+  notes: "Received 1966-11-02. Table (31) on p. 198 gives G(p), the foldings of a strip of p leaves, for p up to 24, computed twice for p up to 20 and once for 21 to 24, a run during which machine errors are known to have occurred."
+  added_by: daniel-munro
+
+koehler-1968:
+  string: "J.E. Koehler, Folding a strip of stamps, Journal of Combinatorial Theory 5(2) (1968) 135-152."
+  date: "1968-09"
+  doi: "https://doi.org/10.1016/S0021-9800(68)80048-1"
+  notes: "P(N), the foldings with both ends and sides labeled, for N = 1 to 16 (table on p. 151). The annotated scan linked from OEIS A000136 corrects some values in another column, B(N), but none of P(N)."
+  added_by: daniel-munro
+
+di-francesco-golinelli-guitter-1996:
+  string: "P. Di Francesco, O. Golinelli and E. Guitter, Meanders: a direct enumeration approach, Nuclear Physics B 482(3) (1996) 497-535, arXiv:hep-th/9607039."
+  date: "1996-07-04"
+  url: "https://arxiv.org/abs/hep-th/9607039"
+  notes: "Table I in Appendix A gives the numbers of semi-meanders for n = 1 to 29, but not the numbers of stamp foldings. Those are n times the number of semi-meanders (a formula in OEIS A000136), which gives every term of A000136 up to n = 29."
+  added_by: daniel-munro

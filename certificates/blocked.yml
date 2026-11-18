@@ -42,3 +42,15 @@
     Packomania's coordinates for these packings aren't sums of rational
     multiples of square roots, so rounded packings certify slightly weaker
     bounds (#72). Certifying the records needs more general exact arithmetic.
+
+- constants: [stamp-folding-14, stamp-folding-15, stamp-folding-16, stamp-folding-17, stamp-folding-18,
+    stamp-folding-19, stamp-folding-20, stamp-folding-21, stamp-folding-22, stamp-folding-23,
+    stamp-folding-24, stamp-folding-25, stamp-folding-26, stamp-folding-27, stamp-folding-28,
+    stamp-folding-29]
+  bound: lower
+  reason: too-large
+  checked: 2026-11-17
+  detail: >-
+    A witness lists every folding, and n = 13 already takes 288 kB with xz; the
+    count grows by about 3.5 times per stamp, so n = 14 is over the size limit.
+    A lower bound could come instead from a Lean proof that counts the foldings.

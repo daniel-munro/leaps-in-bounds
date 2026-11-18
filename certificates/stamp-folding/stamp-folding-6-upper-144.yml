@@ -1,0 +1,10 @@
+constant: stamp-folding-6
+bound: upper
+value: 144
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.StampFoldingCount
+  theorem: LeapsInBounds.Proofs.StampFoldingCount.upper_six
+submitted_by: daniel-munro
+date: 2026-11-17
+notes: 'Maps each folding to the levels of its stamps, a permutation whose creases on each edge do not cross, and counts those permutations in the kernel (decide +kernel) from a list of all permutations. Proof written by an AI agent (Claude Opus 5.5).'
