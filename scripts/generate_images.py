@@ -162,9 +162,11 @@ def certificates() -> dict[str, dict[str, Any]]:
 
 
 def witness(constant_id: str, bound: str) -> dict[str, Any] | None:
-    """The strongest witness certificate for a bound on a constant, if any."""
+    """The strongest witness certificate for a bound on a constant, if any,
+    leaving out generators, which aren't run to build the site."""
     certs = [c for c in certificates().values()
-             if c["constant"] == constant_id and c["bound"] == bound and c["kind"] == "witness"]
+             if c["constant"] == constant_id and c["bound"] == bound and c["kind"] == "witness"
+             and c["witness"].get("format") != "generator"]
     if not certs:
         return None
     return (max if bound == "lower" else min)(certs, key=lambda c: c["approx"])

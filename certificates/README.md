@@ -51,7 +51,8 @@ lean:
 Leaps in Bounds shows the state of each problem and how it has progressed, rather than archiving data, so a certificate's evidence here is limited to 500 kB: its YAML file and its evidence files together, as stored. CI checks this.
 
 - Witness files can be compressed with gzip or xz, given with the extension `.gz` or `.xz` (such as `file: name.s6.xz`), and the checker decompresses them. Colorings and strings usually shrink by a factor of 10 or more, and graphs by up to half.
-- Larger witnesses can't be verified here, but can still be [attested](#attestations), with a link to the witness instead of a copy:
+- A witness that a short program can produce, however large, can be given as that program: a [generator](#generators).
+- Other larger witnesses can't be verified here, but can still be [attested](#attestations), with a link to the witness instead of a copy:
 
   ```yaml
   witness:
@@ -67,6 +68,24 @@ Leaps in Bounds shows the state of each problem and how it has progressed, rathe
 ### witness
 
 An explicit construction, checked by a verifier for the constant's family in [`scripts/certificates/families/`](../scripts/certificates/families/), one module per family. Witnesses suit bounds that come from a construction, which is how most new lower bounds on extremal quantities are found.
+
+#### Generators
+
+A witness can be given as a Python program that prints it, with `format: generator`:
+
+```yaml
+witness:
+  format: generator
+  file: affine-line-arrangements-10-lower-5000.py   # the program, here
+  output: lines         # the format of the witness it prints
+  output_sha256: 9c1e...   # SHA-256 of what it prints
+```
+
+The checker runs the program, checks that what it printed to standard output has the SHA-256 given, and then checks that as a witness in the format `output`, just as if it were a witness file. Other fields of the witness, such as `symmetries`, apply to the output. This suits witnesses far beyond the [size limit](#size-limit) that come from a short description, such as a seeded random search or a recursive construction. The generator's output is what gets checked, so its correctness doesn't need trusting; but checking the output still has to take a reasonable time, about an hour at most.
+
+The generator runs with the Python and packages in [`requirements.txt`](../requirements.txt), with no input and hash randomization off. It must give the same output every time, so seed any random numbers, and don't depend on the time, the machine or the order of iteration over sets of objects other than strings and numbers. It runs in a sandbox, with no network and able to write only to its own temporary directory, for at most an hour, and it can print at most 200 MB. Running it runs the submission's code, so a maintainer reads a generator before running it to verify it. The checker needs `sandbox-exec` (built into macOS) or [bubblewrap](https://github.com/containers/bubblewrap) (`bwrap`, on Linux) for the sandbox.
+
+To fill in `output_sha256`, run your generator with `PYTHONHASHSEED=0 python your-generator.py | shasum -a 256`, or give 64 zeros for now and check the certificate with `scripts/verify_certificates.py --dry-run`, which reports the hash of the output when it's different.
 
 ### lean
 
@@ -117,7 +136,7 @@ attestation:
 
 The certificate still needs its evidence in the format its family accepts: here if it's within the [size limit](#size-limit), and otherwise as a link, with its hash for a witness or pinned to a commit for a Lean proof. For a Lean proof, the checker is whatever checked the proof against its statement, such as a [Comparator](https://github.com/leanprover/comparator) configuration with the axioms allowed, and the command builds and checks it; a check by someone other than the proof's authors, with a statement written independently of their code, counts for more. If the checker ran on another file, give it as `evidence` and say in `notes` how it corresponds to the witness here, so a maintainer can confirm that they're the same object, which is usually quick. The `checker` and `evidence` links must point to a fixed commit, not a branch, so they can't change later.
 
-Running someone else's checker again doesn't make an attested bound verified, since that's one more attestation. To upgrade one, make it checkable here: a faster checker for its family, a smaller witness for the same bound (within the size limit), or a Lean proof. A new certificate equal to an attested one is accepted for this.
+Running someone else's checker again doesn't make an attested bound verified, since that's one more attestation. To upgrade one, make it checkable here: a faster checker for its family, a smaller witness for the same bound (within the size limit), a generator for its witness, or a Lean proof. A new certificate equal to an attested one is accepted for this.
 
 ### For maintainers
 

@@ -18,8 +18,13 @@ BASE36 = "0123456789abcdefghijklmnopqrstuvwxyz"
 
 
 def read_witness_file(cert: Mapping[str, Any]) -> bytes:
-    """The bytes of a witness file here, decompressed if it ends in .gz or .xz."""
+    """The bytes of a witness file here, decompressed if it ends in .gz or .xz,
+    or the output of a generator witness that has been run (see generator.py)."""
     witness = cert["witness"]
+    if "generated" in witness:
+        return witness["generated"]
+    if witness.get("format") == "generator":
+        raise CertificateError(f"{cert['id']}: the witness is a generator, which has to be run to read it")
     if "file" in witness:
         path = pathlib.Path(cert["path"]).parent / witness["file"]
         data = path.read_bytes()
@@ -32,14 +37,16 @@ def read_witness_file(cert: Mapping[str, Any]) -> bytes:
 
 
 def read_witness_data(cert: Mapping[str, Any]) -> str:
-    """The witness as text: inline data, or a file here, decompressed if it
-    ends in .gz or .xz."""
+    """The witness as text: inline data, a file here, decompressed if it ends
+    in .gz or .xz, or the output of a generator."""
     if "data" in cert["witness"]:
         return cert["witness"]["data"]
     try:
         return read_witness_file(cert).decode("ascii")
     except UnicodeDecodeError:
-        raise CertificateError(f"{cert['id']}: witness file {cert['witness']['file']} isn't ASCII text")
+        witness = cert["witness"]
+        what = "the generator's output" if "generated" in witness else f"witness file {witness['file']}"
+        raise CertificateError(f"{cert['id']}: {what} isn't ASCII text")
 
 
 def decompress(data: bytes, suffix: str, name: str) -> bytes:

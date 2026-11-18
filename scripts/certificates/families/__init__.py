@@ -10,6 +10,7 @@ from typing import Any, Mapping
 
 from ..errors import CertificateError
 from ..family import Family
+from ..generator import generated_certificate
 from . import (
     busy_beaver,
     cage,
@@ -83,4 +84,6 @@ def check_witness(cert: Mapping[str, Any]) -> None:
     family, params = get_family(cert["constant"])
     if family.witness_bound is not None and cert["bound"] != family.witness_bound:
         raise CertificateError(f"Witnesses for {cert['constant']} can only certify {family.witness_bound} bounds")
+    if cert["witness"].get("format") == "generator":
+        cert = generated_certificate(cert)
     family.check_witness(params, cert["bound"], cert["value"], cert)

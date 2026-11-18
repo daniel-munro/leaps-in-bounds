@@ -81,7 +81,8 @@ def check_attestation(attestation: Any, path: Any) -> None:
 
 def check_witness_source(cert: Mapping[str, Any], path: Any) -> None:
     """Check that a witness gives exactly one of inline data, a file here, or
-    (for an attested certificate only) a link to a file elsewhere."""
+    (for an attested certificate only) a link to a file elsewhere, and that a
+    generator witness says what it prints."""
     witness = cert["witness"]
     if not isinstance(witness, dict):
         raise CertificateError(f"{path}: witness must be a mapping")
@@ -99,6 +100,19 @@ def check_witness_source(cert: Mapping[str, Any], path: Any) -> None:
             raise CertificateError(f"{path}: a witness given by url needs the file's sha256 (64 lowercase hex digits)")
     elif "sha256" in witness:
         raise CertificateError(f"{path}: witness sha256 is only for a witness given by url")
+    if "generated" in witness:
+        raise CertificateError(f"{path}: witness generated is only for the checker, which puts a generator's output there")
+    if witness.get("format") == "generator":
+        if "file" not in witness or not str(witness["file"]).endswith(".py"):
+            raise CertificateError(f"{path}: a generator witness needs a file here, a Python program ending in .py")
+        if not isinstance(witness.get("output"), str) or witness["output"] in ("", "generator"):
+            raise CertificateError(f"{path}: a generator witness needs output, the format of the witness it prints")
+        if not SHA256.fullmatch(str(witness.get("output_sha256", ""))):
+            raise CertificateError(
+                f"{path}: a generator witness needs output_sha256, the SHA-256 of what it prints (64 lowercase hex digits)"
+            )
+    elif "output" in witness or "output_sha256" in witness:
+        raise CertificateError(f"{path}: witness output and output_sha256 are only for a generator witness")
 
 
 def check_lean_source(cert: Mapping[str, Any], path: Any) -> None:
