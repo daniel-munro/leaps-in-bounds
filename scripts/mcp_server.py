@@ -198,7 +198,9 @@ def get_family_guide(family: str) -> dict[str, Any]:
     """Get what's needed to write a certificate for a family: its definition, which bound a
     witness can certify, the certificate format for its witnesses and values (from
     certificates/README.md), and the Lean file with the formal statements every
-    certificate is checked against.
+    certificate is checked against. Also when its literature was last reviewed and its known
+    gaps (literature/coverage.yml), and the bounds that can't be certified yet, with why
+    (certificates/blocked.yml).
 
     Args:
         family: the family's ID, such as "ramsey" or "square-packing".
@@ -209,6 +211,11 @@ def get_family_guide(family: str) -> dict[str, Any]:
     spec = FAMILIES[family]
     statement = statement_path(family)
     notes = ROOT / "notes" / f"{family}.md"
+    # BaseLoader keeps dates as strings, so the result serializes as JSON.
+    coverage = yaml.load((ROOT / "literature" / "coverage.yml").read_text(), Loader=yaml.BaseLoader) or {}
+    blocked = yaml.load((ROOT / "certificates" / "blocked.yml").read_text(), Loader=yaml.BaseLoader) or []
+    constants, _ = load_data("constants")
+    constant_ids = {c for c, data in constants.items() if data["family"] == family}
     return {
         "family": family,
         "name": info.get("name"),
@@ -221,6 +228,10 @@ def get_family_guide(family: str) -> dict[str, Any]:
         "statement_path": str(statement.relative_to(ROOT)),
         "statement": statement.read_text() if statement.exists() else None,
         "notes_path": str(notes.relative_to(ROOT)) if notes.exists() else None,
+        "literature_review": coverage.get(family),
+        "blocked": [entry for entry in blocked if any(c in constant_ids for c in entry.get("constants", []))],
+        "blocked_note": "Current bounds that can't be certified yet, and why (certificates/blocked.yml). "
+                        "Skip these unless you can remove the obstacle itself.",
     }
 
 

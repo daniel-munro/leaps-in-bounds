@@ -7,12 +7,13 @@ Leaps in Bounds ([leapsinbounds.org](https://leapsinbounds.org)) tracks the lowe
 1. **A new bound, with a certificate.** Find a construction that beats a current record, or a Lean proof of a bound, and submit it with evidence that a program can check. This is the most valuable contribution. See [certificates/README.md](certificates/README.md).
 2. **A certificate for a known bound.** Many current bounds come from papers and haven't been checked here yet. The construction is often in the paper or its ancillary files. Certifying one is a good first contribution.
 3. **Bounds from the literature.** Add published bounds that are missing, and earlier steps in a constant's history. See [literature/README.md](literature/README.md).
-4. **Search notes.** Whatever you try, record it in [`notes/`](notes/README.md), including searches that found nothing, so the next agent doesn't repeat them.
+4. **Search notes and coverage.** Whatever you try, record it in [`notes/`](notes/README.md), including searches that found nothing, so the next agent doesn't repeat them. After reviewing a family's literature, update its entry in [`literature/coverage.yml`](literature/README.md#coverage), and list bounds you found can't be certified in [`certificates/blocked.yml`](certificates/README.md#blocked-bounds).
 
 ## Choosing a target
 
 - [`open_targets.json`](https://leapsinbounds.org/data/open_targets.json): every constant not yet known exactly, in a family that accepts certificates. For each one it gives the current bounds and their evidence, the gap between them, whether each side can be improved by a witness (an explicit construction) or needs a Lean proof, and the paths to the family's formal statement and search notes. Witness-side improvements are usually the most tractable.
-- [`unverified_bounds.json`](https://leapsinbounds.org/data/unverified_bounds.json): current bounds whose best evidence isn't a verified certificate yet.
+- [`unverified_bounds.json`](https://leapsinbounds.org/data/unverified_bounds.json): current bounds whose best evidence isn't a verified certificate yet. Those that can't be certified yet are marked `blocked`, with the reason, from [`certificates/blocked.yml`](certificates/README.md#blocked-bounds): skip them unless you can remove the obstacle.
+- [`literature/coverage.yml`](literature/README.md#coverage): when each family's literature was last reviewed, from which sources, and its known gaps. Start a literature review from there.
 - The rest of the data is on the [download page](https://leapsinbounds.org/download/).
 
 The same data can be built locally (see [Checking your work](#checking-your-work)), into `data/`.

@@ -134,6 +134,9 @@ for family_id, family_data in families.items():
         elif k == 'external_ids':
             for id_k, id_v in v.items():
                 family_dict[f'id_{id_k}'] = id_v
+        elif k == 'literature_review':
+            family_dict['literature_review_status'] = v['status'] if v else None
+            family_dict['literature_reviewed'] = v['reviewed'] if v else None
         else:
             family_dict[k] = v
     families_list.append(family_dict)
@@ -168,6 +171,9 @@ for row in unverified:
     row_dict = row.copy()
     flatten_value_dict(row_dict, 'value')
     flatten_value_dict(row_dict, 'verified')
+    blocked = row_dict.pop('blocked')
+    for field in ['reason', 'checked', 'detail', 'stale']:
+        row_dict[f'blocked_{field}'] = blocked[field] if blocked else None
     unverified_list.append(row_dict)
 
 unverified_df = pd.DataFrame(unverified_list)

@@ -64,6 +64,31 @@ Check whether a source is already there before adding it, by its arXiv number or
 
 A bound found by computer and posted only in a repository or on Zenodo, rather than in a paper, is still a source if it's public and dated. If it comes with a witness that can be checked here, also consider submitting it as a [certificate](../certificates/README.md), which the site then shows as its verified evidence.
 
+## Coverage
+
+[`coverage.yml`](coverage.yml) records how thoroughly each family's history has been reviewed, so that later reviews can start where the last one stopped instead of searching from scratch:
+
+```yaml
+ramsey:
+  status: partial   # or complete
+  reviewed: 2026-11-15
+  sources: [ejc-ds1-small-ramsey-numbers, radziszowski-2025-slides]
+  gaps:
+  - "Abbott 1965, Giraud 1967 and Irving 1973 lack full references."
+```
+
+- `status`: `complete` if every improvement in the listed sources, up to the review date, is in the history with its original source where it could be found, apart from the listed gaps. Otherwise `partial`.
+- `reviewed`: when the literature was last searched. The next review only needs what appeared after this date, such as new arXiv preprints and new revisions of the listed sources.
+- `sources`: the surveys, tables and databases read through for the review, by their IDs in `sources.yml`.
+- `gaps`: what's known to be missing or doubtful, such as a source that couldn't be found or a date that couldn't be confirmed.
+
+Families that aren't listed haven't been reviewed. When you review a family, update its entry in the same pull request, including the gaps you found, and remove gaps you've filled. Mark a family `complete` only after checking the history against its sources, not just adding to it. To see which families most need a review, build the data and run:
+
+```bash
+python scripts/coverage.py                  # every family, most in need of work first
+python scripts/coverage.py --family ramsey  # one family's sources, gaps and uncertified bounds
+```
+
 ## Credit
 
 Contributions to the literature data are credited on the [contributions page](https://leapsinbounds.org/contributions/#contributors) by the `added_by` field on sources and families (see [constants/README.md](../constants/README.md)): the GitHub account that added them, which is usually whoever opens the pull request. When a maintainer adds sources that a contributor pointed to, such as the sources for the earlier bounds behind a certificate, they're credited to the contributor. It credits the work of finding and recording the data, not the mathematics, which is credited to the sources themselves. When adding many bounds from one survey, the sources you add are what's credited, so it's worth adding the original sources rather than citing only the survey.

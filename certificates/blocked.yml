@@ -1,0 +1,44 @@
+# Current bounds that can't be certified yet, and why, so the same dead ends
+# aren't tried again. See "Blocked bounds" in certificates/README.md.
+#
+# constants: the constants this applies to, for the same bound and reason.
+# bound: lower or upper.
+# reason: unpublished, too-large, needs-format, too-slow or out-of-reach.
+# checked: when it was last looked into. If the bound improves after this
+#   date, the entry is shown as stale, since the new bound may be certifiable.
+# detail: what was checked and what's missing.
+#
+# A search that fell short of a record belongs in notes/<family>.md, not here.
+
+- constants: [kissing-number-17, kissing-number-18, kissing-number-19, kissing-number-20, kissing-number-21]
+  bound: lower
+  reason: needs-format
+  checked: 2026-10-30
+  detail: >-
+    The Cohn-Li records use irrational coordinates, and kissing number
+    witnesses must have integer coordinates up to scaling (#26). Lattice
+    witnesses certify weaker bounds.
+
+- constants: [disk-covering-5, disk-covering-6, disk-covering-8, disk-covering-9, disk-covering-10,
+    disk-covering-11, disk-covering-12, disk-covering-13, disk-covering-14, disk-covering-15,
+    disk-covering-16, disk-covering-17, disk-covering-18, disk-covering-19, disk-covering-20,
+    disk-covering-21, disk-covering-22, disk-covering-23, disk-covering-24, disk-covering-25]
+  bound: upper
+  reason: needs-format
+  checked: 2026-11-16
+  detail: >-
+    Coverings are checked with rational arithmetic, so a witness can only
+    certify a radius slightly above an optimal covering's, not the record
+    itself (#74). Certifying the records needs exact arithmetic for algebraic
+    radii.
+
+- constants: [circle-in-square-10, circle-in-square-11, circle-in-square-13, circle-in-square-17,
+    circle-in-square-19, circle-in-square-21, circle-in-square-22, circle-in-square-31,
+    circle-in-square-33]
+  bound: upper
+  reason: needs-format
+  checked: 2026-11-16
+  detail: >-
+    Packomania's coordinates for these packings aren't sums of rational
+    multiples of square roots, so rounded packings certify slightly weaker
+    bounds (#72). Certifying the records needs more general exact arithmetic.

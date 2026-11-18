@@ -1,0 +1,244 @@
+# How thoroughly each family's history has been reviewed in the literature.
+# See "Coverage" in literature/README.md. Families not listed haven't been reviewed.
+#
+# status: complete (every improvement in the sources below, up to the review
+#   date, is recorded with its original source where it could be found, except
+#   the gaps listed) or partial (otherwise; the gaps say what's missing).
+# reviewed: when the literature was last searched. A later review only needs
+#   what appeared after this date.
+# sources: surveys, tables and databases read through for the review, by their
+#   IDs in sources.yml.
+# gaps: known missing or doubtful parts of the history.
+#
+# Backfilled on 2026-11-17 from the descriptions of pull requests #16 to #82.
+# No earlier pull request claimed a complete history, so every family starts as
+# partial.
+
+ramsey:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [ejc-ds1-small-ramsey-numbers, radziszowski-2025-slides]
+  gaps:
+  - "Table I of all 19 revisions of DS1 compared (#69), but primary sources for early bounds are cited only through DS1: Abbott 1965, Giraud 1967 and Irving 1973 lack full references."
+  - "R(9,14) <= 89203 appears in DS1 revisions 11 to 13 but contradicts later revisions, and was left out (#65)."
+  - "Google Research's improved_bounds repository checked commit by commit (#53); no paper found for its October 2026 bounds."
+
+square-packing:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [ejc-ds7-packing-unit-squares, ejc-ds7-2000, ellsworth-squares-in-squares, ellsworth-squares-in-squares-compared]
+  gaps:
+  - "arXiv:2609.37410 says Nagamochi's 2005 lower-bound proof is incomplete; the nagamochi-2005 rows may need a note (#69)."
+
+busy-beaver-shift:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [michel-busy-beaver, oeis-A060843]
+  gaps:
+  - "Record history for 5 to 7 states from Michel's survey (#69); not checked against primary sources beyond it."
+
+busy-beaver-ones:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [michel-busy-beaver, oeis-A028444]
+  gaps:
+  - "Record history for 5 to 7 states from Michel's survey (#69); not checked against primary sources beyond it."
+
+kissing-number:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [cohn-kissing-numbers]
+  gaps:
+  - "The earlier records 500, 582 and 1606 have no confirmed primary source and cite Ganzhinov (#27)."
+  - "Lower-bound records before the current ones were added only where a paper confirms them (#27)."
+  - "Some Odlyzko-Sloane upper bounds come through later tables (#69)."
+
+degree-diameter:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [comellas-degree-diameter-table, ejc-ds14-degree-diameter]
+  gaps:
+  - "Comellas' table has records newer than the literature data, such as (7,3) 176 and (5,5) 660 (#69)."
+  - "The 20-9 value may be a transcription error; the 2010 paper is paywalled and wasn't checked (#34)."
+  - "Dinneen-Hafner 1994 cells credited to unknown authors were left out (#49)."
+  - "Several primary sources for upper bounds were read only through the Miller-Siran survey (#65)."
+
+cage:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [ejc-ds16-cages, exoo-et-al-2026]
+  gaps:
+  - "Lower bounds from Erdos-Sachs, Hoffman-Singleton, Damerell, Bannai-Ito and Biggs-Ito were taken from the Exoo-Jajcay survey, without reading the primary sources (#65)."
+  - "One of the 35 upper bounds in the survey wasn't added (#65)."
+
+debruijn-newman:
+  status: partial
+  reviewed: 2026-11-16
+  sources: [wikipedia-debruijn-newman]
+  gaps:
+  - "History taken from Wikipedia; no survey read through."
+
+van-der-waerden:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [wikipedia-van-der-waerden]
+  gaps:
+  - "History assembled from Berlekamp, Rabung 1979, Herwig et al., Heule, SAT@Delft, Monroe, Komkov and Rowley (#69), but no single survey covers it; rows were once credited to Rabung-Lotts 2012 or Blankenship 2018 for values known earlier (#33)."
+
+stamp-folding:
+  status: partial
+  reviewed: 2026-11-02
+  sources: [oeis-a000136-stamp-folding]
+  gaps:
+  - "Only n up to 29; the OEIS entry extends to n = 45 (#33)."
+  - "No dated primary sources: every row cites the OEIS entry."
+
+map-folding:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [oeis-a001415-map-folding-2-n, oeis-a001416-map-folding-3-n, oeis-a001418-map-folding-n-n]
+  gaps:
+  - "The 4 x 9 count was left out because the Code Golf SE table's entries disagree (#76)."
+  - "New terms 8 x 8, 2 x 19 and 2 x 20 may be missing (#33)."
+
+disk-covering:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [friedman-circles-covering-circles]
+  gaps:
+  - "No publication found behind the proofs Friedman's page claims for n = 11 to 20; those lower bounds rest only on the page (#33, #69)."
+
+circle-in-equilateral:
+  status: partial
+  reviewed: 2026-11-15
+  sources: [friedman-circles-in-triangles]
+
+circle-in-square:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [packomania-csq, peikert-1994, markot-2021, szabo-specht-2007]
+  gaps:
+  - "Goldberg 1970, Wengerodt, Nurmela-Ostergard and Schwartz not read in full (#72)."
+  - "Finders unknown for n = 11 to 16, 18 and 20; n = 22 to 27 and 29 to 35 may belong to Nurmela-Ostergard 1997 (#72)."
+  - "The proofs for n = 25 and 36 reportedly have gaps (#72)."
+
+minimal-superpermutation:
+  status: partial
+  reviewed: 2026-11-02
+  sources: [egan-superpermutations]
+
+affine-line-arrangements:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [oeis-a241600-lines-on-plane]
+  gaps:
+  - "A241600(8) <= 4,134,940 (Finschi via Forcey) bounds combinatorial types, so it bounds rigid isotopy classes only if the two agree for 8 lines (#41)."
+
+affine-line-arrangements-general-position:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [oeis-a090338-lines-on-plane-general, oeis-a006248-pseudolines]
+
+golomb-ruler:
+  status: partial
+  reviewed: 2026-11-16
+  sources: [shearer-golomb-table]
+  gaps:
+  - "Uncertain years in Shearer's table (\"1967?\", \"1997?\") and the date of OGR-27 (#38)."
+
+schur:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [oeis-a045652-schur]
+  gaps:
+  - "Babcock 1952 or 1953, and Whitehead or Irving for S(5) <= 321, unresolved (#38)."
+
+weak-schur:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [oeis-a072842-weak-schur, ageron-et-al-2021]
+
+snake-in-the-box:
+  status: partial
+  reviewed: 2026-11-14
+  sources: [minortriad-snake, uga-sib-records]
+  gaps:
+  - "Many recent lower bounds are preprints or personal communications from Tom Ace's page (#43)."
+  - "No literature found for the upper bounds that certificates give (#65, #74)."
+
+coil-in-the-box:
+  status: partial
+  reviewed: 2026-11-14
+  sources: [minortriad-snake, uga-sib-records, lukito-2000]
+
+cap-set:
+  status: partial
+  reviewed: 2026-11-05
+  sources: [karapetyan-karapetyan-2026]
+  gaps:
+  - "Hill 1973, Calderbank-Fishburn and Edel-Bierbrauer attributions rest on secondary sources; the publishers blocked reading (#48)."
+
+no-three-in-line:
+  status: partial
+  reviewed: 2026-11-14
+  sources: [flammenkamp-no3in]
+  gaps:
+  - "The Hall et al. 1975 credit for small n may belong to Guy-Kelly 1968 (#48)."
+  - "No literature found for n = 75 and 77 (#65)."
+
+isosceles-set:
+  status: partial
+  reviewed: 2026-11-14
+  sources: [ionin-2009, oeis-a175769-isosceles-set]
+
+sorting-network-size:
+  status: partial
+  reviewed: 2026-11-11
+  sources: [dobbelaere-sorting-networks]
+  gaps:
+  - "Bose-Nelson, Floyd 1964, Batcher 1964, Kautz 1970, Knuth 1973, Juille 1995 and Ehlers 2017 read only through secondary sources (#58)."
+  - "Batcher's 1964 sizes for 17 to 32 inputs left out on purpose (#58)."
+
+sorting-network-depth:
+  status: partial
+  reviewed: 2026-11-11
+  sources: [dobbelaere-sorting-networks, parberry-1991]
+  gaps:
+  - "Depth bounds derived from merging networks for 17 to 24 inputs left out on purpose, and the date of the 64-comparator network for 16 inputs is unknown (#58)."
+
+rectilinear-crossing:
+  status: partial
+  reviewed: 2026-11-12
+  sources: [aichholzer-crossing-page, fabila-monroy-lopez-2014]
+  gaps:
+  - "Guy 1972, Singer 1971 and the Aichholzer 2002 and 2005 papers seen only through citations; crediting Guy alone for n <= 9 is a guess (#60)."
+  - "Some upper bounds have no date (#60)."
+
+multicolor-ramsey-triangle:
+  status: partial
+  reviewed: 2026-11-16
+  sources: [ejc-ds1-small-ramsey-numbers]
+  gaps:
+  - "Chung, Folkman, Sanchez-Flores and FeKR taken from DS1; the papers are paywalled (#63)."
+
+chromatic-number-space:
+  status: partial
+  reviewed: 2026-11-14
+  gaps:
+  - "Several bounds read only from later tables; Voronov's personal-communication bounds left out (#68)."
+  - "Most current bounds are unrefereed 2026 work (#68)."
+
+moving-sofa:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [romik-2016]
+  gaps:
+  - "Hammersley and Gerver not read directly (#79)."
+
+tammes:
+  status: partial
+  reviewed: 2026-11-17
+  sources: [cohn-spherical-codes]
+  gaps:
+  - "The T(19) source couldn't be found (#79)."
+  - "Many sources read only through secondary ones (#79)."

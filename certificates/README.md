@@ -454,6 +454,28 @@ Lean proofs need [elan](https://github.com/leanprover/elan) and Mathlib (`cd for
 python scripts/check_certificates.py --allow-pending --new certificates/<family>/<file>.yml
 ```
 
+## Blocked bounds
+
+[`blocked.yml`](blocked.yml) lists current bounds that can't be certified yet, and why, so that the same dead ends aren't tried again:
+
+```yaml
+- constants: [kissing-number-17, kissing-number-18]
+  bound: lower
+  reason: needs-format
+  checked: 2026-10-30
+  detail: The records use irrational coordinates, and witnesses must have integer coordinates.
+```
+
+The reason is one of:
+
+- `unpublished`: the construction or proof isn't public, or couldn't be found in the paper, its ancillary files or the authors' repositories.
+- `too-large`: the evidence is over the [size limit](#size-limit) even compressed, and there's no stable link to [attest](#attestations) it with.
+- `needs-format`: the family's checker can't read this kind of witness or value yet (see [Known gaps](#known-gaps)). A change to the checker would unblock it, in a pull request of its own.
+- `too-slow`: checking it here takes too long, and no one has attested it.
+- `out-of-reach`: a Lean proof would need formalization or computation beyond what's practical for now.
+
+The bounds are marked with their reason in [`unverified_bounds.json`](https://leapsinbounds.org/data/unverified_bounds.json). If a bound improves after it was `checked`, it's marked as stale, since the new bound may come with a witness. The build warns about entries for bounds that have since been verified, which can be removed. A search that fell short of a record isn't a blocked bound: record it in the [search notes](../notes/README.md) instead.
+
 ## Known gaps
 
 - Values are integers, decimals or sums of rational multiples of square roots for now. Other real values, such as most known square packings and disk coverings, will need more general exact arithmetic (such as nested square roots or roots of polynomials). Disk covering witnesses are checked with rational arithmetic, so they can only certify radii slightly above an optimal covering's, not the optimum itself.
