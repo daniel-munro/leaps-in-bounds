@@ -4,7 +4,8 @@ A witness with `format: generator` is a Python program, kept here as the
 witness file, that prints a witness in one of its family's formats (`output`)
 to standard output. The checker runs it, checks that what it printed has the
 SHA-256 given as `output_sha256`, and then checks the output with the family's
-checker, as if it were a witness file in that format. This allows witnesses
+checker, as if it were a witness file in that format. Output with a different
+hash is still checked, with a warning. This allows witnesses
 far larger than the size limit, when a short program can produce them.
 
 The generator's output is checked, so its correctness doesn't have to be
@@ -68,9 +69,15 @@ def limit_resources() -> None:
     resource.setrlimit(resource.RLIMIT_FSIZE, (GENERATOR_OUTPUT_BYTES + 1, GENERATOR_OUTPUT_BYTES + 1))
 
 
-def run_generator(cert: Mapping[str, Any]) -> bytes:
+def run_generator(cert: Mapping[str, Any]) -> tuple[bytes, list[str]]:
     """Run a certificate's generator in a sandbox, and return what it printed,
-    after checking that it has the SHA-256 the certificate gives."""
+    with a warning if that doesn't have the SHA-256 the certificate gives.
+
+    A different output doesn't make the certificate fail: whatever the
+    generator prints is checked, so if it passes, it proves the bound. But it
+    means something differs from where the hash was computed, such as the
+    version of Python or a package, so the witness checked isn't exactly the
+    one submitted."""
     witness = cert["witness"]
     source = pathlib.Path(cert["path"]).parent / witness["file"]
     with tempfile.TemporaryDirectory() as tmp:
@@ -101,19 +108,22 @@ def run_generator(cert: Mapping[str, Any]) -> bytes:
             raise CertificateError(f"{cert['id']}: the generator failed (exit status {result.returncode}):\n{message}")
         data = output_path.read_bytes()
     digest = hashlib.sha256(data).hexdigest()
+    warnings = []
     if digest != witness["output_sha256"]:
-        raise CertificateError(
-            f"{cert['id']}: the generator's output has SHA-256 {digest}, not the output_sha256 given, "
-            f"{witness['output_sha256']}"
+        warnings.append(
+            f"the generator's output has SHA-256 {digest}, not the output_sha256 given, {witness['output_sha256']}, "
+            "so it printed something different from what was submitted"
         )
-    return data
+    return data, warnings
 
 
-def generated_certificate(cert: Mapping[str, Any]) -> dict[str, Any]:
+def generated_certificate(cert: Mapping[str, Any]) -> tuple[dict[str, Any], list[str]]:
     """A certificate with a generator witness, with the witness replaced by the
-    generator's output, in the format the generator says it prints. Other
-    fields of the witness, such as symmetries, pass on to the output."""
+    generator's output, in the format the generator says it prints, and any
+    warnings from running it. Other fields of the witness, such as symmetries,
+    pass on to the output."""
     witness = cert["witness"]
+    data, warnings = run_generator(cert)
     generated = {key: value for key, value in witness.items() if key not in GENERATOR_FIELDS}
-    generated |= {"format": witness["output"], "generated": run_generator(cert)}
-    return {**cert, "witness": generated}
+    generated |= {"format": witness["output"], "generated": data}
+    return {**cert, "witness": generated}, warnings

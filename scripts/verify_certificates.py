@@ -71,14 +71,15 @@ def base_manifest(base: str) -> dict[str, Any]:
     return manifest
 
 
-def run_witness(cert: Mapping[str, Any]) -> tuple[str, str | None, float]:
+def run_witness(cert: Mapping[str, Any]) -> tuple[str, str | None, list[str], float]:
     start = time.monotonic()
+    warnings: list[str] = []
     try:
-        check_witness(cert)
+        warnings = check_witness(cert)
         error = None
     except CertificateError as e:
         error = str(e)
-    return cert["id"], error, time.monotonic() - start
+    return cert["id"], error, warnings, time.monotonic() - start
 
 
 def main() -> None:
@@ -136,14 +137,17 @@ def main() -> None:
     hashes = {c["id"]: evidence_hash(c) for c in certs}
 
     failed: dict[str, str] = {}
+    warned: dict[str, list[str]] = {}
     with ProcessPoolExecutor(max_workers=args.jobs) as pool:
         futures = [pool.submit(run_witness, c) for c in witnesses]
         for future in as_completed(futures):
-            cert_id, error, seconds = future.result()
-            if error or seconds >= 1 or args.verbose:
+            cert_id, error, cert_warnings, seconds = future.result()
+            if error or cert_warnings or seconds >= 1 or args.verbose:
                 print(f"{'FAILED' if error else 'ok':7} {cert_id} ({seconds:.1f}s)", flush=True)
             if error:
                 failed[cert_id] = error
+            elif cert_warnings:
+                warned[cert_id] = cert_warnings
     if leans:
         start = time.monotonic()
         lean_failed = check_lean(leans)
@@ -166,6 +170,10 @@ def main() -> None:
                 manifest[cert_id] = {"sha256": hashes[cert_id], "checker": commit, "verified_by": verifier, "date": today}
         write_manifest(manifest)
         print(f"Recorded them in {MANIFEST_PATH}")
+    if warned:
+        print("\nPassed, with warnings:")
+        for cert_id, cert_warnings in sorted(warned.items()):
+            print(f"- {cert_id}: " + "\n  ".join(cert_warnings))
     if failed:
         print("\nFailed:")
         for cert_id, error in sorted(failed.items()):

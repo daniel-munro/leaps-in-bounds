@@ -79,11 +79,19 @@ def get_family(constant_id: str) -> tuple[Family, dict[str, int]]:
     raise CertificateError(f"No certificate family supports constant {constant_id}")
 
 
-def check_witness(cert: Mapping[str, Any]) -> None:
-    """Verify a witness certificate's evidence."""
+def check_witness(cert: Mapping[str, Any]) -> list[str]:
+    """Verify a witness certificate's evidence, returning any warnings: things
+    worth knowing that don't make it fail."""
     family, params = get_family(cert["constant"])
     if family.witness_bound is not None and cert["bound"] != family.witness_bound:
         raise CertificateError(f"Witnesses for {cert['constant']} can only certify {family.witness_bound} bounds")
+    warnings: list[str] = []
     if cert["witness"].get("format") == "generator":
-        cert = generated_certificate(cert)
-    family.check_witness(params, cert["bound"], cert["value"], cert)
+        cert, warnings = generated_certificate(cert)
+    try:
+        family.check_witness(params, cert["bound"], cert["value"], cert)
+    except CertificateError as e:
+        # A warning, such as a generator printing something different from
+        # what was submitted, may explain the failure
+        raise CertificateError("".join([str(e), *(f"\n  Also: {w}" for w in warnings)]))
+    return warnings
