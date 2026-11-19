@@ -2057,7 +2057,7 @@ whitehead-1973:
   string: "E.G. Whitehead, The Ramsey number N(3,3,3,3;2), Discrete Mathematics 4 (1973) 389-396."
   date: "1973-04"
   doi: "https://doi.org/10.1016/0012-365X(73)90174-X"
-  notes: "Not read directly (ScienceDirect blocks automated access). Fettes, Kramer and Radziszowski (Ars Combin. 72, 2004, p. 5 and Table 2) credit it with 50 <= R_4(3) <= 65, the upper bound appearing here first, with part of the proof credited to J. Folkman. DS1 revision 1 (1994) credits it with R_5(3) <= 322 [Wh, Ea1], which is 5(65 - 1) + 2. Credited with S(5) <= 321 in https://doi.org/10.37236/1188, and R.W. Irving (Acta Arithmetica 25, 1973, p. 55) attributes to it S(k) <= floor(k!(e - 1/24)), whose values for k = 6 to 9 (1927, 13490, 107921, 971290) are evaluated here."
+  notes: "Received 1972-02-14 (original version 1971-09-07). Theorem 1.2 (p. 390) gives R_4(3) >= 50 from a partition of Z/7 x Z/7 found by H. Taylor, and Theorem 2.3 gives R_4(3) <= 65, called 'Folkman's Theorem' (p. 396): the proof follows Folkman's posthumous notes, with the full version in Whitehead's 1971 USC dissertation. P. 396 adds the corollary R_5(3) <= 322, which gives S(5) <= 320 by S(k) <= R_k(3) - 2 (not stated). The paper says nothing about Schur numbers: Exoo (https://doi.org/10.37236/1188) credits it with S(5) <= 321, and Irving (Acta Arithmetica 25, 1973, p. 55) attributes S(k) <= floor(k!(e - 1/24)) to Whitehead, probably to the dissertation, so those bounds are credited to irving-1973-schur here."
   added_by: daniel-munro
 
 wan-1997:
@@ -2078,6 +2078,7 @@ fredricksen-1979:
   string: "H. Fredricksen, Schur numbers and the Ramsey numbers N(3,3,...,3;2), Journal of Combinatorial Theory, Series A 27 (1979) 376-377."
   date: "1979-11"
   doi: "https://doi.org/10.1016/0097-3165(79)90028-1"
+  notes: "Received 1978-03-28. Lists a partition of 1-157 into five sum-free sets, so S(5) >= 157, and states N(3,3,3,3,3;2) > 158, i.e. R_5(3) >= 159. It says this improves earlier lower bounds, citing H. Fredricksen, Five sum-free sets, Proc. 6th Southeastern Conf. on Combinatorics, Graph Theory and Computing (1975) 309-314, which wasn't found."
   added_by: daniel-munro
 
 exoo-1994:
@@ -3261,14 +3262,14 @@ chung-1973:
   string: "F.R.K. Chung, On the Ramsey numbers N(3,3,...,3;2), Discrete Mathematics 5 (1973) 317-321."
   date: "1973-08"
   doi: "https://doi.org/10.1016/0012-365X(73)90125-8"
-  notes: "[Chu1] in https://doi.org/10.37236/21, which warns of a typo in the displayed coloring for R_4(3) >= 51 (the construction itself is correct)."
+  notes: "Received 1972-07-05 (original version 1972-04-18). Section 2 gives R_4(3) >= 51 by a 4-coloring of K_50 built from a 3-coloring of K_16, found independently by G. Porter (footnote, p. 318); https://doi.org/10.37236/21 warns of a typo in the displayed matrix (the construction is correct). Section 3 proves f(k+1) >= 3f(k) + f(k-2) for f(k) = R_k(3) - 1, but states no bound for k >= 5 (it implies R_5(3) >= 156). P. 317 notes that Whitehead had proved R_4(3) >= 50."
   added_by: daniel-munro
 
 folkman-1974:
   string: "J. Folkman, Notes on the Ramsey number N(3,3,3,3), Journal of Combinatorial Theory, Series A 16 (1974) 371-379."
   date: "1974-05"
   doi: "https://doi.org/10.1016/0097-3165(74)90060-0"
-  notes: "[Fol] in https://doi.org/10.37236/21, which credits it with R_4(3) <= 65. Published posthumously; Fettes, Kramer and Radziszowski (Ars Combin. 72, 2004, p. 5) say the bound appeared first in Whitehead 1973, who credits part of the proof to Folkman, so the bound is credited to whitehead-1973 here."
+  notes: "[Fol] in https://doi.org/10.37236/21, which credits it with R_4(3) <= 65. Published posthumously (Folkman died in 1969). Whitehead 1973 (p. 391, 396) proves the same bound by following these notes, calling it 'Folkman's Theorem', so the bound is credited to whitehead-1973, its first appearance."
   added_by: daniel-munro
 
 sanchez-flores-1995:
@@ -4554,7 +4555,15 @@ irving-1973-schur:
   string: "R.W. Irving, An extension of Schur's theorem on sum-free partitions, Acta Arithmetica 25 (1973) 55-64."
   date: "1973"
   doi: "https://doi.org/10.4064/aa-25-1-55-64"
-  notes: "Credited with S(k) <= floor(k!(e - 1/24)) in arXiv:1711.08076 (Heule) and arXiv:2507.21656, though the paper itself (p. 55) attributes that bound to Whitehead. Theorem 2 with r = 2 gives WS(k) <= floor(k!(2k+1)e/2 + 1); the values for k = 3 to 9 used in weak-schur are evaluated from it here, not stated in the paper. Received 1972-07-06."
+  notes: "Received 1972-07-06. States S(k) <= floor(k!(e - 1/24)) (p. 55), attributing it to Whitehead; Whitehead's 1973 paper in Discrete Mathematics doesn't state it, so the source may be his 1971 dissertation, which wasn't found. The values 321, 1927, 13490, 107921 and 971290 for k = 5 to 9 are evaluated here. Theorem 2 with r = 2 gives WS(k) <= floor(k!(2k+1)e/2 + 1); the values for k = 3 to 9 used in weak-schur are evaluated from it here, not stated in the paper. Heule (arXiv:1711.08076) also credits the S(k) bound to Irving."
+  added_by: daniel-munro
+
+abbott-hanson-1972:
+  string: "H.L. Abbott and D. Hanson, A problem of Schur and its generalizations, Acta Arithmetica 20 (1972) 175-187."
+  date: "1972"
+  doi: "https://doi.org/10.4064/aa-20-2-175-187"
+  url: "http://matwbn.icm.edu.pl/ksiazki/aa/aa20/aa2028.pdf"
+  notes: "Received 1971-01-02. States S(n) <= [n! e] - 1 as (1.5), derived on p. 181 from Greenwood and Gleason's R_n(3) <= [n! e] + 1 and R_n(3) >= S(n) + 2; this is 1 better than Schur's own floor(n! e), and the values 64, 325, 1956, 13699, 109600 and 986409 for n = 4 to 9 are evaluated here. Corollary 2.1 (p. 180) gives S(n + m) >= (2S(m) + 1)S(n) + S(m), hence S(n + 4) >= 89 S(n) + 44, but the paper states no numeric bound for n >= 5. P. 175 credits S(4) = 44 to an unpublished 1961 computation by L.D. Baumert."
   added_by: daniel-munro
 
 eliahou-revuelta-2020:

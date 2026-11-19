@@ -169,15 +169,15 @@ golomb-ruler:
   - "The lower bounds 560 and 605 for 29 and 30 marks are Lemma 1 of Atkinson and Hassenklover evaluated at t = 3 and t = 4, not stated there. Monotonicity (Dimitromanolakis 2002, p. 8) with OGR-28 would give G(29) >= 586 and G(30) >= 587, but no source states them. LP lower bounds (Hansen, Jaumard and Meyer; Meyer and Jaumard 2006) weren't checked."
 
 schur:
-  status: partial
+  status: complete
   reviewed: 2026-11-19
-  sources: [oeis-a045652-schur, schur-1916, exoo-1994, fredricksen-sweet-2000, heule-2017-schur, ageron-et-al-2021, eliahou-2016-schur, fettes-kramer-radziszowski-2004]
+  sources: [oeis-a045652-schur, schur-1916, abbott-hanson-1972, whitehead-1973, irving-1973-schur, fredricksen-1979, exoo-1994, fredricksen-sweet-2000, heule-2017-schur, ageron-et-al-2021, eliahou-2016-schur, fettes-kramer-radziszowski-2004]
   gaps:
-  - "Whitehead 1973 (Discrete Math. 4, 389-396) wasn't read (ScienceDirect blocked); S(5) <= 321 and the S(6..9) bounds floor(k!(e - 1/24)) are credited to it from Exoo 1994 and Irving 1973 (p. 55), though Heule 2017 credits Irving."
-  - "Abbott and Hanson 1972 (Acta Arith. 20, 175-187) and Fredricksen 1979 (JCTA 27, 376-377) weren't read (publisher sites blocked). Their recursions imply lower bounds such as S(5) >= 133, S(6) >= 400 or 472 and S(8) >= 3960 before 1994; none is recorded unless a source states it."
+  - "Irving 1973 attributes S(k) <= floor(k!(e - 1/24)) to Whitehead, but Whitehead's 1973 paper doesn't state it (it gives R_5(3) <= 322); his 1971 USC dissertation, which may, wasn't found, so the bound is credited to Irving."
+  - "Fredricksen 1979 says S(5) >= 157 improves earlier lower bounds, citing his 'Five sum-free sets' (Proc. 6th Southeastern Conf., 1975, 309-314), which wasn't found; an S(5) bound between 121 and 157 may be missing."
   - "Wan 1997 was read only through its zbMATH summary; its S(6..9) bounds are evaluated from the stated formulas, and the summary leaves unclear whether S_n is the largest n or one more."
-  - "Schur's footnote (p. 117) claims without proof that S(4) > 40; it isn't recorded. Baumert's 1961 JPL report with S(4) = 44 wasn't found, so the bound is dated by Golomb and Baumert 1965."
-  - "S(5) <= 315 and 305, and the S(6..9) upper bounds from Fettes, Kramer and Radziszowski, follow from bounds on R_k(3) by S(k) <= R_k(3) - 2 and are credited to the Ramsey papers. Bounds on S(6..9) implied the same way by R_4(3) <= 64, such as S(6) <= 1896, aren't recorded because no source states them."
+  - "Schur's footnote (p. 117) claims without proof that S(4) > 40; it isn't recorded. Baumert's 1961 computation of S(4) = 44 is unpublished (Abbott and Hanson 1972), so the bound is dated by Golomb and Baumert 1965, which was read only through later citations."
+  - "Upper bounds on S(k) from bounds on R_k(3) by S(k) <= R_k(3) - 2 are recorded only where a source states the Ramsey bound or the Schur bound; S(6) <= 1896 from R_6(3) <= 1898, for example, isn't recorded."
 
 weak-schur:
   status: complete
@@ -250,12 +250,12 @@ rectilinear-crossing:
   - "Some upper bounds have no date (#60)."
 
 multicolor-ramsey-triangle:
-  status: partial
+  status: complete
   reviewed: 2026-11-19
-  sources: [ejc-ds1-small-ramsey-numbers, ejc-ds1-r1-small-ramsey-numbers, ejc-ds1-r2-small-ramsey-numbers, ejc-ds1-r6-small-ramsey-numbers, ejc-ds1-r7-small-ramsey-numbers, fettes-kramer-radziszowski-2004, exoo-1994, fredricksen-sweet-2000]
+  sources: [ejc-ds1-small-ramsey-numbers, ejc-ds1-r1-small-ramsey-numbers, ejc-ds1-r2-small-ramsey-numbers, ejc-ds1-r6-small-ramsey-numbers, ejc-ds1-r7-small-ramsey-numbers, fettes-kramer-radziszowski-2004, whitehead-1973, chung-1973, fredricksen-1979, exoo-1994, fredricksen-sweet-2000]
   gaps:
-  - "Whitehead 1973, Chung 1973, Folkman 1974 and Fredricksen 1979 (Elsevier open archive, blocked to automated access) weren't read; their bounds are taken from Fettes, Kramer and Radziszowski 2004 (Table 2) and DS1. Chung's recurrence and Fredricksen's S(5) >= 157 may have given R_5(3) and R_6(3) lower bounds before Exoo 1994 that aren't recorded."
-  - "Sánchez-Flores 1995 and Wan 1997 were read only through their zbMATH reviews."
+  - "Folkman 1974 wasn't read; Whitehead 1973 proves the same R_4(3) <= 65 from Folkman's notes. Golomb and Baumert 1965 (R_4(3) >= 46, via S(4) = 44), Sánchez-Flores 1995 and Wan 1997 were read only through Fettes-Kramer-Radziszowski 2004 and zbMATH reviews."
+  - "Chung's recurrence R_{k+1}(3) >= 3R_k(3) + R_{k-2}(3) - 3 implies R_5(3) >= 156 (1973) and, with Fredricksen 1979, R_6(3) >= 491 before Exoo's 500, but no source states them, so they aren't recorded."
   - "R_4(3) <= 62 was claimed in Kramer's unpublished 1994 manuscript and announced in DS1 revision 7 (2000-07-25), but is dated by the 2004 journal paper. Xu, Xie and Chen 2002 (Mathematics in Economics 19, in Chinese, not found) give R_k(3) <= k!(e - 1/6) + 1, the same values as the FeKR-derived bounds for k = 5 to 9."
   - "The 2026 Schur preprints imply R_8(3) >= 5364, 5374 and 5384 by R_k(3) >= S(k) + 2, but no source states them, so they aren't recorded."
 
