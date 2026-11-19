@@ -4318,14 +4318,14 @@ samuel-2011:
 hammersley-1968:
   string: "J.M. Hammersley, On the enfeeblement of mathematical skills by \"Modern Mathematics\" and by similar soft intellectual trash in schools and universities, Bulletin of the Institute of Mathematics and its Applications 4 (1968) 66-85."
   date: "1968"
-  notes: "The sofa of area π/2 + 2/π and the upper bound 2√2, as reported by Romik (2016), Section 1.1, and Kallus and Romik (2017), Section 1. Not read directly."
+  notes: "The sofa of area π/2 + 2/π (p. 84) and the upper bound 2√2, as reported by Wagner (1976), p. 188, Romik (2016), Section 1.1, and Kallus and Romik (2017), Section 1. Not read directly. Wagner says the proof of 2√2 appeared as an editorial commentary in the same bulletin, vol. 5 (1969) 80-81."
   added_by: daniel-munro
 
 gerver-1992:
   string: "J.L. Gerver, On moving a sofa around a corner, Geometriae Dedicata 42 (1992) 267-283."
   date: "1992-06"
   doi: "https://doi.org/10.1007/BF02414066"
-  notes: "Gerver's sofa, of area 2.21953166..., as reported by Romik (2016), Section 1.1. Not read directly. Its area has no known closed form (OEIS A128463)."
+  notes: "Gerver's sofa, of area 2.21953166..., as reported by Romik (2016), Section 1.1, and Kallus and Romik (2017), Section 1. Not read directly. Its area has no known closed form; the further digits are from OEIS A128463."
   added_by: daniel-munro
 
 romik-2016:
@@ -4333,6 +4333,14 @@ romik-2016:
   date: "2016-06-27"
   url: "https://arxiv.org/abs/1606.08111"
   doi: "https://doi.org/10.1080/10586458.2016.1270858"
+  added_by: daniel-munro
+
+wagner-1976:
+  string: "N.R. Wagner, The sofa problem, American Mathematical Monthly 83 (1976) 188-189."
+  date: "1976-03"
+  doi: "https://doi.org/10.2307/2977022"
+  url: "https://web.archive.org/web/20150420160001/http://www.cs.utsa.edu/~wagner/pubs/corner/corner_final.pdf"
+  notes: "History of the problem, p. 188: Hammersley's lower bound π/2 + 2/π (citing Hammersley 1968, p. 84) and his upper bound 2√2, 'given by Hammersley in 1968, with a proof appearing as \"Editorial commentary\" in 1969' (Bull. Inst. Math. Appl. 5 (1969) 80-81)."
   added_by: daniel-munro
 
 kallus-romik-2017:
@@ -4347,7 +4355,7 @@ baek-2024:
   string: "J. Baek, Optimality of Gerver's sofa, arXiv:2411.19826 (2024)."
   date: "2024-11-29"
   url: "https://arxiv.org/abs/2411.19826"
-  notes: "Main theorem: Gerver's sofa attains the maximum area of a moving sofa. Not yet published in a journal as of 2026-11; independent Lean formalizations of the proof appeared in 2026."
+  notes: "Theorem 1.1.1: Gerver's sofa attains the maximum area of a moving sofa, so the moving sofa constant equals Gerver's constant. Not yet published in a journal as of 2026-11 (arXiv v1 only); independent Lean formalizations of the proof appeared in 2026."
   added_by: daniel-munro
 
 cohn-spherical-codes:
