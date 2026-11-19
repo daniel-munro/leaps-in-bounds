@@ -1454,9 +1454,12 @@ melissen-1994a:
   doi: "https://doi.org/10.1007/bf01876040"
   added_by: daniel-munro
 
-melissen-1994b:
-  string: "Melissen in 1994"
-  date: "1994"
+graham-lubachevsky-1995:
+  string: "R. L. Graham, B. D. Lubachevsky, Dense packings of equal disks in an equilateral triangle: from 22 to 34 and beyond, Electronic Journal of Combinatorics 2 (1995) #A1, arXiv:math/0406252."
+  date: "1995"
+  url: "https://arxiv.org/abs/math/0406252"
+  doi: "https://doi.org/10.37236/1223"
+  notes: "Introduction: Oler (1961) proved the triangular-number cases; the only other n with known optimal packings were 2, 4, 5, 7, 8, 9, 11 and 12, citing Melissen (1993, 1994). Gives conjectured packings for 22 to 34 circles, beyond this site's range."
   added_by: daniel-munro
 
 payan-1997:
