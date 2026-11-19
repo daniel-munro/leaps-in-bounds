@@ -57,5 +57,10 @@ golomb-ruler-28,,585,atkinson-hassenklover-1984,shearer-golomb-table
 golomb-ruler-28,585,,distributed-net-ogr-28,wikipedia-golomb-ruler
 golomb-ruler-29,,623,atkinson-hassenklover-1984,shearer-golomb-table
 golomb-ruler-30,,680,atkinson-hassenklover-1984,shearer-golomb-table
-golomb-ruler-29,533,,dimitromanolakis-2002,
-golomb-ruler-30,575,,dimitromanolakis-2002,
+golomb-ruler-9,,45,babcock-1953,
+golomb-ruler-10,,61,babcock-1953,
+golomb-ruler-13,,111,golomb-1972,
+golomb-ruler-15,,155,atkinson-hassenklover-1984,
+golomb-ruler-16,,179,atkinson-hassenklover-1984,
+golomb-ruler-29,560,,atkinson-hassenklover-1984,
+golomb-ruler-30,605,,atkinson-hassenklover-1984,

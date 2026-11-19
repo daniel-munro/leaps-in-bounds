@@ -4,7 +4,7 @@ multicolor-ramsey-triangle-3,,17,greenwood-gleason-1955,ejc-ds1-small-ramsey-num
 multicolor-ramsey-triangle-4,42,,greenwood-gleason-1955,
 multicolor-ramsey-triangle-4,51,,chung-1973,ejc-ds1-small-ramsey-numbers
 multicolor-ramsey-triangle-4,,66,greenwood-gleason-1955,ejc-ds1-small-ramsey-numbers
-multicolor-ramsey-triangle-4,,65,folkman-1974,ejc-ds1-small-ramsey-numbers
+multicolor-ramsey-triangle-4,,65,whitehead-1973,fettes-kramer-radziszowski-2004
 multicolor-ramsey-triangle-4,,64,sanchez-flores-1995,ejc-ds1-small-ramsey-numbers
 multicolor-ramsey-triangle-4,,62,fettes-kramer-radziszowski-2004,ejc-ds1-small-ramsey-numbers
 multicolor-ramsey-triangle-5,162,,exoo-1994,ejc-ds1-small-ramsey-numbers
@@ -27,3 +27,11 @@ multicolor-ramsey-triangle-6,540,,mckenna-2026,
 multicolor-ramsey-triangle-9,17696,,rowley-2019,
 multicolor-ramsey-triangle-8,,102882,fettes-kramer-radziszowski-2004,ejc-ds1-small-ramsey-numbers
 multicolor-ramsey-triangle-9,,925931,fettes-kramer-radziszowski-2004,ejc-ds1-small-ramsey-numbers
+multicolor-ramsey-triangle-4,46,,golomb-baumert-1965,fettes-kramer-radziszowski-2004
+multicolor-ramsey-triangle-4,50,,whitehead-1973,fettes-kramer-radziszowski-2004
+multicolor-ramsey-triangle-5,,322,whitehead-1973,ejc-ds1-r1-small-ramsey-numbers
+multicolor-ramsey-triangle-5,,317,sanchez-flores-1995,ejc-ds1-r2-small-ramsey-numbers
+multicolor-ramsey-triangle-6,,1898,sanchez-flores-1995,ejc-ds1-r6-small-ramsey-numbers
+multicolor-ramsey-triangle-7,,13484,wan-1997,
+multicolor-ramsey-triangle-8,,107865,wan-1997,
+multicolor-ramsey-triangle-9,,970778,wan-1997,
