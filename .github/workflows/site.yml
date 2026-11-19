@@ -1,9 +1,12 @@
 name: Site
 
+# Builds the site on every pull request, as a check. On a push to main it
+# also publishes the built site to GitHub Pages (leapsinbounds.org).
 on:
   pull_request:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -30,3 +33,28 @@ jobs:
       # Lean proofs are checked in the Certificates workflow
       - name: Process data and build site
         run: sh scripts/build.sh
+
+      - name: Upload site for Pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Don't cancel a deploy partway; a newer push waits for it instead.
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
