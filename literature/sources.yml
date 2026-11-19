@@ -4325,7 +4325,7 @@ gerver-1992:
   string: "J.L. Gerver, On moving a sofa around a corner, Geometriae Dedicata 42 (1992) 267-283."
   date: "1992-06"
   doi: "https://doi.org/10.1007/BF02414066"
-  notes: "Gerver's sofa, of area 2.21953166..., as reported by Romik (2016), Section 1.1, and Kallus and Romik (2017), Section 1. Not read directly. Its area has no known closed form; the further digits are from OEIS A128463."
+  notes: "Received 1991-01-09. Abstract and p. 268: a sofa of area 2.2195... (Theorem 2), conjectured optimal. Its area has no known closed form; the further digits are from OEIS A128463. p. 267 recounts the history: Hammersley's π/2 + 2/π (p. 84 of his paper), the unpublished Shephard piano, and Francis and R. Guy's 2.215649 (guy-1977)."
   added_by: daniel-munro
 
 romik-2016:
@@ -4333,6 +4333,13 @@ romik-2016:
   date: "2016-06-27"
   url: "https://arxiv.org/abs/1606.08111"
   doi: "https://doi.org/10.1080/10586458.2016.1270858"
+  added_by: daniel-munro
+
+guy-1977:
+  string: "R.K. Guy, Monthly research problems, 1969-77, American Mathematical Monthly 84(10) (1977) 807-815."
+  date: "1977-12"
+  doi: "https://doi.org/10.1080/00029890.1977.11994487"
+  notes: "p. 811: C.E.H. Francis modified the Shephard piano to a sofa of area 2.215281, improved by iteration to 2.21563; Guy found 2.21503, and combining the ideas gives 2.215649. Gerver (1992), p. 267, credits the 2.215649 to Francis and Guy."
   added_by: daniel-munro
 
 wagner-1976:
