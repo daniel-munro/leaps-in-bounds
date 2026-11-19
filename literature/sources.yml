@@ -1254,7 +1254,7 @@ csordas-smith-varga-1994:
   string: "G. Csordas, W. Smith and R.S. Varga, Lehmer pairs of zeros, the de Bruijn-Newman constant Λ, and the Riemann hypothesis, Constructive Approximation 10 (1994) 107-129."
   date: "1993-11"
   doi: "https://doi.org/10.1007/BF01205170"
-  notes: "The bound -4.379·10^-6 < Λ, as reported by Csordas, Odlyzko, Smith and Varga (1993), eq. (1.6), Odlyzko (2000), Section 1, and Rodgers and Tao (2018), Table 1. Not read directly. Published 1994-03; dated by Csordas, Odlyzko, Smith and Varga (received 1993-11-24), who cite it as to appear and improve on it."
+  notes: "Abstract: -4.379·10^-6 < Λ. Received 1992-11-02, revised 1993-06-30, published 1994-03. Dated 1993-11 because Csordas, Odlyzko, Smith and Varga (received 1993-11-24, published 1993-12), eq. (1.6), cite it as to appear and improve on it; dated by its publication it would come after that improvement. Its list (1.5) of earlier bounds dates Norfolk, Ruttan and Varga's -0.385 to 1992."
   added_by: daniel-munro
 
 odlyzko-2000:
