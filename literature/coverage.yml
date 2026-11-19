@@ -187,14 +187,14 @@ no-three-in-line:
   - "No literature found for n = 75 and 77 (#65)."
 
 isosceles-set:
-  status: partial
+  status: complete
   reviewed: 2026-11-19
-  sources: [ionin-2009, oeis-a175769-isosceles-set, yi-2026, erdosproblems-503]
+  sources: [ionin-2009, oeis-a175769-isosceles-set, yi-2026, erdosproblems-503, lisonek-1997, kido-2008]
   gaps:
-  - "Lisoněk 1997 not read (publisher bot check): Wikipedia credits it with the {e_i+e_j} construction plus centroid, an isosceles set of C(n+1,2)+1 points, which if stated there would date the lower bounds for n = 4 and n = 9 to 12 to 1997."
-  - "The Erdős Problems page and forum thread for #503 couldn't be re-read (bot check): Alweiss' C(n+1,2)-point comment before Weisenberg's, and the forum note stating iso(d) = max{g(d), M(d)+1, M(d-1)+3} that Yi 2026 cites, are undated here and may give earlier steps for n = 9 to 12."
+  - "Alweiss' lower bound C(d+1,2), recorded on the Erdős Problems page before Weisenberg's comment of 2025-08-09, is undated and left out; for n = 9 to 12 it would be one step before Weisenberg's C(d+1,2)+1."
   - "Blokhuis' bound C(n+2,2) is dated to the 1984 CWI Tract; it first appeared in the T.H.-Memo 1981-10 (Eindhoven), Isosceles point sets in R^d, which couldn't be found, and the 1983 thesis's exact date is unknown."
-  - "Erdős 1946, Kelly 1947 (JSTOR) and Croft 1962 (Wiley) not read directly (bot checks); their bounds are as stated in Ionin 2009 and Yi 2026."
+  - "Erdős 1946, Kelly 1947 (JSTOR) and Croft 1962 (Wiley) not read directly (bot checks); their bounds are as stated in Ionin 2009, Yi 2026 and the Erdős Problems page."
+  - "Lower bounds from two-distance sets alone (every two-distance set is isosceles), such as the largest ones in R^4 to R^7 classified by Lisoněk 1997, aren't included where a larger isosceles set was known by then or no source states them as isosceles sets; n = 8 is the exception, where Lisoněk's 45-point set is optimal."
 
 sorting-network-size:
   status: partial

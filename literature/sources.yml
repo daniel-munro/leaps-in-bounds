@@ -2545,7 +2545,7 @@ lisonek-1997:
   string: "P. Lisoněk, New maximal two-distance sets, Journal of Combinatorial Theory, Series A 77 (1997) 318-338."
   date: "1997-02"
   doi: "https://doi.org/10.1006/jcta.1997.2749"
-  notes: "Finds a 45-point two-distance set in R^8, which is also an isosceles set."
+  notes: "Received 1996-06-10. Table I classifies the largest two-distance sets for d <= 6, and the paper finds the largest ones in R^7 and R^8, including a 45-point set in R^8; every two-distance set is an isosceles set, though the paper doesn't mention isosceles sets. It doesn't add a center point to any of its sets, so it isn't the source of the C(n+1,2)+1 construction."
   added_by: daniel-munro
 
 ionin-2009:
