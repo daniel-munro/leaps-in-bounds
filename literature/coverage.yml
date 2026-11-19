@@ -86,12 +86,12 @@ van-der-waerden:
   - "History assembled from Berlekamp, Rabung 1979, Herwig et al., Heule, SAT@Delft, Monroe, Komkov and Rowley (#69), but no single survey covers it; rows were once credited to Rabung-Lotts 2012 or Blankenship 2018 for values known earlier (#33)."
 
 stamp-folding:
-  status: partial
-  reviewed: 2026-11-17
-  sources: [oeis-a000136-stamp-folding, sainte-lague-1926, touchard-1950, lunnon-1968, koehler-1968, di-francesco-golinelli-guitter-1996]
+  status: complete
+  reviewed: 2026-11-19
+  sources: [oeis-a000136-stamp-folding, sainte-lague-1926, sade-1949, touchard-1950, lunnon-1968, koehler-1968, di-francesco-golinelli-guitter-1996]
   gaps:
-  - "A. Sade, Sur les chevauchements des permutations (Marseille, 1949, published by the author) not found. Touchard 1950 credits it with n = 11 and 12, so it may be the first source for n = 11, and H.W. Becker may have published n up to 10 before 1950."
-  - "n = 25 to 29 are credited to Di Francesco, Golinelli and Guitter 1996, which gives semi-meanders rather than stamp foldings; an earlier source stating them directly may exist."
+  - "Lunnon, Multi-dimensional map-folding, Computer Journal 14 (1971) 75-80, not read (the publisher's site serves a bot check). Gardner (Wheels, Life and Other Mathematical Amusements, 1983, ch. 7) says a later paper of Lunnon's carried the strip counts to n = 28, so it may be the first source for n = 25 to 28, now credited to Di Francesco, Golinelli and Guitter 1996."
+  - "Sainte-Laguë, Avec des nombres et des lignes (Vuibert, 1937; 3rd ed. 1946), Part 2, ch. 2, pp. 147-162, which discusses the stamp problem, not found online. It could correct the 1926 values for n = 7 to 10 before Sade 1949."
 
 map-folding:
   status: partial

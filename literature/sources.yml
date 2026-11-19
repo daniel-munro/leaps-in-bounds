@@ -4470,6 +4470,13 @@ sainte-lague-1926:
   notes: "Gives the number of foldings of n stamps for n = 1 to 10, of which n = 1 to 6 are correct; its values for n = 7 to 10 (448, 7472, 17676, 41600) are wrong. OEIS A000136 dates it 1923, but the title page of the scan linked from OEIS A002560 says 1926."
   added_by: daniel-munro
 
+sade-1949:
+  string: "A. Sade, Sur les chevauchements des permutations, published by the author, Marseille, 1949."
+  date: "1949"
+  url: "https://oeis.org/A000108/a000108_17.pdf"
+  notes: "Annotated scan from OEIS (A000682). Table (7) on p. 2, and again Table (24) on p. 5, gives P_n, the permutations of 1..n without overlaps that start with 1, for n = 2 to 12: 1, 2, 4, 10, 24, 66, 174, 504, 1406, 4210, 12196. These are the stamp foldings with stamp 1 on top (OEIS A000682), and §1 on p. 1 identifies the foldings of a strip of stamps with these permutations (which Becker called planar, per a letter from Touchard of 2 July 1949), and §2 says the number of overlaps is unchanged by circular permutation, so every permutation can be taken to start with 1; the number of foldings is therefore n P_n, as Touchard 1950 states on p. 385. P_12 = 12196 is wrong (it should be 12198). Published after July 1949, before Touchard 1950 appeared."
+  added_by: daniel-munro
+
 touchard-1950:
   string: "J. Touchard, Contribution à l'étude du problème des timbres poste, Canadian Journal of Mathematics 2 (1950) 385-398."
   date: "1950"
