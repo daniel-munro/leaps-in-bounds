@@ -12,16 +12,31 @@ affine-line-arrangements-10-lower-4000:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-10-lower-702000:
+  sha256: bff4edae68d1e074f362d43537fa3ba439ba93a29bf75a0b3756762dd17a28ae
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-11-lower-2700:
   sha256: a33fcc25a2f58346e8ca8bcf0855e91362593fe90e1ec919642bbd170fd0f7fe
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-11-lower-752000:
+  sha256: cd6e7cb301595e14b6785e04be71e4441728fd780e8f09412d421623edca8809
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-12-lower-2000:
   sha256: b04b1791ecdf72c586a2247020e9ea2da77d8fb2d8bace1276214b72062cb29b
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-12-lower-802000:
+  sha256: 652bb0cb2f6cc5ef0767704c0ebc0892133fcc07c7f4e2acf955c03e96920be2
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-2-lower-2:
   sha256: d54815c9509d0db42b6ccc35e73d56612ca1515f0bfdabec266e38c11175fecf
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -52,6 +67,11 @@ affine-line-arrangements-7-lower-12000:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-8-lower-160000:
+  sha256: 9d5749d324efc7250dd6f228ed37d91bb05ef364de4c5f3cd6828396221e74c1
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-8-lower-8000:
   sha256: aa792ae285af6aa95cc668378b1c13fcb17eab0d93474526c81df2dd1c3b2405
   checker: 5af057d28c18484643637ed3cb84d61047407389
@@ -62,6 +82,11 @@ affine-line-arrangements-9-lower-5500:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-9-lower-600000:
+  sha256: 9adb6f7114e20b54e25b4a946eca3c4055f9a8218dd98a83d3bddf69cb26fae2
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-general-position-1-lower-1:
   sha256: 4b350df66204e6c8c8bb102a5ccb9692ed271b8adfe75fd371a45adb6abc1198
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -72,16 +97,31 @@ affine-line-arrangements-general-position-10-lower-4000:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-general-position-10-lower-700000:
+  sha256: a2fec838c11cd3c7993a79b48fa351bae9f79d2cd9bbb05f4834e6e29da6d3cb
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-general-position-11-lower-2700:
   sha256: ce509a4f4d659b0431021b547306a9242e24be52c864972385d4636776715128
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-general-position-11-lower-750000:
+  sha256: be89c41afb4c8e318bb365d39f453efe987067521c9ca930801e99504baf8b2d
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-general-position-12-lower-2000:
   sha256: 77802182d07ff1e9a2d89c7774a4d2f3a8b5df2371385f1a004c54cee7dd5b29
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-general-position-12-lower-800000:
+  sha256: 0c0aac2a1fbb2247e3150c34e4396a4126f2fe794b9a84a692532856d6371992
+  checker: 1d4237e3849c325517ddcac5d5f385d44f777700
+  verified_by: daniel-munro
+  date: '2026-11-18'
 affine-line-arrangements-general-position-2-lower-1:
   sha256: 4a73fc03ae8f5f0f19dbfa39406830403e980ef032cc5306b159a1f3eb29766d
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
