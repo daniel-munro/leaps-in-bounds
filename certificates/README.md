@@ -365,7 +365,7 @@ Formal statements are in [`formal/LeapsInBounds/Statements/LineArrangement.lean`
 
 OEIS A241600 counts arrangements up to rigid isotopy rather than combinatorial type. Isotopic arrangements have the same type, so a lower bound on the number of types is also a lower bound for A241600.
 
-Witnesses can certify lower bounds only. A witness for `LowerBound n N` or `GeneralLowerBound n N` uses `format: lines`: `N` arrangements, one per row, each as `3n` integers `a b c`, one triple for each line `a x + b y = c`. The checker computes each arrangement's covectors exactly (at the vertices, on each edge, and on either side of each edge) and a canonical form of its type, and checks that no two are the same. For example, the two arrangements of 2 lines, parallel and crossing:
+Witnesses can certify lower bounds only. A witness for `LowerBound n N` or `GeneralLowerBound n N` uses `format: lines`: `N` arrangements, one per row, each as `3n` integers `a b c`, one triple for each line `a x + b y = c`. The checker computes a canonical form of each arrangement's type, and checks that no two are the same. For an arrangement in general position, the form comes from the order in which the other lines cross each line, which is fast. For others, it comes from the arrangement's covectors, computed exactly (at the vertices, on each edge, and on either side of each edge), which is about 20 times slower. For example, the two arrangements of 2 lines, parallel and crossing:
 
 ```yaml
 witness:

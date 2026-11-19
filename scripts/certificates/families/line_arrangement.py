@@ -148,14 +148,67 @@ def arrangement_type(lines: list[Line]) -> tuple[tuple[int, ...], ...]:
     return best
 
 
-def is_general_position(lines: list[Line]) -> bool:
-    points = []
-    for l1, l2 in itertools.combinations(lines, 2):
-        p = intersect_lines(l1, l2)
-        if p is None:
-            return False
-        points.append(p)
-    return len(set(points)) == len(points)
+def general_arrangement_type(lines: list[Line]) -> bytes | None:
+    """A canonical form of the combinatorial type of an arrangement in general
+    position, or None if it isn't in general position. Much faster than
+    arrangement_type, which it agrees with on whether two arrangements in
+    general position have the same type.
+
+    Walk around the ends of the lines as in arrangement_type, numbering the
+    lines in the order the walk first meets them. For each line in that order,
+    list the numbers of the other lines in the order they cross it, starting
+    from the end the walk met first. The form is the smallest such list over
+    the start and direction of the walk.
+
+    An equivalence of two arrangements takes the ends in order around a large
+    circle to the ends in the same or the opposite order, and the order of the
+    crossings along each line to the order along its image. So equivalent
+    arrangements get the same form, and arrangements with different forms are
+    inequivalent. (For arrangements in general position, the converse holds
+    too, but it isn't needed: a lower bound only needs different forms to mean
+    different types.)
+
+    This follows the canonical form in the checker that Sami Hani Badaoui and
+    Sarah Ellen Mary Vaughan wrote for ten-line arrangements (pull request #85).
+    """
+    n = len(lines)
+    # crossings[(i, u)]: the other lines in the order they cross line i,
+    # starting from its end in direction u
+    crossings = {}
+    for i, (a1, b1, c1) in enumerate(lines):
+        u = (-b1, a1)
+        positions = []
+        for j, (a2, b2, c2) in enumerate(lines):
+            if j == i:
+                continue
+            det = a1 * b2 - a2 * b1
+            if det == 0:
+                return None
+            # The crossing point is (x, y) / det; its position along line i,
+            # toward u, is its dot product with u
+            x, y = c1 * b2 - c2 * b1, a1 * c2 - a2 * c1
+            positions.append((Fraction(x * u[0] + y * u[1], det), j))
+        positions.sort()
+        if any(p == q for (p, _), (q, _) in zip(positions, positions[1:])):
+            return None  # three lines through a point
+        toward_u = [j for _, j in reversed(positions)]
+        crossings[(i, u)] = toward_u
+        crossings[(i, (b1, -a1))] = toward_u[::-1]
+    ends = line_ends(lines)
+    best = None
+    for start in range(2 * n):
+        for direction in (1, -1):
+            number = [-1] * n
+            first_end = []
+            for t in range(2 * n):
+                i, u = ends[(start + direction * t) % (2 * n)]
+                if number[i] < 0:
+                    number[i] = len(first_end)
+                    first_end.append((i, u))
+            form = (bytes if n <= 256 else tuple)(number[j] for end in first_end for j in crossings[end])
+            if best is None or form < best:
+                best = form
+    return best
 
 
 def line_arrangement_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], general: bool) -> None:
@@ -174,9 +227,15 @@ def line_arrangement_witness(params: Mapping[str, int], bound: str, value: int, 
         if any(a1 * b2 == a2 * b1 and a1 * c2 == a2 * c1 and b1 * c2 == b2 * c1
                for (a1, b1, c1), (a2, b2, c2) in itertools.combinations(lines, 2)):
             raise CertificateError(f"Arrangement {k}: two lines are the same")
-        if general and not is_general_position(lines):
-            raise CertificateError(f"Arrangement {k} is not in general position")
-        form = arrangement_type(lines)
+        # Equivalence preserves general position, since two lines meet when
+        # some covector is 0 on both, and three lines meet at a point when some
+        # covector is 0 on all three. So forms of the two kinds never need
+        # comparing with each other.
+        form = general_arrangement_type(lines)
+        if form is None:
+            if general:
+                raise CertificateError(f"Arrangement {k} is not in general position")
+            form = arrangement_type(lines)
         if form in types:
             raise CertificateError(f"Arrangement {k} has the same type as an earlier one")
         types.add(form)
