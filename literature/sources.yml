@@ -2537,7 +2537,8 @@ croft-1962:
 blokhuis-1984:
   string: "A. Blokhuis, Few-distance sets, CWI Tract 7 (1984) 1-70."
   date: "1984"
-  notes: "Proves that an isosceles set in R^n has at most (n+2 choose 2) points."
+  url: "https://ir.cwi.nl/pub/12716"
+  notes: "Theorem 7.2.5 (p. 48): an isosceles set in R^n has at most (n+2 choose 2) points. Blokhuis' 1983 Eindhoven Ph.D. thesis, published as this tract. The theorem is also Theorem 6.3.3 of J.J. Seidel (notes by A. Blokhuis et al.), Graphs and association schemes, algebra and geometry, EUT-Report 83-WSK-02 (May 1983), which credits A. Blokhuis, Isosceles point sets in R^d, T.H.-Memo 1981-10, Eindhoven (1981)."
   added_by: daniel-munro
 
 lisonek-1997:
@@ -2552,6 +2553,13 @@ ionin-2009:
   date: "2009-11-24"
   doi: "https://doi.org/10.37236/230"
   notes: "Determines the largest isosceles sets in R^n for n <= 8, from the largest two-distance sets and Blokhuis' structure theorem."
+  added_by: daniel-munro
+
+kido-2008:
+  string: "H. Kido, Classification of isosceles sets which have the maximum cardinality in 4-dimensional Euclidean space (in Japanese), RIMS Kôkyûroku 1593 (2008) 162-169 (Finite Groups and Algebraic Combinatorics, RIMS, Kyoto, 2007-12-17 to 2007-12-20)."
+  date: "2008"
+  url: "https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/pdf/1593-23.pdf"
+  notes: "Section 1 (p. 165), Theorem 1.1 and Corollary 1.1: there are exactly two 11-point isosceles sets in R^4 up to similarity (the midpoints of the edges of a regular 4-simplex with its center, and two congruent regular pentagons in orthogonal planes with their common center), and no 12-point isosceles set, so the maximum is 11. Kido notes that 11-point isosceles sets in R^4 were already known, from Lisoněk's 10-point two-distance set with its center. Also in Kido's Kyushu University MI Preprint 2008-3 (October 2008), and published as H. Kido, On isosceles sets in the 4-dimensional Euclidean space, International Journal of Combinatorics 2010 (2010) 803210, https://doi.org/10.1155/2010/803210."
   added_by: daniel-munro
 
 dobbelaere-sorting-networks:
@@ -3058,7 +3066,7 @@ yi-2026:
   string: "H. Yi, Isosceles sets in Euclidean spaces of dimension nine to twenty-two, arXiv:2611.05421."
   date: "2026-11-02"
   url: "https://arxiv.org/abs/2611.05421"
-  notes: "Theorem 1.1: the largest isosceles set in R^d has C(d+1,2)+1 points for 9 <= d <= 21 (unique: J(d+1,2) with its centroid), and 276 points for d = 22."
+  notes: "Theorem 1.1: the largest isosceles set in R^d has C(d+1,2)+1 points for 9 <= d <= 21 (unique: J(d+1,2) with its centroid), and 276 points for d = 22. Title of v1 (2026-11-02); v2 (2026-11-05) is titled Isosceles sets and two-distance sets in Euclidean space and adds iso(d) = max{g(d), M(d)+1, M(d-1)+3} for all d >= 2."
   added_by: daniel-munro
 
 
