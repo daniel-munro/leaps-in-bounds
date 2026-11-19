@@ -20,6 +20,12 @@ Arrangements in general position are now told apart by `general_arrangement_type
 
 At that speed a few hundred thousand arrangements fit in the checker's budget, so 38609 for 8 lines is now within reach, given as a [generator](../certificates/README.md#generators) if the witness is too large. The 113 million arrangements of 10 lines proposed in #85 would still take about 16 hours, so they'd need a vectorized or compiled key, and streaming the generator's output.
 
+## Generator witnesses (November 2026)
+
+The bounds for 10 to 12 lines are now certified by [generators](../certificates/README.md#generators): 700000 for 10 lines, 750000 for 11 and 800000 for 12, increasing with the number of lines. Running the generator and checking its output took 16, 22 and 30 minutes, with 4 such jobs at once on an 8-core laptop; about half the time is the generator, which has to tell types apart too. Each draws random lines `a x + b y = c`, redrawing any line parallel to an earlier one, with `|a|, |b| <= r` and `|c| <= 2 r` for `r` from `n - 3` to `n`, and prints the arrangement when it's in general position and its `general_arrangement_type`, computed the same way with integers, is new. Redrawing parallel lines rather than rejecting the whole arrangement matters: for 12 lines, about 70% of draws are then in general position with `r = 9`, and the generator became about 25 times faster. The generators of the [other family](affine-line-arrangements.md#generator-witnesses-november-2026) use the same program.
+
+The limits now are the checker's time and memory (about 1.5 to 1.7 GB per million arrangements), and the 200 MB limit on a generator's output, about 2 million arrangements of 12 lines. Matching 38609 for 8 lines with random draws looks slow: they found 32000 types in about a minute, but new ones were getting rare.
+
 ## Ideas
 
 - 8 lines: the same search, run from the 922 types of 7 lines, should work. Use `general_arrangement_type` to tell types apart, and plan to simplify coefficients as types are found rather than at the end, since large coefficients slow the checks down.

@@ -1,0 +1,12 @@
+constant: affine-line-arrangements-general-position-11
+bound: lower
+value: 750000
+kind: witness
+witness:
+  format: generator
+  file: affine-line-arrangements-general-position-11-lower-750000.py
+  output: lines
+  output_sha256: 53921dfdf097d37de4f883b38cbec197031125009e289a88219fff3469d9e0f2
+submitted_by: daniel-munro
+date: 2026-11-18
+notes: 'A generator that prints one arrangement per row: a b c for each line a x + b y = c. Written by an AI agent (Claude Opus 5.5): random lines a x + b y = c with integer coefficients, no two parallel (a and b of absolute value at most r, c at most 2 r, with r from 8 to 11), kept when in general position, each printed only when of a new type, by a canonical form that matches general_arrangement_type from scripts/certificates/families/line_arrangement.py in general position and extends it to other arrangements by listing the lines through each vertex. Seeded, so the output is the same every time. Far from all types; the count is set so that running the generator and checking its output take well under an hour.'
