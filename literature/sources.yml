@@ -1852,15 +1852,16 @@ mckenna-2026:
 
 blanchard-harary-reis-2006:
   string: "P.F. Blanchard, F. Harary and R. Reis, Partitions into sum-free sets, Integers 6 (2006) #A7."
-  date: "2006"
+  date: "2006-03-09"
   url: "https://math.colgate.edu/~integers/g7/g7.Abstract.html"
   notes: "Values claimed without proof by G.W. Walker, American Mathematical Monthly 59 (1952) 253."
   added_by: daniel-munro
 
 eliahou-et-al-2012:
   string: "S. Eliahou, J.M. Marín, M.P. Revuelta and M.I. Sanz, Weak Schur numbers and the search for G. W. Walker's lost partitions, Computers & Mathematics with Applications 63 (2012) 175-182."
-  date: "2011-11"
+  date: "2011-12-07"
   doi: "https://doi.org/10.1016/j.camwa.2011.11.006"
+  notes: "Not read directly (the publisher blocks automated access); its partitions of [1, 196] into 5 and of [1, 572] into 6 weakly sum-free sets are cited by Eliahou et al. 2013 and Rafilipojaona 2017. Le Bras et al. 2012 report that a note added before press in January 2012 claimed WS(6) >= 575; that claim isn't recorded here. Date is the online date in Crossref."
   added_by: daniel-munro
 
 robilliard-et-al-2012:
@@ -1884,11 +1885,14 @@ eliahou-et-al-2013:
 bouzy-2015:
   string: "B. Bouzy, An Abstract Procedure to Compute Weak Schur Number Lower Bounds, LIPADE technical report TR-2 (2015)."
   date: "2015-09-17"
+  url: "https://helios2.mi.parisdescartes.fr/~bouzy/publications/bouzy-weakSchur-tr-lipade.pdf"
   added_by: daniel-munro
 
 rafilipojaona-2017:
   string: "F. Rafilipojaona, Lower bounds on the weak Schur numbers up to 9 colors, Integers 17 (2017) #A39."
-  date: "2017"
+  date: "2017-09-14"
+  url: "https://math.colgate.edu/~integers/r39/r39.pdf"
+  notes: "Received 2015-04-20. The same bounds were first given in the author's thesis, rafilipojaona-2015."
   added_by: daniel-munro
 
 rowley-2020:
@@ -1909,6 +1913,13 @@ rodrigo-2026:
   date: "2026-06-10"
   doi: "https://doi.org/10.5281/zenodo.20633634"
   notes: "Not peer reviewed."
+  added_by: daniel-munro
+
+rafilipojaona-2015:
+  string: "F.A. Rafilipojaona, Nombres de Schur classiques et faibles, Ph.D. thesis, Université du Littoral Côte d'Opale, 2015, HAL tel-01344633."
+  date: "2016-07-13"
+  url: "https://theses.hal.science/tel-01344633"
+  notes: "Defended 2015-07-10; the manuscript was released on HAL on 2016-07-13, the date used here. Its Propositions 68-70 give WS(7) >= 1740, WS(8) >= 5201 and WS(9) >= 15596, later published as rafilipojaona-2017 (received by Integers 2015-04-20). Neither cites Bouzy's report of 2015-09-17 (WS(7) >= 1736, WS(8) >= 5105), found independently. If the defense date is taken as the public date instead, Bouzy's two bounds were not improvements."
   added_by: daniel-munro
 
 ringel-1956:
@@ -4238,7 +4249,7 @@ irving-1973-schur:
   string: "R.W. Irving, An extension of Schur's theorem on sum-free partitions, Acta Arithmetica 25 (1973) 55-64."
   date: "1973"
   doi: "https://doi.org/10.4064/aa-25-1-55-64"
-  notes: "Not read directly. Credited with S(k) <= floor(k!(e - 1/24)) in arXiv:1711.08076 (Heule) and arXiv:2507.21656."
+  notes: "Credited with S(k) <= floor(k!(e - 1/24)) in arXiv:1711.08076 (Heule) and arXiv:2507.21656, though the paper itself (p. 55) attributes that bound to Whitehead. Theorem 2 with r = 2 gives WS(k) <= floor(k!(2k+1)e/2 + 1); the values for k = 3 to 9 used in weak-schur are evaluated from it here, not stated in the paper. Received 1972-07-06."
   added_by: daniel-munro
 
 eliahou-revuelta-2020:
