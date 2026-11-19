@@ -1,14 +1,20 @@
 """Arrangements of lines in the plane, and those in general position."""
 
+import collections
+import hashlib
 import itertools
 import math
+import os
 import re
+from concurrent.futures import Future, ProcessPoolExecutor
 from fractions import Fraction
-from typing import Any, Mapping
+from typing import Any, Iterator, Mapping
+
+import numpy as np
 
 from ..errors import CertificateError
 from ..family import Family
-from ..witness import read_witness_data
+from ..witness import witness_lines
 
 
 def line_arrangement_lean_statement(params: Mapping[str, int], bound: str, value: int) -> tuple[str, list[int]]:
@@ -25,21 +31,21 @@ Line = tuple[int, int, int]
 Point = tuple[Fraction, Fraction]
 
 
-def read_arrangements(data: str, n: int) -> list[list[Line]]:
-    """Parse arrangements, one per line of text: 3n integers, with a, b, c for
+def parse_arrangement(row: str, n: int) -> list[Line]:
+    """Parse an arrangement from a line of text: 3n integers, with a, b, c for
     each line a x + b y = c."""
-    arrangements = []
-    for row in data.splitlines():
-        if not row.strip():
-            continue
-        try:
-            values = [int(x) for x in row.split()]
-        except ValueError:
-            raise CertificateError("Line coefficients must be integers")
-        if len(values) != 3 * n:
-            raise CertificateError(f"Each arrangement needs {3 * n} integers, found {len(values)}")
-        arrangements.append([tuple(values[3 * i:3 * i + 3]) for i in range(n)])
-    return arrangements
+    try:
+        values = [int(x) for x in row.split()]
+    except ValueError:
+        raise CertificateError("Line coefficients must be integers")
+    if len(values) != 3 * n:
+        raise CertificateError(f"Each arrangement needs {3 * n} integers, found {len(values)}")
+    return [tuple(values[3 * i:3 * i + 3]) for i in range(n)]
+
+
+def read_arrangements(data: str, n: int) -> list[list[Line]]:
+    """Parse arrangements, one per line of text (see parse_arrangement)."""
+    return [parse_arrangement(row, n) for row in data.splitlines() if row.strip()]
 
 
 def intersect_lines(l1: Line, l2: Line) -> Point | None:
@@ -148,7 +154,54 @@ def arrangement_type(lines: list[Line]) -> tuple[tuple[int, ...], ...]:
     return best
 
 
-def general_arrangement_type(lines: list[Line]) -> bytes | None:
+def general_line_ends(lines: list[Line]) -> list[tuple[int, tuple[int, int]]]:
+    """line_ends, for lines no two of which are parallel, sorted by angle with
+    floats and then checked exactly: much faster."""
+    ends = []
+    for i, (a, b, _) in enumerate(lines):
+        for x, y in ((-b, a), (b, -a)):
+            # Angles in [0, pi), then in [pi, 2 pi), each measured within its half
+            if y > 0 or (y == 0 and x > 0):
+                ends.append((0, math.atan2(y, x), i, (x, y)))
+            else:
+                ends.append((1, math.atan2(-y, -x), i, (x, y)))
+    ends.sort()
+    # Each end must come strictly after the one before, counterclockwise: in
+    # a later half, or in the same half and to the left of it
+    for (h1, _, _, (x1, y1)), (h2, _, _, (x2, y2)) in zip(ends, ends[1:]):
+        if h1 == h2 and x1 * y2 - y1 * x2 <= 0:
+            return line_ends(lines)
+    return [(i, u) for _, _, i, u in ends]
+
+
+def crossing_order(lines: list[Line], i: int) -> list[int] | None:
+    """The other lines in the order they cross line i, toward its end in
+    direction (-b, a), or None if two of them cross it at the same point or
+    one is parallel to it. Sorted with floats, then checked exactly."""
+    a1, b1, c1 = lines[i]
+    positions = []
+    for j, (a2, b2, c2) in enumerate(lines):
+        if j == i:
+            continue
+        det = a1 * b2 - a2 * b1
+        if det == 0:
+            return None
+        # The crossing point is (x, y) / det; its position along line i,
+        # toward (-b1, a1), is its dot product with that direction, num / det
+        num = -(c1 * b2 - c2 * b1) * b1 + (a1 * c2 - a2 * c1) * a1
+        if det < 0:
+            num, det = -num, -det
+        positions.append((num / det, num, det, j))
+    positions.sort()
+    if any(n1 * d2 >= n2 * d1 for (_, n1, d1, _), (_, n2, d2, _) in zip(positions, positions[1:])):
+        # Floats too close to sort by: sort exactly
+        positions.sort(key=lambda p: Fraction(p[1], p[2]))
+        if any(n1 * d2 == n2 * d1 for (_, n1, d1, _), (_, n2, d2, _) in zip(positions, positions[1:])):
+            return None  # three lines through a point
+    return [j for _, _, _, j in positions]
+
+
+def general_arrangement_type(lines: list[Line]) -> bytes | tuple[int, ...] | None:
     """A canonical form of the combinatorial type of an arrangement in general
     position, or None if it isn't in general position. Much faster than
     arrangement_type, which it agrees with on whether two arrangements in
@@ -175,26 +228,30 @@ def general_arrangement_type(lines: list[Line]) -> bytes | None:
     # crossings[(i, u)]: the other lines in the order they cross line i,
     # starting from its end in direction u
     crossings = {}
-    for i, (a1, b1, c1) in enumerate(lines):
-        u = (-b1, a1)
-        positions = []
-        for j, (a2, b2, c2) in enumerate(lines):
-            if j == i:
-                continue
-            det = a1 * b2 - a2 * b1
-            if det == 0:
-                return None
-            # The crossing point is (x, y) / det; its position along line i,
-            # toward u, is its dot product with u
-            x, y = c1 * b2 - c2 * b1, a1 * c2 - a2 * c1
-            positions.append((Fraction(x * u[0] + y * u[1], det), j))
-        positions.sort()
-        if any(p == q for (p, _), (q, _) in zip(positions, positions[1:])):
-            return None  # three lines through a point
-        toward_u = [j for _, j in reversed(positions)]
-        crossings[(i, u)] = toward_u
-        crossings[(i, (b1, -a1))] = toward_u[::-1]
-    ends = line_ends(lines)
+    for i, (a, b, _) in enumerate(lines):
+        order = crossing_order(lines, i)
+        if order is None:
+            return None
+        # The order runs toward (-b, a), so it starts from the other end
+        crossings[(i, (b, -a))] = order
+        crossings[(i, (-b, a))] = order[::-1]
+    ends = general_line_ends(lines)
+    if n <= 256 and all(ends[k][0] == ends[k + n][0] for k in range(n)):
+        # No two lines are parallel, so the two ends of each line are n apart
+        # in the walk, which meets every line in its first n steps. Renumber
+        # the lines with a translation table.
+        cross = [(i, bytes(crossings[(i, u)])) for i, u in ends]
+        cross = cross + cross
+        best = None
+        for start in range(2 * n):
+            for walk in (cross[start:start + n], cross[start + n + 1:start + 2 * n + 1][::-1]):
+                table = bytearray(256)
+                for k, (i, _) in enumerate(walk):
+                    table[i] = k
+                form = b"".join([order for _, order in walk]).translate(table)
+                if best is None or form < best:
+                    best = form
+        return best
     best = None
     for start in range(2 * n):
         for direction in (1, -1):
@@ -205,40 +262,119 @@ def general_arrangement_type(lines: list[Line]) -> bytes | None:
                 if number[i] < 0:
                     number[i] = len(first_end)
                     first_end.append((i, u))
-            form = (bytes if n <= 256 else tuple)(number[j] for end in first_end for j in crossings[end])
+            form = tuple(number[j] for end in first_end for j in crossings[end])
             if best is None or form < best:
                 best = form
     return best
 
 
-def line_arrangement_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], general: bool) -> None:
-    """There are at least `value` types of arrangements of n lines (in general
-    position) when `value` such arrangements are pairwise inequivalent."""
-    if cert["witness"].get("format") != "lines":
-        raise CertificateError("Line arrangement witnesses must use format: lines")
-    n = params["n"]
-    arrangements = read_arrangements(read_witness_data(cert), n)
-    if len(arrangements) != value:
-        raise CertificateError(f"Witness has {len(arrangements)} arrangements, not {value}")
-    types = set()
-    for k, lines in enumerate(arrangements, 1):
+# Arrangements checked per batch. A witness with more than one batch is checked
+# in parallel, in processes that each check a batch at a time.
+BATCH_ROWS = 10_000
+
+
+def type_digests(rows: list[str], n: int, general: bool, first: int) -> bytes:
+    """Check a batch of arrangements, given as text and numbered from first,
+    and return an 8-byte hash of the canonical form of each one's type."""
+    digests = bytearray()
+    for k, row in enumerate(rows, first):
+        try:
+            lines = parse_arrangement(row, n)
+        except CertificateError as e:
+            raise CertificateError(f"Arrangement {k}: {e}")
         if any(a == 0 and b == 0 for a, b, _ in lines):
             raise CertificateError(f"Arrangement {k}: a line has a = b = 0")
-        if any(a1 * b2 == a2 * b1 and a1 * c2 == a2 * c1 and b1 * c2 == b2 * c1
-               for (a1, b1, c1), (a2, b2, c2) in itertools.combinations(lines, 2)):
-            raise CertificateError(f"Arrangement {k}: two lines are the same")
         # Equivalence preserves general position, since two lines meet when
         # some covector is 0 on both, and three lines meet at a point when some
         # covector is 0 on all three. So forms of the two kinds never need
         # comparing with each other.
         form = general_arrangement_type(lines)
-        if form is None:
+        if form is not None:
+            key = b"g" + (form if isinstance(form, bytes) else repr(form).encode())
+        else:
             if general:
                 raise CertificateError(f"Arrangement {k} is not in general position")
-            form = arrangement_type(lines)
-        if form in types:
-            raise CertificateError(f"Arrangement {k} has the same type as an earlier one")
-        types.add(form)
+            if any(a1 * b2 == a2 * b1 and a1 * c2 == a2 * c1 and b1 * c2 == b2 * c1
+                   for (a1, b1, c1), (a2, b2, c2) in itertools.combinations(lines, 2)):
+                raise CertificateError(f"Arrangement {k}: two lines are the same")
+            key = b"c" + repr(arrangement_type(lines)).encode()
+        digests += hashlib.blake2b(key, digest_size=8).digest()
+    return bytes(digests)
+
+
+def batches(rows: Iterator[str], size: int) -> Iterator[tuple[int, list[str]]]:
+    """The non-blank rows, in batches, with the number of the first in each."""
+    batch: list[str] = []
+    first = 1
+    for row in rows:
+        if row.strip():
+            batch.append(row)
+            if len(batch) == size:
+                yield first, batch
+                first += size
+                batch = []
+    if batch:
+        yield first, batch
+
+
+def all_type_digests(rows: Iterator[str], n: int, general: bool) -> Iterator[bytes]:
+    """type_digests for each batch of rows, in order, checking batches in
+    parallel if there's more than one."""
+    rows = batches(rows, BATCH_ROWS)
+    first_batch = next(rows, None)
+    second_batch = next(rows, None)
+    if first_batch is None:
+        return
+    if second_batch is None:
+        yield type_digests(first_batch[1], n, general, first_batch[0])
+        return
+    workers = os.cpu_count() or 1
+    with ProcessPoolExecutor(max_workers=workers) as pool:
+        pending: collections.deque[Future[bytes]] = collections.deque()
+        for first, batch in itertools.chain([first_batch, second_batch], rows):
+            # Keep a few batches queued for each process, but not the whole
+            # witness, which is read as it goes
+            if len(pending) >= 2 * workers:
+                yield pending.popleft().result()
+            pending.append(pool.submit(type_digests, batch, n, general, first))
+        while pending:
+            yield pending.popleft().result()
+
+
+def count_distinct(digests: Iterator[bytes]) -> tuple[int, int]:
+    """The number of 8-byte digests, and the number of distinct ones. They're
+    kept sorted and without repeats, merging new ones in now and then."""
+    distinct = np.zeros(0, dtype=np.uint64)
+    new: list[np.ndarray] = []
+    total = waiting = 0
+    for chunk in digests:
+        new.append(np.frombuffer(chunk, dtype=np.uint64))
+        total += len(new[-1])
+        waiting += len(new[-1])
+        if waiting >= 1 << 24:
+            distinct = np.unique(np.concatenate([distinct, *new]))
+            new, waiting = [], 0
+    distinct = np.unique(np.concatenate([distinct, *new]))
+    return total, len(distinct)
+
+
+def line_arrangement_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], general: bool) -> None:
+    """There are at least `value` types of arrangements of n lines (in general
+    position) when the witness has arrangements of at least `value` types.
+    Arrangements of the same type can repeat, which helps a generator that
+    samples arrangements at random.
+
+    Types are compared by an 8-byte hash of their canonical forms. Different
+    hashes mean different forms, and so inequivalent arrangements. Two types
+    can share a hash, which only undercounts them, so the count is still a
+    lower bound on the number of types. For a few million types, the chance
+    that any two share one is tiny anyway."""
+    if cert["witness"].get("format") != "lines":
+        raise CertificateError("Line arrangement witnesses must use format: lines")
+    n = params["n"]
+    total, distinct = count_distinct(all_type_digests(witness_lines(cert), n, general))
+    if distinct < value:
+        raise CertificateError(f"Witness has {total} arrangements of {distinct} distinct types, fewer than {value}")
 
 
 def line_arrangement_check_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any]) -> None:

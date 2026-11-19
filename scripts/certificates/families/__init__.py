@@ -10,7 +10,7 @@ from typing import Any, Mapping
 
 from ..errors import CertificateError
 from ..family import Family
-from ..generator import generated_certificate
+from ..generator import GeneratorOutput, generated_witness
 from . import (
     busy_beaver,
     cage,
@@ -85,13 +85,16 @@ def check_witness(cert: Mapping[str, Any]) -> list[str]:
     family, params = get_family(cert["constant"])
     if family.witness_bound is not None and cert["bound"] != family.witness_bound:
         raise CertificateError(f"Witnesses for {cert['constant']} can only certify {family.witness_bound} bounds")
-    warnings: list[str] = []
-    if cert["witness"].get("format") == "generator":
-        cert, warnings = generated_certificate(cert)
-    try:
+    if cert["witness"].get("format") != "generator":
         family.check_witness(params, cert["bound"], cert["value"], cert)
-    except CertificateError as e:
-        # A warning, such as a generator printing something different from
-        # what was submitted, may explain the failure
-        raise CertificateError("".join([str(e), *(f"\n  Also: {w}" for w in warnings)]))
-    return warnings
+        return []
+    with GeneratorOutput(cert) as output:
+        try:
+            family.check_witness(params, cert["bound"], cert["value"], generated_witness(cert, output))
+            return output.finish()
+        except CertificateError as e:
+            # If the generator failed, that's the error to report. A warning,
+            # such as a generator printing something different from what was
+            # submitted, may explain the failure.
+            message = output.failed() or str(e)
+            raise CertificateError("".join([message, *(f"\n  Also: {w}" for w in output.warnings())]))

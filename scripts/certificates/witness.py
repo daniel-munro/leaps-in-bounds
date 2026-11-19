@@ -3,7 +3,7 @@
 import lzma
 import pathlib
 import zlib
-from typing import Any, Mapping
+from typing import Any, Iterator, Mapping
 
 from .errors import CertificateError
 
@@ -22,7 +22,7 @@ def read_witness_file(cert: Mapping[str, Any]) -> bytes:
     or the output of a generator witness that has been run (see generator.py)."""
     witness = cert["witness"]
     if "generated" in witness:
-        return witness["generated"]
+        return witness["generated"].read()
     if witness.get("format") == "generator":
         raise CertificateError(f"{cert['id']}: the witness is a generator, which has to be run to read it")
     if "file" in witness:
@@ -47,6 +47,14 @@ def read_witness_data(cert: Mapping[str, Any]) -> str:
         witness = cert["witness"]
         what = "the generator's output" if "generated" in witness else f"witness file {witness['file']}"
         raise CertificateError(f"{cert['id']}: {what} isn't ASCII text")
+
+
+def witness_lines(cert: Mapping[str, Any]) -> Iterator[str]:
+    """The witness as text, line by line, without line endings. A generator's
+    output is read as a stream, so it can be any size."""
+    if "generated" in cert["witness"]:
+        return cert["witness"]["generated"].lines()
+    return iter(read_witness_data(cert).splitlines())
 
 
 def decompress(data: bytes, suffix: str, name: str) -> bytes:

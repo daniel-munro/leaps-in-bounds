@@ -26,6 +26,17 @@ The bounds for 10 to 12 lines are now certified by [generators](../certificates/
 
 The limits now are the checker's time and memory (about 1.5 to 1.7 GB per million arrangements), and the 200 MB limit on a generator's output, about 2 million arrangements of 12 lines. Matching 38609 for 8 lines with random draws looks slow: they found 32000 types in about a minute, but new ones were getting rare.
 
+## Streaming checker (November 2026)
+
+Prompted by pull request #98, which submits a generator for 56,500,001 types of 10 lines that prints 136.5 million random arrangements (19.8 GB), with repeats. The checker now:
+
+- reads a generator's output as a stream, so the 200 MB limit doesn't apply to this family;
+- accepts witnesses with repeated types, counting the distinct ones, by an 8-byte hash of each canonical form (a shared hash only undercounts), kept sorted in a numpy array: 8 bytes per arrangement, instead of about 1.6 kB;
+- checks batches of 10000 arrangements in parallel, one process per core;
+- computes `general_arrangement_type` about 4.7 times faster (0.074 ms for 10 lines, from 0.35 ms): crossings and ends are sorted with floats and then checked exactly, falling back to exact sorting if they're out of order or tied, and since no two lines are parallel, each walk meets every line in its first n steps, so the walk is a slice and the renumbering is a `bytes.translate`.
+
+The new key agreed exactly with the old one on 4784 random arrangements (2563 in general position), and the hashed counts matched the old exact counts on 100000 arrangements shaped like #98's (99566 types) and 18293 mixed arrangements, mostly not in general position (18290 types). A million arrangements of 10 lines in general position took 27 s from a generator on an 8-core laptop, so #98's 136.5 million should take under an hour.
+
 ## Ideas
 
 - 8 lines: the same search, run from the 922 types of 7 lines, should work. Use `general_arrangement_type` to tell types apart, and plan to simplify coefficients as types are found rather than at the end, since large coefficients slow the checks down.
