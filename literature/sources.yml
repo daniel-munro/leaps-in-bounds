@@ -1439,13 +1439,14 @@ oler-groemer-1961:
   string: "Groemer, H. (1960). Über die Einlagerung von Kreisen in einen konvexen Bereich. Math. Z., 73, 285-294; Oler, N. (1961). A finite packing problem. Canad. Math. Bull., 4, 153-155."
   date: "1961-05"
   doi: "https://doi.org/10.4153/CMB-1961-018-7"
-  notes: "Oler's inequality: a compact convex set X holds at most (2/sqrt(3)) A(X) + P(X)/2 + 1 points at mutual distance at least 1. Applied to the centers of n unit circles in a square of side s, which lie in a square of side s - 2 at mutual distance at least 2, it gives n <= (2/sqrt(3)) t^2 + 2t + 1 for t = (s - 2)/2, so s(34) >= 11.0991 and s(35) >= 11.2579 (not stated as such)."
+  notes: "Oler's inequality: a compact convex set X holds at most (2/sqrt(3)) A(X) + P(X)/2 + 1 points at mutual distance at least 1. Applied to the centers of n unit circles in a square of side s, which lie in a square of side s - 2 at mutual distance at least 2, it gives n <= (2/sqrt(3)) t^2 + 2t + 1 for t = (s - 2)/2, so s(34) >= 11.0991 and s(35) >= 11.2579 (not stated as such). For the equilateral triangle, Oler (pp. 153-154) shows that a triangle of side n holds at most (n+1)(n+2)/2 points at mutual distance at least 1, with equality for the triangular lattice; the packings of 5, 9 and 14 circles used for circles in an equilateral triangle are these lattice packings with one point removed (not stated as such)."
   added_by: daniel-munro
 
 melissen-1993:
   string: "Melissen, H. (1993). Densest packings of congruent circles in an equilateral triangle. The American Mathematical Monthly, 100(10), 916-925."
   date: "1993-12"
   doi: "https://doi.org/10.2307/2324212"
+  notes: "Figure 2 and Table 1 give packings for n = 2 to 15, 17 and 19, and Section 2 proves them optimal for n = 2 to 10 and 12 (with an alternative proof for the triangular numbers). The n = 11 packing is shown and not marked conjectural, but its proof is deferred to a separate paper (melissen-1994a); n = 13, 14, 17 and 19 are marked conjectured. It says that before it only the triangular numbers had been treated in the literature (Oler 1961; Croft, Falconer and Guy 1991), and doesn't cite Milano."
   added_by: daniel-munro
 
 melissen-1994a:

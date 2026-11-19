@@ -109,12 +109,11 @@ disk-covering:
   - "No publication found behind the proofs Friedman's page claims for n = 11 to 20; those lower bounds rest only on the page (#33, #69)."
 
 circle-in-equilateral:
-  status: partial
+  status: complete
   reviewed: 2026-11-19
-  sources: [friedman-circles-in-triangles, wikipedia-circle-in-equilateral, graham-lubachevsky-1995, tedeschi-2021]
+  sources: [friedman-circles-in-triangles, wikipedia-circle-in-equilateral, melissen-1993, graham-lubachevsky-1995, tedeschi-2021]
   gaps:
-  - "Milano 1987 (credited by Friedman with proving n = 4 and 5) has no full reference: title, venue and date unknown."
-  - "Melissen 1993 (Amer. Math. Monthly) not read in full (JSTOR/Taylor & Francis paywall); its contents are taken from its zbMATH review (Zbl 0814.52006), Graham-Lubachevsky 1995 and Tedeschi 2021. Whether it already gave the n = 11 packing, and which constructions for n = 4, 7, 8, 12 and 13 it credits to earlier work, is unconfirmed."
+  - "Milano 1987, credited by Friedman with proving n = 4 and 5, has no full reference (title, venue and date unknown), and Melissen 1993 doesn't cite it; if it can't be confirmed, n = 4 and 5 belong to Melissen 1993."
   - "Melissen 1994 (n = 11) and Payan 1997 (n = 14) not read beyond their zbMATH reviews and secondary sources (Springer and ScienceDirect block automated access)."
 
 circle-in-square:
