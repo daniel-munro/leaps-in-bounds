@@ -72,11 +72,14 @@ cage:
   - "One of the 35 upper bounds in the survey wasn't added (#65)."
 
 debruijn-newman:
-  status: partial
-  reviewed: 2026-11-16
-  sources: [wikipedia-debruijn-newman]
+  status: complete
+  reviewed: 2026-11-19
+  sources: [rodgers-tao-2018, odlyzko-2000, csordas-o-s-v-1993, polymath-2019, platt-trudgian-2020, planat-raymond-2026]
   gaps:
-  - "History taken from Wikipedia; no survey read through."
+  - "Most originals before 2011 are paywalled and weren't read: Csordas-Norfolk-Varga 1987, te Riele 1990, Csordas-Ruttan-Varga 1991, Csordas-Smith-Varga 1994, de Bruijn 1950, Ki-Kim-Lee 2009. Their bounds are taken from Odlyzko 2000 (Section 1), Rodgers-Tao 2018 (Table 1) and the Polymath paper (Section 1)."
+  - "Norfolk, Ruttan and Varga's -0.385 (Progress in Approximation Theory, Springer 1992, 403-418, doi:10.1007/978-1-4612-2966-7_17) isn't in the history: Odlyzko 2000 places it between te Riele's -5 and Csordas-Ruttan-Varga's -0.0991 (1991-06), but its book appeared in 1992, from a conference held in March 1990, and no date that places it between the two was found."
+  - "Csordas-Smith-Varga's -4.379e-6 is dated 1993-11, from Csordas-Odlyzko-Smith-Varga citing it as to appear; its received date wasn't checked."
+  - "Since 2026-08, several unrefereed, computer-assisted preprints and certificate deposits have claimed unconditional upper bounds below 0.2 (Mosaic Intelligence 0.1875, 0.16 and 0.1595; Gomila 0.1787854; Planat 0.1732; Kornaus 0.172422; Gordon 0.158; Planat-Raymond 0.156821; Raymond 0.149396), listed in Planat-Raymond 2026, Table 1. They aren't in the history until they are checked or refereed. Conditional bounds (Hakimoglu-Brown 0.13963 and Raymond 0.107965 assuming no zeta zeros with real part above 7/8; Planat 0.148612 under unproved premises) are also left out."
 
 van-der-waerden:
   status: partial

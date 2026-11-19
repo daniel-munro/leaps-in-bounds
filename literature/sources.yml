@@ -1247,24 +1247,37 @@ csordas-o-s-v-1993:
   string: "Csordas, G., Odlyzko, A. M., Smith, W., & Varga, R. S. (1993). A new Lehmer pair of zeros and a new lower bound for the de Bruijn-Newman constant Λ. Electronic Transactions on Numerical Analysis, 1, 104-111."
   date: "1993-12"
   url: "https://etna.ricam.oeaw.ac.at/volumes/1993-2000/vol1/abstract.php?vol=1&pages=104-111"
+  notes: "Abstract: -5.895·10^-9 < Λ. Received 1993-11-24, published 1993-12."
+  added_by: daniel-munro
+
+csordas-smith-varga-1994:
+  string: "G. Csordas, W. Smith and R.S. Varga, Lehmer pairs of zeros, the de Bruijn-Newman constant Λ, and the Riemann hypothesis, Constructive Approximation 10 (1994) 107-129."
+  date: "1993-11"
+  doi: "https://doi.org/10.1007/BF01205170"
+  notes: "The bound -4.379·10^-6 < Λ, as reported by Csordas, Odlyzko, Smith and Varga (1993), eq. (1.6), Odlyzko (2000), Section 1, and Rodgers and Tao (2018), Table 1. Not read directly. Published 1994-03; dated by Csordas, Odlyzko, Smith and Varga (received 1993-11-24), who cite it as to appear and improve on it."
   added_by: daniel-munro
 
 odlyzko-2000:
   string: "Odlyzko, A. M. (2000). An improved bound for the de Bruijn-Newman constant. Numerical Algorithms, 25, 293-303."
   date: "2000-09"
+  url: "https://www-users.cse.umn.edu/~odlyzko/doc/debruijn.newman.pdf"
   doi: "https://doi.org/10.1023/A:1016677511798"
+  notes: "Abstract and Section 1: -2.7·10^-9 < Λ (the computation in Section 2 gives -2.63·10^-9). Section 1 recounts the earlier lower bounds. Odlyzko notes that roundoff errors are not fully controlled."
   added_by: daniel-munro
 
 saouter-gourdon-demichel-2011:
   string: "Saouter, Y., Gourdon, X., & Demichel, P. (2011). An improved lower bound for the de Bruijn-Newman constant. Mathematics of Computation, 80(276), 2281-2287."
   date: "2011-03-09"
   doi: "https://doi.org/10.1090/S0025-5718-2011-02472-5"
+  notes: "Abstract: Λ > -1.14541·10^-11."
   added_by: daniel-munro
 
 rodgers-tao-2018:
-  string: "Rodgers, B., & Tao, T. (2020, January). The de Bruijn-Newman constant is non-negative. In Forum of Mathematics, Pi (Vol. 8, p. e6). Cambridge University Press."
-  date: "2020-04-06"
+  string: "B. Rodgers and T. Tao, The de Bruijn-Newman constant is non-negative, Forum of Mathematics, Pi 8 (2020) e6, arXiv:1801.05914."
+  date: "2018-01-18"
+  url: "https://arxiv.org/abs/1801.05914"
   doi: "https://doi.org/10.1017/fmp.2020.6"
+  notes: "Theorem 1: Λ ≥ 0. Table 1 lists the earlier lower bounds."
   added_by: daniel-munro
 
 debruijn-1950:
@@ -1280,15 +1293,26 @@ ki-kim-lee-2009:
   added_by: daniel-munro
 
 polymath-2019:
-  string: "Polymath, D. H. J. (2019). Effective approximation of heat flow evolution of the Riemann ξ function, and a new upper bound for the de Bruijn-Newman constant. Research in the Mathematical Sciences, 6, 1-67."
-  date: "2019-08-26"
+  string: "D.H.J. Polymath, Effective approximation of heat flow evolution of the Riemann ξ function, and a new upper bound for the de Bruijn-Newman constant, Research in the Mathematical Sciences 6 (2019) 31, arXiv:1904.12438."
+  date: "2019-04-29"
+  url: "https://arxiv.org/abs/1904.12438"
   doi: "https://doi.org/10.1007/s40687-019-0193-1"
+  notes: "Theorem 1.1: Λ ≤ 0.22. Section 1 recounts de Bruijn's Λ ≤ 1/2 and Ki, Kim and Lee's Λ < 1/2."
   added_by: daniel-munro
 
 platt-trudgian-2020:
-  string: "Platt, D., & Trudgian, T. (2021). The Riemann hypothesis is true up to 3· 10 12. Bulletin of the London Mathematical Society, 53(3), 792-797."
-  date: "2021-01-22"
+  string: "D. Platt and T. Trudgian, The Riemann hypothesis is true up to 3·10^12, Bulletin of the London Mathematical Society 53 (2021) 792-797, arXiv:2004.09765."
+  date: "2020-04-21"
+  url: "https://arxiv.org/abs/2004.09765"
   doi: "https://doi.org/10.1112/blms.12460"
+  notes: "Corollary 2 (Section 3.4): Λ ≤ 0.2, from the Polymath criterion and the verification of the Riemann hypothesis to height 3·10^12."
+  added_by: daniel-munro
+
+planat-raymond-2026:
+  string: "M. Planat and D.J. Raymond, Certified collision exclusion and an unconditional upper bound Λ < 0.156821 for the de Bruijn-Newman constant, arXiv:2611.06245 (2026)."
+  date: "2026-11-04"
+  url: "https://arxiv.org/abs/2611.06245"
+  notes: "Unrefereed. Table 1 lists upper bounds on Λ with their logical and publication status, including several unrefereed 2026 claims. Its own bound 0.156821 isn't in the history (see coverage.yml)."
   added_by: daniel-munro
 
 # van der Waerden
