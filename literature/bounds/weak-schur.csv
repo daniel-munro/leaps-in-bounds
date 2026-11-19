@@ -3,7 +3,7 @@ weak-schur-1,2,,trivial,oeis-a072842-weak-schur
 weak-schur-1,,2,trivial,oeis-a072842-weak-schur
 weak-schur-2,8,,trivial,oeis-a072842-weak-schur
 weak-schur-2,,8,trivial,oeis-a072842-weak-schur
-weak-schur-3,23,,blanchard-harary-reis-2006,oeis-a072842-weak-schur
+weak-schur-3,23,,walker-1952,oeis-a072842-weak-schur
 weak-schur-3,,23,blanchard-harary-reis-2006,oeis-a072842-weak-schur
 weak-schur-4,66,,blanchard-harary-reis-2006,oeis-a072842-weak-schur
 weak-schur-4,,66,blanchard-harary-reis-2006,oeis-a072842-weak-schur

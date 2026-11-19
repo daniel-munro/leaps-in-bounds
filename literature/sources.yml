@@ -1850,18 +1850,25 @@ mckenna-2026:
 
 # Weak Schur numbers
 
+walker-1952:
+  string: "G.W. Walker, solution to Problem E985 (proposed by L. Moser), American Mathematical Monthly 59(4) (1952) 253."
+  date: "1952-04"
+  url: "https://www.jstor.org/stable/2306524"
+  notes: "Gives a partition of [1, 23] into three weakly sum-free sets (a, b, c distinct in a + b = c), so WS(3) >= 23, and states that there are just three such partitions and none extends to 24; the enumeration isn't given, so the upper bound is credited to Blanchard, Harary and Reis 2006. Also claims WS(4) = 66 and WS(5) = 196 (as N_4 = 67 and N_5 = 197) without partitions or proof."
+  added_by: daniel-munro
+
 blanchard-harary-reis-2006:
   string: "P.F. Blanchard, F. Harary and R. Reis, Partitions into sum-free sets, Integers 6 (2006) #A7."
   date: "2006-03-09"
   url: "https://math.colgate.edu/~integers/g7/g7.Abstract.html"
-  notes: "Values claimed without proof by G.W. Walker, American Mathematical Monthly 59 (1952) 253."
+  notes: "Section 3 proves WS(3) = 23 by hand, and Section 6 proves WS(4) = 66 by exhaustive computer search; Section 7 gives WS(5) >= 189. Walker 1952 had given a partition of [1, 23] and claimed WS(3) = 23, WS(4) = 66 and WS(5) = 196, without details for the upper bound or for k = 4 and 5."
   added_by: daniel-munro
 
 eliahou-et-al-2012:
   string: "S. Eliahou, J.M. Marín, M.P. Revuelta and M.I. Sanz, Weak Schur numbers and the search for G. W. Walker's lost partitions, Computers & Mathematics with Applications 63 (2012) 175-182."
   date: "2011-12-07"
   doi: "https://doi.org/10.1016/j.camwa.2011.11.006"
-  notes: "Not read directly (the publisher blocks automated access); its partitions of [1, 196] into 5 and of [1, 572] into 6 weakly sum-free sets are cited by Eliahou et al. 2013 and Rafilipojaona 2017. Le Bras et al. 2012 report that a note added before press in January 2012 claimed WS(6) >= 575; that claim isn't recorded here. Date is the online date in Crossref."
+  notes: "Received 2010-11-19, accepted 2011-11-03; the date is the online date in Crossref. Theorem 2.1 (p. 176) gives a partition of [1, 196] into 5 weakly sum-free sets, and Theorem 3.1 one of [1, 572] into 6. A note added in proof (p. 182) claims WS(6) >= 575 without a partition, after a note that Robilliard et al. had reached 574 while the paper was being refereed; the 575 isn't recorded here."
   added_by: daniel-munro
 
 robilliard-et-al-2012:

@@ -156,10 +156,9 @@ schur:
 weak-schur:
   status: complete
   reviewed: 2026-11-19
-  sources: [oeis-a072842-weak-schur, ageron-et-al-2021, eliahou-et-al-2013, rafilipojaona-2015]
+  sources: [oeis-a072842-weak-schur, ageron-et-al-2021, walker-1952, eliahou-et-al-2012, eliahou-et-al-2013, rafilipojaona-2015]
   gaps:
-  - "Eliahou et al. 2012 (doi:10.1016/j.camwa.2011.11.006) couldn't be read (publisher blocks automated access): WS(5) >= 196 and WS(6) >= 572 are taken from later papers by its authors, and its note added in proof claiming WS(6) >= 575, reported by Le Bras et al. 2012 and Bouzy 2015, isn't included."
-  - "Walker 1952 (Amer. Math. Monthly 59, 253, solution of E985) couldn't be read: it claimed WS(4) = 66 and WS(5) = 196 without proof, and may give partitions showing WS(3) >= 23 and WS(4) >= 66 before Blanchard, Harary and Reis 2006."
+  - "Eliahou et al. 2012 claim WS(6) >= 575 in a note added in proof, without a partition; it isn't recorded. Robilliard et al. (EA 2011, published 2012) was read only in its abstract, so its 574 keeps the date 2012 although Eliahou et al. say it came first."
   - "Sierpinski's upper bound WS(n) < 2^[n!e] (Theory of Numbers, part 2, 1959; Elementary Theory of Numbers, 1964), reported by Bornsztein 2002, isn't included: the book wasn't read."
   - "The lower bounds WS(n) >= S(n) implied by the Schur family, such as WS(8) >= 5286 and WS(9) >= 17694 from Rowley's 2019 Schur partitions, aren't included unless a source states them for WS."
 
