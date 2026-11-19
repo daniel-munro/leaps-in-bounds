@@ -4218,7 +4218,7 @@ lunnon-1971:
   string: "W.F. Lunnon, Multi-dimensional map-folding, The Computer Journal 14(1) (1971) 75-80."
   date: "1971"
   doi: "https://doi.org/10.1093/comjnl/14.1.75"
-  notes: "Not read directly. OEIS A001416 attributes its terms up to 3 X 7 (in the entry, and in Sloane's 1973 Handbook, before 2017) to this paper."
+  notes: "Received November 1969. Table 1 (p. 77) gives G for strips of up to 12 leaves (with G(9) misprinted as 4356 for 4536), for p X q maps up to 3 X 7, 4 X 4 and 5 X 4, and for 2^d maps up to d = 6. OEIS A001416 attributes its terms up to 3 X 7 (in the entry, and in Sloane's 1973 Handbook, before 2017) to this paper."
   added_by: daniel-munro
 
 lunnon-irvine-2017:

@@ -88,9 +88,9 @@ van-der-waerden:
 stamp-folding:
   status: complete
   reviewed: 2026-11-19
-  sources: [oeis-a000136-stamp-folding, sainte-lague-1926, sade-1949, touchard-1950, lunnon-1968, koehler-1968, di-francesco-golinelli-guitter-1996]
+  sources: [oeis-a000136-stamp-folding, sainte-lague-1926, sade-1949, touchard-1950, lunnon-1968, koehler-1968, lunnon-1971, di-francesco-golinelli-guitter-1996]
   gaps:
-  - "Lunnon, Multi-dimensional map-folding, Computer Journal 14 (1971) 75-80, not read (the publisher's site serves a bot check). Gardner (Wheels, Life and Other Mathematical Amusements, 1983, ch. 7) says a later paper of Lunnon's carried the strip counts to n = 28, so it may be the first source for n = 25 to 28, now credited to Di Francesco, Golinelli and Guitter 1996."
+  - "Gardner (Wheels, Life and Other Mathematical Amusements, 1983, ch. 7, p. 61) and MathWorld say a later paper of Lunnon's carried the strip counts to n = 28. It isn't Lunnon 1971 (Computer Journal 14, 75-80), whose Table 1 stops at 12 leaves; Gardner also lists an unpublished 'The Map-Folding Problem Revisited'. If that was ever public, it may be the first source for n = 25 to 28, now credited to Di Francesco, Golinelli and Guitter 1996."
   - "Sainte-Laguë, Avec des nombres et des lignes (Vuibert, 1937; 3rd ed. 1946), Part 2, ch. 2, pp. 147-162, which discusses the stamp problem, not found online. It could correct the 1926 values for n = 7 to 10 before Sade 1949."
 
 map-folding:
