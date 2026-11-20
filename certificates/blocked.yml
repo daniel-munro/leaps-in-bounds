@@ -43,14 +43,35 @@
     multiples of square roots, so rounded packings certify slightly weaker
     bounds (#72). Certifying the records needs more general exact arithmetic.
 
-- constants: [stamp-folding-14, stamp-folding-15, stamp-folding-16, stamp-folding-17, stamp-folding-18,
+- constants: [stamp-folding-16, stamp-folding-17, stamp-folding-18,
     stamp-folding-19, stamp-folding-20, stamp-folding-21, stamp-folding-22, stamp-folding-23,
     stamp-folding-24, stamp-folding-25, stamp-folding-26, stamp-folding-27, stamp-folding-28,
     stamp-folding-29]
   bound: lower
   reason: too-large
-  checked: 2026-11-17
+  checked: 2026-11-20
   detail: >-
-    A witness lists every folding, and n = 13 already takes 288 kB with xz; the
-    count grows by about 3.5 times per stamp, so n = 14 is over the size limit.
-    A lower bound could come instead from a Lean proof that counts the foldings.
+    A witness lists every folding. A generator that prints them certifies n = 14
+    and 15, but n = 16 (17,622,410 foldings of 17 bytes each) is 300 MB, over the
+    200 MB the folding checker can read at once, and the count grows by about
+    3.5 times per stamp. A checker that reads generator output as a stream would
+    allow n = 16 and perhaps 17 (about 1 GB); beyond that, a lower bound could
+    come from a Lean proof that counts the foldings.
+
+- constants: [map-folding-2-11, map-folding-2-12, map-folding-2-13, map-folding-2-14, map-folding-2-15,
+    map-folding-2-16, map-folding-2-17, map-folding-2-18, map-folding-3-7, map-folding-3-8,
+    map-folding-3-9, map-folding-3-10, map-folding-3-11, map-folding-3-12, map-folding-3-13,
+    map-folding-3-14, map-folding-4-6, map-folding-4-7, map-folding-4-8, map-folding-4-10,
+    map-folding-5-5, map-folding-5-6, map-folding-5-7, map-folding-5-8, map-folding-6-6,
+    map-folding-6-7, map-folding-7-7]
+  bound: lower
+  reason: too-large
+  checked: 2026-11-20
+  detail: >-
+    A witness lists every folding. Generators that print them certify the counts
+    up to 2 × 10 (9,381,840 foldings, 197 MB), 3 × 6 and 4 × 5, but the next
+    counts are over the 200 MB the folding checker can read at once: 3 × 7 is
+    21,582,624 foldings (475 MB), 2 × 11 is 51,081,844 (1.2 GB) and 4 × 6 is
+    94,808,928 (2.1 GB). A checker that reads generator output as a stream might
+    allow 3 × 7 and 2 × 11 within the hour; beyond that, a lower bound could
+    come from a Lean proof that counts the foldings.

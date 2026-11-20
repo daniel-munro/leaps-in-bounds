@@ -1,0 +1,12 @@
+constant: map-folding-7-11
+bound: lower
+value: 900000
+kind: witness
+witness:
+  format: generator
+  file: map-folding-7-11-lower-900000.py
+  output: stacks
+  output_sha256: 2f68d65e9ed41f2ae73bbfa3a509a7e8fb71732797c2303c0d4efa0576202094
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints foldings of the 7 × 11 map, one stack per row from the bottom up, cells numbered row by row as decimals separated by commas. Written by an AI agent (Claude Opus 5.5). Each is a product of strip foldings: for foldings s of the strip of 11 stamps and t of the strip of 7, fold every row like s (reversed in odd rows) and then fold the strip of rows like t; or the same with rows and columns swapped. The first 450000 products of each kind (of 2 s(7) s(11) in all), in the order a depth-first search finds the strip foldings, as many as keep the output under the 200 MB limit for a checker that reads it all at once. The output is 198.9 MB; generating and checking it takes about 5 minutes on a heavily loaded machine.'

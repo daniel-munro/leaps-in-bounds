@@ -1,0 +1,12 @@
+constant: stamp-folding-15
+bound: lower
+value: 5202690
+kind: witness
+witness:
+  format: generator
+  file: stamp-folding-15-lower-5202690.py
+  output: stacks
+  output_sha256: 1e3d7341c68f973777942dce3fac9e49d9c049773ca1439d53dbb320a7e37625
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints every folding of a strip of 15 stamps, numbered 0 to 14 in base 36, one stack per row from the bottom up. Written by an AI agent (Claude Opus 5.5): a depth-first search that inserts the cells into the stack one at a time, in order, and abandons a partial stack as soon as two creases on the same edge cross; the gaps where each new cell can go are found by one scan of the nesting of the creases on each edge it adds a crease to. The count matches OEIS A000136. The output is 83.2 MB, which the generator prints in about 6 seconds; generating and checking it took about 3 minutes, with 1.4 GB of memory, on a heavily loaded machine.'

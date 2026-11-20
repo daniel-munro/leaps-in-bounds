@@ -1,0 +1,12 @@
+constant: map-folding-2-10
+bound: lower
+value: 9381840
+kind: witness
+witness:
+  format: generator
+  file: map-folding-2-10-lower-9381840.py
+  output: stacks
+  output_sha256: c00d1f636e2a6c83db60c07791ed367e4033b292da32d826c7d71aa3fcb9cda7
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints every folding of the 2 × 10 map, cells numbered row by row in base 36, one stack per row from the bottom up. Written by an AI agent (Claude Opus 5.5): a depth-first search that inserts the cells into the stack one at a time, in order, and abandons a partial stack as soon as two creases on the same edge cross; the gaps where each new cell can go are found by one scan of the nesting of the creases on each edge it adds a crease to. The count matches OEIS A001415. The output is 197.0 MB, which the generator prints in about 140 seconds; generating and checking it took about 19 minutes (8 minutes of CPU), with 2.6 GB of memory; the output is just under the 200 MB limit, on a heavily loaded machine.'
