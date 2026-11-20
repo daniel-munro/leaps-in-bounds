@@ -50,10 +50,34 @@ def map_batches(func: Callable[..., bytes], rows: Iterator[str], size: int, *arg
             yield pending.popleft().result()
 
 
+def sorted_distinct(values: np.ndarray) -> np.ndarray:
+    """The distinct values of a sorted array."""
+    if len(values) == 0:
+        return values
+    keep = np.empty(len(values), dtype=bool)
+    keep[0] = True
+    np.not_equal(values[1:], values[:-1], out=keep[1:])
+    return values[keep]
+
+
+def merge_distinct(distinct: np.ndarray, new: list[np.ndarray]) -> np.ndarray:
+    """The sorted distinct values of distinct (sorted and distinct already)
+    and of the arrays in new. The new values are sorted, then merged in by a
+    stable sort, which merges two sorted runs in linear time. (np.unique can
+    take ten times as long, and much more memory, as it hashes the values.)"""
+    batch = np.concatenate(new) if new else np.zeros(0, dtype=np.uint64)
+    batch.sort()
+    merged = np.concatenate([distinct, sorted_distinct(batch)])
+    del batch
+    merged.sort(kind="stable")
+    return sorted_distinct(merged)
+
+
 def count_distinct(digests: Iterator[bytes]) -> tuple[int, int]:
     """The number of 8-byte digests, and the number of distinct ones. They're
     kept sorted and without repeats, merging new ones in now and then: 8 bytes
-    of memory per distinct digest."""
+    of memory per distinct digest, and about three times that at the peak of
+    a merge."""
     distinct = np.zeros(0, dtype=np.uint64)
     new: list[np.ndarray] = []
     total = waiting = 0
@@ -62,7 +86,7 @@ def count_distinct(digests: Iterator[bytes]) -> tuple[int, int]:
         total += len(new[-1])
         waiting += len(new[-1])
         if waiting >= 1 << 24:
-            distinct = np.unique(np.concatenate([distinct, *new]))
+            distinct = merge_distinct(distinct, new)
             new, waiting = [], 0
-    distinct = np.unique(np.concatenate([distinct, *new]))
+    distinct = merge_distinct(distinct, new)
     return total, len(distinct)
