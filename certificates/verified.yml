@@ -67,6 +67,11 @@ affine-line-arrangements-7-lower-12000:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-7-lower-37830:
+  sha256: fbc8120e56271271fe4c6bb140d02b368dc3d2457501b67527a0dbf84816ed20
+  checker: 385f3a47bd027f3a62c6e0cf66c551c96e44bf45
+  verified_by: daniel-munro
+  date: '2026-11-20'
 affine-line-arrangements-8-lower-160000:
   sha256: 9d5749d324efc7250dd6f228ed37d91bb05ef364de4c5f3cd6828396221e74c1
   checker: 1d4237e3849c325517ddcac5d5f385d44f777700
@@ -77,6 +82,11 @@ affine-line-arrangements-8-lower-8000:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-9-lower-3110345:
+  sha256: b8e53b14a74fc4f7dbe2f34e264e368be190aab0cb64b408b019645f5adbf37f
+  checker: 385f3a47bd027f3a62c6e0cf66c551c96e44bf45
+  verified_by: daniel-munro
+  date: '2026-11-20'
 affine-line-arrangements-9-lower-5500:
   sha256: 77fe22fe6dce9a4d43f091e5a6f80bef291af62bb1e90f2636bf7c4088266a63
   checker: 5af057d28c18484643637ed3cb84d61047407389
@@ -157,11 +167,21 @@ affine-line-arrangements-general-position-7-lower-922:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+affine-line-arrangements-general-position-8-lower-38609:
+  sha256: 7cf7eab7c0331dd6e5238978fb60f77c71c295033e0ca381764d1a144c90d512
+  checker: 385f3a47bd027f3a62c6e0cf66c551c96e44bf45
+  verified_by: daniel-munro
+  date: '2026-11-20'
 affine-line-arrangements-general-position-8-lower-8000:
   sha256: d9e2bea10179275fa551cc59747fae89a1f93a897836adcdae05c636b4e6099b
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+affine-line-arrangements-general-position-9-lower-3110345:
+  sha256: 0b1b05989eb1812902061585e8248409a572b082235edf9e52c82f475f0c79b3
+  checker: 385f3a47bd027f3a62c6e0cf66c551c96e44bf45
+  verified_by: daniel-munro
+  date: '2026-11-20'
 affine-line-arrangements-general-position-9-lower-5500:
   sha256: 4c9ce5c72ed17d42a4ed00a9889656ea7a80dd34af6abdc5b4c457724b5012ca
   checker: 5af057d28c18484643637ed3cb84d61047407389

@@ -1,0 +1,12 @@
+constant: affine-line-arrangements-7
+bound: lower
+value: 37830
+kind: witness
+witness:
+  format: generator
+  file: affine-line-arrangements-7-lower-37830.py
+  output: lines
+  output_sha256: fe8e2c7a79729eb6cf6b037a35dbbd0ccf064c48e4e57a3b9a2a92a52b073a9f
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints one arrangement per row: a b c for each line a x + b y = c. Written by an AI agent (Claude Opus 5.5), and it matches the known value. It starts from the 791 arrangements of 6 lines in affine-line-arrangements-6-lower-791 and adds a line through a point of each face (vertex, edge and cell) of the dual arrangement, where the new line y = m x + k is the point (m, k), and the lines through a vertex of the arrangement, or parallel to one of its lines, are the dual lines. This gives 37821 types, with exact rational arithmetic. The other 9 come from marking a different line as the line at infinity in each arrangement found, by a projective map: an arrangement of 7 lines is one of 8 projective lines with one marked, parallel lines meeting on it. Types are told apart by a canonical form that lists the lines through each vertex along each line, from the ends of the lines in order around a large circle; on the first 37821 arrangements found, it gave as many types as arrangement_type from the checker. No random numbers, so the output is the same every time. Running the generator took about 14 minutes of CPU, and checking its output about 4 more, on an 8-core laptop busy with other jobs.'

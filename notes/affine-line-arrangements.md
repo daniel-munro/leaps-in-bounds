@@ -5,7 +5,7 @@
 A lower bound of `N` is certified by `N` integer arrangements of pairwise different combinatorial types (see the family in [certificates/README.md](../certificates/README.md)). The known values for up to 7 lines are all realizable: an arrangement of `n` affine lines is an arrangement of `n + 1` projective lines with one marked as the line at infinity, and every arrangement of at most 8 pseudolines is stretchable (Goodman and Pollack). So matching the literature is a matter of finding a realization of every type.
 
 - 1 to 6 lines: matched (1, 2, 4, 9, 47, 791), with coefficients of at most 16.
-- 7 lines: not yet. The grid search found 34594 of the 37830 types in about 5 rounds of 96000 random arrangements each, while the machine was busy, and was still finding a few hundred new types per round when stopped. Continuing it, then extending the 6-line types by special lines to fill in the rest, looks feasible. The checker takes about 3 ms per arrangement of 7 lines, so a certificate would take about 2 minutes to check.
+- 7 lines: matched (37830), by a generator: see [below](#all-37830-types-of-7-lines-by-extension-in-the-dual-plane-november-2026). Before that, the grid search found 34594 of the 37830 types in about 5 rounds of 96000 random arrangements each, and was still finding a few hundred new types per round when stopped.
 
 How the realizations were found (Python, exact rational arithmetic, using `arrangement_type` from `scripts/certificates/families/line_arrangement.py` to tell types apart):
 
@@ -27,6 +27,20 @@ Each generator draws two kinds of arrangement, and prints one when its canonical
 Arrangements not in general position cost far more to check, since `arrangement_type` computes all the covectors with exact fractions: alone, about 4 ms for 8 lines, 8 ms for 10 and 15 ms for 12, against 0.2 to 0.55 ms in general position, and several times more with other jobs running. So the witnesses for 9 to 12 lines are in general position except for 2000 arrangements each, and are a little larger than those for [arrangements in general position](affine-line-arrangements-general-position.md#generator-witnesses-november-2026) with the same number of lines. For 8 lines, there are only 38609 types in general position, and random draws find new ones slowly after about 30000 (32000 took about a minute), so the witness has 34000 of them and 126000 others. A first try with 300000 for 8 lines and about 1.2 million for 12 passed, but took 46 and 63 minutes with 8 jobs at once, and the checker used 4 GB for 8 lines, so the counts were cut back.
 
 The limits now are the checker's time, and its memory, about 1.5 GB per million arrangements in general position and roughly 15 GB per million others. A faster key for arrangements not in general position, like the crossing-order key, would allow much larger bounds for the affine family, since nearly all types of 8 or more lines are not in general position. The 200 MB limit on a generator's output would allow about 2 million arrangements of 12 lines.
+
+## All 37830 types of 7 lines, by extension in the dual plane (November 2026)
+
+`affine-line-arrangements-7-lower-37830` matches the known value with a [generator](../certificates/README.md#generators), by the same method as for [8 lines in general position](affine-line-arrangements-general-position.md#all-38609-types-of-8-lines-by-extension-in-the-dual-plane-november-2026), but using every face of the dual arrangement rather than only its cells:
+
+1. Start from the 791 arrangements of 6 lines in the existing witness (embedded, 6.5 kB).
+2. A new line `y = m x + k` is a point `(m, k)` of the dual plane; the lines through a vertex `(x0, y0)` of the arrangement are the dual line `k = y0 - m x0`, and the lines parallel to a line of slope `s` are the dual line `m = s`. The type of the new arrangement is constant on each face of this dual arrangement, so take every vertex of it (lines through two vertices, or through a vertex parallel to a line), a point inside each edge (through one vertex, or parallel to a line), points on both sides of each of those (cells), except the points that are the lines themselves, which split the dual lines `m = s` too. About 500 points per arrangement; 37821 types, in about 10 minutes of CPU with exact fractions.
+3. Mark a different line as the line at infinity, by a projective map, in each arrangement found, repeating on the new ones: an arrangement of 7 lines is one of 8 projective lines with one marked, lines parallel when they meet on it. This found the last 9.
+
+No rounding is possible for degenerate arrangements, but starting from the small coefficients of the 6-line witness keeps them to at most 9 digits. The generator took about 14 minutes of CPU on a busy 8-core laptop, and checking its output about 4 more. Types are told apart with the generator's form (the lines through each vertex, along each line, from the ends in order around a large circle); on the 37821 arrangements from step 2 it gave exactly as many types as the checker's `arrangement_type`, which took about 10 minutes for them. Deleting a random line and adding one back in every face, instead of step 3, found 4 of the 9 in about 4 minutes.
+
+## 9 lines from the search in general position (November 2026)
+
+`affine-line-arrangements-9-lower-3110345` is the generator for [9 lines in general position](affine-line-arrangements-general-position.md#9-lines-3110345-types-november-2026), whose 3110345 types count here too, and are cheap to check. For 8 lines the same idea would give the 38609 types in general position plus the 126000 others of the 160000 witness, a small gain not made here. Larger bounds for 8 lines need types not in general position, which the checker handles about 100 times more slowly; extending the 37830 types of 7 lines through every face of the dual arrangement would give millions of them, but too many to check in an hour with `arrangement_type`.
 
 ## Ideas
 

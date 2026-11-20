@@ -1,0 +1,12 @@
+constant: affine-line-arrangements-9
+bound: lower
+value: 3110345
+kind: witness
+witness:
+  format: generator
+  file: affine-line-arrangements-9-lower-3110345.py
+  output: lines
+  output_sha256: 149ed39caec3af07be6b376d2a6adea9b20b44a7aea45e777996e8ced97226be
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'The same generator as affine-line-arrangements-general-position-9-lower-3110345, whose arrangements in general position are also arrangements of 9 lines: one per row, a b c for each line a x + b y = c. Written by an AI agent (Claude Opus 5.5). It finds all 38609 types of 8 lines in general position (extending the 922 types of 7 lines by a line in each cell of the dual arrangement, and marking a different line as the line at infinity), then adds a line to each in each cell of its dual arrangement, with floating point, the new line rounded to integers and the arrangement checked exactly to be in general position, and for each new arrangement marks each of its other lines as the line at infinity, by an exact projective map. An arrangement is printed when its canonical form, general_arrangement_type computed with floating point in numpy, is new. No random numbers, so the output is the same every time. Only arrangements in general position, so far from all types of 9 lines. Running the generator and checking its 354 MB of output took about 41 minutes of CPU (30 for the generator), on an 8-core laptop busy with other jobs.'
