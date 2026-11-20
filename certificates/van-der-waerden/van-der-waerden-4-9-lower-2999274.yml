@@ -1,0 +1,13 @@
+constant: van-der-waerden-4-9
+bound: lower
+value: 2999274
+kind: witness
+witness:
+  format: generator
+  file: van-der-waerden-4-9-lower-2999274.py
+  output: coloring
+  output_sha256: cf36968c70578ac75958f72eae5026d9364393b0261e190b920e93deb4f4bd63
+submitted_by: daniel-munro
+date: 2026-11-20
+source: rabung-1979
+notes: 'Rabung''s construction with p = 374909, as a generator: integer x from 0 to 2999272 gets the discrete logarithm of x mod 374909 base 2, mod 4, and the multiples 0, 374909, ..., 2999272 of 374909 get colors 0, 1, 2, ... mod 4. No 9 cyclically consecutive residues mod 374909 have their nonzero members all the same color, so no progression with difference not divisible by 374909 is monochromatic, and the only one with difference divisible by 374909 is the multiples, which aren''t. 374909 is the largest prime = 1 mod 4 passing that test (a second each to test) below the size where r n^2 = 3.6 * 10^13, so that the checker takes about 20 minutes; the generator takes under a second. The record is far larger. Found by an AI agent (Claude Opus 5.5).'

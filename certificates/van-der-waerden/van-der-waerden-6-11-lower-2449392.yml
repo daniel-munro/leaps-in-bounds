@@ -1,0 +1,13 @@
+constant: van-der-waerden-6-11
+bound: lower
+value: 2449392
+kind: witness
+witness:
+  format: generator
+  file: van-der-waerden-6-11-lower-2449392.py
+  output: coloring
+  output_sha256: 39387336dc3edd6d4b1a9ccadf6d7c460ed7a2696d3571014b2ecca384c6a9e7
+submitted_by: daniel-munro
+date: 2026-11-20
+source: rabung-1979
+notes: 'Rabung''s construction with p = 244939, as a generator: integer x from 0 to 2449390 gets the discrete logarithm of x mod 244939 base 2, mod 6, and the multiples 0, 244939, ..., 2449390 of 244939 get colors 0, 1, 2, ... mod 6. No 11 cyclically consecutive residues mod 244939 have their nonzero members all the same color, so no progression with difference not divisible by 244939 is monochromatic, and the only one with difference divisible by 244939 is the multiples, which aren''t. 244939 is the largest prime = 1 mod 6 passing that test (a second each to test) below the size where r n^2 = 3.6 * 10^13, so that the checker takes about 20 minutes; the generator takes under a second. The record is far larger. Found by an AI agent (Claude Opus 5.5).'
