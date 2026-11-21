@@ -1,0 +1,12 @@
+constant: map-folding-5-11
+bound: lower
+value: 4631000
+kind: witness
+witness:
+  format: generator
+  file: map-folding-5-11-lower-4631000.py
+  output: stacks
+  output_sha256: 2d3119de68110c1fdad4cecd900ca63b5e7996553be6fb91c13feff114481b97
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints foldings of the 5 × 11 map, one stack per row from the bottom up, cells numbered row by row with two base-36 characters per cell, read by the checker as a stream. Written by an AI agent (Claude Opus 5.5). Each is a product of strip foldings: for foldings s of the strip of 11 stamps and t of the strip of 5, fold every row like s (reversed in odd rows) and then fold the strip of rows like t; or the same with rows and columns swapped. All 2 s(5) s(11) = 2 × 50 × 46310 = 4631000 of these products, which are distinct (the checker confirms it), half of each kind.'

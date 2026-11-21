@@ -1,0 +1,12 @@
+constant: map-folding-6-18
+bound: lower
+value: 59000000
+kind: witness
+witness:
+  format: generator
+  file: map-folding-6-18-lower-59000000.py
+  output: stacks
+  output_sha256: f910d8b25882621ecb0506e15b0a42b2ac61f020618734fecc41725c35186b53
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints foldings of the 6 × 18 map, one stack per row from the bottom up, cells numbered row by row with two base-36 characters per cell, read by the checker as a stream. Written by an AI agent (Claude Opus 5.5). Each is a product of strip foldings: for foldings s of the strip of 18 stamps and t of the strip of 6, fold every row like s (reversed in odd rows) and then fold the strip of rows like t; or the same with rows and columns swapped. The first 29500000 products of each kind (of 2 s(6) s(18) = 53262831744 in all), in the order a depth-first search finds the strip foldings; the number is set so that checking takes about 5 minutes.'
