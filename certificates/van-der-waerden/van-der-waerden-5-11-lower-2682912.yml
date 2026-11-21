@@ -1,0 +1,13 @@
+constant: van-der-waerden-5-11
+bound: lower
+value: 2682912
+kind: witness
+witness:
+  format: generator
+  file: van-der-waerden-5-11-lower-2682912.py
+  output: coloring
+  output_sha256: 390bc9b225e28e5a7a382ea9797341fdc3c9f739ec9987364e0f69b2bbba426b
+submitted_by: daniel-munro
+date: 2026-11-20
+source: rabung-1979
+notes: 'Rabung''s construction with p = 268291, as a generator: integer x from 0 to 2682910 gets the discrete logarithm of x mod 268291 base 2, mod 5, and the multiples 0, 268291, ..., 2682910 of 268291 get colors 0, 1, 2, ... mod 5. No 11 cyclically consecutive residues mod 268291 have their nonzero members all the same color, so no progression with difference not divisible by 268291 is monochromatic, and the only one with difference divisible by 268291 is the multiples, which aren''t. 268291 is the largest prime = 1 mod 5 passing that test (a second each to test) below the size where r n^2 = 3.6 * 10^13, so that the checker takes about 20 minutes; the generator takes under a second. The record is far larger. Found by an AI agent (Claude Opus 5.5).'

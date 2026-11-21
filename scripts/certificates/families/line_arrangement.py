@@ -1,19 +1,15 @@
 """Arrangements of lines in the plane, and those in general position."""
 
-import collections
 import hashlib
 import itertools
 import math
-import os
 import re
-from concurrent.futures import Future, ProcessPoolExecutor
 from fractions import Fraction
-from typing import Any, Iterator, Mapping
-
-import numpy as np
+from typing import Any, Mapping
 
 from ..errors import CertificateError
 from ..family import Family
+from ..streaming import count_distinct, map_batches
 from ..witness import witness_lines
 
 
@@ -302,62 +298,6 @@ def type_digests(rows: list[str], n: int, general: bool, first: int) -> bytes:
     return bytes(digests)
 
 
-def batches(rows: Iterator[str], size: int) -> Iterator[tuple[int, list[str]]]:
-    """The non-blank rows, in batches, with the number of the first in each."""
-    batch: list[str] = []
-    first = 1
-    for row in rows:
-        if row.strip():
-            batch.append(row)
-            if len(batch) == size:
-                yield first, batch
-                first += size
-                batch = []
-    if batch:
-        yield first, batch
-
-
-def all_type_digests(rows: Iterator[str], n: int, general: bool) -> Iterator[bytes]:
-    """type_digests for each batch of rows, in order, checking batches in
-    parallel if there's more than one."""
-    rows = batches(rows, BATCH_ROWS)
-    first_batch = next(rows, None)
-    second_batch = next(rows, None)
-    if first_batch is None:
-        return
-    if second_batch is None:
-        yield type_digests(first_batch[1], n, general, first_batch[0])
-        return
-    workers = os.cpu_count() or 1
-    with ProcessPoolExecutor(max_workers=workers) as pool:
-        pending: collections.deque[Future[bytes]] = collections.deque()
-        for first, batch in itertools.chain([first_batch, second_batch], rows):
-            # Keep a few batches queued for each process, but not the whole
-            # witness, which is read as it goes
-            if len(pending) >= 2 * workers:
-                yield pending.popleft().result()
-            pending.append(pool.submit(type_digests, batch, n, general, first))
-        while pending:
-            yield pending.popleft().result()
-
-
-def count_distinct(digests: Iterator[bytes]) -> tuple[int, int]:
-    """The number of 8-byte digests, and the number of distinct ones. They're
-    kept sorted and without repeats, merging new ones in now and then."""
-    distinct = np.zeros(0, dtype=np.uint64)
-    new: list[np.ndarray] = []
-    total = waiting = 0
-    for chunk in digests:
-        new.append(np.frombuffer(chunk, dtype=np.uint64))
-        total += len(new[-1])
-        waiting += len(new[-1])
-        if waiting >= 1 << 24:
-            distinct = np.unique(np.concatenate([distinct, *new]))
-            new, waiting = [], 0
-    distinct = np.unique(np.concatenate([distinct, *new]))
-    return total, len(distinct)
-
-
 def line_arrangement_witness(params: Mapping[str, int], bound: str, value: int, cert: Mapping[str, Any], general: bool) -> None:
     """There are at least `value` types of arrangements of n lines (in general
     position) when the witness has arrangements of at least `value` types.
@@ -372,7 +312,7 @@ def line_arrangement_witness(params: Mapping[str, int], bound: str, value: int, 
     if cert["witness"].get("format") != "lines":
         raise CertificateError("Line arrangement witnesses must use format: lines")
     n = params["n"]
-    total, distinct = count_distinct(all_type_digests(witness_lines(cert), n, general))
+    total, distinct = count_distinct(map_batches(type_digests, witness_lines(cert), BATCH_ROWS, n, general))
     if distinct < value:
         raise CertificateError(f"Witness has {total} arrangements of {distinct} distinct types, fewer than {value}")
 

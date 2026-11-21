@@ -3941,7 +3941,7 @@ monroe-2017:
   string: "D. Monroe, New Lower Bounds for van der Waerden Numbers Using Distributed Computing, arXiv:1603.03301v4."
   date: "2017-11-06"
   url: "https://arxiv.org/abs/1603.03301v4"
-  notes: "First version with bounds from the recursions of Xu and of Blankenship, Cummings and Taranchuk. Its W(4,6) > 157348 was given as W(4,6) > 157209 in v6 (2019) and restored in v7 (2022)."
+  notes: "First version with bounds from the recursions of Xu and of Blankenship, Cummings and Taranchuk. Table 3 credits the 4-color bounds for lengths 6 to 14 and W(6,6) to xu-2013, and the 5- and 6-color bounds to Blankenship, Cummings and Taranchuk, but neither paper gives these values (xu-2013 gives only W(4,7) >= 2284752, and Blankenship et al.'s own table has smaller ones), so they first appear here. Table 2 gives them as products, such as 3,703 x 617 for W(4,7) > 2284751, which is what Xu's theorem gives, although the text restates the theorem with > for its >=. Its W(4,6) > 157348 is 1,132 x 139, using W(2,6) = 1132 where Xu's theorem uses W(2,6) - 1 = 1131, which gives W(4,6) >= 157210; no construction for 157349 is given. W(5,6) > 786740 is 5 x 157348, from it. W(4,6) > 157348 was given as W(4,6) > 157209 in v6 (2019) and restored in v7 (2022)."
   added_by: daniel-munro
 
 komkov-2018:
@@ -4843,4 +4843,11 @@ di-francesco-golinelli-guitter-1996:
   date: "1996-07-04"
   url: "https://arxiv.org/abs/hep-th/9607039"
   notes: "Table I in Appendix A gives the numbers of semi-meanders for n = 1 to 29, but not the numbers of stamp foldings. Those are n times the number of semi-meanders (a formula in OEIS A000136), which gives every term of A000136 up to n = 29."
+  added_by: daniel-munro
+
+xu-2013:
+  string: "X. Xu, A generalization of sets without long arithmetic progressions based on Szekeres algorithm, Journal of Number Theory 133(11) (2013) 3670-3677."
+  date: "2013-07-17"
+  doi: "https://doi.org/10.1016/j.jnt.2013.05.008"
+  notes: "Theorem 4: if k >= 3, s, t >= 2, 5 <= n < WR_s(k) and the least prime divisor of n is greater than k, then W_st(k) >= n(W_t(k) - 1) + 1, where W_r(k) is the number for r colors. The only value given is W(4,7) >= 617 x 3703 + 1 = 2284752 (Section 3), from Rabung's 2-coloring of Z_617 and W(2,7) > 3703. Monroe (arXiv:1603.03301) restates the theorem with >, which would give one more, and credits more values to this paper than it gives. Date: available online."
   added_by: daniel-munro

@@ -1,0 +1,11 @@
+constant: van-der-waerden-4-8
+bound: lower
+value: 2999615
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-4-8-lower-2999615.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-20
+source: monroe-2019
+notes: 'Xu''s product construction, W(4,8) > 1069 L for a 2-coloring of L integers with no monochromatic 8-term progression: integer x from 0 to 2999613 gets color a + 2b, where a is the discrete logarithm of x mod 1069 base 6 mod 2 (0 for multiples of 1069), and b is the color of the integer part of x / 1069 in the first 2806 integers of the coloring of van-der-waerden-2-8-lower-11496. A progression whose difference is a multiple of 1069 is broken by b, and any other by a, since no 8 cyclically consecutive residues mod 1069 have their nonzero members in the same class. Truncated so that r n^2 = 3.6 * 10^13 and the checker takes about 20 minutes (plain Rabung colorings of this size fail the window test for 4 colors and k = 8). The record is far larger. Built by an AI agent (Claude Opus 5.5) in a few seconds.'

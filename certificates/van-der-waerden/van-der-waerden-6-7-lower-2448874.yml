@@ -1,0 +1,11 @@
+constant: van-der-waerden-6-7
+bound: lower
+value: 2448874
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-6-7-lower-2448874.txt.xz
+submitted_by: daniel-munro
+date: 2026-11-20
+source: monroe-2019
+notes: 'Xu''s product construction, W(6,7) > 617 L for a 3-coloring of L integers with no monochromatic 7-term progression: integer x from 0 to 2448872 gets color a + 2b, where a is the discrete logarithm of x mod 617 base 3 mod 2 (0 for multiples of 617), and b is the color of the integer part of x / 617 in the first 3969 integers of the coloring of van-der-waerden-3-7-lower-48812. A progression whose difference is a multiple of 617 is broken by b, and any other by a, since no 7 cyclically consecutive residues mod 617 have their nonzero members in the same class. Truncated so that r n^2 = 3.6 * 10^13 and the checker takes about 20 minutes (plain Rabung colorings of this size rarely pass the window test for 6 colors and k = 7). The record is far larger. Built by an AI agent (Claude Opus 5.5) in a few seconds.'

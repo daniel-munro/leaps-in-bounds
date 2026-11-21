@@ -92,9 +92,10 @@ debruijn-newman:
 
 van-der-waerden:
   status: partial
-  reviewed: 2026-11-17
-  sources: [wikipedia-van-der-waerden]
+  reviewed: 2026-11-20
+  sources: [wikipedia-van-der-waerden, monroe-2017, xu-2013, blankenship-c-t-2018]
   gaps:
+  - "W(4,6) >= 157349 (monroe-2017, monroe-2022) is 1,132 x 139 + 1, using W(2,6) = 1132 where Xu's theorem uses W(2,6) - 1; Xu's theorem gives 157210, as in monroe-2019. No construction for 157349 is known here, and W(5,6) >= 786741 depends on it. Monroe's code is at https://github.com/hmonroe/vdw if anyone wants to check how it was computed."
   - "History assembled from Berlekamp, Rabung 1979, Herwig et al., Heule, SAT@Delft, Monroe, Komkov and Rowley (#69), but no single survey covers it; rows were once credited to Rabung-Lotts 2012 or Blankenship 2018 for values known earlier (#33)."
 
 stamp-folding:

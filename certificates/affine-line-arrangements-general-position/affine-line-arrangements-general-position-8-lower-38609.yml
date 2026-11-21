@@ -1,0 +1,12 @@
+constant: affine-line-arrangements-general-position-8
+bound: lower
+value: 38609
+kind: witness
+witness:
+  format: generator
+  file: affine-line-arrangements-general-position-8-lower-38609.py
+  output: lines
+  output_sha256: 1fe039955e8e6d682902acdf7a91505be52c243f9289cd0b29141a83daf14e33
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints one arrangement per row: a b c for each line a x + b y = c. Written by an AI agent (Claude Opus 5.5), and it matches the known value. It starts from the 922 arrangements of 7 lines in affine-line-arrangements-general-position-7-lower-922 and adds a line in each cell of the dual arrangement (the lines y = m x + k as points (m, k), split by the dual lines of the vertices and of the slopes), which gives 38551 types, with exact rational arithmetic. The other 58 come from marking a different line as the line at infinity in each arrangement found, by a projective map: an arrangement of 8 lines in general position is a simple arrangement of 9 projective lines with one marked. Each arrangement is rounded to smaller coefficients when that keeps its type. Types are told apart by general_arrangement_type, copied from the checker. No random numbers, so the output is the same every time. Running the generator and checking its output took about 8 minutes of CPU (the check takes seconds), on an 8-core laptop busy with other jobs.'
