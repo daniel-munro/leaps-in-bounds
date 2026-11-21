@@ -2250,7 +2250,7 @@ finschi-2001:
   date: "2001"
   doi: "https://doi.org/10.3929/ethz-a-004255224"
   url: "https://www.finschi.com/math/publ/2001-08-31_Finschi_A-Graph-Theoretical-Approach-for-Reconstruction-and-Generation-of-Oriented-Matroids.pdf"
-  notes: "Table 8.1 (p. 165) counts abstract dissection types of n lines in the plane, not all parallel: 1, 3, 8, 46, 790, 37829 and 4134939 for 2 to 8 lines. Adding 1 for all lines parallel (the d = 1 row) gives A241600 for 1 to 7 lines. Every arrangement of at most 8 pseudolines is stretchable (Goodman and Pollack), so these are all realizable for up to 7 affine lines (8 projective lines with the line at infinity). For 8 affine lines some abstract types aren't realizable, so 4134940 is only an upper bound on the number of combinatorial types. Table 8.2 counts the non-degenerate types, 38612 for 8 lines, which bounds the arrangements of 8 lines in general position. Table 6.3 (p. 141) gives 95052532 isomorphism classes of simple rank-3 oriented matroids on 10 elements, so there are at most 10 * 95052532 + 1 = 950525321 combinatorial types of 9 lines (see finschi-catalog). Tables 6.4 and 6.5 give 312356 uniform rank-3 oriented matroids on 10 elements, 242 of them non-realizable, so there are at most 10 * 312114 = 3121140 arrangements of 9 lines in general position. The bounds for 9 lines aren't stated as such."
+  notes: "Table 8.1 (p. 165) counts abstract dissection types of n lines in the plane, not all parallel: 1, 3, 8, 46, 790, 37829 and 4134939 for 2 to 8 lines. Adding 1 for all lines parallel (the d = 1 row) gives A241600 for 1 to 7 lines. Every arrangement of at most 8 pseudolines is stretchable (Goodman and Pollack), so these are all realizable for up to 7 affine lines (8 projective lines with the line at infinity). For 8 affine lines some abstract types aren't realizable, so 4134940 is only an upper bound on the number of combinatorial types. Table 8.2 counts the non-degenerate types, 38612 for 8 lines, which bounds the arrangements of 8 lines in general position. Table 6.3 (p. 141) gives 95052532 isomorphism classes of simple rank-3 oriented matroids on 10 elements, so there are at most 10 * 95052532 + 1 = 950525321 combinatorial types of 9 lines (see finschi-catalog; not stated as such)."
   added_by: daniel-munro
 
 forcey-2025:
@@ -2265,6 +2265,13 @@ christ-2011:
   date: "2011"
   doi: "https://doi.org/10.3929/ethz-a-007018092"
   notes: "The database (https://geometry.inf.ethz.ch/christt/linearr/) lists all simple arrangements of up to 9 lines; OEIS A090338 takes a(9) from it."
+  added_by: daniel-munro
+
+knuth-1992:
+  string: "D.E. Knuth, Axioms and Hulls, Lecture Notes in Computer Science 606, Springer, 1992."
+  date: "1992"
+  doi: "https://doi.org/10.1007/3-540-55611-7"
+  notes: "Section 9 tabulates E_n, the simple arrangements of n pseudolines in the projective plane (A006248), up to E_9 = 4382, and the historical notes add Laffaille's E_10 = 312356 and Bokowski and Richter-Gebert's count of 242 non-realizable classes on 10 points. So at most 9 * 4382 = 39438 arrangements of 8 lines in general position, and 10 * (312356 - 242) = 3121140 of 9 lines (see oeis-a006248-pseudolines; not stated as such). Read from the TeX source."
   added_by: daniel-munro
 
 wild-reeves-2004:
@@ -2582,11 +2589,31 @@ abbott-katchalski-1991:
   notes: "Not read (not online). Lukito's thesis (p. 7, Table 1) credits it with the coil lengths 170, 620, 1238 and 2468 for n = 9, 11, 12, 13. Kochut (1996, Table 2) lists 88, 170, 324 and 620 for n = 8 to 11, credited to it and to Even (1963) together."
   added_by: daniel-munro
 
+danzer-klee-1967:
+  string: "L. Danzer and V. Klee, Lengths of snakes in boxes, Journal of Combinatorial Theory 2 (1967) 258-265."
+  date: "1967"
+  doi: "https://doi.org/10.1016/S0021-9800(67)80026-7"
+  notes: "A snake here is an induced cycle (a coil). Corollary 1 gives S(d) >= 2^(d+1)/d for d a power of 2, so S(8) >= 64, and Theorem A gives S(9) >= 8 S(5) = 112 (proof of Corollary 4). The introduction reports Kautz's upper bound S(d) <= (d/(d-1)) 2^(d-1), with the multiplier reduced to 1 by Singleton (1966) and Abbott (1965 thesis)."
+  added_by: daniel-munro
+
+adelson-alter-curtz-1973:
+  string: "L.E. Adelson, R. Alter and T.B. Curtz, Long snakes and a characterization of maximal snakes in the d-cube, Proceedings of the 4th Southeastern Conference on Combinatorics, Graph Theory and Computing, Congressus Numerantium 8 (1973) 111-124."
+  date: "1973"
+  notes: "Not read (not online). Abbott and Katchalski (1988, Section 3) say it gives an example of a snake (induced cycle) of length 86 in the 8-cube."
+  added_by: daniel-munro
+
+abbott-katchalski-1988:
+  string: "H.L. Abbott and M. Katchalski, On the snake in the box problem, Journal of Combinatorial Theory, Series B 45 (1988) 13-24."
+  date: "1988"
+  doi: "https://doi.org/10.1016/0095-8956(88)90051-2"
+  notes: "A snake here is an induced cycle (a coil). Credits s(7) >= 48 to Even (1963), and reports Adelson, Alter and Curtz's snake of length 86 in the 8-cube (1973). Received 1986-09-02."
+  added_by: daniel-munro
+
 even-1963:
   string: "S. Even, Snake-in-the-box codes, IEEE Transactions on Electronic Computers EC-12 (1963) 18."
   date: "1963-02"
   doi: "https://doi.org/10.1109/PGEC.1963.263388"
-  notes: "Not read (paywalled). Kochut (1996, p. 5) says a coil of length 48 in dimension 7 was found by computer by W.L. Eastman, as reported here; Pettersson's thesis (2015, Table 4.1) credits it with the lower bounds c(6) >= 26 and c(7) >= 48."
+  notes: "Not read (paywalled). Abbott and Katchalski (1988) and Kochut (1996, p. 5, who says W.L. Eastman found it by computer) credit it with a coil of length 48 in dimension 7; Pettersson's thesis (2015, Table 4.1) credits it with the lower bounds c(6) >= 26 and c(7) >= 48."
   added_by: daniel-munro
 
 pettersson-2015:
@@ -2643,14 +2670,14 @@ hill-1973:
   string: "R. Hill, On the largest size of cap in S_{5,3}, Atti della Accademia Nazionale dei Lincei. Rendiconti. Classe di Scienze Fisiche, Matematiche e Naturali 54 (1973) 378-384."
   date: "1973-03"
   url: "http://www.bdim.eu/item?id=RLINA_1973_8_54_3_378_0"
-  notes: "Presented 1973-03-10. Constructs the 56-cap in PG(5,3) and proves it is the largest. The affine 45-cap is implicit: the blocks of the (56,11,2) design in Section 2(5) are the 11-point sections of the cap by the polar hyperplanes of its points, and deleting one leaves a 45-cap in AG(5,3) (http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html; edel-ferret-landjev-storme-2002, Remark 4.1). The paper doesn't mention AG(6,3)."
+  notes: "Presented 1973-03-10. Constructs the 56-cap in PG(5,3) and proves it is the largest. The affine 45-cap is implicit: the blocks of the (56,11,2) design in Section 2(5) are the 11-point sections of the cap by the polar hyperplanes of its points, and deleting one leaves a 45-cap in AG(5,3) (http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html; edel-ferret-landjev-storme-2002, Remark 4.1). Hill's Caps and codes (Discrete Math. 22, 1978) is likewise implicit, through codewords of weight 45, and Calderbank and Fishburn (1994) still give 40 as the best lower bound for AG(5,3) before their 42. Bruen, Haddad and Wehlau (received 1994) are the first found to state the 45-cap. The paper doesn't mention AG(6,3)."
   added_by: daniel-munro
 
 calderbank-fishburn-1994:
   string: "A.R. Calderbank and P.C. Fishburn, Maximal three-independent subsets of {0, 1, 2}^n, Designs, Codes and Cryptography 4 (1994) 203-211."
   date: "1994-07"
   doi: "https://doi.org/10.1007/BF01388452"
-  notes: "Not read directly (publisher blocked). Gives two 112-caps in AG(6,3) (davis-maclagan-2003) and the 236-cap in AG(7,3), which is reproduced as the Calderbank-Fishburn cap in edel-bierbrauer-2001 (Table 2, Theorem 5) and bierbrauer-2003 (Section 5), and credited in https://arxiv.org/abs/2601.16917 and versluis-2017."
+  notes: "Received 1993-02-18. Section 2 gives f(4) >= 20, f(5) >= 42, f(6) >= 112 and f(7) >= 236, where f(n) is the largest cap in AG(n,3), saying the best earlier lower bounds for n = 5 and 7 were 40 and 224. The two 112-caps (Figure 3) are 'essentially due to Hill' (hill-1973), and the 236-cap is built from them. The 42 isn't recorded, since 45 is credited to hill-1973."
   added_by: daniel-munro
 
 edel-bierbrauer-2001:
@@ -2674,7 +2701,7 @@ edel-ferret-landjev-storme-2002:
   date: "2002-07"
   doi: "https://doi.org/10.1006/jcta.2002.3261"
   url: "http://www.yvesedel.de/Papers/EFLS.pdf"
-  notes: "Theorem 1.2: the largest cap in AG(5,3) has 45 points. The preprint is cited in the preprint of bierbrauer-edel-2002 dated 2000-09-07, but its own date is unknown."
+  notes: "Theorem 1.2: the largest cap in AG(5,3) has 45 points. Received 2000-11-20; its preprint is cited in the preprint of bierbrauer-edel-2002 dated 2000-09-07."
   added_by: daniel-munro
 
 edel-2004:
@@ -2687,7 +2714,7 @@ bruen-haddad-wehlau-1998:
   string: "A. Bruen, L. Haddad and D. Wehlau, Caps and colouring Steiner triple systems, Designs, Codes and Cryptography 13 (1998) 51-55."
   date: "1998-01"
   doi: "https://doi.org/10.1023/A:1008293805734"
-  notes: "Not read directly (publisher blocked). Proves that a cap in AG(5,3) has at most 48 points, as stated in the zbMATH review (Zbl 0892.05010) and in Section 1 of edel-ferret-landjev-storme-2002."
+  notes: "Received 1994-10-03. Proves 45 <= m(AG(5,3)) <= 48. The 45-cap is credited to Hill (Caps and codes, 1978): the 56-cap meets every hyperplane in 11 or 20 points, and deleting an 11-point section leaves a 45-cap. Says Brown and Buhler (J. Combin. Theory Ser. A 32, 1982) conjectured that the maximum is 45."
   added_by: daniel-munro
 
 davis-maclagan-2003:
@@ -2725,6 +2752,7 @@ potechin-2008:
   string: "A. Potechin, Maximal caps in AG(6,3), Designs, Codes and Cryptography 46 (2008) 243-259."
   date: "2008-01-10"
   doi: "https://doi.org/10.1007/s10623-007-9132-z"
+  notes: "Proves that the largest cap in AG(6,3) has 112 points, and that it is unique. Received 2006-11-17. States no bounds for AG(7,3) or AG(8,3)."
   added_by: daniel-munro
 
 versluis-2017:
@@ -3854,7 +3882,7 @@ radziszowski-2025-slides:
 abbott-1965:
   string: "H.L. Abbott, Some Problems in Combinatorial Analysis, Ph.D. thesis, Department of Mathematical and Statistical Sciences, University of Alberta, Edmonton, 1965."
   date: "1965"
-  notes: "Radziszowski's history of R(5,5) credits R(5,5) >= 38 (quadratic residues in Z_37) to Abbott, 1965, without a full citation; this thesis is the only 1965 work by Abbott in the reference list of https://doi.org/10.37236/21."
+  notes: "Radziszowski's history of R(5,5) credits R(5,5) >= 38 (quadratic residues in Z_37) to Abbott, 1965, without a full citation; this thesis is the only 1965 work by Abbott in the reference list of https://doi.org/10.37236/21. Danzer and Klee (1967) say it contains a statement implying that a snake (induced cycle) in the d-cube has length at most 2^(d-1), shown independently by Singleton (IEEE Trans. Electronic Computers 15, 1966)."
   added_by: daniel-munro
 
 irving-1973:
