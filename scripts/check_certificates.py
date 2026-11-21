@@ -246,8 +246,10 @@ def main() -> None:
         opposite = constants[constant_id]["upper_bound" if bound == "lower" else "lower_bound"]
         if opposite is None or opposite.decimal_approx is None:
             continue
-        # Literature values are rounded to 7 significant digits
-        if is_better(bound, float(f"{cert['approx']:.7g}"), opposite.decimal_approx):
+        # Literature values are rounded to 7 significant digits, so compare
+        # both at that precision: rounding only the certificate's value would
+        # make an exact count above 10^7 seem to pass an equal literature bound
+        if is_better(bound, float(f"{cert['approx']:.7g}"), float(f"{opposite.decimal_approx:.7g}")):
             errors.append(
                 f"{cert['id']} contradicts the literature {'upper' if bound == 'lower' else 'lower'} "
                 f"bound ${opposite.latex}$ for {constant_id}"
