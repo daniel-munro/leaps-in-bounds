@@ -4870,7 +4870,7 @@ goldberg-1972:
   string: "M. Goldberg, Maximizing the smallest triangle made by N points in a square, Mathematics Magazine 45(3) (1972) 135-144."
   date: "1972-05"
   doi: "https://doi.org/10.1080/0025570X.1972.11976214"
-  notes: "The table of areas in Section 10 gives the best arrangements found for n = 3 to 16: 1/2, 1/2, (3 - √5)/4, 1/8, 0.079, (2 - √3)/4, 1/21, (3√17 - 11)/32, 1/27, 1/33, 0.022 (n = 13), 0.020 (n = 14), and 0.0175 (n = 16), with n = 15 left blank. Section 8 says no arrangement of 15 points was found better than deleting a point from the 16-point one, which gives 0.0175 for n = 15 too. Section 3 notes that 1/2 is best for n = 3 and 4, since a triangle in a square has at most half its area. Section 2 gives the upper bound M(n) <= 1/(n - 1) for n > 8, from the solution of Kung's problem."
+  notes: "The table of areas in Section 10 gives the best arrangements found for n = 3 to 16: 1/2, 1/2, (3 - √5)/4, 1/8, 0.079, (2 - √3)/4, 1/21, (3√17 - 11)/32, 1/27, 1/33, 0.022 (n = 13), 0.020 (n = 14), and 0.0175 (n = 16), with n = 15 left blank. Section 8 says no arrangement of 15 points was found better than deleting a point from the 16-point one, which gives 0.0175 for n = 15 too. Section 3 notes that 1/2 is best for n = 3 and 4, since a triangle in a square has at most half its area. Section 2 gives the upper bound M(n) <= 1/(n - 1) for n > 8: some point is inside the square, and the lines from it through the other points cut the square into n - 1 regions. Goldberg says this was obtained as a solution of Kung's Problem 745, which he also solved; the printed solution (Schwartz) gives it only for odd n, so the even n are cited here."
   added_by: daniel-munro
 
 yang-zhang-zeng-1991:
@@ -4904,9 +4904,10 @@ yang-zhang-zeng-1994:
   added_by: daniel-munro
 
 peng-1989:
-  string: "R. Peng, the Heilbronn problem for five points in a triangle (1989), as reported in A. Soifer, How Does One Cut a Triangle?, 2nd ed., Springer, 2009, Section 9.3, Problem 9.3.2."
-  date: "1989"
-  notes: "Not read here. De Comité and Delahaye (arXiv:0911.4375) say that Soifer pointed out that Royce Peng found the proof of optimality for five points in 1989, outlined in Soifer's book, and Friedman's triangle page says the same. Yang, Zhang and Zeng 1994 proved it independently."
+  string: "R. Peng, solution to the Erdős-Soifer problem ES1 (letter, November 1989), outlined in A. Soifer, How Does One Cut a Triangle?, 2nd ed., Springer, 2009, Section 9.3, Problem 9.3.2."
+  date: "1989-11"
+  doi: "https://doi.org/10.1007/978-0-387-74652-4"
+  notes: "Problem 9.3.2: among any five points in a triangle of area 1, some three form a triangle of area at most (√2 - 1)² = 3 - 2√2, with equality only for the configurations of Figures 9.4 and 9.5. Peng, then a high school student, sent the solution to Soifer in a 10-page letter in November 1989; the book outlines it (the first edition's preface is dated January 1990). Yang, Zhang and Zeng 1994 proved it independently."
   added_by: daniel-munro
 
 comellas-yebra-2002:
@@ -5068,9 +5069,10 @@ friedman-heilbronn-triangle:
   added_by: daniel-munro
 
 kung-1970:
-  string: "S.H.L. Kung, Problem 745, Mathematics Magazine 43 (1970) 170-171."
-  date: "1970"
-  notes: "Not read here. Goldberg 1972 (Section 2) says the bound H(n) <= 1/(n - 1) for n > 8 was obtained as the solution of this problem: some point must be inside the square, and the lines from it through the other points cut the square into n - 1 regions."
+  string: "S.H.L. Kung, Problem 745 (A nine point problem), Mathematics Magazine 42 (1969), solution by B.L. Schwartz, Mathematics Magazine 43(3) (1970) 170-171."
+  date: "1970-05"
+  url: "https://www.jstor.org/stable/2688403"
+  notes: "Proposed in November 1969: among nine points in a unit square, some three form a triangle of area at most 1/8. Schwartz's solution: three points in a rectangle span at most half its area, and a quadrant contains three of the points; more generally, among 2pq + 1 points some three span at most 1/(2pq), from a p × q grid of rectangles. Goldberg 1972 (Section 2) states the bound H(n) <= 1/(n - 1) for n > 8 as obtained from this problem (an interior point, and the lines from it through the other points), but the solution printed here doesn't give it: it gives H(2pq + 1) <= 1/(2pq), so H(n) <= 1/(n - 1) only for odd n, where n - 1 = 2pq with p = 1. The even-n bounds are cited to Goldberg."
   added_by: daniel-munro
 
 de-comite-delahaye-2009:
@@ -5092,4 +5094,11 @@ karpov-2015-triangle:
   date: "2015-12"
   url: "https://erich-friedman.github.io/packing/heiltri/"
   notes: "Δ(13) >= 0.0265+ on Friedman's page (archived 2021-03-07). Stead's tables give 0.0265013 from Karpov's coordinates, published at inversed.ru/Ascension."
+  added_by: daniel-munro
+
+soifer-1988:
+  string: "A. Soifer, the Five-Point Problem, Fifth Annual Colorado Mathematical Olympiad (April 1988), in A. Soifer, How Does One Cut a Triangle?, 2nd ed., Springer, 2009, Chapter 7."
+  date: "1988-04"
+  doi: "https://doi.org/10.1007/978-0-387-74652-4"
+  notes: "Problem 7.2.1: among any five points in a triangle of area 1, some three form a triangle of area at most 1/4. Soifer says he kept the problem secret until presenting it at the Fifth Annual Colorado Mathematical Olympiad in April 1988 (Section 7.3)."
   added_by: daniel-munro

@@ -286,10 +286,9 @@ tammes:
 heilbronn-square:
   status: partial
   reviewed: 2026-11-21
-  sources: [stead-heilbronn-square, friedman-heilbronn-square, goldberg-1972, comellas-yebra-2002, dehbi-zeng-2022]
+  sources: [stead-heilbronn-square, friedman-heilbronn-square, goldberg-1972, kung-1970, comellas-yebra-2002, dehbi-zeng-2022]
   gaps:
   - "The Yang-Zhang-Zeng papers (ICTP preprint IC/91/252, Bielefeld preprint 91-074, Chinese Ann. Math. 1992) and the Dress-Yang-Zeng 1995 papers couldn't be found. H(5) and H(6) <= 1/8 are credited by Stead's tables to 1991 and 1992, and by Friedman's page to 1992 and 1995; which paper first gives H(7) >= 0.083333 (and its exact value) is unknown."
-  - "Kung's Problem 745 (Math. Mag. 43, 1970) wasn't read; the 1/(n - 1) upper bounds are cited through Goldberg 1972."
   - "Tal's 2009 Technion MSc thesis (Algorithms for Heilbronn's triangle problem), which reports grid-search configurations for n = 7 to 22, couldn't be reached, so records between Goldberg 1972 and Beyleveld 2006 / Karpov 2011 for n = 13 to 16 may be missing."
   - "Bounds for n >= 17, and the 2026 steps for n = 13 and 15, come from the record histories in Stead's tables, dated to the month, keeping only the best bound each month. Records reported without coordinates (n = 18, 21 and 26 in August 2026) are included as the tables list them."
   - "No upper bounds besides 1/(n - 1) are recorded for n >= 9. Sudermann-Merx (arXiv:2603.11107) solves n = 9 and 10 to global optimality within solver tolerances, and Ethan Hendren posted an AI-assisted computer proof for n = 9 on 2026-11-13; neither is accepted as a proof yet. The trivial bound H(n) <= H(8), stronger for n <= 14, isn't recorded."
@@ -298,9 +297,9 @@ heilbronn-square:
 heilbronn-triangle:
   status: partial
   reviewed: 2026-11-21
-  sources: [stead-heilbronn-triangle, friedman-heilbronn-triangle, chen-zeng-zhou-2013, de-comite-delahaye-2009, zeng-chen-2019, novikov-et-al-2025-alphaevolve]
+  sources: [stead-heilbronn-triangle, friedman-heilbronn-triangle, peng-1989, soifer-1988, chen-zeng-zhou-2013, de-comite-delahaye-2009, zeng-chen-2019, novikov-et-al-2025-alphaevolve]
   gaps:
-  - "Soifer's How Does One Cut a Triangle? (section 9.3) wasn't read, so Peng's 1989 proof for n = 5 is cited through De Comité and Delahaye. The Yang-Zhang-Zeng papers for n = 6 (Bielefeld preprint 91-098, Acta Math. Sinica 1994) couldn't be found."
+  - "The Yang-Zhang-Zeng papers for n = 6 (Bielefeld preprint 91-098, Acta Math. Sinica 1994) couldn't be found."
   - "Kahle 2008 (arXiv:0811.2449) gives upper bounds for n = 5 that are weaker than Peng's, so they aren't recorded; De Comité and Delahaye's bounds for n = 5 and 6 likewise."
   - "Records before Cantrell's 2006-2007 configurations, if any, aren't known."
   - "Ethan Hendren posted AI-assisted computer proofs for n = 8 and 9 (2026-11-14 and 2026-11-15), not yet independently checked, so they aren't recorded."
