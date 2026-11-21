@@ -1,0 +1,12 @@
+constant: map-folding-5-13
+bound: lower
+value: 48591400
+kind: witness
+witness:
+  format: generator
+  file: map-folding-5-13-lower-48591400.py
+  output: stacks
+  output_sha256: 11aeb48d79fa7692dad5c3b034243de26e3205ba0ef67d27cf8e29a061c0d7b9
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints foldings of the 5 × 13 map, one stack per row from the bottom up, cells numbered row by row with two base-36 characters per cell, read by the checker as a stream. Written by an AI agent (Claude Opus 5.5). Each is a product of strip foldings: for foldings s of the strip of 13 stamps and t of the strip of 5, fold every row like s (reversed in odd rows) and then fold the strip of rows like t; or the same with rows and columns swapped. All 2 s(5) s(13) = 2 × 50 × 485914 = 48591400 of these products, which are distinct (the checker confirms it), half of each kind.'

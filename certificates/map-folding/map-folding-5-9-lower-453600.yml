@@ -1,0 +1,12 @@
+constant: map-folding-5-9
+bound: lower
+value: 453600
+kind: witness
+witness:
+  format: generator
+  file: map-folding-5-9-lower-453600.py
+  output: stacks
+  output_sha256: d38a2626390e73c8ebc19e5330ef3fee99119a6015b9f4efaddbfb617989b005
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints foldings of the 5 × 9 map, one stack per row from the bottom up, cells numbered row by row as decimals separated by commas. Written by an AI agent (Claude Opus 5.5). Each is a product of strip foldings: for foldings s of the strip of 9 stamps and t of the strip of 5, fold every row like s (reversed in odd rows) and then fold the strip of rows like t; or the same with rows and columns swapped. All 2 s(5) s(9) = 2 × 50 × 4536 = 453600 of these products, which are distinct (the checker confirms it), half of each kind. The output is 56.7 MB; generating and checking it takes about 1 minute on a heavily loaded machine.'

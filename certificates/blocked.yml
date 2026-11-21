@@ -43,17 +43,39 @@
     multiples of square roots, so rounded packings certify slightly weaker
     bounds (#72). Certifying the records needs more general exact arithmetic.
 
-- constants: [stamp-folding-14, stamp-folding-15, stamp-folding-16, stamp-folding-17, stamp-folding-18,
-    stamp-folding-19, stamp-folding-20, stamp-folding-21, stamp-folding-22, stamp-folding-23,
+- constants: [stamp-folding-19, stamp-folding-20, stamp-folding-21, stamp-folding-22, stamp-folding-23,
     stamp-folding-24, stamp-folding-25, stamp-folding-26, stamp-folding-27, stamp-folding-28,
     stamp-folding-29]
   bound: lower
   reason: too-large
-  checked: 2026-11-17
+  checked: 2026-11-20
   detail: >-
-    A witness lists every folding, and n = 13 already takes 288 kB with xz; the
-    count grows by about 3.5 times per stamp, so n = 14 is over the size limit.
-    A lower bound could come instead from a Lean proof that counts the foldings.
+    A witness lists every folding. Generators that print them certify n = 14 to
+    18, read as a stream by the checker (n = 18, 185 million foldings, takes
+    about 10 minutes), but the count grows by about 3.4 times per stamp: n = 19
+    (623 million) would take most of an hour and about 15 GB of memory to count,
+    and n = 20 is beyond the hour. A lower bound could come instead from a Lean
+    proof that counts the foldings.
+
+- constants: [map-folding-2-12, map-folding-2-13, map-folding-2-14, map-folding-2-15, map-folding-2-16,
+    map-folding-2-17, map-folding-2-18, map-folding-3-8, map-folding-3-9, map-folding-3-10, map-folding-3-11,
+    map-folding-3-12, map-folding-3-13, map-folding-3-14, map-folding-4-7, map-folding-4-8,
+    map-folding-4-10, map-folding-5-5, map-folding-5-6, map-folding-5-7, map-folding-5-8, map-folding-6-6,
+    map-folding-6-7, map-folding-7-7]
+  bound: lower
+  reason: too-large
+  checked: 2026-11-20
+  detail: >-
+    A witness lists every folding. Generators that print them certify the counts
+    up to 4 × 6 (94,808,928 foldings, 16 minutes on an otherwise idle machine),
+    but the Python search that generates them finds about 100,000 foldings a
+    second on one core, and less on a busy machine, while the checker waits at
+    most an hour for a generator's output: 5 × 5 (186,086,600) and 3 × 8
+    (201,060,768) took about an hour each with other jobs running, 2 × 12
+    (266,680,992) would take longer, and 3 × 9 and 4 × 7 (over a billion)
+    several hours. A faster generator might reach 5 × 5 to 2 × 12;
+    beyond that, a lower bound could come from a Lean proof that counts the
+    foldings.
 
 - constants: [heilbronn-square-5, heilbronn-square-6, heilbronn-square-7, heilbronn-square-8,
     heilbronn-triangle-5, heilbronn-triangle-6, heilbronn-triangle-7]

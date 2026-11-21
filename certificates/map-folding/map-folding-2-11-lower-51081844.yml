@@ -1,0 +1,12 @@
+constant: map-folding-2-11
+bound: lower
+value: 51081844
+kind: witness
+witness:
+  format: generator
+  file: map-folding-2-11-lower-51081844.py
+  output: stacks
+  output_sha256: 549a058d1e874d2def72272b9cabda38d9dfac75414207536ca9d4e381fe298f
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints every folding of the 2 × 11 map, cells numbered row by row in base 36, one stack per row from the bottom up, read by the checker as a stream. Written by an AI agent (Claude Opus 5.5): a depth-first search that inserts the cells into the stack one at a time, in order, and abandons a partial stack as soon as two creases on the same edge cross; the gaps where each new cell can go are found by one scan of the nesting of the creases on each edge it adds a crease to. The count matches OEIS A001415.'

@@ -1,0 +1,12 @@
+constant: map-folding-3-7
+bound: lower
+value: 21582624
+kind: witness
+witness:
+  format: generator
+  file: map-folding-3-7-lower-21582624.py
+  output: stacks
+  output_sha256: 5b7f4da83dcd0ed737b4359ee7198028275788d7fdd5269342b6795243f29f04
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints every folding of the 3 × 7 map, cells numbered row by row in base 36, one stack per row from the bottom up, read by the checker as a stream. Written by an AI agent (Claude Opus 5.5): a depth-first search that inserts the cells into the stack one at a time, in order, and abandons a partial stack as soon as two creases on the same edge cross; the gaps where each new cell can go are found by one scan of the nesting of the creases on each edge it adds a crease to. The count matches OEIS A001416.'

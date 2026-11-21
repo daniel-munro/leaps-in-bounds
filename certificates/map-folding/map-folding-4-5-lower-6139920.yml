@@ -1,0 +1,12 @@
+constant: map-folding-4-5
+bound: lower
+value: 6139920
+kind: witness
+witness:
+  format: generator
+  file: map-folding-4-5-lower-6139920.py
+  output: stacks
+  output_sha256: 13a5927fe918ea1af3e260bb49fb29a24781a1969d3a780aa7e894b33458d997
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints every folding of the 4 × 5 map, cells numbered row by row in base 36, one stack per row from the bottom up. Written by an AI agent (Claude Opus 5.5): a depth-first search that inserts the cells into the stack one at a time, in order, and abandons a partial stack as soon as two creases on the same edge cross; the gaps where each new cell can go are found by one scan of the nesting of the creases on each edge it adds a crease to. The count matches the one given on Code Golf Stack Exchange (question 276709). The output is 128.9 MB, which the generator prints in about 60 seconds; generating and checking it took about 10 minutes (5 minutes of CPU), with 1.8 GB of memory, on a heavily loaded machine.'
