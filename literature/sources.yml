@@ -4870,13 +4870,19 @@ goldberg-1972:
   string: "M. Goldberg, Maximizing the smallest triangle made by N points in a square, Mathematics Magazine 45(3) (1972) 135-144."
   date: "1972-05"
   doi: "https://doi.org/10.1080/0025570X.1972.11976214"
-  notes: "Not read here (JSTOR). Constructions giving lower bounds for n <= 15 and conjectured optimal values, per Comellas and Yebra 2002, whose Table 1 gives the bounds before theirs for n = 7 to 12."
+  notes: "The table of areas in Section 10 gives the best arrangements found for n = 3 to 16: 1/2, 1/2, (3 - √5)/4, 1/8, 0.079, (2 - √3)/4, 1/21, (3√17 - 11)/32, 1/27, 1/33, 0.022 (n = 13), 0.020 (n = 14), and 0.0175 (n = 16), with n = 15 left blank. Section 8 says no arrangement of 15 points was found better than deleting a point from the 16-point one, which gives 0.0175 for n = 15 too. Section 3 notes that 1/2 is best for n = 3 and 4, since a triangle in a square has at most half its area. Section 2 gives the upper bound M(n) <= 1/(n - 1) for n > 8, from the solution of Kung's problem."
   added_by: daniel-munro
 
 yang-zhang-zeng-1991:
   string: "L. Yang, J. Zhang and Z. Zeng, On Goldberg's conjecture: computing the first several Heilbronn numbers, Universität Bielefeld, Preprint 91-074 (1991)."
   date: "1991"
-  notes: "Not read here. Comellas and Yebra 2002 credit Yang, Zhang, Zeng and Dress, across this preprint and later papers, with the optimal value of H(5) and an improved lower bound for H(7) (0.083333 in their Table 1), without saying which paper gives which. Stead's tables date the H(5) proof to 1991."
+  notes: "Not read here. Comellas and Yebra 2002 credit Yang, Zhang, Zeng and Dress, across this preprint and later papers, with an improved lower bound for H(7) (0.083333 in their Table 1), without saying which paper gives it."
+  added_by: daniel-munro
+
+yang-zhang-zeng-1991-five:
+  string: "L. Yang, J. Zhang and Z. Zeng, Heilbronn problem for five points, International Centre for Theoretical Physics, Trieste, preprint IC/91/252 (1991)."
+  date: "1991"
+  notes: "Not read here. Cited by Dehbi and Zeng 2022 and Zeng and Chen 2019 for H(5) = √3/9, which Stead's tables date to 1991. Friedman's page (archived 2025-02-19) instead credits the proof to Dress, Yang, Zhang and Zeng, 1992."
   added_by: daniel-munro
 
 yang-zhang-zeng-1991-triangle:
@@ -4888,7 +4894,7 @@ yang-zhang-zeng-1991-triangle:
 yang-zhang-zeng-1992:
   string: "L. Yang, J. Zhang and Z. Zeng, A conjecture on the first several Heilbronn numbers and a computation, Chinese Annals of Mathematics, Series A 13 (1992) 503-515 (in Chinese)."
   date: "1992"
-  notes: "Not read here. Stead's tables say that Theorem 3 proves H(6) = 1/8, and that the paper names L. Yang and J. Zhang, The six-point problem in the square (1980, in Chinese), as the first solution."
+  notes: "Not read here. Stead's tables say that Theorem 3 proves H(6) = 1/8, and that the paper names L. Yang and J. Zhang, The six-point problem in the square (1980, in Chinese), as the first solution. Friedman's page (archived 2025-02-19) instead credits the proof to Dress, Yang, Zhang and Zeng, 1995 (Heilbronn problem for six points in a planar convex body)."
   added_by: daniel-munro
 
 yang-zhang-zeng-1994:
@@ -4898,9 +4904,9 @@ yang-zhang-zeng-1994:
   added_by: daniel-munro
 
 peng-1989:
-  string: "R. Peng, the Heilbronn problem for five points in a triangle (1989), as reported in A. Soifer, How Does One Cut a Triangle?, 2nd ed., Springer, 2009."
+  string: "R. Peng, the Heilbronn problem for five points in a triangle (1989), as reported in A. Soifer, How Does One Cut a Triangle?, 2nd ed., Springer, 2009, Section 9.3, Problem 9.3.2."
   date: "1989"
-  notes: "Not read here. Wikipedia and Stead's tables credit Royce Peng with proving that the largest smallest triangle for five points in a triangle of unit area is 3 - 2√2, in 1989, citing Soifer's book."
+  notes: "Not read here. De Comité and Delahaye (arXiv:0911.4375) say that Soifer pointed out that Royce Peng found the proof of optimality for five points in 1989, outlined in Soifer's book, and Friedman's triangle page says the same. Yang, Zhang and Zeng 1994 proved it independently."
   added_by: daniel-munro
 
 comellas-yebra-2002:
@@ -4911,52 +4917,52 @@ comellas-yebra-2002:
   added_by: daniel-munro
 
 zeng-chen-2011:
-  string: "Z. Zeng and L. Chen, On the Heilbronn optimal configuration of seven points in the square, in Automated Deduction in Geometry (ADG 2008), Lecture Notes in Computer Science 6301, Springer (2011) 196-224."
+  string: "Z. Zeng and L. Chen, On the Heilbronn optimal configuration of seven points in the square, in Automated Deduction in Geometry (ADG 2008), Lecture Notes in Artificial Intelligence 6301, Springer (2011) 196-224."
   date: "2011"
   doi: "https://doi.org/10.1007/978-3-642-21046-4_11"
-  notes: "Not read here (paywalled). Proves that the Comellas-Yebra configuration for seven points is optimal, per Stead's tables, Wikipedia and MathWorld. Presented at ADG 2008."
+  notes: "Proves that seven points in the unit square span a triangle of area at most (2z² + 14z - 1)/38 = 0.083859..., z the smallest positive root of z³ + 5z² - 5z + 1, as Comellas and Yebra conjectured. Presented at ADG 2008, which Friedman's page gives as the date of the proof; dated here by the proceedings."
   added_by: daniel-munro
 
 dehbi-zeng-2022:
   string: "L. Dehbi and Z. Zeng, Heilbronn's problem of eight points in the square, Journal of Systems Science and Complexity 35(6) (2022) 2452-2480."
   date: "2022-12-28"
   doi: "https://doi.org/10.1007/s11424-022-1220-7"
-  notes: "Not read here (paywalled). Proves H(8) = (√13 - 1)/36, per Stead's tables, Wikipedia and MathWorld. Date: published online."
+  notes: "Theorem 1.1: eight points in the unit square span a triangle of area at most (√13 - 1)/36, with equality only for the Comellas-Yebra configuration. Received 2021-06-25, revised 2021-10-26; dated by publication online."
   added_by: daniel-munro
 
 zeng-chen-2019:
   string: "Z. Zeng and L. Chen, Determining the Heilbronn configuration of seven points in triangles via symbolic computation, in Computer Algebra in Scientific Computing (CASC 2019), Lecture Notes in Computer Science 11661, Springer (2019) 458-477."
   date: "2019-08-26"
   doi: "https://doi.org/10.1007/978-3-030-26831-2_30"
-  notes: "Not read here (paywalled). Proves that seven points in a triangle of unit area span a triangle of area at most 7/72, per Stead's tables and Wikipedia."
+  notes: "Theorem 1: seven points in a triangle span a triangle of area at most 7/72 of its area."
   added_by: daniel-munro
 
 beyleveld-2006:
-  string: "M. Beyleveld, Heilbronn configurations for 14 and 16 points in the square (August 2006), as reported in Erich Friedman's Packing Center and Stead's Heilbronn tables."
+  string: "M. Beyleveld, Heilbronn configurations for 14 and 16 points in the square (August 2006), in E. Friedman, The Heilbronn problem for squares, Erich's Packing Center."
   date: "2006-08"
   url: "https://math.tejstead.com/heilbronn/square/16/"
   notes: "H(14) >= 0.0243039796, the least positive root of 320A³ + 768A² - 60A + 1, and H(16) >= 7/341, from an all-rational configuration."
   added_by: daniel-munro
 
 cantrell-2006:
-  string: "D. Cantrell, Heilbronn configurations in the triangle (July 2006), as reported in Erich Friedman's Packing Center and Stead's Heilbronn tables."
+  string: "D. Cantrell, Heilbronn configurations in the triangle (July 2006), in E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center."
   date: "2006-07"
-  url: "https://math.tejstead.com/heilbronn/triangle/"
-  notes: "Configurations for 7, 8, 9 and 12 points in a triangle."
+  url: "https://erich-friedman.github.io/packing/heiltri/"
+  notes: "Configurations for 7, 8, 9, 11 and 12 points in a triangle, dated by Friedman's page (archived 2021-03-07)."
   added_by: daniel-munro
 
 cantrell-2007:
-  string: "D. Cantrell, Heilbronn configurations in the triangle (June 2007), as reported in Erich Friedman's Packing Center and Stead's Heilbronn tables."
+  string: "D. Cantrell, Heilbronn configurations in the triangle (June 2007), in E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center."
   date: "2007-06"
-  url: "https://math.tejstead.com/heilbronn/triangle/"
-  notes: "Configurations for 10, 14 and 15 points in a triangle."
+  url: "https://erich-friedman.github.io/packing/heiltri/"
+  notes: "Configurations for 10, 14, 15 and 16 points in a triangle, dated by Friedman's page (archived 2021-03-07). Chen, Zeng and Zhou 2013 give Δ(16) >= 0.01797627..."
   added_by: daniel-munro
 
 karpov-2011:
   string: "P. Karpov, Heilbronn configurations for 13 and 15 points in the square (August 2011), published with coordinates in 2018 at inversed.ru/Ascension."
   date: "2011-08"
   url: "http://www.inversed.ru/Ascension.htm"
-  notes: "Dated by Stead's tables, which give H(13) >= 0.0270192722 and H(15) >= 0.0211056819 from Karpov's coordinates."
+  notes: "Dated by Friedman's page (archived 2025-02-19) and Stead's tables, which give H(13) >= 0.0270192722 and H(15) >= 0.0211056819 from Karpov's coordinates."
   added_by: daniel-munro
 
 novikov-et-al-2025-alphaevolve:
@@ -5045,4 +5051,45 @@ chappell-2026:
   string: "R. Chappell, Heilbronn configuration for 35 points in the square (October 2026), as reported in Stead's Heilbronn tables."
   date: "2026-10"
   url: "https://math.tejstead.com/heilbronn/square/35/"
+  added_by: daniel-munro
+
+friedman-heilbronn-square:
+  string: "E. Friedman, The Heilbronn problem for squares, Erich's Packing Center, as archived by the Wayback Machine on 2025-02-19."
+  date: "2025-02-19"
+  url: "https://web.archive.org/web/20250219105849/https://erich-friedman.github.io/packing/heilbronn/"
+  notes: "Best known configurations for n = 3 to 16, with their finders and dates."
+  added_by: daniel-munro
+
+friedman-heilbronn-triangle:
+  string: "E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center, as archived by the Wayback Machine on 2021-03-07."
+  date: "2021-03-07"
+  url: "https://web.archive.org/web/20210307034031/https://erich-friedman.github.io/packing/heiltri/"
+  notes: "Best known configurations for n = 3 to 16 in a triangle of unit area, with their finders and dates: Cantrell's for n = 7 to 12 and 14 to 16, and Karpov's for n = 13 (December 2015)."
+  added_by: daniel-munro
+
+kung-1970:
+  string: "S.H.L. Kung, Problem 745, Mathematics Magazine 43 (1970) 170-171."
+  date: "1970"
+  notes: "Not read here. Goldberg 1972 (Section 2) says the bound H(n) <= 1/(n - 1) for n > 8 was obtained as the solution of this problem: some point must be inside the square, and the lines from it through the other points cut the square into n - 1 regions."
+  added_by: daniel-munro
+
+de-comite-delahaye-2009:
+  string: "F. De Comité and J.-P. Delahaye, Automated proofs in geometry: computing upper bounds for the Heilbronn problem for triangles, arXiv:0911.4375."
+  date: "2009-11-23"
+  url: "https://arxiv.org/abs/0911.4375"
+  notes: "Read in v3 (2010-03-08). Computer-assisted bounds by subdividing the triangle into congruent triangles: Δ(5) <= 121/625, Δ(6) <= 3/20 and Δ(7) <= 23/200, of which only the last improved on what was known. Dated by v1, which may not have had every bound."
+  added_by: daniel-munro
+
+chen-zeng-zhou-2013:
+  string: "L. Chen, Z. Zeng and W. Zhou, An upper bound of Heilbronn number for eight points in triangles, Journal of Combinatorial Optimization 28 (2014) 854-874."
+  date: "2013-01-08"
+  doi: "https://doi.org/10.1007/s10878-012-9585-5"
+  notes: "Theorem 1: Δ(8) <= 35555/2^19 < 0.067816, by a computer search over subdivisions of the triangle, supporting Cantrell's conjecture Δ(8) = 0.06778921... Published online 2013-01-08."
+  added_by: daniel-munro
+
+karpov-2015-triangle:
+  string: "P. Karpov, Heilbronn configuration for 13 points in a triangle (December 2015), in E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center."
+  date: "2015-12"
+  url: "https://erich-friedman.github.io/packing/heiltri/"
+  notes: "Δ(13) >= 0.0265+ on Friedman's page (archived 2021-03-07). Stead's tables give 0.0265013 from Karpov's coordinates, published at inversed.ru/Ascension."
   added_by: daniel-munro

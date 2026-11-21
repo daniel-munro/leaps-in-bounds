@@ -7,4 +7,4 @@
 
 ## Ideas
 
-- n = 8 is conjectured to be twice the real root of a septic (Chen, Zeng and Zhou), certified numerically by Sudermann-Merx (arXiv:2607.15021) and by Ethan Hendren's AI-assisted branch and bound (November 2026). An independent check of Hendren's proof could support an attested upper bound.
+- n = 8 has the upper bound 35555/2^19 < 0.067816 (Chen, Zeng and Zhou 2013, by a subdivision search like De Comité and Delahaye's). It is conjectured to be twice the real root of a septic (Chen, Zeng and Zhou), certified numerically by Sudermann-Merx (arXiv:2607.15021) and by Ethan Hendren's AI-assisted branch and bound (November 2026). An independent check of Hendren's proof could support an attested upper bound.
