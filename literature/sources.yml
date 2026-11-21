@@ -2613,7 +2613,7 @@ douglas-1969:
   string: "R.J. Douglas, Upper bounds on the length of circuits of even spread in the d-cube, Journal of Combinatorial Theory 7 (1969) 206-214."
   date: "1969-11"
   doi: "https://doi.org/10.1016/S0021-9800(69)80013-X"
-  notes: "Not read. Deimer (1985) says it quotes D.G. Larman's unpublished bound C(d,2) <= 2^(d-1) - 2^(d-5) d^(-6) for d >= 5 and proves C(d,2) <= 2^(d-1) - (2^d - 12)/(7d(d-1)^2 + 2) for d >= 6, where C(d,2) is the longest coil in the d-cube. Both give 2^(d-1) - 1 for d = 7 to 13 (and, since coils have even length, imply 2^(d-1) - 2, not stated)."
+  notes: "Received 1968-07-29. Theorem 1: K(d,2) <= 2^(d-1) - (2^d - 12)/(7d(d-1)^2 + 2) for d >= 6, where K(d,2) is the longest coil in the d-cube. The introduction quotes D.G. Larman's bound K(d,2) <= 2^(d-1) - 2^(d-5) d^(-6) for d >= 5 (Circuit codes, Proc. Cambridge Phil. Soc., cited as to appear; Deimer 1985 calls it unpublished). Both give 2^(d-1) - 1 for d = 7 to 13 (and, since coils have even length, imply 2^(d-1) - 2, not stated)."
   added_by: daniel-munro
 
 deimer-1985:
