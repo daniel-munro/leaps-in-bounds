@@ -38,7 +38,7 @@ from certificates import (
     load_certificates,
     load_manifest,
 )
-from process_data import assign_updates_and_values, get_constants, load_updates
+from process_data import assign_updates_and_values, get_constants, load_updates, rounded
 
 
 SUMMARY_MARKER = "<!-- certificate-check -->"
@@ -82,8 +82,9 @@ def role_in_history(
     the discovery of a new bound, or evidence for one discovered earlier, in
     the literature or by another certificate."""
     side = cert["bound"]
-    # Literature values are rounded to 7 significant digits
-    approx = float(f"{cert['approx']:.7g}")
+    # Round like literature values: integers exactly, others to 7 significant
+    # digits
+    approx = rounded(cert["approx"])
     literature = constant[f"{side}_bound"]
     if literature is not None and literature.decimal_approx is None:
         literature = None
@@ -94,7 +95,7 @@ def role_in_history(
         source = update["source"] or update["via"]
         record = f"from `{source}`" if source else "from the literature"
     if previous is not None:
-        prev_approx = float(f"{previous['approx']:.7g}")
+        prev_approx = rounded(previous["approx"])
         if current is None or is_better(side, prev_approx, current[0]):
             current, record = (prev_approx, f"`{previous['value']}`"), f"by certificate `{previous['id']}`"
     if current is None:
@@ -246,10 +247,9 @@ def main() -> None:
         opposite = constants[constant_id]["upper_bound" if bound == "lower" else "lower_bound"]
         if opposite is None or opposite.decimal_approx is None:
             continue
-        # Literature values are rounded to 7 significant digits, so compare
-        # both at that precision: rounding only the certificate's value would
-        # make an exact count above 10^7 seem to pass an equal literature bound
-        if is_better(bound, float(f"{cert['approx']:.7g}"), float(f"{opposite.decimal_approx:.7g}")):
+        # Round like literature values: integers exactly, others to 7
+        # significant digits
+        if is_better(bound, rounded(cert["approx"]), opposite.decimal_approx):
             errors.append(
                 f"{cert['id']} contradicts the literature {'upper' if bound == 'lower' else 'lower'} "
                 f"bound ${opposite.latex}$ for {constant_id}"
