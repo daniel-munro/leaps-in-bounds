@@ -195,8 +195,8 @@ oeis-a072842-weak-schur:
   added_by: daniel-munro
 
 minortriad-snake:
-  string: "Snake-in-the-box records, Tom Ace, retrieved 2026-11-04"
-  date: "2026-11-04"
+  string: "Snake-in-the-box records, Tom Ace, retrieved 2026-11-21"
+  date: "2026-11-21"
   url: "https://www.minortriad.com/snake/"
   notes: "Records and witnesses for n <= 13, with a dated log of updates."
   added_by: daniel-munro
@@ -2234,14 +2234,23 @@ ringel-1956:
   string: "G. Ringel, Teilungen der Ebene durch Geraden oder topologische Geraden, Mathematische Zeitschrift 64 (1956) 79-102."
   date: "1956"
   doi: "https://doi.org/10.1007/BF01166556"
-  notes: "Counts the simple arrangements of up to 7 lines in the affine plane (p. 80)."
+  url: "https://gdz.sub.uni-goettingen.de/id/PPN266833020_0064"
+  notes: "Quotes on p. 80 Klee's 1938 counts of simple arrangements of up to 7 lines in the affine plane, 1, 1, 1, 1, 6, 43, 922 (see klee-1938), and doesn't compute them itself. Received 1955-04-16. Open scan on GDZ."
+  added_by: daniel-munro
+
+klee-1938:
+  string: "R. Klee, Über die einfachen Konfigurationen der euklidischen und projektiven Ebene, Dissertation, Dresden: Focken und Oltmanns, 1938."
+  date: "1938"
+  url: "https://zbmath.org/?q=an:0019.13501"
+  notes: "Not read. Ringel 1956 (p. 80) quotes Klee's counts A_1 = ... = A_4 = 1, A_5 = 6, A_6 = 43, A_7 = 922 of simple arrangements of up to 7 lines in the plane, mirror images identified, and the zbMATH review (Zbl 0019.13501) gives 6, 43 and 922 too, with 7, 79 and 1765 counting mirror images apart. Klee counted pseudoline configurations and claimed they are all stretchable, which the reviewer found unconvincing; for up to 7 affine lines they are (Goodman and Pollack 1980)."
   added_by: daniel-munro
 
 finschi-2001:
   string: "L. Finschi, A Graph Theoretical Approach for Reconstruction and Generation of Oriented Matroids, Dissertation, ETH Zürich, 2001."
   date: "2001"
   doi: "https://doi.org/10.3929/ethz-a-004255224"
-  notes: "Table 8.1 (p. 165) counts abstract dissection types of n lines in the plane, not all parallel: 46, 790, 37829 and 4134939 for 5 to 8 lines. Adding 1 for all lines parallel gives A241600. Every arrangement of at most 8 pseudolines is stretchable (Goodman and Pollack), so these are all realizable for up to 7 affine lines (8 projective lines with the line at infinity). For 8 affine lines some abstract types aren't realizable, so 4134940 is only an upper bound on the number of combinatorial types."
+  url: "https://www.finschi.com/math/publ/2001-08-31_Finschi_A-Graph-Theoretical-Approach-for-Reconstruction-and-Generation-of-Oriented-Matroids.pdf"
+  notes: "Table 8.1 (p. 165) counts abstract dissection types of n lines in the plane, not all parallel: 1, 3, 8, 46, 790, 37829 and 4134939 for 2 to 8 lines. Adding 1 for all lines parallel (the d = 1 row) gives A241600 for 1 to 7 lines. Every arrangement of at most 8 pseudolines is stretchable (Goodman and Pollack), so these are all realizable for up to 7 affine lines (8 projective lines with the line at infinity). For 8 affine lines some abstract types aren't realizable, so 4134940 is only an upper bound on the number of combinatorial types. Table 8.2 counts the non-degenerate types, 38612 for 8 lines, which bounds the arrangements of 8 lines in general position. Table 6.3 (p. 141) gives 95052532 isomorphism classes of simple rank-3 oriented matroids on 10 elements, so there are at most 10 * 95052532 + 1 = 950525321 combinatorial types of 9 lines (see finschi-catalog). Tables 6.4 and 6.5 give 312356 uniform rank-3 oriented matroids on 10 elements, 242 of them non-realizable, so there are at most 10 * 312114 = 3121140 arrangements of 9 lines in general position. The bounds for 9 lines aren't stated as such."
   added_by: daniel-munro
 
 forcey-2025:
@@ -2256,6 +2265,28 @@ christ-2011:
   date: "2011"
   doi: "https://doi.org/10.3929/ethz-a-007018092"
   notes: "The database (https://geometry.inf.ethz.ch/christt/linearr/) lists all simple arrangements of up to 9 lines; OEIS A090338 takes a(9) from it."
+  added_by: daniel-munro
+
+wild-reeves-2004:
+  string: "J. Wild and L. Reeves, a(8) = 38609 of OEIS A090338, the arrangements of 8 lines in general position in the plane (2004)."
+  date: "2004-01-27"
+  url: "https://oeis.org/A090338"
+  notes: "In the original submission of A090338 (author line dated 2004-01-27, published 2004-02-19), with A090339(8) = 38612 for pseudolines, the difference being 3 non-stretchable configurations."
+  added_by: daniel-munro
+
+felsner-1996:
+  string: "S. Felsner, On the number of arrangements of pseudolines, Proc. 12th Annual Symposium on Computational Geometry (1996); Discrete Comput. Geom. 18 (1997) 257-267."
+  date: "1996"
+  url: "http://page.math.tu-berlin.de/~felsner/Paper/numarr.pdf"
+  doi: "https://doi.org/10.1007/PL00009318"
+  notes: "Computes B_10 = 18,410,581,880 (p. 9, Enumeration), the number of simple arrangements of 10 pseudolines with a marked unbounded cell (A006245(10)), which bounds the arrangements of 10 lines in general position (see oeis-a006245-sorting-networks)."
+  added_by: daniel-munro
+
+yamanaka-2009:
+  string: "K. Yamanaka, a(11) = 5449192389984 of OEIS A006245, the primitive sorting networks on 11 elements (2009)."
+  date: "2009-05-06"
+  url: "https://oeis.org/A006245"
+  notes: "With A090338(n) <= A006245(n) (see oeis-a006245-sorting-networks), at most 5449192389984 arrangements of 11 lines in general position."
   added_by: daniel-munro
 
 # Snake-in-the-box and coil-in-the-box
@@ -2298,6 +2329,7 @@ casella-potter-2005a:
   string: "D.A. Casella and W.D. Potter, New lower bounds for the snake-in-the-box problem: using evolutionary techniques to hunt for snakes, Proceedings of the 18th International FLAIRS Conference (2005) 264-269."
   date: "2005-05"
   url: "https://cdn.aaai.org/FLAIRS/2005/Flairs05-044.pdf"
+  notes: "The Conclusions announce coils of lengths 180, 344 and 630 in dimensions 9 to 11, detailed in the CEC 2005 paper. Casella had already posted these values in a comment on OEIS A000937 dated 2005-03-04."
   added_by: daniel-munro
 
 casella-potter-2005b:
@@ -2547,6 +2579,49 @@ toner-2026:
 abbott-katchalski-1991:
   string: "H.L. Abbott and M. Katchalski, On the construction of snake in the box codes, Utilitas Mathematica 40 (1991) 97-116."
   date: "1991"
+  notes: "Not read (not online). Lukito's thesis (p. 7, Table 1) credits it with the coil lengths 170, 620, 1238 and 2468 for n = 9, 11, 12, 13. Kochut (1996, Table 2) lists 88, 170, 324 and 620 for n = 8 to 11, credited to it and to Even (1963) together."
+  added_by: daniel-munro
+
+even-1963:
+  string: "S. Even, Snake-in-the-box codes, IEEE Transactions on Electronic Computers EC-12 (1963) 18."
+  date: "1963-02"
+  doi: "https://doi.org/10.1109/PGEC.1963.263388"
+  notes: "Not read (paywalled). Kochut (1996, p. 5) says a coil of length 48 in dimension 7 was found by computer by W.L. Eastman, as reported here; Pettersson's thesis (2015, Table 4.1) credits it with the lower bounds c(6) >= 26 and c(7) >= 48."
+  added_by: daniel-munro
+
+pettersson-2015:
+  string: "V. Pettersson, Graph Algorithms for Constructing and Enumerating Cycles and Related Structures, Doctoral dissertation, Aalto University, Doctoral Dissertations 127/2015."
+  date: "2015-10-02"
+  url: "https://aaltodoc.aalto.fi/handle/123456789/17688"
+  notes: "Table 4.1 (Section 4.1.1) gives the sources of the lower and upper bounds on s(n) and c(n) for n <= 8. Date of the defense."
+  added_by: daniel-munro
+
+wynn-2010:
+  string: "E. Wynn, personal communication, recorded on the University of Georgia snake-in-the-box records page (August 2010)."
+  date: "2010-08-25"
+  url: "https://web.archive.org/web/20110607174155/http://www.ai.uga.edu/sib/records/"
+  notes: "Coils of lengths 188, 348 and 640 in dimensions 9, 10 and 11, marked new on the page updated 2010-08-25; later published in https://arxiv.org/abs/1201.1647"
+  added_by: daniel-munro
+
+orland-et-al-2026-coil-12:
+  string: "M. Orland, B. Fagan, et al., snake-in-the-box records dataset (record_coils.csv), Math-AI-Caltech/Snake-in-the-Box on GitHub."
+  date: "2026-07-17"
+  url: "https://github.com/Math-AI-Caltech/Snake-in-the-Box/commit/4c89834db40052d6dd6758f3a2173dd86e2576bd"
+  notes: "Adds coils of length 1466 in dimension 12, which aren't in v1 of https://arxiv.org/abs/2607.15270 (its Table 2 covers n = 9 to 11); published in v3 (2026-09-30)."
+  added_by: daniel-munro
+
+gustafson-2026:
+  string: "J. Gustafson, personal communication, recorded on the snake-in-the-box records page (2026-11-04)."
+  date: "2026-11-04"
+  url: "https://www.minortriad.com/snake/"
+  notes: "Coil of length 2932 in dimension 13. Not in the page's update log; the page's citation is dated 4 November 2026 and the page was last modified 5 November 2026."
+  added_by: daniel-munro
+
+byrnes-harley-spinu-2026:
+  string: "K.M. Byrnes, E.T. Harley and F. Spinu, Linear programming upper bounds for the coil-in-the-box problem, arXiv:2610.36461."
+  date: "2026-10-27"
+  url: "https://arxiv.org/abs/2610.36461"
+  notes: "Not peer reviewed. Proves S_n <= 2^(n-1) 8n(n-1)(5n-14)/(40n^3-131n^2+4n+136-(5n-14)floor(3n/4)) for n >= 13; the value 3982 for n = 13 is computed from it (3982.01), not stated."
   added_by: daniel-munro
 
 # Cap sets
@@ -2561,44 +2636,89 @@ pellegrino-1970:
   string: "G. Pellegrino, Sul massimo ordine delle calotte in S_{4,3}, Le Matematiche 25 (1970) 149-157."
   date: "1970"
   url: "https://zbmath.org/0223.50020"
+  notes: "Not read directly. The volume is dated 1970 but was printed in 1971 (Hill 1973; Davis and Maclagan 2003). Proves that the largest cap in PG(4,3), and so in AG(4,3), has 20 points (bierbrauer-2003, Section 10; edel-et-al-2007, Section 5)."
   added_by: daniel-munro
 
 hill-1973:
   string: "R. Hill, On the largest size of cap in S_{5,3}, Atti della Accademia Nazionale dei Lincei. Rendiconti. Classe di Scienze Fisiche, Matematiche e Naturali 54 (1973) 378-384."
-  date: "1973"
-  notes: "Constructs the 56-cap in PG(5,3). Deleting the 11 points of one of its hyperplane sections gives a 45-cap in AG(5,3) (http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html), and the 112-cap in AG(6,3) comes from it too (https://doi.org/10.1038/s41586-023-06924-6)."
+  date: "1973-03"
+  url: "http://www.bdim.eu/item?id=RLINA_1973_8_54_3_378_0"
+  notes: "Presented 1973-03-10. Constructs the 56-cap in PG(5,3) and proves it is the largest. The affine 45-cap is implicit: the blocks of the (56,11,2) design in Section 2(5) are the 11-point sections of the cap by the polar hyperplanes of its points, and deleting one leaves a 45-cap in AG(5,3) (http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html; edel-ferret-landjev-storme-2002, Remark 4.1). The paper doesn't mention AG(6,3)."
   added_by: daniel-munro
 
 calderbank-fishburn-1994:
   string: "A.R. Calderbank and P.C. Fishburn, Maximal three-independent subsets of {0, 1, 2}^n, Designs, Codes and Cryptography 4 (1994) 203-211."
   date: "1994-07"
   doi: "https://doi.org/10.1007/BF01388452"
-  notes: "Credited with the 236-cap in AG(7,3) in https://arxiv.org/abs/2601.16917"
+  notes: "Not read directly (publisher blocked). Gives two 112-caps in AG(6,3) (davis-maclagan-2003) and the 236-cap in AG(7,3), which is reproduced as the Calderbank-Fishburn cap in edel-bierbrauer-2001 (Table 2, Theorem 5) and bierbrauer-2003 (Section 5), and credited in https://arxiv.org/abs/2601.16917 and versluis-2017."
   added_by: daniel-munro
 
 edel-bierbrauer-2001:
   string: "Y. Edel and J. Bierbrauer, Large caps in small spaces, Designs, Codes and Cryptography 23 (2001) 197-212."
   date: "2001-07"
   doi: "https://doi.org/10.1023/A:1011216716700"
-  notes: "With edel-2004, the source of the 496-cap in AG(8,3) according to https://doi.org/10.1038/s41586-023-06924-6"
+  url: "http://www.yvesedel.de/Papers/smallCaps.pdf"
+  notes: "Gives a 248-cap in PG(7,3) (Theorem 6) and the doubling construction (an m-cap in PG(l,q) gives a 2m-cap in AG(l+1,q), Section 1), so a 496-cap in AG(8,3). The 496 itself isn't stated; it's tabulated in versluis-2017 (Table 5) and credited to this paper and edel-2004 in https://doi.org/10.1038/s41586-023-06924-6"
   added_by: daniel-munro
 
 bierbrauer-edel-2002:
   string: "J. Bierbrauer and Y. Edel, Bounds on affine caps, Journal of Combinatorial Designs 10 (2002) 111-115."
   date: "2002-02-07"
   doi: "https://doi.org/10.1002/jcd.10000"
+  url: "http://www.yvesedel.de/Papers/ABound.pdf"
+  notes: "Section 3: Theorem 2 with C_5(3) = 45 gives C_6(3) <= 114. Its C_5(3) <= 48 from C_4(3) = 20 isn't recorded, since Bruen, Haddad and Wehlau had 48 in 1998."
   added_by: daniel-munro
 
 edel-ferret-landjev-storme-2002:
   string: "Y. Edel, S. Ferret, I. Landjev and L. Storme, The classification of the largest caps in AG(5,3), Journal of Combinatorial Theory, Series A 99 (2002) 95-110."
   date: "2002-07"
   doi: "https://doi.org/10.1006/jcta.2002.3261"
+  url: "http://www.yvesedel.de/Papers/EFLS.pdf"
+  notes: "Theorem 1.2: the largest cap in AG(5,3) has 45 points. The preprint is cited in the preprint of bierbrauer-edel-2002 dated 2000-09-07, but its own date is unknown."
   added_by: daniel-munro
 
 edel-2004:
   string: "Y. Edel, Extensions of generalized product caps, Designs, Codes and Cryptography 31 (2004) 5-14."
   date: "2004-01"
   doi: "https://doi.org/10.1023/A:1027365901231"
+  added_by: daniel-munro
+
+bruen-haddad-wehlau-1998:
+  string: "A. Bruen, L. Haddad and D. Wehlau, Caps and colouring Steiner triple systems, Designs, Codes and Cryptography 13 (1998) 51-55."
+  date: "1998-01"
+  doi: "https://doi.org/10.1023/A:1008293805734"
+  notes: "Not read directly (publisher blocked). Proves that a cap in AG(5,3) has at most 48 points, as stated in the zbMATH review (Zbl 0892.05010) and in Section 1 of edel-ferret-landjev-storme-2002."
+  added_by: daniel-munro
+
+davis-maclagan-2003:
+  string: "B.L. Davis and D. Maclagan, The card game SET, The Mathematical Intelligencer 25(3) (2003) 33-40."
+  date: "2003-06"
+  doi: "https://doi.org/10.1007/BF02984846"
+  url: "https://web.archive.org/web/20250108182238/http://homepages.warwick.ac.uk/staff/D.Maclagan/papers/set.pdf"
+  notes: "Survey. Tabulates 112 <= a_6 <= 114, and says that Calderbank and Fishburn (1994) explicitly give two 6-caps with 112 points each."
+  added_by: daniel-munro
+
+bierbrauer-2003:
+  string: "J. Bierbrauer, Large caps, Journal of Geometry 76 (2003) 16-51."
+  date: "2003-06"
+  doi: "https://doi.org/10.1007/s00022-003-1690-2"
+  url: "https://pages.mtu.edu/~jbierbra/HOMEZEUGS/Potenzasurvey.ps"
+  notes: "Survey (the preprint is dated 2002-01-29). Section 5 describes the doubled Hill cap (a 112-cap in AG(6,3)) and the Calderbank-Fishburn 236-cap in AG(7,3); Section 10 covers the exact values for AG(4,3) and AG(5,3), and m(AG(6,3)) <= 114."
+  added_by: daniel-munro
+
+edel-et-al-2007:
+  string: "Y. Edel, C. Elsholtz, A. Geroldinger, S. Kubertin and L. Rackham, Zero-sum problems in finite abelian groups and affine caps, The Quarterly Journal of Mathematics 58 (2007) 159-186."
+  date: "2006-10-19"
+  doi: "https://doi.org/10.1093/qmath/ham003"
+  url: "https://www.math.tugraz.at/~elsholtz/WWW/papers/papers21edel-elsholtz-etal-dez06.pdf"
+  notes: "Section 5 tabulates bounds on the largest cap in AG(r,3), as g(C_3^r) - 1. The upper bounds come from Lemma 5.3 (adapted from Bierbrauer and Edel), applied recursively from 45: 296 for r = 7 and 783 for r = 8. Dated by Crossref's online date, since the publisher's page blocked reading."
+  added_by: daniel-munro
+
+elsholtz-2009:
+  string: "C. Elsholtz, comment of 2009-02-12 on T. Tao, Upper and lower bounds for the density Hales-Jewett problem (blog post, 2009)."
+  date: "2009-02-12"
+  url: "https://terrytao.wordpress.com/2009/02/05/upper-and-lower-bounds-for-the-density-hales-jewett-problem/#comment-35737"
+  notes: "Starting from the largest cap in AG(6,3) having 112 points (Potechin 2008), gives upper bounds on the largest cap in AG(n,3) for n = 7 to 15, including 292 for n = 7 and 773 for n = 8. The post's table of records shows the same values."
   added_by: daniel-munro
 
 potechin-2008:
@@ -3351,7 +3471,7 @@ su-li-luo-li-2002:
 solovjeva-1987:
   string: "F.I. Solov'jeva, An upper bound for the length of a cycle in an n-dimensional unit cube, Metody Diskretnogo Analiza 45 (1987) 71-76 (in Russian)."
   date: "1987"
-  notes: "Not seen directly. Proves c(n) <= (1 - 2/(n^2-n+2)) 2^(n-1) for n >= 7, as stated in Lukito's thesis (eq. 3.1, p. 27), whose Table 2 (p. 8) takes the values 249 and 500 for n = 9, 10 from it. Values for n = 11-13 computed from the formula (floor)."
+  notes: "Not seen directly. Proves c(n) <= (1 - 2/(n^2-n+2)) 2^(n-1) for n >= 7, as stated in Lukito's thesis (eq. 3.1, p. 27), whose Table 2 (p. 8) takes the values 123, 249 and 500 for n = 8, 9, 10 from it. Values for n = 11-13 computed from the formula (floor)."
   added_by: daniel-munro
 
 lukito-1998:

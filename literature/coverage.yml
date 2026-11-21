@@ -149,16 +149,23 @@ minimal-superpermutation:
   - "Egan's L(9) <= 408966 is dated by the creation date of his page (2018-10-20), whose original version wasn't seen. The 5906 for n = 7 is dated 2019-02-27 from Egan's page, though the group announcement is 2019-03-02. Coanda's YouTube comment wasn't read. Group posts are dated in UTC; the group shows US Central time."
 
 affine-line-arrangements:
-  status: partial
-  reviewed: 2026-11-17
-  sources: [oeis-a241600-lines-on-plane]
+  status: complete
+  reviewed: 2026-11-21
+  sources: [oeis-a241600-lines-on-plane, finschi-2001, forcey-2025, finschi-catalog, bjorner-et-al-1993]
   gaps:
-  - "A241600(8) <= 4,134,940 (Finschi via Forcey) bounds combinatorial types, so it bounds rigid isotopy classes only if the two agree for 8 lines (#41)."
+  - "Grünbaum, Arrangements and Spreads (1972), p. 4, cited by A241600, wasn't read (the archive.org copy is lending-only); it may give the counts for up to 4 or 5 lines before Finschi 2001."
+  - "No literature lower bound for 8 or more lines is recorded. One of 460780 follows from the 460779 realizable rank-3 oriented matroids on 9 elements (Fukuda, Miyata and Moriyama 2012), plus all lines parallel, and Finschi's 4134940 could be lowered by at least 274 for the non-realizable ones, but no source states either."
+  notes: "The family counts combinatorial types (see the formal statement), which is what Finschi's abstract types bound. A241600 is defined by rigid isotopy; its terms for up to 7 lines were computed as types, and the upper bounds for 8 or more lines bound A241600 only if isotopy classes and types agree there. Cutler, Karlsson and Sloane (arXiv:2511.15864, v4 2026-07-18), Forcey (arXiv:2504.11461) and the A241600 history were checked, with nothing new; A241600(8) = 4134940 was proposed on OEIS in May 2025 and withdrawn."
 
 affine-line-arrangements-general-position:
-  status: partial
-  reviewed: 2026-11-17
-  sources: [oeis-a090338-lines-on-plane-general, oeis-a006248-pseudolines]
+  status: complete
+  reviewed: 2026-11-21
+  sources: [oeis-a090338-lines-on-plane-general, ringel-1956, finschi-2001, christ-2011, oeis-a006248-pseudolines, oeis-a006245-sorting-networks, felsner-1996]
+  gaps:
+  - "Klee's 1938 dissertation, the original source of the counts for up to 7 lines, wasn't found; the values are from Ringel 1956 (p. 80) and the zbMATH review (Zbl 0019.13501)."
+  - "Knuth, Axioms and Hulls (LNCS 606, 1992), p. 35, tabulates A006245 and A006248 for small n and wasn't read (paywalled); it may give upper bounds for 8 or 9 lines, such as 9 A006248(9) = 39438 or 10 A006248(10) = 3123560, before Finschi 2001."
+  - "A006245(12) was added to OEIS by Samuel on 2011-01-30, before samuel-2011 (arXiv, 2011-08-18), so the bound for 12 lines may be dated about 7 months late. Trivial upper bounds 2^C(n+1,3), counting uniform chirotopes, which would predate the pseudoline counts for 10 to 12 lines, aren't recorded."
+  notes: "Upper bounds for 9 to 12 lines follow from counts of pseudoline arrangements (A006245, A006248) and aren't stated as bounds on A090338. Cutler, Karlsson and Sloane (arXiv:2511.15864, v4), Alkauskas (arXiv:2510.22584, v4), Rote (arXiv:2503.02336) and the A090338 history were checked, with nothing new."
 
 golomb-ruler:
   status: complete
@@ -198,16 +205,30 @@ snake-in-the-box:
   - "No literature found for the upper bounds that certificates give (#65, #74)."
 
 coil-in-the-box:
-  status: partial
-  reviewed: 2026-11-14
-  sources: [minortriad-snake, uga-sib-records, lukito-2000]
+  status: complete
+  reviewed: 2026-11-21
+  sources: [minortriad-snake, uga-sib-records, oeis-a000937-coil, lukito-2000, kochut-1996, pettersson-2015, casella-potter-2005a, wynn-2012, allison-paulusma-2016a, allison-paulusma-2016b, orland-et-al-2026, byrnes-harley-spinu-2026, davies-1965]
+  gaps:
+  - "Kautz 1958, Even 1963, Abbott-Katchalski 1991, Paterson-Tuliani 1998, Solov'jeva 1987 and Lukito 1998 weren't read (paywalled or not online); their bounds come from Allison-Paulusma, Pettersson's thesis, Kochut 1996 and Lukito's thesis. Paterson-Tuliani also appeared at ISIT 1997 (doi:10.1109/ISIT.1997.613174), which may date 96 and 340 a year earlier."
+  - "Who first gave c(12) >= 1238 is disputed: Lukito's thesis (Table 1) credits Abbott-Katchalski 1991, but Casella-Potter 2005 and the University of Georgia records page credit Paterson-Tuliani 1998. Lukito is followed."
+  - "Kochut 1996 (Table 2) lists c(8) >= 88 and c(10) >= 324, crediting Abbott-Katchalski 1991 and Even 1963 together without saying which gave which, so they aren't recorded. Earlier lower bounds for n = 8 to 13 (Klee 1967 and 1970, Danzer-Klee 1967, Abbott-Katchalski 1988, Wojciechowski 1989) weren't checked."
+  - "Pettersson says Kautz gave an erroneous maximum of 24 for n = 6. If Kautz exhibited such a coil it would be a step c(6) >= 24 before Even's 26; it isn't recorded."
+  - "Upper bounds for n = 6 and 7 before their exact values (such as c(7) <= 50 from the unpublished Kochut-Miller-Potter-Robinson search, cited in Kochut 1996, or Solov'jeva's formula, which gives c(7) <= 61) aren't recorded. The Solov'jeva values for n = 11 to 13 and the Byrnes-Harley-Spinu value for n = 13 are computed from their formulas."
+  - "Casella posted the coils of 180, 344 and 630 in a comment on OEIS A000937 dated 2005-03-04, before the FLAIRS paper (May 2005) that dates them here."
+  - "Hood, Recoskie, Sawada and Wong 2015, Meyerson et al. 2014 and 2015, and Casella-Potter 2005b weren't read (paywalled). The July 2014 University of Georgia table shows a coil of 358 but a symmetric coil of 362 for n = 10, so 362 is dated by Meyerson et al. 2015 as before."
 
 cap-set:
-  status: partial
-  reviewed: 2026-11-05
-  sources: [karapetyan-karapetyan-2026]
+  status: complete
+  reviewed: 2026-11-21
+  sources: [karapetyan-karapetyan-2026, edel-caps-page, oeis-a090245-cap-set, wikipedia-cap-set, romera-paredes-et-al-2023, versluis-2017, thackeray-2022, davis-maclagan-2003, bierbrauer-2003, edel-et-al-2007, elsholtz-2009, edel-ferret-landjev-storme-2002, bierbrauer-edel-2002, edel-bierbrauer-2001, hill-1973]
   gaps:
-  - "Hill 1973, Calderbank-Fishburn and Edel-Bierbrauer attributions rest on secondary sources; the publishers blocked reading (#48)."
+  - "Pellegrino 1970 (not online), Bruen-Haddad-Wehlau 1998, Calderbank-Fishburn 1994 and Potechin 2008 (Springer) weren't read. Their bounds are as stated in bierbrauer-2003, edel-et-al-2007, the zbMATH review of Bruen-Haddad-Wehlau, edel-ferret-landjev-storme-2002, davis-maclagan-2003, edel-bierbrauer-2001 and karapetyan-karapetyan-2026."
+  - "112 for n = 6 is credited to Calderbank-Fishburn 1994, which explicitly gives two 112-caps (davis-maclagan-2003). It also follows by doubling (Mukhopadhyay 1978, not read) applied to Hill's 56-cap, and Mukhopadhyay may state it first. Hill 1973 doesn't mention AG(6,3)."
+  - "The 45-cap in AG(5,3) is implicit in Hill 1973 (the 11-point hyperplane sections of the 56-cap). Hill's Caps and codes (1978, not read) may be the first to state it."
+  - "496 for n = 8 is implicit in edel-bierbrauer-2001 (a 248-cap in PG(7,3) plus doubling). The first explicit statement found is versluis-2017; edel-et-al-2007 lists only 476 and Tao's 2009 table 472."
+  - "Potechin 2008 wasn't read and may already state the upper bounds 292 and 773 for n = 7 and 8, credited here to Elsholtz's blog comment of 2009-02-12."
+  - "Upper bounds implied by projective ones or by r(n) <= 3r(n-1) aren't recorded unless a source states them for AG(n,3), for example r(5) <= 56 from Hill 1973."
+  - "Calderbank-Fishburn 1994 (dated 1994-07, vol. 4 no. 3) is listed by Crossref as 1994-10, and couldn't be checked. edel-et-al-2007 is dated by Crossref's online date, 2006-10-19."
 
 no-three-in-line:
   status: partial
