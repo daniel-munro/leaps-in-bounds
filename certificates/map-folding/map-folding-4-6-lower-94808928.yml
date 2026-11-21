@@ -1,0 +1,12 @@
+constant: map-folding-4-6
+bound: lower
+value: 94808928
+kind: witness
+witness:
+  format: generator
+  file: map-folding-4-6-lower-94808928.py
+  output: stacks
+  output_sha256: 40cab9d05256095dae607205b2e1cd7a70a64dc056253dc701c1e3662bee0481
+submitted_by: daniel-munro
+date: 2026-11-20
+notes: 'A generator that prints every folding of the 4 × 6 map, cells numbered row by row in base 36, one stack per row from the bottom up, read by the checker as a stream. Written by an AI agent (Claude Opus 5.5): a depth-first search that inserts the cells into the stack one at a time, in order, and abandons a partial stack as soon as two creases on the same edge cross; the gaps where each new cell can go are found by one scan of the nesting of the creases on each edge it adds a crease to. The count matches the one given on Code Golf Stack Exchange (question 276709). Generating and checking it took 16 minutes on an otherwise idle 8-core laptop, with 2.9 GB of memory; run alongside another check, the generator did not finish within the hour the checker waits for it.'

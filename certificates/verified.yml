@@ -5257,6 +5257,11 @@ map-folding-4-5-lower-6139920:
   checker: 385f3a47bd027f3a62c6e0cf66c551c96e44bf45
   verified_by: daniel-munro
   date: '2026-11-20'
+map-folding-4-6-lower-94808928:
+  sha256: c6401dea45a521915fe1ca0b9a19d3a7f31f225ae3197decdc2d43d099b7bdc2
+  checker: 7e3cb46010c6ae1a0a62288309ff52bd0d3fa520
+  verified_by: daniel-munro
+  date: '2026-11-20'
 map-folding-4-9-lower-120000:
   sha256: e0c81a040973fad91c43e774d4a1c1d4c03b0748e29657f166b7f8ff5a6bc4ab
   checker: 900d324d6eb129987b26fa1ab701dbcf82c08bd1

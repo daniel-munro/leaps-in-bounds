@@ -59,7 +59,7 @@
 
 - constants: [map-folding-2-12, map-folding-2-13, map-folding-2-14, map-folding-2-15, map-folding-2-16,
     map-folding-2-17, map-folding-2-18, map-folding-3-8, map-folding-3-9, map-folding-3-10, map-folding-3-11,
-    map-folding-3-12, map-folding-3-13, map-folding-3-14, map-folding-4-6, map-folding-4-7, map-folding-4-8,
+    map-folding-3-12, map-folding-3-13, map-folding-3-14, map-folding-4-7, map-folding-4-8,
     map-folding-4-10, map-folding-5-5, map-folding-5-6, map-folding-5-7, map-folding-5-8, map-folding-6-6,
     map-folding-6-7, map-folding-7-7]
   bound: lower
@@ -67,12 +67,12 @@
   checked: 2026-11-20
   detail: >-
     A witness lists every folding. Generators that print them certify the counts
-    up to 2 × 11 (51,081,844 foldings), but the Python search that generates
-    them finds about 100,000 foldings a second on one core, and less on a busy
-    machine, while the checker waits at most an hour for a generator's output:
-    4 × 6 (94,808,928) didn't finish in the hour alongside another check, 5 × 5
-    (186,086,600) and 3 × 8 (201,060,768) took about an hour each with other
-    jobs running, 2 × 12 (266,680,992) would take longer, and 3 × 9 and 4 × 7
-    (over a billion) several hours. A faster generator might reach 4 × 6 to 2 × 12;
+    up to 4 × 6 (94,808,928 foldings, 16 minutes on an otherwise idle machine),
+    but the Python search that generates them finds about 100,000 foldings a
+    second on one core, and less on a busy machine, while the checker waits at
+    most an hour for a generator's output: 5 × 5 (186,086,600) and 3 × 8
+    (201,060,768) took about an hour each with other jobs running, 2 × 12
+    (266,680,992) would take longer, and 3 × 9 and 4 × 7 (over a billion)
+    several hours. A faster generator might reach 5 × 5 to 2 × 12;
     beyond that, a lower bound could come from a Lean proof that counts the
     foldings.
