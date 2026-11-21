@@ -1618,7 +1618,7 @@ def render_debruijn_newman(constant_id: str) -> Svg | None:
     heights of the zeros of the Riemann zeta function on the critical line.
     Going down, neighboring zeros meet and leave the real line; Λ is the
     least λ above which all the zeros are real, and the band shows its
-    current bounds."""
+    current bounds, or a line its value once it's known."""
     import mpmath
     with open("_data/constants.yml") as file:
         constant = yaml.safe_load(file)[constant_id]
@@ -1636,8 +1636,11 @@ def render_debruijn_newman(constant_id: str) -> Svg | None:
     check(len(zeros) == len(expected) and all(abs(a - b) < 0.05 for a, b in zip(zeros, expected)),
           f"{constant_id}: the zeros of H_0 aren't twice those of zeta")
     svg = Svg(xmin, lmin * stretch, xmax, lmax * stretch)
-    svg.add(svg.rect(xmin, low * stretch, xmax - xmin, (high - low) * stretch, fill=PALETTE[1], fill_opacity=0.35))
-    svg.add(svg.line((xmin, 0), (xmax, 0), stroke=INK, stroke_width=1, stroke_dasharray="4 3"))
+    if high > low:
+        svg.add(svg.rect(xmin, low * stretch, xmax - xmin, (high - low) * stretch, fill=PALETTE[1], fill_opacity=0.35))
+        svg.add(svg.line((xmin, 0), (xmax, 0), stroke=INK, stroke_width=1, stroke_dasharray="4 3"))
+    else:  # Known exactly: a line at the value
+        svg.add(svg.line((xmin, low * stretch), (xmax, low * stretch), stroke=PALETTE[1], stroke_width=4))
     curves = zero_curves(xs, [lam * stretch for lam in lams], values)
     svg.add(svg.group((svg.polyline(c) for c in curves), fill="none", stroke=EDGE, stroke_width=2,
                       stroke_linejoin="round", stroke_linecap="round"))

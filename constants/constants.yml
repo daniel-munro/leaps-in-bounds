@@ -1715,7 +1715,7 @@ disk-covering-7:
 debruijn-newman:
   image:
     generated: debruijn-newman.svg
-    alt_text: "The real zeros of H_λ(x) for x from 40 to 104 as λ goes from -10 to 1. At λ = 0 they're twice the heights of the zeros of the Riemann zeta function; going down, pairs of them meet and leave the real line. A band marks the current bounds 0 ≤ Λ ≤ 0.2."
+    alt_text: "The real zeros of H_λ(x) for x from 40 to 104 as λ goes from -10 to 1. At λ = 0 they're twice the heights of the zeros of the Riemann zeta function; going down, pairs of them meet and leave the real line. A solid line at λ = 0 marks the value Λ = 0."
 
 moving-sofa:
   image:

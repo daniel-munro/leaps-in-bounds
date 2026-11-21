@@ -86,3 +86,16 @@
     The published proofs are long case analyses, several with symbolic or
     numerical computation (Zeng and Chen 2011 and 2019, Dehbi and Zeng 2022),
     and formalizing them in Lean is far beyond the trivial cases n = 3 and 4.
+
+- constants: [debruijn-newman]
+  bound: upper
+  reason: out-of-reach
+  checked: 2026-11-21
+  detail: >-
+    Λ ≤ 0 follows from Alpöge's Lean proof of the Riemann hypothesis (2026),
+    but that proves Mathlib's RiemannHypothesis, not UpperBound 0 in terms of
+    H(t, z), so it can't be attested for this statement as it is. A proof
+    would also need H(0, z) = ξ(1/2 + iz/2)/8 and de
+    Bruijn's theorem that H(t, ·) having only real zeros implies the same for
+    every larger t, neither of which is in Mathlib. With those, a proof from
+    RiemannHypothesis importing Alpöge's library could be attested.

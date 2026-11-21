@@ -1345,6 +1345,13 @@ platt-trudgian-2020:
   notes: "Corollary 2 (Section 3.4): Λ ≤ 0.2, from the Polymath criterion and the verification of the Riemann hypothesis to height 3·10^12."
   added_by: daniel-munro
 
+alpoge-2026:
+  string: "L. Alpöge, announcement of a proof of the Riemann hypothesis and the generalized Riemann hypothesis for Dirichlet L-functions, formalized in Lean (2026), with the Lean source at https://alpo.ge/lean.tar.gz.part01 to part14."
+  date: "2026-11-20"
+  url: "https://alpo.ge/remark.pdf"
+  notes: "The proof is given only as a Lean library, which proves Mathlib's RiemannHypothesis. It was certified by the Lean and Mathlib communities on 2026-11-21 (https://leanprover-community.github.io/blog/posts/riemann-hypothesis/), with verification files at https://math.mit.edu/~drew/grh/. Λ ≤ 0 is a corollary not stated there: the Riemann hypothesis is equivalent to Λ ≤ 0 (Rodgers-Tao 2018, Section 1), so with their Λ ≥ 0, Λ = 0."
+  added_by: daniel-munro
+
 planat-raymond-2026:
   string: "M. Planat and D.J. Raymond, Certified collision exclusion and an unconditional upper bound Λ < 0.156821 for the de Bruijn-Newman constant, arXiv:2611.06245 (2026)."
   date: "2026-11-04"
