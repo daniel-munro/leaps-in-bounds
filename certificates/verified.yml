@@ -4802,6 +4802,346 @@ golomb-ruler-9-upper-44:
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
   verified_by: daniel-munro
   date: '2026-11-08'
+heilbronn-square-10-lower-0p04653741958:
+  sha256: 5618e146c1a1b04a2276276c827706fafabfc4e19db0c57fbec04982c74a056e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-11-lower-1over27:
+  sha256: 3c524f2de585cd548e8e4531b1e8ec634596bcef2657d2c5beb374c5ecb26739
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-12-lower-0p03259885869:
+  sha256: c8ee015954574a1ba091ae7ab825d3205dda82760e96e7c5d5e4908800f81496
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-13-lower-0p02701991666:
+  sha256: 2f8507be0e1733434148aaa6813e4a52ab74e2fb0ea6c402cd48fd321d63323e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-14-lower-0p02430397962:
+  sha256: a6af755fe1912403800efc3f2bd4a5f47e1e784abf5626ef2088ead6bbc4b99e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-15-lower-0p02121054100:
+  sha256: 94e1984cb31bfd4ff608f0850bf2d817346a0a46ba7eadd274800465e1107c1a
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-16-lower-7over341:
+  sha256: 12920d31aaf2aaadd1ed846bb257c52273f80347be324ad546fce9c55887af9e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-17-lower-0p01726167707:
+  sha256: 15fdc7d265505c39be8cca360b467156f5a42d06d27feb8aa58b2819c32cfe53
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-18-lower-0p01552605994:
+  sha256: cf1b2cc887912716a33e81831f0b2b30e0d4813a382b7bb64e7bb908901b661c
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-19-lower-0p01394786208:
+  sha256: 05e10c69928399f8e872c2b166afe649f736da59faba57039249a6b68cbc1aa3
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-20-lower-0p01293819671:
+  sha256: acefe1259c6fe3220cf2a63063ce22d169e8cff32664dcd4301aa082b4c0edcf
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-21-lower-0p01147376078:
+  sha256: 03be7f04826838c7640c3208e74c7b9c23c64f5435e209cb099d402100bc69fc
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-22-lower-0p01077165680:
+  sha256: eb8652243086b8b64fa616d1a65d8247db0f32635eed438b985ffe4ca031359e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-23-lower-0p009757289713:
+  sha256: 35b5eb40119f77430694cf57d9e7fe76eb0380235a5ad053d43e90311adad79d
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-24-lower-0p009120143020:
+  sha256: 3b42b28ff968022da1d6a159f7f0700839c72e0700769fa33c400ae06c2b8fc4
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-25-lower-0p008261594546:
+  sha256: e7e635218bf6eca1524a7c1a6ceaafcd8861e2ba8d0100e284c1a75de55beb81
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-26-lower-0p007872707361:
+  sha256: 418c888621bde3b8fa19abefb04e0ccfd0793f57d893bc96117e197a09976d9f
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-27-lower-0p007106711306:
+  sha256: cac86cf815f0d6a2d07c28b174c5bf87c360a7b13f4bc3404cbadb6c2ab29e6d
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-28-lower-0p006971086212:
+  sha256: 9bba4e14bc657cf8b27e022af61276ddb38476f72623aad646c307bd800a664f
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-29-lower-0p006318902752:
+  sha256: 7050b1f0fe5aa3c743ed15b43cf25361445c5ec8ef3ed1ce9c0f29d84f11cfcd
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-3-lower-1over2:
+  sha256: 0c22bc9b32851a249bb7eff6adf03a3c52bb001b110eae84b5111f8601460f2f
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-30-lower-0p006072416303:
+  sha256: 6e9e5b922d512dd934e63b6e4532436f9a1e3dfd4251e7a03f77dc0f4fe4bf31
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-31-lower-0p005837068845:
+  sha256: 60b5b848cdf962a1492ec7a970bc5333136cc23acc1e3ef34a5e47f64391acd5
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-32-lower-0p005810902207:
+  sha256: da15255c9e56f94100e9b7b2f7efafd88d05b35b7b3dc21ca93469cf223f1a85
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-33-lower-0p005145488358:
+  sha256: c31ebb58acde057d426308c8c60e158cd58f39c36317183df4f750fc9110a634
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-34-lower-0p004914720004:
+  sha256: 96b822f188be9b97727d1ecc2b014f4a59808b1b4378c2c7fc587d7443f21139
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-35-lower-0p004525331749:
+  sha256: f931efbd334cdb50f2b7dbe193146a4d5b1d77326a14aac205ce71d794b95d84
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-36-lower-0p004425363190:
+  sha256: 6c26733e1ddf7b1c89ee7d3fd0ab9f869ba0e1808fff5e4aa8c04787c6f20a68
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-4-lower-1over2:
+  sha256: 415d29b53b7f643ad60b78d0472176fbb982e9649d8c1cf3ac317404e70deff6
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-5-lower-0p1924500897:
+  sha256: a4a5a437c1e5924a27389c38ef8a88b82269dfbbf49af3d97b4c7416b1d27d8e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-6-lower-1over8:
+  sha256: d58d2cd79803ad4df8cdc72d5a1037e86e7b2b1765ee9bcf0f0856be0b0d406b
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-7-lower-0p08385900900:
+  sha256: d70d451647c089dc7bf92732d2ab46238fa6581672de7aa18b4182a68f9843f2
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-8-lower-0p07237642431:
+  sha256: 66f543984b234f300b32bcb1cba60fdc477226c9ee0e963862a145208c169698
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-square-9-lower-0p05487599917:
+  sha256: d165a21fe69cce70b647fc2f72c84f23af21932723e9c022ea3fb92e872886e8
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-10-lower-0p04337674067:
+  sha256: 2502d3a0e8180c6698aec4b8850b687340ee1ca71bb0c10f7f595b003082091e
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-11-lower-0p03652988988:
+  sha256: eb900a03a97a38cabd77edeeec126c1f6d0b97394fcc907a225578026e19a2b9
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-12-lower-0p03100478174:
+  sha256: 89f6afe67fc62454ae3e7619811b54b4e84e1440a15ceca134914b04caa81956
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-13-lower-0p02655652891:
+  sha256: 3c085bd7a9bf7b3d76e7e0994719a820c1c37f72521665c1db50975bbf9e511f
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-14-lower-0p02377577310:
+  sha256: 42f28b7e6e9d5e4aea8c9e07fcdbb3406a20f478465eae646abf1c2b3ce4517f
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-15-lower-0p02109076946:
+  sha256: 41a6f0dcba1bbbe7bdfb0d661e53ec52dcc5098762b149cfb94e4c3d1d6391d0
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-16-lower-0p01835554635:
+  sha256: 9d26d448d3098562770dcdf95b90b7aca9ba02222d22743ecf4ed3b701a44e80
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-17-lower-0p01624232840:
+  sha256: 7a9b5b56dba415e38cca8e459396bb657f0f5d527cf4f1045f928dc2edd65c4d
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-18-lower-0p01489434298:
+  sha256: f44c44dbfee09d637880fcaf5b07e8041a83d9189429a9b16c2e1d137f9bbc17
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-19-lower-0p01348189138:
+  sha256: e54a42f779444d1097223c8fd8af7cda48f5b6ee83fae0d84246762f126d694d
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-20-lower-0p01260939152:
+  sha256: 7dd61fdda7de0efdf63fbf8dea3fd3eedc491826f239dd9935c4fe33e9af54b6
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-21-lower-0p01144856789:
+  sha256: 7c5bccf180342b9a8d554caf337d871ab49d1484fe4a7057c712423147ede909
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-22-lower-0p01033816438:
+  sha256: f8af09a6ee965b4c7441161892d5a165c55beffd1f59fa3fa68d35b934ed69bd
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-23-lower-0p009279055872:
+  sha256: 5e4327a8ddeae67d17ccb620f12d9825487a50276f745d06bdeb91116e287f07
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-24-lower-0p008985154072:
+  sha256: 5d2f30bb02e0ddcba558d03b2b9a43a5cdfb9c2585da74d2ee3c6364b9560199
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-25-lower-0p008155975853:
+  sha256: 24e319ff239cc6a59e16670f547536a73a918fb349e1ab3e9f47dccb5d53b700
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-26-lower-0p007600121289:
+  sha256: ae92c5012cbc61099b18ac94aff2e3e580996134360d3453029b3b87ecad7f5c
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-27-lower-0p007428705372:
+  sha256: 4da22241a4bf1a2190ab6d647a19ea87d9e68c52f9d3c6a310a9c50a7b8d4c62
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-28-lower-0p006694341604:
+  sha256: 95273e9bf11a2ef5d402e5e28d6047327f0a6765906a8bbfa77168c6529f036f
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-29-lower-0p006123691184:
+  sha256: 0e7c284fce705c49e691d70c38892ad4967855b10bf0e3c1ee70349a66146c9c
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-3-lower-1:
+  sha256: 3b3c582d0f6463932fb1cdedc8ff6c25dd481925fa5d8f9c438c8f1a65d87696
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-30-lower-0p005957401091:
+  sha256: cf585464ce65620bdb2cd43732fe31c3fc921d0d6f3dd28c42e564cec66a7c60
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-31-lower-0p005465310894:
+  sha256: bedc55e6228703e7a4f50ea71660bae867af8bb618c19ea8ec858db85fae4835
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-32-lower-0p005119531455:
+  sha256: 771e0bbc67d281eb32bc10a03bdba64d8256485cf77e96473c12a1068ca360ef
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-33-lower-0p004992401166:
+  sha256: 76de011e73b847308da429df7e6193403cfeb1ac5371a987f4548892e8c86c98
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-34-lower-0p004736210559:
+  sha256: 1c82f12f0d2e3b7e383e28965a23f1ab99ba253e904ce534dca6317ae756ca39
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-35-lower-0p004354781153:
+  sha256: 07f3724fb6256f878381ffc5ddc0680c398c5b187b01ca57425c759283d9e364
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-36-lower-0p004237663985:
+  sha256: 301b222dbb1fd6257c1d84ff21dd119ba2c81d8b0b8716c999f3c0923b9bb845
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-4-lower-1over3:
+  sha256: 975d78dd1eb1b93385bb8de607512725ee5495c3014f7fa5f8cf8e27976a3990
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-5-lower-0p1715728752:
+  sha256: 4cdc1744e9fa5a3fe894703b522f5176c3d7443f300aba4fdbc8c1e8552a5502
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-6-lower-1over8:
+  sha256: e6a1fa4e8451fd910e48e0de7b0e565ee7bdbfddab49375e003570bb29854cb1
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-7-lower-7over72:
+  sha256: 54568f202efb488c88a434ae65da61a02e9a5fcca0c241a1c42702127807eec5
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-8-lower-0p06778921325:
+  sha256: b0a6de643016cdc3067f404eb8a34e539180c20979e384ec0682145d2b5cfaf1
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
+heilbronn-triangle-9-lower-43over784:
+  sha256: 5eb9781338ba2e5c16b24f61c08d177c553406c4006239474bdeda5da7f4e010
+  checker: f151b8e99f1d23cf148ad6534f2b946508bdff6a
+  verified_by: daniel-munro
+  date: '2026-11-21'
 isosceles-set-1-lower-3:
   sha256: f32a5ecc23f6db5a41954313be3f070377bb00912a1dcbabdca1e11468458035
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
