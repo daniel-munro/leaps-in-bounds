@@ -1,0 +1,14 @@
+constant: heilbronn-triangle-3
+bound: lower
+value: 1
+kind: witness
+witness:
+  format: points
+  data: |
+    0, 0
+    1, 0
+    0, 1
+submitted_by: daniel-munro
+date: 2026-11-21
+source: trivial
+notes: "The best known configuration, a trivial configuration, from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/3/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are exact decimals, with least triangle area, as a fraction of the triangle's area, exactly 1. Transcribed by Claude (Opus 5.5), an AI agent."

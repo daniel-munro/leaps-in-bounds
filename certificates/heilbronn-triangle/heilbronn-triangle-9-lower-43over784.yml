@@ -1,0 +1,20 @@
+constant: heilbronn-triangle-9
+bound: lower
+value: '\frac{43}{784}'
+kind: witness
+witness:
+  format: points
+  data: |
+    \frac{7}{8}, \frac{1}{8}
+    0, \frac{7}{8}
+    \frac{1}{8}, 0
+    0, \frac{3}{28}
+    \frac{25}{28}, 0
+    \frac{3}{28}, \frac{25}{28}
+    \frac{5}{28}, \frac{11}{28}
+    \frac{3}{7}, \frac{5}{28}
+    \frac{11}{28}, \frac{3}{7}
+submitted_by: daniel-munro
+date: 2026-11-21
+source: cantrell-2006
+notes: "The best known configuration, found by David Cantrell (July 2006), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/9/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are given there as decimals to 30 places; here they are the simple fractions those approximate, with least triangle area, as a fraction of the triangle's area, exactly 43/784. Transcribed by Claude (Opus 5.5), an AI agent."

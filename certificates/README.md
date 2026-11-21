@@ -450,6 +450,17 @@ Values are written as for disk covering, such as `'57.13670307'` or `90`.
 
 Witnesses can certify lower bounds only, at a rational number of degrees. A witness for `T(n) >= a` uses `format: vectors`: `n` nonzero vectors in `ℝ³`, one per line as `x, y, z`, with rational coordinates written as integers, decimals or fractions `a/b`. They needn't have unit length: the points are the vectors scaled to it. The checker compares the cosine of the angle between each two vectors, exactly, with rational bounds on `cos(a°)` from interval arithmetic. That decides every pair unless the angle is exactly `a` and `cos(a°)` is irrational, which happens for an optimal configuration whose angle is the bound. So, except at `60`, `90`, `120` and `180` degrees, where `cos(a°)` is rational, round the angle down a little, in the eighth decimal place, say.
 
+### The Heilbronn triangle problem: `heilbronn-square-{n}` and `heilbronn-triangle-{n}`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/Heilbronn.lean`](../formal/LeapsInBounds/Statements/Heilbronn.lean):
+
+- `SquareRadicalLowerBound n terms d` means `H(n) >= radical terms d`: some `n` points in the unit square `[0, 1]²` have every three forming a triangle of at least that area. `SquareRadicalUpperBound n terms d` means no `n` points do better.
+- `TriangleRadicalLowerBound n terms d` and `TriangleRadicalUpperBound n terms d` are the same for `Δ(n)`, with points in the triangle with vertices `(0, 0)`, `(1, 0)` and `(0, 1)`, and areas as a fraction of its area `1/2`. Any triangle can be mapped to this one by an affine map, which scales all areas by the same factor.
+
+Values are written as for disk covering, such as `'0.02701991666'` or `'\frac{1}{27}'`.
+
+Witnesses can certify lower bounds only. A witness uses `format: points`: `n` points, one per line as `x, y`, in the square or triangle above, with coordinates written as for circle packing: decimals, fractions `\frac{a}{b}` or sums of rational multiples of square roots. With rational coordinates every area is rational, so the checker compares each of the `n choose 3` areas with the bound exactly. Optimal configurations usually have irrational coordinates, so a configuration with decimal coordinates attains a value slightly off the optimum: give the exact least area of the coordinates as written, rounded down, such as to ten significant digits.
+
 ### The moving sofa constant: `moving-sofa`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/MovingSofa.lean`](../formal/LeapsInBounds/Statements/MovingSofa.lean):

@@ -1,0 +1,28 @@
+constant: heilbronn-square-17
+bound: lower
+value: '0.01726167707'
+kind: witness
+witness:
+  format: points
+  data: |
+    0.247326052713176, 0
+    0.702500586060952, 0.718701044094748
+    0.054260882610544, 0.09639842999816
+    0.099716380436438, 1
+    0.811011328926192, 1
+    1, 0.297711220812091
+    0.494475608776827, 0.897030956001883
+    0.734550637708523, 0.354378617991127
+    0, 0.302308268721974
+    0.639108649654037, 0
+    0, 0.938555828365232
+    0.942888833494965, 0.088118651554753
+    0.121992930397655, 0.615202017386934
+    0.364427016165909, 0.573246976790536
+    1, 0.951039958295406
+    0.361401837393109, 0.263620756290299
+    0.942888833494965, 0.692612593067994
+submitted_by: daniel-munro
+date: 2026-11-21
+source: nemri-2026-alphaevolve
+notes: "The best known configuration, found by Chouaieb Nemri (AlphaEvolve, Google Cloud) (August 2026), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/square/17/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Its coordinates are exact decimals, with least triangle area about 0.0172616770725236, rounded down to 0.01726167707. Transcribed by Claude (Opus 5.5), an AI agent."

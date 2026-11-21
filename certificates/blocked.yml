@@ -54,3 +54,13 @@
     A witness lists every folding, and n = 13 already takes 288 kB with xz; the
     count grows by about 3.5 times per stamp, so n = 14 is over the size limit.
     A lower bound could come instead from a Lean proof that counts the foldings.
+
+- constants: [heilbronn-square-5, heilbronn-square-6, heilbronn-square-7, heilbronn-square-8,
+    heilbronn-triangle-5, heilbronn-triangle-6, heilbronn-triangle-7]
+  bound: upper
+  reason: out-of-reach
+  checked: 2026-11-21
+  detail: >-
+    The published proofs are long case analyses, several with symbolic or
+    numerical computation (Zeng and Chen 2011 and 2019, Dehbi and Zeng 2022),
+    and formalizing them in Lean is far beyond the trivial cases n = 3 and 4.

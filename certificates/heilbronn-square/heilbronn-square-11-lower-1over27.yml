@@ -1,0 +1,22 @@
+constant: heilbronn-square-11
+bound: lower
+value: '\frac{1}{27}'
+kind: witness
+witness:
+  format: points
+  data: |
+    \frac{1}{3}, 0
+    \frac{2}{3}, 0
+    0, \frac{2}{9}
+    1, \frac{2}{9}
+    \frac{1}{3}, \frac{4}{9}
+    \frac{2}{3}, \frac{4}{9}
+    0, \frac{2}{3}
+    1, \frac{2}{3}
+    \frac{1}{2}, \frac{7}{9}
+    \frac{1}{6}, 1
+    \frac{5}{6}, 1
+submitted_by: daniel-munro
+date: 2026-11-21
+source: goldberg-1972
+notes: "The best known configuration, found by Michael Goldberg (1972), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/square/11/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Its coordinates are given there as decimals to 30 places; here they are the simple fractions those approximate, with least triangle area exactly 1/27. Transcribed by Claude (Opus 5.5), an AI agent."

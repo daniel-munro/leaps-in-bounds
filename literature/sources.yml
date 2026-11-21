@@ -4851,3 +4851,198 @@ xu-2013:
   doi: "https://doi.org/10.1016/j.jnt.2013.05.008"
   notes: "Theorem 4: if k >= 3, s, t >= 2, 5 <= n < WR_s(k) and the least prime divisor of n is greater than k, then W_st(k) >= n(W_t(k) - 1) + 1, where W_r(k) is the number for r colors. The only value given is W(4,7) >= 617 x 3703 + 1 = 2284752 (Section 3), from Rabung's 2-coloring of Z_617 and W(2,7) > 3703. Monroe (arXiv:1603.03301) restates the theorem with >, which would give one more, and credits more values to this paper than it gives. Date: available online."
   added_by: daniel-munro
+
+stead-heilbronn-square:
+  string: "T. Stead, The Heilbronn problem: square, tables of the best known configurations of n points in the unit square for n = 3 to 100, with their record histories (linked from Erich Friedman's Packing Center), retrieved 2026-11-21."
+  date: "2026-11-21"
+  url: "https://math.tejstead.com/heilbronn/square/"
+  notes: "Each n has a page with its credits, record history and exact coordinates (points.txt), verified on the site in exact arithmetic. Values for n = 9 and 10 are marked numerically optimal (solver certificates within floating-point tolerances, not proofs), and Ethan Hendren's AI-assisted computer proof for n = 9 (2026-11-13) is noted but not yet accepted."
+  added_by: daniel-munro
+
+stead-heilbronn-triangle:
+  string: "T. Stead, The Heilbronn problem: triangle, tables of the best known configurations of n points in a triangle of unit area for n = 3 to 36, with their record histories (linked from Erich Friedman's Packing Center), retrieved 2026-11-21."
+  date: "2026-11-21"
+  url: "https://math.tejstead.com/heilbronn/triangle/"
+  notes: "Coordinates are given in the triangle (0, 0), (1, 0), (0, 1), and values as fractions of its area. n = 8 is marked numerically optimal (Sudermann-Merx, arXiv:2607.15021, within a relative gap of 10^-4), and Ethan Hendren's AI-assisted computer proofs for n = 8 and 9 (2026-11-14 and 2026-11-15) are noted but not yet accepted."
+  added_by: daniel-munro
+
+goldberg-1972:
+  string: "M. Goldberg, Maximizing the smallest triangle made by N points in a square, Mathematics Magazine 45(3) (1972) 135-144."
+  date: "1972-05"
+  doi: "https://doi.org/10.1080/0025570X.1972.11976214"
+  notes: "Not read here (JSTOR). Constructions giving lower bounds for n <= 15 and conjectured optimal values, per Comellas and Yebra 2002, whose Table 1 gives the bounds before theirs for n = 7 to 12."
+  added_by: daniel-munro
+
+yang-zhang-zeng-1991:
+  string: "L. Yang, J. Zhang and Z. Zeng, On Goldberg's conjecture: computing the first several Heilbronn numbers, Universität Bielefeld, Preprint 91-074 (1991)."
+  date: "1991"
+  notes: "Not read here. Comellas and Yebra 2002 credit Yang, Zhang, Zeng and Dress, across this preprint and later papers, with the optimal value of H(5) and an improved lower bound for H(7) (0.083333 in their Table 1), without saying which paper gives which. Stead's tables date the H(5) proof to 1991."
+  added_by: daniel-munro
+
+yang-zhang-zeng-1991-triangle:
+  string: "L. Yang, J. Zhang and Z. Zeng, On exact values of Heilbronn numbers for triangular regions, Universität Bielefeld, Preprint 91-098 (1991)."
+  date: "1991"
+  notes: "Not read here; cited by Comellas and Yebra 2002. Stead's tables credit these authors with the six-point configuration in the triangle in 1991."
+  added_by: daniel-munro
+
+yang-zhang-zeng-1992:
+  string: "L. Yang, J. Zhang and Z. Zeng, A conjecture on the first several Heilbronn numbers and a computation, Chinese Annals of Mathematics, Series A 13 (1992) 503-515 (in Chinese)."
+  date: "1992"
+  notes: "Not read here. Stead's tables say that Theorem 3 proves H(6) = 1/8, and that the paper names L. Yang and J. Zhang, The six-point problem in the square (1980, in Chinese), as the first solution."
+  added_by: daniel-munro
+
+yang-zhang-zeng-1994:
+  string: "L. Yang, J. Zhang and Z. Zeng, On the Heilbronn numbers of triangular regions, Acta Mathematica Sinica (Chinese Series) 37(5) (1994) 678-689 (in Chinese)."
+  date: "1994"
+  notes: "Not read here. Proves that six points in a triangle of unit area span a triangle of area at most 1/8, per Wikipedia and Stead's tables."
+  added_by: daniel-munro
+
+peng-1989:
+  string: "R. Peng, the Heilbronn problem for five points in a triangle (1989), as reported in A. Soifer, How Does One Cut a Triangle?, 2nd ed., Springer, 2009."
+  date: "1989"
+  notes: "Not read here. Wikipedia and Stead's tables credit Royce Peng with proving that the largest smallest triangle for five points in a triangle of unit area is 3 - 2√2, in 1989, citing Soifer's book."
+  added_by: daniel-munro
+
+comellas-yebra-2002:
+  string: "F. Comellas and J.L.A. Yebra, New lower bounds for Heilbronn numbers, Electronic Journal of Combinatorics 9 (2002) #R6."
+  date: "2001-10-01"
+  doi: "https://doi.org/10.37236/1623"
+  notes: "Submitted 2001-10-01, accepted and published 2002-02-02. Table 1 gives the former and new lower bounds on H(n) for n = 7 to 12: H(7) >= 0.083859 (0.083333 before), H(8) >= (√13 - 1)/36 (Goldberg's (2 - √3)/4 before, Figure 1), H(9) >= 0.054876 (0.047619), H(10) >= 0.046537 (0.042791) and H(12) >= 0.032599 (0.030303), with H(11) >= 0.037037 unchanged. The exact forms of the new bounds for n = 9, 10 and 12 are from Stead's tables, and Sudermann-Merx (arXiv:2603.11107) gives their configurations in closed form."
+  added_by: daniel-munro
+
+zeng-chen-2011:
+  string: "Z. Zeng and L. Chen, On the Heilbronn optimal configuration of seven points in the square, in Automated Deduction in Geometry (ADG 2008), Lecture Notes in Computer Science 6301, Springer (2011) 196-224."
+  date: "2011"
+  doi: "https://doi.org/10.1007/978-3-642-21046-4_11"
+  notes: "Not read here (paywalled). Proves that the Comellas-Yebra configuration for seven points is optimal, per Stead's tables, Wikipedia and MathWorld. Presented at ADG 2008."
+  added_by: daniel-munro
+
+dehbi-zeng-2022:
+  string: "L. Dehbi and Z. Zeng, Heilbronn's problem of eight points in the square, Journal of Systems Science and Complexity 35(6) (2022) 2452-2480."
+  date: "2022-12-28"
+  doi: "https://doi.org/10.1007/s11424-022-1220-7"
+  notes: "Not read here (paywalled). Proves H(8) = (√13 - 1)/36, per Stead's tables, Wikipedia and MathWorld. Date: published online."
+  added_by: daniel-munro
+
+zeng-chen-2019:
+  string: "Z. Zeng and L. Chen, Determining the Heilbronn configuration of seven points in triangles via symbolic computation, in Computer Algebra in Scientific Computing (CASC 2019), Lecture Notes in Computer Science 11661, Springer (2019) 458-477."
+  date: "2019-08-26"
+  doi: "https://doi.org/10.1007/978-3-030-26831-2_30"
+  notes: "Not read here (paywalled). Proves that seven points in a triangle of unit area span a triangle of area at most 7/72, per Stead's tables and Wikipedia."
+  added_by: daniel-munro
+
+beyleveld-2006:
+  string: "M. Beyleveld, Heilbronn configurations for 14 and 16 points in the square (August 2006), as reported in Erich Friedman's Packing Center and Stead's Heilbronn tables."
+  date: "2006-08"
+  url: "https://math.tejstead.com/heilbronn/square/16/"
+  notes: "H(14) >= 0.0243039796, the least positive root of 320A³ + 768A² - 60A + 1, and H(16) >= 7/341, from an all-rational configuration."
+  added_by: daniel-munro
+
+cantrell-2006:
+  string: "D. Cantrell, Heilbronn configurations in the triangle (July 2006), as reported in Erich Friedman's Packing Center and Stead's Heilbronn tables."
+  date: "2006-07"
+  url: "https://math.tejstead.com/heilbronn/triangle/"
+  notes: "Configurations for 7, 8, 9 and 12 points in a triangle."
+  added_by: daniel-munro
+
+cantrell-2007:
+  string: "D. Cantrell, Heilbronn configurations in the triangle (June 2007), as reported in Erich Friedman's Packing Center and Stead's Heilbronn tables."
+  date: "2007-06"
+  url: "https://math.tejstead.com/heilbronn/triangle/"
+  notes: "Configurations for 10, 14 and 15 points in a triangle."
+  added_by: daniel-munro
+
+karpov-2011:
+  string: "P. Karpov, Heilbronn configurations for 13 and 15 points in the square (August 2011), published with coordinates in 2018 at inversed.ru/Ascension."
+  date: "2011-08"
+  url: "http://www.inversed.ru/Ascension.htm"
+  notes: "Dated by Stead's tables, which give H(13) >= 0.0270192722 and H(15) >= 0.0211056819 from Karpov's coordinates."
+  added_by: daniel-munro
+
+novikov-et-al-2025-alphaevolve:
+  string: "A. Novikov, N. Vũ, M. Eisenberger, E. Dupont, P.-S. Huang, A.Z. Wagner, S. Shirobokov, B. Kozlovskii, F.J.R. Ruiz, A. Mehrabian, M.P. Kumar, A. See, S. Chaudhuri, G. Holland, A. Davies, S. Nowozin, P. Kohli and M. Balog, AlphaEvolve: A coding agent for scientific and algorithmic discovery, arXiv:2506.13131."
+  date: "2025-06-16"
+  url: "https://arxiv.org/abs/2506.13131"
+  notes: "Appendix B.9: eleven points in a triangle of unit area with smallest triangle larger than 0.0365, up from 0.036. Found by AlphaEvolve, an AI system. Stead's tables give the exact value of the configuration, 0.0365298899."
+  added_by: daniel-munro
+
+stead-2026-07-heilbronn:
+  string: "T. Stead, Heilbronn configurations found by computer search (July 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-07"
+  url: "https://math.tejstead.com/heilbronn/"
+  notes: "From the record histories of square n = 17, 21 and 22, and the credit for triangle n = 13."
+  added_by: daniel-munro
+
+stead-2026-08-heilbronn:
+  string: "T. Stead, Heilbronn configurations found by computer search and local optimization (August 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-08"
+  url: "https://math.tejstead.com/heilbronn/"
+  notes: "From the credits and record histories of square n = 13, 19, 21 and 25 and triangle n = 24. The square n = 13 bound is Karpov's configuration polished, and the n = 21 bound (2026-08-21) was reported without coordinates."
+  added_by: daniel-munro
+
+stead-2026-09-heilbronn:
+  string: "T. Stead, Heilbronn configuration for 31 points in the square (September 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-09"
+  url: "https://math.tejstead.com/heilbronn/square/31/"
+  notes: "Coupvent des Graviers' 32-point configuration with a point deleted and the rest polished."
+  added_by: daniel-munro
+
+shanley-2026:
+  string: "W. Shanley, Heilbronn configuration for 18 points in the square (2026-07-22), as reported in Stead's Heilbronn tables."
+  date: "2026-07-22"
+  url: "https://math.tejstead.com/heilbronn/square/18/"
+  added_by: daniel-munro
+
+coupvent-des-graviers-2026-07:
+  string: "M.-E. Coupvent des Graviers, Heilbronn configuration for 25 points in the square (2026-07-31), as reported in Stead's Heilbronn tables."
+  date: "2026-07-31"
+  url: "https://math.tejstead.com/heilbronn/square/25/"
+  added_by: daniel-munro
+
+coupvent-des-graviers-2026-09:
+  string: "M.-E. Coupvent des Graviers, Heilbronn configurations from a D4-symmetric multistart search and point deletion (September 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-09"
+  url: "https://math.tejstead.com/heilbronn/"
+  notes: "Square n = 32 and triangle n = 19 and 29."
+  added_by: daniel-munro
+
+nemri-2026-alphaevolve:
+  string: "C. Nemri, Heilbronn configurations in the square found with AlphaEvolve (Google Cloud), 2026-08-03, github.com/cnemri/heilbronn-alphaevolve."
+  date: "2026-08-03"
+  url: "https://github.com/cnemri/heilbronn-alphaevolve"
+  notes: "Square n = 17, 21 and 22, per Stead's tables. Found with AlphaEvolve, an AI system."
+  added_by: daniel-munro
+
+sudermann-merx-2026-08-heilbronn:
+  string: "N. Sudermann-Merx, Heilbronn configurations found by computer search (August 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-08"
+  url: "https://math.tejstead.com/heilbronn/"
+  notes: "Square n = 15, 18 and 26, and triangle n = 18. The n = 18 and 26 bounds were reported without coordinates."
+  added_by: daniel-munro
+
+sudermann-merx-2026-10-heilbronn:
+  string: "N. Sudermann-Merx, Heilbronn configurations from a search campaign with basin hopping, ruin-and-recreate moves and seeding from neighboring records (October 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-10"
+  url: "https://math.tejstead.com/heilbronn/"
+  notes: "Square n = 22, 24 to 30, 33, 34 and 36, and triangle n = 21 to 23, 25 to 27 and 31 to 36."
+  added_by: daniel-munro
+
+zhang-fable-2026:
+  string: "Fable 5.1 with S. Zhang, Heilbronn configurations from a search campaign with symmetry-reduced basin hopping (September 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-09"
+  url: "https://math.tejstead.com/heilbronn/"
+  notes: "Square n = 18 and 20, and triangle n = 16, 17, 28 and 30. Found by Fable 5.1, an AI model, with Shengtong Zhang."
+  added_by: daniel-munro
+
+gardiner-2026:
+  string: "R. Gardiner, Heilbronn configurations from random starting configurations (September 2026), github.com/renidrag/heilbronn-solutions."
+  date: "2026-09"
+  url: "https://github.com/renidrag/heilbronn-solutions"
+  notes: "Square n = 21 and 23, and triangle n = 20, per Stead's tables."
+  added_by: daniel-munro
+
+chappell-2026:
+  string: "R. Chappell, Heilbronn configuration for 35 points in the square (October 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-10"
+  url: "https://math.tejstead.com/heilbronn/square/35/"
+  added_by: daniel-munro

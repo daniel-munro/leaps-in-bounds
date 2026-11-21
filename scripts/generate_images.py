@@ -472,6 +472,45 @@ def render_circle_in_square(constant_id: str, n: int) -> Svg | None:
     return svg
 
 
+def render_heilbronn(constant_id: str, n: int, region: str) -> Svg | None:
+    """The witness points in the square or triangle, with the smallest
+    triangles they form shaded. The triangle is drawn equilateral, by the
+    affine map that takes (1, 0) and (0, 1) to its corners, which scales every
+    area by the same factor."""
+    cert = witness(constant_id, "lower")
+    if cert is None:
+        return None
+    points = [(x.terms.get(1, Fraction(0)), y.terms.get(1, Fraction(0))) for x, y in read_points(read_witness_data(cert))]
+    check(len(points) == n, f"{constant_id}: expected {n} points")
+    areas = {}
+    for i, j, k in itertools.combinations(range(n), 3):
+        (px, py), (qx, qy), (rx, ry) = points[i], points[j], points[k]
+        areas[i, j, k] = abs((qx - px) * (ry - py) - (rx - px) * (qy - py)) / 2
+    least = min(areas.values())
+    check(float(least * (2 if region == "triangle" else 1)) >= cert["approx"] * (1 - 1e-12),
+          f"{constant_id}: smallest triangle below the bound")
+    # Triangles tied for the smallest, up to the rounding of the coordinates
+    smallest = [t for t, a in areas.items() if a <= least * (1 + 1e-9)]
+    if region == "triangle":
+        h = math.sqrt(3) / 2
+        place = lambda p: (float(p[0]) + float(p[1]) / 2, float(p[1]) * h)
+        svg = Svg(0, 0, 1, h)
+        outline = [(0, 0), (1, 0), (0.5, h)]
+    else:
+        place = lambda p: (float(p[0]), float(p[1]))
+        svg = Svg(0, 0, 1, 1)
+        outline = [(0, 0), (1, 0), (1, 1), (0, 1)]
+    pos = [place(p) for p in points]
+    # Outlines get cluttered with many points, so only shade those
+    style = (dict(fill=FILL, fill_opacity=0.55, stroke=EDGE, stroke_width=1, stroke_linejoin="round") if n <= 12
+             else dict(fill=EDGE, fill_opacity=0.12))
+    svg.add(svg.group((svg.polygon([pos[i] for i in t]) for t in smallest), **style))
+    svg.add(svg.polygon(outline, fill="none", stroke=INK, stroke_width=2, stroke_linejoin="round"))
+    radius = 0.022 if n <= 12 else 0.016
+    svg.add(svg.group((svg.circle(p, radius) for p in pos), fill=INK))
+    return svg
+
+
 def disk_covering(n: int) -> tuple[float, list[tuple[float, float]]] | None:
     """The known optimal coverings of the unit disk by n equal disks with
     simple coordinates: the radius and the centers."""
@@ -1812,6 +1851,8 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "rectilinear-crossing": ("rectilinear-crossing-", lambda c: render_rectilinear_crossing(c, *ints(c, "rectilinear-crossing-"))),
     "chromatic-number-space": ("chromatic-number-space-", lambda c: render_chromatic_space(c, *ints(c, "chromatic-number-space-"))),
     "debruijn-newman": ("debruijn-newman", render_debruijn_newman),
+    "heilbronn-square": ("heilbronn-square-", lambda c: render_heilbronn(c, *ints(c, "heilbronn-square-"), region="square")),
+    "heilbronn-triangle": ("heilbronn-triangle-", lambda c: render_heilbronn(c, *ints(c, "heilbronn-triangle-"), region="triangle")),
     "tammes": ("tammes-", lambda c: render_tammes(c, *ints(c, "tammes-"))),
     "moving-sofa": ("moving-sofa", render_moving_sofa),
 }

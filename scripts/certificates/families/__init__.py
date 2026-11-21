@@ -23,6 +23,7 @@ from . import (
     disk_covering,
     folding,
     golomb,
+    heilbronn,
     isosceles_set,
     kissing_number,
     line_arrangement,
@@ -67,6 +68,7 @@ FAMILIES: dict[str, Family] = {
     **disk_covering.FAMILIES,
     **debruijn_newman.FAMILIES,
     **tammes.FAMILIES,
+    **heilbronn.FAMILIES,
     **moving_sofa.FAMILIES,
 }
 

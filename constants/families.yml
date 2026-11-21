@@ -538,3 +538,34 @@ tammes:
   parameters: [n]
   parameter_values: [[[2, 30]]]
   added_by: daniel-munro
+
+heilbronn-square:
+  name: "Heilbronn triangle problem in a square"
+  description: "$H(n)$ is the largest possible area of the smallest triangle formed by three of $n$ points in a unit square."
+  external_ids:
+    msc: 52C10
+    mathworld: HeilbronnTriangleProblem
+    wikipedia_en: Heilbronn_triangle_problem
+  display_type: sequence
+  representative_image: heilbronn-square-8
+  id_template: "heilbronn-square-{n}"
+  name_template: "Heilbronn triangle problem in a square $H({n})$"
+  description_template: "The largest possible area of the smallest triangle formed by three of ${n}$ points in a unit square."
+  parameters: [n]
+  parameter_values: [[[3, 36]]]
+  added_by: daniel-munro
+
+heilbronn-triangle:
+  name: "Heilbronn triangle problem in a triangle"
+  description: "$\\Delta(n)$ is the largest possible area of the smallest triangle formed by three of $n$ points in a triangle of unit area. Every triangle is an affine image of every other, which scales all areas by the same factor, so the shape of the triangle doesn't matter."
+  external_ids:
+    msc: 52C10
+    wikipedia_en: Heilbronn_triangle_problem
+  display_type: sequence
+  representative_image: heilbronn-triangle-7
+  id_template: "heilbronn-triangle-{n}"
+  name_template: "Heilbronn triangle problem in a triangle $\\Delta({n})$"
+  description_template: "The largest possible area of the smallest triangle formed by three of ${n}$ points in a triangle of unit area."
+  parameters: [n]
+  parameter_values: [[[3, 36]]]
+  added_by: daniel-munro

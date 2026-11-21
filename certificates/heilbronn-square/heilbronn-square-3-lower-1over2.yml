@@ -1,0 +1,14 @@
+constant: heilbronn-square-3
+bound: lower
+value: '\frac{1}{2}'
+kind: witness
+witness:
+  format: points
+  data: |
+    0.0, 0.0
+    1.0, 0.0
+    0.0, 1.0
+submitted_by: daniel-munro
+date: 2026-11-21
+source: trivial
+notes: "The best known configuration, a trivial configuration, from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/square/3/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Its coordinates are exact decimals, with least triangle area exactly 1/2. Transcribed by Claude (Opus 5.5), an AI agent."

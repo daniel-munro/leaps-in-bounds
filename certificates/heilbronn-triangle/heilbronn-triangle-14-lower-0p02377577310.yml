@@ -1,0 +1,25 @@
+constant: heilbronn-triangle-14
+bound: lower
+value: '0.02377577310'
+kind: witness
+witness:
+  format: points
+  data: |
+    0.243066424902615, 0
+    0.266206758994152, 0.216889420555975
+    0.906552017915213, 0.045520649236221
+    0.459572598730146, 0.072423296200875
+    0.727977220137804, 0.272022779862196
+    0.522528829765137, 0.298981440560069
+    0.042872823635103, 0.957127176364897
+    0.410472397071376, 0.541600270080058
+    0, 0.251001880660816
+    0, 0.815228697703854
+    0.195012320433088, 0.5770593536385
+    0.042138679675269, 0.044355570454036
+    0.068543009521634, 0.487524032082056
+    0.779093193675907, 0
+submitted_by: daniel-munro
+date: 2026-11-21
+source: cantrell-2007
+notes: "The best known configuration, found by David Cantrell (June 2007), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/14/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are exact decimals, with least triangle area, as a fraction of the triangle's area, about 0.0237757731075728, rounded down to 0.02377577310. Transcribed by Claude (Opus 5.5), an AI agent."

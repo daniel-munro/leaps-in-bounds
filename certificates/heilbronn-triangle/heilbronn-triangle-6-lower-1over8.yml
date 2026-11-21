@@ -1,0 +1,17 @@
+constant: heilbronn-triangle-6
+bound: lower
+value: '\frac{1}{8}'
+kind: witness
+witness:
+  format: points
+  data: |
+    0.25, 0
+    0.75, 0
+    0, 0.375
+    0.75, 0.25
+    0, 1
+    0.25, 0.5
+submitted_by: daniel-munro
+date: 2026-11-21
+source: yang-zhang-zeng-1991-triangle
+notes: "The best known configuration, found by L. Yang, J. Z. Zhang, and Z. B. Zeng (1991), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/6/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are exact decimals, with least triangle area, as a fraction of the triangle's area, exactly 1/8. Transcribed by Claude (Opus 5.5), an AI agent."

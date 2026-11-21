@@ -1,0 +1,16 @@
+constant: heilbronn-triangle-5
+bound: lower
+value: '0.1715728752'
+kind: witness
+witness:
+  format: points
+  data: |
+    1, 0
+    0.41421356237309504880168872421, 0.58578643762690495119831127579
+    0, 0
+    0.000000000000000000000000000001, 0.58578643762690495119831127579
+    0.414213562373095048801688724211, 0.17157287525380990239662255158
+submitted_by: daniel-munro
+date: 2026-11-21
+source: peng-1989
+notes: "The best known configuration, proved optimal by Royce Peng (1989), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/5/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are exact decimals, with least triangle area, as a fraction of the triangle's area, about 0.17157287525381, rounded down to 0.1715728752. Transcribed by Claude (Opus 5.5), an AI agent."

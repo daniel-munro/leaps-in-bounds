@@ -282,3 +282,24 @@ tammes:
   gaps:
   - "The T(19) source couldn't be found (#79)."
   - "Many sources read only through secondary ones (#79)."
+
+heilbronn-square:
+  status: partial
+  reviewed: 2026-11-21
+  sources: [stead-heilbronn-square, comellas-yebra-2002]
+  gaps:
+  - "Goldberg 1972 wasn't read (JSTOR): his bounds for n = 7 and 13 to 15 are missing, and those for n = 9, 10 and 12 are known only to 6 digits from Comellas and Yebra's Table 1. Which Yang-Zhang-Zeng paper first gave H(5) and H(7) >= 0.083333 is unclear; the 1991 Bielefeld preprint is cited for both."
+  - "The Chinese-language and paywalled proofs (Yang-Zhang-Zeng 1992, Zeng-Chen 2011, Dehbi-Zeng 2022) were read only through Stead's tables, Wikipedia and MathWorld."
+  - "Bounds for n >= 13 come from the record histories in Stead's tables, dated to the month, keeping only the best bound each month. Records reported without coordinates (n = 18, 21 and 26 in August 2026) are included as the tables list them."
+  - "No upper bounds are recorded for n >= 9. Sudermann-Merx (arXiv:2603.11107) solves n = 9 and 10 to global optimality within solver tolerances, and Ethan Hendren posted an AI-assisted computer proof for n = 9 on 2026-11-13; neither is accepted as a proof yet. The trivial bound H(n) <= H(8) isn't recorded."
+  - "Stead's tables go to n = 100; only n <= 36 are tracked here."
+
+heilbronn-triangle:
+  status: partial
+  reviewed: 2026-11-21
+  sources: [stead-heilbronn-triangle, novikov-et-al-2025-alphaevolve]
+  gaps:
+  - "Chen, Zeng and Zhou, An upper bound of Heilbronn number for eight points in triangles, J. Comb. Optim. 28 (2014) 854-874 (doi:10.1007/s10878-012-9585-5), wasn't read (paywalled), so its upper bound on Δ(8) is missing."
+  - "Peng 1989 (via Soifer's book), Yang-Zhang-Zeng 1991 and 1994, and Zeng-Chen 2019 were read only through Stead's tables and Wikipedia."
+  - "Earlier records before Cantrell's 2006-2007 configurations, Karpov's Δ(13) >= 0.0265013 (published by 2018), the 0.036 record for n = 11 that AlphaEvolve improved, and MathWorld's Δ(16) >= 0.017976 lack dated sources. Friedman's archived Heilbronn pages couldn't be fetched."
+  - "Ethan Hendren posted AI-assisted computer proofs for n = 8 and 9 (2026-11-14 and 2026-11-15), not yet independently checked, so no upper bounds are recorded for them."

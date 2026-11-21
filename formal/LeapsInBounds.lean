@@ -11,6 +11,7 @@ public import LeapsInBounds.Statements.DegreeDiameter
 public import LeapsInBounds.Statements.DiskCovering
 public import LeapsInBounds.Statements.Folding
 public import LeapsInBounds.Statements.Golomb
+public import LeapsInBounds.Statements.Heilbronn
 public import LeapsInBounds.Statements.IsoscelesSet
 public import LeapsInBounds.Statements.KissingNumber
 public import LeapsInBounds.Statements.LineArrangement

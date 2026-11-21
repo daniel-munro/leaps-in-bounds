@@ -1,0 +1,19 @@
+constant: heilbronn-triangle-8
+bound: lower
+value: '0.06778921325'
+kind: witness
+witness:
+  format: points
+  data: |
+    0.888607734966284163841259909257, 0.111392265033715836158740090743
+    0.111999705654029949029324356726, 0
+    0.720562726018855112355721845127, 0
+    0.439307097839209917412298611307, 0.484405907813650743134099078538
+    0.395276367904074664542156913136, 0.212129872844956775236907723322
+    0, 0.155433665397645381124515838859
+    0.111999705654029949029324356726, 0.605262423310288723455274536510
+    0, 1
+submitted_by: daniel-munro
+date: 2026-11-21
+source: cantrell-2006
+notes: "The best known configuration, found by David Cantrell (July 2006), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/8/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are exact decimals, with least triangle area, as a fraction of the triangle's area, about 0.0677892132541972, rounded down to 0.06778921325. Transcribed by Claude (Opus 5.5), an AI agent."

@@ -1,0 +1,21 @@
+constant: heilbronn-triangle-10
+bound: lower
+value: '0.04337674067'
+kind: witness
+witness:
+  format: points
+  data: |
+    0.221002771087441, 0
+    0.932464624621955, 0
+    0.672889779896044, 0.327110220103951
+    0, 0.407922756981487
+    0.073261962336053, 0.076424821568453
+    0.329919253259536, 0.592206877878477
+    0.126744324881756, 0.622775842160294
+    0.349692485216114, 0.301462115616943
+    0.640835949266549, 0.076424821568453
+    0, 1
+submitted_by: daniel-munro
+date: 2026-11-21
+source: cantrell-2007
+notes: "The best known configuration, found by David Cantrell (June 2007), from Stead's Heilbronn tables (https://math.tejstead.com/heilbronn/triangle/10/, points.txt, retrieved 2026-11-21), where it was verified in exact arithmetic. Coordinates are in the triangle (0, 0), (1, 0), (0, 1). Its coordinates are exact decimals, with least triangle area, as a fraction of the triangle's area, about 0.0433767406780495, rounded down to 0.04337674067. Transcribed by Claude (Opus 5.5), an AI agent."
