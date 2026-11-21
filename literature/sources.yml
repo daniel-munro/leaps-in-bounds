@@ -2609,6 +2609,20 @@ abbott-katchalski-1988:
   notes: "A snake here is an induced cycle (a coil). Credits s(7) >= 48 to Even (1963), and reports Adelson, Alter and Curtz's snake of length 86 in the 8-cube (1973). Received 1986-09-02."
   added_by: daniel-munro
 
+douglas-1969:
+  string: "R.J. Douglas, Upper bounds on the length of circuits of even spread in the d-cube, Journal of Combinatorial Theory 7 (1969) 206-214."
+  date: "1969-11"
+  doi: "https://doi.org/10.1016/S0021-9800(69)80013-X"
+  notes: "Not read. Deimer (1985) says it quotes D.G. Larman's unpublished bound C(d,2) <= 2^(d-1) - 2^(d-5) d^(-6) for d >= 5 and proves C(d,2) <= 2^(d-1) - (2^d - 12)/(7d(d-1)^2 + 2) for d >= 6, where C(d,2) is the longest coil in the d-cube. Both give 2^(d-1) - 1 for d = 7 to 13 (and, since coils have even length, imply 2^(d-1) - 2, not stated)."
+  added_by: daniel-munro
+
+deimer-1985:
+  string: "K. Deimer, A new upper bound for the length of snakes, Combinatorica 5 (1985) 109-120."
+  date: "1985"
+  doi: "https://doi.org/10.1007/BF02579373"
+  notes: "Received 1983-02-28. Theorem 1: the longest coil (circuit code of spread 2) in the d-cube has length at most 2^(d-1) - 2^(d-1)/(d(d-5)+7) for d >= 7; values for each d computed from it (floor). The introduction recounts the earlier upper bounds of Kautz, of Abbott, Danzer-Klee, Glagolev and Singleton (2^(d-1)), of Larman and of Douglas."
+  added_by: daniel-munro
+
 even-1963:
   string: "S. Even, Snake-in-the-box codes, IEEE Transactions on Electronic Computers EC-12 (1963) 18."
   date: "1963-02"
@@ -2670,14 +2684,14 @@ hill-1973:
   string: "R. Hill, On the largest size of cap in S_{5,3}, Atti della Accademia Nazionale dei Lincei. Rendiconti. Classe di Scienze Fisiche, Matematiche e Naturali 54 (1973) 378-384."
   date: "1973-03"
   url: "http://www.bdim.eu/item?id=RLINA_1973_8_54_3_378_0"
-  notes: "Presented 1973-03-10. Constructs the 56-cap in PG(5,3) and proves it is the largest. The affine 45-cap is implicit: the blocks of the (56,11,2) design in Section 2(5) are the 11-point sections of the cap by the polar hyperplanes of its points, and deleting one leaves a 45-cap in AG(5,3) (http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html; edel-ferret-landjev-storme-2002, Remark 4.1). Hill's Caps and codes (Discrete Math. 22, 1978) is likewise implicit, through codewords of weight 45, and Calderbank and Fishburn (1994) still give 40 as the best lower bound for AG(5,3) before their 42. Bruen, Haddad and Wehlau (received 1994) are the first found to state the 45-cap. The paper doesn't mention AG(6,3)."
+  notes: "Presented 1973-03-10. Constructs the 56-cap in PG(5,3) and proves it is the largest. The affine 45-cap is implicit: the blocks of the (56,11,2) design in Section 2(5) are the 11-point sections of the cap by the polar hyperplanes of its points, and deleting one leaves a 45-cap in AG(5,3) (edel-ferret-landjev-storme-2002, Remark 4.1). Hill's Caps and codes (Discrete Math. 22, 1978) is likewise implicit, through codewords of weight 45. The first explicit statement found is brown-buhler-1982. The paper doesn't mention AG(6,3)."
   added_by: daniel-munro
 
 calderbank-fishburn-1994:
   string: "A.R. Calderbank and P.C. Fishburn, Maximal three-independent subsets of {0, 1, 2}^n, Designs, Codes and Cryptography 4 (1994) 203-211."
   date: "1994-07"
   doi: "https://doi.org/10.1007/BF01388452"
-  notes: "Received 1993-02-18. Section 2 gives f(4) >= 20, f(5) >= 42, f(6) >= 112 and f(7) >= 236, where f(n) is the largest cap in AG(n,3), saying the best earlier lower bounds for n = 5 and 7 were 40 and 224. The two 112-caps (Figure 3) are 'essentially due to Hill' (hill-1973), and the 236-cap is built from them. The 42 isn't recorded, since 45 is credited to hill-1973."
+  notes: "Received 1993-02-18. Section 2 gives f(4) >= 20, f(5) >= 42, f(6) >= 112 and f(7) >= 236, where f(n) is the largest cap in AG(n,3), saying the best earlier lower bounds for n = 5 and 7 were 40 and 224, although brown-buhler-1982 had already given 45 for n = 5. The two 112-caps (Figure 3) are 'essentially due to Hill' (hill-1973), and the 236-cap is built from them."
   added_by: daniel-munro
 
 edel-bierbrauer-2001:
@@ -2710,11 +2724,18 @@ edel-2004:
   doi: "https://doi.org/10.1023/A:1027365901231"
   added_by: daniel-munro
 
+brown-buhler-1982:
+  string: "T.C. Brown and J.P. Buhler, A density version of a geometric Ramsey theorem, Journal of Combinatorial Theory, Series A 32 (1982) 20-34."
+  date: "1982-01"
+  doi: "https://doi.org/10.1016/0097-3165(82)90062-0"
+  notes: "Received 1980-09-04. The end of Section 3 lists the known values of the largest line-free set in F_3^n (a cap in AG(n,3)): 2, 4, 9, 20 and f(5) >= 45, 'almost certainly an equality', citing Hill's Caps and codes (1978) for the projective case. The first explicit statement found of the 45-cap in AG(5,3), which is implicit in hill-1973."
+  added_by: daniel-munro
+
 bruen-haddad-wehlau-1998:
   string: "A. Bruen, L. Haddad and D. Wehlau, Caps and colouring Steiner triple systems, Designs, Codes and Cryptography 13 (1998) 51-55."
   date: "1998-01"
   doi: "https://doi.org/10.1023/A:1008293805734"
-  notes: "Received 1994-10-03. Proves 45 <= m(AG(5,3)) <= 48. The 45-cap is credited to Hill (Caps and codes, 1978): the 56-cap meets every hyperplane in 11 or 20 points, and deleting an 11-point section leaves a 45-cap. Says Brown and Buhler (J. Combin. Theory Ser. A 32, 1982) conjectured that the maximum is 45."
+  notes: "Received 1994-10-03. Proves 45 <= m(AG(5,3)) <= 48. The 45-cap is credited to Hill (Caps and codes, 1978): the 56-cap meets every hyperplane in 11 or 20 points, and deleting an 11-point section leaves a 45-cap."
   added_by: daniel-munro
 
 davis-maclagan-2003:
@@ -3499,7 +3520,7 @@ su-li-luo-li-2002:
 solovjeva-1987:
   string: "F.I. Solov'jeva, An upper bound for the length of a cycle in an n-dimensional unit cube, Metody Diskretnogo Analiza 45 (1987) 71-76 (in Russian)."
   date: "1987"
-  notes: "Not seen directly. Proves c(n) <= (1 - 2/(n^2-n+2)) 2^(n-1) for n >= 7, as stated in Lukito's thesis (eq. 3.1, p. 27), whose Table 2 (p. 8) takes the values 123, 249 and 500 for n = 8, 9, 10 from it. Values for n = 11-13 computed from the formula (floor)."
+  notes: "Not seen directly. Proves c(n) <= (1 - 2/(n^2-n+2)) 2^(n-1) for n >= 7, as stated in Lukito's thesis (eq. 3.1, p. 27), whose Table 2 (p. 8) takes the values 123, 249 and 500 for n = 8, 9, 10 from it. Values for n = 11-13 computed from the formula (floor). For n = 7 and 8 it gives 61 and 123, no better than deimer-1985."
   added_by: daniel-munro
 
 lukito-1998:
