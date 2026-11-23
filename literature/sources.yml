@@ -3159,7 +3159,7 @@ bose-nelson-1962:
   string: "R.C. Bose, R.J. Nelson, A sorting problem, Journal of the ACM 9 (1962) 282-296."
   date: "1962-04"
   doi: "https://doi.org/10.1145/321119.321126"
-  notes: "Values from Table 1 of Floyd and Knuth (1970)."
+  notes: "Received June 1961. Theorem 5 gives a network for every n whose size f(n) satisfies f(2m) = 3f(m) + m and f(2m+1) = f(m) + 2f(m+1) + m (Theorem 3), with f(1) = 0 and f(2) = 1; Table III lists f(10) = 32, f(20) = 106 and f(30) = 198. The other values here are computed from that recurrence."
   added_by: daniel-munro
 
 floyd-1964:
@@ -3179,7 +3179,7 @@ batcher-1968:
   date: "1968-04-30"
   doi: "https://doi.org/10.1145/1468075.1468121"
   url: "https://www.cs.kent.edu/~batcher/sort.pdf"
-  notes: "Sorts 2^p inputs in p(p+1)/2 steps, and so n inputs in that many steps for n <= 2^p, by leaving out wires."
+  notes: "Sorts 2^p inputs in p(p+1)/2 steps, and so n inputs in that many steps for n <= 2^p, by leaving out wires. The odd-even merge sort of 2^p inputs uses (p^2 - p + 4)2^(p-2) - 1 comparators (p. 310), 191 for 32 inputs; sizes for other n aren't given. Cites Batcher's 1964 Goodyear report GER-11759 for the odd-even merge."
   added_by: daniel-munro
 
 floyd-knuth-1970:
@@ -3193,7 +3193,7 @@ floyd-knuth-1970:
 kautz-pease-green-1970:
   string: "W.H. Kautz, M.C. Pease, M.W. Green, Cellular logic-in-memory arrays, Final Report Part 1, SRI Project 5509, Stanford Research Institute, May 1970."
   date: "1970-05"
-  notes: "Not seen; cited by Van Voorhis (1971), Table 2, for the sizes previously reported for 17 to 32 inputs."
+  notes: "Not seen; cited by Van Voorhis (1971), Table 2, for the sizes previously reported for 17 to 32 inputs. Kautz's article of the same name (IEEE Transactions on Computers C-18 (1969) 719-727) describes the sorting arrays but gives no network sizes."
   added_by: daniel-munro
 
 van-voorhis-1971:

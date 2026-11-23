@@ -250,10 +250,10 @@ isosceles-set:
 sorting-network-size:
   status: partial
   reviewed: 2026-11-22
-  sources: [dobbelaere-sorting-networks, tomar-2026-v2]
+  sources: [dobbelaere-sorting-networks, tomar-2026-v2, bose-nelson-1962, batcher-1968]
   gaps:
-  - "Bose-Nelson 1962 and Batcher 1968 weren't read (the ACM Digital Library refuses automated clients); their sizes come from Floyd and Knuth (1970), Table 1. Floyd's 1964 memo and Batcher's 1964 Goodyear report are unpublished and weren't found, and Kautz, Pease and Green 1970 (SRI) wasn't found; their sizes come from Floyd and Knuth (1970) and Van Voorhis (1971)."
-  - "Batcher's sizes for 17 to 32 inputs aren't recorded: no source read states them, and reading them from the g = 2 column of Van Voorhis (1971), Table 2, would be an interpretation (#58)."
+  - "Floyd's 1964 memo and Batcher's 1964 Goodyear report are unpublished and weren't found, and the SRI report of Kautz, Pease and Green (1970) wasn't found (Kautz's 1969 IEEE article of the same name gives no sizes); their sizes come from Floyd and Knuth (1970), Table 1, and Van Voorhis (1971), Table 2. Batcher's 191 for 32 inputs is dated by his 1968 paper, though his 1964 report may already give it."
+  - "Batcher's odd-even merge sizes for 17 to 31 inputs aren't recorded: no source read states them, and reading them from the g = 2 column of Van Voorhis (1971), Table 2, would be an interpretation (#58)."
   - "The lower bounds for 13 to 32 inputs credited to Tomar (2026) rest on an unreviewed computer proof; Dobbelaere's list, which withdrew the same values on 2026-11-20 because Van Voorhis's 1972 two-value proof is invalid, doesn't cite it. Tomar's sequel claiming S(13) = 45 (and so one more for 14 to 32 inputs) isn't recorded."
 
 sorting-network-depth:
