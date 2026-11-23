@@ -2581,7 +2581,35 @@ taylor-2026:
   string: "T. Taylor, Constructing longer snakes and improved asymptotic bounds in hypercubes, arXiv:2609.27483."
   date: "2026-09-23"
   url: "https://arxiv.org/abs/2609.27483"
-  notes: "Not peer reviewed."
+  notes: "Not peer reviewed. Section 5 states that a snake in Q_d has length at most 2^(d-1) - 1 for d >= 5, from Huang's sensitivity theorem (Annals of Math. 190 (2019)); the values for n = 9 to 13 are computed from it. The first statement of this bound for snakes found."
+  added_by: daniel-munro
+
+bitterman-2004:
+  string: "D.S. Bitterman, New Lower Bounds for the Snake-In-The-Box Problem: A Prolog Genetic Algorithm and Heuristic Search Approach, M.S. thesis, University of Georgia, 2004."
+  date: "2004-12"
+  url: "https://web.archive.org/web/20250807193109/https://www.ai.uga.edu/sites/default/files/inline-files/bitterman_s.pdf"
+  notes: "Electronic version approved December 2004. Appendix D.1 gives a snake of length 182 and a coil of length 174 in dimension 9, beating s(9) >= 168 and c(9) >= 170, credited to Abbott and Katchalski (1991). Section 6.5.1 says Potter et al. (1994) found a snake of length 89 in dimension 8 with a genetic algorithm. Section 2 takes Snevily's (1994) upper bound 2^(d-1) - 2^(d-1)/(20d - 41) as an upper bound on snakes (open) for d >= 7, but Snevily's bound is for coils, so it isn't recorded for snakes."
+  added_by: daniel-munro
+
+drapela-2015:
+  string: "T.E. Drapela, The Snake-in-the-Box Problem: A Primer, M.S. thesis, University of Georgia, 2015."
+  date: "2015-05"
+  url: "https://openscholar.uga.edu/record/11202/files/drapela_thomas_e_201505_ms.pdf"
+  notes: "Appendix E (Table 15) is a timeline of snake lower bounds for n <= 14 with sources, and Appendices A to D cover coils. It credits s(7) = 50 to Kochut (1996), proving Potter et al.'s (1994) snake optimal, and s(8) >= 89 to Abbott and Katchalski (1991)."
+  added_by: daniel-munro
+
+meyerson-et-al-2014:
+  string: "S.J. Meyerson, W.E. Whiteside, T.E. Drapela and W.D. Potter, Finding longest paths in hypercubes, snakes and coils, 2014 IEEE Symposium on Computational Intelligence for Engineering Solutions (CIES) 103-109."
+  date: "2014-12"
+  doi: "https://doi.org/10.1109/CIES.2014.7011838"
+  notes: "Read as reprinted in Chapter 2 of S. Meyerson's M.S. thesis (University of Georgia, May 2015, https://web.archive.org/web/20240416024055/https://getd.libs.uga.edu/pdfs/meyerson_seth_201505_ms.pdf). Its Table II gives a snake of length 705 in dimension 11, improving 695, and lists 1280 and 2466 as the snake records for n = 12 and 13 without sources; 2466 is Abbott and Katchalski's (1991) coil of length 2468 less a vertex. The University of Georgia records page dated July 2014 already shows Meyerson et al.'s snake of length 707 for n = 11."
+  added_by: daniel-munro
+
+uga-sib-records-2013:
+  string: "Latest records for the snake-in-the-box problem (August 2013), Institute for Artificial Intelligence, University of Georgia (archived 2013-10-12)."
+  date: "2013-08"
+  url: "https://web.archive.org/web/20131012132749/http://www.ai.uga.edu/sib/records/"
+  notes: "Credits the snakes of lengths 370, 695 and 1274 in dimensions 10, 11 and 12 to Kinny's ECAI 2012 paper. The January 2012 version of the page credits 367, 689 and 1265 to Kinny (communicated 2011-11-01)."
   added_by: daniel-munro
 
 toner-2026:
@@ -3186,7 +3214,7 @@ floyd-1964:
 batcher-1964:
   string: "K.E. Batcher, A new internal sorting method, Goodyear Aerospace report GER-11759, September 1964."
   date: "1964-09"
-  notes: "The odd-even merge sort; values from Table 1 of Floyd and Knuth (1970). Published as Batcher (1968)."
+  notes: "Not seen. The odd-even merge sort; sizes for 10 to 16 inputs from Table 1 of Floyd and Knuth (1970), which dates Batcher's row 1964, and for 17 to 32 inputs from the g = 2 column of Table 2 of Van Voorhis (1971), which he identifies as 'Batcher's result, B(N) = S_2(N)' (p. 48). Dating the sizes for 17 to 31 inputs by the report assumes it gave them, as Floyd and Knuth's row implies for 10 to 16. Published as Batcher (1968), which gives the size only for powers of 2 (191 for 32 inputs)."
   added_by: daniel-munro
 
 batcher-1968:
@@ -3202,7 +3230,7 @@ floyd-knuth-1970:
   date: "1970-11"
   url: "http://bitsavers.informatik.uni-stuttgart.de/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/PDF/1970/CS-TR-70-177.pdf"
   doi: "https://doi.org/10.1016/B978-0-7204-2262-7.50020-X"
-  notes: "Proves S(n) for n <= 8 (Theorems 3 and 4; for 7 inputs, a 1966 computer search by R. Grove). Table 1 gives the best upper bounds known in 1969, including unpublished networks by Waksman (10 inputs) and Shapiro and Green (11, 12 and 16 inputs), and the best lower bounds known in 1966."
+  notes: "Proves S(n) for n <= 8 (Theorems 3 and 4; for 7 inputs, a 1966 computer search by R. Grove). Table 1 (p. 3) gives the best upper bounds known in 1969, including unpublished networks by Waksman (10 inputs) and Shapiro and Green (11, 12 and 16 inputs), and the best lower bounds known in 1966. It also has a row 'Nelson, approx. 1956' (from the O'Connor-Nelson patent US 3029413, issued 1962-04-10, which gives no table) and a row 'Floyd and Knuth, approx. 1964' (31, 37, 41, 49, 54, 60 and 64 for 10 to 16 inputs, published as an abstract, Improved constructions for the Bose-Nelson sorting problem, Notices of the AMS 14 (1967) 283)."
   added_by: daniel-munro
 
 kautz-pease-green-1970:
@@ -3215,7 +3243,7 @@ van-voorhis-1971:
   string: "D.C. Van Voorhis, A generalization of the divide-sort-merge strategy for sorting networks, Technical Report 16, Digital Systems Laboratory, Stanford University (STAN-CS-71-237), August 1971."
   date: "1971-08"
   url: "http://bitsavers.informatik.uni-stuttgart.de/pdf/stanford/Stanford_CS_TR_Collection_2025-12-12/PDF/1971/CS-TR-71-237.pdf"
-  notes: "Table 2 (pp. 49-50) gives the smallest known sizes for up to 36 inputs, marking those new in the report: 79 for 18, 141 for 26, 150 for 27 and 156 for 28 inputs."
+  notes: "Table 2 (pp. 49-50) gives the smallest known sizes for up to 36 inputs, marking those new in the report: 79 for 18, 141 for 26, 150 for 27 and 156 for 28 inputs; the unmarked ones are credited to Kautz, Pease and Green (1970), its reference [5]. Its g = 2 column is Batcher's odd-even merge sort, 'Batcher's result, B(N) = S_2(N)' (p. 48)."
   added_by: daniel-munro
 
 van-voorhis-1972:
@@ -3264,7 +3292,7 @@ baddar-2009:
   string: "S.W. Al-Haj Baddar, Finding Better Sorting Networks, PhD thesis, Kent State University, 2009."
   date: "2009-04"
   url: "https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/10?p10_accession_num=kent1239814529"
-  notes: "Table 3.2 (p. 34) gives sizes of 133 and 140 for 25 and 26 inputs. Table 3.4 (p. 36) gives the fastest networks known before the thesis for 17 to 32 inputs, by odd-even merging of the fastest networks on half the inputs: depth 12 for 17 to 20, 13 for 21 to 24 and 14 for 25 to 32, with lower bounds of 7 for 17 to 26 and 8 for 27 to 32 (from the size lower bounds of Table 3.2 and monotonicity). Chapter 7 (p. 61) gives a network of depth 12 for 22 inputs, and so for 21, first in technical report TR-KSU-CS-2008-05 (2008, not seen). The title page is dated May 2009; the OhioLINK record was created in April 2009."
+  notes: "Table 3.2 (p. 34) gives sizes of 133 and 140 for 25 and 26 inputs, by odd-even merging of the best networks on half the inputs, and as lower bounds for 17 to 32 inputs the information-theoretic bound ceil(log2 n!) (49 for 17 to 118 for 32); Section 3.7.1 (p. 33) gives the information-theoretic bounds 7, 10, 13 and 16 for 5 to 8 inputs, and Table 3.1 (p. 34) the same bound for 10 to 16 inputs (but 20 for 9). Table 3.4 (p. 36) gives the fastest networks known before the thesis for 17 to 32 inputs, by odd-even merging of the fastest networks on half the inputs: depth 12 for 17 to 20, 13 for 21 to 24 and 14 for 25 to 32, with lower bounds of 7 for 17 to 26 and 8 for 27 to 32 (from the size lower bounds of Table 3.2 and monotonicity). Chapter 7 (p. 61) gives a network of depth 12 for 22 inputs, and so for 21, first in technical report TR-KSU-CS-2008-05 (2008, not seen). The title page is dated May 2009; the OhioLINK record was created in April 2009."
   added_by: daniel-munro
 
 valsalam-2010:
@@ -3344,7 +3372,7 @@ tomar-2026:
   string: "T.S. Tomar, Sorting networks on 13 inputs need at least 44 comparators, Zenodo, 2026, https://doi.org/10.5281/zenodo.23453293."
   date: "2026-10-18"
   doi: "https://doi.org/10.5281/zenodo.23453293"
-  notes: "Computes P(2,n), the fewest comparators the two largest inputs can meet, for up to 27 inputs; with S(n) >= S(n-2) + P(2,n) this proves the lower bounds on size for 13 to 27 inputs (44 for 13) that Dobbelaere's list showed from 2025-04-21 to 2026-11-20. Those had rested on an inequality of Van Voorhis (1972) whose proof is invalid (see van-voorhis-1972); this proof doesn't use it. Version 2 (2026-10-19) adds 28 to 32 inputs, and later versions (by version 6, 2026-10-28) a Lean proof of S(13) >= 44. Not peer reviewed. A sequel, Sorting networks on 13 inputs need 45 comparators (Zenodo, first version 2026-10-21, https://doi.org/10.5281/zenodo.23504358; version 5, 2026-11-17, https://doi.org/10.5281/zenodo.24299103), claims S(13) = 45 with a certificate and a Lean proof, and so bounds one higher for 14 to 32 inputs; it isn't recorded here."
+  notes: "Computes P(2,n), the fewest comparators the two largest inputs can meet, for up to 27 inputs; with S(n) >= S(n-2) + P(2,n) this proves the lower bounds on size for 13 to 27 inputs (44 for 13) that Dobbelaere's list showed from 2025-04-21 to 2026-11-20. Those had rested on an inequality of Van Voorhis (1972) whose proof is invalid (see van-voorhis-1972); this proof doesn't use it. Version 2 (2026-10-19) adds 28 to 32 inputs, and later versions (by version 6, 2026-10-28) a Lean proof of S(13) >= 44. Not peer reviewed. Sequels by the same author, none recorded here: Sorting networks on 13 inputs need 45 comparators (Zenodo, first version 2026-10-21, https://doi.org/10.5281/zenodo.23504358; version 5, 2026-11-17), claiming S(13) = 45 and so bounds one higher for 14 to 32 inputs; Sorting networks on 14 inputs need 50 comparators (first version 2026-10-26, https://doi.org/10.5281/zenodo.23622889); and Sorting networks on 15 and 16 inputs need 55 and 60 comparators, and 20 inputs need 81 (first version 2026-11-12, https://doi.org/10.5281/zenodo.24156529; Lean proofs https://doi.org/10.5281/zenodo.24464975, version 2 2026-11-23), claiming S(15) >= 55, S(16) = 60 and S(20) >= 81, and higher bounds for 17 to 32 inputs (Table 6)."
   added_by: daniel-munro
 
 tomar-2026-v2:
@@ -4357,7 +4385,7 @@ isbell-1950:
   string: "J. R. Isbell, unpublished (1950), a 7-coloring of the plane by regular hexagons, reported in A. Soifer, The Mathematical Coloring Book, Springer (2009)."
   date: "1950-11"
   url: "https://www.cs.umd.edu/~gasarch/BLOGPAPERS/soifer.pdf"
-  notes: "Not published at the time. Soifer's essay at the URL says Nelson posed the problem in November 1950, finding the lower bound 4, and that his friend John Isbell found the upper bound 7 then. MathWorld also dates it to 1950."
+  notes: "Not published at the time. Soifer's essay at the URL says Nelson posed the problem in November 1950, finding the lower bound 4, and that his friend John Isbell found the upper bound 7 then. MathWorld also dates it to 1950. The same hexagonal coloring, as a cover of the plane by 7 closed congruent sets each missing the distances in (2, √7), had been published by Hadwiger (1945)."
   added_by: daniel-munro
 
 soifer-2009:
@@ -4370,7 +4398,65 @@ moser-moser-1961:
   string: "L. Moser and W. Moser, Solution to Problem 10, Canadian Mathematical Bulletin 4 (1961) 187-189."
   date: "1961-05"
   doi: "https://doi.org/10.1017/S0008439500025765"
-  notes: "The Moser spindle, a 7-vertex unit-distance graph with chromatic number 4. The DOI is for the issue's Solutions section, pp. 187-194. Not read directly; attributed by Exoo and Ismailescu (arXiv:1408.2002, Table 1) and de Grey (2018)."
+  notes: "The Moser spindle, a 7-vertex unit-distance graph with chromatic number 4. The DOI is for the issue's Solutions section, pp. 187-194. Not read directly; attributed by Exoo and Ismailescu (arXiv:1408.2002, Table 1), de Grey (2018) and Cibulka (2007). Soifer credits the bound 4 to Edward Nelson in November 1950, unpublished; the problem was published by Gardner (Scientific American, October 1960) and Hadwiger (Elemente der Mathematik 16, 1961), neither read."
+  added_by: daniel-munro
+
+hadwiger-1945:
+  string: "H. Hadwiger, Ueberdeckung des euklidischen Raumes durch kongruente Mengen, Portugaliae Mathematica 4 (1945) 238-242."
+  date: "1945"
+  url: "https://purl.pt/2142"
+  notes: "Received 1945-06-30. On p. 239, the plane is covered by 7 closed congruent sets, each the union of the closed regular hexagons in the same position in a tiling by 18-gons made of 7 hexagons of side 1, and no set contains two points at any distance in (2, √7). Scaled, this is the 7-coloring of the plane, five years before Isbell found it (as Soifer reports). Cibulka (2007) cites this paper for chi(R^2) <= 7."
+  added_by: daniel-munro
+
+ivanov-2006:
+  string: "L. L. Ivanov, An estimate for the chromatic number of the space R^4, Uspekhi Matematicheskikh Nauk 61:5 (2006) 181-182; Russian Mathematical Surveys 61 (2006) 984-986."
+  date: "2006-10"
+  url: "https://www.mathnet.ru/eng/rm5396"
+  doi: "https://doi.org/10.1070/RM2006v061n05ABEH004361"
+  notes: "Accepted 2006-09-28, in the September-October issue. Proves chi(R^4) >= 7, independently of Cantwell (1996). Its introduction states 6 <= chi(R^4) <= 49, crediting the upper bound to Coulson with no reference: the earliest public statement of 49 found. Coulson and Payne (2007) state it too, and Arman, Bondarenko, Prymak and Radchenko (2021) give the first proof."
+  added_by: daniel-munro
+
+cibulka-2007:
+  string: "J. Cibulka, Ramsey-type questions in Euclidean space, diploma thesis, Charles University, Prague (2007)."
+  date: "2007"
+  url: "http://kam.mff.cuni.cz/~cibulka/papers/diplomka.pdf"
+  notes: "Dated by the PDF on the author's website, created 2007-08-14. Section 2.2 proves chi(R^6) >= 11, later published in Cibulka (2008). Section 2.1 surveys earlier lower bounds: it credits Larman and Rogers (1972) with chi(R^5) >= 8 (the 5-dimensional half-cube), chi(R^6) >= 10 (by the spindle on that graph), chi(R^7) >= 14 (the 56-vertex Gosset graph) and chi(R^8) >= 16, and Raigorodskii (2001) with chi(R^7) >= 15."
+  added_by: daniel-munro
+
+kupavskii-2011-norm:
+  string: "A. Kupavskiy, On the chromatic number of R^n with an arbitrary norm, Discrete Mathematics 311 (2011) 437-440."
+  date: "2011"
+  doi: "https://doi.org/10.1016/j.disc.2010.12.005"
+  notes: "Not read directly (ScienceDirect refuses automated access). Credited with chi(R^11) >= 25 by Cherkashin, Kulikov and Raigorodskii (2015). Online 2011-01-06 according to OpenAlex; March 2011 issue."
+  added_by: daniel-munro
+
+kupavskii-2011-spheres:
+  string: "A. B. Kupavskii, On the colouring of spheres embedded in R^n, Matematicheskii Sbornik 202:6 (2011) 83-110; Sbornik: Mathematics 202 (2011) 859-886."
+  date: "2011-06"
+  url: "https://www.mathnet.ru/eng/sm7676"
+  doi: "https://doi.org/10.1070/SM2011v202n06ABEH004169"
+  notes: "Received 2009-12-29 and, revised, 2010-09-16. Its abstract states chi(R^12) >= 27, obtained by lifting bounds on the chromatic numbers of spheres to higher dimensions; the bound is read from the abstract, not the full text. Cherkashin, Kulikov and Raigorodskii (2015) cite it for the same bound."
+  added_by: daniel-munro
+
+parts-2026-05-26:
+  string: "J. Parts, comment of 2026-05-26 on D. G. Mixon, Polymath16, eighteenth thread: Back with a new conjecture! (blog post, 2026)."
+  date: "2026-05-26"
+  url: "https://dustingmixon.wordpress.com/2026/01/17/polymath16-eighteenth-thread-back-with-a-new-conjecture/"
+  notes: "chi(R^7) >= 17, from a 952-vertex unit-distance graph on the E7 lattice with independence number 57. Raised to 18 on 2026-07-06 (parts-2026-07). Cited among Parts's comments in Table 1 of Davies (2026)."
+  added_by: daniel-munro
+
+polymath16-gibbs-2018-05-19:
+  string: "P. Gibbs, comment of 2018-05-19 on D. G. Mixon, Polymath16, fifth thread: Human-verifiable proofs (blog post, 2018)."
+  date: "2018-05-19"
+  url: "https://dustingmixon.wordpress.com/2018/05/10/polymath16-fifth-thread-human-verifiable-proofs/"
+  notes: "chi(R^6) <= 472, by a linear coloring of the permutohedron tiling with coefficients 1, 90, 100, 232, 237, 314, after 484 in a comment earlier the same day. Also reports that 156 is the best for R^5 by this method."
+  added_by: daniel-munro
+
+polymath16-gibbs-2018-05-25:
+  string: "P. Gibbs, comment of 2018-05-25 on D. G. Mixon, Polymath16, fifth thread: Human-verifiable proofs (blog post, 2018)."
+  date: "2018-05-25"
+  url: "https://dustingmixon.wordpress.com/2018/05/10/polymath16-fifth-thread-human-verifiable-proofs/"
+  notes: "chi(R^6) <= 462, by a linear coloring of the permutohedron tiling with coefficients 331, 161, 67, 49, 385; he checked most possibilities down to 450 without success. The Polymath16 wiki still listed 462 in November 2018 and October 2022 (Wayback Machine). Arman, Bondarenko, Prymak and Radchenko (2021) report that 448 was announced in this thread, but no 448 was found in it or in the sixth to eighth threads."
   added_by: daniel-munro
 
 degrey-2018:
@@ -4390,15 +4476,16 @@ openai-2026-plane:
 raiskii-1968:
   string: "D. E. Raiskii, Realization of all distances in a decomposition of the space R^n into n+1 parts, Matematicheskie Zametki 7 (1970) 319-323; Mathematical Notes 7 (1970) 194-196."
   date: "1968-12-10"
+  url: "https://www.mathnet.ru/eng/mzm9512"
   doi: "https://doi.org/10.1007/BF01093113"
-  notes: "Dated by its receipt (Math-Net.ru). In any cover of R^n (n > 1) by n+1 sets, one set realizes every distance, so chi(R^n) >= n + 2. Cited for chi(R^3) >= 5 by Radoičić and Tóth (2003) and for chi(R^4) >= 6 by Coulson and Payne (2007). Not read directly."
+  notes: "Dated by its receipt. Proves that if R^n (n > 1) is the union of n+1 disjoint sets, one of them realizes every distance, so chi(R^n) >= n + 2, by a spindle of two regular simplices (the Moser-Raiskii spindle). Hadwiger (1944) had proved this for closed sets."
   added_by: daniel-munro
 
 larman-rogers-1972:
   string: "D. G. Larman and C. A. Rogers, The realization of distances within sets in Euclidean space, Mathematika 19 (1972) 1-24."
   date: "1972-06"
   doi: "https://doi.org/10.1112/S0025579300004903"
-  notes: "Not read directly. Credited with chi(R^8) >= 16 by Cherkashin, Kulikov and Raigorodskii (2015) and Kahle and Taha (2014), and chi(R^12) >= 24 by Exoo and Ismailescu (2014). Also proves chi(R^n) <= (3+o(1))^n."
+  notes: "Not read directly. Credited with chi(R^5) >= 8, chi(R^6) >= 10 and chi(R^7) >= 14 by Cibulka (2007), chi(R^8) >= 16 by Cherkashin, Kulikov and Raigorodskii (2015), Kahle and Taha (2014) and Cibulka (2007), and chi(R^10) >= 19 and chi(R^12) >= 24 by Kupavskii and Raigorodskii (2008) (also Exoo and Ismailescu 2014 for 24). Also proves chi(R^n) <= (3+o(1))^n."
   added_by: daniel-munro
 
 szekely-wormald-1989:
@@ -4423,10 +4510,11 @@ coulson-1997:
   added_by: daniel-munro
 
 raigorodskii-2001:
-  string: "A. M. Raigorodskii, Borsuk's problem and the chromatic numbers of some metric spaces, Russian Mathematical Surveys 56 (2001) 103-139."
+  string: "A. M. Raigorodskii, Borsuk's problem and the chromatic numbers of some metric spaces, Uspekhi Matematicheskikh Nauk 56:1 (2001) 107-146; Russian Mathematical Surveys 56 (2001) 103-139."
   date: "2001"
+  url: "https://www.mathnet.ru/eng/rm358"
   doi: "https://doi.org/10.1070/RM2001v056n01ABEH000358"
-  notes: "Not read directly. Credited with chi(R^7) >= 15 by Exoo and Ismailescu (2014) and Cherkashin, Kulikov and Raigorodskii (2015)."
+  notes: "Received 2000-12-07. Section 4.1 proves chi(R^7) >= 15 (a 126-vertex graph in R^8 lying in a hyperplane) and chi(R^11) >= 20, along with chi(Q^9) >= 12. Read in the Russian version."
   added_by: daniel-munro
 
 coulson-2002:
@@ -4462,21 +4550,22 @@ cibulka-2008:
   string: "J. Cibulka, On the chromatic number of real and rational spaces, Geombinatorics 18 (2008) 53-65."
   date: "2008"
   url: "https://iuuk.mff.cuni.cz/~cibulka/chromspace"
-  notes: "Not read directly. Credited with chi(R^6) >= 11 by Exoo and Ismailescu (2014); also gives new proofs of chi(R^4) >= 7 and chi(R^5) >= 9."
+  notes: "Not read directly. Credited with chi(R^6) >= 11 by Exoo and Ismailescu (2014), which first appeared in his 2007 diploma thesis (cibulka-2007); also gives new proofs of chi(R^4) >= 7 and chi(R^5) >= 9."
   added_by: daniel-munro
 
 kupavskii-raigorodskii-2009:
-  string: "A. B. Kupavskii and A. M. Raigorodskii, On the chromatic number of R^9, Fundamentalnaya i Prikladnaya Matematika 14 (2008) 139-154; Journal of Mathematical Sciences 163 (2009) 720-731."
+  string: "A. B. Kupavskii and A. M. Raigorodskii, On the chromatic number of R^9, Fundamentalnaya i Prikladnaya Matematika 14:5 (2008) 139-154; Journal of Mathematical Sciences 163 (2009) 720-731."
   date: "2008"
+  url: "https://www.mathnet.ru/eng/fpm1146"
   doi: "https://doi.org/10.1007/s10958-009-9708-4"
-  notes: "Not read directly. Proves chi(R^9) >= 21 (Cherkashin, Kulikov and Raigorodskii 2015; Kahle and Taha 2014)."
+  notes: "Theorem 1: chi(R^9) >= 21; Theorem 3: chi(R^10) >= 23. It says the result also improves the bound for n = 11, which then follows as chi(R^11) >= chi(R^10) >= 23. Its table of earlier lower bounds credits chi(R^10) >= 19 and chi(R^12) >= 24 to Larman and Rogers (1972), chi(R^7) >= 15 and chi(R^11) >= 20 to Raigorodskii (2001), and chi(R^8) >= 16 and chi(R^9) >= 16 to Székely (2002), noting that Székely doesn't say who first proved them. Exoo and Ismailescu (2014) cite the paper for chi(R^11) >= 24, which isn't in it."
   added_by: daniel-munro
 
 kupavskii-raigorodskii-2009-endm:
   string: "A. B. Kupavskii and A. M. Raigorodskii, On the chromatic numbers of small-dimensional Euclidean spaces, Electronic Notes in Discrete Mathematics 34 (2009) 435-439 (EuroComb 2009)."
   date: "2009-09"
   doi: "https://doi.org/10.1016/j.endm.2009.07.072"
-  notes: "Not read directly. Credited with chi(R^10) >= 23, chi(R^11) >= 23 and chi(R^12) >= 25 by Kahle and Taha (2014). Exoo and Ismailescu (2014) instead give chi(R^11) >= 24, citing the J. Math. Sci. paper on R^9."
+  notes: "Not read directly (ScienceDirect refuses automated access). Credited with chi(R^12) >= 25 by Kahle and Taha (2014), who also credit it with chi(R^10) >= 23 and chi(R^11) >= 23; those two appeared first in Kupavskii and Raigorodskii's paper on R^9 (2008)."
   added_by: daniel-munro
 
 exoo-ismailescu-lim-2014:
@@ -4508,10 +4597,10 @@ cherkashin-kulikov-raigorodskii-2015:
   added_by: daniel-munro
 
 polymath16-2018-05:
-  string: "D. G. Mixon, Polymath16, fifth thread: Human-verifiable proofs (blog post and comments, 2018)."
-  date: "2018-05-10"
+  string: "A. de Grey (as ag24ag24), comment of 2018-05-14 on D. G. Mixon, Polymath16, fifth thread: Human-verifiable proofs (blog post, 2018)."
+  date: "2018-05-14"
   url: "https://dustingmixon.wordpress.com/2018/05/10/polymath16-fifth-thread-human-verifiable-proofs/"
-  notes: "Colorings of R^5 with 156 colors and of R^6 with 448 colors announced in the discussion by Aubrey de Grey and Philip Gibbs, as reported by Arman, Bondarenko, Prymak and Radchenko (2021). Not read directly."
+  notes: "Reports '(very provisional)' upper bounds chi(R^5) <= 156 and chi(R^6) <= 564, found a few months earlier by the permutohedron approach of Radoičić and Tóth. Philip Gibbs reproduced 156 on 2018-05-17 and lowered the bound for R^6 in later comments (polymath16-gibbs-2018-05-19, polymath16-gibbs-2018-05-25). Arman, Bondarenko, Prymak and Radchenko (2021) cite this thread for 156 and 448."
   added_by: daniel-munro
 
 arman-bondarenko-prymak-radchenko-2021:
@@ -4877,16 +4966,57 @@ cohn-spherical-codes:
   added_by: daniel-munro
 
 fejes-toth-1943:
-  string: "L. Fejes Tóth, Über die Abschätzung des kürzesten Abstandes zweier Punkte eines auf einer Kugelfläche liegenden Punktsystems, Jahresbericht der Deutschen Mathematiker-Vereinigung 53 (1943) 66-68."
+  string: "L. Fejes Tóth, Über eine Abschätzung des kürzesten Abstandes zweier Punkte eines auf einer Kugelfläche liegenden Punktsystems, Jahresbericht der Deutschen Mathematiker-Vereinigung 53 (1943) 66-68."
   date: "1943"
-  notes: "The bound T(N) <= arccos((cot²ω - 1)/2) with ω = πN/(6N - 12), attained for N = 3, 4, 6 and 12, as stated by Musin and Tarasov (musin-tarasov-2014-steklov). The values for each N are computed from this formula. Not read directly."
+  url: "https://gdz.sub.uni-goettingen.de/id/PPN37721857X_0053"
+  notes: "Read directly. Received 9 December 1942. Proves d_n² ≤ 4 - cosec²(nπ/(6(n-2))) for the least chord d_n of n points on the unit sphere, i.e. T(n) ≤ arccos((cot²ω - 1)/2) with ω = πn/(6n - 12), with equality only for n = 3, 4, 6 and 12, whose solutions it credits to an earlier paper (fejes-toth-1942), as it does the remark that T(5) = T(6). The values for each n are computed here from the formula and rounded up; the paper itself evaluates it only for n = 13 (footnote 5)."
+  added_by: daniel-munro
+
+tammes-1930:
+  string: "P.M.L. Tammes, On the origin of number and arrangement of the places of exit on the surface of pollen-grains, Recueil des travaux botaniques néerlandais 27 (1930) 1-84 (dissertation, Groningen)."
+  date: "1930"
+  url: "https://natuurtijdschriften.nl/pub/552640"
+  notes: "Read directly (pp. 64-69). Describes arrangements of 3, 4, 6 and 12 equal touching circles centred at the vertices of an equilateral triangle on a great circle and at the face centres of a tetrahedron, cube and dodecahedron, and argues (p. 66-67) that no 5 circles fit when their centres must be more than 90° apart, so that 'when there is room on a sphere for five circles, six may always be constructed': T(5) = T(6) = 90°. The argument is a sketch but correct; later papers credit N = 5 and 6 to Fejes Tóth and to Schütte and van der Waerden."
+  added_by: daniel-munro
+
+fejes-toth-1942:
+  string: "L. Fejes Tóth, Die regulären Polyeder als Lösungen von Extremalaufgaben, Matematikai és Természettudományi Értesítő 61 (1942) 471-478 (Hungarian, with a German summary)."
+  date: "1942"
+  notes: "Not read. Cited by Fejes Tóth (fejes-toth-1943, footnote 1, as in press in December 1942) for the solutions for N = 3, 4, 6 and 12 and the remark that T(5) = T(6), and that the cube and dodecahedron are not extremal; by Rutishauser (rutishauser-1945, which gives pages 471-477) for the values for the tetrahedron, octahedron, cube, icosahedron and dodecahedron. Fejes Tóth 1948 (Ann. Sc. Norm. Super. Pisa 13, 51-58) gives the volume and year. The publication date within 1942-1943 isn't confirmed."
+  added_by: daniel-munro
+
+rutishauser-1945:
+  string: "H. Rutishauser, Über Punktverteilungen auf der Kugelfläche, Commentarii Mathematici Helvetici 17 (1944/45) 327-331."
+  date: "1945"
+  doi: "https://doi.org/10.1007/BF02566251"
+  url: "https://gdz.sub.uni-goettingen.de/id/PPN358147735_0017"
+  notes: "Read directly. Received 24 May 1945. Gives explicit arrangements of 8 points (the square antiprism, cos = (2√2 - 1)/7) and 20 points (cos = (√33 - 3)/4) that beat the cube and dodecahedron, and quotes the cube and dodecahedron values from Fejes Tóth (fejes-toth-1942)."
+  added_by: daniel-munro
+
+danzer-1963:
+  string: "L. Danzer, Endliche Punktmengen auf der 2-Sphäre mit möglichst großem Minimalabstand, Habilitationsschrift, Universität Göttingen (1963); English translation in Discrete Mathematics 60 (1986) 3-66."
+  date: "1963"
+  notes: "Not read. Solves N = 10 and 11, as reported by Musin and Tarasov (musin-tarasov-2014, abstract and Section 1.2; musin-tarasov-2014-steklov, Section 2.3, which says danzer-1986 is its translation). Böröczky (boroczky-1983) gave another proof for N = 11."
+  added_by: daniel-munro
+
+robinson-1959:
+  string: "R.M. Robinson, Arrangement of 24 points on a sphere (abstract), Notices of the American Mathematical Society 6 (1959) 637-638."
+  date: "1959"
+  notes: "Not read. Announces the solution for N = 24, as stated by Robinson (robinson-1961, Section 1.1, reference [7])."
+  added_by: daniel-munro
+
+lazic-senk-seskar-1987:
+  string: "D.E. Lazić, V. Šenk and I. Šeškar, Arrangements of points on a sphere which maximize the least distance, Bulletin of Applied Mathematics (Technical University Budapest) 47 (1987) 7-21."
+  date: "1987"
+  notes: "Not read. The configuration of 19 points credited by Cohn's table of spherical codes."
   added_by: daniel-munro
 
 schutte-van-der-waerden-1951:
   string: "K. Schütte and B.L. van der Waerden, Auf welcher Kugel haben 5, 6, 7, 8 oder 9 Punkte mit Mindestabstand Eins Platz?, Mathematische Annalen 123 (1951) 96-124."
   date: "1951"
   doi: "https://doi.org/10.1007/BF02054944"
-  notes: "Solves N = 5, 7, 8 and 9, as reported by Musin and Tarasov (2012), Section 1.2, and gives the configurations for N up to 16 credited by Cohn's table of spherical codes. Not read directly."
+  url: "https://gdz.sub.uni-goettingen.de/id/PPN235181684_0123"
+  notes: "Read directly (Sections 1 and 18). Received 23 October 1950. Solves N = 5, 7, 8 and 9, and gives conjectured best arrangements for N = 10, 11, 13, 14, 15, 16, 24 and 32 (by Schütte for 10 and 13-16, by van der Waerden for 11, 24 and 32), tabulated in Section 18 as the squared diameter d² = 1/sin²(T/2) of the smallest sphere carrying N points at distance 1."
   added_by: daniel-munro
 
 van-der-waerden-1952:
@@ -4900,7 +5030,8 @@ robinson-1961:
   string: "R.M. Robinson, Arrangement of 24 points on a sphere, Mathematische Annalen 144 (1961) 17-48."
   date: "1961"
   doi: "https://doi.org/10.1007/BF01396539"
-  notes: "Solves N = 24, as reported by Musin and Tarasov (2012), Section 1.2. Not read directly."
+  url: "https://gdz.sub.uni-goettingen.de/id/PPN235181684_0144"
+  notes: "Read directly (Sections 1 and 9-10). Received 19 November 1960; the result for N = 24 was announced in 1959 (robinson-1959). Theorem Ba strengthens Fejes Tóth's bound for all n > 12: 4nΔ + (2n - 12)Δ* ≤ 12π, where Δ is the area of an equilateral spherical triangle of side a with angle α, and Δ* that of an isosceles triangle with two sides a enclosing the angle 2π - 4α. Section 9.5 improves it for n > 24 to 4nΔ + (2n - 24)Δ* + 12Δ' < 12π, where Δ' = 2β - π for the angle β of a spherical square of side a. The paper doesn't evaluate these for particular n: the upper bounds for n = 14-23 (Theorem Ba) and n = 25-30 (Section 9.5) are computed here, rounded up. Musin (arXiv:1604.02776, Section 1.1) also states that Robinson's bound holds for all N."
   added_by: daniel-munro
 
 tarnai-gaspar-1983:
@@ -5359,7 +5490,7 @@ codish-et-al-2015:
   date: "2015-07-06"
   url: "https://arxiv.org/abs/1507.01428"
   doi: "https://doi.org/10.1016/j.jcss.2016.04.004"
-  notes: "Journal version of Ehlers and Müller (2015) with Codish, Cruz-Filipe and Schneider-Kamp. Table 1 (p. 3) gives the bounds on size and depth for up to 20 inputs, with their sources in the text."
+  notes: "Journal version of Ehlers and Müller (2015) with Codish, Cruz-Filipe and Schneider-Kamp. Table 1 (p. 4) gives the bounds on size and depth for up to 20 inputs, with their sources in the text, including lower bounds on size of 58, 63, 68 and 73 for 17 to 20 inputs, from S(16) >= 53 by Van Voorhis's S(n) >= S(n-1) + ceil(log2 n); no earlier statement of these was found."
   added_by: daniel-munro
 
 lunnon-2013:

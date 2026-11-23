@@ -205,17 +205,24 @@ weak-schur:
   - "The lower bounds WS(n) >= S(n) implied by the Schur family, such as WS(8) >= 5286 and WS(9) >= 17694 from Rowley's 2019 Schur partitions, aren't included unless a source states them for WS."
 
 snake-in-the-box:
-  status: partial
-  reviewed: 2026-11-14
-  sources: [minortriad-snake, uga-sib-records]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [minortriad-snake, uga-sib-records, uga-sib-records-2013, casella-potter-2005a, lukito-2000, bitterman-2004, drapela-2015, meyerson-et-al-2014, allison-paulusma-2016b, taylor-2026]
   gaps:
   - "Many recent lower bounds are preprints or personal communications from Tom Ace's page (#43)."
-  - "No literature found for the upper bounds that certificates give (#65, #74)."
+  - "Potter et al. 1994, Abbott-Katchalski 1991, Rajan-Shende 1999, Kochut 1996, Kinny 2012 (ECAI, and Monte-Carlo search for snakes and coils, MIWAI 2012), Östergård-Pettersson 2014, Hood-Sawada-Wong 2010 and Hood-Recoskie-Sawada-Wong 2015 weren't read (not online, paywalled or behind bot checks), nor Pettersson's thesis (Table 4.1 gives the sources for s(n), n <= 8). Their bounds come from Casella-Potter 2005, Bitterman 2004, Drapela 2015, Meyerson et al. 2014, Allison-Paulusma and the University of Georgia pages."
+  - "s(8) >= 89 is credited to Potter et al. 1994, following Bitterman 2004 (and Casella-Potter 2005, who call Potter et al.'s 8-dimensional snake record-breaking); Drapela 2015 credits 89 to Abbott-Katchalski 1991."
+  - "s(7) <= 50 is credited to Kochut 1996, following Drapela 2015. Bitterman 2004 and Kunt, Koch and Park (arXiv:2611.25268, 2026) say Potter et al. 1994 already verified the snake of length 50 optimal by exhaustive search, which would date it two years earlier."
+  - "The snake lower bounds 168, 338, 618 and 1236 for n = 9 to 12, and 2466 for n = 13, are coils less a vertex, credited as coil-in-the-box credits the coils: 338 to Paterson-Tuliani 1998, and the rest to Abbott-Katchalski 1991, following Lukito's thesis. Casella-Potter 2005 credit 338, 618 and 1236 to Paterson-Tuliani 1998, which would date s(11) >= 618 and s(12) >= 1236 to 1998. 2466 is listed in Meyerson et al. 2014 without a source and credited here to Abbott-Katchalski's coil of 2468."
+  - "s(11) >= 695 and s(12) >= 1274 are credited to Kinny's ECAI 2012 paper, as on the University of Georgia page of August 2013; the paper wasn't read, so they may instead come from his MIWAI 2012 paper (December 2012). Meyerson et al. 2014 list s(12) >= 1280 as the record before their work, without a source; it isn't recorded. The University of Georgia page dated July 2014 already shows Meyerson et al.'s 707 for n = 11, before the CIES paper's 705 (December 2014)."
+  - "Hood et al.'s s(13) >= 1916 (2010, in Drapela 2015) is below the 2466 implied by Abbott-Katchalski's coil, and Bitterman's s(8) >= 91 below Rajan-Shende's 97, so neither is recorded. W.J. Brown's 2005 University of Georgia thesis and Evdokimov's survey (Uchenye Zapiski Kazan. Univ. 156 (2014) 55-65, with a table of bounds for n = 10 to 12) weren't read."
+  - "Upper bounds: the only one found for snakes (open) with n >= 9 is 2^(n-1) - 1, stated by Taylor 2026 from Huang's sensitivity theorem (2019); it may have been stated earlier. The general upper bounds of Snevily, Zémor, Deimer, Solov'jeva, Lukito and others are for coils and don't bound snakes directly. Bitterman 2004 applies Snevily's coil bound to snakes (s(8) <= 126), which isn't recorded. Emelyanov-Lukito 2000 (Discrete Math. 218) and Evdokimov 1969 (Mat. Zametki 6, on chains in the cube) weren't read and may treat open snakes."
+  - "Kunt, Koch and Park (arXiv:2611.25268, 2026-11-18), the only new paper found since the last review, gives no new bounds for the hypercube."
 
 coil-in-the-box:
   status: complete
   reviewed: 2026-11-21
-  sources: [minortriad-snake, uga-sib-records, oeis-a000937-coil, lukito-2000, kochut-1996, pettersson-2015, casella-potter-2005a, wynn-2012, allison-paulusma-2016a, allison-paulusma-2016b, orland-et-al-2026, byrnes-harley-spinu-2026, davies-1965, danzer-klee-1967, abbott-katchalski-1988, deimer-1985]
+  sources: [minortriad-snake, uga-sib-records, oeis-a000937-coil, lukito-2000, kochut-1996, pettersson-2015, casella-potter-2005a, bitterman-2004, wynn-2012, allison-paulusma-2016a, allison-paulusma-2016b, orland-et-al-2026, byrnes-harley-spinu-2026, davies-1965, danzer-klee-1967, abbott-katchalski-1988, deimer-1985]
   gaps:
   - "Kautz 1958, Even 1963, Adelson-Alter-Curtz 1973, Abbott-Katchalski 1991, Paterson-Tuliani 1998, Solov'jeva 1987 and Lukito 1998 weren't read (paywalled or not online); their bounds come from Allison-Paulusma, Pettersson's thesis, Danzer-Klee 1967, Abbott-Katchalski 1988, Kochut 1996 and Lukito's thesis. Paterson-Tuliani also appeared at ISIT 1997 (doi:10.1109/ISIT.1997.613174), which may date 96 and 340 a year earlier."
   - "Who first gave c(12) >= 1238 is disputed: Lukito's thesis (Table 1) credits Abbott-Katchalski 1991, but Casella-Potter 2005 and the University of Georgia records page credit Paterson-Tuliani 1998. Lukito is followed."
@@ -259,13 +266,14 @@ isosceles-set:
   - "Lower bounds from two-distance sets alone (every two-distance set is isosceles), such as the largest ones in R^4 to R^7 classified by Lisoněk 1997, aren't included where a larger isosceles set was known by then or no source states them as isosceles sets; n = 8 is the exception, where Lisoněk's 45-point set is optimal."
 
 sorting-network-size:
-  status: partial
-  reviewed: 2026-11-22
-  sources: [dobbelaere-sorting-networks, tomar-2026-v2, bose-nelson-1962, batcher-1968]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [dobbelaere-sorting-networks, floyd-knuth-1970, van-voorhis-1971, bose-nelson-1962, batcher-1968, baddar-2009, valsalam-miikkulainen-2013, codish-et-al-2014, codish-et-al-2015, tomar-2026-v2]
   gaps:
-  - "Floyd's 1964 memo and Batcher's 1964 Goodyear report are unpublished and weren't found, and the SRI report of Kautz, Pease and Green (1970) wasn't found (Kautz's 1969 IEEE article of the same name gives no sizes); their sizes come from Floyd and Knuth (1970), Table 1, and Van Voorhis (1971), Table 2. Batcher's 191 for 32 inputs is dated by his 1968 paper, though his 1964 report may already give it."
-  - "Batcher's odd-even merge sizes for 17 to 31 inputs aren't recorded: no source read states them, and reading them from the g = 2 column of Van Voorhis (1971), Table 2, would be an interpretation (#58)."
-  - "The lower bounds for 13 to 32 inputs credited to Tomar (2026) rest on an unreviewed computer proof; Dobbelaere's list, which withdrew the same values on 2026-11-20 because Van Voorhis's 1972 two-value proof is invalid, doesn't cite it. Tomar's sequel claiming S(13) = 45 (and so one more for 14 to 32 inputs) isn't recorded."
+  - "Floyd's 1964 memo, Batcher's 1964 Goodyear report and the 1970 SRI report of Kautz, Pease and Green are unpublished and weren't found (Kautz's 1969 IEEE article of the same name gives no sizes); their sizes come from Floyd and Knuth (1970), Table 1, and Van Voorhis (1971), Table 2. Batcher's sizes for 17 to 32 inputs are the g = 2 column of Van Voorhis's Table 2, which he calls 'Batcher's result' (p. 48); they're dated by the 1964 report, as Floyd and Knuth date his sizes for 10 to 16, though the report may give only some of them. The sizes Kautz, Pease and Green reported for 18 and 26 to 28 inputs, which Van Voorhis improved, aren't known."
+  - "Knuth 1973 (Vol. 3, Section 5.3.4) and Van Voorhis's 1972 IEEE note on S(n) >= S(n-1) + ceil(log2 n) weren't read (paywalled); the lower bounds for 9 to 16 inputs from Van Voorhis's inequality are taken from Codish et al. (2014). Floyd and Knuth's Table 1 rows for Nelson (approx. 1956; the O'Connor-Nelson patent, issued the same month as Bose and Nelson's paper, gives no table) and for Floyd and Knuth (approx. 1964, published as a 1967 AMS Notices abstract, tying Batcher for 10 to 12 inputs) aren't recorded."
+  - "The information-theoretic lower bounds ceil(log2 n!) are recorded as trivial, through Baddar (2009), for 5 to 8 and 10 to 32 inputs; Baddar's table gives 20 instead of 19 for 9 inputs, so none is recorded there. The lower bounds for 17 to 20 inputs are first stated, as far as found, by Codish et al. (2015), and for 21 to 32 by Dobbelaere's list (2018-01-02), though they follow from Van Voorhis's inequality and earlier bounds."
+  - "The lower bounds for 13 to 32 inputs credited to Tomar (2026) rest on an unreviewed computer proof; Dobbelaere's list, which withdrew the same values on 2026-11-20 because Van Voorhis's 1972 two-value proof is invalid, doesn't cite it. Tomar's unreviewed sequels on Zenodo aren't recorded: S(13) = 45 (2026-10-21), S(14) >= 50 (2026-10-26), and S(15) >= 55, S(16) = 60 and S(20) >= 81 (2026-11-12), each with bounds one or two higher for the larger inputs."
 
 sorting-network-depth:
   status: complete
@@ -295,11 +303,19 @@ multicolor-ramsey-triangle:
   - "The 2026 Schur preprints imply R_8(3) >= 5364, 5374 and 5384 by R_k(3) >= S(k) + 2, but no source states them, so they aren't recorded."
 
 chromatic-number-space:
-  status: partial
-  reviewed: 2026-11-14
+  status: complete
+  reviewed: 2026-11-23
+  sources: [hadwiger-1945, raiskii-1968, raigorodskii-2001, radoicic-toth-2003, ivanov-2006, coulson-payne-2007, cibulka-2007, kupavskii-raigorodskii-2009, exoo-ismailescu-2014, kahle-taha-2014, cherkashin-kulikov-raigorodskii-2015, polymath16-2018-05, arman-bondarenko-prymak-radchenko-2021, parts-2026-03, ivanov-glushkova-2026, davies-2026, koshelev-kupavskii-voronov-2026]
   gaps:
-  - "Several bounds read only from later tables; Voronov's personal-communication bounds left out (#68)."
-  - "Most current bounds are unrefereed 2026 work (#68)."
+  - "Several older bounds are taken from later papers' tables, their sources not read: Moser and Moser 1961, Larman and Rogers 1972 (Mathematika), Cantwell 1996, Székely and Wormald 1989, Coulson 1997 and 2002, Nechushtan 2002, Cibulka 2008, Kupavskii and Raigorodskii 2009 (ENDM) and Kupavskiy 2011 (Discrete Math.). Kupavskiy 2011, for chi(R^11) >= 25, is cited only by Cherkashin, Kulikov and Raigorodskii."
+  - "Soifer credits chi(R^2) >= 4 to Nelson in November 1950, unpublished. Gardner's column (Scientific American, October 1960) and Hadwiger's Ungelöste Probleme Nr. 40 (Elemente der Mathematik 16, 1961) weren't read and may state it before Moser and Moser."
+  - "Exoo and Ismailescu (2014) give chi(R^11) >= 24 from Kupavskii and Raigorodskii's paper on R^9, which gives only 23 (for n = 10, and so for n = 11)."
+  - "Bounds that follow from a lower dimension by monotonicity aren't recorded, such as chi(R^9) >= 16 from Larman and Rogers's chi(R^8) >= 16, which Kupavskii and Raigorodskii cite from Székely (2002). Nor are bounds that follow from Larman and Rogers's Erdős-Sós lemma but that no source read states for that dimension (chi(R^9) >= 15, chi(R^11) >= 19)."
+  - "Arman, Bondarenko, Prymak and Radchenko (2021) report chi(R^6) <= 448 from the fifth Polymath16 thread, but the thread's best is Gibbs's 462 (2018-05-25), which the Polymath16 wiki still listed in 2022, so 448 is left out."
+  - "Most current bounds are unrefereed 2026 work: OpenAI's chi(R^2) >= 6, Koshelev, Kupavskii and Voronov's chi(R^3) >= 7, which assumes OpenAI's Haar rigidity theorem, Davies's lower bounds for n >= 4, Ivanov and Glushkova's upper bounds, and Parts's arXiv note and blog comments."
+  - "Carson Crocker posted the argument for chi(R^3) >= 7 on Zenodo and the Polymath16 blog on 2026-10-10, a day before Koshelev, Kupavskii and Voronov, but later disclaimed priority (blog comment of 2026-11-01); the bound is credited to them."
+  - "Left out: Voronov's chi(R^4) >= 10 and chi(R^5) >= 10, known only as personal communications cited by Davies (2026); Parts's blog comment of 2026-01-25 that he had reached chi(R^8) >= 22 (no construction given; his paper of 2026-03-15 gives 25), and his unpublished chi(R^8) >= 20 from about 2022."
+  - "Upper bounds for n >= 5 before Polymath16 and Arman, Bondarenko, Prymak and Radchenko come only from Larman and Rogers's asymptotic (3+o(1))^n; Arman et al. say small-dimensional upper bounds were almost unstudied."
 
 moving-sofa:
   status: complete
@@ -323,11 +339,15 @@ lebesgue-universal-cover:
 
 tammes:
   status: partial
-  reviewed: 2026-11-17
-  sources: [cohn-spherical-codes]
+  reviewed: 2026-11-23
+  sources: [cohn-spherical-codes, tammes-1930, fejes-toth-1943, rutishauser-1945, schutte-van-der-waerden-1951, van-der-waerden-1952, robinson-1961, bachoc-vallentin-2008, musin-tarasov-2010, musin-tarasov-2014, musin-tarasov-2014-steklov]
   gaps:
-  - "The T(19) source couldn't be found (#79)."
-  - "Many sources read only through secondary ones (#79)."
+  - "Fejes Tóth 1942 (Mat. Term. Ért. 61), Danzer's 1963 Habilitationsschrift and its 1986 translation, Robinson's 1959 abstract, Böröczky 1983, Böröczky and Szabó 2003, Tarnai and Gáspár 1983 and 1991, Clare and Kepert 1986, Kottwitz 1991 and Lazić, Šenk and Šeškar 1987 couldn't be read (paywalled, blocked or not online); their bounds are cited through the sources that report them."
+  - "The configurations that Tarnai and Gáspár 1983, Clare and Kepert 1986 and Kottwitz 1991 improved on, for N = 17-19 and 21-30, aren't known, so the lower-bound histories there start at the current record (and at Fejes Tóth 1942 and Rutishauser 1945 for N = 20). Whether Danzer's 17 points were already in his 1963 thesis is also unknown."
+  - "The upper bounds from Fejes Tóth's formula (N = 5-30) and from Robinson's Theorem Ba (N = 14-23) and Section 9.5 (N = 25-30) are computed from the general inequalities, which the papers don't evaluate for these N."
+  - "Danzer's 1963 thesis is taken as the first proof for N = 10 and 11, following Musin and Tarasov, so Böröczky's 1983 proof for N = 11 isn't a row. Tammes 1930 is taken as the first to show T(5) = T(6) = 90°, with a sketched but correct argument."
+  - "bachoc-vallentin-2008 is dated to the journal; its Tammes table first appeared in arXiv:math/0608426v2 on 2006-10-17."
+  - "Kępiński's 2026 computer-assisted proof candidate for N = 16 (Zenodo 10.5281/zenodo.23312437) is conditional on unproved computations by its own account, so T(16) isn't recorded as exact."
 
 heilbronn-square:
   status: partial

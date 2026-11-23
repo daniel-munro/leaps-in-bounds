@@ -12,7 +12,7 @@ snake-in-the-box-5,,13,davies-1965,allison-paulusma-2016b
 snake-in-the-box-6,26,,davies-1965,allison-paulusma-2016b
 snake-in-the-box-6,,26,davies-1965,allison-paulusma-2016b
 snake-in-the-box-7,50,,potter-et-al-1994,casella-potter-2005a
-snake-in-the-box-7,,50,kochut-1996,allison-paulusma-2016b
+snake-in-the-box-7,,50,kochut-1996,drapela-2015
 snake-in-the-box-8,97,,rajan-shende-1999,casella-potter-2005a
 snake-in-the-box-8,98,,carlson-hougen-2010,uga-sib-records
 snake-in-the-box-8,,98,ostergard-pettersson-2014-snake,
@@ -66,3 +66,18 @@ snake-in-the-box-13,2932,,echols-2026-07-22,minortriad-snake
 snake-in-the-box-13,2934,,itty-2026,minortriad-snake
 snake-in-the-box-13,2938,,taylor-2026,minortriad-snake
 snake-in-the-box-13,2946,,toner-2026,minortriad-snake
+snake-in-the-box-8,89,,potter-et-al-1994,bitterman-2004
+snake-in-the-box-9,168,,abbott-katchalski-1991,casella-potter-2005a
+snake-in-the-box-9,182,,bitterman-2004,
+snake-in-the-box-10,338,,paterson-tuliani-1998,casella-potter-2005a
+snake-in-the-box-11,618,,abbott-katchalski-1991,lukito-2000
+snake-in-the-box-12,1236,,abbott-katchalski-1991,lukito-2000
+snake-in-the-box-11,695,,kinny-2012,uga-sib-records-2013
+snake-in-the-box-12,1274,,kinny-2012,uga-sib-records-2013
+snake-in-the-box-11,705,,meyerson-et-al-2014,
+snake-in-the-box-13,2466,,abbott-katchalski-1991,meyerson-et-al-2014
+snake-in-the-box-9,,255,taylor-2026,
+snake-in-the-box-10,,511,taylor-2026,
+snake-in-the-box-11,,1023,taylor-2026,
+snake-in-the-box-12,,2047,taylor-2026,
+snake-in-the-box-13,,4095,taylor-2026,
