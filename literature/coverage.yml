@@ -339,7 +339,7 @@ lebesgue-universal-cover:
 
 
 tammes:
-  status: partial
+  status: complete
   reviewed: 2026-11-23
   sources: [cohn-spherical-codes, tammes-1930, fejes-toth-1943, rutishauser-1945, schutte-van-der-waerden-1951, van-der-waerden-1952, jucovic-1959, robinson-1961, danzer-1986, szekely-1974, tarnai-gaspar-1983, bachoc-vallentin-2008, musin-tarasov-2010, musin-tarasov-2014, musin-tarasov-2014-steklov]
   gaps:
