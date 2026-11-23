@@ -3051,10 +3051,10 @@ kido-2008:
   added_by: daniel-munro
 
 dobbelaere-sorting-networks:
-  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, https://bertdobbelaere.github.io/sorting_networks.html (page updated 2026-10-10, retrieved 2026-11-11)."
-  date: "2026-11-11"
+  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, https://bertdobbelaere.github.io/sorting_networks.html (page updated 2026-11-20, retrieved 2026-11-22)."
+  date: "2026-11-22"
   url: "https://bertdobbelaere.github.io/sorting_networks.html"
-  notes: "List of the smallest and fastest known sorting networks for up to 32 inputs, with their sources, many found by Dobbelaere's SorterHunter program. Earlier versions are in the SorterHunter repository, https://github.com/bertdobbelaere/SorterHunter."
+  notes: "List of the smallest and fastest known sorting networks for up to 32 inputs, with their sources, many found by Dobbelaere's SorterHunter program. Earlier versions are in the SorterHunter repository, https://github.com/bertdobbelaere/SorterHunter. From 2025-04-21 to 2026-11-20 the list gave higher lower bounds on size for 13 to 32 inputs (44 for 13 inputs), from a two-value inequality of Van Voorhis whose proof is invalid (see van-voorhis-1972); on 2026-11-20 it went back to the one-value bounds (43 for 13 inputs)."
   added_by: daniel-munro
 
 dobbelaere-2017-12-29:
@@ -3155,13 +3155,6 @@ dobbelaere-2024-10-27:
   notes: "A smaller network for 26 inputs."
   added_by: daniel-munro
 
-dobbelaere-2025-04-21:
-  string: "B. Dobbelaere, Smallest and fastest sorting networks for a given number of inputs, SorterHunter repository, sorting_networks.html, 2025-04-21."
-  date: "2025-04-21"
-  url: "https://github.com/bertdobbelaere/SorterHunter/blob/cac0ebac7c70e59f32168bfa108175a4274e903d/sorting_networks.html"
-  notes: "Tighter lower bounds on size for 13 or more inputs, on a suggestion by Jelmer Firet, from an argument of Van Voorhis (1972) whose proof has since been questioned. Tomar (2026) proved the same bounds for 13 to 32 inputs by computer."
-  added_by: daniel-munro
-
 bose-nelson-1962:
   string: "R.C. Bose, R.J. Nelson, A sorting problem, Journal of the ACM 9 (1962) 282-296."
   date: "1962-04"
@@ -3214,7 +3207,7 @@ van-voorhis-1972:
   string: "D.C. Van Voorhis, An improved lower bound for sorting networks, IEEE Transactions on Computers C-21 (1972) 612-613."
   date: "1972-06"
   doi: "https://doi.org/10.1109/TC.1972.5009021"
-  notes: "Proves S(n) >= S(n-1) + ceil(log2 n), first in Stanford Digital Systems Laboratory Technical Note 7 (February 1971). The resulting lower bounds for 9 to 16 inputs are from Codish et al. (2014)."
+  notes: "Proves S(n) >= S(n-1) + ceil(log2 n), first in Stanford Digital Systems Laboratory Technical Note 7 (February 1971). The resulting lower bounds for 9 to 16 inputs are from Codish et al. (2014). This one-value bound is not in question. A different paper of the same year, D.C. Van Voorhis, Toward a lower bound for sorting networks, Complexity of Computer Computations (1972) 119-129, https://doi.org/10.1007/978-1-4684-2001-2_12, follows the two largest inputs and states P(2,n) >= ceil(log2 F(n)), so that S(n) >= S(n-2) + ceil(log2 F(n)). Its proof is invalid: it assumes the comparators on the paths of the maximum are exactly n-1, which fails for 'pass-through' comparators, as in an optimal network on 3 inputs (Mericanii, Twenty tabulated lower bounds for sorting networks rest on an invalid proof: an audit of Van Voorhis (1972), and a partial repair, draft, August 2026, https://mericanii.com/work/s13/paper-correction.pdf). With Harder's S(11) = 35 that inequality gives S(13) >= 44 and the bounds Dobbelaere's list showed for 13 to 32 inputs from 2025-04-21 until it withdrew them on 2026-11-20. Tomar (2026) later proved the inequality's values for up to 32 inputs by computer, without using Van Voorhis's proof."
   added_by: daniel-munro
 
 knuth-1973:
@@ -3241,7 +3234,8 @@ parberry-1991:
 juille-1995:
   string: "H. Juillé, Evolution of non-deterministic incremental algorithms as a new approach for search in state spaces, Proceedings of the 6th International Conference on Genetic Algorithms (1995) 351-358."
   date: "1995-07"
-  notes: "A network for 13 inputs with 45 comparators. Not seen; cited by Valsalam and Miikkulainen (2013) and Baddar (2009)."
+  url: "http://demo.cs.brandeis.edu/papers/icga95.pdf"
+  notes: "Figure 3 and Section 4: two networks for 13 inputs with 45 comparators, one fewer than the best known before (46)."
   added_by: daniel-munro
 
 baddar-batcher-2009:
@@ -3335,7 +3329,7 @@ tomar-2026:
   string: "T.S. Tomar, Sorting networks on 13 inputs need at least 44 comparators, Zenodo, 2026, https://doi.org/10.5281/zenodo.23453293."
   date: "2026-10-18"
   doi: "https://doi.org/10.5281/zenodo.23453293"
-  notes: "Computer proof of the lower bounds on size for 13 to 27 inputs that Dobbelaere's list gave from 2025-04-21, with a Lean proof of S(13) >= 44. Version 2 (2026-10-19) adds 28 to 32 inputs. Not peer reviewed. A sequel (Zenodo, 2026-10-21, https://doi.org/10.5281/zenodo.23504358) claims S(13) = 45, and so bounds one higher for 14 to 32 inputs."
+  notes: "Computes P(2,n), the fewest comparators the two largest inputs can meet, for up to 27 inputs; with S(n) >= S(n-2) + P(2,n) this proves the lower bounds on size for 13 to 27 inputs (44 for 13) that Dobbelaere's list showed from 2025-04-21 to 2026-11-20. Those had rested on an inequality of Van Voorhis (1972) whose proof is invalid (see van-voorhis-1972); this proof doesn't use it. Version 2 (2026-10-19) adds 28 to 32 inputs, and later versions (by version 6, 2026-10-28) a Lean proof of S(13) >= 44. Not peer reviewed. A sequel, Sorting networks on 13 inputs need 45 comparators (Zenodo, first version 2026-10-21, https://doi.org/10.5281/zenodo.23504358; version 5, 2026-11-17, https://doi.org/10.5281/zenodo.24299103), claims S(13) = 45 with a certificate and a Lean proof, and so bounds one higher for 14 to 32 inputs; it isn't recorded here."
   added_by: daniel-munro
 
 tomar-2026-v2:

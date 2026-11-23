@@ -249,11 +249,12 @@ isosceles-set:
 
 sorting-network-size:
   status: partial
-  reviewed: 2026-11-11
-  sources: [dobbelaere-sorting-networks]
+  reviewed: 2026-11-22
+  sources: [dobbelaere-sorting-networks, tomar-2026-v2]
   gaps:
-  - "Bose-Nelson, Floyd 1964, Batcher 1964, Kautz 1970, Knuth 1973, Juille 1995 and Ehlers 2017 read only through secondary sources (#58)."
-  - "Batcher's 1964 sizes for 17 to 32 inputs left out on purpose (#58)."
+  - "Bose-Nelson 1962 and Batcher 1968 weren't read (the ACM Digital Library refuses automated clients); their sizes come from Floyd and Knuth (1970), Table 1. Floyd's 1964 memo and Batcher's 1964 Goodyear report are unpublished and weren't found, and Kautz, Pease and Green 1970 (SRI) wasn't found; their sizes come from Floyd and Knuth (1970) and Van Voorhis (1971)."
+  - "Batcher's sizes for 17 to 32 inputs aren't recorded: no source read states them, and reading them from the g = 2 column of Van Voorhis (1971), Table 2, would be an interpretation (#58)."
+  - "The lower bounds for 13 to 32 inputs credited to Tomar (2026) rest on an unreviewed computer proof; Dobbelaere's list, which withdrew the same values on 2026-11-20 because Van Voorhis's 1972 two-value proof is invalid, doesn't cite it. Tomar's sequel claiming S(13) = 45 (and so one more for 14 to 32 inputs) isn't recorded."
 
 sorting-network-depth:
   status: partial
