@@ -17,7 +17,7 @@ This site provides browsing, visualizations, and access to the structured data f
 
 ## Recent certificates
 
-{% assign batches = site.data.certificates | group_by_exp: "cert", "cert.date | append: ' ' | append: cert.submitted_by" %}
+{% assign batches = site.data.certificates | where: "listed", true | group_by_exp: "cert", "cert.date | append: ' ' | append: cert.submitted_by" %}
 <ul>
   {% for batch in batches limit: 5 %}
     {% assign first = batch.items.first %}

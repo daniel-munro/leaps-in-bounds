@@ -41,7 +41,7 @@ The most recent bounds in the histories of constants, from the literature or fro
 ## Found here first
 
 {% assign found_here = site.data.discoveries.certificate %}
-These {{ found_here.size }} bounds were first recorded by a certificate submitted here, not by a source in the literature. Each is either a new result, or one whose original source hasn't been found yet. If you know of an earlier source for one, please [add it]({{ site.repository }}/blob/main/literature/README.md).
+These {{ found_here.size }} bounds were first recorded by a certificate submitted here, not by a source in the literature. Each is either a new result, or one whose original source hasn't been found yet. If you know of an earlier source for one, please [add it]({{ site.repository }}/blob/main/literature/README.md).{% if site.data.discoveries.certificate_improved > 0 %} Another {{ site.data.discoveries.certificate_improved }} bounds first recorded by certificates have since been improved on, and are left out here and in the latest discoveries. They're in the histories of their constants.{% endif %}
 
 <div class="table-responsive">
 <table class="table table-sm small">
@@ -96,9 +96,9 @@ Sources counts the sources a contributor added, and Bounds sourced the bounds fr
 
 ## Recent certificates
 
-Certificates submitted here, grouped by who submitted them and when. All {{ site.data.certificates.size }} certificates are available as [YAML]({{ site.baseurl }}/data/certificates.yml), [JSON]({{ site.baseurl }}/data/certificates.json), [CSV]({{ site.baseurl }}/data/certificates.csv) or [TSV]({{ site.baseurl }}/data/certificates.tsv).
+Certificates submitted here, grouped by who submitted them and when, leaving out those for new bounds that have since been improved on. All {{ site.data.certificates.size }} certificates are listed on their constants' pages, and available as [YAML]({{ site.baseurl }}/data/certificates.yml), [JSON]({{ site.baseurl }}/data/certificates.json), [CSV]({{ site.baseurl }}/data/certificates.csv) or [TSV]({{ site.baseurl }}/data/certificates.tsv).
 
-{% assign batches = site.data.certificates | group_by_exp: "cert", "cert.date | append: ' ' | append: cert.submitted_by" %}
+{% assign batches = site.data.certificates | where: "listed", true | group_by_exp: "cert", "cert.date | append: ' ' | append: cert.submitted_by" %}
 <div class="table-responsive">
 <table class="table table-sm small">
   <thead>
@@ -130,12 +130,10 @@ Certificates submitted here, grouped by who submitted them and when. All {{ site
           <td>
             {% assign n_new = batch.items | where: "role", "discovery" | size %}
             {% assign n_evidence = batch.items | where: "role", "evidence" | size %}
-            {% assign n_superseded = batch.items | where: "role", "superseded" | size %}
             {% assign n_weaker = batch.items | where: "role", "weaker" | size %}
             {% assign n_attested = batch.items | where: "status", "attested" | size %}
             {% if n_new > 0 %}<span class="badge bg-verified-new">{{ n_new }} new</span>{% endif %}
             {% if n_evidence > 0 %}<span class="badge bg-success">{{ n_evidence }} evidence</span>{% endif %}
-            {% if n_superseded > 0 %}<span class="badge bg-secondary">{{ n_superseded }} superseded</span>{% endif %}
             {% if n_weaker > 0 %}<span class="badge bg-secondary">{{ n_weaker }} weaker</span>{% endif %}
             {% if n_attested > 0 %}<span class="badge bg-attested">{{ n_attested }} attested</span>{% endif %}
           </td>

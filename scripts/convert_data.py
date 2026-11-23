@@ -39,6 +39,8 @@ with open("_data/history.yml", "r") as file:
     history = yaml.safe_load(file)
 
 # Remove extraneous fields
+for cert in certificates:
+    del cert['listed']  # Only for the site's overviews
 for constant in constants.values():
     if 'image' in constant:
         del constant['image']

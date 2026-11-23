@@ -504,6 +504,10 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
     "superseded" when other certificates are better evidence for every bound
     it proves, or "weaker" when it's weaker than every recorded bound.
     "current" says whether it's the best evidence for the current bound.
+    "listed" says whether the site's overviews of recent certificates list
+    it: not when it's superseded, or was a discovery since improved on, so
+    that a run of incremental improvements shows only the latest. It's
+    dropped from the downloads.
     Call after build_histories, before the values are written out.
     """
     rows = []
@@ -523,6 +527,7 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
             else:
                 role, event = "weaker", None
             cert["role"] = role
+            current = bool(events) and events[-1]["evidence"]["certificate"] == cert["id"]
             rows.append({
                 "id": cert["id"],
                 "constant": constant_id,
@@ -534,7 +539,8 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
                 "date": cert["date"],
                 "status": cert["status"],
                 "role": role,
-                "current": bool(events) and events[-1]["evidence"]["certificate"] == cert["id"],
+                "current": current,
+                "listed": role != "superseded" and (role != "discovery" or current),
                 "event_date": event["date"] if event else None,
                 "event_discovery": event["discovery"]["id"] if event else None,
                 "attested_by": cert["attestation"]["by"] if "attestation" in cert else None,
@@ -648,8 +654,11 @@ def calculate_family_stats(
 
 def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 50) -> dict[str, list[dict[str, Any]]]:
     """List discoveries for the contributions page: the `latest` dated ones,
-    newest first, and all those made by certificates. Each gives the bound it
-    improved on, if any. Call after build_histories, before the values are
+    newest first, and all those made by certificates, under "certificate".
+    Each gives the bound it improved on, if any. Discoveries by certificates
+    that have since been improved on are left out of both, so that a run of
+    incremental improvements shows only the latest, and counted under
+    "certificate_improved". Call after build_histories, before the values are
     written out.
     """
     rows = []
@@ -674,9 +683,12 @@ def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 5
                 })
     rows.sort(key=lambda row: (row["constant"], row["bound"]))
     rows.sort(key=lambda row: row["date"] or "", reverse=True)
+    improved = [row for row in rows if row["discovery_kind"] == "certificate" and not row["current"]]
+    rows = [row for row in rows if row["discovery_kind"] != "certificate" or row["current"]]
     return {
         "latest": [row for row in rows if row["date"] is not None][:latest],
         "certificate": [row for row in rows if row["discovery_kind"] == "certificate"],
+        "certificate_improved": len(improved),
     }
 
 
