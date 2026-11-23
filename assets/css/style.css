@@ -320,3 +320,94 @@ h1 {
 .viz-ticker { height: 6em; line-height: 1.5; overflow: hidden; font-size: 0.9rem; color: #212529; }
 .viz-ticker > div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 1.5em; }
 #ranges-slider { flex: 1; min-width: 200px; }
+
+/* Family menus on the constants page: a sticky sidebar on wide screens and a
+   sticky dropdown bar on narrower ones */
+.sidebar-content {
+    min-width: 0;  /* Let wide tables scroll inside the column, not widen it */
+}
+
+.sidebar-content h2[id], .sidebar-content h3[id] {
+    scroll-margin-top: 4.5rem;  /* Clear the dropdown bar */
+}
+
+.family-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    background-color: white;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.family-bar-menu {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.family-bar-menu .dropdown-item.active {
+    color: inherit;
+    background-color: var(--bs-secondary-bg);
+    font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+    .container.container-wide {
+        max-width: 1560px;
+    }
+
+    .container.has-sidebar {
+        display: grid;
+        grid-template-columns: 14rem minmax(0, 1fr);
+        column-gap: 2.5rem;
+        align-items: start;
+    }
+
+    .sidebar-content h2[id], .sidebar-content h3[id] {
+        scroll-margin-top: 1rem;
+    }
+
+    .family-sidebar {
+        position: sticky;
+        top: 1rem;
+        max-height: calc(100vh - 2rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        font-size: 0.85rem;
+        line-height: 1.3;
+        padding-right: 0.5rem;
+        border-right: 1px solid var(--bs-border-color);
+    }
+
+    .family-sidebar a {
+        display: block;
+        text-decoration: none;
+        color: var(--bs-body-color);
+        padding: 0.15rem 0.5rem;
+        border-left: 2px solid transparent;
+    }
+
+    .family-sidebar a:hover {
+        color: var(--bs-link-color);
+    }
+
+    .family-sidebar .family-nav-category a {
+        margin-top: 0.75rem;
+        color: var(--bs-secondary-color);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        padding-left: 0;
+    }
+
+    .family-sidebar li:first-child.family-nav-category a {
+        margin-top: 0;
+    }
+
+    .family-sidebar a.family-nav-link.active {
+        color: var(--bs-link-color);
+        font-weight: 600;
+        border-left-color: var(--bs-link-color);
+    }
+}

@@ -1,0 +1,35 @@
+{% comment %}
+Links to every family on the constants page, by category. include.style is
+"sidebar", a sticky list beside the page on wide screens, or "bar", a sticky
+dropdown at the top of the page on narrower ones. assets/js/family_nav.js
+marks the family in view.
+{% endcomment %}
+{% if include.style == "sidebar" %}
+<nav class="family-sidebar d-none d-xl-block" aria-label="Families">
+  <ul class="list-unstyled mb-0">
+    {% for category in site.data.categories %}
+      <li class="family-nav-category"><a href="#msc-{{ category.msc }}">{{ category.msc }} {{ category.name }}</a></li>
+      {% for family_id in category.families %}
+        <li><a class="family-nav-link" href="#{{ family_id }}">{{ site.data.families[family_id].name }}</a></li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</nav>
+{% else %}
+<div class="family-bar d-xl-none">
+  <div class="dropdown">
+    <button class="btn btn-outline-secondary dropdown-toggle w-100 d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="text-muted me-2">Family:</span>
+      <span class="family-bar-current text-truncate me-auto">Jump to a family</span>
+    </button>
+    <ul class="dropdown-menu w-100 family-bar-menu">
+      {% for category in site.data.categories %}
+        <li><h6 class="dropdown-header">{{ category.msc }} {{ category.name }}</h6></li>
+        {% for family_id in category.families %}
+          <li><a class="dropdown-item ps-4 family-nav-link" href="#{{ family_id }}">{{ site.data.families[family_id].name }}</a></li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

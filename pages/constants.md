@@ -2,6 +2,7 @@
 layout: default
 title: Constants
 permalink: /constants/
+sidebar: family_nav.html
 ---
 
 # Constants
@@ -16,29 +17,11 @@ permalink: /constants/
   See the <a href="{{ site.baseurl }}/unverified/">bounds that aren't verified yet</a>.
 </p>
 
-<div class="dropdown mb-4">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="familyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-    Jump to family
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="familyDropdown">
-    {% for category in site.data.categories %}
-      <li>
-        <h6 class="dropdown-header">{{ category.msc }} {{ category.name }}</h6>
-      </li>
-      {% for family_id in category.families %}
-        {% assign family = site.data.families[family_id] %}
-        <li><a class="dropdown-item ps-4" href="#{{ family_id }}">{{ family.name }}</a></li>
-      {% endfor %}
-      {% unless forloop.last %}
-        <li><hr class="dropdown-divider"></li>
-      {% endunless %}
-    {% endfor %}
-  </ul>
-</div>
+{% include family_nav.html style="bar" %}
 
 {% for category in site.data.categories %}
 <hr>
-<h2 class="text-center">{{ category.msc }} {{ category.name }}</h2>
+<h2 class="text-center" id="msc-{{ category.msc }}">{{ category.msc }} {{ category.name }}</h2>
 
 {% for family_id in category.families %}
 {% assign family = site.data.families[family_id] %}
@@ -78,3 +61,4 @@ permalink: /constants/
 {% endfor %}
 
 <script defer src="{{ site.baseurl }}/assets/js/constant_cards.js"></script>
+<script defer src="{{ site.baseurl }}/assets/js/family_nav.js"></script>

@@ -6,7 +6,7 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
+      <div class="container{% if page.sidebar %} container-wide{% endif %}">
         <a class="navbar-brand fs-4" href="{{ site.baseurl }}/">
           <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Leaps in Bounds Logo" height="30" class="d-inline-block align-middle me-2">
           Leaps in Bounds
@@ -38,9 +38,18 @@
   </header>
 
   <main>
+    {% if page.sidebar %}
+    <div class="container container-wide has-sidebar mt-4">
+      {% include {{ page.sidebar }} style="sidebar" %}
+      <div class="sidebar-content">
+        {{ content }}
+      </div>
+    </div>
+    {% else %}
     <div class="container mt-4">
       {{ content }}
     </div>
+    {% endif %}
   </main>
 </body>
 </html>
