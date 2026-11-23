@@ -141,8 +141,8 @@ oeis-a090338-lines-on-plane-general:
   added_by: daniel-munro
 
 ellsworth-squares-in-squares:
-  string: "Squares in Squares, David Ellsworth (based on the original by Erich Friedman)"
-  date: "2026-11-02"
+  string: "Squares in Squares, David Ellsworth (based on the original by Erich Friedman), retrieved 2026-11-22"
+  date: "2026-11-22"
   url: "https://kingbird.myphotos.cc/packing/squares_in_squares.html"
   added_by: daniel-munro
 
@@ -610,6 +610,7 @@ nagamochi-2005:
   string: "Nagamochi, H. (2005). Packing unit squares in a rectangle. The Electronic Journal of Combinatorics, 12, R37."
   date: "2005-07-30"
   doi: "https://doi.org/10.37236/1934"
+  notes: "Theorem 1 claims that fewer than ab - (a+1-⌈a⌉) - (b+1-⌈b⌉) unit squares fit in any rectangle smaller than a × b, and Theorem 2 deduces s(n²-1) = s(n²-2) = n, and s(N) >= 1 + √(N - 2⌊√N⌋ + 1) for other N >= 4. The proof is incomplete: the per-square scoring assertion (Lemma 1), from which Theorem 1 is summed, fails for squares near a corner of the container, because Case 6 of Section 5.5 applies Lemma 6 without its hypothesis on which edge holds (2, 0.9). chelokot's square-packing-archive found counterexamples on 2026-09-05, and Karakuş (arXiv:2609.37410, 2026-09-29) published them; neither disproves the bounds. s(n²-1) = n was proved again by Karakuş (Corollary 1.2) and in Lean by chelokot, and s(n²-2) = n in Lean by chelokot (2026-09-05), whose proof the Squares Project replayed. Theorem 2's general bound has no complete proof; Karakuş proves only the weaker s(N) >= 1/2 + √(N - ⌊√N⌋ + 1/4) for nonsquare N >= 8. Bentz 2010 and 2016 use Nagamochi's Lemmas 7(ii) and 2, which don't depend on Lemma 1."
   added_by: daniel-munro
 
 bentz-2010:
@@ -1467,33 +1468,40 @@ exoo-circa-2012:
 # Disk covering problem
 
 bezdek-1983:
-  string: "Károly Bezdek in 1983"
+  string: "K. Bezdek, Über einige Kreisüberdeckungen, Beiträge Algebra Geom. 14 (1983) 7-13."
   date: "1983"
+  url: "https://zbmath.org/?q=an:0507.52009"
+  notes: "Proves Neville's conjectured r(5) (G. Fejes Tóth 2005; Gáspár, Tarnai and Hincz 2014). A further paper, K. Bezdek, Über einige optimale Konfigurationen von Kreisen, Ann. Univ. Sci. Budapest. Eötvös Sect. Math. 27 (1984) 143-151 (Zbl 0575.52006), also proves r(5) = 1/1.640... Not read."
   added_by: daniel-munro
 
 bezdek-1979:
-  string: "Károly Bezdek in 1979"
+  string: "K. Bezdek, Optimal covering of circles, Thesis, Budapest, 1979 (in Hungarian)."
   date: "1979"
+  notes: "Determines r(6) = 1/1.7988... (and, with Bezdek 1983, r(5)), per G. Fejes Tóth 2005 and the zbMATH review of Bezdek 1984 (Zbl 0575.52006). Not read."
   added_by: daniel-munro
 
 toth-1996:
-  string: "Gábor Fejes Tóth in 1996"
+  string: "G. Fejes Tóth, proof of r(8) and r(9), credited to 1996 by Erich Friedman's Circles Covering Circles"
   date: "1996"
+  notes: "No 1996 publication found. The proof appeared in G. Fejes Tóth 2005 (toth-2005), together with n = 10; that paper says part of the work was done at MSRI's program on Discrete and Computational Geometry (fall 1996). Friedman's page already credited n = 8, 9 to 1996 and n = 10 to D. Nagy (unproved) in February 2006."
   added_by: daniel-munro
 
 toth-2005:
-  string: "Gábor Fejes Tóth in 2005"
+  string: "G. Fejes Tóth, Thinnest covering of a circle by eight, nine, or ten congruent circles, in Combinatorial and Computational Geometry (J. E. Goodman, J. Pach and E. Welzl, eds.), MSRI Publications 52, Cambridge University Press, 2005, 361-376."
   date: "2005"
+  url: "https://library.slmath.org/books/Book52/files/18fejes.pdf"
   added_by: daniel-munro
 
 melissen-1997:
-  string: "Hans Melissen in 1997"
+  string: "J. B. M. Melissen, Packing and covering with circles, PhD thesis, Universiteit Utrecht, 1997."
   date: "1997"
+  notes: "Gives coverings of the disk by 11 (with P. C. Schuur, disproving Krotoszyński 1993) and 12 circles. Not read; the upper bounds here are 1/2.631 and 1/2.769 from Friedman's page, which shows radii truncated to three decimals. Gáspár, Tarnai and Hincz 2014 say Nurmela (1998/1999) improved both, so Friedman's pictures may be Nurmela's."
   added_by: daniel-munro
 
 tan-2018:
-  string: "Jeremy Tan in 2018"
+  string: "Jeremy Tan in 2018, credited by Erich Friedman's Circles Covering Circles"
   date: "2018"
+  notes: "Coverings for n = 13 to 25 shown on Friedman's page, which gives only the radius of the covered circle truncated to three decimals (r = 2.884+ and so on); the upper bounds here are its reciprocals rounded up. No publication found. Nurmela (1998/1999) gave coverings for 13 <= n <= 35 earlier (Gáspár, Tarnai and Hincz 2014), so some of these may be Nurmela's."
   added_by: daniel-munro
 
 # Circle in equilateral triangle
@@ -3255,7 +3263,7 @@ baddar-2009:
   string: "S.W. Al-Haj Baddar, Finding Better Sorting Networks, PhD thesis, Kent State University, 2009."
   date: "2009-04"
   url: "https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/10?p10_accession_num=kent1239814529"
-  notes: "Table 3.2 (p. 34) gives sizes of 133 and 140 for 25 and 26 inputs. Also a network of depth 12 for 22 inputs (first in technical report TR-KSU-CS-2008-05, 2008), and so for 21 inputs, credited by Dobbelaere's list."
+  notes: "Table 3.2 (p. 34) gives sizes of 133 and 140 for 25 and 26 inputs. Table 3.4 (p. 36) gives the fastest networks known before the thesis for 17 to 32 inputs, by odd-even merging of the fastest networks on half the inputs: depth 12 for 17 to 20, 13 for 21 to 24 and 14 for 25 to 32, with lower bounds of 7 for 17 to 26 and 8 for 27 to 32 (from the size lower bounds of Table 3.2 and monotonicity). Chapter 7 (p. 61) gives a network of depth 12 for 22 inputs, and so for 21, first in technical report TR-KSU-CS-2008-05 (2008, not seen). The title page is dated May 2009; the OhioLINK record was created in April 2009."
   added_by: daniel-munro
 
 valsalam-2010:
@@ -4151,8 +4159,8 @@ ejc-ds7-2000:
   added_by: daniel-munro
 
 ellsworth-squares-in-squares-compared:
-  string: "Squares in Squares: Older / Alternative Packings, David Ellsworth (based on the original by Erich Friedman), retrieved 2026-11-14"
-  date: "2026-11-14"
+  string: "Squares in Squares: Older / Alternative Packings, David Ellsworth (based on the original by Erich Friedman), retrieved 2026-11-22"
+  date: "2026-11-22"
   url: "https://kingbird.myphotos.cc/packing/squares_in_squares__compared.html"
   added_by: daniel-munro
 
@@ -4310,12 +4318,6 @@ friedman-circles-covering-circles-2006:
   string: "Circles Covering Circles, Erich Friedman (archived 2006-02-21)"
   date: "2006-02-21"
   url: "https://web.archive.org/web/20060221205328/http://www.stetson.edu/~efriedma/circovcir/"
-  added_by: daniel-munro
-
-voxequinox-2026:
-  string: "VoxEquinox in 2026"
-  date: "2026"
-  notes: "Credited on Erich Friedman's Circles Covering Circles page (retrieved 2026-11-14) with proving optimality for n = 11 to 20. Not on the page as archived in May 2026."
   added_by: daniel-munro
 
 # Circle in equilateral triangle
@@ -4711,7 +4713,7 @@ lunnon-1971:
   string: "W.F. Lunnon, Multi-dimensional map-folding, The Computer Journal 14(1) (1971) 75-80."
   date: "1971"
   doi: "https://doi.org/10.1093/comjnl/14.1.75"
-  notes: "Received November 1969. Table 1 (p. 77) gives G for strips of up to 12 leaves (with G(9) misprinted as 4356 for 4536), for p X q maps up to 3 X 7, 4 X 4 and 5 X 4, and for 2^d maps up to d = 6. OEIS A001416 attributes its terms up to 3 X 7 (in the entry, and in Sloane's 1973 Handbook, before 2017) to this paper."
+  notes: "Received November 1969. Table 1 (p. 77) gives G for strips of up to 12 leaves (with G(9) misprinted as 4356 for 4536), for p X q maps 2 X 3 to 2 X 11, 3 X 4 to 3 X 7 and 5 X 4, for square maps 2 X 2 to 5 X 5, and for 2^d maps up to d = 6 and 3^3. These are the first map counts found: the abstract says Lunnon (1968) counted only one-dimensional foldings, and Gardner (Wheels, Life and Other Mathematical Amusements, 1983, ch. 7) wrote in 1971 that nothing had been published on non-strip rectangles. OEIS A001415, A001416 and A001418 attribute their early terms (in Sloane's 1973 Handbook) to this paper."
   added_by: daniel-munro
 
 lunnon-irvine-2017:
@@ -4724,7 +4726,7 @@ codegolf-276709:
   string: "Count the possible folds of an n² grid, Code Golf Stack Exchange question 276709, revision 4 (table of m X n values)."
   date: "2024-11-20"
   url: "https://codegolf.stackexchange.com/questions/276709"
-  notes: "The m X n table (rows 4 X n and up added 2024-11-20) doesn't say how it was computed; it links Lunnon-algorithm implementations from jOEIS. An independent implementation of Lunnon's algorithm (by an AI agent, Claude, November 2026) reproduced 4 X 5, 4 X 6, 4 X 7 and 5 X 6. The table's 4 X 9 entry (276086428128) conflicts with its 9 X 4 entry (3488202663200, the same as its 4 X 10), so neither was added."
+  notes: "The m X n table (rows 4 X n and up added in revision 4, 2024-11-20, unchanged since) doesn't say how it was computed; it links Lunnon-algorithm implementations from jOEIS. Its 9 X n row is wrong after 9 X 2: its third and fourth entries, 17257455960 and 3488202663200, are the 3 X 10 and 4 X 10 counts (3 X 9 is 1944012744 in OEIS A001416), so the 4 X n row's 4 X 9 entry, 276086428128, is taken as the table's value. An independent implementation of Lunnon's algorithm (by an AI agent, Claude Opus 5.5, November 2026) reproduced 4 X 5 to 4 X 9, 5 X 6 and 5 X 7."
   added_by: daniel-munro
 
 irving-1973-schur:
@@ -5335,4 +5337,310 @@ xie-2026:
   date: "2026-06-03"
   url: "https://arxiv.org/abs/2606.04458"
   notes: "Every convex universal cover has area at least 0.833 (Corollary 1), by a computer-assisted proof in Brass and Sharifi's framework of a disk, a triangle and a pentagon of diameter 1: 356,816 parameter domains with outward-rounded interval bounds. The certificate records and a Python replay verifier are at https://github.com/Sheldon-Anderson/lebesgue-universal-cover-new-lower-bound-certificate; the verifier checks the records' hashes, counts and pass fields, not the geometry. Not published in a journal (arXiv v4, 2026-07-08)."
+  added_by: daniel-munro
+
+guy-kelly-1968-rp33:
+  string: "R.K. Guy and P.A. Kelly, The no-three-in-line problem, Research Paper 33, Department of Mathematics, University of Calgary (January 1968)."
+  date: "1968-01"
+  url: "http://wwwhomes.uni-bielefeld.de/achim/no3in/R.K.Guy_P.A.Kelly_Research_paper_No_33_Jan.1968.pdf"
+  notes: "p. 1: solutions with 2n points are known for n <= 9, found by hand (Acland-Hood and Guy, Bull. Malayan Math. Soc. 1952-53) and by computer (Kelly's 1967 master's thesis); Table I counts them. A row for n = 10 in Table I looks added later, in a different typeface. Also at https://oeis.org/A000755/a000755_1.pdf."
+  added_by: daniel-munro
+
+guy-kelly-1968:
+  string: "R.K. Guy and P.A. Kelly, The no-three-in-line problem, Canadian Mathematical Bulletin 11 (1968) 527-531."
+  date: "1968-10"
+  doi: "https://doi.org/10.4153/CMB-1968-062-3"
+  notes: "Received 1968-03-06; vol. 11 no. 4, October 1968. p. 527: f_n = 2n is known for 2 <= n <= 10 (Dudeney and Rouse Ball for n = 8, Acland-Hood 1952-53 for n = 10, also Guy 1952-53 and Kelly's 1967 thesis), with 1, 1, 4, 5, 11, 22, 57, 51 and 156 inequivalent configurations."
+  added_by: daniel-munro
+
+codish-et-al-2015:
+  string: "M. Codish, L. Cruz-Filipe, T. Ehlers, M. Müller, P. Schneider-Kamp, Sorting networks: to the end and back again, Journal of Computer and System Sciences (online 2016), arXiv:1507.01428."
+  date: "2015-07-06"
+  url: "https://arxiv.org/abs/1507.01428"
+  doi: "https://doi.org/10.1016/j.jcss.2016.04.004"
+  notes: "Journal version of Ehlers and Müller (2015) with Codish, Cruz-Filipe and Schneider-Kamp. Table 1 (p. 3) gives the bounds on size and depth for up to 20 inputs, with their sources in the text."
+  added_by: daniel-munro
+
+lunnon-2013:
+  string: "F. Lunnon, terms a(12)-a(18) of OEIS A001415, the foldings of 2 X 12 to 2 X 18 maps (2013)."
+  date: "2013-12-08"
+  url: "https://oeis.org/A001415"
+  notes: "OEIS history: Lunnon added a(12)-a(16) on 2013-12-07 (revision #21) and a(17)-a(18) on 2013-12-08 (revision #22); the entry's extension line credits all seven to Dec 08 2013. No publication of these terms was found."
+  added_by: daniel-munro
+
+irvine-2018:
+  string: "S.A. Irvine, terms a(6)-a(7) of OEIS A001418, the foldings of 6 X 6 and 7 X 7 maps (2018)."
+  date: "2018-01-11"
+  url: "https://oeis.org/A001418"
+  notes: "OEIS history revision #23, 2018-01-11. No publication of these terms was found."
+  added_by: daniel-munro
+
+vonequinox-2026:
+  string: "VonEquinox, DiskCoveringSolve: computer-assisted global optimality proofs for covering the unit disk with n = 11 to 20 equal disks, GitHub repository, commits of 2026-09-04 (n = 11, 12) and 2026-09-05 (n = 13 to 20). Erich Friedman's Circles Covering Circles credits these proofs to Yuao Zhang and Zhenyue Zhou (2026)."
+  date: "2026-09-05"
+  url: "https://github.com/VonEquinox/DiskCoveringSolve/tree/089584973f41e6374ce110f6e5b5ee456df19352"
+  notes: "Exact certificates (rational Krawczyk root isolation, Farkas certificates, exhaustive triangulation and orbit enumeration) with verifiers; the README says the claims remain subject to independent mathematical and software review, and that the proofs were produced in AI model sessions as reported by the maintainer. No paper; neither the repository nor Friedman's page states that the GitHub account belongs to Zhang and Zhou. The certified radii (r11 = 0.379983853..., r12 = 0.361102963...) are below the values 1/2.631 and 1/2.769 derived from Friedman's page."
+  added_by: daniel-munro
+
+krotoszynski-1993:
+  string: "S. Krotoszyński, Covering a disk with smaller disks, Studia Sci. Math. Hungar. 28 (1993) 277-283."
+  date: "1993"
+  url: "https://zbmath.org/?q=an:0712.52017"
+  notes: "Claims r(k) = 1/(1 + 2cos(2π/(k-1))) for k = 8 to 11. The proof contains errors (G. Fejes Tóth 2005), and the value is wrong for k = 11 (Melissen and Schuur, in Melissen 1997), so only the k = 11 construction is used here, as an upper bound. Read through its zbMATH review and Fejes Tóth 2005, p. 361."
+  added_by: daniel-munro
+
+gaspar-tarnai-hincz-2014:
+  string: "Zs. Gáspár, T. Tarnai and K. Hincz, Partial covering of a circle by equal circles. Part I: The mechanical models, J. Comput. Geom. 5 (2014) 104-125."
+  date: "2014"
+  url: "https://jocg.org/index.php/jocg/article/view/2928"
+  notes: "Section 1 surveys the covering problem: proofs for n = 5, 6 by Bezdek and n = 8, 9, 10 by G. Fejes Tóth; conjectured coverings for n = 11, 12 by Melissen 1997, improved by Nurmela, and for 13 <= n <= 35 by Nurmela."
+  added_by: daniel-munro
+
+nurmela-1999:
+  string: "K. J. Nurmela, Circle coverings in the plane, in Proc. 7th Nordic Combinatorial Conference (Turku, 1999), TUCS General Publication 15 (1999) 71-78."
+  date: "1999"
+  url: "https://zbmath.org/?q=an:0969.52005"
+  notes: "Not read (no copy found online). Cited by Gáspár, Tarnai and Hincz 2014 (as the 1998 Helsinki University of Technology preprint 'Covering a circle by congruent circular discs') for improving Melissen's coverings for n = 11, 12 and giving coverings for 13 <= n <= 35. Not yet cited by any row."
+  added_by: daniel-munro
+
+karakus-2026:
+  string: "H. Karakuş, A counterexample to Nagamochi's scoring lemma and a new rectangle packing bound, arXiv:2609.37410."
+  date: "2026-09-29"
+  url: "https://arxiv.org/abs/2609.37410"
+  notes: "Not peer reviewed. Shows that the proof of Nagamochi 2005's rectangle bound is incomplete (Sections 2-4), proves the weaker bound ν(a,b) < ab - Δ(a) (Theorem 1.1), and from it s(k²-1) = k for every k >= 2 (Corollary 1.2) and s(N) >= 1/2 + √(N - ⌊√N⌋ + 1/4) for nonsquare N >= 8 (Corollary 6.2), which is below Nagamochi's claimed bound at every such N. It does not reach s(k²-2) = k."
+  added_by: daniel-munro
+
+chelokot-2026:
+  string: "chelokot, square-packing-archive (GitHub), counterexample to Nagamochi's Lemma 1 and Lean proofs of s(n²-1) = n and s(n²-2) = n, 2026-09-05."
+  date: "2026-09-05"
+  url: "https://github.com/chelokot/square-packing-archive"
+  notes: "Not read directly; described in the Squares Project's review of 2026-10-02 (docs/project/reviews/review-2026-10-02-nagamochi-lemma1-karakus.md in github.com/jlevy/squares), which read its theorem statements and definitions. The Squares Project later replayed the Lean proof of s(n²-2) = n with its axiom audit."
+  added_by: daniel-munro
+
+squaremath-frontier:
+  string: "The Squares Project, Frontier Survey (squaremath.org/frontier.html) and its case records (github.com/jlevy/squares, packing/frontier/n-NNN.md), retrieved 2026-11-22"
+  date: "2026-11-22"
+  url: "https://squaremath.org/frontier.html"
+  notes: "Collects reported and independently replayed bounds on s(n) for n <= 324, most of them from September to November 2026, with a dated narrative of each case's history."
+  added_by: daniel-munro
+
+wikipedia-square-packing:
+  string: "Square packing - Wikipedia, retrieved 2026-11-22"
+  date: "2026-11-22"
+  url: "https://en.wikipedia.org/wiki/Square_packing"
+  added_by: daniel-munro
+
+wang-2026:
+  string: "Ruilin Wang in September 2026 (using ChatGPT-6 Astra)"
+  date: "2026-09"
+  added_by: daniel-munro
+
+couzo-2026-09-26:
+  string: "F. Couzo, square-packing (GitHub), packing of 68 unit squares in a square of side 8.798795237222592, dated 2026-09-26."
+  date: "2026-09-26"
+  url: "https://github.com/franciscouzo/square-packing"
+  notes: "Read via the Squares Project's case record for n = 68. Evan Daniel certified the same packing at its exact optimum, about 4.3e-12 smaller, on 2026-10-05."
+  added_by: daniel-munro
+
+chaoweeraprasit-2026-10-07:
+  string: "N. Chaoweeraprasit (itsnaka), SQUISH certificates (GitHub itsnaka/squish-certs, squish-submission-2026-10-07b), reported on jlevy/squares issue #422, 2026-10-07."
+  date: "2026-10-07"
+  url: "https://github.com/itsnaka/squish-certs"
+  notes: "Packing of 88 squares in side 9.8824510304821347, seeded from Kingbird's s(41). Read via the Squares Project's case record for n = 88."
+  added_by: daniel-munro
+
+xu-2026-10-08:
+  string: "R. Xu (ry-xu), square_packing (GitHub), 25 packings reported on jlevy/squares issue #432, 2026-10-08."
+  date: "2026-10-08"
+  url: "https://github.com/ry-xu/square_packing/tree/8dc415296f697f5140caea27c7a0193d52deb4e6"
+  notes: "LLM-assisted search. Sides 7.6903559 = (16+5√2)/3 for n = 51, 8.8809603717 for 70, 9.6980520605 for 84 and 9.8205657300 for 86. Read via the Squares Project's case records and its packet ry-xu-new-packings-2026-10-08; dated by the packet."
+  added_by: daniel-munro
+
+couzo-2026-10-08:
+  string: "F. Couzo, refinements of Ryan Xu's packings, comment on jlevy/squares pull request #460, 2026-10-08."
+  date: "2026-10-08"
+  url: "https://github.com/jlevy/squares/pull/460"
+  notes: "Sides 9.6979347990149214 for n = 84 and 9.8205354074967423 for n = 86. Read via the Squares Project's case records; dated by its packet couzo-followup-refinements-2026-10-08."
+  added_by: daniel-munro
+
+jazivxt-2026-11-15:
+  string: "jazivxt, packing of 90 unit squares in a square of side 9.998277166926, from shifted copies of a crop of Joost de Winter's packing of 157 squares, jlevy/squares issue #989, 2026-11-15."
+  date: "2026-11-15"
+  url: "https://github.com/jlevy/squares/issues/989"
+  notes: "The first packing of 90 squares below the 10 × 10 grid, so s(k² - k) < k at k = 10. Read via the Squares Project's case record for n = 90."
+  added_by: daniel-munro
+
+de-winter-2026-11-15:
+  string: "J. de Winter, local-search improvement of jazivxt's packing of 90 unit squares, side 9.9940387666098522, jlevy/squares issues #996 and #997, 2026-11-15."
+  date: "2026-11-15"
+  url: "https://github.com/jlevy/squares/issues/997"
+  notes: "Read via the Squares Project's case record for n = 90, which adopted it on 2026-11-16; dated by its review packet de-winter-996-review-2026-11-15. A refinement posted 2026-11-21 lowered the side by about 2.7e-11."
+  added_by: daniel-munro
+
+ahmed-2026-09-29:
+  string: "M. Ahmed (Queuingtheorydotcom), 11SquaresOptimal (GitHub), proof that s(11) equals the side of Trump's packing, about 3.877084, announced 2026-09-29."
+  date: "2026-09-29"
+  url: "https://github.com/Queuingtheorydotcom/11SquaresOptimal"
+  notes: "Credits the AI system Astra. Formalized in Lean on 2026-10-06 (Queuingtheorydotcom/11SquaresFormalized). Read via the Squares Project's case record for n = 11, which replayed the proof's inputs exactly; cited by Wikipedia."
+  added_by: daniel-munro
+
+jatloe-2026-10-16:
+  string: "Jatloe, B. Gurevitch, CTJLewis and M. Ahmed, Jatloe12SquaresFormalized (GitHub), Lean 4 proof that s(12) = 4, 2026-10-16."
+  date: "2026-10-16"
+  url: "https://github.com/Queuingtheorydotcom/Jatloe12SquaresFormalized/tree/d0caf4532a7ead68be1389ef87387b126fc2e0ab"
+  notes: "Theorem N12Compact.Final.optimality. Read via the Squares Project's case record for n = 12, whose statement audit (2026-10-25) reads it as s(12) = 4; it relies on 1,624 native_decide facts and hasn't been rebuilt there, so the project lists s(12) as reported proved and its verified lower bound as 3.9716."
+  added_by: daniel-munro
+
+guzhou0806-2026-09-30:
+  string: "Guzhou0806 (N17 project), R071 release (GitHub Guzhou0806/n17-square-packing), building on M. L. Overbeck's 4.66001 framework, 2026-09-30."
+  date: "2026-09-30"
+  url: "https://github.com/Guzhou0806/n17-square-packing/tree/8c11f6962506940c5de67a9fa73b3d1e2e151196/certificates/R071-C029"
+  notes: "s(17) > 18641771/4000000 = 4.66044275 by a weighted counting certificate. Discloses AI assistance. Read via the Squares Project's case record for n = 17, which replayed it."
+  added_by: daniel-munro
+
+guzhou0806-2026-10-11:
+  string: "Guzhou0806, n40-square-packing (GitHub), s(40) >= 3359/500, 2026-10-11."
+  date: "2026-10-11"
+  url: "https://github.com/Guzhou0806/n40-square-packing"
+  notes: "Read via the Squares Project's case record for n = 40."
+  added_by: daniel-munro
+
+daniel-2026-09-26:
+  string: "E. Daniel, square-packing (GitHub evand/square-packing), weighted point cover proving s(32) = 6, 2026-09-26."
+  date: "2026-09-26"
+  url: "https://github.com/evand/square-packing/tree/167d842cd27ba1451cb2833773ea930c80b9e65b/s12/certificates/s32"
+  notes: "Builds on S. Burns's and G. Massaccesi's weighted exact-rational covering method. The source's CREDITS.md says the work was produced by Claude (Anthropic) under human direction. Read via the Squares Project's case record for n = 32; dated by its packet evand-square-packing-2026-09-26."
+  added_by: daniel-munro
+
+daniel-2026-09-28:
+  string: "E. Daniel, square-packing (GitHub evand/square-packing), weighted point covers proving s(21) = 5 and s(45) = 7, 2026-09-28."
+  date: "2026-09-28"
+  url: "https://github.com/evand/square-packing/tree/6aa82ba457e9eaeaaa3af0833600f27f91a2fce3"
+  notes: "Produced by Claude (Anthropic) under human direction, per the source. Read via the Squares Project's case records for n = 21 and 45."
+  added_by: daniel-munro
+
+daniel-2026-10-01:
+  string: "E. Daniel, square-packing (GitHub evand/square-packing), proofs of s(60) = 8, s(61) = 8, s(78) = 9 and s(97) = 10, 2026-10-01."
+  date: "2026-10-01"
+  url: "https://github.com/evand/square-packing/tree/08e8a5faa54c0a7b0bb1cb0134c77d3565ce40c5/s12"
+  notes: "Read via the Squares Project's case records for these n."
+  added_by: daniel-munro
+
+daniel-2026-10-03:
+  string: "E. Daniel, square-packing (GitHub evand/square-packing), proof of s(96) = 10, 2026-10-03."
+  date: "2026-10-03"
+  url: "https://github.com/evand/square-packing/tree/2eb15455a6f178213287a84ab4d0576c060baabe/s12"
+  notes: "Read via the Squares Project's case record for n = 96."
+  added_by: daniel-munro
+
+hosono-2026-09-28:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), point and mixed rectangle-density certificates, 2026-09-28."
+  date: "2026-09-28"
+  url: "https://github.com/wand125/square-packing-bounds/tree/39d8ecc74d651b54ec977c331c8f2015b442a6c4"
+  notes: "Produced partly with AI assistance under human direction, per the source. Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-01:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), rectangle-density, mixed and exact-cover certificates, 2026-10-01."
+  date: "2026-10-01"
+  url: "https://github.com/wand125/square-packing-bounds/tree/1a25a5ed745fdd905a52f48fcc48150a0669032d"
+  notes: "Includes s(59) = 8 and s(77) = 9. Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-02:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), mixed certificates, 2026-10-02."
+  date: "2026-10-02"
+  url: "https://github.com/wand125/square-packing-bounds/tree/b00fc70f1904e9b1b567afee056d347f911209e8"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-03:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), mixed certificates, 2026-10-03."
+  date: "2026-10-03"
+  url: "https://github.com/wand125/square-packing-bounds/tree/2aff2076c492d62340e986c84f60a0a29eb668df"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-04:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), mixed certificates, 2026-10-04."
+  date: "2026-10-04"
+  url: "https://github.com/wand125/square-packing-bounds/tree/797bdf6e10eba5f9dccca9da06f8352e81ba9dde"
+  notes: "Two releases that day (the Squares Project's 'mixed bounds' and 'mixed bounds evening' packets). Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-05:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), mixed certificates, 2026-10-05."
+  date: "2026-10-05"
+  url: "https://github.com/wand125/square-packing-bounds/tree/43050edc5bdf5116fc5a073283128edd6749946b"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-06:
+  string: "H. Hosono (wand125), square-packing-bounds (GitHub), mixed certificates (check2), 2026-10-06."
+  date: "2026-10-06"
+  url: "https://github.com/wand125/square-packing-bounds"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-08:
+  string: "H. Hosono (wand125), square-packing (GitHub), fine-net lower-bound certificates, reported on jlevy/squares issue #446, 2026-10-08."
+  date: "2026-10-08"
+  url: "https://github.com/wand125/square-packing/tree/61e37d583ad690266da2188ad027ef3f697bf162/problems/square-lower-bounds"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-10:
+  string: "H. Hosono (wand125), square-packing (GitHub), fine-net certificates for n = 28, 29 and 30, 2026-10-10."
+  date: "2026-10-10"
+  url: "https://github.com/wand125/square-packing/tree/36b85b9f37efa7cc5d4464805cfb0f2d21576267/problems/square-lower-bounds"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-11:
+  string: "H. Hosono (wand125), square-packing (GitHub), fine-net certificate for n = 31, 2026-10-11."
+  date: "2026-10-11"
+  url: "https://github.com/wand125/square-packing/tree/23e31862345c532d17ad2c896677a3a8d8821aa4/problems/square-lower-bounds"
+  notes: "Read via the Squares Project's case record for n = 31."
+  added_by: daniel-munro
+
+hosono-2026-10-13:
+  string: "H. Hosono (wand125), square-packing (GitHub), fine-net certificates for n = 37, 39 and 44, 2026-10-13."
+  date: "2026-10-13"
+  url: "https://github.com/wand125/square-packing/tree/7a42c16eacaab112b537ab09e89d3485f6f4c75f/problems/square-lower-bounds"
+  notes: "Read via the Squares Project's case records."
+  added_by: daniel-munro
+
+hosono-2026-10-16:
+  string: "H. Hosono (wand125), square-packing (GitHub), fine-net lower-bound certificates, 2026-10-16."
+  date: "2026-10-16"
+  url: "https://github.com/wand125/square-packing"
+  notes: "Read via the Squares Project's case records for n = 68, 84 and 85."
+  added_by: daniel-munro
+
+greff-2026-10-14:
+  string: "Greff (GitHub bengreff), s76-certificate (GitHub bengreff/s76-certificate), proof of s(76) = 9, 2026-10-14."
+  date: "2026-10-14"
+  url: "https://github.com/bengreff/s76-certificate/tree/1cb924fa2fb7e8e30d8ddeb9b5e0dfcfae4f9f1f"
+  notes: "Read via the Squares Project's case record for n = 76."
+  added_by: daniel-munro
+
+greff-2026-10-15:
+  string: "Greff (GitHub bengreff), s95-certificate (GitHub bengreff/s95-certificate), proof of s(95) = 10, 2026-10-15."
+  date: "2026-10-15"
+  url: "https://github.com/bengreff/s95-certificate/tree/dd7297d06adc664268c65005369b895e4ded7547"
+  notes: "Read via the Squares Project's case record for n = 95."
+  added_by: daniel-munro
+
+khalili-gharabaghi-2026-10-29:
+  string: "Khalili and Gharabaghi, s44-equals-7 (GitHub moh63-dev/s44-equals-7), proof of s(44) = 7, 2026-10-29."
+  date: "2026-10-29"
+  url: "https://github.com/moh63-dev/s44-equals-7/tree/b5b1bc9d7354a8f62efcb6b7abeb30d1eb576aaf"
+  notes: "Read via the Squares Project's case record for n = 44."
+  added_by: daniel-munro
+
+ozden-2026-11-05:
+  string: "D. Özden, s94-lower-bound-9972 (GitHub kenaznia-doga/s94-lower-bound-9972), s(94) >= 2493/250, 2026-11-05."
+  date: "2026-11-05"
+  url: "https://github.com/kenaznia-doga/s94-lower-bound-9972/tree/7d21f9bdf707102dd4ebf47e52f81b502a01004d"
+  notes: "Read via the Squares Project's case record for n = 94."
   added_by: daniel-munro

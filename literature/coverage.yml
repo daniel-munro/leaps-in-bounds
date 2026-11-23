@@ -25,10 +25,14 @@ ramsey:
 
 square-packing:
   status: partial
-  reviewed: 2026-11-15
-  sources: [ejc-ds7-packing-unit-squares, ejc-ds7-2000, ellsworth-squares-in-squares, ellsworth-squares-in-squares-compared]
+  reviewed: 2026-11-22
+  sources: [ejc-ds7-packing-unit-squares, ejc-ds7-2000, ellsworth-squares-in-squares, ellsworth-squares-in-squares-compared, wikipedia-square-packing, squaremath-frontier, nagamochi-2005, karakus-2026]
   gaps:
-  - "arXiv:2609.37410 says Nagamochi's 2005 lower-bound proof is incomplete; the nagamochi-2005 rows may need a note (#69)."
+  - "The Squares Project's Frontier Survey (squaremath.org) holds dozens of bounds from September to November 2026, mostly from GitHub repositories and issues. Only the current record for each n <= 100 is recorded, as of 2026-11-22; the earlier steps in its case histories aren't, such as Hosono's successive certificates for each n, the 3.9715 and 3.9716 lower bounds for s(12), and exact certifications that lower a packing's side by less than 1e-9. These sources were read through the project's case records, not directly, and are dated by the project's packets, which may be a day after the first posting."
+  - "s(12) = 4 rests on the Lean proof by Jatloe, Gurevitch, CTJLewis and Ahmed (2026-10-16), which the Squares Project audited but hasn't rebuilt; it lists s(12) as reported proved, with 3.9716 as its verified lower bound, and Wikipedia still calls n = 12 unresolved. Overbeck's candidate proof that s(17) equals Bidwell's packing (2026-10-12) isn't recorded, since its author calls it a candidate."
+  - "Nagamochi 2005's proof is incomplete (Karakuş, arXiv:2609.37410; chelokot, 2026-09-05). Its rows are kept as the published claims, with a note on the source: s(n²-1) = n has been proved again by Karakuş and in Lean by chelokot, and s(n²-2) = n in Lean by chelokot, but Theorem 2's general lower bound, recorded for 43 values of n, has only Karakuş's weaker version proved."
+  - "Bentz's s(22) = 5 and s(33) = 6 are dated by arXiv v1 (2016-06-12); Ellsworth's page and the Squares Project date them October 2018, perhaps a later version, which wasn't found."
+  - "Steps that Ellsworth's pages list within the same month as a larger improvement aren't recorded separately, such as Schadt's 6.93669 for s(41) and Ellsworth's 7.954167 for s(55)."
 
 busy-beaver-shift:
   status: complete
@@ -107,19 +111,24 @@ stamp-folding:
   - "Sainte-Laguë, Avec des nombres et des lignes (Vuibert, 1937; 3rd ed. 1946), Part 2, ch. 2, pp. 147-162, which discusses the stamp problem, not found online. It could correct the 1926 values for n = 7 to 10 before Sade 1949."
 
 map-folding:
-  status: partial
-  reviewed: 2026-11-17
-  sources: [oeis-a001415-map-folding-2-n, oeis-a001416-map-folding-3-n, oeis-a001418-map-folding-n-n]
+  status: complete
+  reviewed: 2026-11-22
+  sources: [oeis-a001415-map-folding-2-n, oeis-a001416-map-folding-3-n, oeis-a001418-map-folding-n-n, lunnon-1968, koehler-1968, lunnon-1971, codegolf-276709]
   gaps:
-  - "The 4 x 9 count was left out because the Code Golf SE table's entries disagree (#76)."
-  - "New terms 8 x 8, 2 x 19 and 2 x 20 may be missing (#33)."
+  - "2 X 12 to 2 X 18, 3 X 8 to 3 X 14, and 6 X 6 and 7 X 7 are credited to the OEIS contributions that added them (Lunnon 2013, Lunnon and Irvine 2017, Irvine 2018); no publication of them was found. The 4 X n (n >= 6), 5 X n and 6 X 7 counts rest only on the Code Golf SE table, which doesn't say how they were computed, and no other source for them was found (no OEIS sequence has the 4 X n or 5 X n rows)."
+  - "Gardner (Wheels, Life and Other Mathematical Amusements, 1983, ch. 7 addendum) says Mark B. Wells of Los Alamos computed the 2 X 3 and 3 X 3 counts (60 and 1368) by computer; no dated source for this was found, and it may be later than Lunnon 1971."
+  - "Known counts outside the family's parameter range (m <= 7, n <= 18) aren't recorded: 2 X 19 and 2 X 20 (OEIS A001415, Hunter Hogan, 2025-03-21) and 8 X 8 (OEIS A001418, Mustafa Salman, 2026-10-18; also Code Golf SE 276709, revision 10, 2025-02-26)."
 
 disk-covering:
   status: partial
-  reviewed: 2026-11-15
-  sources: [friedman-circles-covering-circles]
+  reviewed: 2026-11-22
+  sources: [friedman-circles-covering-circles, friedman-circles-covering-circles-2006, wikipedia-disk-covering, toth-2005, gaspar-tarnai-hincz-2014, vonequinox-2026]
   gaps:
-  - "No publication found behind the proofs Friedman's page claims for n = 11 to 20; those lower bounds rest only on the page (#33, #69)."
+  - "Nurmela 1999 (TUCS Gen. Publ. 15, 71-78; 1998 preprint) not found online. It reportedly improved Melissen's coverings for n = 11, 12 and gave coverings for 13 <= n <= 35, so the upper bounds credited to Melissen 1997 and Tan 2018 (from Friedman's page) may belong to Nurmela, with different values. Melissen's 1997 thesis wasn't read either."
+  - "Upper bounds for n = 11 to 25 from Friedman's page are reciprocals of radii it truncates to three decimals, so they are slightly weak; the exact radii for n = 11 to 20 come from the VonEquinox repository."
+  - "The lower bounds for n = 11 to 20 rest on computer-assisted proofs in the VonEquinox/DiskCoveringSolve GitHub repository (September 2026), not peer reviewed; Friedman credits them to Yuao Zhang and Zhenyue Zhou, with no paper found."
+  - "Liyang1145/DiskCoveringProofs (GitHub, Zenodo 10.5281/zenodo.23344751, 2026-10-13) claims computer-assisted global proofs for n = 11, 12, 14 and 21 to 25. Its n = 21 to 25 lower bounds aren't added: the repository itself hedges them (n = 21, 22 'recheck scope retained', byte checks only, not reproducible from a fresh clone), and Friedman's page doesn't list them."
+  - "Bezdek 1979 (thesis), Bezdek 1983 and Nagy 1975 (thesis) not read; credited through G. Fejes Tóth 2005 and zbMATH reviews. No 1996 publication found for G. Fejes Tóth's proof of n = 8, 9 (published in 2005)."
 
 circle-in-equilateral:
   status: complete
@@ -230,12 +239,13 @@ cap-set:
   - "Calderbank-Fishburn 1994 (received 1993-02-18, vol. 4 no. 3) is dated 1994-07; Crossref gives 1994-10. edel-et-al-2007 is dated by Crossref's online date, 2006-10-19."
 
 no-three-in-line:
-  status: partial
-  reviewed: 2026-11-14
-  sources: [flammenkamp-no3in]
+  status: complete
+  reviewed: 2026-11-22
+  sources: [flammenkamp-no3in, oeis-a272651-no-three-in-line, guy-kelly-1968-rp33, guy-kelly-1968]
   gaps:
-  - "The Hall et al. 1975 credit for small n may belong to Guy-Kelly 1968 (#48)."
-  - "No literature found for n = 75 and 77 (#65)."
+  - "The earliest sources for n <= 10 (other than Dudeney's n = 8), Acland-Hood and Guy in Bull. Malayan Math. Soc. 0 (1952-53) E11-12 and E22 and Kelly's 1967 Calgary master's thesis, couldn't be found online; n = 2 to 7 and 9 are dated to Guy and Kelly's Research Paper 33 (January 1968), and n = 10 to their Canad. Math. Bull. paper (October 1968), which cite them."
+  - "Hall, Jackson, Sudbery and Wild 1975, credited for n <= 10 on Flammenkamp's page, and Adena, Holton and Kelly 1974 (Lecture Notes in Math. 403) weren't read (paywalled); Guy and Kelly 1968 already state n <= 10, and Flammenkamp's reference list credits Adena et al. with no grid sizes."
+  - "No 2n-point configuration, or any explicit bound, is known in the literature for n = 75 and 77: Flammenkamp's table (updated 2026-10-28) leaves both rows empty and MathWorld lists them as the only open n <= 78. Their lower bounds 148 and 152 come only from this site's certificates, which reuse the n = 74 and 76 solutions."
 
 isosceles-set:
   status: complete
@@ -256,11 +266,13 @@ sorting-network-size:
   - "Batcher's 1964 sizes for 17 to 32 inputs left out on purpose (#58)."
 
 sorting-network-depth:
-  status: partial
-  reviewed: 2026-11-11
-  sources: [dobbelaere-sorting-networks, parberry-1991]
+  status: complete
+  reviewed: 2026-11-22
+  sources: [dobbelaere-sorting-networks, parberry-1991, bundala-zavodny-2013, ehlers-muller-2014, ehlers-muller-2015, codish-et-al-2015, baddar-2009, wang-2025]
   gaps:
-  - "Depth bounds derived from merging networks for 17 to 24 inputs left out on purpose, and the date of the 64-comparator network for 16 inputs is unknown (#58)."
+  - "Knuth 1973 wasn't read: the depths for up to 16 inputs (networks by Shapiro, Van Voorhis and others, mostly unpublished) and the optimal depths for up to 8 are credited to it through Parberry's Table 1 and Bundala and Závodný's Fig. 2, so earlier dates for some of them may be missing."
+  - "The depths from odd-even merging of smaller networks, 12 for 17 to 20 inputs, 13 for 21 to 24 and 14 for 25 to 32, were known before Baddar's thesis but are first stated, as far as found, in its Table 3.4 (2009), which dates them here. The bounds 12 for 17 and 18 and 13 for 21 and 22 aren't recorded, since Baddar and Batcher's own networks improved them by that date. Their technical reports TR-KSU-CS-2007-06 and TR-KSU-CS-2008-05 (the 22-input network, which Ehlers and Müller credit for 19 to 22 inputs <= 12) weren't found, and the 2009 Parallel Processing Letters paper and Ehlers 2017 weren't read (paywalled)."
+  - "Lower bounds from monotonicity that no source states for each n aren't recorded, such as D(n) >= 9 for 21 to 32 inputs from Bundala and Závodný (2013)."
 
 rectilinear-crossing:
   status: partial
