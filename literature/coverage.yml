@@ -58,13 +58,16 @@ busy-beaver-ones:
   - "Seven-state bounds implied by 6-state records aren't recorded. The October 2026 7-state claim by J. Ketchersid (> 3↑²⁰3), marked never verified on the bbchallenge wiki, isn't recorded."
 
 kissing-number:
-  status: partial
-  reviewed: 2026-11-15
-  sources: [cohn-kissing-numbers]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [cohn-kissing-numbers, nebe-sloane-kissing-table, leech-1964, leech-1967, leech-sloane-1970, leech-sloane-1971, odlyzko-sloane-1979, zinoviev-ericson-1999, pfender-2005, bachoc-vallentin-2008, mittelmann-vallentin-2009-v1, mittelmann-vallentin-2009, machado-oliveira-2018, leijenhorst-de-laat-2022, ganzhinov-2022, bianchi-et-al-2026]
   gaps:
-  - "The earlier records 500, 582 and 1606 have no confirmed primary source and cite Ganzhinov (#27)."
-  - "Lower-bound records before the current ones were added only where a paper confirms them (#27)."
-  - "Some Odlyzko-Sloane upper bounds come through later tables (#69)."
+  - "Levenshtein 1979, Boyvalenkov 1994 and Vsemirnov-Rzhevskii 2002 weren't read; Boyvalenkov's and Vsemirnov-Rzhevskii's bounds come from Mittelmann-Vallentin (Table 1) and Bachoc-Vallentin (version 4, Table 5.1). Odlyzko-Sloane's 12215 for n = 17 uses extra inequalities (p. 213-214); Pfender's 12218 for the plain Delsarte bound isn't recorded, being weaker."
+  - "The Coxeter-Böröczky upper bounds are the values Leech and Sloane (1971, Table I) tabulate as Coxeter's conjectured bound (also listed for n = 4 to 8 by Odlyzko-Sloane, p. 214), dated by Böröczky's 1978 proof; Coxeter 1963 and Böröczky 1978 weren't read."
+  - "582 for n = 11 (the packing P11c) is credited to Odlyzko-Sloane 1979 (Table I), the earliest source read that states it. They take their lower bounds from Leech-Sloane 1971 and Sloane's surveys (Binary codes, lattices, and sphere-packings, in Combinatorial Surveys, 1977; Self-dual codes and lattices, Proc. Symp. Pure Math. 34, 1979), which weren't read; the 1977 survey probably has it first. Bianchi et al. (2026, Figure 2) credit 582 to Best 1980 (IEEE Trans. Inform. Theory 26, 738-742), which couldn't be obtained; Zinoviev-Ericson credit it to Conway and Sloane's book."
+  - "Leech and Sloane's 1970 note credits Lambda9 (272) to Korkine-Zolotareff 1873 and Lambda10 (336) to Chaundy 1946 (Quart. J. Math. 17, 166-192, received 1945-10-10). Chaundy's Sections 9 and 10 give extreme forms for n = 9 and 10 whose center densities match Lambda9 and Lambda10, but he never counts their minimal vectors, so 272 and 336 aren't stated there; Korkine-Zolotareff 1873 wasn't read. Both stay credited to Leech 1964, where they are stated. Other bounds before Leech 1964 for 9 to 11 and 13 to 15 dimensions weren't looked for; K12 (756) is credited to Coxeter-Todd 1953 and 4320 to Barnes-Wall 1959. Intermediate configurations within one paper (Leech-Sloane's P10a and P11a, K13's 918, the 594 to 603 steps of EinsteinArena) aren't recorded."
+  - "Mittelmann-Vallentin's bounds are split by arXiv version: version 1 (2009-02-06, degree 12) and version 2 (2009-05-04, degrees 13 and 14). Bachoc-Vallentin is dated by version 1 (2006-08-16) and Machado-de Oliveira Filho by their 2016 preprint."
+  - "Recent bounds from unrefereed preprints: Tomar's upper bounds for n = 5 to 7 and Nyam-Osor's for n = 10, 11 and 16 (Zenodo, 2026), Kravatskiy's GitHub repository (n = 18) and Li's Hexagon preprint (n = 19, 21). Ma et al.'s PackingStar (arXiv:2511.13391) and the 2026 preprints for dimensions 25 and up give no new bounds for n <= 24."
 
 degree-diameter:
   status: partial
@@ -139,12 +142,15 @@ circle-in-equilateral:
   - "Melissen 1994 (n = 11) and Payan 1997 (n = 14) not read beyond their zbMATH reviews and secondary sources (Springer and ScienceDirect block automated access)."
 
 circle-in-square:
-  status: partial
-  reviewed: 2026-11-17
-  sources: [packomania-csq, peikert-1994, markot-2021, szabo-specht-2007]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [packomania-csq, peikert-1994, markot-2021, szabo-specht-2007, graham-lubachevsky-1996, boll-et-al-2000, schluter-1979, goldberg-1970, schaer-1971, mollard-payan-1990, maranas-floudas-pardalos-1995, nurmela-ostergard-1997]
   gaps:
-  - "Goldberg 1970, Wengerodt, Nurmela-Ostergard and Schwartz not read in full (#72)."
-  - "Finders unknown for n = 11 to 16, 18 and 20; n = 22 to 27 and 29 to 35 may belong to Nurmela-Ostergard 1997 (#72)."
+  - "De Groot, Peikert and Würtz 1990 (IPS report) isn't online; its packings of 15 and 22 are taken from Maranas, Floudas and Pardalos 1995, and its packing of 21 (improved by Nurmela and Östergård) has no known value, so it has no row. Wengerodt's proofs (14 upper bound credited to Wengerodt 1987 via Maranas et al.) and Schwartz 1970 weren't read."
+  - "Who first found the optimal packings of 15 and 19 is uncertain. Peikert (1994) says 19 was new in 1991, but Maranas et al. credit Goldberg 1970, whose m = .290 comes from an equation that as printed gives slightly less than the optimum; 19 is credited to Peikert et al. Peikert says 15 was found before 1991, but Goldberg, Schlüter and Mollard-Payan don't have it and Maranas et al. give de Groot et al.'s m = 0.33860952 as the previous best, so 15 is credited to Peikert et al."
+  - "Nurmela and Östergård 1997 (received 1995-04-24, published 1997-07) is dated 1996-01, when Graham and Lubachevsky cite it as submitted. Maranas, Floudas and Pardalos 1995 (received 1992-04-03) are dated by publication, 1995-07; their packing of 21 is m = 0.27181226 from their text, not the impossible 0.27181675 of their Table 1. Bounds from them for 21, 28 and 29 are rounded up so as not to fall below the proven optima."
+  - "Packings of 10 left out as worse than Schlüter's 1979 one: Milano 1987, Valette 1989 and unpublished ones of Grünbaum, Grannell and Petris-Hungerbühler (Mollard and Payan 1990; Maranas et al. 1995; Szabó, Markót and Csendes 2005). Mollard and Payan 1990 rediscovered Schlüter's packing of 10 and 13 (first version)."
+  - "Casado, García, Szabó and Csendes (Packing equal circles in a square II, received 1999-07-31, published 2001) found the same packing of 32 as Boll et al. 2000; it's credited to Boll et al., published first."
   - "The proofs for n = 25 and 36 reportedly have gaps (#72)."
 
 minimal-superpermutation:
@@ -285,12 +291,14 @@ sorting-network-depth:
   - "Lower bounds from monotonicity that no source states for each n aren't recorded, such as D(n) >= 9 for 21 to 32 inputs from Bundala and Závodný (2013)."
 
 rectilinear-crossing:
-  status: partial
-  reviewed: 2026-11-12
-  sources: [aichholzer-crossing-page, fabila-monroy-lopez-2014]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [aichholzer-crossing-page-2001, aichholzer-crossing-page-2004-06, aichholzer-crossing-page-2004-08-11, aichholzer-crossing-page-2004-08-30, aichholzer-crossing-page-2004-11, aichholzer-crossing-page-2007-04, aichholzer-crossing-page-2007-06, aichholzer-crossing-page-2009, aichholzer-crossing-page-2011, aichholzer-crossing-page, harary-hill-1963, jensen-1971, guy-1972, thorpe-harris-1996, brodsky-durocher-gethner-2000, brodsky-durocher-gethner-2000b, aichholzer-aurenhammer-krasser-2002, aichholzer-krasser-2005, aichholzer-garcia-orden-ramos-2006, abrego-et-al-2011, cetina-et-al-2010, fabila-monroy-lopez-2014, oeis-a014540]
   gaps:
-  - "Guy 1972, Singer 1971 and the Aichholzer 2002 and 2005 papers seen only through citations; crediting Guy alone for n <= 9 is a guess (#60)."
-  - "Some upper bounds have no date (#60)."
+  - "For n <= 9: n = 6 and the drawings for n = 8 and 9 are credited to Harary and Hill 1963, n = 7 to Jensen 1971 (who says it was known, without a source), and the lower bounds for n = 8 and 9 to Guy 1972. Erdős and Guy 1973 was read and only restates Guy 1972. Guy 1960 (Nabla) and Guy 1967 weren't read; Guy 1960 may give the lower bound for n = 7 earlier."
+  - "Singer 1971 (unpublished) was seen only through Brodsky, Durocher and Gethner (2000, 2000b). Jensen's upper bounds are computed from his formula. The recursive constructions of Singer and of Brodsky et al. give upper bounds for other n by formula; only those the sources state (n = 10 and 81) are recorded. Unpublished improvements by G. Exoo mentioned by Thorpe and Harris weren't found."
+  - "The lower bounds for 28 <= n <= 33 first seen on Aichholzer's page of 2009-05-19 are credited to the page; neither 2008 ENDM paper by Ábrego et al. states them. Aichholzer et al.'s 2001 technical report wasn't found."
+  - "Aichholzer's page is dated by its Wayback Machine captures (2002-2025): bounds first seen in the capture of 2007-04-30 may date from unarchived versions back to 2004-11, those of 2015-05-26 from 2012-10 on, and the lower bounds first seen on 2004-06-24 from 2003-01 on."
 
 multicolor-ramsey-triangle:
   status: complete
@@ -365,11 +373,12 @@ heilbronn-square:
   - "Stead's tables go to n = 100; only n <= 36 are tracked here."
 
 heilbronn-triangle:
-  status: partial
-  reviewed: 2026-11-21
-  sources: [stead-heilbronn-triangle, friedman-heilbronn-triangle, peng-1989, soifer-1988, chen-zeng-zhou-2013, de-comite-delahaye-2009, zeng-chen-2019, novikov-et-al-2025-alphaevolve]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [stead-heilbronn-triangle, stead-heilbronn-triangle-2026-09-10, stead-heilbronn-triangle-2026-10-04, friedman-heilbronn-triangle, friedman-heilbronn-triangle-2006, friedman-heilbronn-triangle-2007, peng-1989, soifer-1988, chen-zeng-zhou-2013, de-comite-delahaye-2009, zeng-chen-2019, novikov-et-al-2025-alphaevolve]
   gaps:
-  - "The Yang-Zhang-Zeng papers for n = 6 (Bielefeld preprint 91-098, Acta Math. Sinica 1994) couldn't be found."
-  - "Kahle 2008 (arXiv:0811.2449) gives upper bounds for n = 5 that are weaker than Peng's, so they aren't recorded; De Comité and Delahaye's bounds for n = 5 and 6 likewise."
-  - "Records before Cantrell's 2006-2007 configurations, if any, aren't known."
-  - "Ethan Hendren posted AI-assisted computer proofs for n = 8 and 9 (2026-11-14 and 2026-11-15), not yet independently checked, so they aren't recorded."
+  - "Yang, Zhang and Zeng 1994 (Acta Math. Sinica 37(5), doi:10.12386/A1994sxxb0084), for H(6) <= 1/8, is behind a bot check on the journal's site and couldn't be obtained by hand either, so it hasn't been read. Their Bielefeld preprint 91-098 (1991), for the n = 6 configuration, is listed in the SFB 343 index but isn't online; neither is credited from a reading."
+  - "Bounds for n >= 17, and the 2026 steps for n = 16 to 35, come from Stead's current tables and Wayback snapshots of them (2026-09-10, 2026-10-04 and 2026-10-18), dated to the month, keeping only the best bound each month. Records for n >= 17 before the earliest snapshot (2026-09-10) aren't known, and the snapshots disagree on whether n = 19 and 22 (August 2026) are Stead's or Sudermann-Merx's."
+  - "No records before Cantrell's 2006 configurations are known: Friedman's earliest archived page (2006-09-04) mentions none."
+  - "Ethan Hendren posted AI-assisted computer proofs of optimality for n = 8, 9 and 10 on Zenodo (doi:10.5281/zenodo.24235151, first posted 2026-11-14; doi:10.5281/zenodo.24247460, 2026-11-15; doi:10.5281/zenodo.24426068, 2026-11-23), with exact replay checkers whose traces only the author has run so far, so they aren't recorded. Sudermann-Merx's n = 8 certificate (arXiv:2607.15021) is a floating-point MIP run with a 10^-4 gap, so it isn't recorded either."
+  - "Stead's tables go to n = 100; only n <= 36 are tracked here."

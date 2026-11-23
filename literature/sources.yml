@@ -50,6 +50,13 @@ cohn-kissing-numbers:
   url: "https://cohn.mit.edu/kissing-numbers/"
   added_by: daniel-munro
 
+nebe-sloane-kissing-table:
+  string: "Table of the Highest Kissing Numbers Presently Known, G. Nebe and N.J.A. Sloane, Catalogue of Lattices (versions of 1998-01-10 to 2011-02-25, read through the Internet Archive)"
+  date: "2011-02-25"
+  url: "https://web.archive.org/web/20120120014732/http://www.math.rwth-aachen.de/~Gabriele.Nebe/LATTICES/kiss.html"
+  notes: "Now redirects to Cohn's table. The 1998-01-10 version (web.archive.org/web/19980124091839/http://www.research.att.com/~njas/lattices/kiss.html) already lists 582 for n = 11 (P11c); the 2011-02-25 version adds Zinoviev and Ericson's 1154 and 1606."
+  added_by: daniel-munro
+
 wikipedia-degree-diameter:
   string: "Table of the largest known graphs of a given diameter and maximal degree - Wikipedia"
   date: "2025-01-31"
@@ -1797,22 +1804,46 @@ barnes-wall-1959:
   doi: "https://doi.org/10.1017/S1446788700025064"
   added_by: daniel-munro
 
+coxeter-todd-1953:
+  string: "H.S.M. Coxeter and J.A. Todd, An extreme duodenary form, Canadian Journal of Mathematics 5 (1953) 384-392."
+  date: "1953"
+  doi: "https://doi.org/10.4153/CJM-1953-043-4"
+  notes: "The Coxeter-Todd lattice K12, in which each sphere touches 756 others, as stated by Leech (1964), Section 2.1 and Table I."
+  added_by: daniel-munro
+
+leech-1964:
+  string: "J. Leech, Some sphere packings in higher space, Canadian Journal of Mathematics 16 (1964) 657-682."
+  date: "1964"
+  doi: "https://doi.org/10.4153/CJM-1964-065-1"
+  notes: "Received 1963-06-26. Tables I and II give the numbers of spheres touched in the densest packings known for n <= 12 and in the sections of Leech's packing in 24 dimensions (Section 2.4). The packing in 24 dimensions is not yet the Leech lattice, which is in Leech (1967)."
+  added_by: daniel-munro
+
 leech-1967:
   string: "J. Leech, Notes on sphere packings, Canadian Journal of Mathematics 19 (1967) 251-267."
   date: "1967"
   doi: "https://doi.org/10.4153/CJM-1967-017-0"
+  notes: "Received 1965-06-30. Table I. The sections in 21 and fewer dimensions are those of Leech (1964), Section 2.4."
   added_by: daniel-munro
 
 leech-sloane-1971:
   string: "J. Leech and N.J.A. Sloane, Sphere packings and error-correcting codes, Canadian Journal of Mathematics 23 (1971) 718-745."
   date: "1971"
   doi: "https://doi.org/10.4153/CJM-1971-081-3"
+  notes: "Received 1971-03-29. Table I. The packings in 9 to 15 dimensions were announced in Leech and Sloane (1970), which dates them."
+  added_by: daniel-munro
+
+leech-sloane-1970:
+  string: "J. Leech and N.J.A. Sloane, New sphere packings in dimensions 9-15, Bulletin of the American Mathematical Society 76 (1970) 1006-1010."
+  date: "1970-09"
+  doi: "https://doi.org/10.1090/S0002-9904-1970-12533-2"
+  notes: "Communicated 1970-03-13; in the September 1970 issue. Table 1 gives 306, 500, 576 (local arrangement P11b), 840, 1130, 1582 and 2564 for n = 9 to 15. It credits Lambda9 (272) to Korkine and Zolotareff (1873), Lambda10 (336) to Chaundy (1946) and Lambda13 to Lambda15 to Leech (1964)."
   added_by: daniel-munro
 
 zinoviev-ericson-1999:
   string: "V.A. Zinoviev and T. Ericson, New lower bounds for contact numbers in small dimensions, Problems of Information Transmission 35 (1999) 287-294."
   date: "1999"
   url: "https://www.mathnet.ru/php/archive.phtml?wshow=paper&jrnid=ppi&paperid=457&option_lang=eng"
+  notes: "Received 1998-10-13, revised 1999-02-23. Theorems 1 and 2: 1154 for n = 13 and 1606 for n = 14 (Russian original, Problemy Peredachi Informatsii 35:4, 3-11). Section 1 credits 582 for n = 11 to Conway and Sloane's book (Russian translation, 1990), in place of Leech and Sloane's 576."
   added_by: daniel-munro
 
 ganzhinov-2022:
@@ -1885,26 +1916,37 @@ odlyzko-sloane-1979:
   string: "A.M. Odlyzko and N.J.A. Sloane, New bounds on the number of unit spheres that can touch a unit sphere in n dimensions, Journal of Combinatorial Theory, Series A 26 (1979) 210-214."
   date: "1979"
   doi: "https://doi.org/10.1016/0097-3165(79)90074-8"
-  notes: "Found independently by V.I. Levenšteĭn, Doklady Akademii Nauk SSSR 245 (1979) 1299-1303."
+  notes: "Received 1978-11-03. Table I gives the upper bounds for n <= 24 (n = 17 uses extra inequalities: 12215; the plain LP bound isn't stated) and the lower bounds then known, taken from Leech-Sloane 1971 and Sloane's 1977 and 1979 surveys, including 582 for n = 11. τ8 = 240 and τ24 = 196560 were found independently by V.I. Levenšteĭn, Doklady Akademii Nauk SSSR 245 (1979) 1299-1303."
   added_by: daniel-munro
 
 bachoc-vallentin-2008:
-  string: "C. Bachoc and F. Vallentin, New upper bounds for kissing numbers from semidefinite programming, Journal of the American Mathematical Society 21 (2008) 909-924."
-  date: "2008"
+  string: "C. Bachoc and F. Vallentin, New upper bounds for kissing numbers from semidefinite programming, Journal of the American Mathematical Society 21 (2008) 909-924, arXiv:math/0608426."
+  date: "2006-08-16"
   doi: "https://doi.org/10.1090/S0894-0347-07-00589-9"
+  url: "https://arxiv.org/abs/math/0608426"
+  notes: "Dated by arXiv version 1 (2006-08-16), whose Table 5.1 has the kissing-number bounds. The Tammes bounds (Table 5.3) were added in version 2 (2006-10-17)."
+  added_by: daniel-munro
+
+mittelmann-vallentin-2009-v1:
+  string: "H.D. Mittelmann and F. Vallentin, High accuracy semidefinite programming bounds for kissing numbers, arXiv:0902.1105v1."
+  date: "2009-02-06"
+  url: "https://arxiv.org/abs/0902.1105v1"
+  notes: "Version 1, Table 1, with the bounds s12(n) for degree 12. Version 2 (2009-05-04) added degrees 13 and 14, with better bounds."
   added_by: daniel-munro
 
 mittelmann-vallentin-2009:
   string: "H.D. Mittelmann and F. Vallentin, High accuracy semidefinite programming bounds for kissing numbers, Experimental Mathematics 19 (2010) 174-178, arXiv:0902.1105."
-  date: "2009-02-06"
+  date: "2009-05-04"
   doi: "https://doi.org/10.1080/10586458.2010.10129070"
   url: "https://arxiv.org/abs/0902.1105"
+  notes: "Dated by arXiv version 2 (2009-05-04), whose Table 1 first has the degree-14 bounds s14(n); version 1 (2009-02-06) is mittelmann-vallentin-2009-v1."
   added_by: daniel-munro
 
 machado-oliveira-2018:
-  string: "F.C. Machado and F.M. de Oliveira Filho, Improving the semidefinite programming bound for the kissing number by exploiting polynomial symmetry, Experimental Mathematics 27 (2018) 362-369."
-  date: "2018"
+  string: "F.C. Machado and F.M. de Oliveira Filho, Improving the semidefinite programming bound for the kissing number by exploiting polynomial symmetry, Experimental Mathematics 27 (2018) 362-369, arXiv:1609.05167."
+  date: "2016-09-16"
   doi: "https://doi.org/10.1080/10586458.2017.1286273"
+  url: "https://arxiv.org/abs/1609.05167"
   added_by: daniel-munro
 
 leijenhorst-de-laat-2022:
@@ -3419,13 +3461,34 @@ tomar-2026-v2:
 guy-1972:
   string: "R.K. Guy, Crossing numbers of graphs, in Graph Theory and Applications (Proc. Conf., Western Michigan Univ., 1972), Lecture Notes in Math. 303, Springer, Berlin, 1972, pp. 111-124."
   date: "1972"
-  notes: "Brodsky, Durocher and Gethner (2000, Table 1) give the values for n <= 9 citing this, White and Beineke (1978) and Finch (2000) together, without saying which value appeared where."
+  doi: "https://doi.org/10.1007/BFb0067363"
+  notes: "Pages 117-120 prove that the (ordinary) crossing number of K_9 is 36, and say that its drawings for n <= 7 and n = 9 can be made rectilinear, so the rectilinear values are 1, 3, 9 and 36 for n = 5, 6, 7 and 9. They also prove the rectilinear crossing number of K_8 is 19 (more than 18, since no optimal drawing of K_8 has a crossing-free triangle as its boundary), confirming a conjecture of Harary and Hill (1962). They quote Jensen's upper bound, found independently by Eggleton, and conjecture that it is exact (it isn't for n = 10, 12 or 13). Cited for the lower bounds for n = 8 and 9; those for n <= 7 were already known to Jensen (1971). Brodsky, Durocher and Gethner (2000, Table 1) cite it for n <= 9; Aichholzer, Aurenhammer and Krasser (2002) cite Erdős and Guy, Crossing number problems, Amer. Math. Monthly 80 (1973) 52-58 (January 1973), which was read: it repeats these results, crediting this paper for n = 8, and adds only that the rectilinear crossing number exceeds the ordinary one for n >= 10 (for n = 10, at least 61, already Singer's bound), so it isn't cited."
+  added_by: daniel-munro
+
+harary-hill-1963:
+  string: "F. Harary, A. Hill, On the number of crossings in a complete graph, Proc. Edinburgh Math. Soc. (2) 13 (1962-63) 333-338."
+  date: "1963-12"
+  doi: "https://doi.org/10.1017/S0013091500025645"
+  notes: "Received 1963-08-12; in the December 1963 issue. Introduces the rectilinear crossing number. Fig. 2 draws K_5 and K_6 with straight edges and says 'one can verify' that their rectilinear crossing numbers are 1 and 3; Figs. 6 and 7 draw K_8 and K_9 rectilinearly with 19 and 36 crossings. Its table of conjectured values gives 9 for n = 7 and 63 for n = 10, without rectilinear drawings, so those aren't credited to it. It conjectures, without proof, that 19 is optimal for n = 8 (proved by Guy 1972)."
+  added_by: daniel-munro
+
+jensen-1971:
+  string: "H.F. Jensen, An upper bound for the rectilinear crossing number of the complete graph, J. Combin. Theory Ser. B 10 (1971) 212-216."
+  date: "1971-06"
+  doi: "https://doi.org/10.1016/0095-8956(71)90045-1"
+  notes: "Received 1968-11-23; published in the June 1971 issue. Formula (1) gives a drawing of K_n with floor((7n^4 - 56n^3 + 128n^2 + 48n floor((n-7)/3) + 108)/432) crossings for each n. The upper bounds here are computed from it (9, 102, 156 and 231 for n = 7, 11, 12 and 13; for n = 6, 8 and 9 it matches the earlier drawings of Harary and Hill (1963); Brodsky, Durocher and Gethner (2000b, Table 3) give 630786 for n = 81); the paper lists no values. Not recorded for n = 10 and 81, where Singer's drawings of the same year have fewer crossings. Its Remarks say equality is known for n <= 7, which is cited for the lower bound for n = 7; the earlier source isn't named (it cites Guy 1960, which wasn't read, and Harary and Hill 1963, which only conjectures 9)."
   added_by: daniel-munro
 
 singer-1971:
   string: "D. Singer, Rectilinear crossing numbers, manuscript, 1971."
   date: "1971"
-  notes: "Unpublished. Brodsky, Durocher and Gethner (2000) cite it, with Gardner's Knotted Doughnuts (1986), for the rectilinear crossing number of K_10 being 61 or 62, and reproduce its argument that it is more than 60."
+  notes: "Unpublished, not read. Brodsky, Durocher and Gethner (2000) cite it, with Gardner's Knotted Doughnuts (1986), for the rectilinear crossing number of K_10 being 61 or 62, and reproduce its argument that it is more than 60. Their second paper (2000b, Table 3) gives Singer's recursive drawing of K_81 with 625320 crossings."
+  added_by: daniel-munro
+
+thorpe-harris-1996:
+  string: "J.T. Thorpe, F.C. Harris, A parallel stochastic optimization algorithm for finding mappings of the rectilinear minimal crossing problem, Ars Combin. 43 (1996) 135-148."
+  date: "1996"
+  notes: "Read from the authors' preprint (dvips file ars.dvi). Its parallel genetic algorithm found drawings of K_12 and K_13 with 155 and 229 crossings (Table 1, Figures 2 and 3, with coordinates), beating Jensen's formula. Its other results for n <= 20 don't beat the formula. It mentions unpublished improvements by G. Exoo (private communication), which weren't found."
   added_by: daniel-munro
 
 brodsky-durocher-gethner-2000:
@@ -3436,16 +3499,26 @@ brodsky-durocher-gethner-2000:
   notes: "Table 1 gives the values for n <= 9 and the earlier bounds for n = 10."
   added_by: daniel-munro
 
+brodsky-durocher-gethner-2000b:
+  string: "A. Brodsky, S. Durocher, E. Gethner, Toward the rectilinear crossing number of K_n: new drawings, upper bounds, and asymptotics, Discrete Math. 262 (2003) 59-77, arXiv:cs/0009028."
+  date: "2000-09-28"
+  url: "https://arxiv.org/abs/cs/0009028"
+  doi: "https://doi.org/10.1016/S0012-365X(02)00491-0"
+  notes: "Table 3 gives a drawing of K_81 with 623916 crossings, and the counts of Singer's (625320) and Jensen's (630786) drawings. Section 2.4.2 gives Jensen's formula j(n), and Section 4 the drawings of K_12 and K_13 of Thorpe and Harris. Its recursive constructions give upper bounds for other n by formula, which aren't recorded."
+  added_by: daniel-munro
+
 aichholzer-aurenhammer-krasser-2002:
   string: "O. Aichholzer, F. Aurenhammer, H. Krasser, On the crossing number of complete graphs, Proc. 18th ACM Symposium on Computational Geometry (2002) 19-24; Computing 76 (2006) 165-176."
   date: "2002-06"
-  notes: "MathWorld credits the value for n = 11 to this paper. The OEIS records the values for n = 11 and 12 as contributed by Aichholzer (2001-08-14) and Krasser (2001-09-17), from the authors' 2001 technical report, Progress on rectilinear crossing numbers."
+  url: "https://publications.ist.tugraz.at/files/publications/geometry/aak-cncg-02.ps.gz"
+  notes: "Table 2 gives the bounds for 11 <= n <= 20 that were already on Aichholzer's web page of 2001-11-19 (aichholzer-crossing-page-2001), which the bounds cite instead, and Table 3 the drawing of K_81 with 618616 crossings. MathWorld credits the value for n = 11 to this paper. The OEIS records the values for n = 11 and 12 as contributed by Aichholzer (2001-08-14) and Krasser (2001-09-17), from the authors' 2001 technical report, Progress on rectilinear crossing numbers, which wasn't found."
   added_by: daniel-munro
 
 aichholzer-krasser-2005:
-  string: "O. Aichholzer, H. Krasser, Abstract order type extension and new results on the rectilinear crossing number, Proc. 21st ACM Symposium on Computational Geometry (2005) 91-98; Comput. Geom. 36 (2007) 2-15."
-  date: "2005-06"
-  notes: "Aichholzer, García, Orden and Ramos (2006) cite it for the values for n <= 17. Cetina et al. (2010) say that it gives implicitly the 30-point set with 9726 crossings."
+  string: "O. Aichholzer, H. Krasser, Abstract order type extension and new results on the rectilinear crossing number, 21st European Workshop on Computational Geometry (EWCG 2005), Eindhoven, 2005; Proc. 21st ACM Symposium on Computational Geometry (2005) 91-98; Comput. Geom. 36 (2007) 2-15."
+  date: "2005-03-09"
+  url: "https://publications.ist.tugraz.at/files/publications/geometry/ak-aoten-05a.pdf"
+  notes: "Dated by the EWCG extended abstract (March 9-11, 2005), which was read: its Table 2 gives the values for 12 <= n <= 17, of which n = 17 is new (13 to 16 were already on Aichholzer's web page by 2004-06-24), and Section 4.2 a 54-point set with 115999 crossings. Cetina et al. (2010) say that it gives implicitly the 30-point set with 9726 crossings."
   added_by: daniel-munro
 
 aichholzer-garcia-orden-ramos-2006:
@@ -3453,14 +3526,14 @@ aichholzer-garcia-orden-ramos-2006:
   date: "2006-08-24"
   url: "https://arxiv.org/abs/math/0608610"
   doi: "https://doi.org/10.1007/s00454-007-1325-8"
-  notes: "Determines the values for n = 19 and 21, and says the values for n <= 17 were known."
+  notes: "Determines the values for n = 19 and 21 (arXiv v1, Section 1), and says the values for n <= 17 were known and that its results show some known configurations on Aichholzer's page are optimal. The upper bound 2055 for n = 21 is cited to it because the page versions between 2004-11 and 2007-04 weren't archived. Ábrego et al. (2011) credit it with the values for even n <= 18, but arXiv v1 doesn't state n = 18; 1029 for n = 18 is first seen as a lower bound on the page of 2007-04-30."
   added_by: daniel-munro
 
 abrego-fernandez-leanos-salazar-2008:
   string: "B.M. Ábrego, S. Fernández-Merchant, J. Leaños, G. Salazar, The maximum number of halving lines and the rectilinear crossing number of K_n for n <= 27, Electron. Notes Discrete Math. 30 (2008) 261-266."
   date: "2008-02"
   doi: "https://doi.org/10.1016/j.endm.2008.01.045"
-  notes: "Determines the values for n = 18, 20 and 22 to 27, matching the upper bounds from point sets of Aichholzer et al. The full version is Ábrego et al. (2011), Table 1."
+  notes: "Table 1 gives the values for n = 14, 16, 18, 20 and 22 to 27, matching the point sets on Aichholzer's page, and says those for n = 20 and 22 to 27 are new, the values for n <= 19 and n = 21 being known from Aichholzer et al. (2006). The full version is Ábrego et al. (2011). Its companion paper in the same volume, A central approach to bound the number of crossings in a generalized configuration (ENDM 30 (2008) 273-278, doi:10.1016/j.endm.2008.01.047), was also read: it improves only the asymptotic lower bound, to 277/729 (n choose 4) + Θ(n^3), and gives no values for particular n."
   added_by: daniel-munro
 
 abrego-et-al-2011:
@@ -3494,11 +3567,74 @@ fabila-monroy-lopez-2014:
   notes: "Table 1 gives new point sets for 46 <= n <= 99 found by local search, and the previous best for each."
   added_by: daniel-munro
 
+aichholzer-crossing-page-2001:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, last update 2001-11-19."
+  date: "2001-11-19"
+  url: "http://web.archive.org/web/20020703073659/http://www.igi.tugraz.at:80/oaich/triangulations/crossing.html"
+  notes: "Lower and upper bounds for n <= 45, and a drawing of K_81 with 618616 crossings, read from the earliest Wayback Machine capture (2002-07-03), dated by the page's 'last update' line (it was created 2001-09-14). Captures up to 2003-01-15 are unchanged."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2004-06:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, as captured 2004-06-24."
+  date: "2004-06-24"
+  url: "http://web.archive.org/web/20040624125802/http://www.igi.tugraz.at:80/oaich/triangulations/crossing.html"
+  notes: "New lower bounds for 13 <= n <= 45, including the exact values for n = 13 to 16, though the page still says 'last update 19.11.2001'. Dated by the capture, since the previous capture is of 2003-01-15. Its lower bound 20413 for n = 40 is a typo for 30413 (corrected by 2004-08-30) and isn't recorded."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2004-08-11:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, last update 2004-08-11."
+  date: "2004-08-11"
+  url: "http://web.archive.org/web/20040811220333/http://www.igi.tugraz.at:80/oaich/triangulations/crossing.html"
+  notes: "New upper bounds for 20 <= n <= 44, read from the Wayback Machine capture of 2004-08-11."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2004-08-30:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, last update 2004-08-30."
+  date: "2004-08-30"
+  url: "http://web.archive.org/web/20041104010149/http://www.igi.tugraz.at:80/oaich/triangulations/crossing.html"
+  notes: "New upper bounds for n = 24, 26 and 31, and the corrected lower bound for n = 40, read from the Wayback Machine capture of 2004-11-04."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2004-11:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, created 2004-11-25."
+  date: "2004-11-25"
+  url: "http://web.archive.org/web/20041214225502/http://www.igi.tugraz.at:80/oaich/triangulations/crossing.html"
+  notes: "A shortened table for n <= 20, with the upper bound 1029 for n = 18, read from the Wayback Machine capture of 2004-12-14. By 2005-03 the page pointed to a new page, whose versions before 2007-04-30 weren't archived."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2007-04:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2007-04-30."
+  date: "2007-04-30"
+  url: "http://web.archive.org/web/20070430141404/http://www.ist.tugraz.at:80/staff/aichholzer/research/rp/triangulations/crossing/"
+  notes: "Lower and upper bounds for n <= 100, read from the Wayback Machine capture of 2007-04-30, the first of the page at this address. Bounds first seen here may have been posted on earlier, unarchived versions of the page, from 2004-11 on."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2007-06:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2007-06-19."
+  date: "2007-06-19"
+  url: "http://web.archive.org/web/20070630025430/http://www.ist.tugraz.at:80/staff/aichholzer/research/rp/triangulations/crossing/"
+  notes: "New upper bounds for several n from 55 to 96, read from the Wayback Machine capture of 2007-06-30. Captures up to 2009-03 are unchanged."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2009:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2009-05-19."
+  date: "2009-05-19"
+  url: "http://web.archive.org/web/20100515093132/http://www.ist.tugraz.at:80/staff/aichholzer/research/rp/triangulations/crossing/"
+  notes: "New lower bounds for n = 20 and 22 to 33, read from the Wayback Machine capture of 2010-05-15. Those for n = 20 and 22 to 27 were published earlier by Ábrego et al. (2008); those for 28 <= n <= 33 aren't in either of their 2008 papers, and no earlier source stating them was found."
+  added_by: daniel-munro
+
+aichholzer-crossing-page-2011:
+  string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2011-08-07."
+  date: "2011-08-07"
+  url: "http://web.archive.org/web/20110821092810/http://www.ist.tugraz.at/staff/aichholzer/research/rp/triangulations/crossing/"
+  notes: "Read from the Wayback Machine capture of 2011-08-21. Its new lower bounds for n >= 29 are those of Ábrego et al. (2011) and Cetina et al. (2010); it has new upper bounds for n = 34, 38, 42, 46, 48 and 51. Captures up to 2012-10-29 are unchanged, and none were made from then until 2017."
+  added_by: daniel-munro
+
 aichholzer-crossing-page:
   string: "O. Aichholzer, On the rectilinear crossing number, web page, TU Graz, table last modified 2015-05-26."
   date: "2015-05-26"
   url: "http://www.ist.tugraz.at/aichholzer/research/rp/triangulations/crossing/"
-  notes: "Lower bounds and best known point sets for n <= 100, read from a Wayback Machine capture of 2022-02-14, and the point set files (data/bestNNN.asc) from its captures of the data directory. Point sets for n = 34, 38, 42, 48 and 51 are credited to H.F. Jensen (2005-2009), and for n = 40 to M. Scheucher."
+  notes: "Lower bounds and best known point sets for n <= 100, read from a Wayback Machine capture of 2022-02-14, and the point set files (data/bestNNN.asc) from its captures of the data directory. Point sets for n = 34, 38, 42, 48 and 51 are credited to H.F. Jensen (2005-2009), and for n = 40 to M. Scheucher. The table is unchanged in the capture of 2025-03-11. Earlier versions of the page are the sources aichholzer-crossing-page-2001 to -2011."
   added_by: daniel-munro
 
 # Multicolor Ramsey numbers for triangles
@@ -3738,6 +3874,13 @@ nyam-osor-2026-b:
   string: "U. Nyam-Osor, The kissing number in dimension sixteen is at most 7319, preprint (Zenodo), 2026."
   date: "2026-11-14"
   doi: "https://doi.org/10.5281/zenodo.24215730"
+  added_by: daniel-munro
+
+nyam-osor-2026-c:
+  string: "U. Nyam-Osor, The kissing number in dimension eleven is at most 867, preprint (Zenodo), 2026."
+  date: "2026-11-14"
+  doi: "https://doi.org/10.5281/zenodo.24218556"
+  notes: "Not peer reviewed. An exact rational certificate for the three-point bound at degree 21, made with an AI system (Claude) under the author's direction."
   added_by: daniel-munro
 
 green-1964:
@@ -4711,6 +4854,13 @@ schaer-1965:
   notes: "Proves the optimal packing of 9 circles, and lists the optimal packings for up to 9 circles, including that of 7, whose proof by Schaer was not published."
   added_by: daniel-munro
 
+goldberg-1970:
+  string: "M. Goldberg, The packing of equal circles in a square, Mathematics Magazine 43(1) (1970) 24-30."
+  date: "1970-01"
+  doi: "https://doi.org/10.1080/0025570X.1970.11975991"
+  notes: "Table 1 gives the best packings Goldberg found of up to 27 circles, as the minimum distance m between n points in a unit square (s = 2 + 2/m); Table 2 adds 30 circles, m = (20 - sqrt(10))/75, among others. Exact for 12, 18, 20, 23, 24, 27 and 30, which were later proved optimal. Some values are given to three or four digits only (11: .398, 17: .3045, 21: .2704, 26: .2373); for 11 the more precise m = 0.398012 is from Mollard and Payan (1990). For 19 it gives m = .290 from an equation solved by successive approximation, which as printed gives m = 0.289537, just below the optimum 0.289542, so no bound is taken from it; Maranas, Floudas and Pardalos (1995) attribute the optimal value to Goldberg, while Peikert (1994) says the optimal packing of 19 was new in 1991."
+  added_by: daniel-munro
+
 schwartz-1970:
   string: "B. L. Schwartz, Separating points in a square, Journal of Recreational Mathematics 3 (1970) 195-204."
   date: "1970"
@@ -4720,18 +4870,41 @@ schwartz-1970:
 schluter-1979:
   string: "K. Schlüter, Kreispackung in Quadraten, Elemente der Mathematik 34 (1979) 12-14."
   date: "1979"
-  notes: "Credited by Peikert (1994) with the optimal packing of 10 circles, where the text says 'bereits 1971' but cites this 1979 paper."
+  url: "https://www.e-periodica.ch/digbib/view?pid=edm-001:1979:34"
+  notes: "Gives packings of 10 and 13 circles better than Goldberg's (1970), with minimum distances 0.42127954 (optimal) and (sqrt(3)-1)/2 between points in a unit square (table in section 3), found in Schlüter's Diplomarbeit at Stuttgart. Peikert (1994) says Schlüter found the packing of 10 'bereits 1971', citing this 1979 paper."
+  added_by: daniel-munro
+
+mollard-payan-1990:
+  string: "M. Mollard, C. Payan, Some progress in the packing of equal circles in a square, Discrete Mathematics 84(3) (1990) 303-307."
+  date: "1990"
+  doi: "https://doi.org/10.1016/0012-365X(90)90135-5"
+  notes: "Received 1990-04-19. Gives the optimal packings of 11 (m = 0.398207), 13 (m = 0.366096007) and 14 (s = 3.866025 for unit-diameter circles) circles, improving Goldberg's (1970), and of 10 (m = 0.42127954), unaware of Schlüter (1979). Maranas, Floudas and Pardalos (1995) say Wengerodt (1987) had already given the packing of 14, and that de Groot, Peikert and Würtz (1990) independently found those of 11 and 13."
   added_by: daniel-munro
 
 de-groot-peikert-wurtz-1990:
   string: "C. de Groot, R. Peikert, D. Würtz, The optimal packing of ten equal circles in a square, IPS Research Report No. 90-12, ETH Zürich, 1990."
   date: "1990-08"
+  notes: "Not read (not online). Nurmela and Östergård (1997) say it gives good packings for up to 22 circles; its packings of 15 (m = 0.33860952) and 22 (m = 0.26795840) are known from Maranas, Floudas and Pardalos (1995), and its packing of 21, which Nurmela and Östergård improved, has no known value."
+  added_by: daniel-munro
+
+schaer-1971:
+  string: "J. Schaer, On the packing of ten equal circles in a square, Mathematics Magazine 44(3) (1971) 139-140."
+  date: "1971-05"
+  doi: "https://doi.org/10.1080/0025570X.1971.11976123"
+  notes: "Improves Goldberg's packing of 10 circles to m ≈ .4195 (Fig. 2; the exact expression is garbled in the scan). The bound uses the value m = 0.41954209 given for it by Maranas, Floudas and Pardalos (1995)."
+  added_by: daniel-munro
+
+maranas-floudas-pardalos-1995:
+  string: "C. D. Maranas, C. A. Floudas, P. M. Pardalos, New results in the packing of equal circles in a square, Discrete Mathematics 142 (1995) 287-293."
+  date: "1995-07"
+  doi: "https://doi.org/10.1016/0012-365X(93)E0230-2"
+  notes: "Received 1992-04-03, revised 1993-08-11. Reviews who found the best packings known for up to 30 circles and gives new ones for 26 (m = 0.23872458), 28 (m = 0.23053549) and 29 (m = 0.22688290). For 21, Table 1 gives m = 0.27181675, which exceeds the later proven optimum and which Graham and Lubachevsky (1996) couldn't reproduce; the bound here uses m = 0.27181226, one of the three configurations for 21 listed in the text. Its packing of 15 (m = 0.34108138) had already been found by Peikert et al. (1992), unknown to the authors."
   added_by: daniel-munro
 
 peikert-et-al-1992:
   string: "R. Peikert, D. Würtz, M. Monagan, C. de Groot, Packing circles in a square: a review and new results, in P. Kall (ed.), System Modelling and Optimization (Proc. 15th IFIP Conference, Zürich, 1991), Lecture Notes in Control and Information Sciences 180, Springer (1992) 45-54."
   date: "1991-09"
-  notes: "Computer-assisted proofs of the optimal packings of 11 to 20 circles, other than 14 and 16, presented at the conference in 1991. The packings of 17 and 19 were new; the others had been found earlier, by Goldberg (1970), Schlüter (1979) or Mollard and Payan (1990) according to Peikert (1994), which doesn't say which."
+  notes: "Computer-assisted proofs of the optimal packings of 11 to 20 circles, other than 14 and 16, presented at the conference in 1991. Peikert (1994) says the packings of 17 and 19 were new and the others had been found earlier, by Goldberg (1970), Schlüter (1979) or Mollard and Payan (1990). But none of those three has the optimal packing of 15, and Maranas, Floudas and Pardalos (1995) give de Groot, Peikert and Würtz (1990) as the best before theirs (m = 0.33860952), so the optimal packing of 15 is credited here (an inference)."
   added_by: daniel-munro
 
 wengerodt-1983:
@@ -4773,7 +4946,14 @@ graham-lubachevsky-1996:
   date: "1996-04"
   url: "https://arxiv.org/abs/math/0406394"
   doi: "https://doi.org/10.37236/1240"
-  notes: "Lists the best packings known for up to 36 circles, with improvements on those of Nurmela and Östergård (then submitted, published 1997) for 21, 28 and 34. Some of the others may have been found first by Nurmela and Östergård."
+  notes: "Submitted 1996-01-17, published 1996-04-20. Lists the best packings known for up to 36 circles, improving those of Nurmela and Östergård (then submitted, published 1997) for 21, 28, 34, 40, 43, 44, 45 and 47 circles. Its packings of 21 and 28 had already been given by Maranas, Floudas and Pardalos (1995), so only that of 34 is new below 36."
+  added_by: daniel-munro
+
+nurmela-ostergard-1997:
+  string: "K. J. Nurmela, P. R. J. Östergård, Packing up to 50 equal circles in a square, Discrete & Computational Geometry 18 (1997) 111-120."
+  date: "1996-01"
+  doi: "https://doi.org/10.1007/PL00009306"
+  notes: "Received 1995-04-24, revised 1995-06-14, published July 1997. Dated January 1996 here because Graham and Lubachevsky cite it as submitted in their paper submitted on 1996-01-17, and drew on its packings, published in April 1996. Table 1 gives m for 21 to 50 circles; it says its packings of 22, 23, 24, 25, 27, 30 and 36 were already known (from Goldberg 1970, de Groot, Peikert and Würtz 1990, and Kirchner and Wengerodt 1987) and the others new, apparently without knowing Maranas, Floudas and Pardalos (1995), who had better or equal packings of 21, 28 and 29. New best packings here: 26, 31, 32, 33, 34 and 35."
   added_by: daniel-munro
 
 nurmela-ostergard-1999:
@@ -5252,10 +5432,24 @@ stead-heilbronn-square:
   added_by: daniel-munro
 
 stead-heilbronn-triangle:
-  string: "T. Stead, The Heilbronn problem: triangle, tables of the best known configurations of n points in a triangle of unit area for n = 3 to 36, with their record histories (linked from Erich Friedman's Packing Center), retrieved 2026-11-21."
-  date: "2026-11-21"
+  string: "T. Stead, The Heilbronn problem: triangle, tables of the best known configurations of n points in a triangle of unit area for n = 3 to 100, with their record histories (linked from Erich Friedman's Packing Center), retrieved 2026-11-23."
+  date: "2026-11-23"
   url: "https://math.tejstead.com/heilbronn/triangle/"
-  notes: "Coordinates are given in the triangle (0, 0), (1, 0), (0, 1), and values as fractions of its area. n = 8 is marked numerically optimal (Sudermann-Merx, arXiv:2607.15021, within a relative gap of 10^-4), and Ethan Hendren's AI-assisted computer proofs for n = 8 and 9 (2026-11-14 and 2026-11-15) are noted but not yet accepted."
+  notes: "Coordinates are given in the triangle (0, 0), (1, 0), (0, 1), and values as fractions of its area. First read 2026-11-21 (n = 3 to 36). As of 2026-11-23, n = 8, 9 and 10 are marked proved optimal by Ethan Hendren's AI-assisted computer proofs (Zenodo, November 2026), with the caveat that their certificate traces have been replayed only by their author; n = 8 is also marked numerically optimal (Sudermann-Merx, arXiv:2607.15021, a floating-point Gurobi run with a relative gap of 10^-4). The per-n record histories record coordinate refinements but not earlier records; those are from archived snapshots of the table (stead-heilbronn-triangle-2026-09-10, stead-heilbronn-triangle-2026-10-04)."
+  added_by: daniel-munro
+
+stead-heilbronn-triangle-2026-09-10:
+  string: "T. Stead, The Heilbronn problem: triangle, as archived by the Wayback Machine on 2026-09-10."
+  date: "2026-09-10"
+  url: "https://web.archive.org/web/20260910085408/https://math.tejstead.com/heilbronn/triangle/"
+  notes: "The earliest archived snapshot of the triangle table, n = 3 to 35. Credits Sudermann-Merx (August 2026) with n = 17, 18, 19 and 22, Stead (August 2026) with n = 23 and 24, and Rhys Chappell (September 2026) with n = 20, 21 and 25 to 35. The archived per-n page for n = 19 (2026-09-17) and the table snapshot of 2026-10-04 instead credit n = 19 and 22 to Stead, August 2026, which is used here. Chappell's September configurations were all beaten in the same month (archived per-n pages of 2026-09-17 also show September configurations by Coupvent des Graviers for n = 26 to 28, 30 and 33, and by Stead for n = 32), so only the best bound of each month is recorded."
+  added_by: daniel-munro
+
+stead-heilbronn-triangle-2026-10-04:
+  string: "T. Stead, The Heilbronn problem: triangle, as archived by the Wayback Machine on 2026-10-04."
+  date: "2026-10-04"
+  url: "https://web.archive.org/web/20261004201519/https://math.tejstead.com/heilbronn/triangle/"
+  notes: "Credits Fable 5.1 with Shengtong Zhang (September 2026) with n = 16, 17, 21, 25 to 28 and 30 to 35, and Stead (August 2026) with n = 22 and 23. A snapshot of 2026-10-18 (https://web.archive.org/web/20261018101612/https://math.tejstead.com/heilbronn/triangle/) shows intermediate October configurations (Rhys Chappell for n = 31; Sudermann-Merx for n = 32 and 34 to 36) beaten within October by Sudermann-Merx, so they aren't recorded."
   added_by: daniel-munro
 
 goldberg-1972:
@@ -5280,7 +5474,8 @@ yang-zhang-zeng-1991-five:
 yang-zhang-zeng-1991-triangle:
   string: "L. Yang, J. Zhang and Z. Zeng, On exact values of Heilbronn numbers for triangular regions, Universität Bielefeld, Preprint 91-098 (1991)."
   date: "1991"
-  notes: "Not read here; cited by Comellas and Yebra 2002. Stead's tables credit these authors with the six-point configuration in the triangle in 1991."
+  url: "https://www.math.uni-bielefeld.de/sfb343/preprints/index91.html"
+  notes: "Not read here; cited by Comellas and Yebra 2002. Listed in the SFB 343 preprint index for 1991, without a file to download. Stead's tables credit these authors with the six-point configuration in the triangle in 1991, and Friedman's page (archived 2006-09-04) also credits them with the five-point configuration in 1991, later corrected to Peng 1989."
   added_by: daniel-munro
 
 yang-zhang-zeng-1992:
@@ -5292,7 +5487,8 @@ yang-zhang-zeng-1992:
 yang-zhang-zeng-1994:
   string: "L. Yang, J. Zhang and Z. Zeng, On the Heilbronn numbers of triangular regions, Acta Mathematica Sinica (Chinese Series) 37(5) (1994) 678-689 (in Chinese)."
   date: "1994"
-  notes: "Not read here. Proves that six points in a triangle of unit area span a triangle of area at most 1/8, per Wikipedia and Stead's tables."
+  doi: "https://doi.org/10.12386/A1994sxxb0084"
+  notes: "Not read here: the journal's page serves a bot check. The journal lists it as On the first several Heilbronn numbers of a triangle, Acta Math. Sinica 37(5) (1994). Proves that six points in a triangle of unit area span a triangle of area at most 1/8, per Wikipedia and Stead's tables."
   added_by: daniel-munro
 
 peng-1989:
@@ -5341,14 +5537,14 @@ cantrell-2006:
   string: "D. Cantrell, Heilbronn configurations in the triangle (July 2006), in E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center."
   date: "2006-07"
   url: "https://erich-friedman.github.io/packing/heiltri/"
-  notes: "Configurations for 7, 8, 9, 11 and 12 points in a triangle, dated by Friedman's page (archived 2021-03-07)."
+  notes: "Configurations for 7 to 12 points in a triangle, dated by Friedman's page (archived 2006-09-04 and 2021-03-07). The July 2006 configuration for n = 10 (0.0420+, 120° rotationally symmetric) was replaced by Cantrell's June 2007 one."
   added_by: daniel-munro
 
 cantrell-2007:
   string: "D. Cantrell, Heilbronn configurations in the triangle (June 2007), in E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center."
   date: "2007-06"
   url: "https://erich-friedman.github.io/packing/heiltri/"
-  notes: "Configurations for 10, 14, 15 and 16 points in a triangle, dated by Friedman's page (archived 2021-03-07). Chen, Zeng and Zhou 2013 give Δ(16) >= 0.01797627..."
+  notes: "Configurations for 10, 13, 14, 15 and 16 points in a triangle, dated by Friedman's page (archived 2007-10-21 and 2021-03-07). The n = 13 configuration (0.0260+) was replaced by Karpov's in December 2015. Chen, Zeng and Zhou 2013 give Δ(16) >= 0.01797627..."
   added_by: daniel-munro
 
 karpov-2011:
@@ -5376,7 +5572,7 @@ stead-2026-08-heilbronn:
   string: "T. Stead, Heilbronn configurations found by computer search and local optimization (August 2026), as reported in Stead's Heilbronn tables."
   date: "2026-08"
   url: "https://math.tejstead.com/heilbronn/"
-  notes: "From the credits and record histories of square n = 13, 19, 21 and 25 and triangle n = 24. The square n = 13 bound is Karpov's configuration polished, and the n = 21 bound (2026-08-21) was reported without coordinates."
+  notes: "From the credits and record histories of square n = 13, 19, 21 and 25 and triangle n = 24, and from archived snapshots of the triangle table for triangle n = 19, 22 and 23 (credited to Sudermann-Merx for n = 19 and 22 in the snapshot of 2026-09-10). The square n = 13 bound is Karpov's configuration polished, and the n = 21 bound (2026-08-21) was reported without coordinates."
   added_by: daniel-munro
 
 stead-2026-09-heilbronn:
@@ -5416,7 +5612,7 @@ sudermann-merx-2026-08-heilbronn:
   string: "N. Sudermann-Merx, Heilbronn configurations found by computer search (August 2026), as reported in Stead's Heilbronn tables."
   date: "2026-08"
   url: "https://math.tejstead.com/heilbronn/"
-  notes: "Square n = 15, 18 and 26, and triangle n = 18. The n = 18 and 26 bounds were reported without coordinates."
+  notes: "Square n = 15, 18 and 26, and triangle n = 17 and 18 (n = 17 from the triangle table archived 2026-09-10). The square n = 18 and 26 bounds were reported without coordinates."
   added_by: daniel-munro
 
 sudermann-merx-2026-10-heilbronn:
@@ -5426,11 +5622,18 @@ sudermann-merx-2026-10-heilbronn:
   notes: "Square n = 22, 24 to 30, 33, 34 and 36, and triangle n = 21 to 23, 25 to 27 and 31 to 36."
   added_by: daniel-munro
 
+sudermann-merx-2026-11-heilbronn:
+  string: "N. Sudermann-Merx, Heilbronn configuration for 35 points in the triangle (November 2026), as reported in Stead's Heilbronn tables."
+  date: "2026-11"
+  url: "https://math.tejstead.com/heilbronn/triangle/35/"
+  notes: "0.00435478115736..., from the same search campaign as the October configurations, with SLP-polished coordinates; a slight improvement on the October value 0.004354781154 (retrieved 2026-11-21). Stead's tables credit Sudermann-Merx with November 2026 records for n = 37 to 100 too, which aren't tracked here."
+  added_by: daniel-munro
+
 zhang-fable-2026:
   string: "Fable 5.1 with S. Zhang, Heilbronn configurations from a search campaign with symmetry-reduced basin hopping (September 2026), as reported in Stead's Heilbronn tables."
   date: "2026-09"
   url: "https://math.tejstead.com/heilbronn/"
-  notes: "Square n = 18 and 20, and triangle n = 16, 17, 28 and 30. Found by Fable 5.1, an AI model, with Shengtong Zhang."
+  notes: "Square n = 18 and 20, and triangle n = 16, 17, 21, 25 to 28 and 30 to 35 (n = 21, 25 to 27 and 31 to 35 from the triangle table archived 2026-10-04, since beaten). Found by Fable 5.1, an AI model, with Shengtong Zhang."
   added_by: daniel-munro
 
 gardiner-2026:
@@ -5458,6 +5661,20 @@ friedman-heilbronn-triangle:
   date: "2021-03-07"
   url: "https://web.archive.org/web/20210307034031/https://erich-friedman.github.io/packing/heiltri/"
   notes: "Best known configurations for n = 3 to 16 in a triangle of unit area, with their finders and dates: Cantrell's for n = 7 to 12 and 14 to 16, and Karpov's for n = 13 (December 2015)."
+  added_by: daniel-munro
+
+friedman-heilbronn-triangle-2006:
+  string: "E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center, as archived by the Wayback Machine on 2006-09-04."
+  date: "2006-09-04"
+  url: "https://web.archive.org/web/20060904233411/http://www.stetson.edu/~efriedma/heiltri/"
+  notes: "The earliest archived version, n = 3 to 12: Cantrell's July 2006 configurations for n = 7 to 12, including 0.0420+ for n = 10, and Yang, Zhang and Zeng (1991) credited with n = 5 and 6. No earlier records are mentioned."
+  added_by: daniel-munro
+
+friedman-heilbronn-triangle-2007:
+  string: "E. Friedman, The Heilbronn problem for triangles, Erich's Packing Center, as archived by the Wayback Machine on 2007-10-21."
+  date: "2007-10-21"
+  url: "https://web.archive.org/web/20071021091728/http://stetson.edu:80/~efriedma/heiltri/"
+  notes: "Adds Cantrell's June 2007 configurations for n = 10 (0.0433+) and 13 to 16, including 0.0260+ for n = 13."
   added_by: daniel-munro
 
 kung-1970:
