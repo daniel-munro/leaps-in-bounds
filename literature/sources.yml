@@ -5089,19 +5089,38 @@ tarnai-gaspar-1983:
 jucovic-1959:
   string: "E. Jucovič, Umiestnenie 17, 25 a 33 bodov na guli (Arrangement of 17, 25 and 33 points on a sphere), Matematicko-fyzikálny časopis Slovenskej akadémie vied 9 (1959) 173-176."
   date: "1959"
-  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 201 and Fig. 3a) give its 17-point arrangement an angular diameter of 51° 2', and Danzer (danzer-1986, Fig. 3.4 and Section 3) reproduces its graph for 17 points and shows it isn't relatively optimal. Its 25-point arrangement isn't recorded, since no source read gives its value; Danzer's footnote 38 says the 33-point one can be improved."
+  url: "http://dml.cz/dmlcz/126752"
+  notes: "Read directly. Received 1958-01-27, published in issue 3 of 1959. Gives arrangements with least distance a_17 ≐ 51° 2', a_25 ≐ 41° 24' and a_33 ≐ 34° 47', said to be larger than those published before (which aren't named). Tarnai and Gáspár (tarnai-gaspar-1983, p. 201) and Székely (szekely-1974, Table 1) give the same values for 17 and 25 points. Danzer (danzer-1986, Fig. 3.4 and Section 3) shows the 17-point arrangement isn't relatively optimal, and his footnote 38 says the 33-point one can be improved."
   added_by: daniel-munro
 
 strohmajer-1963:
   string: "J. Strohmajer, Über die Verteilung von Punkten auf der Kugel, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 6 (1963) 49-53."
   date: "1963"
-  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 203 and Table 1) credit its arrangement of 18 points, with angular diameter 49° 33' 5.7\", to 'Kólya' citing this paper (their reference 22), and say Goldberg found it independently (Packing of 18 equal circles on a sphere, Elemente der Mathematik 20 (1965) 59-61)."
+  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 203 and Table 1) credit its arrangement of 18 points, with angular diameter 49° 33' 5.7\", to 'Kólya' citing this paper (their reference 22), and say Goldberg found it independently (Packing of 18 equal circles on a sphere, Elemente der Mathematik 20 (1965) 59-61). Székely (szekely-1974, footnote 5 and Table 2) likewise says the paper is a summary and the arrangement of 18 points is D. Kólya's (p. 51)."
   added_by: daniel-munro
 
 goldberg-1967:
   string: "M. Goldberg, Axially symmetric packing of equal circles on a sphere, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 10 (1967) 37-48."
   date: "1967"
-  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 206 and Table 1) credit it with the arrangement of 27 points with angular diameter 40° 40' 39.2\" that they improve, and with an arrangement of 32 points. Danzer (danzer-1986, p. 65) names it among the sharpest bounds for k > 13 known by the 1980s; its values for other N aren't known here."
+  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 206 and Table 1) credit it with the arrangement of 27 points with angular diameter 40° 40' 39.2\" that they improve, and with an arrangement of 32 points. Székely (szekely-1974, Tables 1 and 2, reference [11]) credits it with the best arrangements known in 1974 for 26 points (41° 1' 34.1\"), 27 points (the same 40° 40' 39.2\"), 30 points (38° 9' 39.2\"), 31 and 32 points, and with arrangements of 37 and 41 points that Székely improves. Danzer (danzer-1986, p. 65) names it among the sharpest bounds for k > 13 known by the 1980s."
+  added_by: daniel-munro
+
+goldberg-1969:
+  string: "M. Goldberg, Axially symmetric packing of equal circles on a sphere II, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 12 (1969) 137-142."
+  date: "1969"
+  notes: "Not read. Székely (szekely-1974, Tables 1 and 2, reference [13], which gives the title without 'II') credits it with an arrangement of 28 points with angular diameter 38° 47', which Székely improves, and one of 22 points with 45° 1'. That value for 22 points is above the best known today (44.7402°, Kottwitz 1991), so it can't be right as printed (perhaps a misprint or an error) and isn't recorded."
+  added_by: daniel-munro
+
+karabinta-szekely-1973:
+  string: "A. Karabinta and E. Székely, Sur les empilements optimaux de cercles congruents sur la sphère, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 16 (1973) 143-154."
+  date: "1973"
+  notes: "Not read. Székely (szekely-1974, Tables 1 and 2, reference [17]) credits it with the arrangement of 21 points with angular diameter 45° 33' 26.2\", the best known in 1974, and with arrangements of 35, 40, 45 and 51 points that Székely improves. It's where the spiral construction of Karabinta's 1973 thesis first appeared."
+  added_by: daniel-munro
+
+szekely-1974:
+  string: "E. Székely, Sur le problème de Tammes, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 17 (1974) 157-175."
+  date: "1974"
+  notes: "Read directly. Received 1974-05-03. Gives spiral arrangements of up to 60 points. Table 1 lists those that improve on earlier ones, with the earlier angular diameter and its source, and Table 2 the best arrangements known for n = 2-60 with their sources; no upper bounds. New for N <= 30: 25 points (41° 28' 15.4\", up from Jucovič's 41° 24'), 28 points (39° 2' 28.3\", up from Goldberg's 38° 47') and 29 points (38° 12' 10.3\"). No value is given for 19 points: footnote 5 says, citing K. Bornemissza's unpublished 1968 diploma thesis, that Goldberg's (Packing of 19 equal circles on a sphere, Elem. Math. 22 (1967) 108-110) is wrong. The 22-point value it lists (45° 1', Goldberg 1969) is above the best known today and isn't recorded."
   added_by: daniel-munro
 
 boroczky-1983:
