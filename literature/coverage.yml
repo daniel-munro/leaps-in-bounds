@@ -296,14 +296,16 @@ moving-sofa:
   - "The Shephard piano, which Gerver 1992 says slightly improved Hammersley's sofa in the late 1960s, was never published and has no reported area. Romik 2016 reports, from Stewart (2004), that B. F. Logan found Gerver's shape in 1976 but didn't publish it."
 
 lebesgue-universal-cover:
-  status: partial
+  status: complete
   reviewed: 2026-11-22
-  sources: [baez-bagdasaryan-gibbs-2015, gibbs-2018, xie-2026]
+  sources: [sprague-1936, brass-sharifi-2005, baez-bagdasaryan-gibbs-2015, gibbs-2018, xie-2026]
   gaps:
-  - "Pál 1920, Sprague 1936, Hansen 1975, 1981 and 1992, Elekes 1994 and the body of Brass and Sharifi 2005 haven't been read (no open copy, or paywalled); their bounds are taken from Baez, Bagdasaryan and Gibbs 2015 and Gibbs 2018. Hansen's 1975 and 1981 papers may give earlier steps between Sprague's and Hansen's 1992 covers."
+  - "No copy of Pál 1920 was found; his cover and lower bound are taken from Sprague 1936 and Brass and Sharifi 2005."
+  - "Sprague 1936 doesn't compute his cover's area. The 0.844137708436 used is from Baez, Bagdasaryan and Gibbs 2015; Hansen 1975 and 1992 give 0.844144... and 0.84414, and Meschkowski 1960, who first computed it according to Brass and Sharifi, wasn't read."
+  - "Hansen 1975 (Geometriae Dedicata 4, 165-172) cut about 10^-19 from Sprague's cover, too little to record at the digits known; it isn't in the history."
   - "Gibbs, A new slant on Lebesgue's universal covering problem (arXiv:1401.8217, 2014), claims a proved upper bound of 0.844113 (0.8441121 at a slant angle of 0.54°, Section 8). It isn't recorded: Baez, Bagdasaryan and Gibbs 2015, with Gibbs as an author, claim only 0.8441153 a year later, and Gibbs 2018 describes the 2014 paper as a computational study."
   - "Duff 1980 (C. R. Math. Rep. Acad. Sci. Canada 2, 37-42) gives a smaller non-convex cover, of area 0.84413570 according to Gibbs 2014; the non-convex variant isn't tracked."
-  - "The trivial bounds π/4 (covering a disk) and 1 (a unit square) aren't recorded."
+
 
 tammes:
   status: partial
