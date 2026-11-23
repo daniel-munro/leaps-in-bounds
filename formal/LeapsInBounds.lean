@@ -14,6 +14,7 @@ public import LeapsInBounds.Statements.Golomb
 public import LeapsInBounds.Statements.Heilbronn
 public import LeapsInBounds.Statements.IsoscelesSet
 public import LeapsInBounds.Statements.KissingNumber
+public import LeapsInBounds.Statements.LebesgueCover
 public import LeapsInBounds.Statements.LineArrangement
 public import LeapsInBounds.Statements.MovingSofa
 public import LeapsInBounds.Statements.MulticolorRamsey

@@ -5278,3 +5278,61 @@ soifer-1988:
   doi: "https://doi.org/10.1007/978-0-387-74652-4"
   notes: "Problem 7.2.1: among any five points in a triangle of area 1, some three form a triangle of area at most 1/4. Soifer says he kept the problem secret until presenting it at the Fifth Annual Colorado Mathematical Olympiad in April 1988 (Section 7.3)."
   added_by: daniel-munro
+
+# Lebesgue's universal covering problem
+
+pal-1920:
+  string: "J. Pál, Über ein elementares Variationsproblem, Det Kgl. Danske Videnskabernes Selskab, Mathematisk-fysiske Meddelelser III, 2 (1920) 3-35."
+  date: "1920"
+  notes: "Not read: no open copy found. Gibbs (2018), p. 1, and Baez, Bagdasaryan and Gibbs (2015), Section 1, report that Pál showed the regular hexagon of width 1 is a universal cover, and that two of its corners can be cut off along the largest regular dodecagon inside it, leaving area 2 - 2/√3 = 0.84529946...; Gibbs (2018) also reports Pál's lower bound π/8 + √3/4 = 0.82571178..., the least area of a convex set covering a disk of diameter 1 and an equilateral triangle of side 1."
+  added_by: daniel-munro
+
+sprague-1936:
+  string: "R. Sprague, Über ein elementares Variationsproblem, Matematisk Tidsskrift B (1936) 96-99."
+  date: "1936"
+  url: "https://www.jstor.org/stable/24530328"
+  notes: "Not read (JSTOR). Sprague removed a region bounded by two circular arcs near a third corner of Pál's cover. Baez, Bagdasaryan and Gibbs (2015), Section 1, give the area of the result as 0.844137708436; Gibbs (2018), p. 1, says it was computed later, citing Meschkowski (1960)."
+  added_by: daniel-munro
+
+hansen-1992:
+  string: "H.C. Hansen, Small universal covers for sets of unit diameter, Geometriae Dedicata 42 (1992) 205-213."
+  date: "1992-05"
+  doi: "https://doi.org/10.1007/BF00147549"
+  notes: "Not read (paywalled). Hansen removed two more tiny regions from Sprague's cover, using reflections, claiming areas of 4·10^-11 and 6·10^-18. Baez, Bagdasaryan and Gibbs (2015), Section 2 and Table 1, recompute them as 3.7507·10^-11 and 8.4541·10^-21, giving 0.844137708398. Hansen's earlier papers (Geometriae Dedicata 4 (1975) 165-172, doi:10.1007/BF00148751; Normat 29 (1981) 115-119) are cited for this work by Gibbs (2018) but haven't been read."
+  added_by: daniel-munro
+
+elekes-1994:
+  string: "G. Elekes, Generalized breadths, circular Cantor sets, and the least area UCC, Discrete & Computational Geometry 12 (1994) 439-449."
+  date: "1994-10"
+  doi: "https://doi.org/10.1007/BF02574391"
+  notes: "Not read (paywalled); received 1993-04-22. Gibbs (2018), p. 1, reports that Elekes raised the lower bound to 0.8271 by combining the disk with Reuleaux polygons whose number of sides is a power of three."
+  added_by: daniel-munro
+
+brass-sharifi-2005:
+  string: "P. Brass and M. Sharifi, A lower bound for Lebesgue's universal cover problem, International Journal of Computational Geometry & Applications 15(5) (2005) 537-544."
+  date: "2005-10"
+  doi: "https://doi.org/10.1142/S0218195905001828"
+  notes: "Abstract (read via Crossref; the paper itself is paywalled): any convex universal cover has area at least 0.832. The proof is computer-assisted, minimizing the area of the convex hull of a disk, an equilateral triangle and a regular pentagon of diameter 1 over their placements."
+  added_by: daniel-munro
+
+baez-bagdasaryan-gibbs-2015:
+  string: "J.C. Baez, K. Bagdasaryan and P. Gibbs, The Lebesgue universal covering problem, Journal of Computational Geometry 6(1) (2015) 288-299, arXiv:1502.01251."
+  date: "2015-02-04"
+  url: "https://arxiv.org/abs/1502.01251"
+  doi: "https://doi.org/10.20382/jocg.v6i1a12"
+  notes: "Theorem 1: a convex universal cover of area at most 0.8441153, from Pál's hexagon with its corners cut at a slant angle of 1.3° and Sprague-like regions removed; computed in double precision (0.84411537685937650), and checked by Greg Egan to 2000 digits. Section 1 recounts the history of upper bounds, and Section 2 corrects Hansen's areas."
+  added_by: daniel-munro
+
+gibbs-2018:
+  string: "P. Gibbs, An upper bound for Lebesgue's covering problem, arXiv:1810.10089 (2018)."
+  date: "2018-10-23"
+  url: "https://arxiv.org/abs/1810.10089"
+  notes: "Theorem 1 and p. 18: a convex universal cover H(σ) of area less than 0.8440935944 at a slant angle σ < 1.5494°, refining the reductions of Baez, Bagdasaryan and Gibbs with reflection arguments like Hansen's. Not published in a journal (arXiv v1 only, as of 2026-11). pp. 1-2 recount the history of upper and lower bounds."
+  added_by: daniel-munro
+
+xie-2026:
+  string: "N. Xie, A certified lower bound for Lebesgue's universal cover problem, arXiv:2606.04458 (2026)."
+  date: "2026-06-03"
+  url: "https://arxiv.org/abs/2606.04458"
+  notes: "Every convex universal cover has area at least 0.833 (Corollary 1), by a computer-assisted proof in Brass and Sharifi's framework of a disk, a triangle and a pentagon of diameter 1: 356,816 parameter domains with outward-rounded interval bounds. The certificate records and a Python replay verifier are at https://github.com/Sheldon-Anderson/lebesgue-universal-cover-new-lower-bound-certificate; the verifier checks the records' hashes, counts and pass fields, not the geometry. Not published in a journal (arXiv v4, 2026-07-08)."
+  added_by: daniel-munro

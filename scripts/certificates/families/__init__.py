@@ -26,6 +26,7 @@ from . import (
     heilbronn,
     isosceles_set,
     kissing_number,
+    lebesgue_cover,
     line_arrangement,
     moving_sofa,
     multicolor_ramsey,
@@ -70,6 +71,7 @@ FAMILIES: dict[str, Family] = {
     **tammes.FAMILIES,
     **heilbronn.FAMILIES,
     **moving_sofa.FAMILIES,
+    **lebesgue_cover.FAMILIES,
 }
 
 

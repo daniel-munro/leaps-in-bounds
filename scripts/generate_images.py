@@ -1816,6 +1816,58 @@ def render_moving_sofa(constant_id: str) -> Svg | None:
     return svg
 
 
+############################
+# Lebesgue universal cover #
+############################
+
+def clip(polygon: list[tuple[float, float]], n: tuple[float, float], c: float) -> list[tuple[float, float]]:
+    """The part of a convex polygon where n · p <= c."""
+    out = []
+    for p, q in zip(polygon, polygon[1:] + polygon[:1]):
+        dp, dq = n[0] * p[0] + n[1] * p[1] - c, n[0] * q[0] + n[1] * q[1] - c
+        if dp <= 0:
+            out.append(p)
+        if dp * dq < 0:
+            t = dp / (dp - dq)
+            out.append((p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])))
+    return out
+
+
+def render_lebesgue_cover(constant_id: str) -> Svg | None:
+    """Pál's universal cover: the regular hexagon of width 1, with the corners
+    C and E cut off by two sides of a copy rotated by 30°, holding a disk of
+    diameter 1 and a Reuleaux triangle of width 1."""
+    def polar(r: float, deg: float) -> tuple[float, float]:
+        return (r * math.cos(math.radians(deg)), r * math.sin(math.radians(deg)))
+
+    # Corners A to F clockwise from the top
+    hexagon = [polar(1 / math.sqrt(3), 90 - 60 * i) for i in range(6)]
+    cover = hexagon
+    for deg in (-30, -150):  # toward corners C and E
+        cover = clip(cover, polar(1, deg), 0.5)
+    area = abs(sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(cover, cover[1:] + cover[:1])) / 2)
+    check(abs(area - (2 - 2 / math.sqrt(3))) < 1e-12, f"{constant_id}: Pál's cover doesn't have area 2 - 2/√3")
+
+    # The Reuleaux triangle with vertices at B, D and F: each arc is centered at the opposite vertex
+    b, d, f = hexagon[1], hexagon[3], hexagon[5]
+    reuleaux = []
+    for center, start in ((f, b), (b, d), (d, f)):
+        a0 = math.atan2(start[1] - center[1], start[0] - center[0])
+        reuleaux += [(center[0] + math.cos(a0 - math.pi / 3 * k / 60), center[1] + math.sin(a0 - math.pi / 3 * k / 60)) for k in range(60)]
+    sides = list(zip(cover, cover[1:] + cover[:1]))
+    for x, y in reuleaux:
+        check(all((q[0] - p[0]) * (y - p[1]) - (q[1] - p[1]) * (x - p[0]) <= 1e-9 for p, q in sides),
+              f"{constant_id}: the Reuleaux triangle isn't in the cover")
+
+    r = 1 / math.sqrt(3)
+    svg = Svg(-0.5, -r, 0.5, r)
+    svg.add(svg.polygon(hexagon, fill="none", stroke=INK, stroke_width=1.5, stroke_dasharray="4 3", stroke_linejoin="round"))
+    svg.add(svg.polygon(cover, fill=FILL, stroke=EDGE, stroke_width=2, stroke_linejoin="round"))
+    svg.add(svg.circle((0, 0), 0.5, fill="none", stroke=PALETTE[1], stroke_width=1.5))
+    svg.add(svg.polygon(reuleaux, fill="none", stroke=PALETTE[2], stroke_width=1.5, stroke_linejoin="round"))
+    return svg
+
+
 ############
 
 def ints(constant_id: str, prefix: str) -> list[int]:
@@ -1858,6 +1910,7 @@ FAMILIES: dict[str, tuple[str, Callable[[str], Svg | None]]] = {
     "heilbronn-triangle": ("heilbronn-triangle-", lambda c: render_heilbronn(c, *ints(c, "heilbronn-triangle-"), region="triangle")),
     "tammes": ("tammes-", lambda c: render_tammes(c, *ints(c, "tammes-"))),
     "moving-sofa": ("moving-sofa", render_moving_sofa),
+    "lebesgue-universal-cover": ("lebesgue-universal-cover", render_lebesgue_cover),
 }
 
 

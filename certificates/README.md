@@ -470,6 +470,15 @@ Formal statements are in [`formal/LeapsInBounds/Statements/MovingSofa.lean`](../
 
 Values are written as for disk covering, such as `'2.37'`. Only Lean proofs are accepted, here or attested.
 
+### Lebesgue's universal covering problem: `lebesgue-universal-cover`
+
+Formal statements are in [`formal/LeapsInBounds/Statements/LebesgueCover.lean`](../formal/LeapsInBounds/Statements/LebesgueCover.lean):
+
+- `RadicalLowerBound terms d` means the constant is at least `radical terms d`: every convex set that contains a congruent copy (by an isometry of the plane, reflections included) of every set of diameter at most 1 has at least that area.
+- `RadicalUpperBound terms d` means it's at most `radical terms d`: some such convex set has at most that area.
+
+Values are written as for disk covering, such as `'0.8440935944'`. Only Lean proofs are accepted, here or attested.
+
 ## Checking locally
 
 To run the checkers on certificates, give their IDs:

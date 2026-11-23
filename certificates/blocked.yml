@@ -99,3 +99,25 @@
     Bruijn's theorem that H(t, ·) having only real zeros implies the same for
     every larger t, neither of which is in Mathlib. With those, a proof from
     RiemannHypothesis importing Alpöge's library could be attested.
+
+- constants: [lebesgue-universal-cover]
+  bound: lower
+  reason: out-of-reach
+  checked: 2026-11-22
+  detail: >-
+    Lower bounds are computer-assisted minimizations over placements of a few
+    sets of diameter 1 (Brass and Sharifi 2005; Xie 2026, with 356,816
+    interval-arithmetic domains). Xie publishes the records and a replay
+    verifier, but it checks the records' hashes and pass fields, not the
+    geometry, so it can't be attested; and only Lean proofs are accepted.
+
+- constants: [lebesgue-universal-cover]
+  bound: upper
+  reason: out-of-reach
+  checked: 2026-11-22
+  detail: >-
+    A cover is an explicit convex set, but proving it universal takes the
+    reduction to sets of constant width and a chain of geometric case
+    arguments (Gibbs 2018), which isn't checkable by a witness checker and is
+    far from formalized in Lean. Even Pál's cover, of area 2 - 2/√3, would
+    need Vrečica's extension of sets of diameter 1 to sets of constant width.

@@ -524,6 +524,17 @@ moving-sofa:
   parameters: []
   added_by: daniel-munro
 
+lebesgue-universal-cover:
+  name: "Lebesgue's universal covering problem"
+  description: "The Lebesgue universal covering constant is the smallest area of a convex set in the plane that contains a congruent copy (by rotations, translations and reflections) of every set of diameter $1$. Pál (1920) showed that a regular hexagon of width $1$ with two corners cut off is such a cover, of area $2 - 2/\\sqrt{3}$, and later covers remove more from it."
+  external_ids:
+    msc: 52C15
+    wikipedia_en: "Lebesgue's_universal_covering_problem"
+  display_type: single
+  representative_image: lebesgue-universal-cover
+  parameters: []
+  added_by: daniel-munro
+
 tammes:
   name: "Tammes problem"
   description: "$T(n)$ is the largest possible least angle, in degrees, between two of $n$ points on a sphere: equivalently, the largest angular diameter of $n$ equal circles that can be packed on the sphere without overlapping."

@@ -1722,6 +1722,11 @@ moving-sofa:
     generated: moving-sofa.svg
     alt_text: "Gerver's sofa halfway around the corner of a hallway of width 1, with dashed outlines where it starts in one arm and ends in the other"
 
+lebesgue-universal-cover:
+  image:
+    generated: lebesgue-universal-cover.svg
+    alt_text: "Pál's universal cover: a regular hexagon of width 1, dashed, with two corners cut off along the sides of a copy rotated by 30 degrees, containing a disk of diameter 1 and a Reuleaux triangle of width 1"
+
 tammes-2:
   image:
     generated: tammes-2.svg

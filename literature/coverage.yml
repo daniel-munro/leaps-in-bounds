@@ -295,6 +295,16 @@ moving-sofa:
   - "Hammersley 1968 (Bull. Inst. Math. Appl. 4, 66-85) isn't online; its bounds are taken from Wagner 1976 and Gerver 1992, and Wagner says the proof of 2√2 appeared in an editorial commentary in the same bulletin in 1969 (vol. 5, 80-81)."
   - "The Shephard piano, which Gerver 1992 says slightly improved Hammersley's sofa in the late 1960s, was never published and has no reported area. Romik 2016 reports, from Stewart (2004), that B. F. Logan found Gerver's shape in 1976 but didn't publish it."
 
+lebesgue-universal-cover:
+  status: partial
+  reviewed: 2026-11-22
+  sources: [baez-bagdasaryan-gibbs-2015, gibbs-2018, xie-2026]
+  gaps:
+  - "Pál 1920, Sprague 1936, Hansen 1975, 1981 and 1992, Elekes 1994 and the body of Brass and Sharifi 2005 haven't been read (no open copy, or paywalled); their bounds are taken from Baez, Bagdasaryan and Gibbs 2015 and Gibbs 2018. Hansen's 1975 and 1981 papers may give earlier steps between Sprague's and Hansen's 1992 covers."
+  - "Gibbs, A new slant on Lebesgue's universal covering problem (arXiv:1401.8217, 2014), claims a proved upper bound of 0.844113 (0.8441121 at a slant angle of 0.54°, Section 8). It isn't recorded: Baez, Bagdasaryan and Gibbs 2015, with Gibbs as an author, claim only 0.8441153 a year later, and Gibbs 2018 describes the 2014 paper as a computational study."
+  - "Duff 1980 (C. R. Math. Rep. Acad. Sci. Canada 2, 37-42) gives a smaller non-convex cover, of area 0.84413570 according to Gibbs 2014; the non-convex variant isn't tracked."
+  - "The trivial bounds π/4 (covering a disk) and 1 (a unit square) aren't recorded."
+
 tammes:
   status: partial
   reviewed: 2026-11-17

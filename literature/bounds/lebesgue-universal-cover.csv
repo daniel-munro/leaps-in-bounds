@@ -1,0 +1,10 @@
+constant,lower_bound,upper_bound,source,via
+lebesgue-universal-cover,,2-\frac{2}{\sqrt{3}},pal-1920,gibbs-2018
+lebesgue-universal-cover,\frac{\pi}{8}+\frac{\sqrt{3}}{4},,pal-1920,gibbs-2018
+lebesgue-universal-cover,,{\approx}0.844137708436,sprague-1936,baez-bagdasaryan-gibbs-2015
+lebesgue-universal-cover,,{\approx}0.844137708398,hansen-1992,baez-bagdasaryan-gibbs-2015
+lebesgue-universal-cover,0.8271,,elekes-1994,gibbs-2018
+lebesgue-universal-cover,0.832,,brass-sharifi-2005,
+lebesgue-universal-cover,,0.8441153,baez-bagdasaryan-gibbs-2015,
+lebesgue-universal-cover,,0.8440935944,gibbs-2018,
+lebesgue-universal-cover,0.833,,xie-2026,
