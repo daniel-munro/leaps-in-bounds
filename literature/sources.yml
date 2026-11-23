@@ -5147,7 +5147,7 @@ kottwitz-1991:
   string: "D.A. Kottwitz, The densest packing of equal circles on a sphere, Acta Crystallographica A47 (1991) 158-165."
   date: "1991-05-01"
   doi: "https://doi.org/10.1107/S0108767390011370"
-  notes: "The configurations of 21, 22, 25, 26, 28 and 29 points credited by Cohn's table of spherical codes. Not read directly."
+  notes: "The configurations of 21, 22, 25, 26, 28 and 29 points credited by Cohn's table of spherical codes. The paper itself not read. Its IUCr deposited supplement (SUP 53778, 120 scanned pages) was read: a title page with the abstract, dated 30 April 1990 and marked as submitted to Acta Cryst. A (no received date), then Appendix A (Table 3, the polar coordinates of every point of the structures for N = 13 to 90, with two per-point quantities A_i and B_i and a point label) and Appendix B (diagrams of the packings). It gives no least angles and no comparison with earlier records, so the values here still come through Cohn's table."
   added_by: daniel-munro
 
 tarnai-gaspar-1991:
