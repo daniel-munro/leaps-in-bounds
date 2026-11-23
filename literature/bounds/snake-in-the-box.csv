@@ -12,7 +12,7 @@ snake-in-the-box-5,,13,davies-1965,allison-paulusma-2016b
 snake-in-the-box-6,26,,davies-1965,allison-paulusma-2016b
 snake-in-the-box-6,,26,davies-1965,allison-paulusma-2016b
 snake-in-the-box-7,50,,potter-et-al-1994,casella-potter-2005a
-snake-in-the-box-7,,50,kochut-1996,drapela-2015
+snake-in-the-box-7,,50,potter-et-al-1994,pettersson-2015
 snake-in-the-box-8,97,,rajan-shende-1999,casella-potter-2005a
 snake-in-the-box-8,98,,carlson-hougen-2010,uga-sib-records
 snake-in-the-box-8,,98,ostergard-pettersson-2014-snake,
@@ -23,7 +23,7 @@ snake-in-the-box-9,191,,orland-et-al-2026,minortriad-snake
 snake-in-the-box-10,358,,casella-potter-2005a,
 snake-in-the-box-10,363,,tuohy-potter-casella-2007,uga-sib-records
 snake-in-the-box-10,367,,kinny-2011,uga-sib-records
-snake-in-the-box-10,370,,kinny-2012,allison-paulusma-2016b
+snake-in-the-box-10,370,,kinny-2012,
 snake-in-the-box-10,373,,ace-2025a,minortriad-snake
 snake-in-the-box-10,376,,ace-2025c,minortriad-snake
 snake-in-the-box-10,379,,orland-et-al-2026,minortriad-snake
@@ -72,8 +72,8 @@ snake-in-the-box-9,182,,bitterman-2004,
 snake-in-the-box-10,338,,paterson-tuliani-1998,casella-potter-2005a
 snake-in-the-box-11,618,,abbott-katchalski-1991,lukito-2000
 snake-in-the-box-12,1236,,abbott-katchalski-1991,lukito-2000
-snake-in-the-box-11,695,,kinny-2012,uga-sib-records-2013
-snake-in-the-box-12,1274,,kinny-2012,uga-sib-records-2013
+snake-in-the-box-11,695,,kinny-2012,
+snake-in-the-box-12,1274,,kinny-2012,
 snake-in-the-box-11,705,,meyerson-et-al-2014,
 snake-in-the-box-13,2466,,abbott-katchalski-1991,meyerson-et-al-2014
 snake-in-the-box-9,,255,taylor-2026,
@@ -81,3 +81,8 @@ snake-in-the-box-10,,511,taylor-2026,
 snake-in-the-box-11,,1023,taylor-2026,
 snake-in-the-box-12,,2047,taylor-2026,
 snake-in-the-box-13,,4095,taylor-2026,
+snake-in-the-box-8,88,,abbott-katchalski-1991,kinny-2012
+snake-in-the-box-8,94,,paterson-tuliani-1998,kinny-2012
+snake-in-the-box-10,322,,abbott-katchalski-1991,kinny-2012
+snake-in-the-box-11,697,,kinny-2012b,
+snake-in-the-box-12,1278,,kinny-2012b,

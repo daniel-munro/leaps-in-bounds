@@ -50,11 +50,13 @@ tammes-16,,{\approx}54.85489,fejes-toth-1943,
 tammes-16,,{\approx}53.97696,robinson-1961,
 tammes-16,,53.92,boroczky-szabo-2003,bachoc-vallentin-2008
 tammes-16,,53.27,bachoc-vallentin-2008,
-tammes-17,{\approx}51.0903285516,,danzer-1986,cohn-spherical-codes
+tammes-17,{\approx}51.03333,,jucovic-1959,tarnai-gaspar-1983
+tammes-17,{\approx}51.0903285516,,danzer-1963,tarnai-gaspar-1983
 tammes-17,,{\approx}53.20216,fejes-toth-1943,
 tammes-17,,{\approx}52.24402,robinson-1961,
 tammes-17,,52.11,boroczky-szabo-2003,bachoc-vallentin-2008
 tammes-17,,51.69,bachoc-vallentin-2008,
+tammes-18,{\approx}49.55158,,strohmajer-1963,tarnai-gaspar-1983
 tammes-18,{\approx}49.5566547684,,tarnai-gaspar-1983,cohn-spherical-codes
 tammes-18,,{\approx}51.69012,fejes-toth-1943,
 tammes-18,,{\approx}50.68095,robinson-1961,
@@ -84,6 +86,7 @@ tammes-25,,{\approx}42.79907,robinson-1961,
 tammes-26,{\approx}41.0376616067,,kottwitz-1991,cohn-spherical-codes
 tammes-26,,{\approx}42.94935,fejes-toth-1943,
 tammes-26,,{\approx}41.96192,robinson-1961,
+tammes-27,{\approx}40.67755,,goldberg-1967,tarnai-gaspar-1983
 tammes-27,{\approx}40.6776006851,,tarnai-gaspar-1983,cohn-spherical-codes
 tammes-27,,{\approx}42.14145,fejes-toth-1943,
 tammes-27,,{\approx}41.17392,robinson-1961,

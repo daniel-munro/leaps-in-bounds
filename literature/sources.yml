@@ -2321,6 +2321,7 @@ davies-1965:
 potter-et-al-1994:
   string: "W.D. Potter, R.W. Robinson, J.A. Miller, K.J. Kochut and D.Z. Redys, Using the genetic algorithm to find snake-in-the-box codes, Proceedings of the 7th International Conference on Industrial and Engineering Applications of Artificial Intelligence and Expert Systems (IEA/AIE 1994) 421-426."
   date: "1994"
+  notes: "Not read (not online). Pettersson's thesis (Section 4.1.1 and Table 4.1) credits it with both bounds of s(7) = 50: it found the snake of length 50 with a genetic algorithm and reports verifying by exhaustive search that it is optimal, without details. Östergård-Pettersson 2014 (Table 1) and Kinny's MIWAI 2012 paper (Table 1) also credit s(7) = 50 to it, and Kinny's ECAI 2012 paper (Table 2) credits it with s(8) >= 89."
   added_by: daniel-munro
 
 kochut-1996:
@@ -2332,6 +2333,7 @@ paterson-tuliani-1998:
   string: "K.G. Paterson and J. Tuliani, Some new circuit codes, IEEE Transactions on Information Theory 44 (1998) 1305-1309."
   date: "1998-05"
   doi: "https://doi.org/10.1109/18.669420"
+  notes: "Kinny's ECAI 2012 paper (Table 2) credits it with the snake lower bounds s(8) >= 94 and s(10) >= 338 (its coils of lengths 96 and 340 less a vertex) as well as the coils."
   added_by: daniel-munro
 
 rajan-shende-1999:
@@ -2389,6 +2391,35 @@ kinny-2012:
   string: "D. Kinny, A new approach to the snake-in-the-box problem, Proceedings of the 20th European Conference on Artificial Intelligence (ECAI 2012) 462-467."
   date: "2012-08"
   doi: "https://doi.org/10.3233/978-1-61499-098-7-462"
+  notes: "ECAI 2012 was held 2012-08-27 to 31. Table 2 gives the snakes of lengths 370, 695 and 1274 in dimensions 10 to 12 as new, and the history of the lower bounds on s(n) and c(n) for n = 8 to 15 with sources (Abbott-Katchalski 1991, Potter et al. 1994, Paterson-Tuliani 1998, Rajan-Shende 1999, Casella-Potter 2005, Tuohy et al. 2007, Carlson-Hougen 2010, Wynn), and the upper bounds on c(n) of Solov'jeva 1987 and Lukito 1998."
+  added_by: daniel-munro
+
+kinny-2012b:
+  string: "D. Kinny, Monte-Carlo search for snakes and coils, Multi-disciplinary Trends in Artificial Intelligence (MIWAI 2012), Lecture Notes in Computer Science 7694 (2012) 271-283."
+  date: "2012-12"
+  doi: "https://doi.org/10.1007/978-3-642-35455-7_25"
+  notes: "MIWAI 2012 was held in December 2012 (the proceedings' title page says December 26-28, the preface December 25-27). Section 4 and Table 1 give snakes of lengths 697 and 1278 in dimensions 11 and 12, improving the ECAI 2012 paper's 695 and 1274 (Table 1 compares them only with Casella-Potter's 680 and 1260); the appendix gives their transition sequences."
+  added_by: daniel-munro
+
+hood-et-al-2013:
+  string: "S. Hood, D. Recoskie, J. Sawada and D. Wong, Snakes, coils, and single-track circuit codes with spread k, Journal of Combinatorial Optimization 30 (2015) 42-62."
+  date: "2013-05-29"
+  doi: "https://doi.org/10.1007/s10878-013-9630-z"
+  notes: "Published online 2013-05-29; a preprint was on Sawada's web page by 2011. Tables 1 and 2 give the longest known k-coils and k-snakes for n <= 17 and k <= 7; for spread k = 2 (coil-in-the-box and snake-in-the-box) they list only earlier values (snakes 190, 370, 695, 1274, 2466 for n = 9 to 13), with no new records."
+  added_by: daniel-munro
+
+evdokimov-2014:
+  string: "A.A. Evdokimov, Chain codes and the snake-in-the-box problem (in Russian), Uchenye Zapiski Kazanskogo Universiteta, Seriya Fiziko-Matematicheskie Nauki 156 (2014), no. 3, 55-65."
+  date: "2014"
+  url: "https://www.mathnet.ru/eng/uzku1265"
+  notes: "Received 2014-08-06, from a plenary talk in June 2014. Table 1 lists the longest known snakes (open) and coils for n <= 12, without sources: snakes 370, 697 and 1278 and coils 348, 640 and 1238 for n = 10 to 12. Section 3 states upper bounds of Glagolev (1966), Larman, Douglas (1969) and Zémor (1997) for the length L(n,2) of a chain (snake), though the cited papers are about cycles (coils), so they aren't recorded for snakes."
+  added_by: daniel-munro
+
+emelyanov-lukito-2000:
+  string: "P.G. Emelyanov and A. Lukito, On the maximal length of a snake in hypercubes of small dimension, Discrete Mathematics 218 (2000) 51-59."
+  date: "2000"
+  doi: "https://doi.org/10.1016/S0012-365X(99)00335-0"
+  notes: "Received 1997-07-21, revised 1999-03-24. A snake here is an induced cycle (a coil). Theorem 6 gives an upper bound 2^(n-1) - 2^n/(5n + 59 + o(1)) for n >= 8, better than earlier bounds only for 37 <= n <= 19079 (for n = 8 to 13 it is weaker than Solov'jeva's and Lukito's), and Section 1 lists the bounds of Solov'jeva, Snevily, Emelyanov and Lukito. It gives no bounds for open snakes."
   added_by: daniel-munro
 
 ostergard-pettersson-2014-coil:
@@ -2401,6 +2432,7 @@ ostergard-pettersson-2014-snake:
   string: "P.R.J. Östergård and V.H. Pettersson, Exhaustive search for snake-in-the-box codes, Graphs and Combinatorics 31 (2015) 1019-1028."
   date: "2014-05-01"
   doi: "https://doi.org/10.1007/s00373-014-1423-3"
+  notes: "Received 2013-05-06, revised 2014-02-28, published online 2014-05-01. Proves s(8) = 98 by exhaustive search. Table 1 credits s(7) = 50 to Potter et al. (1994) and s(8) >= 98 to Carlson-Hougen (2010)."
   added_by: daniel-munro
 
 meyerson-et-al-2015:
@@ -2622,7 +2654,7 @@ toner-2026:
 abbott-katchalski-1991:
   string: "H.L. Abbott and M. Katchalski, On the construction of snake in the box codes, Utilitas Mathematica 40 (1991) 97-116."
   date: "1991"
-  notes: "Not read (not online). Lukito's thesis (p. 7, Table 1) credits it with the coil lengths 170, 620, 1238 and 2468 for n = 9, 11, 12, 13. Kochut (1996, Table 2) lists 88, 170, 324 and 620 for n = 8 to 11, credited to it and to Even (1963) together."
+  notes: "Not read (not online). Lukito's thesis (p. 7, Table 1) credits it with the coil lengths 170, 620, 1238 and 2468 for n = 9, 11, 12, 13. Kinny's ECAI 2012 paper (Table 2) credits it with the coils of lengths 88, 170, 324, 620, 1238 and 2468 for n = 8 to 13, and the snakes of lengths 88, 168, 322, 618, 1236 and 2466. Kochut (1996, Table 2) lists 88, 170, 324 and 620 for n = 8 to 11, credited to it and to Even (1963) together."
   added_by: daniel-munro
 
 danzer-klee-1967:
@@ -2670,7 +2702,7 @@ pettersson-2015:
   string: "V. Pettersson, Graph Algorithms for Constructing and Enumerating Cycles and Related Structures, Doctoral dissertation, Aalto University, Doctoral Dissertations 127/2015."
   date: "2015-10-02"
   url: "https://aaltodoc.aalto.fi/handle/123456789/17688"
-  notes: "Table 4.1 (Section 4.1.1) gives the sources of the lower and upper bounds on s(n) and c(n) for n <= 8. Date of the defense."
+  notes: "Table 4.1 (Section 4.1.1) gives the sources of the lower and upper bounds on s(n) and c(n) for n <= 8: s(n) for n <= 6 to Davies (1965), both bounds of s(7) = 50 to Potter et al. (1994), who report verifying it optimal by exhaustive search, and s(8) = 98 to Carlson-Hougen (2010) and Östergård-Pettersson. Manuscript submitted 2015-04-30; date of the defense."
   added_by: daniel-munro
 
 wynn-2010:
@@ -4398,7 +4430,20 @@ moser-moser-1961:
   string: "L. Moser and W. Moser, Solution to Problem 10, Canadian Mathematical Bulletin 4 (1961) 187-189."
   date: "1961-05"
   doi: "https://doi.org/10.1017/S0008439500025765"
-  notes: "The Moser spindle, a 7-vertex unit-distance graph with chromatic number 4. The DOI is for the issue's Solutions section, pp. 187-194. Not read directly; attributed by Exoo and Ismailescu (arXiv:1408.2002, Table 1), de Grey (2018) and Cibulka (2007). Soifer credits the bound 4 to Edward Nelson in November 1950, unpublished; the problem was published by Gardner (Scientific American, October 1960) and Hadwiger (Elemente der Mathematik 16, 1961), neither read."
+  notes: "Problem P10 asks to prove that any 6 points in the plane can be 3-colored with no two points at unit distance of the same color, and that 6 can't be replaced by 7. The proposers' solution exhibits (Fig. 2) the 7-point configuration, the Moser spindle, that can't be 3-colored, so chi(R^2) >= 4. The DOI is for the issue's Solutions section, pp. 187-194. Gardner (Scientific American, October 1960) had already reported, from Leo Moser, that four colors are known to be necessary, so the bound is credited to Gardner. The problem itself was posed in an earlier issue of the Bulletin, not found."
+  added_by: daniel-munro
+
+gardner-1960:
+  string: "M. Gardner, Mathematical Games: A new collection of \"brain-teasers\", Scientific American 203:4 (October 1960) 172-184."
+  date: "1960-10"
+  url: "https://www.jstor.org/stable/24940666"
+  notes: "On p. 180, in the answer to the previous month's two-color triangle problem: Leo Moser, who sent the problem, writes that it isn't known how many colors are needed so that no two points at unit distance have the same color, and that four have been shown necessary and seven sufficient. No proof or construction is given; the 7-point Moser spindle appeared in Moser and Moser's solution to Problem 10 (Canadian Mathematical Bulletin, 1961). The earliest publication found of chi(R^2) >= 4. Soifer credits the bound to Edward Nelson in November 1950, unpublished."
+  added_by: daniel-munro
+
+hadwiger-1961:
+  string: "H. Hadwiger, Ungelöste Probleme Nr. 40, Elemente der Mathematik 16 (1961) 103-104."
+  date: "1961-09-10"
+  notes: "Dated by its issue (Nr. 5, Basel, 10 September 1961). Asks for the least number of sets covering the plane with none containing two points at distance 1, and says that all that is known is 4 <= m <= 7, crediting the problem to E. Nelson and bounds to J. Isbell, from V. L. Klee. Proves m >= 4 by rotating a rhombus of two unit equilateral triangles about a vertex, and m <= 7 by the 7-coloring from Hadwiger (1945). Later than Gardner (1960) and Moser and Moser (1961), so it gives no new bound."
   added_by: daniel-munro
 
 hadwiger-1945:
@@ -4425,9 +4470,9 @@ cibulka-2007:
 
 kupavskii-2011-norm:
   string: "A. Kupavskiy, On the chromatic number of R^n with an arbitrary norm, Discrete Mathematics 311 (2011) 437-440."
-  date: "2011"
+  date: "2011-01-05"
   doi: "https://doi.org/10.1016/j.disc.2010.12.005"
-  notes: "Not read directly (ScienceDirect refuses automated access). Credited with chi(R^11) >= 25 by Cherkashin, Kulikov and Raigorodskii (2015). Online 2011-01-06 according to OpenAlex; March 2011 issue."
+  notes: "Received 2010-06-15, revised 2010-12-02, online 2011-01-05. Proves chi(R^n_K) <= (4+o(1))^n for any norm, and better for l_p norms; it gives no bound for the Euclidean chromatic number in small dimensions. Cherkashin, Kulikov and Raigorodskii (2015) cite it for chi(R^11) >= 25, which is instead in Kupavskii and Raigorodskii's EuroComb note (2009, Remark 2)."
   added_by: daniel-munro
 
 kupavskii-2011-spheres:
@@ -4485,21 +4530,21 @@ larman-rogers-1972:
   string: "D. G. Larman and C. A. Rogers, The realization of distances within sets in Euclidean space, Mathematika 19 (1972) 1-24."
   date: "1972-06"
   doi: "https://doi.org/10.1112/S0025579300004903"
-  notes: "Not read directly. Credited with chi(R^5) >= 8, chi(R^6) >= 10 and chi(R^7) >= 14 by Cibulka (2007), chi(R^8) >= 16 by Cherkashin, Kulikov and Raigorodskii (2015), Kahle and Taha (2014) and Cibulka (2007), and chi(R^10) >= 19 and chi(R^12) >= 24 by Kupavskii and Raigorodskii (2008) (also Exoo and Ismailescu 2014 for 24). Also proves chi(R^n) <= (3+o(1))^n."
+  notes: "Received 1972-01-31; June 1972 issue. Theorem 4(b), with Table 1: if R^n is covered by fewer than N_n sets, one of them realizes every distance, so chi(R^n) >= ceil(N_n), with N_n = 8 (n = 5, the half-cube), 9 7/8 (n = 6, the half-cube spindle), 14 (n = 7, the Gosset polytope), 16 (n = 8, 9, 10) and 17 15/16 (n = 11, 12, 13). A note added on 1972-05-25 uses an Erdős-Sós lemma on triples (Lemma 18) to replace N_n by (n+1)n/6 for n = 1, 2 (mod 4), n(n-1)/6 for n = 3 (mod 4) and (n+1)(n-1)/6 for n = 0 (mod 4), for 10 <= n <= 22, giving chi(R^10) >= 19, chi(R^11) >= 19 and chi(R^12) >= 24; the numbers aren't written out in the paper, but Kupavskii and Raigorodskii (2008, 2009) credit it with 19 and 24 for n = 10 and 12. Also proves chi(R^n) <= (3+o(1))^n (Assertion 1)."
   added_by: daniel-munro
 
 szekely-wormald-1989:
   string: "L. A. Székely and N. C. Wormald, Bounds on the measurable chromatic number of R^n, Discrete Mathematics 75 (1989) 343-372."
   date: "1989-05"
   doi: "https://doi.org/10.1016/0012-365X(89)90099-X"
-  notes: "Not read directly. Credited with chi(R^3) <= 21 by Radoičić and Tóth (2003). Coulson (1997) instead credits 21 to Soifer, from a coloring based on the face-centered cubic lattice."
+  notes: "Its introduction (p. 347) states 5 <= chi(R^3) <= chi_m(R^3) <= 21, crediting the lower bound to Raiskii and saying of the upper bound only that the coloring is an exercise for the reader; no earlier source for 21 is given. Coulson (1997) credits a 21-coloring based on the face-centered cubic lattice to Soifer."
   added_by: daniel-munro
 
 cantwell-1996:
   string: "K. Cantwell, Finite Euclidean Ramsey theory, Journal of Combinatorial Theory, Series A 73 (1996) 273-285."
   date: "1996-02"
   doi: "https://doi.org/10.1006/jcta.1996.0022"
-  notes: "Not read directly. Credited with chi(R^4) >= 7, by a graph of more than 2000 vertices, by Exoo, Ismailescu and Lim (2014), who note the later independent proofs by Ivanov (2006) and Cibulka (2008), and with chi(R^5) >= 9 by Exoo and Ismailescu (2014)."
+  notes: "Received 1994-10-20. Theorem 3.1: chi(R^4) >= 7; Theorem 4.1: chi(R^5) >= 9. It cites Larman and Rogers (1972) for the earlier lower bounds 4, 5, 6 and 8 for n = 2 to 5. Ivanov (2006) and Cibulka (2008) later proved chi(R^4) >= 7 independently."
   added_by: daniel-munro
 
 coulson-1997:
@@ -4528,7 +4573,7 @@ nechushtan-2002:
   string: "O. Nechushtan, On the space chromatic number, Discrete Mathematics 256 (2002) 499-507."
   date: "2002-09"
   doi: "https://doi.org/10.1016/S0012-365X(00)00406-4"
-  notes: "Received 2000-01-29."
+  notes: "Received 2000-01-29, revised 2000-06-26, accepted 2000-07-26. Proves chi(R^3) >= 6, improving Raiskii's 5. It gives 21 as the best known upper bound, so it doesn't know of Coulson's 18 (1997)."
   added_by: daniel-munro
 
 radoicic-toth-2003:
@@ -4565,7 +4610,7 @@ kupavskii-raigorodskii-2009-endm:
   string: "A. B. Kupavskii and A. M. Raigorodskii, On the chromatic numbers of small-dimensional Euclidean spaces, Electronic Notes in Discrete Mathematics 34 (2009) 435-439 (EuroComb 2009)."
   date: "2009-09"
   doi: "https://doi.org/10.1016/j.endm.2009.07.072"
-  notes: "Not read directly (ScienceDirect refuses automated access). Credited with chi(R^12) >= 25 by Kahle and Taha (2014), who also credit it with chi(R^10) >= 23 and chi(R^11) >= 23; those two appeared first in Kupavskii and Raigorodskii's paper on R^9 (2008)."
+  notes: "Dated by the EuroComb 2009 conference (Bordeaux, September 2009); the PDF was made in July 2009. Theorem 1: chi(R^9) >= 21, chi(R^10) >= 23, chi(R^11) >= 23, chi(R^12) >= 25; Remark 2: Theorem 1 with a lifting theorem (Theorem 2: a bound m from a graph on a suitable sphere in R^n gives chi(R^{n+2}) >= m + 4) gives chi(R^11) >= 25. The bounds for n = 9, 10 and 11 (23) appeared first in the authors' paper on R^9 (2008). Section 2 surveys earlier lower bounds for 5 <= n <= 12: 9 (Cantwell 1996), 11 (Cibulka 2008), 15 (Raigorodskii 2001), 16 and 16 for n = 8 and 9 (Székely 2002), 19 (Larman and Rogers 1972), 20 (Raigorodskii 2001), 24 (Larman and Rogers 1972)."
   added_by: daniel-munro
 
 exoo-ismailescu-lim-2014:
@@ -4996,7 +5041,7 @@ rutishauser-1945:
 danzer-1963:
   string: "L. Danzer, Endliche Punktmengen auf der 2-Sphäre mit möglichst großem Minimalabstand, Habilitationsschrift, Universität Göttingen (1963); English translation in Discrete Mathematics 60 (1986) 3-66."
   date: "1963"
-  notes: "Not read. Solves N = 10 and 11, as reported by Musin and Tarasov (musin-tarasov-2014, abstract and Section 1.2; musin-tarasov-2014-steklov, Section 2.3, which says danzer-1986 is its translation). Böröczky (boroczky-1983) gave another proof for N = 11."
+  notes: "Read in its 1986 translation (danzer-1986), whose references were extended to 1984. Theorem I (p. 45-46) determines the optimal sets for k = 7 to 12, so N = 10 and 11 are solved here; footnote 46 says Schütte and van der Waerden had only conjectured them. Section 3 (Fig. 3.4) shows that Jucovič's 17-point graph can be improved; Tarnai and Gáspár (tarnai-gaspar-1983, p. 202 and Table 1), citing the 1963 Habilitationsschrift, say this improved arrangement was Danzer's but that he didn't compute its edge length, which they give as 51° 5' 25.2\". The value recorded for N = 17 is the one in Cohn's table (cohn-spherical-codes), which credits the configuration to danzer-1986."
   added_by: daniel-munro
 
 robinson-1959:
@@ -5038,7 +5083,25 @@ tarnai-gaspar-1983:
   string: "T. Tarnai and Zs. Gáspár, Improved packing of equal circles on a sphere and rigidity of its graph, Mathematical Proceedings of the Cambridge Philosophical Society 93 (1983) 191-218."
   date: "1983-03"
   doi: "https://doi.org/10.1017/S0305004100060485"
-  notes: "The configurations of 18 and 27 points credited by Cohn's table of spherical codes."
+  notes: "Received 1982-07-13, published in the March 1983 issue. Improves the arrangements of 18 points (Strohmajer/Kólya 1963 and Goldberg 1965, 49° 33' 5.7\" to 49° 33' 24.0\") and 27 points (Goldberg 1967, 40° 40' 39.2\" to 40° 40' 39.4\"), and computes the edge length of Danzer's 1963 improvement of Jucovič's 17 points (51° 2' to 51° 5' 25.2\"); Table 1 also lists Karabinta's 1973 thesis (51° 5', cited through Székely 1974) for 17 points, which doesn't improve on Danzer. The values recorded for its own arrangements are the ones in Cohn's table (cohn-spherical-codes), which credits them to this paper."
+  added_by: daniel-munro
+
+jucovic-1959:
+  string: "E. Jucovič, Umiestnenie 17, 25 a 33 bodov na guli (Arrangement of 17, 25 and 33 points on a sphere), Matematicko-fyzikálny časopis Slovenskej akadémie vied 9 (1959) 173-176."
+  date: "1959"
+  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 201 and Fig. 3a) give its 17-point arrangement an angular diameter of 51° 2', and Danzer (danzer-1986, Fig. 3.4 and Section 3) reproduces its graph for 17 points and shows it isn't relatively optimal. Its 25-point arrangement isn't recorded, since no source read gives its value; Danzer's footnote 38 says the 33-point one can be improved."
+  added_by: daniel-munro
+
+strohmajer-1963:
+  string: "J. Strohmajer, Über die Verteilung von Punkten auf der Kugel, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 6 (1963) 49-53."
+  date: "1963"
+  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 203 and Table 1) credit its arrangement of 18 points, with angular diameter 49° 33' 5.7\", to 'Kólya' citing this paper (their reference 22), and say Goldberg found it independently (Packing of 18 equal circles on a sphere, Elemente der Mathematik 20 (1965) 59-61)."
+  added_by: daniel-munro
+
+goldberg-1967:
+  string: "M. Goldberg, Axially symmetric packing of equal circles on a sphere, Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica 10 (1967) 37-48."
+  date: "1967"
+  notes: "Not read. Tarnai and Gáspár (tarnai-gaspar-1983, p. 206 and Table 1) credit it with the arrangement of 27 points with angular diameter 40° 40' 39.2\" that they improve, and with an arrangement of 32 points. Danzer (danzer-1986, p. 65) names it among the sharpest bounds for k > 13 known by the 1980s; its values for other N aren't known here."
   added_by: daniel-munro
 
 boroczky-1983:
@@ -5058,7 +5121,7 @@ danzer-1986:
   string: "L. Danzer, Finite point-sets on S² with minimum distance as large as possible, Discrete Mathematics 60 (1986) 3-66."
   date: "1986"
   doi: "https://doi.org/10.1016/0012-365X(86)90002-6"
-  notes: "Solves N = 10 and 11, from Danzer's Habilitationsschrift (1963), as reported by Musin and Tarasov (2012, 2015); gives the configuration of 17 points credited by Cohn's table of spherical codes. Not read directly."
+  notes: "Received 1986-01-30. Translation by N. Dreyer of Danzer's 1963 Habilitationsschrift (danzer-1963), to which its results, including the solutions for N = 10 and 11 and the improved 17-point arrangement, are credited here."
   added_by: daniel-munro
 
 kottwitz-1991:
