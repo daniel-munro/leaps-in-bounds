@@ -2821,6 +2821,13 @@ hall-et-al-1975:
   notes: "Credited with solutions for n <= 10 on the records page, http://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html"
   added_by: daniel-munro
 
+adena-holton-kelly-1974:
+  string: "M.A. Adena, D.A. Holton and P.A. Kelly, Some thoughts on the no-three-in-line problem, in Combinatorial Mathematics: Proceedings of the Second Australian Conference (Melbourne, 1973), Lecture Notes in Mathematics 403, Springer, 1974, 6-17."
+  date: "1974"
+  doi: "https://doi.org/10.1007/BFb0057371"
+  notes: "Table 1 (p. 7) counts the 2n-point solutions for n = 2 to 10, all found by computer (Kelly; Adena and Holton). Says a solution for n = 12 was found by hand (Figure 1), but the configuration printed, the n = 10 solution with a border and the four corners added, has four collinear triples through the corners, so no bound is taken from it. The foreword is dated August 1973."
+  added_by: daniel-munro
+
 craggs-hughes-jones-1976:
   string: "D. Craggs and R. Hughes-Jones, On the no-three-in-line problem, Journal of Combinatorial Theory, Series A 20 (1976) 363-364."
   date: "1976-05"
@@ -3313,9 +3320,9 @@ ehlers-muller-2015:
 
 ehlers-2017:
   string: "T. Ehlers, Merging almost sorted sequences yields a 24-sorter, Information Processing Letters 118 (2017) 17-20."
-  date: "2016-09"
+  date: "2016-09-20"
   doi: "https://doi.org/10.1016/j.ipl.2016.08.005"
-  notes: "A network of depth 12 for 24 inputs, and so for 23. Dated by its online publication. Not seen; credited by Wang (2025), Table 1, and Dobbelaere's list."
+  notes: "A network of depth 12 for 24 inputs, and so for 23, improving the previous best by one layer (abstract; Table 2, p. 18, gives the best known depths and bounds for 13 to 24 inputs). Received 2016-03-16, online 2016-09-20."
   added_by: daniel-munro
 
 harder-2019:

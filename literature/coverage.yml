@@ -241,10 +241,11 @@ cap-set:
 no-three-in-line:
   status: complete
   reviewed: 2026-11-22
-  sources: [flammenkamp-no3in, oeis-a272651-no-three-in-line, guy-kelly-1968-rp33, guy-kelly-1968]
+  sources: [flammenkamp-no3in, oeis-a272651-no-three-in-line, guy-kelly-1968-rp33, guy-kelly-1968, adena-holton-kelly-1974]
   gaps:
   - "The earliest sources for n <= 10 (other than Dudeney's n = 8), Acland-Hood and Guy in Bull. Malayan Math. Soc. 0 (1952-53) E11-12 and E22 and Kelly's 1967 Calgary master's thesis, couldn't be found online; n = 2 to 7 and 9 are dated to Guy and Kelly's Research Paper 33 (January 1968), and n = 10 to their Canad. Math. Bull. paper (October 1968), which cite them."
-  - "Hall, Jackson, Sudbery and Wild 1975, credited for n <= 10 on Flammenkamp's page, and Adena, Holton and Kelly 1974 (Lecture Notes in Math. 403) weren't read (paywalled); Guy and Kelly 1968 already state n <= 10, and Flammenkamp's reference list credits Adena et al. with no grid sizes."
+  - "Hall, Jackson, Sudbery and Wild 1975, credited for n <= 10 on Flammenkamp's page, wasn't read (paywalled); Guy and Kelly 1968 already state n <= 10."
+  - "Adena, Holton and Kelly 1974 (p. 6 and Figure 1, p. 7) say a solution for n = 12 was found by hand, but the 24-point configuration they print, their n = 10 solution with a border and the four corners added, has four collinear triples through the corners (such as rows and columns (0,0), (4,2), (10,5)), so it isn't recorded; n = 12 stays with Craggs and Hughes-Jones 1976."
   - "No 2n-point configuration, or any explicit bound, is known in the literature for n = 75 and 77: Flammenkamp's table (updated 2026-10-28) leaves both rows empty and MathWorld lists them as the only open n <= 78. Their lower bounds 148 and 152 come only from this site's certificates, which reuse the n = 74 and 76 solutions."
 
 isosceles-set:
@@ -268,10 +269,10 @@ sorting-network-size:
 sorting-network-depth:
   status: complete
   reviewed: 2026-11-22
-  sources: [dobbelaere-sorting-networks, parberry-1991, bundala-zavodny-2013, ehlers-muller-2014, ehlers-muller-2015, codish-et-al-2015, baddar-2009, wang-2025]
+  sources: [dobbelaere-sorting-networks, parberry-1991, bundala-zavodny-2013, ehlers-muller-2014, ehlers-muller-2015, codish-et-al-2015, baddar-2009, ehlers-2017, wang-2025]
   gaps:
   - "Knuth 1973 wasn't read: the depths for up to 16 inputs (networks by Shapiro, Van Voorhis and others, mostly unpublished) and the optimal depths for up to 8 are credited to it through Parberry's Table 1 and Bundala and Závodný's Fig. 2, so earlier dates for some of them may be missing."
-  - "The depths from odd-even merging of smaller networks, 12 for 17 to 20 inputs, 13 for 21 to 24 and 14 for 25 to 32, were known before Baddar's thesis but are first stated, as far as found, in its Table 3.4 (2009), which dates them here. The bounds 12 for 17 and 18 and 13 for 21 and 22 aren't recorded, since Baddar and Batcher's own networks improved them by that date. Their technical reports TR-KSU-CS-2007-06 and TR-KSU-CS-2008-05 (the 22-input network, which Ehlers and Müller credit for 19 to 22 inputs <= 12) weren't found, and the 2009 Parallel Processing Letters paper and Ehlers 2017 weren't read (paywalled)."
+  - "The depths from odd-even merging of smaller networks, 12 for 17 to 20 inputs, 13 for 21 to 24 and 14 for 25 to 32, were known before Baddar's thesis but are first stated, as far as found, in its Table 3.4 (2009), which dates them here. The bounds 12 for 17 and 18 and 13 for 21 and 22 aren't recorded, since Baddar and Batcher's own networks improved them by that date. Their technical reports TR-KSU-CS-2007-06 and TR-KSU-CS-2008-05 (the 22-input network, which Ehlers and Müller credit for 19 to 22 inputs <= 12) weren't found, and the 2009 Parallel Processing Letters paper wasn't read (paywalled). Ehlers 2017 (p. 17 and Table 2) confirms 13 as the best depth for 23 and 24 inputs before his 12."
   - "Lower bounds from monotonicity that no source states for each n aren't recorded, such as D(n) >= 9 for 21 to 32 inputs from Bundala and Závodný (2013)."
 
 rectilinear-crossing:
