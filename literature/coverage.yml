@@ -86,7 +86,8 @@ cage:
   reviewed: 2026-11-23
   sources: [ejc-ds16-cages, exoo-et-al-2026, wong-1982, biggs-1989, biggs-1998, delacruz-pizana-2025, abajo-et-al-2019, royle-cages-1999, royle-cages-2001-08, royle-cages-2001-12, royle-cages-2002-04, royle-cages-2003-03, royle-cages-2006-06, exoo-1999, exoo-circa-2012]
   gaps:
-  - "Not obtained, so credited from secondary sources: Robertson 1964 ((4,5) = 19), Balaban 1973 ((3,11) 112), Hoare 1983 ((3,13) 272, (3,14) 406, both confirmed by Biggs 1989), Eroh-Schwenk 1999 (girth-5 excess 2 for 5 <= k <= 11), Brown 1967 in J. London Math. Soc. (girth-6 bound 2qk, via Wong 1982) and Schwenk's 2008 talk. Baker's 1978 elliptic semiplane, the first (7,6)-graph on 90 vertices, wasn't read, so 90 is credited to O'Keefe-Wong 1981."
+  - "Not obtained, so credited from secondary sources: Robertson 1964 ((4,5) = 19), Balaban 1973 ((3,11) 112), Hoare 1983 ((3,13) 272, (3,14) 406, both confirmed by Biggs 1989), Eroh-Schwenk 1999 (girth-5 excess 2 for 5 <= k <= 11) and Schwenk's 2008 talk."
+  - "n(7,6) <= 90 is credited to Baker 1978, whose elliptic semiplane (45 points, 45 lines, 7 per line and point) has a 90-vertex 7-regular incidence graph of girth 6; Baker doesn't state the graph, which the Exoo-Jajcay survey (2.1.13) identifies with O'Keefe and Wong's 1981 cage."
   - "Credited to the 2013 survey as the first public source found: Exoo's (10,5) 124, (11,5) 154 and (13,5) 230, and (15,12) 1957376, which the survey attributes to Araujo-Pardo, Balbuena and Héger 2010 though that paper gives 1958400."
   - "Record graphs posted without a paper (House of Graphs personal communications from Jooken, Canli and Poláček, and Taghiyev's Zenodo deposits, 2026-10/11) aren't in the history; see notes/cage.md. They could be checked as certificates."
 
@@ -101,12 +102,12 @@ debruijn-newman:
   - "Since 2026-08, several unrefereed, computer-assisted preprints and certificate deposits have claimed unconditional upper bounds below 0.2 (Mosaic Intelligence 0.1875, 0.16 and 0.1595; Gomila 0.1787854; Planat 0.1732; Kornaus 0.172422; Gordon 0.158; Planat-Raymond 0.156821; Raymond 0.149396), listed in Planat-Raymond 2026, Table 1. They aren't in the history until they are checked or refereed. Conditional bounds (Hakimoglu-Brown 0.13963 and Raymond 0.107965 assuming no zeta zeros with real part above 7/8; Planat 0.148612 under unproved premises) are also left out."
 
 van-der-waerden:
-  status: partial
+  status: complete
   reviewed: 2026-11-23
-  sources: [chvatal-1970, stevens-shantaram-1978, rabung-1979, beeler-oneil-1979, dransfield-marek-truszczynski-2003, dransfield-et-al-2004, herwig-et-al-2007, heule-2009, sat-delft-waerden-2011, rabung-lotts-2012, heule-2017, blankenship-c-t-2018, monroe-2016, monroe-2017, monroe-2019, monroe-2022, komkov-2016, komkov-2018, komkov-2020, wikipedia-van-der-waerden]
+  sources: [stevens-shantaram-1978, rabung-1979, beeler-oneil-1979, dransfield-marek-truszczynski-2003, dransfield-et-al-2004, landman-robertson-2004, herwig-et-al-2007, heule-2009, sat-delft-waerden-2011, rabung-lotts-2012, landman-robertson-2014, heule-2017, blankenship-c-t-2018, monroe-2016, monroe-2017, monroe-2019, monroe-2022, komkov-2016, komkov-2018, komkov-2020, wikipedia-van-der-waerden]
   gaps:
   - "W(4,6) >= 157349 (monroe-2017, monroe-2022) is 1,132 x 139 + 1, using W(2,6) = 1132 where Xu's theorem uses W(2,6) - 1; Xu's theorem gives 157210, as in monroe-2019. Monroe's code (https://github.com/hmonroe/vdw) only searches Rabung primes, with and without zipping, so it doesn't explain the value, and v7's Table 2 gives no method for it. No construction for 157349 is known here, and W(5,6) >= 786741 depends on it."
-  - "Landman and Robertson, Ramsey Theory on the Integers, 2nd ed. (2014): only the front and back matter were read, not Table 2.2 (p. 43). The 1st edition (2004), which has W(3,5) > 1209 (called untraceable by Herwig et al. 2007), couldn't be obtained."
+  - "Landman and Robertson's 1st edition (2004, Table 2.2) has W(3,5) >= 1210, citing Rabung 1979, which gives only W(3,5) > 965; no source for it was found, so it's taken as an error and not recorded (Herwig et al. 2007 also call it untraceable)."
   - "Chvátal 1970 couldn't be obtained; W(2,3), W(2,4) and W(3,3) are credited to it from later citations (Stevens and Shantaram 1978, Beeler and O'Neil 1979), and any lower bounds it gives aren't recorded."
   - "Kouril's 2006 PhD thesis (University of Cincinnati) may be the first source of W(2,6) = 1132, now credited to Kouril and Paul 2008; not read."
 

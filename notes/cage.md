@@ -91,3 +91,8 @@ An AI agent (Claude) checked the history against the Exoo-Jajcay survey (still t
 - Royle's "Cages of higher valency" page (archived 1999-2008) dates several records earlier than the sources first used: (4,7) 76, 70, 67; (5,7) 272, 160, 152; (6,7) 504, 294; (7,7) 1332; (4,9) 504, 275; (8,5) 80 (Royle 2001); (12,5) 203; (4,10) 384. Its girth-5 entries before 2001 for k >= 8 are worse than Brown 1967. Snapshots after 2008-09 weren't retrievable (404 or refused).
 - Exoo 1996 (EJC 3, #R30) gave cubic graphs of girths 14, 15, 16 on 492, 1120 and 1400 vertices, which it calls smallest known, but Hoare's 406, S(31)'s 620 and Biggs's 990 were smaller, so they aren't in the history.
 - The scanned copy of Bannai-Ito 1973 (J. Fac. Sci. Univ. Tokyo) in the inbox couldn't be decoded here; it isn't credited with any row (Damerell 1973 is).
+
+### Third pass (2026-11-23)
+
+- Brown 1967 (J. London Math. Soc.), Theorem (5.3), read: f(k,6) <= 2qk for a prime power q >= k. Those rows now cite it directly.
+- Baker 1978, read: an elliptic semiplane with 45 points and 45 lines, 7 on each. Its incidence graph is a (7,6)-graph on 90 vertices, so n(7,6) <= 90 is now credited to Baker (via the survey, which makes the identification). O'Keefe and Wong 1981 keep the lower bound.

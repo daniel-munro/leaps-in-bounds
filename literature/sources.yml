@@ -1996,7 +1996,7 @@ okeefe-wong-1981:
   string: "M. O'Keefe and P. K. Wong, The smallest graph of girth 6 and valency 7, Journal of Graph Theory 5 (1981) 79-85."
   date: "1981"
   doi: "https://doi.org/10.1002/jgt.3190050105"
-  notes: "Abstract: a regular graph of girth 6 and valency 7 on 90 vertices, shown with a computer to be the unique smallest. The graph is the incidence graph of Baker's elliptic semiplane (J. Combin. Theory Ser. A 25 (1978) 193-195), which isn't credited here because it wasn't read and isn't presented as a (7,6)-graph in the sources read (Royle's page notes the identification)."
+  notes: "Abstract: a regular graph of girth 6 and valency 7 on 90 vertices, shown with a computer to be the unique smallest. The graph is the incidence graph of Baker's elliptic semiplane (baker-1978), which is credited with the upper bound; this paper is credited with the matching lower bound."
   added_by: daniel-munro
 
 kovacs-1981:
@@ -2030,7 +2030,14 @@ brown-1967-girth-6:
   string: "W. G. Brown, On Hamiltonian regular graphs of girth six, Journal of the London Mathematical Society 42 (1967) 514-520."
   date: "1967"
   doi: "https://doi.org/10.1112/jlms/s1-42.1.514"
-  notes: "Not read directly. Wong (1982), Theorem 7(b): f(v,6) <= 2qv for any prime power q >= v (from PG(2,q) with points and lines removed), giving 98, 242, 338, 480, 512 and 722 for k = 7, 11, 13, 15, 16, 19."
+  notes: "Theorem (5.3): f(k,6) <= 2qk for every k >= 3 and prime power q >= k (from a projective plane of order q with q - k pencils removed), giving 98, 242, 338, 480, 512 and 722 for k = 7, 11, 13, 15, 16, 19; also stated in Wong (1982), Theorem 7(b). Received 1965-01-19, revised 1966-03-06."
+  added_by: daniel-munro
+
+baker-1978:
+  string: "R. D. Baker, An elliptic semiplane, Journal of Combinatorial Theory Series A 25 (1978) 193-195."
+  date: "1978"
+  doi: "https://doi.org/10.1016/0097-3165(78)90082-1"
+  notes: "An elliptic semiplane with v = b = 45 points and lines, 7 points on each line and 7 lines through each point (parallel classes of size m = 3), given by its incidence matrix (p. 194). Its incidence graph is 7-regular on 90 vertices with girth 6, but the paper doesn't state this; the Exoo-Jajcay survey (2.1.13) and Royle's cage page identify it with the (7,6)-cage of O'Keefe and Wong (1981). Received 1977-03-21."
   added_by: daniel-munro
 
 garbe-2014:
@@ -5067,6 +5074,18 @@ dransfield-marek-truszczynski-2003:
   date: "2003-04-15"
   url: "https://arxiv.org/abs/cs/0310064"
   notes: "Table 3 gives W(5,3) > 125. The date is that of the authors' web page listing the bound (https://web.archive.org/web/20030507012224/http://www.cs.uky.edu:80/ai/vdw/, last modified 2003-04-15), which cites this paper for SAT 2003; the arXiv version is dated 2003-10-31. Its other bounds are below Rabung's 1979 ones, which the authors didn't know of."
+  added_by: daniel-munro
+
+landman-robertson-2004:
+  string: "B.M. Landman and A. Robertson, Ramsey Theory on the Integers, Student Mathematical Library 24, American Mathematical Society (2004)."
+  date: "2004"
+  notes: "Table 2.2 (p. 38) gives lower bounds for W(r,k), r <= 5, k <= 7, all cited to Rabung 1979 (its [210]) and mostly as Rabung's 'W > n' read as 'W >= n'. Its W(3,5) >= 1210 doesn't match Rabung's W(3,5) > 965 and has no other source, so it's taken as an error (Herwig et al. 2007 call it untraceable) and isn't recorded."
+  added_by: daniel-munro
+
+landman-robertson-2014:
+  string: "B.M. Landman and A. Robertson, Ramsey Theory on the Integers, 2nd ed., Student Mathematical Library 73, American Mathematical Society (2014)."
+  date: "2014"
+  notes: "Table 2.2 (p. 43) gives exact values and lower bounds for W(r,k), r <= 5, k <= 7, citing Rabung 1979 and Heule's SAT@Delft page (accessed 2013-01-06). Its W(5,6) >= 540025 is one less than Heule's W(5,6) > 540025."
   added_by: daniel-munro
 
 kouril-franco-2005:
