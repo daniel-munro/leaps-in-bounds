@@ -15,13 +15,15 @@
 # since, as their reviews were finished.
 
 ramsey:
-  status: partial
-  reviewed: 2026-11-15
-  sources: [ejc-ds1-small-ramsey-numbers, radziszowski-2025-slides]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [ejc-ds1-small-ramsey-numbers, radziszowski-2025-slides, mckay-radziszowski-1997, kalbfleisch-1965, kalbfleisch-1967]
   gaps:
-  - "Table I of all 19 revisions of DS1 compared (#69), but primary sources for early bounds are cited only through DS1: Abbott 1965, Giraud 1967 and Irving 1973 lack full references."
+  - "Table I of all 19 revisions of DS1 compared (#69), and revision 18's Tables Ia, Ib and IIa checked entry by entry for k <= 10, l <= 15. Before DS1 (1994), histories were reconstructed only from McKay-Radziszowski 1997 (R(5,5) and R(4,6)) and Kalbfleisch 1965 and 1967 (R(3,7) to R(3,14), R(4,5), R(5,6), R(6,6)). Other steps before 1994 weren't looked for, such as Graver-Yackel 1968 and Grinstead-Roberts 1982 for R(3,k), and Giraud's 1968 to 1979 upper bounds."
+  - "Abbott's 1965 thesis (R(5,5) >= 38), Giraud's 1967 note (R(5,5) <= 58) and Irving's 1973 thesis (R(5,5) >= 42) couldn't be obtained; they are credited through McKay-Radziszowski 1997 (Table I), which gives their full references. Kalbfleisch's 1966 thesis wasn't read: the lower bounds R(3,10) >= 39, R(3,12) >= 49, R(3,14) >= 63 and R(5,6) >= 51 are credited to it through Kalbfleisch 1967, and the R(3,q) upper bounds credited to Kalbfleisch 1967 may appear in it first."
+  - "R(4,8) >= 58 is credited to Fujita's arXiv:1212.1328 v2 (2013-03-16), its first public appearance, eight days before Exoo's paper (submitted 2013-02-17) appeared; DS1 credits Exoo."
   - "R(9,14) <= 89203 appears in DS1 revisions 11 to 13 but contradicts later revisions, and was left out (#65)."
-  - "Google Research's improved_bounds repository checked commit by commit (#53); no paper found for its October 2026 bounds."
+  - "Google Research's improved_bounds repository checked commit by commit (#53); no paper found for its October 2026 bounds (Nagda-Raghavan-Thakurta, arXiv:2603.09172, was last revised 2026-04-21)."
 
 square-packing:
   status: partial
@@ -70,22 +72,23 @@ kissing-number:
   - "Recent bounds from unrefereed preprints: Tomar's upper bounds for n = 5 to 7 and Nyam-Osor's for n = 10, 11 and 16 (Zenodo, 2026), Kravatskiy's GitHub repository (n = 18) and Li's Hexagon preprint (n = 19, 21). Ma et al.'s PackingStar (arXiv:2511.13391) and the 2026 preprints for dimensions 25 and up give no new bounds for n <= 24."
 
 degree-diameter:
-  status: partial
-  reviewed: 2026-11-15
-  sources: [comellas-degree-diameter-table, ejc-ds14-degree-diameter]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [comellas-degree-diameter-table, ejc-ds14-degree-diameter, loz-pineda-2010, rajiv-2026-07, rajiv-2026-08, rajiv-2026-09b, rajiv-2026-09c, rajiv-2026-09d, rajiv-2026-10, yugeswardeenoo-2026-10-25, yugeswardeenoo-2026-11-23, taghiyev-2026, lakhotia-et-al-2023, isham-et-al-2026]
   gaps:
-  - "Comellas' table has records newer than the literature data, such as (7,3) 176 and (5,5) 660 (#69)."
-  - "The 20-9 value may be a transcription error; the 2010 paper is paywalled and wasn't checked (#34)."
   - "Dinneen-Hafner 1994 cells credited to unknown authors were left out (#49)."
-  - "Several primary sources for upper bounds were read only through the Miller-Siran survey (#65)."
+  - "Comellas' entry pages for orders above about 20,000 keep no history for diameters 7 to 10, so 2026 steps there come only from dated deposits; table values that Rajiv's papers list as previous bounds, such as (8,7) 135621, (9,7) 286770, (11,7) 1031240, (7,9) 1223050 and (9,8) 1697688, have no identified finder and are missing."
+  - "Gupta's (6,6) entry of 2026-09-08 is shown in the table with order 2794, a typo; its order is unknown and it isn't in the history. The table's (6,6) 8802 is a typo for 8082 (the deposited graph), which the history uses."
+  - "Bannai-Ito 1981 states the nonexistence of defect-1 graphs only in a closing remark, without a full proof; Kurosawa-Tsujii 1981, cited with it by Miller-Širáň, wasn't read."
 
 cage:
-  status: partial
-  reviewed: 2026-11-17
-  sources: [ejc-ds16-cages, exoo-et-al-2026]
+  status: complete
+  reviewed: 2026-11-23
+  sources: [ejc-ds16-cages, exoo-et-al-2026, wong-1982, biggs-1989, biggs-1998, delacruz-pizana-2025, abajo-et-al-2019, royle-cages-1999, royle-cages-2001-08, royle-cages-2001-12, royle-cages-2002-04, royle-cages-2003-03, royle-cages-2006-06, exoo-1999, exoo-circa-2012]
   gaps:
-  - "Lower bounds from Erdos-Sachs, Hoffman-Singleton, Damerell, Bannai-Ito and Biggs-Ito were taken from the Exoo-Jajcay survey, without reading the primary sources (#65)."
-  - "One of the 35 upper bounds in the survey wasn't added (#65)."
+  - "Not obtained, so credited from secondary sources: Robertson 1964 ((4,5) = 19), Balaban 1973 ((3,11) 112), Hoare 1983 ((3,13) 272, (3,14) 406, both confirmed by Biggs 1989), Eroh-Schwenk 1999 (girth-5 excess 2 for 5 <= k <= 11), Brown 1967 in J. London Math. Soc. (girth-6 bound 2qk, via Wong 1982) and Schwenk's 2008 talk. Baker's 1978 elliptic semiplane, the first (7,6)-graph on 90 vertices, wasn't read, so 90 is credited to O'Keefe-Wong 1981."
+  - "Credited to the 2013 survey as the first public source found: Exoo's (10,5) 124, (11,5) 154 and (13,5) 230, and (15,12) 1957376, which the survey attributes to Araujo-Pardo, Balbuena and Héger 2010 though that paper gives 1958400."
+  - "Record graphs posted without a paper (House of Graphs personal communications from Jooken, Canli and Poláček, and Taghiyev's Zenodo deposits, 2026-10/11) aren't in the history; see notes/cage.md. They could be checked as certificates."
 
 debruijn-newman:
   status: complete
@@ -99,11 +102,13 @@ debruijn-newman:
 
 van-der-waerden:
   status: partial
-  reviewed: 2026-11-20
-  sources: [wikipedia-van-der-waerden, monroe-2017, xu-2013, blankenship-c-t-2018]
+  reviewed: 2026-11-23
+  sources: [chvatal-1970, stevens-shantaram-1978, rabung-1979, beeler-oneil-1979, dransfield-marek-truszczynski-2003, dransfield-et-al-2004, herwig-et-al-2007, heule-2009, sat-delft-waerden-2011, rabung-lotts-2012, heule-2017, blankenship-c-t-2018, monroe-2016, monroe-2017, monroe-2019, monroe-2022, komkov-2016, komkov-2018, komkov-2020, wikipedia-van-der-waerden]
   gaps:
-  - "W(4,6) >= 157349 (monroe-2017, monroe-2022) is 1,132 x 139 + 1, using W(2,6) = 1132 where Xu's theorem uses W(2,6) - 1; Xu's theorem gives 157210, as in monroe-2019. No construction for 157349 is known here, and W(5,6) >= 786741 depends on it. Monroe's code is at https://github.com/hmonroe/vdw if anyone wants to check how it was computed."
-  - "History assembled from Berlekamp, Rabung 1979, Herwig et al., Heule, SAT@Delft, Monroe, Komkov and Rowley (#69), but no single survey covers it; rows were once credited to Rabung-Lotts 2012 or Blankenship 2018 for values known earlier (#33)."
+  - "W(4,6) >= 157349 (monroe-2017, monroe-2022) is 1,132 x 139 + 1, using W(2,6) = 1132 where Xu's theorem uses W(2,6) - 1; Xu's theorem gives 157210, as in monroe-2019. Monroe's code (https://github.com/hmonroe/vdw) only searches Rabung primes, with and without zipping, so it doesn't explain the value, and v7's Table 2 gives no method for it. No construction for 157349 is known here, and W(5,6) >= 786741 depends on it."
+  - "Landman and Robertson, Ramsey Theory on the Integers, 2nd ed. (2014): only the front and back matter were read, not Table 2.2 (p. 43). The 1st edition (2004), which has W(3,5) > 1209 (called untraceable by Herwig et al. 2007), couldn't be obtained."
+  - "Chvátal 1970 couldn't be obtained; W(2,3), W(2,4) and W(3,3) are credited to it from later citations (Stevens and Shantaram 1978, Beeler and O'Neil 1979), and any lower bounds it gives aren't recorded."
+  - "Kouril's 2006 PhD thesis (University of Cincinnati) may be the first source of W(2,6) = 1132, now credited to Kouril and Paul 2008; not read."
 
 stamp-folding:
   status: complete

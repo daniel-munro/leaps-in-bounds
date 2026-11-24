@@ -69,3 +69,25 @@ The m needed grows roughly like `W^0.64`, where W is the number of closed non-ba
 ## Exoo's published cages imported (2026-11-14)
 
 An AI agent (Claude) converted the adjacency lists on Geoffrey Exoo's cage page (https://isu.indstate.edu/ge/CAGES/) to sparse6: (3,14) 384, (3,16) 960, (4,7) 67, (4,9) 275, (4,10) 384, (5,10) 1458, (7,7) 640, (7,8) 672, (10,5) 126, (12,5) 203, (13,5) 240. Each checked in under 10 s. The newer records from exoo-et-al-2026 (such as (3,16) 936, (4,9) 270, (4,10) 320) and House of Graphs weren't tried.
+
+## Literature review (2026-11-23)
+
+An AI agent (Claude) checked the history against the Exoo-Jajcay survey (still the 2013-07-26 revision of DS16), Exoo et al. 2026 (arXiv v2, Table 2), Biggs 1998 (Historical Notes), De la Cruz-Pizaña 2026 (Table 1, lower bounds) and Abajo et al. 2019 (Table 1, girth 5), and searched arXiv and the journals for results after 2013.
+
+- Every row now has a source. Rows that only cited the survey were credited to the originals the survey, Biggs or De la Cruz-Pizaña name. Many of these originals are paywalled and weren't read (their `notes` say so).
+- The survey's Table 6 gives n(7,8) <= 672 (Exoo's web page), but Gács-Héger 2008, Theorem 5.2, gives 2(k^3 - 2k) = 658 for k = 7. The 672 row was dropped as not an improvement.
+- Eroh-Schwenk 1999 exclude excess 2 at girth 5 for 5 <= k <= 11, so n(8,5) >= 68, n(10,5) >= 104 and n(11,5) >= 126, above the survey's Table 4. Kovács's hypothesis is stated differently by the survey and by De la Cruz-Pizaña; under the latter, n(15,5) >= 230 isn't covered.
+- Exoo's cage page has early records not in the survey: the 1998 note on girth 5 (84, 126, 160, 220, 240, 312 for k = 8, 10..14; (4,7) 72) and graphs for (4,9) 318 and (5,7) 198 (girths checked by BFS here). Its 1999-2003 snapshots also list (8,5) 90, (9,5) 110, (11,5) 186, (14,5) 355, (15,5) 408, (16,5) 480, (17,5) 576, (18,5) 655 and (20,5) 889, which weren't added: some are worse than his own note, and the records they would replace (O'Keefe-Wong 1984) couldn't be read.
+- Not added, for checking first: record graphs posted without a paper. House of Graphs (cages page, retrieved 2026-11) lists personal communications from Jooken ((7,7) 588, (7,8) 630, (11,7) 2464, (11,8) 2574, (13,7) 4134, (13,8) 4290, (19,7) 13224, (19,8) 13566), Canli ((8,7) 768, (10,7) 1570, (12,7) 2856, (14,7) 4662, (18,7) 10260, (20,7) 14300) and Poláček ((3,16) 702). Taghiyev's AI-assisted Zenodo deposits (doi:10.5281/zenodo.24060987, zenodo.24121626, zenodo.24114698) give, among others, (9,11) 74368, (5,11) 2656, (6,11) 7780, (6,10) 6250, (7,9) 9324, (4,13) 6757, (4,14) 9792, (15,7) 7136, (16,7) 7920 and girth-9 graphs for k = 6..20. All of these come with graphs, so they could be checked as certificates.
+- Derived but not stated anywhere, so not added: n(11,6) >= 226 (Biggs-Ito 1980 with Adriaensen-Bamberg-Williford, arXiv:2611.17855, Cor. 2.9), and n(15,6) >= 426 (Bruck-Ryser with Biggs-Ito's k not 5, 7 mod 8 and parity).
+
+### Second pass (2026-11-23), with the primaries
+
+- Kovács 1981 excludes k = l^2 + l + 3 as well as l^2 + l - 1, so it doesn't cover k = 9 or 15. The survey's n(15,5) >= 230 has no source and was removed; n(15,5) >= 228 (Brown 1967) stands. (9,5) >= 86 is Eroh-Schwenk's.
+- Brown 1967 (CJM), (4.1), already gives n(k,5) <= 2q(k-2) for a prime power q >= max(5, k-2), which is O'Keefe-Wong 1984's Theorem 1. So the girth-5 upper bounds 84, 98, 128, 162, 220, 242, 312, 338, 448, 480, 512, 578 and 684 (k = 8..20) are Brown's, and Exoo's 1998 84, 220 and 312 aren't improvements.
+- Biggs-Ito 1980, Theorem A, excludes excess 3 when k >= 5, so the girth 10, 14 and 16 lower bounds are M + 4 for k >= 5 (M + 3 for k = 4). For k = 3, parity gives n(3,14) >= 258 and n(3,16) >= 514 from the same paper, as De la Cruz-Pizaña's Table 2 shows. These replace the McKay-Myrvold-Nadon credit for 258 and Biggs's 512.
+- Garbe 2015: no excess 2 at girth 9 for odd k, and at girth 13 for k = 5, 7, 15, 19, giving M + 4 with parity.
+- Araujo-Pardo-Balbuena-Héger 2010, Theorem 4, gives 1958400 for (15,12), not the survey's 1957376, which is now credited to the survey alone.
+- Royle's "Cages of higher valency" page (archived 1999-2008) dates several records earlier than the sources first used: (4,7) 76, 70, 67; (5,7) 272, 160, 152; (6,7) 504, 294; (7,7) 1332; (4,9) 504, 275; (8,5) 80 (Royle 2001); (12,5) 203; (4,10) 384. Its girth-5 entries before 2001 for k >= 8 are worse than Brown 1967. Snapshots after 2008-09 weren't retrievable (404 or refused).
+- Exoo 1996 (EJC 3, #R30) gave cubic graphs of girths 14, 15, 16 on 492, 1120 and 1400 vertices, which it calls smallest known, but Hoare's 406, S(31)'s 620 and Biggs's 990 were smaller, so they aren't in the history.
+- The scanned copy of Bannai-Ito 1973 (J. Fac. Sci. Univ. Tokyo) in the inbox couldn't be decoded here; it isn't credited with any row (Damerell 1973 is).

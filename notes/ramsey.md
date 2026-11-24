@@ -35,3 +35,13 @@ An AI agent (Claude) downloaded published graphs, converted them to graph6 and a
 - Kuznetsov, arXiv:1505.07186 (circulant connection sets in Table 2 and review.py of the LaTeX source): R(5,9) >= 133, R(5,11) >= 183, R(5,12) >= 203, R(5,13) >= 233, R(5,14) >= 267, R(6,9) >= 183, R(6,10) >= 204, R(6,12) >= 294, R(6,13) >= 334, R(7,9) >= 252, R(7,10) >= 292, R(8,10) >= 343.
 
 Not found: Kolodyazhny's graphs (aluarium.net returns 403, also in the archive), R(4,9) >= 73, R(4,10) >= 92, R(5,7) >= 80, R(5,8) >= 101.
+
+## Literature review (2026-11-23)
+
+An AI agent (Claude) compared every Table Ia, Ib and IIa entry of DS1 revision 18 (still the current revision on 2026-11-23) for R(k,l), k ≤ 10, l ≤ 15, with the history here: every value and credit matches, apart from bounds newer than the survey. Table IIa still lists R(4,15) >= 158 [Tat], while Table Ia has 159 [NaRT].
+
+New bounds found since the 2026-11-15 review: Cremer's R(6,8) >= 135 and R(8,10) >= 344 and 345 (GitHub, 2026-10-04 and 06; arXiv:2610.12122), and Jang's R(7,12) >= 420 (GitHub, 2026-11-11; Zenodo 10.5281/zenodo.24128876), a 419-vertex graph from DS1's 2.3.h gluing. Jang's other bounds (R(6,16), R(7,16) to R(7,20), R(8,18), R(8,19), R(8,25), R(5,21)) and Canli's R(7,16) >= 649 are outside the tracked range. These witnesses aren't certified here yet: the R(7,12) graph took about 23 minutes in Jang's parallel C checker, so it is likely too slow for the Python checker.
+
+McKay and Radziszowski (J. Combin. Theory B 69, 1997) have tables of the history of R(5,5) and R(4,6) with full references; they give the citations for Abbott 1965, Giraud 1967 and Irving 1973, and the 1965 to 1968 steps for R(4,6) by Kalbfleisch and Walker. R(4,8) >= 57 is from Fujita's arXiv:1212.1328 v1 (2012-12-06), and his v2 (2013-03-16) gave 58 a week before Exoo's paper with the same bound appeared.
+
+Second pass (same day): Kalbfleisch 1965 (Canad. Math. Bull. 8) and 1967 (J. Combin. Theory 2) were read. They give the earliest recorded steps for R(3,7) to R(3,14), R(4,5), R(5,6) and R(6,6): lower bounds from regular (circulant) colourings and upper bounds from counting red edges and from Erdős-Szekeres. The steps between these and DS1's 1994 values for R(3,k), such as Graver-Yackel 1968 and Grinstead-Roberts 1982, aren't all recorded yet.

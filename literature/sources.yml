@@ -384,7 +384,8 @@ kolodyazhny-2016:
 kalbfleisch-1965:
   string: "J.G. Kalbfleisch, Construction of Special Edge-Chromatic Graphs, Canadian Mathematical Bulletin, 8 (1965) 575-584."
   date: "1965"
-  notes: "[Ka1] in https://doi.org/10.37236/21"
+  doi: "https://doi.org/10.4153/CMB-1965-041-7"
+  notes: "[Ka1] in https://doi.org/10.37236/21. Received 1965-02-18, published October 1965. Theorems 6 to 8 construct regular colourings giving R(3,7) >= 22, R(3,8) >= 27 and R(4,5) >= 25. Table 2 lists upper bounds R(3,7) <= 24, R(4,5) <= 30 (both used in the proofs, proved in later papers), R(3,8) <= 31, R(3,9) <= 38, R(4,6) <= 47 and R(5,5) <= 59 (announced, not proved here)."
   added_by: daniel-munro
 
 mckay-radziszowski-1995:
@@ -598,6 +599,34 @@ canli-2026d:
   url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/3ae0f3feaec12221028b92036c39f042f0b1197a"
   notes: "Not peer reviewed. A colouring for R(8,12) >= 523, with a checker. The searches were run by an AI agent."
   added_by: arhancanli
+
+cremer-2026:
+  string: "F. Cremer, Lower bounds for Ramsey numbers: R(6,8) >= 135 and R(8,10) >= 345, arXiv:2610.12122 (2026)."
+  date: "2026-10-08"
+  url: "https://arxiv.org/abs/2610.12122"
+  notes: "Colourings of K_134 and K_344 (and four of K_343 for the intermediate R(8,10) >= 344), found by local search from published colourings, with code written and run by an AI coding agent guided by the author, and checked with two independent clique searches and Cliquer. The colourings were first posted in the GitHub repository: cremer-2026a and cremer-2026b."
+  added_by: daniel-munro
+
+cremer-2026a:
+  string: "F. Cremer, Ramsey lower bounds, GitHub repository, release v1.0.0, 2026-10-04."
+  date: "2026-10-04"
+  url: "https://github.com/fritzcremer/ramsey-lower-bounds/tree/v1.0.0"
+  notes: "Not peer reviewed. Four (8,10)-colourings of K_343, so R(8,10) >= 344, with a verifier. Written up in arXiv:2610.12122 (cremer-2026)."
+  added_by: daniel-munro
+
+cremer-2026b:
+  string: "F. Cremer, Ramsey lower bounds, GitHub repository, release v1.1.0, 2026-10-06."
+  date: "2026-10-06"
+  url: "https://github.com/fritzcremer/ramsey-lower-bounds/tree/v1.1.0"
+  notes: "Not peer reviewed. Colourings for R(6,8) >= 135 and R(8,10) >= 345, with a verifier. Written up in arXiv:2610.12122 (cremer-2026)."
+  added_by: daniel-munro
+
+jang-2026:
+  string: "B. Jang, Computational results on classical Ramsey numbers, GitHub repository and Zenodo, v1.0, 2026-11-11, https://doi.org/10.5281/zenodo.24128876."
+  date: "2026-11-11"
+  url: "https://github.com/8rulerstar/ramsey-lower-bounds/tree/86c02cafdbb1221997590ec8779ab909502f5e62/r7-12"
+  notes: "Not peer reviewed. A (7,12)-graph on 419 vertices, so R(7,12) >= 420, from the gluing construction of DS1 item 2.3.h with Exoo and Tatarevic's (6,7)-graph on 114 vertices and the 204-vertex (7,7)-graph sharing P(101), with two independent checkers. Dated by the commit that added it. Made with the help of an AI coding assistant (Claude). The repository's other new bounds are for R(k,l) with l > 15."
+  added_by: daniel-munro
 
 # Packing unit squares
 
@@ -1167,8 +1196,9 @@ brown-1966:
 
 loz-pineda-2010:
   string: "Loz, E., & Pineda-Villavicencio, G. (2010). New benchmarks for large-scale networks with given maximum degree and diameter. The Computer Journal, 53(7), 1092-1105."
-  date: "2010-09"
+  date: "2009-11-04"
   doi: "https://doi.org/10.1093/comjnl/bxp091"
+  notes: "Dated by its Advance Access publication (2009-11-04; received 2009-07-05). Tables 1-9 give the largest known graphs of degree 17 to 20 and diameter 2 to 10; the diameter-2 entries are Brown, EFH-Brown and McKay-Miller-Širáň graphs from earlier papers. Table 8 does give N(20,9) >= 12,951,451,931, the same number as Loz-Širáň's (16,10) graph, so it isn't a transcription error of the Combinatorics Wiki."
   added_by: daniel-munro
 
 rajiv-2026-08:
@@ -1178,23 +1208,27 @@ rajiv-2026-08:
   added_by: daniel-munro
 
 bhakar-2026-08:
-  string: "Nishant Bhakar in August 2026"
-  date: "2026-08"
+  string: "Nishant Bhakar, communicated to F. Comellas on August 27, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-27"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#44"
   added_by: daniel-munro
 
 gupta-2026-09:
-  string: "Rithwik Gupta in September 2026"
-  date: "2026-09"
+  string: "Rithwik Gupta, communicated to F. Comellas on September 8, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-09-08"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
   added_by: daniel-munro
 
 yugeswardeenoo-2026-09:
-  string: "Dharunish Yugeswardeenoo in September 2026"
-  date: "2026-09"
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on September 14, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-09-14"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
   added_by: daniel-munro
 
 amarel-et-al-2026:
-  string: "J. Amarel, N. DeBardeleben, M. Grosskopf, V. Job, E. Lawrence, L. Monroe, and R. Somasundaram (LANL, using URSA) in September 2026"
-  date: "2026-09"
+  string: "J. Amarel, N. DeBardeleben, M. Grosskopf, V. Job, E. Lawrence, L. Monroe, and R. Somasundaram (LANL, using URSA), communicated to F. Comellas on September 18, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-09-18"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#164"
   added_by: daniel-munro
 
 rajiv-2026-09a:
@@ -1210,8 +1244,10 @@ rajiv-2026-09b:
   added_by: daniel-munro
 
 mizuno-2026-09:
-  string: "Ryosuke Mizuno in September 2026"
-  date: "2026-09"
+  string: "R. Mizuno, Degree/diameter graph constructions, GitHub repository rmizuno42/ddp (graphs added September 25, 2026)"
+  date: "2026-09-25"
+  url: "https://github.com/rmizuno42/ddp"
+  notes: "N(12,4) >= 5832, N(14,5) >= 88452, N(15,3) >= 1458, N(15,5) >= 100000 and N(16,3) >= 1920, dated by the repository's results.json and commit history; also listed in Comellas' table as found on September 25, 2026."
   added_by: daniel-munro
 
 rajiv-2026-09c:
@@ -1227,34 +1263,42 @@ rajiv-2026-09d:
   added_by: daniel-munro
 
 de-messieres-2026-10:
-  string: "Michel de Messieres in October 2026"
-  date: "2026-10"
+  string: "M. de Messieres, Large graphs for the degree-diameter problem: n(5,7) ≥ 5894, n(6,3) ≥ 120, n(7,4) ≥ 684, n(7,5) ≥ 2758, n(13,3) ≥ 868, n(14,3) ≥ 1094, n(14,4) ≥ 8303, Zenodo (version 4, 2026-10-06)."
+  date: "2026-10-06"
+  doi: "https://doi.org/10.5281/zenodo.23176213"
+  notes: "Comellas' table dates these graphs October 3 to 6, 2026."
   added_by: daniel-munro
 
 yugeswardeenoo-2026-10:
-  string: "Dharunish Yugeswardeenoo in October 2026"
-  date: "2026-10"
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on October 7, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-07"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  notes: "Several of these graphs were later deposited in Zenodo (doi:10.5281/zenodo.23624117). The table lists N(6,6) >= 8802, but the graph described there (the incidence graph of H(5), 7812 vertices, plus 270 subdivision vertices) and the deposited file have 8082 vertices, so 8802 is a typo."
   added_by: daniel-munro
 
 bhakar-2026-10:
-  string: "Nishant Bhakar in October 2026"
-  date: "2026-10"
+  string: "Nishant Bhakar, communicated to F. Comellas on October 15, 2026, as listed in his table of largest known (Δ,D)-graphs; graphs in the GitHub repository f4t4nt/degree-diameter-graphs"
+  date: "2026-10-15"
   url: "https://github.com/f4t4nt/degree-diameter-graphs"
   added_by: daniel-munro
 
 mccormick-2026-10:
-  string: "Mike McCormick in October 2026"
-  date: "2026-10"
+  string: "Mike McCormick, communicated to F. Comellas on October 20, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-20"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  notes: "The table itself marks the name with '??'."
   added_by: daniel-munro
 
 comellas-2026-10:
-  string: "Francesc Comellas in October 2026"
-  date: "2026-10"
+  string: "Francesc Comellas, October 21, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-21"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#94"
   added_by: daniel-munro
 
 badaoui-vaughan-2026-10:
-  string: "Sami Hani Badaoui and Sarah Ellen Mary Vaughan in October 2026"
-  date: "2026-10"
+  string: "Sami Hani Badaoui and Sarah Ellen Mary Vaughan, communicated to F. Comellas on October 22, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-22"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html#145"
   added_by: daniel-munro
 
 rajiv-2026-10:
@@ -1264,8 +1308,352 @@ rajiv-2026-10:
   added_by: daniel-munro
 
 yugeswardeenoo-2026-11:
-  string: "Dharunish Yugeswardeenoo in November 2026"
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 11 constructions, 11 November 2026, Zenodo."
   date: "2026-11-12"
+  doi: "https://doi.org/10.5281/zenodo.24150407"
+  added_by: daniel-munro
+
+lakhotia-et-al-2023:
+  string: "K. Lakhotia, L. Monroe, K. Isham, M. Besta, N. Blach, T. Hoefler and F. Petrini, PolarStar: Expanding the Scalability Horizon of Diameter-3 Networks, SPAA 2024, arXiv:2302.07217."
+  date: "2023-02-14"
+  url: "https://arxiv.org/abs/2302.07217"
+  notes: "Table 1 (v1): diameter-3 graphs of degree 18, 19 and 20 on 1830, 2128 and 2394 vertices, against 1620, 1638 and 1958 in the Combinatorics Wiki table."
+  added_by: daniel-munro
+
+conder-2026:
+  string: "Marston Conder, communicated to F. Comellas on January 18, 2026 (paper in preparation), as listed in his table of largest known (Δ,D)-graphs and in F. Comellas, Table of large graphs with given degree and diameter, arXiv:2406.18994v2"
+  date: "2026-01-18"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html#55"
+  notes: "A Cayley graph of degree 5 and diameter 5 on 648 vertices."
+  added_by: daniel-munro
+
+mizuno-2026-06:
+  string: "R. Mizuno, New lower bounds for the degree/diameter problem via interaction with a browser-accessible LLM, arXiv:2606.15860."
+  date: "2026-06-14"
+  url: "https://arxiv.org/abs/2606.15860"
+  notes: "N(12,5) >= 34992 and N(16,5) >= 147456."
+  added_by: daniel-munro
+
+rajiv-2026-07:
+  string: "Rajiv, R. (2026). Four new largest known graphs of diameter three. Zenodo."
+  date: "2026-07-03"
+  doi: "https://doi.org/10.5281/zenodo.21180071"
+  notes: "Table 1: N(14,3) >= 979, N(18,3) >= 1746, N(19,3) >= 1950, N(20,3) >= 2202. The last three were already beaten by the PolarStar graphs of Lakhotia et al. (2023), which the paper does not cite, so only (14,3) is in the history."
+  added_by: daniel-munro
+
+wupperfeld-2026:
+  string: "Niklas Wupperfeld, communicated to F. Comellas on August 6, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-06"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+prajapati-2026:
+  string: "Jitendra Prajapati, communicated to F. Comellas on August 9, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-09"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g6.html#46"
+  added_by: daniel-munro
+
+isufi-2026-08-13:
+  string: "Petrit Isufi, communicated to F. Comellas on August 13, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-13"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+isufi-2026-08-17:
+  string: "Petrit Isufi, communicated to F. Comellas on August 17, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-17"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+isufi-2026-08-19:
+  string: "Petrit Isufi, communicated to F. Comellas on August 19, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-19"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+isufi-2026-08-27:
+  string: "Petrit Isufi, communicated to F. Comellas on August 27, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-27"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-08-15:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on August 15, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-15"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+badaoui-vaughan-2026-08-16:
+  string: "Sami Hani Badaoui and Sarah Ellen Mary Vaughan, communicated to F. Comellas on August 16, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-16"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html#145"
+  added_by: daniel-munro
+
+marosi-2026:
+  string: "Mark Marosi, communicated to F. Comellas on August 17, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-17"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-08-17:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on August 17, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-17"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+badaoui-vaughan-2026-08-19:
+  string: "Sami Hani Badaoui and Sarah Ellen Mary Vaughan, communicated to F. Comellas on August 19, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-19"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html#155"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-08-20:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on August 20, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-20"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+uberti-2026:
+  string: "Gavin Uberti, communicated to F. Comellas on August 22, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-22"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#44"
+  added_by: daniel-munro
+
+badaoui-vaughan-2026-08-22:
+  string: "Sami Hani Badaoui and Sarah Ellen Mary Vaughan, communicated to F. Comellas on August 22, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-22"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g5.html#145"
+  added_by: daniel-munro
+
+isham-et-al-2026:
+  string: "K. Isham, K. Lakhotia, L. Monroe and F. Petrini, Kronecker products, polarity quotients and large graph constructions, arXiv:2608.27253."
+  date: "2026-08-27"
+  url: "https://arxiv.org/abs/2608.27253"
+  notes: "Table 1 (v1): diameter-3 graphs of degree 18, 19 and 20 on 2340, 2470 and 2600 vertices. The (20,3) graph was not an improvement, since Rajiv had 2750 three days earlier."
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-08-31:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on August 31, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-08-31"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-09-04:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on September 4, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-09-04"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+comellas-2026-09:
+  string: "Francesc Comellas, September 24, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-09-24"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g6.html#86"
+  added_by: daniel-munro
+
+rajiv-2026-09e:
+  string: "Rajiv, R. (2026). Partial folds of the split Cayley hexagon H(9) and large graphs of diameter five. Zenodo."
+  date: "2026-09-30"
+  doi: "https://doi.org/10.5281/zenodo.23056128"
+  notes: "N(11,5) >= 36563, N(12,5) >= 41699 and N(13,5) >= 50750."
+  added_by: daniel-munro
+
+comellas-2026-10-02:
+  string: "Francesc Comellas, October 2, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-02"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g6.html#46"
+  added_by: daniel-munro
+
+bhakar-2026-10-09:
+  string: "Nishant Bhakar, communicated to F. Comellas on October 9, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-09"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-09:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on October 9, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-09"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+mizuno-2026-10:
+  string: "R. Mizuno, Degree/diameter graph constructions, GitHub repository rmizuno42/ddp (degree-13 diameter-5 graph added October 13, 2026)"
+  date: "2026-10-13"
+  url: "https://github.com/rmizuno42/ddp"
+  notes: "N(13,5) >= 88452. Comellas' table lists it from November 12, 2026."
+  added_by: daniel-munro
+
+de-messieres-2026-10-13:
+  string: "M. de Messieres, Large graphs for the degree-diameter problem, Zenodo (version 5, 2026-10-20)."
+  date: "2026-10-13"
+  doi: "https://doi.org/10.5281/zenodo.23511264"
+  notes: "N(13,3) >= 952, dated October 13, 2026 in Comellas' table; the Zenodo version appeared on October 20."
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-14:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on October 14, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-14"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+comellas-table-2026-10-19:
+  string: "Unnamed contributor (listed as '?? ??'), communicated to F. Comellas on October 19, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-19"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html#143"
+  added_by: daniel-munro
+
+bhakar-2026-10-19:
+  string: "N. Bhakar, Degree-Diameter Graphs, GitHub repository f4t4nt/degree-diameter-graphs (October 19, 2026)"
+  date: "2026-10-19"
+  url: "https://github.com/f4t4nt/degree-diameter-graphs"
+  notes: "Commits of October 19, 2026 adding the (8,7), (10,7), (10,9), (11,7) and (12,9) graphs. Comellas' table credits them to October 2026."
+  added_by: daniel-munro
+
+bhakar-2026-10-23:
+  string: "N. Bhakar, Degree-Diameter Graphs, GitHub repository f4t4nt/degree-diameter-graphs (October 23, 2026)"
+  date: "2026-10-23"
+  url: "https://github.com/f4t4nt/degree-diameter-graphs"
+  notes: "Commit of October 23, 2026 adding the (8,8) and (9,7) graphs. Comellas' table credits them to October 2026."
+  added_by: daniel-munro
+
+bhakar-2026-10-24:
+  string: "N. Bhakar, Degree-Diameter Graphs, GitHub repository f4t4nt/degree-diameter-graphs (October 24, 2026)"
+  date: "2026-10-24"
+  url: "https://github.com/f4t4nt/degree-diameter-graphs"
+  notes: "Commit of October 24, 2026 adding the (8,9) graph on 4601361 vertices. Comellas' table credits it to October 2026."
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-19:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on October 19, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-19"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+comellas-2026-10-23:
+  string: "Francesc Comellas, October 23, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-23"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+comellas-2026-10-24:
+  string: "Francesc Comellas, October 24, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-24"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#154"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-25:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 34 constructions, Zenodo."
+  date: "2026-10-25"
+  doi: "https://doi.org/10.5281/zenodo.23624117"
+  notes: "Lists graphs that were largest known on October 24-25, 2026; published on Zenodo on October 27. Several had been sent to Comellas earlier and are dated by his table instead."
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-27:
+  string: "Dharunish Yugeswardeenoo, communicated to F. Comellas on October 27, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-27"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  notes: "Graphs also in the second version of doi:10.5281/zenodo.23624117."
+  added_by: daniel-munro
+
+bhakar-2026-10-27:
+  string: "Nishant Bhakar, communicated to F. Comellas on October 27, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-27"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  notes: "Graphs for these cells were in the GitHub repository f4t4nt/degree-diameter-graphs from October 18, 2026, possibly in smaller versions."
+  added_by: daniel-munro
+
+comellas-2026-10-27:
+  string: "Francesc Comellas, October 27, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-10-27"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html#133"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-28:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 5 constructions, Zenodo."
+  date: "2026-10-28"
+  doi: "https://doi.org/10.5281/zenodo.23749115"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-10-31:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 8 constructions, Zenodo."
+  date: "2026-10-31"
+  doi: "https://doi.org/10.5281/zenodo.23837962"
+  added_by: daniel-munro
+
+comellas-2026-11-02:
+  string: "Francesc Comellas, November 2, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-11-02"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-11-03:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 8 constructions, 3 November 2026, Zenodo."
+  date: "2026-11-03"
+  doi: "https://doi.org/10.5281/zenodo.23936153"
+  added_by: daniel-munro
+
+comellas-2026-11-03:
+  string: "Francesc Comellas, November 3, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-11-03"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g3.html#143"
+  notes: "The (14,3) graph on 1214 vertices extends Yugeswardeenoo's graph on 1208 vertices of the same day. The entry page dates it November 2, the table's legend November 3."
+  added_by: daniel-munro
+
+mizuno-2026-11:
+  string: "R. Mizuno, Degree/diameter graph constructions, GitHub repository rmizuno42/ddp (graphs added November 4, 2026)"
+  date: "2026-11-04"
+  url: "https://github.com/rmizuno42/ddp"
+  notes: "N(3,7) >= 208 and N(5,5) >= 660. His (6,3) graph on 126 vertices was added on November 10, after Yugeswardeenoo deposited one of the same order."
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-11-08:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 11 constructions, 8 November 2026, Zenodo."
+  date: "2026-11-08"
+  doi: "https://doi.org/10.5281/zenodo.24064364"
+  added_by: daniel-munro
+
+taghiyev-2026:
+  string: "S. Taghiyev, 19 new largest known graphs for the degree-diameter problem, Zenodo."
+  date: "2026-11-10"
+  doi: "https://doi.org/10.5281/zenodo.24121859"
+  notes: "Nineteen Cayley graphs of metacyclic groups at diameters 7 to 10; an earlier version of the same record (doi:10.5281/zenodo.24118124) gave the (12,7) and (16,10) graphs, the only two in Comellas' table."
+  added_by: daniel-munro
+
+comellas-2026-11-12:
+  string: "Francesc Comellas, November 12, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-11-12"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#104"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-11-16:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 11 constructions, 16 November 2026, Zenodo."
+  date: "2026-11-16"
+  doi: "https://doi.org/10.5281/zenodo.24284158"
+  added_by: daniel-munro
+
+comellas-2026-11-16:
+  string: "Francesc Comellas, November 16, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026-11-16"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g4.html#94"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-11-20:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 4 constructions, 20 November 2026, Zenodo."
+  date: "2026-11-20"
+  doi: "https://doi.org/10.5281/zenodo.24400414"
+  added_by: daniel-munro
+
+yugeswardeenoo-2026-11-23:
+  string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 8 constructions, 23 November 2026, Zenodo."
+  date: "2026-11-23"
+  doi: "https://doi.org/10.5281/zenodo.24478282"
+  notes: "Not yet in Comellas' table when reviewed (2026-11-23)."
+  added_by: daniel-munro
+
+comellas-2026:
+  string: "Francesc Comellas, 2026, as listed in his table of largest known (Δ,D)-graphs"
+  date: "2026"
+  url: "https://web.mat.upc.edu/francesc.comellas/delta-d/desc_g/desc_g7.html#67"
+  notes: "A Cayley graph of degree 6 and diameter 7 on 20319 vertices, dated only by the year; it preceded Gupta's 20400 of September 8, 2026."
   added_by: daniel-munro
 
 # de Bruijn-Newman
@@ -1370,9 +1758,10 @@ planat-raymond-2026:
 # van der Waerden
 
 komkov-2016:
-  string: "Komkov, M. (2016). viXra:1611.0385."
-  date: "2016-11"
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers Using Genetic Algorithm, viXra:1611.0385v1."
+  date: "2016-11-28"
   url: "https://vixra.org/abs/1611.0385"
+  notes: "Not peer reviewed. Gives W(5,5) > 98741, W(6,5) > 98754 and W(5,6) > 540027, with certificates."
   added_by: daniel-munro
 
 chvatal-1970:
@@ -1384,12 +1773,14 @@ stevens-shantaram-1978:
   string: "Stevens, R. S., & Shantaram, R. (1978). Computer-generated van der Waerden partitions. Mathematics of Computation, 32(142), 635-636."
   date: "1978-04"
   doi: "https://doi.org/10.1090/S0025-5718-1978-0491468-X"
+  notes: "Received 1976-04-19. Exhaustive search for 2 colors only: W(2,3) = 9, W(2,4) = 35 and W(2,5) = 178, extending Chvátal's table, and agreeing with W(3,3) = 27. No other bounds."
   added_by: daniel-munro
 
 kouril-paul-2011:
   string: "Kouril, M., & Paul, J. L. (2008). The van der Waerden number W (2, 6) is 1132. Experimental Mathematics, 17(1), 53-61."
-  date: "2011-01-30"
+  date: "2008"
   doi: "https://doi.org/10.1080/10586458.2008.10129025"
+  notes: "Experimental Mathematics 17(1), 2008; the date 2011-01-30 once used here is the publisher's online posting of the back issue. Herwig et al. (submitted 2005-11-01, https://doi.org/10.37236/925) already mention Kouril's claim that W(2,6) = 1132."
   added_by: daniel-munro
 
 kouril-pre-2011:
@@ -1405,19 +1796,23 @@ rabung-lotts-2012:
 
 kouril-2012:
   string: "Kouril, Michal (2012). Computing the van der Waerden number W(3,4)=293. Integers. 12: A46."
-  date: "2012"
+  date: "2012-09-03"
+  url: "https://math.colgate.edu/~integers/vol12.html"
+  notes: "Received 2012-03-26, published 2012-09-03."
   added_by: daniel-munro
 
 beeler-oneil-1979:
   string: "Beeler, M. D., & O'neil, P. E. (1979). Some new van der Waerden numbers. Discrete Mathematics, 28(2), 135-146."
   date: "1979"
   doi: "https://doi.org/10.1016/0012-365X(79)90090-6"
+  notes: "Revised 1979-04-09. Gives W(4,3) = 76 (1200 hours of computer time), noting that the best previous result was Rabung's W(4,3) > 75 (https://doi.org/10.4153/CMB-1979-012-1), and W(2,5) = 178 independently of Stevens and Shantaram. Its other new values are off-diagonal."
   added_by: daniel-munro
 
 rabung-1979:
   string: "Rabung, J. R. (1979). Some progression-free partitions constructed using Folkman's method. Canadian Mathematical Bulletin, 22(1), 87-91."
   date: "1979-03-01"
   doi: "https://doi.org/10.4153/CMB-1979-012-1"
+  notes: "Received 1977-11-07. The table (k colors, progression length l, primes up to 20,117) gives W(4,3) > 75, W(3,4) > 292, W(2,5) > 149, W(3,5) > 965, W(2,6) > 696 and so on; its W(2,11) > 196811 (p = 19681) was misreported, as Rabung and Lotts 2012 (https://doi.org/10.37236/2363) note, so it isn't recorded here. W(2,12) > 220518 is outside the family's range."
   added_by: daniel-munro
 
 monroe-2019:
@@ -1470,6 +1865,354 @@ exoo-circa-2012:
   string: "G. Exoo, Regular graphs of given degree and girth."
   date: "2012"
   url: "https://web.archive.org/web/20120316225548/http://ginger.indstate.edu/ge/CAGES/"
+  notes: "Lists f(7,7) 640 (new since the 2008 snapshot) and f(5,10) 1296."
+  added_by: daniel-munro
+
+exoo-1999:
+  string: "G. Exoo, Regular graphs of given degree and girth (web page, isu.indstate.edu/ge/CAGES), with the note 'Small regular graphs of girth five' (dated 1998-07-13), as archived on 1999-10-09."
+  date: "1999-10-09"
+  url: "https://web.archive.org/web/20010718195259/http://isu.indstate.edu/ge/CAGES/"
+  notes: "The note (cage.dvi, archived 1999-10-09; also as https://web.archive.org/web/20030416063028/http://isu.indstate.edu:80/ge/CAGES/cage5a.pdf), Table 3: new smallest known girth-5 graphs of orders 84, 126, 160, 220, 240, 312 for degrees 8, 10, 11, 12, 13, 14, and a (4,7)-graph on 72 vertices. It says O'Keefe and Wong's construction gives 98 vertices for degree 9 and that the degree 10, 11 and 13 graphs improve theirs by exactly two. The orders 84, 220 and 312 equal Brown's 1967 bound 2q(k-2), so only 126, 160, 240 and 72 are in the history. The page's adjacency files c.4.9.318 and c.5.7.198 (archived 1999-10-09 and 1999-11-09) are a (4,9)-graph on 318 and a (5,7)-graph on 198 vertices; their girths were checked here by BFS."
+  added_by: daniel-munro
+
+exoo-2002-girth-14:
+  string: "G. Exoo, A small trivalent graph of girth 14, Electronic Journal of Combinatorics 9 (2002) #N3."
+  date: "2002-03-11"
+  url: "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v9i1n3"
+  notes: "A (3,14)-graph on 384 vertices. Submitted 2001-01-05, accepted 2002-03-11."
+  added_by: daniel-munro
+
+exoo-2004-girth-16:
+  string: "G. Exoo, Voltage graphs, group presentations and cages, Electronic Journal of Combinatorics 11 (2004) #N2."
+  date: "2004-02-14"
+  url: "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v11i1n2"
+  notes: "A (3,16)-graph on 960 vertices, 'improving the old bound of 992' of Biggs (1989); Biggs (1998) gives that graph as 990 vertices."
+  added_by: daniel-munro
+
+exoo-kolokolnikov-2026:
+  string: "G. Exoo and T. Kolokolnikov, A trivalent graph of girth 14 and order 372, arXiv:2611.09000."
+  date: "2026-11-06"
+  url: "https://arxiv.org/abs/2611.09000"
+  notes: "Read the abstract only: a (3,14)-graph on 372 vertices, improving 384."
+  added_by: daniel-munro
+
+exoo-mckay-myrvold-nadon-2011:
+  string: "G. Exoo, B. D. McKay, W. Myrvold and J. Nadon, Computational determination of (3,11) and (4,7) cages, Journal of Discrete Algorithms 9 (2011) 166-169."
+  date: "2010-11-04"
+  doi: "https://doi.org/10.1016/j.jda.2010.11.001"
+  notes: "Abstract and Section 3: the (4,7)-cage has 67 vertices (an example, Fig. 4) and a (3,14)-cage has at least 260 vertices. Received 2009-03-24, online 2010-11-04."
+  added_by: daniel-munro
+
+biggs-1998:
+  string: "N. Biggs, Constructions for cubic graphs with large girth, Electronic Journal of Combinatorics 5 (1998) #A1."
+  date: "1998"
+  url: "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v5i1a1"
+  notes: "Section 2 (p. 4): for g = 7, 9, 10, 11 and g >= 13 a cubic graph of girth g has at least n0(g) = 3 x 2^((g-1)/2) (odd g) or 2^(g/2+1) (even g) vertices, so n(3,15) >= 384 and n(3,16) >= 512; it tabulates the current-best orders as of 1998. The Historical Notes (pp. 21-23) credit each record for g >= 10. Submitted 1997-10-11, accepted 1998-08-31."
+  added_by: daniel-munro
+
+tutte-1947:
+  string: "W. T. Tutte, A family of cubical graphs, Proceedings of the Cambridge Philosophical Society 43 (1947) 459-474."
+  date: "1947"
+  doi: "https://doi.org/10.1017/S0305004100023720"
+  notes: "Shows that in a cubic graph of girth m the number of vertices is at least the Moore bound, and constructs the m-cages for m <= 8 except 7 (the Petersen, Heawood and Tutte 8-cage graphs). Received 1946-08-23. McGee (1960) and Erdős-Sachs (1963, p. 254, item h) credit Tutte with these values."
+  added_by: daniel-munro
+
+mcgee-1960:
+  string: "W. F. McGee, A minimal cubic graph of girth seven, Canadian Mathematical Bulletin 3 (1960) 149-152."
+  date: "1960"
+  doi: "https://doi.org/10.4153/CMB-1960-018-1"
+  notes: "A cubic graph of girth 7 on 24 vertices; 22 vertices are needed by counting and the order is even, and the paper argues 22 is impossible. It says Coxeter's 28-vertex graph had the record before. Received 1960-04-09."
+  added_by: daniel-munro
+
+karteszi-1960:
+  string: "F. Kárteszi, Piani finiti ciclici come risoluzioni di un certo problema di minimo, Bollettino dell'Unione Matematica Italiana (3) 15 (1960) 522-528."
+  date: "1960"
+  notes: "For k = p^a + 1 (p prime), the minimal order of a k-regular graph of girth 6 is n = 2(1 + p^a + p^(2a)), from the incidence graph of the projective plane (p. 524); also stated by Erdős and Sachs (1963), p. 254, item f)."
+  added_by: daniel-munro
+
+robertson-1964:
+  string: "N. Robertson, The smallest graph of girth 5 and valency 4, Bulletin of the American Mathematical Society 70 (1964) 824-825."
+  date: "1964"
+  doi: "https://doi.org/10.1090/S0002-9904-1964-11250-7"
+  notes: "Not read directly (AMS returned 403). n(4,5) = 19 (Exoo-Jajcay survey, Table 2; De la Cruz-Pizaña 2026, Table 1, row s)."
+  added_by: daniel-munro
+
+benson-1966:
+  string: "C. T. Benson, Minimal regular graphs of girths eight and twelve, Canadian Journal of Mathematics 18 (1966) 1091-1094."
+  date: "1966"
+  doi: "https://doi.org/10.4153/CJM-1966-109-8"
+  notes: "Theorems 1 and 2 (p. 1091): for q a prime power, (q+1)-regular graphs of girth 8 and 12 attaining Tutte's lower bound (the incidence graphs of the generalized quadrangle and hexagon). Received 1965-11-12. Benson also cites a girth-8 construction in R. Singleton's 1963 Princeton thesis."
+  added_by: daniel-munro
+
+brown-1967:
+  string: "W. G. Brown, On the non-existence of a type of regular graphs of girth 5, Canadian Journal of Mathematics 19 (1967) 644-648."
+  date: "1967"
+  doi: "https://doi.org/10.4153/CJM-1967-058-3"
+  notes: "(1.2): f(k,5) != k^2 + 2 for all k, so n(k,5) >= k^2 + 3 when there is no Moore graph. Section 4, (4.1): f(k,5) <= 2q(k-2) for k > 5 and q a prime power not less than 5 or k - 2 (a q-gon added in each removed pencil of a girth-6 graph from PG(2,q)), and (4.2) f(k,5) <= 2(2k-1)(k-2). (4.1) gives the same values as O'Keefe and Wong's 1984 Theorem 1, which therefore isn't credited. Received 1966-04-18."
+  added_by: daniel-munro
+
+balaban-1972:
+  string: "A. T. Balaban, A trivalent graph of girth ten, Journal of Combinatorial Theory Series B 12 (1972) 1-5."
+  date: "1972"
+  doi: "https://doi.org/10.1016/0095-8956(72)90028-7"
+  notes: "A trivalent graph of girth 10 on 70 vertices (p. 2). Received 1970-09-01."
+  added_by: daniel-munro
+
+balaban-1973:
+  string: "A. T. Balaban, Trivalent graphs of girth nine and eleven, and relationships among cages, Revue Roumaine de Mathématiques Pures et Appliquées 18 (1973) 1033-1043."
+  date: "1973"
+  notes: "Not read directly. A (3,11)-graph on 112 vertices, excised from the (3,12)-cage (Biggs 1998, Historical Notes)."
+  added_by: daniel-munro
+
+wegner-1973:
+  string: "G. Wegner, A smallest graph of girth 5 and valency 5, Journal of Combinatorial Theory Series B 14 (1973) 203-208."
+  date: "1973"
+  doi: "https://doi.org/10.1016/0095-8956(73)90003-8"
+  notes: "A graph of girth 5 and valency 5 on 30 vertices, and a proof that 30 is best possible: f(5,5) = 30. Also f(p,5) <= 2p(p-1) for primes p > 3 (not an improvement on Brown 1967 for k <= 20). Received 1972-10-02."
+  added_by: daniel-munro
+
+okeefe-wong-1979:
+  string: "M. O'Keefe and P. K. Wong, A smallest graph of girth 5 and valency 6, Journal of Combinatorial Theory Series B 26 (1979) 145-149."
+  date: "1979"
+  doi: "https://doi.org/10.1016/0095-8956(79)90052-2"
+  notes: "f(6,5) = 40: a graph of girth 5 and valency 6 on 40 vertices (Fig. 2.1) and a proof that none is smaller. Received 1976-02-18. The upper bound 40 already follows from Brown (1967), (4.1)."
+  added_by: daniel-munro
+
+okeefe-wong-1980:
+  string: "M. O'Keefe and P. K. Wong, A smallest graph of girth 10 and valency 3, Journal of Combinatorial Theory Series B 29 (1980) 91-105."
+  date: "1980"
+  doi: "https://doi.org/10.1016/0095-8956(80)90046-5"
+  notes: "A regular graph of girth 10 and valency 3 on 70 vertices, shown by computer to be smallest: f(3,10) = 70. Received 1977-04-27."
+  added_by: daniel-munro
+
+biggs-hoare-1980:
+  string: "N. L. Biggs and M. J. Hoare, A trivalent graph with 58 vertices and girth 9, Discrete Mathematics 30 (1980) 299-301."
+  date: "1980"
+  doi: "https://doi.org/10.1016/0012-365X(80)90238-1"
+  notes: "A trivalent graph of girth 9 on 58 vertices; the lower bound then known was 46 by counting (Wong 1982 gives 54). Received 1980-01-23."
+  added_by: daniel-munro
+
+okeefe-wong-1981:
+  string: "M. O'Keefe and P. K. Wong, The smallest graph of girth 6 and valency 7, Journal of Graph Theory 5 (1981) 79-85."
+  date: "1981"
+  doi: "https://doi.org/10.1002/jgt.3190050105"
+  notes: "Abstract: a regular graph of girth 6 and valency 7 on 90 vertices, shown with a computer to be the unique smallest. The graph is the incidence graph of Baker's elliptic semiplane (J. Combin. Theory Ser. A 25 (1978) 193-195), which isn't credited here because it wasn't read and isn't presented as a (7,6)-graph in the sources read (Royle's page notes the identification)."
+  added_by: daniel-munro
+
+kovacs-1981:
+  string: "P. Kovács, The nonexistence of certain regular graphs of girth 5, Journal of Combinatorial Theory Series B 30 (1981) 282-284."
+  date: "1981"
+  doi: "https://doi.org/10.1016/0095-8956(81)90045-9"
+  notes: "Theorem: for odd k >= 3 with k != l^2 + l + 3 and k != l^2 + l - 1, there is no k-regular graph of girth 5 on k^2 + 3 vertices; with parity, n(k,5) >= k^2 + 5 for k = 13 and 17 (k = 9 and 15 are excluded by the hypothesis, as De la Cruz-Pizaña 2026 state it; the Exoo-Jajcay survey omits the l^2 + l + 3 case). So the survey's n(15,5) >= 230 has no source; n(15,5) >= 228 (Brown 1967) is what's established. Received 1979-03-06."
+  added_by: daniel-munro
+
+hoare-1983:
+  string: "M. J. Hoare, On the girth of trivalent Cayley graphs, in Graphs and Other Combinatorial Topics (Proceedings of the Third Czechoslovak Symposium on Graph Theory, Prague 1982), Teubner, Leipzig (1983) 109-114."
+  date: "1983"
+  notes: "Not read directly. Biggs (1998), Historical Notes: Cayley graphs with 272 vertices and girth 13 and 406 vertices and girth 14, found by Hoare in 1981 and described here."
+  added_by: daniel-munro
+
+biggs-hoare-1983:
+  string: "N. L. Biggs and M. J. Hoare, The sextet construction for cubic graphs, Combinatorica 3 (1983) 153-165."
+  date: "1983"
+  doi: "https://doi.org/10.1007/BF02579289"
+  notes: "The sextet graphs S(p); S(31) has 620 vertices and girth 15 (as Biggs 1998 also records). Received 1982-07-24."
+  added_by: daniel-munro
+
+wong-1982:
+  string: "P. K. Wong, Cages - a survey, Journal of Graph Theory 6 (1982) 1-22."
+  date: "1982"
+  doi: "https://doi.org/10.1002/jgt.3190060103"
+  notes: "All cages known in 1982, with the bounds then known: Section 3 (girth 5) lists Brown's and Wegner's upper bounds and Kovács's result; Section 4, Theorem 7 (from Brown, J. London Math. Soc. 1967): f(v,6) <= 2qv for any prime power q >= v; Section 9: 54 <= f(3,9) <= 58, with Foster's 1952 60-vertex (3,9)-graph (unpublished)."
+  added_by: daniel-munro
+
+brown-1967-girth-6:
+  string: "W. G. Brown, On Hamiltonian regular graphs of girth six, Journal of the London Mathematical Society 42 (1967) 514-520."
+  date: "1967"
+  doi: "https://doi.org/10.1112/jlms/s1-42.1.514"
+  notes: "Not read directly. Wong (1982), Theorem 7(b): f(v,6) <= 2qv for any prime power q >= v (from PG(2,q) with points and lines removed), giving 98, 242, 338, 480, 512 and 722 for k = 7, 11, 13, 15, 16, 19."
+  added_by: daniel-munro
+
+garbe-2014:
+  string: "F. Garbe, On graphs with excess or defect 2, Discrete Applied Mathematics 180 (2015) 81-88."
+  date: "2014-08"
+  doi: "https://doi.org/10.1016/j.dam.2014.07.022"
+  notes: "Theorem 1.2: no graph of odd degree d, girth 9 and excess 2; Table 2: no excess 2 at girth 13 for odd d = 0 mod 5, 5 mod 7, 4 mod 11, 2, 5, 10, 12 mod 13, and for d = 5 or 7. With parity (odd degree, even order), n(k,9) >= M(k,9) + 4 for odd k and n(k,13) >= M(k,13) + 4 for k = 5, 7, 15, 19. Received 2014-03-02, accepted 2014-07-21."
+  added_by: daniel-munro
+
+royle-cages-1999:
+  string: "G. Royle, Cages of higher valency (web page, cs.uwa.edu.au/~gordon/cages/allcages.html), as archived on 1999-01-17."
+  date: "1999-01-17"
+  url: "https://web.archive.org/web/19990117020630/http://www.cs.uwa.edu.au/~gordon/cages/allcages.html"
+  notes: "Records table, credited to Exoo and Jajcay [ExJ]: (4,7) 76, (5,7) 272, (6,7) 504, (7,7) 1332, (4,9) 504, among others; its girth-5 entries for k >= 8 (94, 118, 155, ...) are worse than Brown's 1967 bound and aren't in the history."
+  added_by: daniel-munro
+
+royle-cages-2001-08:
+  string: "G. Royle, Cages of higher valency (web page), as archived on 2001-08-23."
+  date: "2001-08-23"
+  url: "https://web.archive.org/web/20010823110820/http://www.cs.uwa.edu.au/~gordon/cages/allcages.html"
+  notes: "First snapshot with (8,5) 80 [Roy01, Royle's own], (4,7) 70 [McKay-Yang] and (5,7) 160 (uncredited). The previous snapshot is 2001-04-06."
+  added_by: daniel-munro
+
+royle-cages-2001-12:
+  string: "G. Royle, Cages of higher valency (web page), as archived on 2001-12-17."
+  date: "2001-12-17"
+  url: "https://web.archive.org/web/20011217220022/http://www.cs.uwa.edu.au/~gordon/cages/allcages.html"
+  notes: "First snapshot with (4,7) 67 [Exoo] and (5,7) 152 and (6,7) 294 [McKay-Yang]."
+  added_by: daniel-munro
+
+royle-cages-2002-04:
+  string: "G. Royle, Cages of higher valency (web page), as archived on 2002-04-23."
+  date: "2002-04-23"
+  url: "https://web.archive.org/web/20020423220217/http://www.cs.uwa.edu.au/~gordon/cages/allcages.html"
+  notes: "First snapshot with (12,5) 203 [Exoo]."
+  added_by: daniel-munro
+
+royle-cages-2003-03:
+  string: "G. Royle, Cages of higher valency (web page), as archived on 2003-03-23."
+  date: "2003-03-23"
+  url: "https://web.archive.org/web/20030323224008/http://www.cs.uwa.edu.au/~gordon/cages/allcages.html"
+  notes: "First snapshot with (4,9) 275 [Exoo]."
+  added_by: daniel-munro
+
+royle-cages-2006-06:
+  string: "G. Royle, Cages of higher valency (web page), as archived on 2006-06-29."
+  date: "2006-06-29"
+  url: "https://web.archive.org/web/20060629093626/http://www.cs.uwa.edu.au/~gordon/cages/allcages.html"
+  notes: "First snapshot with (4,10) 384 [Exoo]; the previous one is 2004-08-21."
+  added_by: daniel-munro
+
+wong-1986:
+  string: "P. K. Wong, A regular graph of girth 6 and valency 11, International Journal of Mathematics and Mathematical Sciences 9 (1986) 561-565."
+  date: "1986"
+  doi: "https://doi.org/10.1155/S0161171286000704"
+  notes: "Abstract: a regular graph of girth 6 and valency 11 on 240 vertices, 'the best known upper bound for f(11,6)'. Received 1985-11-20."
+  added_by: daniel-munro
+
+biggs-1989:
+  string: "N. L. Biggs, Cubic graphs with large girth, in Combinatorial Mathematics: Proceedings of the Third International Conference, Annals of the New York Academy of Sciences 555 (1989) 56-62."
+  date: "1989"
+  doi: "https://doi.org/10.1111/j.1749-6632.1989.tb22437.x"
+  notes: "Table 2 lists the smallest known cubic graphs for g = 13 to 20 and some larger g: 272 and 406 for g = 13 and 14 (affine-group Cayley graphs, Examples (i) and (ii)), 620 (S(31)) for 15 and 990 for 16 (the special construction I). Exoo (2004) cites this paper for 992; the paper says 990. Proceedings of a 1985 conference, published 1989-05."
+  added_by: daniel-munro
+
+lam-thiel-swiercz-1989:
+  string: "C. W. H. Lam, L. Thiel and S. Swiercz, The non-existence of finite projective planes of order 10, Canadian Journal of Mathematics 41 (1989) 1117-1123."
+  date: "1989"
+  doi: "https://doi.org/10.4153/CJM-1989-049-4"
+  notes: "Proves there is no projective plane of order 10 (received 1989-03-10), so n(11,6) > M(11,6) = 222; with Biggs and Ito (1980), whose bipartition theorem excludes excess 1, n(11,6) >= 224 (De la Cruz-Pizaña 2026, Table 1, rows e and j; Exoo-Jajcay survey, Table 5)."
+  added_by: daniel-munro
+
+brinkmann-mckay-saager-1995:
+  string: "G. Brinkmann, B. D. McKay and C. Saager, The smallest cubic graphs of girth nine, Combinatorics, Probability and Computing 4 (1995) 317-329."
+  date: "1995"
+  doi: "https://doi.org/10.1017/S0963548300001693"
+  notes: "By exhaustive computer search, the smallest cubic graphs of girth 9 have 58 vertices, and there are 18 of them. Received 1994-11-04, revised 1995-03-01."
+  added_by: daniel-munro
+
+mckay-myrvold-nadon-1998:
+  string: "B. D. McKay, W. Myrvold and J. Nadon, Fast backtracking principles applied to find new cages, Proceedings of the Ninth Annual ACM-SIAM Symposium on Discrete Algorithms (SODA 1998) 188-191."
+  date: "1998-01"
+  notes: "By computer search: (3,11)-cages have order 112, a (3,13)-cage has at least 202 vertices (raised from 196), and a (3,14)-cage at least 258. The last already follows from Biggs and Ito (1980) with parity, so it is credited to them."
+  added_by: daniel-munro
+
+eroh-schwenk-1999:
+  string: "L. Eroh and A. Schwenk, Cages of girth 5 and 7, Congressus Numerantium 138 (1999) 157-173."
+  date: "1999"
+  notes: "Not read directly. No k-regular graph of girth 5 and order k^2 + 3 for 5 <= k <= 11 (Exoo-Jajcay survey, Section 3; De la Cruz-Pizaña 2026, Table 1, row k), so n(k,5) >= k^2 + 4 for even k and k^2 + 5 for odd k (by parity). The survey's Table 4 doesn't apply this: it gives 67, 103 and 124 for k = 8, 10 and 11."
+  added_by: daniel-munro
+
+jorgensen-2005:
+  string: "L. K. Jørgensen, Girth 5 graphs from relative difference sets, Discrete Mathematics 293 (2005) 177-184."
+  date: "2005-03-20"
+  doi: "https://doi.org/10.1016/j.disc.2004.08.029"
+  notes: "Table (Section 5): girth-5 graphs of orders 96, 156, 288, 312 and 336 for k = 9, 11, 14, 15 and 16 (also 80, 126, 216 and 240 for k = 8, 10, 12, 13, matching or worse than earlier ones). Theorem 17: for an odd prime power q >= 13 and k <= q + 3, a k-regular girth-5 graph on 2(k-2)(q-1) vertices; q = 17 gives 576 for k = 20 and 544 for k = 19. Received 2001-07-04, online 2005-03-20."
+  added_by: daniel-munro
+
+abreu-funk-labbate-napolitano-2006:
+  string: "M. Abreu, M. Funk, D. Labbate and V. Napolitano, On (minimal) regular graphs of girth 6, Australasian Journal of Combinatorics 35 (2006) 119-132."
+  date: "2006"
+  url: "https://ajc.maths.uq.edu.au/pdf/35/ajc_v35_p119.pdf"
+  notes: "Constructions from PG(2,q) by deleting points and lines, and from disjoint Baer subplanes. The values n(13,6) <= 336, n(15,6) <= 462, n(16,6) <= 504 and n(19,6) <= 720 are as credited in the Exoo-Jajcay survey's Table 5; they follow from the formulas there (2(q^2 + (1-t)q + t - 2) and 2(q^2 + (1-t)q - t sqrt(q) + 1 - t))."
+  added_by: daniel-munro
+
+schwenk-2008:
+  string: "A. Schwenk, Construction of a small regular graph of girth 5 and degree 19, conference presentation, Normal, Illinois, 2008-04-18."
+  date: "2008-04-18"
+  notes: "A talk, not read. (19,5)-, (18,5)- and (17,5)-graphs of orders 512, 480 and 448 (Exoo-Jajcay survey, Section 4.2.2)."
+  added_by: daniel-munro
+
+gacs-heger-2008:
+  string: "A. Gács and T. Héger, On geometric constructions of (k,g)-graphs, Contributions to Discrete Mathematics 3(1) (2008) 63-80."
+  date: "2008"
+  doi: "https://doi.org/10.55016/ojs/cdm.v3i1.61998"
+  notes: "Theorem 5.2: for a prime power k, n(k,8) <= 2(k^3 - 2k) for odd k and 2(k^3 - 3k - 2) for even k; Theorem 5.3: n(k,12) <= 2(k^5 - k^3). This gives n(7,8) <= 658, below the 672 in the Exoo-Jajcay survey's Table 6 (from Exoo's web page)."
+  added_by: daniel-munro
+
+balbuena-2009:
+  string: "C. Balbuena, A method for obtaining small regular bipartite graphs of girth 8, Discrete Mathematics and Theoretical Computer Science 11(1) (2009) 33-46."
+  date: "2009"
+  url: "https://dmtcs.episciences.org/461"
+  notes: "Abstract and Section 3: k-regular bipartite graphs of girth 8 on 2q(kq - 1) vertices for k <= q, q a prime power; k = 15, q = 16 gives 7648. Received 2007-09-06."
+  added_by: daniel-munro
+
+araujopardo-balbuena-heger-2010:
+  string: "G. Araujo-Pardo, C. Balbuena and T. Héger, Finding small regular graphs of girths 6, 8 and 12 as subgraphs of cages, Discrete Mathematics 310 (2010) 1301-1306."
+  date: "2010-01-06"
+  doi: "https://doi.org/10.1016/j.disc.2009.12.014"
+  notes: "Theorem 4: n(k,12) <= 2kq^2(q^2 - 1) for a prime power q >= k, giving 1958400 for k = 15 (q = 16). The Exoo-Jajcay survey credits this paper with 1957376 for (15,12), which no theorem here gives; that value is credited to the survey. Online 2010-01-06."
+  added_by: daniel-munro
+
+abreu-araujopardo-balbuena-labbate-2012:
+  string: "M. Abreu, G. Araujo-Pardo, C. Balbuena and D. Labbate, Families of small regular graphs of girth 5, Discrete Mathematics 312 (2012) 2832-2842."
+  date: "2012"
+  doi: "https://doi.org/10.1016/j.disc.2012.05.020"
+  notes: "Table 1: new girth-5 bounds 284 and 310 for k = 14 and 15 (also credited in Abajo et al. 2019, Table 1); the Exoo-Jajcay survey's Table 4 (2013) still gives 288 and 312. Accepted 2012-05-30."
+  added_by: daniel-munro
+
+abreu-araujopardo-balbuena-labbate-2015:
+  string: "M. Abreu, G. Araujo-Pardo, C. Balbuena and D. Labbate, A construction of small (q-1)-regular graphs of girth 8, Electronic Journal of Combinatorics 22(2) (2015) #P2.10, arXiv:1501.02452; corrigendum added 2021-05-18."
+  date: "2021-05-18"
+  doi: "https://doi.org/10.37236/4397"
+  notes: "As corrected, the construction gives a (q-1)-regular graph of girth 8 and order 2q(q^2 - q - 4) for even q (end of the proof in the corrected PDF), so n(15,8) <= 7552. The original version claimed 2q(q-1)^2 = 7200 for q = 16, which the corrigendum withdraws, so it is dated by the corrigendum."
+  added_by: daniel-munro
+
+abajo-et-al-2015:
+  string: "E. Abajo, G. Araujo-Pardo, C. Balbuena and M. Bendala, New small regular graphs of girth 5, Discrete Mathematics 340 (2017) 1878-1888, arXiv:1508.01569."
+  date: "2015-08-06"
+  url: "https://arxiv.org/abs/1508.01569"
+  doi: "https://doi.org/10.1016/j.disc.2017.03.020"
+  notes: "Theorem 3.2 and Table 1: n(k,5) <= 436, 468, 500, 564 for k = 17, 18, 19, 20 (also credited in Abajo et al. 2019, Table 1)."
+  added_by: daniel-munro
+
+bamberg-bishnoi-royle-2017:
+  string: "J. Bamberg, A. Bishnoi and G. F. Royle, On regular induced subgraphs of generalized polygons, Journal of Combinatorial Theory Series A 158 (2018) 254-275, arXiv:1708.01095."
+  date: "2017-08-03"
+  url: "https://arxiv.org/abs/1708.01095"
+  doi: "https://doi.org/10.1016/j.jcta.2018.03.015"
+  notes: "Theorem 4.2: n(q,8) <= 2(q^3 - q sqrt(q) - q) for q an even power of a prime, giving n(16,8) <= 8032. Section 5: n(q,12) <= 2(q^5 - 3q^3) for every prime power q, giving 31556, 314116, 729404, 2072576 and 4911044 for k = 7, 11, 13, 16, 19. The concluding remarks say the smallest k improved for girth 12 is 11, although the formula also beats Gács-Héger's 32928 for k = 7."
+  added_by: daniel-munro
+
+jajcayova-filipovski-jajcay-2016:
+  string: "T. B. Jajcayová, S. Filipovski and R. Jajcay, Improved lower bounds for the orders of even girth cages, Electronic Journal of Combinatorics 23(3) (2016) #P3.55."
+  date: "2016-09-30"
+  doi: "https://doi.org/10.37236/6015"
+  notes: "Theorem 10 and Corollary 11: for k >= 6, n(k,g) >= M(k,g) + 5 (k even) or M(k,g) + 6 (k odd) when g = 2p with p >= 5 prime and k not 0, 1 or 2 mod p, or g = 16 and k = 3 mod 16, among other cases. In range: g = 10 with k = 8, 9, 13, 14, 18, 19; g = 14 with k = 6, 10, 11, 12, 13, 17, 18, 19, 20; and (19,16). Submitted 2016-03-17."
+  added_by: daniel-munro
+
+abajo-et-al-2019:
+  string: "E. Abajo, C. Balbuena, M. Bendala and X. Marcote, Improving bounds on the order of regular graphs of girth 5, Discrete Mathematics 342 (2019) 2900-2910."
+  date: "2019-03-02"
+  doi: "https://doi.org/10.1016/j.disc.2019.02.007"
+  url: "https://par.nsf.gov/servlets/purl/10093901"
+  notes: "Table 1 and Section 3: n(13,5) <= 226 and n(14,5) <= 280; Table 1 also lists the previous records with their credits. Received 2018-04-14, accepted 2019-02-08."
+  added_by: daniel-munro
+
+delacruz-pizana-2025:
+  string: "C. M. De la Cruz and M. A. Pizaña, On cages and choosing with symmetries, Electronic Journal of Combinatorics 33(1) (2026) #P1.54; announced in New lower bounds for the order of cages, Procedia Computer Science 273 (2025) 479-484 (LAGOS 2025)."
+  date: "2025-11"
+  doi: "https://doi.org/10.37236/14471"
+  notes: "Exhaustive computer search: n(3,14) >= 262, n(3,15) >= 388, n(4,9) >= 165, n(5,7) >= 110 and n(8,5) >= 69 (Section 5). Table 1 summarizes the lower bounds in the literature with references and years. Dated by the Procedia paper (doi:10.1016/j.procs.2025.10.335, online 2025-11, not read); the EJC paper was submitted 2025-08-06."
   added_by: daniel-munro
 
 # Disk covering problem
@@ -3685,21 +4428,21 @@ damerell-1973:
   string: "R. M. Damerell, On Moore graphs, Mathematical Proceedings of the Cambridge Philosophical Society 74 (1973) 227-236."
   date: "1973-09"
   doi: "https://doi.org/10.1017/S0305004100048015"
-  notes: "Not read directly. Proves there are no Moore graphs of diameter >= 3 (odd girth >= 7) other than cycles; found independently by Bannai and Ito, On finite Moore graphs, J. Fac. Sci. Univ. Tokyo Sect. IA 20 (1973) 191-208. Cited as [41] and [14] for Theorem 1 of the Exoo-Jajcay dynamic cage survey, which notes (p. 7) that n(k,g) > M(k,g) unless a Moore graph exists. For degree/diameter: there are no Moore graphs (other than polygons) of diameter >= 3, so n(d,k) <= M(d,k) - 1 for d >= 3, k >= 3 (abstract; Miller-Širáň survey, p. 9)."
+  notes: "Section 1: there are no Moore graphs (other than polygons) of diameter >= 3 (odd girth >= 7), so n(k,g) >= M(k,g) + 1 for odd g >= 7 and k >= 3. Received 1971-07-30. Found independently by Bannai and Ito, On finite Moore graphs, J. Fac. Sci. Univ. Tokyo Sect. IA 20 (1973) 191-208. Cited as [41] and [14] for Theorem 1 of the Exoo-Jajcay dynamic cage survey, which notes (p. 7) that n(k,g) > M(k,g) unless a Moore graph exists. For degree/diameter: there are no Moore graphs (other than polygons) of diameter >= 3, so n(d,k) <= M(d,k) - 1 for d >= 3, k >= 3 (abstract; Miller-Širáň survey, p. 9)."
   added_by: daniel-munro
 
 biggs-ito-1980:
   string: "N. L. Biggs and T. Ito, Graphs with even girth and small excess, Mathematical Proceedings of the Cambridge Philosophical Society 88 (1980) 1-10."
   date: "1980-07"
   doi: "https://doi.org/10.1017/S0305004100057303"
-  notes: "Not read directly. Bounds taken from the Exoo-Jajcay dynamic cage survey (2013), Section 3, p. 15, Theorems 11-12: a (k,2m)-cage with excess at most k-2 is bipartite, an excess of 2 occurs only for girth 6, and so n(k,g) >= M(k,g)+3 for even g >= 8 with no Moore graph."
+  notes: "Theorem A: a regular graph of girth 2r >= 6, valency k and excess e <= k - 2 is bipartite (so e is even, as the introduction says). Theorem B: no regular graph of girth 2r >= 8 has excess 2. Where there is no Moore graph (girths 10, 14, 16), this excludes excess 1, 2 and, for k >= 5, 3 (as Jajcayová, Filipovski and Jajcay 2016 also state), so n(k,g) >= M(k,g) + 3 for k = 4 and M(k,g) + 4 for k >= 5; for k = 3, parity also gives M + 4 (n(3,14) >= 258, n(3,16) >= 514, as in De la Cruz-Pizaña 2026, Table 2). Theorem C and Section 4: g = 6 and e = 2 is impossible for k = 5 or 7 (mod 8). Received 1979-08-09; issue of July 1980."
   added_by: daniel-munro
 
 bannai-ito-1981:
   string: "E. Bannai and T. Ito, Regular graphs with excess one, Discrete Mathematics 37 (1981) 147-158."
   date: "1981"
   doi: "https://doi.org/10.1016/0012-365X(81)90215-6"
-  notes: "Not read directly. The Exoo-Jajcay dynamic cage survey (2013), Section 3, p. 15, states that this paper shows there are no k-regular graphs of odd girth g >= 5 and order M(k,g)+1 for k >= 3. With the nonexistence of Moore graphs of odd girth >= 7, this gives n(k,g) >= M(k,g)+2. For degree/diameter: the Miller-Širáň survey (p. 13) and Feria-Purón et al. (2011, Section 1) cite this paper, with Kurosawa and Tsujii, Considerations on diameter of communication networks, Electronics and Communications in Japan 64A(4) (1981) 37-45, for the nonexistence of graphs of defect 1 (order M(d,k) - 1) for d >= 3 and k >= 3, giving n(d,k) <= M(d,k) - 2."
+  notes: "Read for cages (2026-11-23): the main theorem (p. 147) says there is no regular graph with excess 1 and odd girth 2r + 1 >= 5 (the girth-5 case being Brown's), so n(k,g) >= M(k,g) + 2 for odd g >= 7 and k >= 3. The Exoo-Jajcay dynamic cage survey (2013), Section 3, p. 15, states the same. With the nonexistence of Moore graphs of odd girth >= 7, this gives n(k,g) >= M(k,g)+2. For degree/diameter: the Miller-Širáň survey (p. 13) and Feria-Purón et al. (2011, Section 1) cite this paper, with Kurosawa and Tsujii, Considerations on diameter of communication networks, Electronics and Communications in Japan 64A(4) (1981) 37-45, for the nonexistence of graphs of defect 1 (order M(d,k) - 1) for d >= 3 and k >= 3, giving n(d,k) <= M(d,k) - 2. Read for degree/diameter (2026-11-23): Remark 3 at the end states, without a full proof ('by modifying the method presented here, we can prove'), that no regular graph of valency k, diameter r >= 2 and defect 1 exists apart from the 4-cycle; the case r = 2 is credited to Erdős, Fajtlowicz and Hoffman. Received 1980-02-18, revised 1980-11-24."
   added_by: daniel-munro
 
 sauer-1967:
@@ -3788,14 +4531,14 @@ jorgensen-1992:
   string: "L. K. Jørgensen, Diameters of cubic graphs, Discrete Applied Mathematics 37/38 (1992) 347-351."
   date: "1992-07"
   doi: "https://doi.org/10.1016/0166-218X(92)90144-Y"
-  notes: "Not read directly. Shows that a graph of maximum degree 3 and diameter k >= 4 cannot have defect 2 (zbMATH review 0768.05035; Miller-Širáň survey, p. 13). Miller (An overview of the degree/diameter problem for directed, undirected and mixed graphs, IWONT 2010 invited talk, p. 4) states the consequence n(3,k) <= M(3,k) - 4 for k >= 4: defect 1 is excluded by Bannai-Ito and Kurosawa-Tsujii (1981), and an odd defect is impossible by the handshaking lemma, since a graph of maximum degree 3 and defect 3 must be cubic (Feria-Purón et al. 2011, Proposition 4.1)."
+  notes: "Read 2026-11-23: Theorem 1, for d >= 4 there is no (3,d)-graph with M(3,d) - 2 vertices (received 1989-06-05, revised 1990-02-28; no earlier public version found). Earlier note: shows that a graph of maximum degree 3 and diameter k >= 4 cannot have defect 2 (zbMATH review 0768.05035; Miller-Širáň survey, p. 13). Miller (An overview of the degree/diameter problem for directed, undirected and mixed graphs, IWONT 2010 invited talk, p. 4) states the consequence n(3,k) <= M(3,k) - 4 for k >= 4: defect 1 is excluded by Bannai-Ito and Kurosawa-Tsujii (1981), and an odd defect is impossible by the handshaking lemma, since a graph of maximum degree 3 and defect 3 must be cubic (Feria-Purón et al. 2011, Proposition 4.1)."
   added_by: daniel-munro
 
 conde-gimbert-2008:
   string: "J. Conde and J. Gimbert, On the existence of graphs of diameter two and defect two, Discrete Mathematics 309 (2009) 3166-3172."
-  date: "2008-10"
+  date: "2008-10-14"
   doi: "https://doi.org/10.1016/j.disc.2008.09.017"
-  notes: "Not read directly. Shows there are no graphs of maximum degree d, diameter 2 and order d^2 - 1 (defect 2) for 5 < d < 50 (Miller-Širáň survey, p. 13; zbMATH review 1189.05053: verified for d = 6, ..., 50 using PARI), so n(d,2) <= M(d,2) - 3 for these d. Dated by its online appearance (Crossref record created 2008-10-15); print issue May 2009."
+  notes: "Read 2026-11-23. Corollary 1: no (d,2,2)-graph for odd d, 5 < d < 50; Corollary 2: none for even d, 4 < d <= 50 (conditional conjectures checked by computer up to 50). So n(d,2) <= M(d,2) - 3 for 6 <= d <= 50 apart from Moore-graph degrees. Dated by its online appearance (2008-10-14; received 2008-02-19); print issue 2009."
   added_by: daniel-munro
 
 miller-nguyen-pineda-2009:
@@ -3807,9 +4550,9 @@ miller-nguyen-pineda-2009:
 
 miller-pineda-2009:
   string: "M. Miller and G. Pineda-Villavicencio, Complete catalogue of graphs of maximum degree 3 and defect at most 4, Discrete Applied Mathematics 157 (2009) 2983-2996."
-  date: "2009-05"
+  date: "2009-05-15"
   doi: "https://doi.org/10.1016/j.dam.2009.04.021"
-  notes: "Not read directly. Completes the catalogue of graphs of maximum degree 3 and defect at most 4 (Miller-Širáň survey, p. 16); Miller (IWONT 2010 invited talk, p. 4) states the consequence n(3,k) <= M(3,k) - 6 for k >= 5, attributing it to 2008. Dated by its online appearance (Crossref record created 2009-05-16)."
+  notes: "Read 2026-11-23. The abstract proves there are no (3,D,-4)-graphs for D >= 5, completing the catalogue of graphs of maximum degree 3 and defect at most 4, so N(3,D) <= M(3,D) - 6 for D >= 5. Dated by its online appearance (2009-05-15; received 2008-06-30)."
   added_by: daniel-munro
 
 feria-puron-miller-pineda-2010:
@@ -4115,25 +4858,46 @@ radziszowski-2025-slides:
 abbott-1965:
   string: "H.L. Abbott, Some Problems in Combinatorial Analysis, Ph.D. thesis, Department of Mathematical and Statistical Sciences, University of Alberta, Edmonton, 1965."
   date: "1965"
-  notes: "Radziszowski's history of R(5,5) credits R(5,5) >= 38 (quadratic residues in Z_37) to Abbott, 1965, without a full citation; this thesis is the only 1965 work by Abbott in the reference list of https://doi.org/10.37236/21. Danzer and Klee (1967) say it contains a statement implying that a snake (induced cycle) in the d-cube has length at most 2^(d-1), shown independently by Singleton (IEEE Trans. Electronic Computers 15, 1966)."
+  notes: "Not read (not online; the University of Alberta's copy is restricted to campus). McKay and Radziszowski (J. Combin. Theory B 69, 1997, Table I and reference 1) credit R(5,5) >= 38 (quadratic residues in Z_37) to this thesis. Danzer and Klee (1967) say it contains a statement implying that a snake (induced cycle) in the d-cube has length at most 2^(d-1), shown independently by Singleton (IEEE Trans. Electronic Computers 15, 1966)."
   added_by: daniel-munro
 
 irving-1973:
-  string: "R.W. Irving, R(5,5) >= 42 from sum-free sets (1973), as credited in S. Radziszowski's history of bounds on R(5,5)."
+  string: "R.W. Irving, Contributions to Ramsey Theory, Ph.D. thesis, University of Glasgow, 1973."
   date: "1973"
-  notes: "Only the author, year and method are given by the secondary source; the original publication was not identified."
+  notes: "Not read (not found online). McKay and Radziszowski (J. Combin. Theory B 69, 1997, Table I and reference 8) credit R(5,5) >= 42, from sum-free sets, to this thesis."
   added_by: daniel-munro
 
 giraud-1967:
-  string: "G. Giraud, R(5,5) <= 58 by linear programming (1967), as credited in S. Radziszowski's history of bounds on R(5,5)."
+  string: "G. Giraud, Une majoration du nombre de Ramsey binaire-bicolore en (5,5), C.R. Acad. Sci. Paris, Série A, 265 (1967) 809-811."
   date: "1967"
-  notes: "Only the author, year and method are given by the secondary source. Possibly G. Giraud, Une majoration des nombres de Ramsey binaires-bicolores, C.R. Acad. Sci. Paris 266 (1968), but this wasn't checked."
+  notes: "Not read (Gallica blocks automated access). McKay and Radziszowski (J. Combin. Theory B 69, 1997, Table I and reference 6) credit R(5,5) <= 58 to this note; the volume and pages are confirmed by zbMATH (Zbl 0185.03101)."
   added_by: daniel-munro
 
 walker-1968:
   string: "K. Walker, Dichromatic Graphs and Ramsey Numbers, Journal of Combinatorial Theory, 5 (1968) 238-243."
   date: "1968"
   doi: "https://doi.org/10.1016/S0021-9800(68)80070-5"
+  added_by: daniel-munro
+
+kalbfleisch-1967:
+  string: "J.G. Kalbfleisch, Upper Bounds for Some Ramsey Numbers, Journal of Combinatorial Theory, 2 (1967) 35-42."
+  date: "1967"
+  doi: "https://doi.org/10.1016/S0021-9800(67)80112-1"
+  notes: "Table 2 gives new upper bounds M(3,q) <= 24, 30, 37, 45, 54, 63, 73 and 84 for q = 7 to 14 (M(p,q) is R(p,q)), proved for q = 7 and 8 (Theorems 1 and 4), with details in Kalbfleisch's 1966 thesis (Chapter 5). Section 3 shows there is no (4,5)-colouring of K_30 and no (4,6)-colouring of K_46, so R(4,5) <= 30 and R(4,6) <= 46, and notes that Lemma 2 then gives R(5,5) <= 59 and R(4,6) <= 47. Kalbfleisch 1965 (Table 2) had already announced R(3,7) <= 24, R(4,5) <= 30, R(4,6) <= 47 and R(5,5) <= 59, so they are credited there; the other R(3,q) bounds may be in the 1966 thesis, which wasn't read. Table 3 also lists R(5,6) <= 105 and R(6,6) <= 210 from Lemma 2 (Erdős-Szekeres). The lower bounds in Tables 2 and 3 not in Kalbfleisch 1965 (R(3,10) >= 39, R(3,12) >= 49, R(3,14) >= 63, R(5,6) >= 51) are attributed to the 1966 thesis. Cites Abbott's thesis as April 1965 for R(5,5) >= 38."
+  added_by: daniel-munro
+
+fujita-2012:
+  string: "H. Fujita, A New Lower Bound for the Ramsey Number R(4,8), arXiv:1212.1328v1 (2012)."
+  date: "2012-12-06"
+  url: "https://arxiv.org/abs/1212.1328v1"
+  notes: "Version 1 gives a (4,8)-colouring of K_56, so R(4,8) >= 57, found with a SAT solver based on MiniSat. Version 2 (2013-03-16) improves it to 58: fujita-2013."
+  added_by: daniel-munro
+
+fujita-2013:
+  string: "H. Fujita, A New Lower Bound for the Ramsey Number R(4,8), arXiv:1212.1328v2 (2013)."
+  date: "2013-03-16"
+  url: "https://arxiv.org/abs/1212.1328v2"
+  notes: "Version 2 gives a (4,8)-colouring of K_57, so R(4,8) >= 58. Exoo found 58 independently, starting from Fujita's K_56 colouring (Electron. J. Combin. 20(1) #P68, submitted 2013-02-17, published 2013-03-24, eight days after this version); DS1 (https://doi.org/10.37236/21) credits 58 to Exoo, and revision 14 notes that Fujita obtained it independently."
   added_by: daniel-munro
 
 walker-1971:
@@ -4296,6 +5060,13 @@ dransfield-et-al-2004:
   string: "M.R. Dransfield, L. Liu, V.W. Marek and M. Truszczyński, Satisfiability and Computing van der Waerden Numbers, Electronic Journal of Combinatorics 11 (2004) #R41."
   date: "2004-06-16"
   doi: "https://doi.org/10.37236/1794"
+  added_by: daniel-munro
+
+dransfield-marek-truszczynski-2003:
+  string: "M.R. Dransfield, V.W. Marek and M. Truszczyński, Satisfiability and Computing van der Waerden Numbers, Theory and Applications of Satisfiability Testing (SAT 2003), Lecture Notes in Computer Science 2919 (2004) 1-13, arXiv:cs/0310064."
+  date: "2003-04-15"
+  url: "https://arxiv.org/abs/cs/0310064"
+  notes: "Table 3 gives W(5,3) > 125. The date is that of the authors' web page listing the bound (https://web.archive.org/web/20030507012224/http://www.cs.uky.edu:80/ai/vdw/, last modified 2003-04-15), which cites this paper for SAT 2003; the arXiv version is dated 2003-10-31. Its other bounds are below Rabung's 1979 ones, which the authors didn't know of."
   added_by: daniel-munro
 
 kouril-franco-2005:
