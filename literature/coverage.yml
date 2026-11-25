@@ -104,7 +104,7 @@ debruijn-newman:
 van-der-waerden:
   status: complete
   reviewed: 2026-11-24
-  sources: [stevens-shantaram-1978, rabung-1979, beeler-oneil-1979, dransfield-marek-truszczynski-2003, dransfield-et-al-2004, landman-robertson-2004, herwig-et-al-2007, heule-2009, sat-delft-waerden-2011, rabung-lotts-2012, landman-robertson-2014, heule-2017, blankenship-c-t-2018, monroe-2016, monroe-2017, monroe-2019, monroe-2022, komkov-2016, komkov-2017-v1, komkov-2017-v2, komkov-2018-v3, komkov-2018-v4, komkov-2018, komkov-2020, irsi-tables-2026, irsi-2026-w10-3, baur-2026, mouhib-2026, kim-2026, wikipedia-van-der-waerden]
+  sources: [stevens-shantaram-1978, rabung-1979, beeler-oneil-1979, dransfield-marek-truszczynski-2003, dransfield-et-al-2004, landman-robertson-2004, herwig-et-al-2007, heule-2009, sat-delft-waerden-2011, rabung-lotts-2012, landman-robertson-2014, heule-2017, blankenship-c-t-2018, monroe-2016, monroe-2017, monroe-2019, monroe-2022, komkov-2016, komkov-2017-v1, komkov-2017-v2, komkov-2018-v3, komkov-2018-v4, komkov-2018, komkov-2020, irsi-tables-2026, irsi-2026-w10-3, baur-2026, mouhib-2026, kim-2026, amaru-2026, wikipedia-van-der-waerden]
   gaps:
   - "irsi-tables-2026 is dated 2026-09-30, the date IRSI's note (irsi-2026-w10-3) gives for the page; its W(4,6), W(5,6) and W(6,6) rows come from constructions of 2026-09-23 to 30 and may have been posted a few days earlier. The Wayback Machine has no copy of the page, and IRSI documents no earlier values for these rows."
   - "kim-2026's 4- to 6-colour bounds are printed to three significant figures (Tables 2 and 3); the exact values recorded are q x L from the constructions it lists, computed here (see its notes). The archive's data/records.json, which may give them exactly, wasn't read. Kim's W(6,6) length 676,235 and Pouly's Rabung atlas (github.com/Vulkin-prog/rabung-atlas32, data/derived/ATLAS_CATALOGUE_K3_K64.csv) are below the records for lengths up to 11; Pouly's Zenodo record (10.5281/zenodo.23337824) starts at length 12."
@@ -204,7 +204,7 @@ golomb-ruler:
 schur:
   status: complete
   reviewed: 2026-11-25
-  sources: [oeis-a045652-schur, schur-1916, abbott-hanson-1972, whitehead-1973, irving-1973-schur, fredricksen-1979, exoo-1994, fredricksen-sweet-2000, heule-2017-schur, ageron-et-al-2021, eliahou-2016-schur, fettes-kramer-radziszowski-2004, rowley-2019, rowley-2021, bengone-et-al-2026, chen-zhu-long-2026, mckenna-2026, ozdemir-2026, ejc-ds1-small-ramsey-numbers]
+  sources: [oeis-a045652-schur, schur-1916, abbott-hanson-1972, whitehead-1973, irving-1973-schur, fredricksen-1979, exoo-1994, fredricksen-sweet-2000, heule-2017-schur, ageron-et-al-2021, eliahou-2016-schur, fettes-kramer-radziszowski-2004, rowley-2019, rowley-2021, bengone-et-al-2026, chen-zhu-long-2026, mckenna-2026, ozdemir-2026, amaru-2026, ejc-ds1-small-ramsey-numbers]
   gaps:
   - "For S(10) to S(14), no lower bound is recorded between Schur's (3^k - 1)/2 (1916) and Rowley's templates (2019): Abbott and Hanson 1972, Exoo 1994 and Fredricksen and Sweet 2000 give only recursive or asymptotic bounds for k >= 8, and the lower bounds on R_k(3) for k >= 10 in Radziszowski's survey (DS1, Table XIa and 6.2) aren't stated as Schur bounds. Likewise S(12) >= 631840 (Rowley's R_12(3) >= 631842) and the bounds that later S(6), S(7) and S(8) records give for k = 10, 12 and 14 by the published recurrences aren't recorded, since no source states them."
   - "S(12) >= 637856 is stated only in Ageron et al.'s Table 1, credited to Rowley's arXiv:1912.01164; it uses Rowley's 2021 S(7) >= 1696 and S(k + 5) >= 376 S(k) + 160, so it's credited to rowley-2021."
@@ -217,7 +217,7 @@ schur:
 weak-schur:
   status: complete
   reviewed: 2026-11-25
-  sources: [oeis-a072842-weak-schur, ageron-et-al-2021, walker-1952, eliahou-et-al-2012, eliahou-et-al-2013, rafilipojaona-2015, rowley-2020, bouzy-2015, ozdemir-2026, irving-1973-schur, bornsztein-2002]
+  sources: [oeis-a072842-weak-schur, ageron-et-al-2021, walker-1952, eliahou-et-al-2012, eliahou-et-al-2013, rafilipojaona-2015, rowley-2020, bouzy-2015, ozdemir-2026, amaru-2026, irving-1973-schur, bornsztein-2002]
   gaps:
   - "WS(11) to WS(14) have lower bounds only from Ageron et al.'s Tables 2 and 4 (and Rowley's, through Table 2): the larger values that WS(n + 1) >= 4 S(n) + 2, WS(n + 2) >= 13 S(n) + 8 and WS(n + 3) >= 42 S(n) + 24 give with the 2026 Schur bounds aren't stated anywhere, and aren't recorded. No lower bound is recorded for WS(10) to WS(14) before Rowley 2020, apart from WS(n) >= S(n) (see below)."
   - "Rowley 2020 v1-v3 claimed WS(10) >= 70782, from an S(9) value 1 too large; v4 corrected it to 70778, which is recorded with the v1 date. WS(11) >= 241282 and WS(12) >= 806786 aren't in Rowley's paper but are credited to it by Ageron et al."
@@ -318,7 +318,7 @@ rectilinear-crossing:
 multicolor-ramsey-triangle:
   status: complete
   reviewed: 2026-11-19
-  sources: [ejc-ds1-small-ramsey-numbers, ejc-ds1-r1-small-ramsey-numbers, ejc-ds1-r2-small-ramsey-numbers, ejc-ds1-r6-small-ramsey-numbers, ejc-ds1-r7-small-ramsey-numbers, fettes-kramer-radziszowski-2004, whitehead-1973, chung-1973, fredricksen-1979, exoo-1994, fredricksen-sweet-2000]
+  sources: [ejc-ds1-small-ramsey-numbers, ejc-ds1-r1-small-ramsey-numbers, ejc-ds1-r2-small-ramsey-numbers, ejc-ds1-r6-small-ramsey-numbers, ejc-ds1-r7-small-ramsey-numbers, fettes-kramer-radziszowski-2004, whitehead-1973, chung-1973, fredricksen-1979, exoo-1994, fredricksen-sweet-2000, amaru-2026]
   gaps:
   - "Folkman 1974 wasn't read; Whitehead 1973 proves the same R_4(3) <= 65 from Folkman's notes. Golomb and Baumert 1965 (R_4(3) >= 46, via S(4) = 44), Sánchez-Flores 1995 and Wan 1997 were read only through Fettes-Kramer-Radziszowski 2004 and zbMATH reviews."
   - "Chung's recurrence R_{k+1}(3) >= 3R_k(3) + R_{k-2}(3) - 3 implies R_5(3) >= 156 (1973) and, with Fredricksen 1979, R_6(3) >= 491 before Exoo's 500, but no source states them, so they aren't recorded."

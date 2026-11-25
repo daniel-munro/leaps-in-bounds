@@ -2967,6 +2967,13 @@ ozdemir-2026:
   notes: "Not peer reviewed. Version 1 (https://doi.org/10.5281/zenodo.23670665) gives S(7) >= 1698, found by local search seeded from Rowley's 1696 colouring; version 2, the same day, adds S(12) >= 380 * 1698 + 148 = 645388 and WS(10) >= 42 * 1698 + 24 = 71340 by the templates of https://arxiv.org/abs/2112.03175, with explicit colourings. Says the search and checks were done with Claude (Anthropic)."
   added_by: daniel-munro
 
+amaru-2026:
+  string: "L. Amaru, New lower bounds for van der Waerden, Schur and weak Schur numbers, Zenodo, preprint."
+  date: "2026-11-25"
+  doi: "https://doi.org/10.5281/zenodo.24538011"
+  notes: "Not peer reviewed. Proves 17 lower bounds: eight from new colorings (W(7,3) > 345, W(8,3) > 534, W(10,3) > 940, W(7,4) > 10844, W(6,5) > 115261, S(7) >= 1778, S(8) >= 5672, S(9) >= 18920) and nine from them by known inequalities (WS(8) >= 7114, WS(9) >= 23122 and WS(10) >= 75682 by Rowley's templates, R_k(3) >= S(k) + 2 for k = 7-9, and S(12), S(13), S(14) >= 675788, 2155508, 7189748 by the width-380 template of https://arxiv.org/abs/2112.03175). The colorings are in its appendix and companion package, and are the same as the certificates Luca Amaru (Synopsys) submitted here on 2026-11-24 and 2026-11-25, which came first. Says they were found by Synopsys reasoning engines and solvers."
+  added_by: daniel-munro
+
 # Weak Schur numbers
 
 walker-1952:
