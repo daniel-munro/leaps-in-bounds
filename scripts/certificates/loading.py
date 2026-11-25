@@ -41,8 +41,7 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
             raise CertificateError(f"{path}: missing fields {missing}")
         if cert["bound"] not in ("lower", "upper"):
             raise CertificateError(f"{path}: bound must be 'lower' or 'upper'")
-        if not isinstance(cert["submitted_by"], str) or not GITHUB_USERNAME.fullmatch(cert["submitted_by"]):
-            raise CertificateError(f"{path}: submitted_by must be a GitHub username")
+        cert["submitted_by"], cert["submitted_by_github"] = submitter(cert["submitted_by"], path)
         if cert["kind"] not in ("witness", "lean"):
             raise CertificateError(f"{path}: kind must be 'witness' or 'lean'")
         if cert["kind"] not in cert:
@@ -59,6 +58,32 @@ def load_certificates(certificates_dir: str | pathlib.Path = CERTIFICATES_DIR) -
         cert["date"] = str(cert["date"])
         certificates[cert_id] = cert
     return certificates
+
+
+def submitter(submitted_by: Any, path: Any) -> tuple[str, str | None]:
+    """Who a certificate credits, as a name to show and their GitHub username,
+    if any. `submitted_by` is either the GitHub username of the account that
+    submitted it, or, for one received another way (such as by email), a
+    mapping with the `name` of the person to credit and optionally their
+    `affiliation`.
+    """
+    if isinstance(submitted_by, str):
+        if not GITHUB_USERNAME.fullmatch(submitted_by):
+            raise CertificateError(f"{path}: submitted_by must be a GitHub username")
+        return submitted_by, submitted_by
+    if not isinstance(submitted_by, dict):
+        raise CertificateError(f"{path}: submitted_by must be a GitHub username or a mapping with a name")
+    extra = set(submitted_by) - {"name", "affiliation"}
+    if extra:
+        raise CertificateError(f"{path}: submitted_by has unknown fields {sorted(extra)}")
+    name, affiliation = submitted_by.get("name"), submitted_by.get("affiliation")
+    if not isinstance(name, str) or not name.strip():
+        raise CertificateError(f"{path}: submitted_by must have a name")
+    if affiliation is not None and (not isinstance(affiliation, str) or not affiliation.strip()):
+        raise CertificateError(f"{path}: submitted_by affiliation must be a non-empty string")
+    if affiliation is None:
+        return name.strip(), None
+    return f"{name.strip()} ({affiliation.strip()})", None
 
 
 def check_attestation(attestation: Any, path: Any) -> None:

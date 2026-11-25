@@ -46,6 +46,16 @@ lean:
 
 `submitted_by` credits whoever submits the certificate. The site credits a bound's discovery to its earliest record, so a certificate for a bound from the literature doesn't need to cite it: it's matched by the bound. `source` is only for saying where a construction or proof was taken from, as background. Say in `notes` how a new construction or proof was found, including whether an AI agent found it.
 
+If you can't open a pull request, for example because you don't have a GitHub account, you can email a certificate to the maintainer, who will check it and submit it for you. It's then credited by name, with an optional affiliation, which the site shows without a link:
+
+```yaml
+submitted_by:
+  name: Jane Doe
+  affiliation: Example Corp   # optional
+```
+
+Its `notes` should then say how it was received and who added it, such as "Received by email; added by daniel-munro."
+
 ## Size limit
 
 Leaps in Bounds shows the state of each problem and how it has progressed, rather than archiving data, so a certificate's evidence here is limited to 500 kB: its YAML file and its evidence files together, as stored. CI checks this.

@@ -4,7 +4,7 @@ certificate (include.certificate, a row of a constant's certificates).
 {%- endcomment -%}
 {%- if include.certificate -%}
   Certificate <a href="{{ site.repository }}/blob/main/{{ include.certificate.path }}">{{ include.certificate.id }}</a>,
-  submitted by <a href="https://github.com/{{ include.certificate.submitted_by }}">{{ include.certificate.submitted_by }}</a>
+  submitted by {% include contributor_link.html name=include.certificate.submitted_by github=include.certificate.submitted_by_github %}
 {%- elsif include.source -%}
   {%- assign source = site.data.sources[include.source] -%}
   {%- if source.doi -%}<a href="{{ source.doi }}">{{ source.string }}</a>{%- elsif source.url -%}<a href="{{ source.url }}">{{ source.string }}</a>{%- else -%}{{ source.string }}{%- endif -%}

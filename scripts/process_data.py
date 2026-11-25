@@ -240,7 +240,7 @@ def attach_certificates(
         if status not in ("verified", "attested"):
             left_out += 1
             continue
-        fields = ["id", "bound", "value", "kind", "submitted_by", "date", "source", "notes", "path", "attestation"]
+        fields = ["id", "bound", "value", "kind", "submitted_by", "submitted_by_github", "date", "source", "notes", "path", "attestation"]
         summary = {k: cert[k] for k in fields if k in cert}
         summary["status"] = status
         summary["approx"] = cert["approx"]
@@ -328,6 +328,7 @@ def bound_events(
                 "via": None,
                 "date": date,
                 "submitted_by": record["submitted_by"],
+                "submitted_by_github": record["submitted_by_github"],
             }
         events.append({"type": f"{side}_bound", "value": value, "date": date, "discovery": discovery})
         best_approx, best_kind = approx, kind
@@ -536,6 +537,7 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
                 "value": Value(str(cert["value"])).to_dict(),
                 "kind": cert["kind"],
                 "submitted_by": cert["submitted_by"],
+                "submitted_by_github": cert["submitted_by_github"],
                 "date": cert["date"],
                 "status": cert["status"],
                 "role": role,
@@ -678,6 +680,7 @@ def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 5
                     "discovery": discovery["id"],
                     "via": discovery["via"],
                     "submitted_by": discovery.get("submitted_by"),
+                    "submitted_by_github": discovery.get("submitted_by_github"),
                     "evidence": {"tier": event["evidence"]["tier"], "kind": event["evidence"]["kind"]},
                     "current": i == len(events) - 1,
                 })
@@ -698,18 +701,22 @@ def list_contributors(
     updates: list[Mapping[str, Any]],
     certificates: list[Mapping[str, Any]],
 ) -> list[dict[str, Any]]:
-    """List the GitHub accounts credited with sources (by `added_by`) or
-    certificates (by `submitted_by`): the sources each added, the bounds from
-    the literature citing them, and the certificates that are the best
+    """List the contributors credited with sources (by `added_by`) or
+    certificates (by `submitted_by`), each by GitHub username, or by name for
+    a certificate received another way: the sources each added, the bounds
+    from the literature citing them, and the certificates that are the best
     evidence for a bound discovered earlier or the discovery of a new one.
     Families are credited too but not counted here. Most new bounds first.
     """
     contributors: dict[str, dict[str, Any]] = {}
 
-    def credit(username: str) -> dict[str, Any]:
-        return contributors.setdefault(username, {
-            "contributor": username, "sources": 0, "bounds_sourced": 0,
-            "bounds_verified": 0, "new_bounds": 0,
+    def credit(name: str, github: str | None) -> dict[str, Any]:
+        """A contributor's counts, by the name shown: a GitHub username, or
+        the name and affiliation credited for a certificate received another
+        way, with no GitHub account."""
+        return contributors.setdefault(name, {
+            "contributor": name, "github": github,
+            "sources": 0, "bounds_sourced": 0, "bounds_verified": 0, "new_bounds": 0,
         })
 
     def check(kind: str, item_id: str, username: Any) -> None:
@@ -722,16 +729,16 @@ def list_contributors(
     for source_id, source in sources.items():
         if source.get("added_by") is not None:
             check("Source", source_id, source["added_by"])
-            credit(source["added_by"])["sources"] += 1
+            credit(source["added_by"], source["added_by"])["sources"] += 1
     for update in updates:
         source = sources.get(update["source"]) if update["source"] else None
         if source is not None and source.get("added_by") is not None:
-            credit(source["added_by"])["bounds_sourced"] += 1
+            credit(source["added_by"], source["added_by"])["bounds_sourced"] += 1
     for cert in certificates:
         if cert["role"] == "discovery":
-            credit(cert["submitted_by"])["new_bounds"] += 1
+            credit(cert["submitted_by"], cert["submitted_by_github"])["new_bounds"] += 1
         elif cert["role"] == "evidence":
-            credit(cert["submitted_by"])["bounds_verified"] += 1
+            credit(cert["submitted_by"], cert["submitted_by_github"])["bounds_verified"] += 1
     return sorted(
         contributors.values(),
         key=lambda c: (-c["new_bounds"], -(c["bounds_sourced"] + c["bounds_verified"]),

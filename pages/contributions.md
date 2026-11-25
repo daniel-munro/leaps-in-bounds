@@ -64,7 +64,7 @@ These {{ found_here.size }} bounds were first recorded by a certificate submitte
 
 ## Contributors
 
-Each contribution is credited to the GitHub account that submitted it. This credits the work of finding, recording and checking the data; the mathematics is credited to the sources cited for each bound, which may be by someone else.
+Each contribution is credited to the GitHub account that submitted it, or, for a certificate received by email from someone without one, to them by name. This credits the work of finding, recording and checking the data; the mathematics is credited to the sources cited for each bound, which may be by someone else.
 
 Sources counts the sources a contributor added, and Bounds sourced the bounds from the literature that cite them. Bounds verified counts their certificates that are the best evidence for a bound discovered earlier, and New bounds those that were the discovery of a bound.
 
@@ -83,7 +83,7 @@ Sources counts the sources a contributor added, and Bounds sourced the bounds fr
   <tbody>
     {% for contributor in contributors %}
       <tr>
-        <td><a href="https://github.com/{{ contributor.contributor }}">{{ contributor.contributor }}</a></td>
+        <td>{% include contributor_link.html name=contributor.contributor github=contributor.github %}</td>
         <td class="text-end">{{ contributor.sources }}</td>
         <td class="text-end">{{ contributor.bounds_sourced }}</td>
         <td class="text-end">{{ contributor.bounds_verified }}</td>
@@ -114,7 +114,7 @@ Certificates submitted here, grouped by who submitted them and when, leaving out
       {% assign first = batch.items.first %}
       <tr>
         <td class="text-nowrap">{{ first.date }}</td>
-        <td class="text-nowrap"><a href="https://github.com/{{ first.submitted_by }}">{{ first.submitted_by }}</a></td>
+        <td class="text-nowrap">{% include contributor_link.html name=first.submitted_by github=first.submitted_by_github %}</td>
         {% if batch.size == 1 %}
           {% assign constant = site.data.constants[first.constant] %}
           {% if first.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}

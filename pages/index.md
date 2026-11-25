@@ -22,7 +22,7 @@ This site provides browsing, visualizations, and access to the structured data f
   {% for batch in batches limit: 5 %}
     {% assign first = batch.items.first %}
     <li>
-      {{ first.date }}, <a href="https://github.com/{{ first.submitted_by }}">{{ first.submitted_by }}</a>:
+      {{ first.date }}, {% include contributor_link.html name=first.submitted_by github=first.submitted_by_github %}:
       {% if batch.size == 1 %}
         {% assign constant = site.data.constants[first.constant] %}
         {% if first.bound == "lower" %}{% assign relation = "\ge" %}{% else %}{% assign relation = "\le" %}{% endif %}

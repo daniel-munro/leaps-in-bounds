@@ -157,7 +157,7 @@ layout: default
     <li>
       ${{ relation }} {{ cert.value }}$:
       <a href="{{ site.repository }}/blob/main/{{ cert.path }}">{{ cert.id }}</a>,
-      submitted by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>, {{ cert.date }}
+      submitted by {% include contributor_link.html name=cert.submitted_by github=cert.submitted_by_github %}, {{ cert.date }}
       {% include certificate_role.html cert=cert %}
     </li>
   {% endfor %}

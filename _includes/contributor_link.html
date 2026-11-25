@@ -1,0 +1,6 @@
+{%- comment -%}
+A contributor's name (include.name), linked to their GitHub profile when they
+have a username (include.github). Certificates received another way, such as
+by email, credit a name and affiliation with no link.
+{%- endcomment -%}
+{%- if include.github -%}<a href="https://github.com/{{ include.github }}">{{ include.name }}</a>{%- else -%}{{ include.name }}{%- endif -%}

@@ -18,7 +18,7 @@ its best evidence.
     {% if row.discovery_kind == "certificate" %}
       {% assign cert = site.data.certificates | where: "id", row.discovery | first %}
       <span class="badge bg-verified-new">New bound</span>
-      <a href="{{ site.repository }}/blob/main/{{ cert.path }}">Certificate</a> by <a href="https://github.com/{{ cert.submitted_by }}">{{ cert.submitted_by }}</a>
+      <a href="{{ site.repository }}/blob/main/{{ cert.path }}">Certificate</a> by {% include contributor_link.html name=cert.submitted_by github=cert.submitted_by_github %}
     {% elsif row.discovery %}
       {% include record_link.html source=row.discovery %}
     {% else %}
