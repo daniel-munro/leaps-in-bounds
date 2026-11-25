@@ -283,11 +283,14 @@ def bound_events(
     discovered over time, each with its discovery and best evidence.
 
     A record (an update citing a source, or a certificate) is a discovery when
-    it improves on every earlier record. Ties in date go to the source, and
-    undated updates come first. A literature update that doesn't improve on
-    an earlier certificate isn't a discovery. Updates that only match an
-    earlier literature bound to the precision of the decimal approximation
-    still count, as before, since the literature was checked on its own.
+    it improves on every earlier record. Ties in date go to the certificate,
+    since a certificate checked here is the more direct record, and undated
+    updates come first. A literature update that doesn't improve on an
+    earlier certificate isn't a discovery, but is listed in the also_in of
+    the bound it states, such as a paper written up after its certificate.
+    Updates that only match an earlier literature bound to the precision of
+    the decimal approximation still count, as before, since the literature
+    was checked on its own.
 
     The best evidence for a bound comes from the strongest record at that
     value or a stronger one, since evidence for a stronger bound proves the
@@ -297,7 +300,7 @@ def bound_events(
     """
     records = [("source", u, u["value"].decimal_approx, u["date"]) for u in updates]
     records += [("certificate", c, rounded(c["approx"]), c["date"]) for c in certificates]
-    records.sort(key=lambda r: (r[3] is not None, r[3] or "", r[0] != "source"))
+    records.sort(key=lambda r: (r[3] is not None, r[3] or "", r[0] == "source"))
 
     events = []
     best_approx, best_kind = None, None
@@ -311,6 +314,11 @@ def bound_events(
             # Incomparable values: trust the literature's order
             improves = kind == "source" or not events
         if not improves:
+            if kind == "source":
+                same = [e for e in events if e["value"].key == record["value"].key
+                        or approx is not None and e["value"].decimal_approx == approx]
+                if same:
+                    same[-1]["also_in"].append({"source": record["source"], "via": record["via"], "date": date})
             continue
         if kind == "source":
             value = record["value"]
@@ -330,7 +338,8 @@ def bound_events(
                 "submitted_by": record["submitted_by"],
                 "submitted_by_github": record["submitted_by_github"],
             }
-        events.append({"type": f"{side}_bound", "value": value, "date": date, "discovery": discovery})
+        events.append({"type": f"{side}_bound", "value": value, "date": date, "discovery": discovery,
+                       "also_in": []})
         best_approx, best_kind = approx, kind
 
     for event in events:
@@ -575,6 +584,7 @@ def list_history(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[str, A
                 "evidence_kind": evidence["kind"],
                 "evidence_certificate": evidence["certificate"],
                 "evidence_source": evidence["source"],
+                "also_in": [record["source"] for record in event["also_in"]],
             })
     rows.sort(key=lambda row: (row["date"] is not None, row["date"] or ""))
     return rows

@@ -69,7 +69,7 @@ layout: default
 
 <p class="text-muted small">
   Each bound that improved on the earlier ones, with the record of its discovery and its best evidence.
-  A bound is discovered in the literature, or by a certificate submitted here.
+  A bound is discovered in the literature, or by a certificate submitted here, and may appear in later sources too.
   Its best evidence is a certificate checked here, if there is one at least as strong: a formal proof in Lean (<span class="badge bg-success">Lean proof</span>) or an explicit construction checked by a program (<span class="badge bg-success">Checked construction</span>).
   Otherwise it's an <span class="badge bg-attested">Attested</span> certificate, which someone else checked with a published checker, or the <span class="badge text-bg-light border">Literature</span>.
   {% if constant.certifiable %}
@@ -112,6 +112,9 @@ layout: default
           {% if event.discovery.via %}
             <br><span class="text-muted">[via {% include record_link.html source=event.discovery.via %}]</span>
           {% endif %}
+          {% for record in event.also_in %}
+            <br><span class="text-muted">[also {% if record.date %}on {{ record.date }} {% endif %}in {% include record_link.html source=record.source %}]</span>
+          {% endfor %}
         </td>
         <td>
           {% include evidence_badge.html evidence=event.evidence %}

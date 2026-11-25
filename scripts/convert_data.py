@@ -210,6 +210,7 @@ history_list = []
 for row in history:
     row_dict = row.copy()
     flatten_value_dict(row_dict, 'value')
+    row_dict['also_in'] = ';'.join(row_dict['also_in'])
     history_list.append(row_dict)
 
 history_df = pd.DataFrame(history_list)
