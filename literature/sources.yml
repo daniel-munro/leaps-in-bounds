@@ -5178,7 +5178,7 @@ irsi-tables-2026:
   string: "IRSI (Institute for Recursive Self Improvement), Tables, web page, https://irsi.ai/tables.html (retrieved 2026-11-24)."
   date: "2026-09-30"
   url: "https://irsi.ai/tables.html"
-  notes: "Not peer reviewed; results found by AI agents, with certificates in irsi-certificates-2026-09-25.zip. Dated by IRSI's note of 2026-10-13 (irsi-2026-w10-3), which says the page has shown W(10,3) > 935 since 2026-09-30; the page retrieved 2026-11-24 shows > 937 and says it was raised from > 935 on 2026-10-13. The page also gives W(4,6) > 255,606, W(5,6) > 1,278,030 and W(6,6) > 2,531,178 and W(11,3) > 1,292, not recorded here yet."
+  notes: "Not peer reviewed; results found by AI agents, with certificates in irsi-certificates-2026-09-25.zip. Dated by IRSI's note of 2026-10-13 (irsi-2026-w10-3), which says the page has shown W(10,3) > 935 since 2026-09-30; the page retrieved 2026-11-24 shows > 937 and says it was raised from > 935 on 2026-10-13. The page also gives W(4,6) > 255,606, W(5,6) > 1,278,030 and W(6,6) > 2,531,178 (constructions of 2026-09-23 to 30, in the 2026-09-25 certificate zip by its name): W(4,6) and W(6,6) by Xu's product with Heule's cyclic colourings of moduli 226 and 2238 (226 x 1131 and 2238 x 1131) and a W(2,6) > 1131 colouring, W(5,6) by Blankenship et al.'s recurrence with p = 5. It also gives W(11,3) > 1,292, outside the family's range."
   added_by: daniel-munro
 
 irsi-2026-w10-3:
@@ -5200,6 +5200,14 @@ mouhib-2026:
   date: "2026-11-17"
   url: "https://arxiv.org/abs/2611.22205v1"
   notes: "Not peer reviewed. Section 6, Table 2: W(8,3) > 522 (and W(11,3) > 1193, W(17,3) > 3620) by local search, with certificates in the arXiv ancillary files and at https://doi.org/10.5281/zenodo.24297574."
+  added_by: daniel-munro
+
+kim-2026:
+  string: "S. Kim, Polychromatic blocks and explicit lower bounds for multicolour van der Waerden numbers, Zenodo preprint, 2026, https://doi.org/10.5281/zenodo.23489549; arXiv:2610.32000v1."
+  date: "2026-10-20"
+  doi: "https://doi.org/10.5281/zenodo.23489549"
+  url: "https://arxiv.org/abs/2610.32000v1"
+  notes: "Not peer reviewed. Posted on Zenodo 2026-10-20 and on arXiv 2026-10-22, with the same tables. Bounds are by blow-ups W(r,k) > q(W(r', k) - 1) with power-residue (polychromatic) blocks of modulus q. Table 1 (p. 7) gives W(3,9) > 4,002,705, W(3,10) > 10,036,978 and W(3,11) > 210,813,867 exactly. Tables 2 and 3 (pp. 8-9) print the 4- to 6-colour bounds to three significant figures only, with the construction q x W(r', k) applied to the paper's own length L for W(r', k); the exact values recorded here are q L, computed from those tables (W(4,9): 5158 x 41,265, the k = 9 two-colour base of Table 1; W(4,11): 61 x W(3,11); W(5,9): 7 x W(4,9); W(5,11): 1087 x W(3,11); W(6,9): 5158 x W(3,9); W(6,10): 11,497 x W(3,10); W(6,11): 1087 x W(4,11)), and each agrees with the printed value. W(4,10) and W(5,10) tie earlier bounds and aren't given. Programs, block data and base certificates are in the Zenodo archive vdw-polychromatic-blocks-v1.zip."
   added_by: daniel-munro
 
 # Square packing (squares in squares)
