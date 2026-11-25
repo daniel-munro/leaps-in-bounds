@@ -1,0 +1,14 @@
+constant: multicolor-ramsey-triangle-9
+bound: lower
+value: 18922
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-9-lower-18922.txt
+submitted_by:
+  name: Luca Amaru
+  affiliation: Synopsys
+date: 2026-11-24
+notes: >-
+  Same partition as schur-9-lower-18920. Received by email; added by daniel-munro. Found by Synopsys reasoning engines and solvers. Luca Amaru,
+  Synopsys Inc., November 2026.

@@ -1762,7 +1762,7 @@ komkov-2016:
   string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers Using Genetic Algorithm, viXra:1611.0385v1."
   date: "2016-11-28"
   url: "https://vixra.org/abs/1611.0385"
-  notes: "Not peer reviewed. Gives W(5,5) > 98741, W(6,5) > 98754 and W(5,6) > 540027, with certificates."
+  notes: "Not peer reviewed. Section 3 gives W(5,5) > 98741, W(6,5) > 98754 and W(5,6) > 540027, and W(7,3) > 273, W(8,3) > 354, W(9,3) > 454, W(10,3) > 593 and W(7,4) > 9823 (and W(11,3) > 731), with certificates in the appendix."
   added_by: daniel-munro
 
 chvatal-1970:
@@ -1826,6 +1826,8 @@ heule-2017:
   string: "Heule, M. J. (2017). Avoiding triples in arithmetic progression. Journal of Combinatorics, 8(3), 391-422."
   date: "2017-06-21"
   doi: "https://dx.doi.org/10.4310/JOC.2017.v8.n3.a1"
+  url: "https://www.cs.utexas.edu/~marijn/publications/JOC_08_03_A01.pdf"
+  notes: "Received 2017-05-17. Table 7 (p. 416) gives W(7,3) > 342, W(8,3) > 511, W(9,3) > 763 and W(10,3) > 889 (Section 5 describes the first three as its improvements; the best earlier W(10,3) bound is komkov-2017-v2's > 701). The caption of Figure 15 says W(9,3,783), but the text, Figure 16 and Tables 7 and 8 say 763. Certificates for W(10,3) > 889 and W(8,3) > 511 were committed to https://github.com/marijnheule/vdWaerden on 2017-01-22 and 2017-02-05, but it isn't known when the repository became public."
   added_by: daniel-munro
 
 blankenship-c-t-2018:
@@ -5120,6 +5122,7 @@ monroe-2016:
   string: "D. Monroe, New Lower Bounds for van der Waerden Numbers Using Distributed Computing, arXiv:1603.03301v1."
   date: "2016-03-09"
   url: "https://arxiv.org/abs/1603.03301v1"
+  notes: "Table 1 (with the primes in Table 2) is the first to give bounds for 7 to 10 colors: W(8,3) > 83 (prime 41), W(10,3) > 383 (191), W(7,4) > 5,800, W(8,4) > 9,940, W(9,4) > 11,128 and W(10,4) > 28,147 (zipped). W(8,3) > 83 and W(7,4) > 5,800 are weaker than what fewer colors already give (W(6,3) > 223, W(6,4) > 9,778, since W(r+1,k) > W(r,k)); they're recorded because no earlier source states a bound for these numbers. Versions 1 to 3 have the same 7- to 10-color entries; v4 to v6 drop all but 7 colors and length 3 (W(7,3) > 336 in v4 and v5, > 342 in v6, from Komkov and Heule), and v7 keeps only 2 to 4 colors."
   added_by: daniel-munro
 
 monroe-2017:
@@ -5133,14 +5136,70 @@ komkov-2018:
   string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers Using Genetic Algorithm, viXra:1611.0385v2."
   date: "2018-10-30"
   url: "https://vixra.org/abs/1611.0385"
-  notes: "Not peer reviewed."
+  notes: "Not peer reviewed. Section 3 gives W(7,4) > 9951, W(6,5) > 99483 and W(5,6) > 540170, with certificates."
   added_by: daniel-munro
 
 komkov-2020:
   string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers, arXiv:1701.05603v5."
   date: "2020-10-27"
   url: "https://arxiv.org/abs/1701.05603v5"
-  notes: "Not peer reviewed. Certificates for W(6,5) and W(5,6) at http://komkov.org/VanDerWaerden/."
+  notes: "Not peer reviewed. Certificates for W(6,5) and W(5,6) at http://komkov.org/VanDerWaerden/. Section 3 also gives W(7,4) > 9980 (certificate on p. 3), and repeats W(7,3) > 343, W(8,3) > 515 and W(10,3) > 892 from v3 and v4."
+  added_by: daniel-munro
+
+komkov-2017-v1:
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers, arXiv:1701.05603v1."
+  date: "2017-01-10"
+  url: "https://arxiv.org/abs/1701.05603v1"
+  notes: "Not peer reviewed. Certificates (Section 2) and Section 3 give W(7,3) > 296, W(8,3) > 417, W(9,3) > 523 and W(10,3) > 641 (and W(11,3) > 776), found with a SAT solver. Its table gives the previous W(10,3) bound as > 592, where komkov-2016 has > 593."
+  added_by: daniel-munro
+
+komkov-2017-v2:
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers, arXiv:1701.05603v2."
+  date: "2017-02-03"
+  url: "https://arxiv.org/abs/1701.05603v2"
+  notes: "Not peer reviewed. Section 3 gives W(7,3) > 336, W(8,3) > 449, W(9,3) > 559 and W(10,3) > 701 (and W(11,3) > 816), with certificates."
+  added_by: daniel-munro
+
+komkov-2018-v3:
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers, arXiv:1701.05603v3."
+  date: "2018-10-12"
+  url: "https://arxiv.org/abs/1701.05603v3"
+  notes: "Not peer reviewed. Section 3 gives W(8,3) > 515 and W(10,3) > 892 (and W(11,3) > 1187, W(17,3) > 3549), with certificates, improving on Heule 2017's > 511 and > 889."
+  added_by: daniel-munro
+
+komkov-2018-v4:
+  string: "A.V. Komkov, New Lower Bounds for Van der Waerden Numbers, arXiv:1701.05603v4."
+  date: "2018-10-16"
+  url: "https://arxiv.org/abs/1701.05603v4"
+  notes: "Not peer reviewed. Adds W(7,3) > 343 (with certificate), improving on Heule 2017's > 342, to the bounds of v3."
+  added_by: daniel-munro
+
+irsi-tables-2026:
+  string: "IRSI (Institute for Recursive Self Improvement), Tables, web page, https://irsi.ai/tables.html (retrieved 2026-11-24)."
+  date: "2026-09-30"
+  url: "https://irsi.ai/tables.html"
+  notes: "Not peer reviewed; results found by AI agents, with certificates in irsi-certificates-2026-09-25.zip. Dated by IRSI's note of 2026-10-13 (irsi-2026-w10-3), which says the page has shown W(10,3) > 935 since 2026-09-30; the page retrieved 2026-11-24 shows > 937 and says it was raised from > 935 on 2026-10-13. The page also gives W(4,6) > 255,606, W(5,6) > 1,278,030 and W(6,6) > 2,531,178 and W(11,3) > 1,292, not recorded here yet."
+  added_by: daniel-munro
+
+irsi-2026-w10-3:
+  string: "IRSI (Institute for Recursive Self Improvement), W(10,3) > 937: a small improvement of a van der Waerden lower bound, research note, 2026-10-13."
+  date: "2026-10-13"
+  url: "https://irsi.ai/notes/vdw-records/"
+  notes: "Not peer reviewed; written by IRSI's AI research agents. Two 10-colourings of 1 to 937 with no monochromatic 3-term progression (W_10_3_gt_937_a.txt and _b.txt on the page)."
+  added_by: daniel-munro
+
+baur-2026:
+  string: "J. Baur, An explicit ten-color certificate for the van der Waerden lower bound W(10,3) > 938, Zenodo dataset, 2026, https://doi.org/10.5281/zenodo.23853961."
+  date: "2026-11-01"
+  doi: "https://doi.org/10.5281/zenodo.23853961"
+  notes: "Not peer reviewed. A 10-colouring of 1 to 938 (W_10_3_gt_938.txt) found by an AI-assisted search, extending IRSI's 937-position certificate B (irsi-2026-w10-3)."
+  added_by: daniel-munro
+
+mouhib-2026:
+  string: "Y. Mouhib, More lower bounds for Hales-Jewett and van der Waerden numbers, arXiv:2611.22205v1."
+  date: "2026-11-17"
+  url: "https://arxiv.org/abs/2611.22205v1"
+  notes: "Not peer reviewed. Section 6, Table 2: W(8,3) > 522 (and W(11,3) > 1193, W(17,3) > 3620) by local search, with certificates in the arXiv ancillary files and at https://doi.org/10.5281/zenodo.24297574."
   added_by: daniel-munro
 
 # Square packing (squares in squares)

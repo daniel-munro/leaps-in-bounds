@@ -1,0 +1,13 @@
+constant: van-der-waerden-6-5
+bound: lower
+value: 115262
+kind: witness
+witness:
+  format: coloring
+  file: van-der-waerden-6-5-lower-115262.txt.xz
+submitted_by:
+  name: Luca Amaru
+  affiliation: Synopsys
+date: 2026-11-24
+notes: >-
+  Received by email; added by daniel-munro. Found by Synopsys reasoning engines and solvers. Luca Amaru, Synopsys Inc., November 2026.

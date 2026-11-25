@@ -156,14 +156,14 @@ van-der-waerden:
     wikidata: Q7913892
     wikipedia_en: Van_der_Waerden_number
   display_type: grid
-  display_rows: [2, 3, 4, 5, 6]
+  display_rows: [2, 3, 4, 5, 6, 7, 8, 9, 10]
   display_columns: [3, 4, 5, 6, 7, 8, 9, 10, 11]
   representative_image: van-der-waerden-4-3
   id_template: "van-der-waerden-{r}-{k}"
   name_template: "Van der Waerden number $W({r},{k})$"
   description_template: "The smallest number $n$ such that if the integers $1$ to $n$ are colored with ${r}$ colors, there must be a monochromatic arithmetic progression of length ${k}$."
   parameters: [r, k]
-  parameter_values: [[[2, 6], [3, 11]]]
+  parameter_values: [[[2, 6], [3, 11]], [[7, 10], [3, 4]]]
   added_by: daniel-munro
 
 stamp-folding:
