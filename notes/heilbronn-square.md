@@ -10,4 +10,5 @@
 ## Ideas
 
 - Stead's tables are being improved quickly (many records from August to November 2026, several by AI-assisted searches), so check them for new records before searching. The values there for n = 61, 65 and 75 are below those for n + 1, which can't be optimal, since deleting a point never decreases the least area: those n are easy improvements by deleting a point from the n + 1 record, if the family is extended past 36.
+- Asenath Tal's 2009 Technion MSc thesis (report MSC-2009-08) had the best known configurations for n = 17 to 22 until 2026, according to the Wolfram Demonstration Heilbronn Triangles in the Unit Square, but its PDF is no longer online. If a copy turns up, its configurations would fill in the history for n = 17 to 22.
 - Tie-system polishing (solving the equations that make the smallest triangles equal, to high precision) is what the current records use to squeeze out the last digits.

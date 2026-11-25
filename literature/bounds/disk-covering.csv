@@ -7,7 +7,7 @@ disk-covering-3,\frac{\sqrt{3}}{2},,trivial,friedman-circles-covering-circles
 disk-covering-3,,\frac{\sqrt{3}}{2},trivial,friedman-circles-covering-circles
 disk-covering-4,\frac{\sqrt{2}}{2},,trivial,friedman-circles-covering-circles
 disk-covering-4,,\frac{\sqrt{2}}{2},trivial,friedman-circles-covering-circles
-disk-covering-5,{\approx}0.609382,,bezdek-1983,friedman-circles-covering-circles
+disk-covering-5,{\approx}0.609382,,bezdek-1979,bezdek-1983
 disk-covering-6,{\approx}0.555905,,bezdek-1979,friedman-circles-covering-circles
 disk-covering-7,\frac{1}{2},,trivial,friedman-circles-covering-circles
 disk-covering-7,,\frac{1}{2},trivial,friedman-circles-covering-circles
@@ -30,6 +30,7 @@ disk-covering-23,,\frac{1}{4},tan-2018,friedman-circles-covering-circles
 disk-covering-24,,{\approx}0.245339,tan-2018,friedman-circles-covering-circles
 disk-covering-25,,\frac{1}{\sqrt{6}+\sqrt{3}},tan-2018,friedman-circles-covering-circles
 disk-covering-5,,{\approx}0.609382,neville-1915,toth-2005
+disk-covering-6,,{\approx}0.557041,shklyarsky-chentsov-yaglom-1974,bezdek-1983
 disk-covering-6,,{\approx}0.555905,bezdek-1979,toth-2005
 disk-covering-8,,{\approx}0.4450418679,nagy-1975,toth-2005
 disk-covering-9,,\sqrt{2}-1,nagy-1975,toth-2005
@@ -54,3 +55,8 @@ disk-covering-19,\frac{\sqrt{13}}{13},,vonequinox-2026,friedman-circles-covering
 disk-covering-20,{\approx}0.2708481784,,vonequinox-2026,friedman-circles-covering-circles
 disk-covering-20,,{\approx}0.2708481784,vonequinox-2026,
 disk-covering-11,,\frac{3-\sqrt{5}}{2},krotoszynski-1993,toth-2005
+disk-covering-21,,{\approx}0.26284507240358458065,liyang1145-2026,
+disk-covering-21,{\approx}0.247678867,,barria-2026,
+disk-covering-22,,{\approx}0.25325145983509235808,liyang1145-2026,
+disk-covering-23,,{\approx}0.24995377658605018325,liyang1145-2026,
+disk-covering-24,,{\approx}0.24530165016852390995,liyang1145-2026,

@@ -26,15 +26,15 @@ ramsey:
   - "Google Research's improved_bounds repository checked commit by commit (#53); no paper found for its October 2026 bounds (Nagda-Raghavan-Thakurta, arXiv:2603.09172, was last revised 2026-04-21)."
 
 square-packing:
-  status: partial
-  reviewed: 2026-11-22
-  sources: [ejc-ds7-packing-unit-squares, ejc-ds7-2000, ellsworth-squares-in-squares, ellsworth-squares-in-squares-compared, wikipedia-square-packing, squaremath-frontier, nagamochi-2005, karakus-2026]
+  status: complete
+  reviewed: 2026-11-24
+  sources: [ejc-ds7-packing-unit-squares, ejc-ds7-2000, ellsworth-squares-in-squares, ellsworth-squares-in-squares-compared, wikipedia-square-packing, squaremath-frontier, nagamochi-2005, karakus-2026, basic-slivkova-2018]
   gaps:
-  - "The Squares Project's Frontier Survey (squaremath.org) holds dozens of bounds from September to November 2026, mostly from GitHub repositories and issues. Only the current record for each n <= 100 is recorded, as of 2026-11-22; the earlier steps in its case histories aren't, such as Hosono's successive certificates for each n, the 3.9715 and 3.9716 lower bounds for s(12), and exact certifications that lower a packing's side by less than 1e-9. These sources were read through the project's case records, not directly, and are dated by the project's packets, which may be a day after the first posting."
-  - "s(12) = 4 rests on the Lean proof by Jatloe, Gurevitch, CTJLewis and Ahmed (2026-10-16), which the Squares Project audited but hasn't rebuilt; it lists s(12) as reported proved, with 3.9716 as its verified lower bound, and Wikipedia still calls n = 12 unresolved. Overbeck's candidate proof that s(17) equals Bidwell's packing (2026-10-12) isn't recorded, since its author calls it a candidate."
-  - "Nagamochi 2005's proof is incomplete (Karakuş, arXiv:2609.37410; chelokot, 2026-09-05). Its rows for s(n²-1) = s(n²-2) = n are kept as the published claims, with a note on the source, since both have been proved again (Karakuş; in Lean by chelokot). Theorem 2's general lower bound s(N) >= 1 + √(N - 2⌊√N⌋ + 1), which would give earlier steps for 43 values of n (such as √15 + 1 for n = 22, cited by Bentz 2016), isn't recorded, since only Karakuş's weaker version is proved."
-  - "Bentz's s(22) = 5 and s(33) = 6 are dated by arXiv v1 (2016-06-12); Ellsworth's page and the Squares Project date them October 2018, perhaps a later version, which wasn't found."
-  - "Steps that Ellsworth's pages list within the same month as a larger improvement aren't recorded separately, such as Schadt's 6.93669 for s(41) and Ellsworth's 7.954167 for s(55)."
+  - "The Squares Project's case histories (its results register, packing/frontier/results.yaml, and case records, as of 2026-11-23) are recorded for every n <= 100, read through the project rather than each source directly and dated by each source's release. Deliberately left out: steps superseded on the same day, since the build can't order them (such as Ryu's s(12) >= 31360/7901, Guzhou0806's R067 for s(17), the project's own intermediate rungs, and its 3.8269975 for s(11)); bounds that the project derives from another n by monotonicity rather than from a certificate's own mass; steps too small to show at seven significant digits (Wang and Li's s(11) > 3.875000004, Guzhou0806's R070 for s(17)); exact certifications or rational refinements of known packings that lower a side by less than 1e-9; and unnir's s(12) >= 9929/2500 (2026-11-08), which came after the reported proof that s(12) = 4. Guzhou0806's R038 for s(17) (about 2026-09-21, 4.6141535) is left out since its date is unclear and it was passed by 2026-09-21. The project's n = 17 history begins with Brandwijk's capsule of 2026-07-18; Mira's, Fort's and MacIver's August certificates are below Burns's 4.4811 and aren't improvements."
+  - "Several recorded bounds are reported by their sources but not replayed by the Squares Project: Hosono's fine-net and continuous-pose bounds of 2026-10-13 to 2026-10-16 (s(28), s(38), s(40), s(41), s(43), s(44), s(51), s(86), s(88) to s(92)), anabologyco-maker's s(17) >= 4.5705, and the Lean proofs of s(12) = 4 (Jatloe, Gurevitch, CTJLewis and Ahmed, 2026-10-16), s(17) = Bidwell's side (Fitzharding, 2026-10-12) and s(19) = 3 + 4√2/3 (Fitzharding, 2026-10-16), which the project audited but hasn't rebuilt. Wikipedia still calls n = 12 unresolved. Overbeck's candidate proof that s(17) equals Bidwell's packing (2026-10-12) isn't recorded, since its author calls it a candidate."
+  - "Nagamochi 2005's proof is incomplete (Karakuş, arXiv:2609.37410; chelokot, 2026-09-05). Its rows for s(n²-1) = s(n²-2) = n are kept as the published claims, with a note on the source, since both have been proved again (Karakuş; in Lean by chelokot). Theorem 2's general lower bound s(N) >= 1 + √(N - 2⌊√N⌋ + 1), which would give earlier steps for 43 values of n (such as √15 + 1 for n = 22, cited by Bentz 2016), isn't recorded, since only Karakuş's weaker version is proved; that version is recorded where it improved the history (n = 87, 92, 93, 96, 97). Hosono's closed form of 2026-10-13 improves nothing for n <= 100."
+  - "Ellsworth's pages date steps only to the month, so steps they list within the same month as a larger improvement aren't recorded separately, such as Schadt's 6.93669 for s(41) and Ellsworth's 7.954167 for s(55)."
+  - "The Squares Project dates Khalili and Gharabaghi's s(44) cover 2026-10-26, but its packet and the source's ID here use 2026-10-29, the date kept."
 
 busy-beaver-shift:
   status: complete
@@ -129,15 +129,15 @@ map-folding:
   - "Known counts outside the family's parameter range (m <= 7, n <= 18) aren't recorded: 2 X 19 and 2 X 20 (OEIS A001415, Hunter Hogan, 2025-03-21) and 8 X 8 (OEIS A001418, Mustafa Salman, 2026-10-18; also Code Golf SE 276709, revision 10, 2025-02-26)."
 
 disk-covering:
-  status: partial
-  reviewed: 2026-11-22
-  sources: [friedman-circles-covering-circles, friedman-circles-covering-circles-2006, wikipedia-disk-covering, toth-2005, gaspar-tarnai-hincz-2014, vonequinox-2026]
+  status: complete
+  reviewed: 2026-11-24
+  sources: [friedman-circles-covering-circles, friedman-circles-covering-circles-2006, wikipedia-disk-covering, toth-2005, bezdek-1983, gaspar-tarnai-hincz-2014, vonequinox-2026, liyang1145-2026, barria-2026]
   gaps:
-  - "Nurmela 1999 (TUCS Gen. Publ. 15, 71-78; 1998 preprint) not found online. It reportedly improved Melissen's coverings for n = 11, 12 and gave coverings for 13 <= n <= 35, so the upper bounds credited to Melissen 1997 and Tan 2018 (from Friedman's page) may belong to Nurmela, with different values. Melissen's 1997 thesis wasn't read either."
-  - "Upper bounds for n = 11 to 25 from Friedman's page are reciprocals of radii it truncates to three decimals, so they are slightly weak; the exact radii for n = 11 to 20 come from the VonEquinox repository."
+  - "Nurmela 1999 (TUCS Gen. Publ. 15, 71-78; 1998 HUT preprint) and Melissen's 1997 thesis aren't online (research.fi: not self-archived; no Utrecht copy found). Nurmela reportedly improved Melissen's coverings for n = 11, 12 and gave coverings for 13 <= n <= 35, so the upper bounds credited to Melissen 1997 (from Friedman's page, which has credited them since 2006) and to Tan 2018 (added to Friedman's page between 2018-02 and 2019-10) may belong to Nurmela, and Melissen's own values may be weaker than those shown."
+  - "Upper bounds for n = 11 to 25 from Friedman's page are reciprocals of radii it truncates to three decimals, so they are slightly weak; the precise radii of the same coverings come from the VonEquinox (n = 11 to 20) and Liyang1145 (n = 21 to 24) repositories, which are credited with the precise values."
   - "The lower bounds for n = 11 to 20 rest on computer-assisted proofs in the VonEquinox/DiskCoveringSolve GitHub repository (September 2026), not peer reviewed; Friedman credits them to Yuao Zhang and Zhenyue Zhou, with no paper found."
-  - "Liyang1145/DiskCoveringProofs (GitHub, Zenodo 10.5281/zenodo.23344751, 2026-10-13) claims computer-assisted global proofs for n = 11, 12, 14 and 21 to 25. Its n = 21 to 25 lower bounds aren't added: the repository itself hedges them (n = 21, 22 'recheck scope retained', byte checks only, not reproducible from a fresh clone), and Friedman's page doesn't list them."
-  - "Bezdek 1979 (thesis), Bezdek 1983 and Nagy 1975 (thesis) not read; credited through G. Fejes Tóth 2005 and zbMATH reviews. No 1996 publication found for G. Fejes Tóth's proof of n = 8, 9 (published in 2005)."
+  - "Liyang1145/DiskCoveringProofs (GitHub, Zenodo 10.5281/zenodo.23344751, 2026-10-13) claims computer-assisted global proofs for n = 11, 12, 14 and 21 to 25 (and 26 to 28, beyond this family). Its n = 21 to 25 lower bounds aren't added (Barría 2026's weaker r(21) >= 0.247678867 is): the repository itself hedges them (n = 21, 22 'recheck scope retained', no external review claimed), and Friedman's page doesn't list them."
+  - "Bezdek's 1979 dissertation and Nagy's 1975 thesis (both Hungarian, unpublished) and Bezdek 1985 (Ann. Univ. Sci. Budapest) weren't read. Bezdek 1983 refers to the dissertation for the details of r(5), so r(5) and r(6) are both credited to 1979. The n = 6 upper bound of 1974 is Grünbaum's conjectured covering, known only from Bezdek 1983's citation of Shklyarsky, Chentsov and Yaglom (1974), pp. 105-106, which wasn't read. No 1996 publication found for G. Fejes Tóth's proof of n = 8, 9 (published in 2005)."
 
 circle-in-equilateral:
   status: complete
@@ -368,12 +368,12 @@ tammes:
   - "Kępiński's 2026 computer-assisted proof candidate for N = 16 (Zenodo 10.5281/zenodo.23312437) is conditional on unproved computations by its own account, so T(16) isn't recorded as exact."
 
 heilbronn-square:
-  status: partial
-  reviewed: 2026-11-21
-  sources: [stead-heilbronn-square, friedman-heilbronn-square, goldberg-1972, kung-1970, comellas-yebra-2002, dehbi-zeng-2022]
+  status: complete
+  reviewed: 2026-11-24
+  sources: [stead-heilbronn-square, friedman-heilbronn-square, friedman-heilbronn-square-2006, friedman-heilbronn-square-2009, goldberg-1972, kung-1970, yang-zhang-zeng-1991-five, yang-zhang-zeng-1992, comellas-yebra-2002, dehbi-zeng-2022]
   gaps:
-  - "The Yang-Zhang-Zeng papers (ICTP preprint IC/91/252, Bielefeld preprint 91-074, Chinese Ann. Math. 1992) and the Dress-Yang-Zeng 1995 papers couldn't be found. H(5) and H(6) <= 1/8 are credited by Stead's tables to 1991 and 1992, and by Friedman's page to 1992 and 1995; which paper first gives H(7) >= 0.083333 (and its exact value) is unknown."
-  - "Tal's 2009 Technion MSc thesis (Algorithms for Heilbronn's triangle problem), which reports grid-search configurations for n = 7 to 22, couldn't be reached, so records between Goldberg 1972 and Beyleveld 2006 / Karpov 2011 for n = 13 to 16 may be missing."
+  - "The Chinese Ann. Math. 1992 paper was read only through its zbMATH review, and the Bielefeld preprint 91-074 (1991, by its title an earlier version of it) isn't online. The ICTP preprint IC/91/252 (August 1991), read in full, proves H(5) = √3/9 and reports H(6) = 1/8 and H(7) >= 1/12 from the 1992 paper, so those are dated August 1991 at the latest. H(6) <= 1/8 is credited to Yang and Zhang 1980 (The six-point problem in the square, in Chinese), which isn't online, on IC/91/252's statement that it first solved the problem. Dress, Yang and Zeng 1995, which Friedman's page and Sudermann-Merx credit with H(6) = 1/8, proves H(6)(K) <= 1/6 for planar convex bodies by its zbMATH review, so it isn't cited."
+  - "Tal's 2009 Technion MSc thesis (Algorithms for Heilbronn's Triangle Problem, report MSC-2009-08) couldn't be reached: its PDF is gone from the Technion site and isn't archived. The Wolfram Demonstration Heilbronn Triangles in the Unit Square (archived 2019) credits Tal with the best known configurations for n = 17 to 22, so records for those n from 2009, before Stead's 2026 histories, are missing. Friedman's pages (archived 2009 to 2025) show no Tal records for n <= 16."
   - "Bounds for n >= 17, and the 2026 steps for n = 13 and 15, come from the record histories in Stead's tables, dated to the month, keeping only the best bound each month. Records reported without coordinates (n = 18, 21 and 26 in August 2026) are included as the tables list them."
   - "No upper bounds besides 1/(n - 1) are recorded for n >= 9. Sudermann-Merx (arXiv:2603.11107) solves n = 9 and 10 to global optimality within solver tolerances, and Ethan Hendren posted an AI-assisted computer proof for n = 9 on 2026-11-13; neither is accepted as a proof yet. The trivial bound H(n) <= H(8), stronger for n <= 14, isn't recorded."
   - "Stead's tables go to n = 100; only n <= 36 are tracked here."

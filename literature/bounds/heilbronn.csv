@@ -4,12 +4,12 @@ heilbronn-square-3,,\frac{1}{2},trivial,goldberg-1972
 heilbronn-square-4,\frac{1}{2},,trivial,goldberg-1972
 heilbronn-square-4,,\frac{1}{2},trivial,goldberg-1972
 heilbronn-square-5,\frac{3-\sqrt{5}}{4},,goldberg-1972,
-heilbronn-square-5,\frac{\sqrt{3}}{9},,yang-zhang-zeng-1991-five,stead-heilbronn-square
-heilbronn-square-5,,\frac{\sqrt{3}}{9},yang-zhang-zeng-1991-five,stead-heilbronn-square
+heilbronn-square-5,\frac{\sqrt{3}}{9},,yang-zhang-zeng-1991-five,
+heilbronn-square-5,,\frac{\sqrt{3}}{9},yang-zhang-zeng-1991-five,
 heilbronn-square-6,\frac{1}{8},,goldberg-1972,
-heilbronn-square-6,,\frac{1}{8},yang-zhang-zeng-1992,stead-heilbronn-square
+heilbronn-square-6,,\frac{1}{8},yang-zhang-1980,yang-zhang-zeng-1991-five
 heilbronn-square-7,{\approx}0.079,,goldberg-1972,
-heilbronn-square-7,{\approx}0.083333,,yang-zhang-zeng-1991,comellas-yebra-2002
+heilbronn-square-7,\frac{1}{12},,yang-zhang-zeng-1991-five,
 heilbronn-square-7,{\approx}0.0838590090,,comellas-yebra-2002,
 heilbronn-square-7,,{\approx}0.0838590090,zeng-chen-2011,
 heilbronn-square-8,\frac{2-\sqrt{3}}{4},,goldberg-1972,
@@ -27,6 +27,7 @@ heilbronn-square-12,\frac{1}{33},,goldberg-1972,
 heilbronn-square-12,{\approx}0.03259885869,,comellas-yebra-2002,stead-heilbronn-square
 heilbronn-square-12,,\frac{1}{11},goldberg-1972,
 heilbronn-square-13,{\approx}0.022,,goldberg-1972,
+heilbronn-square-13,{\approx}0.0266,,beyleveld-2006,friedman-heilbronn-square-2006
 heilbronn-square-13,{\approx}0.02701927224,,karpov-2011,friedman-heilbronn-square
 heilbronn-square-13,{\approx}0.02701991667,,stead-2026-08-heilbronn,stead-heilbronn-square
 heilbronn-square-13,,\frac{1}{12},kung-1970,
@@ -34,6 +35,8 @@ heilbronn-square-14,{\approx}0.020,,goldberg-1972,
 heilbronn-square-14,{\approx}0.02430397962,,beyleveld-2006,friedman-heilbronn-square
 heilbronn-square-14,,\frac{1}{13},goldberg-1972,
 heilbronn-square-15,{\approx}0.0175,,goldberg-1972,
+heilbronn-square-15,\frac{29}{1395},,cantrell-2006-square,friedman-heilbronn-square-2006
+heilbronn-square-15,{\approx}0.0210,,karpov-2009,friedman-heilbronn-square-2009
 heilbronn-square-15,{\approx}0.02110568190,,karpov-2011,friedman-heilbronn-square
 heilbronn-square-15,{\approx}0.02121054101,,sudermann-merx-2026-08-heilbronn,stead-heilbronn-square
 heilbronn-square-15,,\frac{1}{14},kung-1970,
