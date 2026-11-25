@@ -1,0 +1,14 @@
+constant: schur-12
+bound: lower
+value: 675788
+kind: witness
+witness:
+  format: coloring
+  file: schur-12-lower-675788.txt.xz
+submitted_by:
+  name: Luca Amaru
+  affiliation: Synopsys
+date: 2026-11-25
+notes: >-
+  Received by email; added by daniel-munro. Follows from schur-7-lower-1778 by the bound S(k+5) >= 380 S(k) + 148 of Ageron et al. (arXiv:2112.03175).
+  Found by Synopsys reasoning engines and solvers. Luca Amaru, Synopsys Inc., November 2026.

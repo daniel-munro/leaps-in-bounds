@@ -203,9 +203,11 @@ golomb-ruler:
 
 schur:
   status: complete
-  reviewed: 2026-11-19
-  sources: [oeis-a045652-schur, schur-1916, abbott-hanson-1972, whitehead-1973, irving-1973-schur, fredricksen-1979, exoo-1994, fredricksen-sweet-2000, heule-2017-schur, ageron-et-al-2021, eliahou-2016-schur, fettes-kramer-radziszowski-2004]
+  reviewed: 2026-11-25
+  sources: [oeis-a045652-schur, schur-1916, abbott-hanson-1972, whitehead-1973, irving-1973-schur, fredricksen-1979, exoo-1994, fredricksen-sweet-2000, heule-2017-schur, ageron-et-al-2021, eliahou-2016-schur, fettes-kramer-radziszowski-2004, rowley-2019, rowley-2021, bengone-et-al-2026, chen-zhu-long-2026, mckenna-2026, ozdemir-2026, ejc-ds1-small-ramsey-numbers]
   gaps:
+  - "For S(10) to S(14), no lower bound is recorded between Schur's (3^k - 1)/2 (1916) and Rowley's templates (2019): Abbott and Hanson 1972, Exoo 1994 and Fredricksen and Sweet 2000 give only recursive or asymptotic bounds for k >= 8, and the lower bounds on R_k(3) for k >= 10 in Radziszowski's survey (DS1, Table XIa and 6.2) aren't stated as Schur bounds. Likewise S(12) >= 631840 (Rowley's R_12(3) >= 631842) and the bounds that later S(6), S(7) and S(8) records give for k = 10, 12 and 14 by the published recurrences aren't recorded, since no source states them."
+  - "S(12) >= 637856 is stated only in Ageron et al.'s Table 1, credited to Rowley's arXiv:1912.01164; it uses Rowley's 2021 S(7) >= 1696 and S(k + 5) >= 376 S(k) + 160, so it's credited to rowley-2021."
   - "Irving 1973 attributes S(k) <= floor(k!(e - 1/24)) to Whitehead, but Whitehead's 1973 paper doesn't state it (it gives R_5(3) <= 322); his 1971 USC dissertation, which may, wasn't found, so the bound is credited to Irving."
   - "Fredricksen 1979 says S(5) >= 157 improves earlier lower bounds, citing his 'Five sum-free sets' (Proc. 6th Southeastern Conf., 1975, 309-314), which wasn't found; an S(5) bound between 121 and 157 may be missing."
   - "Wan 1997 was read only through its zbMATH summary; its S(6..9) bounds are evaluated from the stated formulas, and the summary leaves unclear whether S_n is the largest n or one more."
@@ -214,9 +216,11 @@ schur:
 
 weak-schur:
   status: complete
-  reviewed: 2026-11-19
-  sources: [oeis-a072842-weak-schur, ageron-et-al-2021, walker-1952, eliahou-et-al-2012, eliahou-et-al-2013, rafilipojaona-2015]
+  reviewed: 2026-11-25
+  sources: [oeis-a072842-weak-schur, ageron-et-al-2021, walker-1952, eliahou-et-al-2012, eliahou-et-al-2013, rafilipojaona-2015, rowley-2020, bouzy-2015, ozdemir-2026, irving-1973-schur, bornsztein-2002]
   gaps:
+  - "WS(11) to WS(14) have lower bounds only from Ageron et al.'s Tables 2 and 4 (and Rowley's, through Table 2): the larger values that WS(n + 1) >= 4 S(n) + 2, WS(n + 2) >= 13 S(n) + 8 and WS(n + 3) >= 42 S(n) + 24 give with the 2026 Schur bounds aren't stated anywhere, and aren't recorded. No lower bound is recorded for WS(10) to WS(14) before Rowley 2020, apart from WS(n) >= S(n) (see below)."
+  - "Rowley 2020 v1-v3 claimed WS(10) >= 70782, from an S(9) value 1 too large; v4 corrected it to 70778, which is recorded with the v1 date. WS(11) >= 241282 and WS(12) >= 806786 aren't in Rowley's paper but are credited to it by Ageron et al."
   - "Eliahou et al. 2012 claim WS(6) >= 575 in a note added in proof, without a partition; it isn't recorded. Robilliard et al. (EA 2011, published 2012) was read only in its abstract, so its 574 keeps the date 2012 although Eliahou et al. say it came first."
   - "Sierpinski's upper bound WS(n) < 2^[n!e] (Theory of Numbers, part 2, 1959; Elementary Theory of Numbers, 1964), reported by Bornsztein 2002, isn't included: the book wasn't read."
   - "The lower bounds WS(n) >= S(n) implied by the Schur family, such as WS(8) >= 5286 and WS(9) >= 17694 from Rowley's 2019 Schur partitions, aren't included unless a source states them for WS."
