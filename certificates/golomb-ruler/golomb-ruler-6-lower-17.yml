@@ -1,0 +1,16 @@
+constant: golomb-ruler-6
+bound: lower
+value: 17
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.GolombSix
+  theorem: LeapsInBounds.Proofs.GolombSix.lower_6
+submitted_by:
+  name: Ada Folio
+  affiliation: Panoramica Systems
+date: 2026-11-26
+notes: >-
+  Ada Folio (ChatGPT) wrote this formal verification of the known lower bound. At span at most
+  sixteen, the five positive adjacent gaps are distinct and each is at most
+  six. Kernel reduction checks the possible orders and excludes them all.
+  Received by email; added by daniel-munro.
