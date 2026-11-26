@@ -12,6 +12,7 @@ from ..errors import CertificateError
 from ..family import Family
 from ..generator import GeneratorOutput, generated_witness
 from . import (
+    book_ramsey,
     busy_beaver,
     cage,
     cap_set,
@@ -45,6 +46,7 @@ from . import (
 
 FAMILIES: dict[str, Family] = {
     **ramsey.FAMILIES,
+    **book_ramsey.FAMILIES,
     **van_der_waerden.FAMILIES,
     **cage.FAMILIES,
     **degree_diameter.FAMILIES,

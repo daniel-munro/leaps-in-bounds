@@ -1,5 +1,6 @@
 module
 
+public import LeapsInBounds.Statements.BookRamsey
 public import LeapsInBounds.Statements.BusyBeaver
 public import LeapsInBounds.Statements.Cage
 public import LeapsInBounds.Statements.CapSet

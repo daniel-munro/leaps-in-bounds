@@ -494,6 +494,32 @@ multicolor-ramsey-triangle:
   parameter_values: [[[3, 9]]]
   added_by: daniel-munro
 
+book-ramsey:
+  name: "Book Ramsey numbers"
+  description: "The book graph $B_n = K_2 + \\overline{K_n}$ consists of $n$ triangles sharing a common edge. The book Ramsey number $R(B_m, B_n)$ is the smallest number $N$ such that any two-coloring of the edges of the complete graph $K_N$ contains either a book $B_m$ in the first color or a book $B_n$ in the second color: an edge in the first color whose ends have $m$ common neighbors in that color, or an edge in the second color whose ends have $n$ common neighbors in that color. Since $B_1 = K_3$, $R(B_1, B_1) = R(3,3) = 6$."
+  external_ids:
+    msc: 05C55
+    wikipedia_en: Book_(graph_theory)
+  display_type: grid
+  display_rows: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  display_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  id_template: "book-ramsey-{m}-{n}"
+  name_template: "Book Ramsey number $R(B_{{{m}}}, B_{{{n}}})$"
+  description_template: "The smallest number $N$ such that any two-coloring of the edges of the complete graph $K_N$ contains either a book $B_{{{m}}}$ ({m} triangles sharing an edge) in the first color or a book $B_{{{n}}}$ in the second color."
+  parameters: [m, n]
+  parameter_values:
+  - [1, [1, 11]]
+  - [2, [2, 11]]
+  - [3, [3, 11]]
+  - [4, [4, 11]]
+  - [5, [5, 11]]
+  - [6, [6, 11]]
+  - [7, [7, 11]]
+  - [8, [8, 11]]
+  - [9, [9, 11]]
+  - [10, [10, 11]]
+  added_by: daniel-munro
+
 chromatic-number-space:
   name: "Chromatic number of Euclidean space"
   description: "The chromatic number $\\chi(\\mathbb{R}^n)$ of $n$-dimensional Euclidean space is the fewest colors needed to color the points of $\\mathbb{R}^n$ so that no two points at distance exactly 1 have the same color. For the plane, finding it is the Hadwiger–Nelson problem. By the de Bruijn–Erdős theorem, it is the largest chromatic number of a finite unit-distance graph in $\\mathbb{R}^n$ (assuming the axiom of choice), so lower bounds come from such graphs that can't be colored with fewer colors, and upper bounds from colorings of the whole space, often by tiling it with cells of diameter just under 1."

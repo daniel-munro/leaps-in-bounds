@@ -179,6 +179,17 @@ The same file proves that a lower bound never exceeds an upper bound, as a sanit
 
 Witnesses can certify lower bounds only. A witness for `R(r,s) >= n` is a graph on `n - 1` vertices with no `r`-clique and no independent set of size `s`.
 
+### Book Ramsey numbers: `book-ramsey-{m}-{n}`
+
+Constants are listed with `m <= n`. Formal statements are in [`formal/LeapsInBounds/Statements/BookRamsey.lean`](../formal/LeapsInBounds/Statements/BookRamsey.lean), where `HasBook G m` means the graph `G` contains the book `B_m`: an edge whose ends have at least `m` common neighbors.
+
+- `LowerBound m n N` means `R(B_m,B_n) >= N`: some graph `G` on `N - 1` vertices has no `B_m`, and its complement has no `B_n`.
+- `UpperBound m n N` means `R(B_m,B_n) <= N`: every graph on `N` vertices contains `B_m`, or its complement contains `B_n`.
+
+The same file proves that a lower bound never exceeds an upper bound, as a sanity check on the definitions.
+
+Witnesses can certify lower bounds only. A witness for `R(B_m,B_n) >= N` is a graph on `N - 1` vertices, the edges of the first color, in which every edge's ends have fewer than `m` common neighbors, and every non-edge's ends have fewer than `n` common non-neighbors.
+
 ### Van der Waerden numbers: `van-der-waerden-{r}-{k}`
 
 Formal statements are in [`formal/LeapsInBounds/Statements/VanDerWaerden.lean`](../formal/LeapsInBounds/Statements/VanDerWaerden.lean):
