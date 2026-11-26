@@ -7241,45 +7241,45 @@ ejc-ds1-r17-small-ramsey-numbers:
 
 chvatal-harary-1972-ii:
   string: "V. Chvátal and F. Harary, Generalized Ramsey theory for graphs, II. Small diagonal numbers, Proceedings of the American Mathematical Society 32 (1972) 389-394."
-  date: "1972-04"
+  date: "1971-05-13"
   doi: "https://doi.org/10.1090/S0002-9939-1972-0332559-X"
-  notes: "[ChH1] in https://doi.org/10.37236/21, credited there with R(K4-e, K4-e) = R(B2, B2) = 10. Not read (the AMS site refused the download); the value is also in Table 2 of part III (Pacific J. Math. 41 (1972) 335-345), which summarizes the series' diagonal and off-diagonal numbers."
+  notes: "[ChH1] in https://doi.org/10.37236/21. Received 1971-05-13 (the date used), published in the April 1972 issue. Section 4 (p. 393) proves r(K4-x) = 10, that is R(B2, B2) = 10, with the 2-coloring of K9 whose green graph is K3 x K3 for the lower bound; the table in section 5 lists it."
   added_by: daniel-munro
 
 chvatal-harary-1972-iii:
   string: "V. Chvátal and F. Harary, Generalized Ramsey theory for graphs, III. Small off-diagonal numbers, Pacific Journal of Mathematics 41 (1972) 335-345."
-  date: "1972-12"
+  date: "1971-02-23"
   doi: "https://doi.org/10.2140/pjm.1972.41.335"
   url: "https://msp.org/pjm/1972/41-2/p07.xhtml"
-  notes: "[ChH2] in https://doi.org/10.37236/21. Received 1971-02-23, published in the December 1972 issue. Inequality (14) gives r(K3, K4-x) <= 7 and Table 2 gives r(K3, K4-x) = 7, that is R(B1, B2) = 7, with the lower bound from the general bound (c(F2) - 1)(χ(F1) - 1) + 1 of section 3."
+  notes: "[ChH2] in https://doi.org/10.37236/21. Received 1971-02-23 (the date used), published in the December 1972 issue. Inequality (14) (p. 340) gives r(K3, K4-x) <= 7 and Table 2 (p. 341) gives r(K3, K4-x) = 7, that is R(B1, B2) = 7, with the lower bound from the general bound (c(F2) - 1)(χ(F1) - 1) + 1 of section 3. Table 2 also lists part II's r(K4-x, K4-x) = 10."
   added_by: daniel-munro
 
 clancy-1977:
   string: "M. Clancy, Some small Ramsey numbers, Journal of Graph Theory 1 (1977) 89-91."
   date: "1977-03"
   doi: "https://doi.org/10.1002/jgt.3190010117"
-  notes: "[Clan] in https://doi.org/10.37236/21, credited there (Table IXa) with R(B1, B3) = 9 and R(B2, B3) = 11. Not read (the publisher's site serves a bot check); credited through the survey."
+  notes: "[Clan] in https://doi.org/10.37236/21. Table I (p. 89) gives r(F, G18) without proofs, where G18 in Figure 1 (p. 90) is K2 + 3K1 = B3 (the text names K2 + K̄3 among the pairs with K4 left open, matching G18's entry 14-15): r(K3, G18) = 9, that is R(B1, B3) = 9, and r(K4-x, G18) = 11, that is R(B2, B3) = 11. No received date is given. Shao, Xu, Bao and Pan (2010) list R(B2, B3) = 11 as new, with an enumeration."
   added_by: daniel-munro
 
 rousseau-sheehan-1978:
   string: "C.C. Rousseau and J. Sheehan, On Ramsey numbers for books, Journal of Graph Theory 2 (1978) 77-87."
   date: "1978-03"
   doi: "https://doi.org/10.1002/jgt.3190020110"
-  notes: "[RoS1] in https://doi.org/10.37236/21. Not read (the publisher's site serves a bot check); credited through the survey and through the statements of its theorems in Nikiforov and Rousseau (arXiv:math/0405175, Theorems 1 and 2) and Wesley (arXiv:2410.03625, Theorem 1). Revision #1 of the survey (1994) credits it with R(B1, Bn) = 2n + 3 for n > 1 and R(B2, B5) = 16, R(B3, B3) = 14, R(B3, B5) = 17, R(B4, B4) = 18, R(B4, B6) = 22, R(B5, B5) = 21 and R(B6, B6) = 26. The other bounds credited to it here are corollaries of its general theorems as the survey states them (revision #18, items 5.3(b), (c), (g), (h), (j) and (k)), not values the paper is known to list: R(Bn, Bn) = 4n + 2 when 4n + 1 is a prime power (Paley graphs), R(Bn, Bn) <= 4n + 1 when 4n + 1 isn't a sum of two squares, R(Bn-1, Bn) <= 4n - 1, R(Bn-2, Bn) <= 4n - 3 when n = 2 (mod 3), R(Bm, Bn) <= 2(m + n + 1) when 2(m + n) + 1 > (n - m)^2/3, and 2n + 3 = R(B1, Bn) <= R(B2, Bn) <= 2n + 6. Lidický, McKinley and Pfender (arXiv:2407.07285) and Nikiforov and Rousseau credit R(B2, Bn) <= 2n + 6 for n <= 11 to Faudree, Rousseau and Sheehan 1982 instead."
+  notes: "[RoS1] in https://doi.org/10.37236/21. No received date is given; Journal of Graph Theory 2(1), Spring 1978. Explicit results: Theorem 1 (p. 81), r(B1, Bn) = 2n + 3 for n > 1; Theorem 2 (p. 82), r(Bm, Bn) <= 2(m + n + 1) when 2(m + n) + 1 > (n - m)^2/3, r(Bn-1, Bn) <= 4n - 1, and r(Bn-2, Bn) <= 4n - 3 when n = 2 (mod 3); Corollary 2.1 (p. 84), r(B2, B5) = 16, r(B3, B5) = 17 and r(B4, B6) = 22; Corollary 2.2 (p. 84), r(Bn, Bn) = 4n + 2 when 4n + 1 is a prime power (Paley graphs), r(Bn, Bn) <= 4n + 1 when 4n + 1 isn't a sum of two squares, and r(B5, B5) = 21 (a 20-vertex coloring on p. 85); and p. 86, r(B_{s^2}, B_{(s+1)^2}) is 4s^2 + 4s + 3 or 4s^2 + 4s + 4 when 2s + 1 is a prime power, which for s = 2 gives 27 <= R(B4, B9) <= 28. Page 80 observes that a strongly regular (v, k, λ, μ) graph gives r(B_{λ+1}, B_{v-2k+μ-1}) >= v + 1, without the cases recorded here for R(B7, B10) and R(B7, B11). The paper lists no table, so its rows for other pairs, such as R(B3, B3) = 14, R(B8, B8) <= 33, and the upper bounds 2(m + n + 1) for R(B2, Bn) (n <= 10, where the condition holds), R(B3, B4), R(B3, B6), R(B3, B7), R(B4, B7), R(B5, B7), R(B5, B9), R(B7, B9), R(B8, B10), R(B7, B10), R(B7, B11) and the 14 pairs left blank in the survey's Table IXa, are corollaries of these theorems. It doesn't state R(B2, Bn) >= 2n + 3 (only R(B1, Bn) = 2n + 3); that is credited to Faudree, Rousseau and Sheehan 1982."
   added_by: daniel-munro
 
 faudree-rousseau-sheehan-1982:
   string: "R.J. Faudree, C.C. Rousseau and J. Sheehan, Strongly regular graphs and finite Ramsey theory, Linear Algebra and its Applications 46 (1982) 221-241."
-  date: "1982-08"
+  date: "1981-08-24"
   doi: "https://doi.org/10.1016/0024-3795(82)90037-4"
-  notes: "[FRS8] in https://doi.org/10.37236/21, credited there with R(B2, B11) = 28 (Table IXa) and with R(B2, Bn) <= 2n + 5 for 12 <= n <= 22, <= 2n + 4 for 23 <= n <= 37 and = 2n + 3 for n >= 38. Not read (the publisher's and the University of Memphis repository's copies are behind bot checks); the lower bound R(B2, B11) >= 28 is credited through the survey."
+  notes: "[FRS8] in https://doi.org/10.37236/21. Received 1981-08-24 (the date used), revised 1982-01-07. Theorem 3 (p. 224): r(B1, Bn) = 2n + 3, and 2n + 3 <= r(B2, Bn) <= 2n + 6 for 2 <= n <= 11 (the proof, p. 234, says the cases n <= 10 follow from Rousseau and Sheehan's Theorem 2, so the bound for n = 11 is new), 2n + 5 for 12 <= n <= 22, 2n + 4 for 23 <= n <= 37 and 2n + 3 for n >= 38; its Corollary gives r(B2, Bn) = 2n + 6 for n = 2, 5 and 11, the lower bound for n = 11 from the strongly regular graph of the 27 lines on a cubic surface (p. 224). It states the strongly regular graph observation in general (p. 222) but gives none of the cases recorded here for R(B4, B9), R(B7, B10) or R(B7, B11)."
   added_by: daniel-munro
 
 nikiforov-rousseau-2004:
   string: "V. Nikiforov and C.C. Rousseau, A note on Ramsey numbers for books, Journal of Graph Theory 49 (2005) 168-176, arXiv:math/0405175."
   date: "2004-05-10"
   url: "https://arxiv.org/abs/math/0405175"
-  notes: "[NiRo3] in https://doi.org/10.37236/21. Corollary 1 lists exact values of R(Bm, Bn) whose lower bound comes from a strongly regular graph and upper bound from the general bound of Rousseau and Sheehan (its Theorem 2), including R(B7, B10) = 36 from the (35, 16, 6, 8) graph; it's credited here for the lower bound, which may well be older (it isn't listed in revisions #1, #11, #12, #13 or #15 of the survey)."
+  notes: "[NiRo3] in https://doi.org/10.37236/21. Corollary 1 lists exact values of R(Bm, Bn) whose lower bound comes from a strongly regular graph and upper bound from the general bound of Rousseau and Sheehan (its Theorem 2), including R(B7, B10) = 36 from the (35, 16, 6, 8) graph; it's the earliest source found that states this lower bound, which neither Rousseau and Sheehan 1978 nor Faudree, Rousseau and Sheehan 1982 gives."
   added_by: daniel-munro
 
 rousseau-2006:
@@ -7298,7 +7298,7 @@ black-leven-radziszowski-2011:
 shao-xu-bao-pan-2010:
   string: "Zehui Shao, Jin Xu, Qiquan Bao and Linqiang Pan, Computation of some generalized Ramsey numbers, Journal of Combinatorial Mathematics and Combinatorial Computing 75 (2010) 217-228."
   date: "2010"
-  notes: "[ShaXBP] in https://doi.org/10.37236/21, credited there with R(B3, B4) = 15 and a unique critical graph. Not read (no copy found online); credited through the survey."
+  notes: "[ShaXBP] in https://doi.org/10.37236/21. Theorem 6 (p. 226) gives R(B2, B3) = 11 and R(B3, B4) = 15, by one-vertex extension: Table 6 (p. 225) counts 1 (B3, B4; 14)-graph (Figure 6) and none on 15 vertices. Here Bi has i + 2 vertices (i pages). No received date is given. R(B2, B3) = 11 was already in Clancy 1977. Its Table 5 credits R(B2, B4) = 13 to Rousseau's 2006 personal communication."
   added_by: daniel-munro
 
 lidicky-pfender-2017:
@@ -7312,7 +7312,7 @@ wesley-2023:
   string: "W.J. Wesley, Algebraic and Boolean methods for computation and certification of Ramsey-type numbers, PhD dissertation, University of California, Davis, 2023."
   date: "2023"
   url: "https://escholarship.org/uc/item/1323900n"
-  notes: "[We1] in https://doi.org/10.37236/21, credited there with R(B4, B5) = 19 and R(B3, B6) = 19 (lower bounds; revision #17 credits these as [We]). Not read (the repository refused the download); credited through the survey. Wesley (arXiv:2410.03625) says R(B3, B6) >= 19 appeared in the thesis."
+  notes: "[We1] in https://doi.org/10.37236/21. Theorem 5.1.1 (p. 28, proved in section 5.1, pp. 87-89) gives R(B4, B5) = R(B3, B6) = 19, with 18-vertex graphs found by SAT (both checked for this review); it credits the upper bounds to Lidický and Pfender. The PDF and eScholarship give only the year (2023), no filing date."
   added_by: daniel-munro
 
 van-overberghe-2024:
@@ -7361,5 +7361,12 @@ hitesh4577-2026-book-ramsey:
   string: "HITESH4577, Book-Ramsey-5-9: Exact determination of R(B₅,B₉) = 29, v1.0.0, Zenodo software release, 2026-11-26."
   date: "2026-11-26"
   doi: "https://doi.org/10.5281/zenodo.24559340"
-  notes: "Not peer reviewed. Lean 4 proof, which compiles against this site's Mathlib; submitted in GitHub Discussion #124."
+  notes: "Not peer reviewed. Lean 4 proof, which compiles against this site's Mathlib; submitted in GitHub Discussion #124. Its README credits the lower bound R(B5, B9) >= 29 to Quantavane, which reported it on 2026-11-10; the release's 28-vertex coloring (two layers of Z/14Z) is the first published one."
+  added_by: daniel-munro
+
+quantavane-2026-book-ramsey:
+  string: "Quantavane, Verified records, https://quantavane.com/results/, news entry of 10 November 2026 (page updated 2026-11-19, retrieved 2026-11-26)."
+  date: "2026-11-10"
+  url: "https://quantavane.com/results/"
+  notes: "Not peer reviewed. The news entry of 10 November 2026 reports a coloring of 28 points giving R(B5, B9) >= 29, and a later summary says it is built on two cycles of 14 and checked by three separate programs. The coloring itself isn't published (it isn't in the replays repository github.com/arhancanli/quantavane-replays); HITESH4577's later 28-vertex coloring (two layers of Z/14Z) passes this site's checker."
   added_by: daniel-munro
