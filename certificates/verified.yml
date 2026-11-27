@@ -2532,6 +2532,11 @@ circle-in-square-5-upper-2-2sqrt2:
   checker: eb6b986b54b580a59ca44483595e96d1b4c4269f
   verified_by: daniel-munro
   date: '2026-11-15'
+circle-in-square-6-lower-2-12sqrt13over13:
+  sha256: 9cd741c244be7f5218f8d5777ab6a15f5a8669c79218e970aba7c0b15df687f0
+  checker: 64420a2fa9659755128b3fbf38ba8e1d14bd88ec
+  verified_by: daniel-munro
+  date: '2026-11-27'
 circle-in-square-6-upper-2-12sqrt13over13:
   sha256: b1908c91960ee0e6e7c566eb0c740ba3d04ac2709654283d10ecfb204004af1c
   checker: eb6b986b54b580a59ca44483595e96d1b4c4269f

@@ -1,0 +1,10 @@
+constant: circle-in-square-6
+bound: lower
+value: '2+\frac{12\sqrt{13}}{13}'
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.CircleInSquare6
+  theorem: LeapsInBounds.Proofs.CircleInSquare6.lower_six
+submitted_by: cxh1145147
+date: 2026-11-26
+notes: Rescaling a strictly smaller packing of 6 unit circles into [0, 6]^2 with pairwise squared distances > 13 forces bijections with both the 2x3 (3x2 cell) and 3x2 (2x3 cell) grids, excluding all grid lines and leaving only two 4x4 micro-cell patterns up to square symmetry. The boundary-cycle pattern is refuted by a single exact nonnegative polynomial identity on a weighted edge sum (65 + 65 <= 130), and the centered pattern (with WLOG x3 <= y3) is refuted using three rational circular-arc secants (5X + 6Y > 28 on [2, 5/2], 7X + 6Y > 33 on [5/2, 3], and 7X + 3Y > 27 on [3, 7/2]). Formalized with AI assistance (Gemini 4 Neon).
