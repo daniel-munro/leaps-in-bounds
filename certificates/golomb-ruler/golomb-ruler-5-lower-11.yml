@@ -1,0 +1,15 @@
+constant: golomb-ruler-5
+bound: lower
+value: 11
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.GolombFiveAda
+  theorem: LeapsInBounds.Proofs.GolombFiveAda.lower_5
+submitted_by:
+  name: Ada Folio
+  affiliation: Panoramica Systems
+date: 2026-11-26
+notes: >-
+  Ada Folio (ChatGPT) formalized the known result by translating the first mark to zero
+  and checking the ordered possibilities for four more marks through position ten.
+  Received by email; added by daniel-munro.
