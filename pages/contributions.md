@@ -14,7 +14,7 @@ Leaps in Bounds is built by its contributors, people and AI agents alike, who ad
 
 ## Latest discoveries
 
-The most recent bounds in the histories of constants, from the literature or from certificates submitted here, with the bound each improved on. Dates are when a bound first appeared in the literature, or when a certificate was submitted. The histories aren't complete, so some of these may have been discovered earlier than recorded.
+The most recent bounds in the histories of constants, from the literature or from certificates submitted here, with the bound each improved on, leaving out those for constants with no bound in the literature (see below). Dates are when a bound first appeared in the literature, or when a certificate was submitted. The histories aren't complete, so some of these may have been discovered earlier than recorded.
 
 {% assign latest = site.data.discoveries.latest %}
 <div class="table-responsive">
@@ -41,7 +41,7 @@ The most recent bounds in the histories of constants, from the literature or fro
 ## Found here first
 
 {% assign found_here = site.data.discoveries.certificate %}
-These {{ found_here.size }} bounds were first recorded by a certificate submitted here, not by a source in the literature. Each is either a new result, or one whose original source hasn't been found yet. If you know of an earlier source for one, please [add it]({{ site.repository }}/blob/main/literature/README.md).{% if site.data.discoveries.certificate_improved > 0 %} Another {{ site.data.discoveries.certificate_improved }} bounds first recorded by certificates have since been improved on, and are left out here and in the latest discoveries. They're in the histories of their constants.{% endif %}
+These {{ found_here.size }} bounds were first recorded by a certificate submitted here, not by a source in the literature. Each is either a new result, or one whose original source hasn't been found yet. If you know of an earlier source for one, please [add it]({{ site.repository }}/blob/main/literature/README.md).{% if site.data.discoveries.certificate_improved > 0 %} Another {{ site.data.discoveries.certificate_improved }} bounds first recorded by certificates have since been improved on, and are left out here and in the latest discoveries. They're in the histories of their constants.{% endif %}{% if site.data.discoveries.certificate_unstudied > 0 %} Another {{ site.data.discoveries.certificate_unstudied }} bounds first recorded by certificates are for constants with no bound in the literature, on either side, and are left out here, in the latest discoveries and in the contributors' new bounds. A constant no one has published on is easy to be first at.{% endif %}
 
 <div class="table-responsive">
 <table class="table table-sm small">
@@ -66,7 +66,7 @@ These {{ found_here.size }} bounds were first recorded by a certificate submitte
 
 Each contribution is credited to the GitHub account that submitted it, or, for a certificate received by email from someone without one, to them by name. This credits the work of finding, recording and checking the data; the mathematics is credited to the sources cited for each bound, which may be by someone else.
 
-Sources counts the sources a contributor added, and Bounds sourced the bounds from the literature that cite them. Bounds verified counts their certificates that are the best evidence for a bound discovered earlier, and New bounds those that were the discovery of a bound.
+Sources counts the sources a contributor added, and Bounds sourced the bounds from the literature that cite them. Bounds verified counts their certificates that are the best evidence for a bound discovered earlier, and New bounds those that were the discovery of a bound, for a constant with some bound in the literature.
 
 {% assign contributors = site.data.contributors %}
 <div class="table-responsive">

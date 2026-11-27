@@ -670,17 +670,31 @@ def calculate_family_stats(
     return stats
 
 
+def in_literature(constant: Mapping[str, Any]) -> bool:
+    """Whether the literature gives any bound for a constant, on either side,
+    other than a trivial one. Discoveries for constants it doesn't are left
+    out of the contributions page's summaries, since a constant no one has
+    published on is easy to be first at."""
+    return any(u["source"] != "trivial" for u in constant["updates"])
+
+
 def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 50) -> dict[str, list[dict[str, Any]]]:
     """List discoveries for the contributions page: the `latest` dated ones,
     newest first, and all those made by certificates, under "certificate".
-    Each gives the bound it improved on, if any. Discoveries by certificates
-    that have since been improved on are left out of both, so that a run of
-    incremental improvements shows only the latest, and counted under
+    Each gives the bound it improved on, if any. Discoveries for constants
+    with no bound in the literature (see in_literature) are left out of both
+    and counted under "certificate_unstudied". So are discoveries by
+    certificates that have since been improved on, so that a run of
+    incremental improvements shows only the latest, counted under
     "certificate_improved". Call after build_histories, before the values are
     written out.
     """
     rows = []
+    unstudied = 0
     for constant_id, constant in constants.items():
+        if not in_literature(constant):
+            unstudied += sum(e["discovery"]["kind"] == "certificate" for e in constant["history"])
+            continue
         for side in ["lower", "upper"]:
             events = [e for e in constant["history"] if e["type"] == f"{side}_bound"]
             for i, event in enumerate(events):
@@ -708,10 +722,12 @@ def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 5
         "latest": [row for row in rows if row["date"] is not None][:latest],
         "certificate": [row for row in rows if row["discovery_kind"] == "certificate"],
         "certificate_improved": len(improved),
+        "certificate_unstudied": unstudied,
     }
 
 
 def list_contributors(
+    constants: Mapping[str, Mapping[str, Any]],
     families: Mapping[str, Mapping[str, Any]],
     sources: Mapping[str, Mapping[str, Any]],
     updates: list[Mapping[str, Any]],
@@ -722,6 +738,8 @@ def list_contributors(
     a certificate received another way: the sources each added, the bounds
     from the literature citing them, and the certificates that are the best
     evidence for a bound discovered earlier or the discovery of a new one.
+    New bounds for constants with no bound in the literature (see
+    in_literature) aren't counted.
     Families are credited too but not counted here. Most new bounds first.
     """
     contributors: dict[str, dict[str, Any]] = {}
@@ -751,7 +769,7 @@ def list_contributors(
         if source is not None and source.get("added_by") is not None:
             credit(source["added_by"], source["added_by"])["bounds_sourced"] += 1
     for cert in certificates:
-        if cert["role"] == "discovery":
+        if cert["role"] == "discovery" and in_literature(constants[cert["constant"]]):
             credit(cert["submitted_by"], cert["submitted_by_github"])["new_bounds"] += 1
         elif cert["role"] == "evidence":
             credit(cert["submitted_by"], cert["submitted_by_github"])["bounds_verified"] += 1
@@ -835,7 +853,7 @@ def main() -> None:
         yaml.dump(list_discoveries(constants), file, sort_keys=False)
 
     with open("_data/contributors.yml", "w") as file:
-        yaml.dump(list_contributors(families, sources, updates, certificate_rows), file, sort_keys=False)
+        yaml.dump(list_contributors(constants, families, sources, updates, certificate_rows), file, sort_keys=False)
 
     # Save combined updates for download
     for update in updates:
