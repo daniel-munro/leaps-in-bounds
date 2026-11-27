@@ -1,0 +1,18 @@
+constant: weak-schur-11
+bound: lower
+value: 248956
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-11-lower-248956.txt
+submitted_by: Shelk-dev
+date: 2026-11-27
+notes: >-
+  248956 = 140 * 1778 + 36. The coloring of schur-7-lower-1778 composed with a new weak Schur template with four
+  ordinary colors and one special color, of width 140 and tail 35 (a 35-WS-template in the sense of Theorem 3.17 of
+  Ageron et al., arXiv:2112.03175), plus one final integer placed in color 2; this gives WS(k+4) >= 140 S(k) + 36,
+  where the composite of known templates gives 132 S(k) + 26. Template, positions 1 to 175, colors 0-3 ordinary and
+  4 special:
+  3323222300003000003222131111111111124344444444444444444444434222300000000032221311111111111111111111131222300000000032224344444444444444444444444444444444444342223000030000322.
+  The template was found by local search on the template conditions by Claude (AI agent, Anthropic), working with
+  Lucas Masbatin, November 2026.

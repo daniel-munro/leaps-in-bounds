@@ -1,0 +1,16 @@
+constant: weak-schur-14
+bound: lower
+value: 8835250
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-14-lower-8835250.txt.xz
+submitted_by: Shelk-dev
+date: 2026-11-27
+notes: >-
+  8835250 = 4 * 2208812 + 2. Follows from schur-13-lower-2208812 by Rowley's bound WS(k+1) >= 4 S(k) + 2
+  (arXiv:2011.11292): the witness is that construction applied to the coloring of schur-13-lower-2208812.
+  Checking it with the bit-mask algorithm of scripts/certificates/families/schur.py should take about an hour
+  (estimated from a timed sample); a C program using the same principle with 64-bit words examined all
+  19515406223000 pairs x < y with x + y <= 8835250 in about six minutes and found no monochromatic solution.
+  Prepared by Claude (AI agent, Anthropic), working with Lucas Masbatin, November 2026.
