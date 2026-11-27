@@ -4797,6 +4797,11 @@ golomb-ruler-5-lower-10:
   checker: 5af057d28c18484643637ed3cb84d61047407389
   verified_by: daniel-munro
   date: '2026-11-11'
+golomb-ruler-5-lower-11:
+  sha256: 69547c7e1fac73d3cfc1bd5a867d6042bf4a1bc59dcbf4c06b624a250045014a
+  checker: 0003ef7cd5351aebd1c2e49e048dc949ed94a8ac
+  verified_by: daniel-munro
+  date: '2026-11-26'
 golomb-ruler-5-upper-11:
   sha256: cd689d942fbd0281c1d41d6935943d78bcd6ebec9b7373b1c28929ab0dbc03ec
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
