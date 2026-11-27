@@ -5,6 +5,8 @@ public import Mathlib
 
 @[expose] public section
 
+namespace LeapsInBounds.Proofs.BookRamsey59
+
 /-
 Book Ramsey B5/B9: original formal proof and adapter to the
 Leaps in Bounds graph-based upper-bound statement.
@@ -3849,7 +3851,7 @@ theorem book_ramsey_5_9_eq_29 : IsLeast {n : ℕ | RamseyProperty n} 29 := by
 
 end Book59Exact
 
-namespace LeapsInBounds.BookRamsey
+open LeapsInBounds.BookRamsey
 
 open scoped BigOperators
 
@@ -3865,9 +3867,9 @@ private theorem book59Matrix_sym {n : ℕ} (G : SimpleGraph (Fin n))
   classical
   unfold book59Matrix
   by_cases h : G.Adj i j
-  · have h' : G.Adj j i := G.symm h
+  · have h' : G.Adj j i := G.adj_symm h
     simp [h, h']
-  · have h' : ¬ G.Adj j i := fun hj => h (G.symm hj)
+  · have h' : ¬ G.Adj j i := fun hj => h (G.adj_symm hj)
     simp [h, h']
 
 private theorem book59Matrix_compl {n : ℕ} (G : SimpleGraph (Fin n)) :
@@ -3875,11 +3877,9 @@ private theorem book59Matrix_compl {n : ℕ} (G : SimpleGraph (Fin n)) :
   classical
   funext i j
   unfold Book59Exact.blueN book59Matrix
-  change (if i = j then (0 : ℤ) else 1 - (if G.Adj i j then 1 else 0)) =
-    (if i ≠ j ∧ ¬ G.Adj i j then 1 else 0)
   by_cases he : i = j
   · simp [he]
-  · by_cases ha : G.Adj i j <;> simp [he, ha]
+  · by_cases ha : G.Adj i j <;> simp [he, ha, SimpleGraph.compl_adj]
 
 private theorem book59Matrix_hasBook {n m : ℕ} (G : SimpleGraph (Fin n))
     (i j : Fin n) (hij : G.Adj i j)
@@ -3894,7 +3894,7 @@ private theorem book59Matrix_hasBook {n m : ℕ} (G : SimpleGraph (Fin n))
           ∑ k : Fin n, if G.Adj i k ∧ G.Adj j k then (1 : ℤ) else 0 := by
         apply Finset.sum_congr rfl
         intro k hk
-        have hsym : G.Adj k j ↔ G.Adj j k := ⟨G.symm, G.symm⟩
+        have hsym : G.Adj k j ↔ G.Adj j k := ⟨G.adj_symm, G.adj_symm⟩
         unfold book59Matrix
         by_cases h₁ : G.Adj i k <;> by_cases h₂ : G.Adj j k <;>
           simp [h₁, h₂, hsym]
@@ -3917,7 +3917,7 @@ theorem book_ramsey_5_9_upper : UpperBound 5 9 29 := by
   intro G
   have hz : ∀ i, book59Matrix G i i = 0 := by
     intro i
-    simp [book59Matrix, G.loopless i]
+    simp [book59Matrix, G.irrefl]
   have hb : ∀ i j, book59Matrix G i j = 0 ∨ book59Matrix G i j = 1 := by
     intro i j
     by_cases h : G.Adj i j <;> simp [book59Matrix, h]
@@ -3936,6 +3936,5 @@ theorem book_ramsey_5_9_upper : UpperBound 5 9 29 := by
     exact Or.inr (book59Matrix_hasBook Gᶜ i j ha hcount)
 
 end
-end LeapsInBounds.BookRamsey
 
-#print axioms LeapsInBounds.BookRamsey.book_ramsey_5_9_upper
+end LeapsInBounds.Proofs.BookRamsey59

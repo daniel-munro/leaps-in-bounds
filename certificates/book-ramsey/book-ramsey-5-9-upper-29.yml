@@ -4,7 +4,7 @@ value: 29
 kind: lean
 lean:
   module: LeapsInBounds.Proofs.BookRamsey59
-  theorem: LeapsInBounds.BookRamsey.book_ramsey_5_9_upper
+  theorem: LeapsInBounds.Proofs.BookRamsey59.book_ramsey_5_9_upper
 submitted_by: HITESH4577
 date: 2026-11-27
 notes: >-
