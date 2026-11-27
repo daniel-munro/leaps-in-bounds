@@ -207,6 +207,16 @@ book-ramsey-4-4-lower-18:
   checker: 24d8fa8887eda334ce98f85435e8eb9bd6b3f291
   verified_by: daniel-munro
   date: '2026-11-26'
+book-ramsey-5-9-lower-29:
+  sha256: 753bed2861bcdbcce357c4daad7697e7cc18831b8282bfbd6df0cd161da23ae4
+  checker: a9dafea362508a130e60d5ba51ed6f29140fd01b
+  verified_by: daniel-munro
+  date: '2026-11-26'
+book-ramsey-5-9-upper-29:
+  sha256: e3e908e1dc2ce23683881b1f7d3898680aab5250a275354b8d75f5b0ff2944a7
+  checker: a9dafea362508a130e60d5ba51ed6f29140fd01b
+  verified_by: daniel-munro
+  date: '2026-11-26'
 book-ramsey-7-7-lower-30:
   sha256: c9cf00840d4dc63fd1a06d4b319b9887f9096b4af0e1571aa40551902d65892b
   checker: 24d8fa8887eda334ce98f85435e8eb9bd6b3f291
