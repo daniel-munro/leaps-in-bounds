@@ -1,0 +1,18 @@
+constant: book-ramsey-5-9
+bound: lower
+value: 29
+kind: witness
+witness:
+  format: graph6
+  data: '[Crbdp[jem\[\[MmOEm?tWB]oEYoE\WANU?bYoCXj@PbUAbBUAb@j@P_YsSWBVab'
+submitted_by: HITESH4577
+date: 2026-11-27
+notes: >-
+  The lower bound of 29 was previously reported by Quantavane.
+  This submission provides an explicit 28-vertex witness.
+  The research project was initiated and directed by the author,
+  using AI-assisted mathematical reasoning, computational
+  experimentation, and Lean 4 formalization. The author conducted
+  the end-to-end formal verification, validated the final theorem's
+  axiom dependencies, and managed the public release and archival
+  of the result.
