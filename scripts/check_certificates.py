@@ -38,7 +38,7 @@ from certificates import (
     load_certificates,
     load_manifest,
 )
-from process_data import assign_updates_and_values, get_constants, load_updates, rounded
+from process_data import assign_updates_and_values, get_constants, load_updates, cert_approx
 
 
 SUMMARY_MARKER = "<!-- certificate-check -->"
@@ -84,7 +84,7 @@ def role_in_history(
     side = cert["bound"]
     # Round like literature values: integers exactly, others to 7 significant
     # digits
-    approx = rounded(cert["approx"])
+    approx = cert_approx(cert)
     literature = constant[f"{side}_bound"]
     if literature is not None and literature.decimal_approx is None:
         literature = None
@@ -95,7 +95,7 @@ def role_in_history(
         source = update["source"] or update["via"]
         record = f"from `{source}`" if source else "from the literature"
     if previous is not None:
-        prev_approx = rounded(previous["approx"])
+        prev_approx = cert_approx(previous)
         if current is None or is_better(side, prev_approx, current[0]):
             current, record = (prev_approx, f"`{previous['value']}`"), f"by certificate `{previous['id']}`"
     if current is None:
@@ -249,7 +249,7 @@ def main() -> None:
             continue
         # Round like literature values: integers exactly, others to 7
         # significant digits
-        if is_better(bound, rounded(cert["approx"]), opposite.decimal_approx):
+        if is_better(bound, cert_approx(cert), opposite.decimal_approx):
             errors.append(
                 f"{cert['id']} contradicts the literature {'upper' if bound == 'lower' else 'lower'} "
                 f"bound ${opposite.latex}$ for {constant_id}"

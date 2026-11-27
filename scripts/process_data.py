@@ -259,9 +259,15 @@ def attach_certificates(
 EVIDENCE_RANK = {"verified": 3, "attested": 2, "literature": 1}
 
 
-def rounded(approx: int | float) -> int | float:
-    """Round a certificate's value like literature values: integers exactly,
-    other values to 7 significant digits."""
+def cert_approx(cert: Mapping[str, Any]) -> int | float:
+    """A certificate's value, rounded like literature values: integers
+    exactly, other values to 7 significant digits. Integer values are taken
+    from the certificate, not its float approx, which can't hold an integer as
+    large as (mn)! exactly."""
+    value = cert["value"]
+    if isinstance(value, int) and not isinstance(value, bool):
+        return value
+    approx = cert["approx"]
     if float(approx).is_integer():
         return int(approx)
     return float(f"{approx:.7g}")
@@ -299,7 +305,7 @@ def bound_events(
     earliest.
     """
     records = [("source", u, u["value"].decimal_approx, u["date"]) for u in updates]
-    records += [("certificate", c, rounded(c["approx"]), c["date"]) for c in certificates]
+    records += [("certificate", c, cert_approx(c), c["date"]) for c in certificates]
     records.sort(key=lambda r: (r[3] is not None, r[3] or "", r[0] == "source"))
 
     events = []
@@ -346,7 +352,7 @@ def bound_events(
         approx = event["value"].decimal_approx
         candidates = [
             c for c in certificates
-            if at_least_as_strong(side, rounded(c["approx"]), approx)
+            if at_least_as_strong(side, cert_approx(c), approx)
         ]
         candidates.sort(key=lambda c: (
             -EVIDENCE_RANK[c["status"]],
@@ -400,7 +406,7 @@ def build_histories(constants: dict[str, dict[str, Any]]) -> None:
             constant[f"{side}_bound_evidence"] = last["evidence"]["tier"] if last else None
             cert = None
             for c in certs:  # In date order, so ties go to the earliest
-                if c["status"] == "verified" and (cert is None or is_better(side, c["approx"], cert["approx"])):
+                if c["status"] == "verified" and (cert is None or is_better(side, cert_approx(c), cert_approx(cert))):
                     cert = c
             constant[f"verified_{side}_bound"] = Value(str(cert["value"])) if cert else None
             constant[f"verified_{side}_certificate"] = cert["id"] if cert else None
@@ -532,7 +538,7 @@ def list_certificates(constants: Mapping[str, Mapping[str, Any]]) -> list[dict[s
                 role, event = "discovery", discovered
             elif supported:
                 role, event = "evidence", supported[-1]
-            elif any(at_least_as_strong(side, rounded(cert["approx"]), e["value"].decimal_approx) for e in events):
+            elif any(at_least_as_strong(side, cert_approx(cert), e["value"].decimal_approx) for e in events):
                 role, event = "superseded", None
             else:
                 role, event = "weaker", None
