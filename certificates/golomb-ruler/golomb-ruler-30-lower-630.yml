@@ -1,0 +1,13 @@
+constant: golomb-ruler-30
+bound: lower
+value: 630
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.GolombWeighted30
+  theorem: LeapsInBounds.Proofs.GolombWeighted30.lower_30
+submitted_by: bargainlandz-code
+date: '2026-11-27'
+notes: Research contributor - Sami Hani Badaoui (GitHub bargainlandz-code).
+  Weighted distance lower-bound proof developed with AI assistance in a
+  human-directed research programme. Exact integer identities independently
+  checked locally; Lean compilation and maintainer verification pending.
