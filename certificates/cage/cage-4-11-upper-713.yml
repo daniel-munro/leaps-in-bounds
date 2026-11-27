@@ -1,0 +1,19 @@
+constant: cage-4-11
+bound: upper
+value: 713
+kind: witness
+witness:
+  format: graph6
+  file: cage-4-11-upper-713.g6.gz
+submitted_by: Surfire
+date: 2026-11-27
+source: exoo-et-al-2026
+notes: >-
+  Evidence for the existing 713-vertex upper bound of Exoo, Goedgebeur,
+  Jooken, Stubbe and Van den Eede, not a new bound. An AI-assisted,
+  independent implementation generated the F_3 split Cayley hexagon from
+  Offer (2000), section 1.4.1, equations (1.9) and (1.10), applied the
+  15-vertex excision template from Exoo et al., section 3.6, then searched
+  for degree-restoring edges. It did not read the authors' graph files.
+  The resulting graph has 713 vertices, 1426 edges, degree 4 at each
+  vertex, and girth exactly 11.
