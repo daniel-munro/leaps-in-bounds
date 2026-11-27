@@ -683,11 +683,10 @@ def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 5
     newest first, and all those made by certificates, under "certificate".
     Each gives the bound it improved on, if any. Discoveries for constants
     with no bound in the literature (see in_literature) are left out of both
-    and counted under "certificate_unstudied". So are discoveries by
-    certificates that have since been improved on, so that a run of
-    incremental improvements shows only the latest, counted under
-    "certificate_improved". Call after build_histories, before the values are
-    written out.
+    and counted under "certificate_unstudied". Discoveries by certificates
+    that have since been improved on are left out of "certificate", which
+    lists only current bounds, and counted under "certificate_improved". Call
+    after build_histories, before the values are written out.
     """
     rows = []
     unstudied = 0
@@ -716,11 +715,11 @@ def list_discoveries(constants: Mapping[str, Mapping[str, Any]], latest: int = 5
                 })
     rows.sort(key=lambda row: (row["constant"], row["bound"]))
     rows.sort(key=lambda row: row["date"] or "", reverse=True)
-    improved = [row for row in rows if row["discovery_kind"] == "certificate" and not row["current"]]
-    rows = [row for row in rows if row["discovery_kind"] != "certificate" or row["current"]]
+    certificate = [row for row in rows if row["discovery_kind"] == "certificate"]
+    improved = [row for row in certificate if not row["current"]]
     return {
         "latest": [row for row in rows if row["date"] is not None][:latest],
-        "certificate": [row for row in rows if row["discovery_kind"] == "certificate"],
+        "certificate": [row for row in certificate if row["current"]],
         "certificate_improved": len(improved),
         "certificate_unstudied": unstudied,
     }
@@ -884,4 +883,3 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
