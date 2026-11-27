@@ -1,0 +1,17 @@
+constant: book-ramsey-5-9
+bound: upper
+value: 29
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.BookRamsey59
+  theorem: LeapsInBounds.BookRamsey.book_ramsey_5_9_upper
+submitted_by: HITESH4577
+date: 2026-11-27
+notes: >-
+  The matching upper bound establishes the exact book Ramsey
+  number R(B_5,B_9) = 29. The research project was initiated
+  and directed by the author, using AI-assisted mathematical
+  reasoning, computational experimentation, and Lean 4
+  formalization. The author conducted the end-to-end formal
+  verification, validated the final theorem's axiom dependencies,
+  and managed the public release and archival of the result.
