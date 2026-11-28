@@ -1,0 +1,21 @@
+constant: schur-10
+bound: lower
+value: 62373
+kind: witness
+witness:
+  format: coloring
+  file: schur-10-lower-62373.txt
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  62373 = 43713 + 18660. Same tower as schur-8-lower-5845, two levels higher. Tower construction whose shape was
+  read off the colorings schur-7-lower-1778, schur-8-lower-5672 and schur-9-lower-18920 (Amaru), started one level
+  lower. A level with modulus N = 3M + r takes the coloring c of 1, ..., M - 1 of the level below (sum-free modulo
+  M), starts from x -> c(ux mod M) on 1, ..., M - 1, puts a new color from M on, and looks for a transition zone
+  of length r by local search on the S-template conditions; the result is an S-template of width 2M + r
+  (Definition 2.1 of Ageron et al., arXiv:2112.03175) followed by its first M - 1 integers. Levels 6 and 7 as in
+  schur-8-lower-5845 (Rowley's S-template of width 380, then N = 1751). Level 8: u = 2, r = 572, N = 5825 (an even
+  zone, so that 2 is invertible at the next level). Level 9: u = 2912 = -1/2 mod 5825, r = 1186, N = 18661. Level
+  10: u = 2, r = 6391, N = 62374. The first 43713 integers are an S-template with ten colors (special color 9,
+  smallest special element 18661), so S(k+9) >= 43713 S(k) + 18660. Found by Claude (AI agent, Anthropic), working
+  with Lucas Masbatin, November 2026.

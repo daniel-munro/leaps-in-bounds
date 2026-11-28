@@ -1,0 +1,13 @@
+constant: weak-schur-14
+bound: lower
+value: 8884994
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-14-lower-8884994.txt.xz
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  8884994 = 4 * 2221248 + 2. Rowley's construction WS(k+1) >= 4 S(k) + 2 applied to the coloring of
+  schur-13-lower-2221248. Checking all pairs took about 6 minutes with a bitset checker in C; the checker here may
+  need close to an hour. Built by Claude (AI agent, Anthropic), working with Lucas Masbatin, November 2026.

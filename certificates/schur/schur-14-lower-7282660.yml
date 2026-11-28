@@ -1,0 +1,14 @@
+constant: schur-14
+bound: lower
+value: 7282660
+kind: witness
+witness:
+  format: coloring
+  file: schur-14-lower-7282660.txt.xz
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  7282660 = 4095 * 1778 + 1750. The eight-color S-template of width 4095 formed by the first 4095 integers of
+  schur-8-lower-5845 (smallest special element 1751), composed with the coloring of schur-7-lower-1778 (Theorem
+  2.3 of Ageron et al., arXiv:2112.03175). Checking all pairs took about 4 minutes with a bitset checker in C.
+  Built by Claude (AI agent, Anthropic), working with Lucas Masbatin, November 2026.
