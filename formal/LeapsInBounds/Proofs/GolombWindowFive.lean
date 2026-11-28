@@ -23,7 +23,7 @@ open Finset
 set_option maxRecDepth 8192
 set_option maxHeartbeats 4000000
 
-def pairSum {n : ℕ} (a : Fin n → ℕ) (P : Finset (Fin n × Fin n)) : ℤ :=
+@[expose] def pairSum {n : ℕ} (a : Fin n → ℕ) (P : Finset (Fin n × Fin n)) : ℤ :=
   ∑ p ∈ P, ((a p.2 : ℤ) - (a p.1 : ℤ))
 
 /-- Distinct positive distances indexed by any set of increasing index pairs
