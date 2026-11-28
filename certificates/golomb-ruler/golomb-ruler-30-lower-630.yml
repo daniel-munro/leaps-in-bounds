@@ -6,9 +6,8 @@ lean:
   module: LeapsInBounds.Proofs.GolombWeighted30
   theorem: LeapsInBounds.Proofs.GolombWeighted30.lower_30
 submitted_by: bargainlandz-code
-date: '2026-11-27'
+date: "2026-11-27"
 notes: Research contributor - Sami Hani Badaoui (GitHub bargainlandz-code).
   Weighted distance lower-bound proof developed with AI assistance in a
   human-directed research programme. Exact integer identities independently
-  checked locally. Daniel Munro independently confirmed successful Lean
-  compilation and checker validation with the pairSum exposure correction.
+  checked locally.
