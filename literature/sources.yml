@@ -577,7 +577,7 @@ canli-2026a:
   date: "2026-10-25"
   url: "https://github.com/arhancanli/quantavane-ramsey-records/tree/21ede2c042cce0fe9311c78cca8ad58531632b17"
   notes: "Not peer reviewed. Colourings for R(5,15) >= 279 and R(8,12) >= 512, with a checker. Written up in A. Canli, New lower bounds for the Ramsey numbers R(5,15) and R(8,12), Zenodo, 2026-11-01, https://doi.org/10.5281/zenodo.23857057. The searches were run by an AI agent."
-  added_by: daniel-munro
+  added_by: arhancanli
 
 canli-2026b:
   string: "A. Canli, New lower bounds for the Ramsey numbers R(5,15) and R(8,12), version 2, Zenodo."
@@ -1312,7 +1312,7 @@ yugeswardeenoo-2026-11:
   string: "D. Yugeswardeenoo, Large graphs of given maximum degree and diameter (Degree-Diameter Problem): 11 constructions, 11 November 2026, Zenodo."
   date: "2026-11-12"
   doi: "https://doi.org/10.5281/zenodo.24150407"
-  added_by: daniel-munro
+  added_by: bargainlandz-code
 
 lakhotia-et-al-2023:
   string: "K. Lakhotia, L. Monroe, K. Isham, M. Besta, N. Blach, T. Hoefler and F. Petrini, PolarStar: Expanding the Scalability Horizon of Diameter-3 Networks, SPAA 2024, arXiv:2302.07217."
@@ -7362,7 +7362,7 @@ hitesh4577-2026-book-ramsey:
   date: "2026-11-26"
   doi: "https://doi.org/10.5281/zenodo.24559340"
   notes: "Not peer reviewed. Lean 4 proof, which compiles against this site's Mathlib; submitted in GitHub Discussion #124. Its README credits the lower bound R(B5, B9) >= 29 to Quantavane, which reported it on 2026-11-10; the release's 28-vertex coloring (two layers of Z/14Z) is the first published one."
-  added_by: daniel-munro
+  added_by: HITESH4577
 
 quantavane-2026-book-ramsey:
   string: "Quantavane, Verified records, https://quantavane.com/results/, news entry of 10 November 2026 (page updated 2026-11-19, retrieved 2026-11-26)."
