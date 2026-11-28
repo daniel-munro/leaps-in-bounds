@@ -1,0 +1,10 @@
+constant: weak-schur-10
+bound: upper
+value: 19728200
+kind: lean
+lean:
+  module: LeapsInBounds.Proofs.WeakSchurUpperBound
+  theorem: LeapsInBounds.Proofs.WeakSchurUpperBound.weakUpper_10_19728200
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: "Bound WS(k) <= k*B(k-1) with B(0) = 2, B(f) = f*B(f-1) + 2, proved by a nested-differences argument in which at most one exceptional element can occur at each stage; improves Bornsztein's floor(k!*k*e). Proof found and formalized by Claude (AI agent, Anthropic), working with Lucas Masbatin."

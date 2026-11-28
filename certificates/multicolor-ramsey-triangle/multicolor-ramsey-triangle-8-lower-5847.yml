@@ -1,0 +1,13 @@
+constant: multicolor-ramsey-triangle-8
+bound: lower
+value: 5847
+kind: witness
+witness:
+  format: coloring
+  file: multicolor-ramsey-triangle-8-lower-5847.txt
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  Same partition as schur-8-lower-5845: the partition of 1, ..., 5845 into 8 sum-free sets, as a coloring of the
+  differences between the vertices of K_5846. See that certificate for the construction. Found by Claude (AI agent,
+  Anthropic), working with Lucas Masbatin, November 2026.
