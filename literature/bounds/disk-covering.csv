@@ -29,6 +29,10 @@ disk-covering-22,,{\approx}0.253293,tan-2018,friedman-circles-covering-circles
 disk-covering-23,,\frac{1}{4},tan-2018,friedman-circles-covering-circles
 disk-covering-24,,{\approx}0.245339,tan-2018,friedman-circles-covering-circles
 disk-covering-25,,\frac{1}{\sqrt{6}+\sqrt{3}},tan-2018,friedman-circles-covering-circles
+disk-covering-22,\frac{\sqrt{22}}{22},,trivial,
+disk-covering-23,\frac{\sqrt{23}}{23},,trivial,
+disk-covering-24,\frac{\sqrt{6}}{12},,trivial,
+disk-covering-25,\frac{1}{5},,trivial,
 disk-covering-5,,{\approx}0.609382,neville-1915,toth-2005
 disk-covering-6,,{\approx}0.557041,shklyarsky-chentsov-yaglom-1974,bezdek-1983
 disk-covering-6,,{\approx}0.555905,bezdek-1979,toth-2005
