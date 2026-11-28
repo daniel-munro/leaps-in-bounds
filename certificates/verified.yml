@@ -4768,10 +4768,10 @@ golomb-ruler-29-lower-406:
   verified_by: daniel-munro
   date: '2026-11-11'
 golomb-ruler-29-lower-578:
-  sha256: 6b580fc8455c37887d9ac2f315a0df0736ed903934cebf1ddafd1c8a4320d0f3
-  checker: fed5a97eee2b2991435ada1bb6a709b3985b3e49
+  sha256: c128486fa6f7307c3d59777bcad3606fa12a5029f89a6a5948456a76d6fdd9da
+  checker: 3dfb641a536222fb8948338f493294f8c799501b
   verified_by: daniel-munro
-  date: '2026-11-15'
+  date: '2026-11-27'
 golomb-ruler-29-upper-623:
   sha256: d21e1af1d4a90ee2fbf420385e207cd8fbb8bd104120d30b0981d786c998d74a
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
@@ -4793,10 +4793,15 @@ golomb-ruler-30-lower-435:
   verified_by: daniel-munro
   date: '2026-11-11'
 golomb-ruler-30-lower-622:
-  sha256: e9bb0e41ad2795b6947408dac8cb2bf67522ca609f16afc74508ed06f926800a
-  checker: fed5a97eee2b2991435ada1bb6a709b3985b3e49
+  sha256: 0d302a776eee8b3d96e506e42782c2f497329b09c5c2892ecf82e8a0b80a76ab
+  checker: 3dfb641a536222fb8948338f493294f8c799501b
   verified_by: daniel-munro
-  date: '2026-11-15'
+  date: '2026-11-27'
+golomb-ruler-30-lower-630:
+  sha256: 56b591ec9f9acdfc962edb160a4bca15ab574f220ee7dd1f8dfb751bb340cc9b
+  checker: 3dfb641a536222fb8948338f493294f8c799501b
+  verified_by: daniel-munro
+  date: '2026-11-27'
 golomb-ruler-30-upper-680:
   sha256: 6a518a28e7b4a5e80ce666731dc9cd1ac237f0b9115bf667babd243a9c6ec555
   checker: 0c795a5fe43ff18c5c0e79e8fa9f596ff5a4b746
