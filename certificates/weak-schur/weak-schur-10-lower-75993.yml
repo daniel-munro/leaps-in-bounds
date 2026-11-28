@@ -1,0 +1,13 @@
+constant: weak-schur-10
+bound: lower
+value: 75993
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-10-lower-75993.txt
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  75993 = 13 * 5845 + 8. Rowley's weak Schur template of width 13, WS(k+2) >= 13 S(k) + 8 (Theorem 3.1 of Ageron
+  et al., arXiv:2112.03175), applied to the coloring of schur-8-lower-5845. Built by Claude (AI agent, Anthropic),
+  working with Lucas Masbatin, November 2026.

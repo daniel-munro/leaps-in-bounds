@@ -1,0 +1,12 @@
+constant: weak-schur-11
+bound: lower
+value: 249494
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-11-lower-249494.txt.xz
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  249494 = 4 * 62373 + 2. Rowley's construction WS(k+1) >= 4 S(k) + 2 applied to the coloring of
+  schur-10-lower-62373. Built by Claude (AI agent, Anthropic), working with Lucas Masbatin, November 2026.

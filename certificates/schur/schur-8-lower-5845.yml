@@ -1,0 +1,20 @@
+constant: schur-8
+bound: lower
+value: 5845
+kind: witness
+witness:
+  format: coloring
+  file: schur-8-lower-5845.txt
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  5845 = 4095 + 1750. Tower construction whose shape was read off the colorings schur-7-lower-1778,
+  schur-8-lower-5672 and schur-9-lower-18920 (Amaru), started one level lower. A level with modulus N = 3M + r
+  takes the coloring c of 1, ..., M - 1 of the level below (sum-free modulo M), starts from x -> c(ux mod M) on 1,
+  ..., M - 1, puts a new color from M on, and looks for a transition zone of length r by local search on the
+  S-template conditions; the result is an S-template of width 2M + r (Definition 2.1 of Ageron et al.,
+  arXiv:2112.03175) followed by its first M - 1 integers. Level 6 is the coloring of 1, ..., 528 given by Rowley's
+  six-color S-template of width 380 (M = 529). Level 7: u = 264 = -1/2 mod 529, r = 164, N = 1751, which only
+  gives S(7) >= 1750. Level 8: u = 2, r = 593, N = 5846. The first 4095 integers of this coloring are an
+  S-template with eight colors (special color 7, smallest special element 1751), so S(k+7) >= 4095 S(k) + 1750 by
+  Theorem 2.3 of Ageron et al. Found by Claude (AI agent, Anthropic), working with Lucas Masbatin, November 2026.

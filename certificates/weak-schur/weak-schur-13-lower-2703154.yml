@@ -1,0 +1,14 @@
+constant: weak-schur-13
+bound: lower
+value: 2703154
+kind: witness
+witness:
+  format: coloring
+  file: weak-schur-13-lower-2703154.txt.xz
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  2703154 = 4 * 675788 + 2. A direct corollary of known results, not a new construction: Rowley's construction
+  WS(k+1) >= 4 S(k) + 2 applied to the coloring behind S(12) >= 675788 = 380 * 1778 + 148, which is Rowley's
+  six-color S-template of width 380 composed with the coloring of schur-7-lower-1778 (Amaru). Assembled and
+  checked by Claude (AI agent, Anthropic), working with Lucas Masbatin, November 2026.

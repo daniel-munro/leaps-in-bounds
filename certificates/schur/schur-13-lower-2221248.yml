@@ -1,0 +1,13 @@
+constant: schur-13
+bound: lower
+value: 2221248
+kind: witness
+witness:
+  format: coloring
+  file: schur-13-lower-2221248.txt.xz
+submitted_by: Shelk-dev
+date: 2026-11-28
+notes: >-
+  2221248 = 380 * 5845 + 148. Rowley's six-color S-template of width 380, S(k+5) >= 380 S(k) + 148 (Theorem 2.3 of
+  Ageron et al., arXiv:2112.03175), composed with the coloring of schur-8-lower-5845. Built by Claude (AI agent,
+  Anthropic), working with Lucas Masbatin, November 2026.
